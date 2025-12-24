@@ -298,6 +298,9 @@ def check_min_version(min_version):
             "versions of HuggingFace Transformers."
         )
 
+import sys
+sys.modules['transformers_4573.utils.TransformersKwargs'] = generic.TransformersKwargs
+
 
 @lru_cache
 def get_available_devices() -> frozenset[str]:
