@@ -123,7 +123,7 @@ class RagRetrieverTest(TestCase):
             question_encoder=DPRConfig().to_dict(),
             generator=BartConfig().to_dict(),
         )
-        with patch("transformers.models.rag.retrieval_rag.load_dataset") as mock_load_dataset:
+        with patch("transformers_4573.models.rag.retrieval_rag.load_dataset") as mock_load_dataset:
             mock_load_dataset.return_value = dataset
             retriever = RagRetriever(
                 config,
@@ -179,7 +179,7 @@ class RagRetrieverTest(TestCase):
     def test_canonical_hf_index_retriever_save_and_from_pretrained(self):
         retriever = self.get_dummy_canonical_hf_index_retriever()
         with tempfile.TemporaryDirectory() as tmp_dirname:
-            with patch("transformers.models.rag.retrieval_rag.load_dataset") as mock_load_dataset:
+            with patch("transformers_4573.models.rag.retrieval_rag.load_dataset") as mock_load_dataset:
                 mock_load_dataset.return_value = self.get_dummy_dataset()
                 retriever.save_pretrained(tmp_dirname)
                 retriever = RagRetriever.from_pretrained(tmp_dirname)

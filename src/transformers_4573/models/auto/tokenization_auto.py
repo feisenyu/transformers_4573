@@ -419,7 +419,7 @@ def tokenizer_class_from_name(class_name: str) -> Union[type[Any], None]:
             ):
                 module = importlib.import_module(".tokenization_mistral_common", "transformers")
             else:
-                module = importlib.import_module(f".{module_name}", "transformers.models")
+                module = importlib.import_module(f".{module_name}", "transformers_4573.models")
             try:
                 return getattr(module, class_name)
             except AttributeError:

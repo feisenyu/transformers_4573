@@ -32,7 +32,7 @@ from transformers_4573 import (
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.FastSpeech2Conformer")
+logger = logging.get_logger("transformers_4573.models.FastSpeech2Conformer")
 
 CONFIG_MAPPING = {
     "adim": "hidden_size",

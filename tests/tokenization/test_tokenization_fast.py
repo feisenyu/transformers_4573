@@ -261,7 +261,7 @@ class TokenizerVersioningTest(unittest.TestCase):
         import transformers_4573 as old_transformers
 
         old_transformers.tokenization_utils_base.__version__ = "3.0.0"
-        old_tokenizer = old_transformers.models.auto.AutoTokenizer.from_pretrained(repo)
+        old_tokenizer = old_transformers_4573.models.auto.AutoTokenizer.from_pretrained(repo)
         self.assertEqual(len(old_tokenizer), 28996)
         json_tokenizer = json.loads(old_tokenizer._tokenizer.to_str())
         self.assertNotIn("huggingface", json_tokenizer["model"]["vocab"])

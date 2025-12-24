@@ -97,7 +97,7 @@ def video_processor_class_from_name(class_name: str):
         if class_name in extractors:
             module_name = model_type_to_module_name(module_name)
 
-            module = importlib.import_module(f".{module_name}", "transformers.models")
+            module = importlib.import_module(f".{module_name}", "transformers_4573.models")
             try:
                 return getattr(module, class_name)
             except AttributeError:

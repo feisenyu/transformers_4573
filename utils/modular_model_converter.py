@@ -1216,8 +1216,8 @@ class ModularFileMapper(ModuleMapper):
         # fmt: off
         self.model_name = new_name  # name of the model being defined. Should be in the format of `llama` or `layout_xlm` or `phi3`
 
-        self.model_specific_imported_objects: dict[str, str] = {}  # e.g. {"LlamaModel": "transformers.models.llama.modeling_llama"}
-        self.model_specific_modules: dict[str, cst.Module] = {}  # e.g. {"transformers.models.llama.modeling_llama": cst.Module}
+        self.model_specific_imported_objects: dict[str, str] = {}  # e.g. {"LlamaModel": "transformers_4573.models.llama.modeling_llama"}
+        self.model_specific_modules: dict[str, cst.Module] = {}  # e.g. {"transformers_4573.models.llama.modeling_llama": cst.Module}
 
         self.all_all_to_add = {}
 
@@ -1225,7 +1225,7 @@ class ModularFileMapper(ModuleMapper):
         # fmt: on
 
     def visit_ImportFrom(self, node: cst.ImportFrom) -> None:
-        """When visiting imports from modeling files (i.e. `transformers.models.xxx`) we get the code, parse it,
+        """When visiting imports from modeling files (i.e. `transformers_4573.models.xxx`) we get the code, parse it,
         and save it in `self.model_specific_modules` to later visit. The imported objects are saved in `self.model_specific_imported_objects`.
         """
         # `node.module` is None for fully relative imports, e.g. `from ... import initialization as init`

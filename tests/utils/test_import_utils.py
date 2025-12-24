@@ -22,5 +22,5 @@ def test_clear_import_cache():
     # Import and verify module exists
     from transformers_4573.models.auto import modeling_auto
 
-    assert "transformers.models.auto.modeling_auto" in sys.modules
-    assert modeling_auto.__name__ == "transformers.models.auto.modeling_auto"
+    assert "transformers_4573.models.auto.modeling_auto" in sys.modules
+    assert modeling_auto.__name__ == "transformers_4573.models.auto.modeling_auto"

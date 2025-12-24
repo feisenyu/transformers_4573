@@ -236,7 +236,7 @@ class ConfigTestUtils(unittest.TestCase):
         import transformers_4573 as new_transformers
 
         new_transformers.configuration_utils.__version__ = "v4.0.0"
-        new_configuration, kwargs = new_transformers.models.auto.AutoConfig.from_pretrained(
+        new_configuration, kwargs = new_transformers_4573.models.auto.AutoConfig.from_pretrained(
             repo, return_unused_kwargs=True
         )
         self.assertEqual(new_configuration.hidden_size, 2)
@@ -247,7 +247,7 @@ class ConfigTestUtils(unittest.TestCase):
         import transformers_4573 as old_transformers
 
         old_transformers.configuration_utils.__version__ = "v3.0.0"
-        old_configuration = old_transformers.models.auto.AutoConfig.from_pretrained(repo)
+        old_configuration = old_transformers_4573.models.auto.AutoConfig.from_pretrained(repo)
         self.assertEqual(old_configuration.hidden_size, 768)
 
     def test_saving_config_with_custom_generation_kwargs_raises_error(self):

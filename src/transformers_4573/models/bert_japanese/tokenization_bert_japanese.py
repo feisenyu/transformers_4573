@@ -832,7 +832,7 @@ class WordpieceTokenizer:
 
 class SentencepieceTokenizer:
     """
-    Runs sentencepiece tokenization. Based on transformers.models.albert.tokenization_albert.AlbertTokenizer.
+    Runs sentencepiece tokenization. Based on transformers_4573.models.albert.tokenization_albert.AlbertTokenizer.
     """
 
     def __init__(

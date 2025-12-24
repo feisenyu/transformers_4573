@@ -31,7 +31,7 @@ from ...utils import TensorType, auto_docstring
 from .image_processing_kosmos2_5 import Kosmos2_5ImageProcessorKwargs
 
 
-# Similar to transformers.models.pix2struct.image_processing_pix2struct.torch_extract_patches but dealing with a batch of images directly.
+# Similar to transformers_4573.models.pix2struct.image_processing_pix2struct.torch_extract_patches but dealing with a batch of images directly.
 def torch_extract_patches(image_tensor, patch_height, patch_width):
     """
     Utility function to extract patches from a given tensor representing a batch of images. Returns a tensor of shape

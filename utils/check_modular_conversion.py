@@ -119,7 +119,7 @@ def guaranteed_no_diff(modular_file_path, dependencies, models_in_diff):
     if model_name in models_in_diff:
         return False
     for dep in dependencies[modular_file_path]:
-        # two possible patterns: `transformers.models.model_name.(...)` or `model_name.(...)`
+        # two possible patterns: `transformers_4573.models.model_name.(...)` or `model_name.(...)`
         dependency_model_name = dep.split(".")[-2]
         if dependency_model_name in models_in_diff:
             return False

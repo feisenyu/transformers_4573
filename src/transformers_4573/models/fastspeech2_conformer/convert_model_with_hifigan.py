@@ -36,7 +36,7 @@ from .convert_hifigan import load_weights, remap_hifigan_yaml_config
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.FastSpeech2Conformer")
+logger = logging.get_logger("transformers_4573.models.FastSpeech2Conformer")
 
 
 def convert_FastSpeech2ConformerWithHifiGan_checkpoint(

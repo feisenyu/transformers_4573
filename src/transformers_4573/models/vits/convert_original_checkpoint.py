@@ -25,7 +25,7 @@ from transformers_4573 import VitsConfig, VitsModel, VitsTokenizer, logging
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.vits")
+logger = logging.get_logger("transformers_4573.models.vits")
 
 MAPPING_TEXT_ENCODER = {
     "enc_p.emb": "text_encoder.embed_tokens",

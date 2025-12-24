@@ -20,7 +20,7 @@ from transformers_4573 import UnivNetConfig, UnivNetModel, logging
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.univnet")
+logger = logging.get_logger("transformers_4573.models.univnet")
 
 
 def get_kernel_predictor_key_mapping(config: UnivNetConfig, old_prefix: str = "", new_prefix: str = ""):

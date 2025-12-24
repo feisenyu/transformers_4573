@@ -202,7 +202,7 @@ class MegatronBertSelfAttention(nn.Module):
         return context_layer, attention_probs
 
 
-# Based transformers.models.bert.modeling_bert.BertSelfOutput. Moved LayerNorm to MegatronBertAttention below.
+# Based transformers_4573.models.bert.modeling_bert.BertSelfOutput. Moved LayerNorm to MegatronBertAttention below.
 class MegatronBertSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -215,7 +215,7 @@ class MegatronBertSelfOutput(nn.Module):
         return residual + hidden_states
 
 
-# Based transformers.models.bert.modeling_bert.BertAttention. Added LayerNorm.
+# Based transformers_4573.models.bert.modeling_bert.BertAttention. Added LayerNorm.
 class MegatronBertAttention(nn.Module):
     def __init__(self, config, layer_idx=None):
         super().__init__()
@@ -262,7 +262,7 @@ class MegatronBertIntermediate(nn.Module):
         return hidden_states
 
 
-# Based on transformers.models.bert.modeling_bert.BertOutput. Moved LayerNorm to MegatronBertLayer below.
+# Based on transformers_4573.models.bert.modeling_bert.BertOutput. Moved LayerNorm to MegatronBertLayer below.
 class MegatronBertOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -275,7 +275,7 @@ class MegatronBertOutput(nn.Module):
         return input_tensor + hidden_states
 
 
-# Based on transformers.models.bert.modeling_bert.BertLayer. Added LayerNorm.
+# Based on transformers_4573.models.bert.modeling_bert.BertLayer. Added LayerNorm.
 class MegatronBertLayer(GradientCheckpointingLayer):
     def __init__(self, config, layer_idx=None):
         super().__init__()

@@ -38,7 +38,7 @@ def get_all_model_names():
     model_names = set()
 
     module_name = "modeling_auto"
-    module = getattr(transformers.models.auto, module_name, None)
+    module = getattr(transformers_4573.models.auto, module_name, None)
     if module is not None:
         # all mappings in a single auto modeling file
         mapping_names = [x for x in dir(module) if x.endswith("_MAPPING_NAMES") and x.startswith("MODEL_")]

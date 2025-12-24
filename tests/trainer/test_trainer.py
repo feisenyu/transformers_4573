@@ -1909,7 +1909,7 @@ class TrainerIntegrationTest(TestCasePlus, TrainerIntegrationCommon):
     @require_liger_kernel
     def test_use_liger_kernel_patching(self):
         # Ensure any monkey patching is cleaned up for subsequent tests
-        with patch("transformers.models.llama.modeling_llama"):
+        with patch("transformers_4573.models.llama.modeling_llama"):
             from liger_kernel.transformers import liger_rotary_pos_emb
 
             from transformers_4573.models.llama import modeling_llama
@@ -1934,7 +1934,7 @@ class TrainerIntegrationTest(TestCasePlus, TrainerIntegrationCommon):
     @require_liger_kernel
     def test_use_liger_kernel_custom_config_patching(self):
         # Ensure any monkey patching is cleaned up for subsequent tests
-        with patch("transformers.models.llama.modeling_llama"):
+        with patch("transformers_4573.models.llama.modeling_llama"):
             from liger_kernel.transformers import LigerRMSNorm
 
             config = LlamaConfig(vocab_size=100, hidden_size=32, num_hidden_layers=3, num_attention_heads=4)
@@ -1955,7 +1955,7 @@ class TrainerIntegrationTest(TestCasePlus, TrainerIntegrationCommon):
     @require_torch_non_multi_accelerator  # Don't work with DP
     def test_use_liger_kernel_trainer(self):
         # Ensure any monkey patching is cleaned up for subsequent tests
-        with patch("transformers.models.llama.modeling_llama"):
+        with patch("transformers_4573.models.llama.modeling_llama"):
             # Check that trainer still works with liger kernel applied
             config = LlamaConfig(vocab_size=100, hidden_size=32, num_hidden_layers=3, num_attention_heads=4)
             tiny_llama = LlamaForCausalLM(config)
@@ -1980,7 +1980,7 @@ class TrainerIntegrationTest(TestCasePlus, TrainerIntegrationCommon):
     @require_torch_non_multi_accelerator  # don't work with DP
     def test_use_liger_kernel_custom_config_trainer(self):
         # Ensure any monkey patching is cleaned up for subsequent tests
-        with patch("transformers.models.llama.modeling_llama"):
+        with patch("transformers_4573.models.llama.modeling_llama"):
             # Check that trainer still works with liger kernel applied when using a custom config
             config = LlamaConfig(vocab_size=100, hidden_size=32, num_hidden_layers=3, num_attention_heads=4)
             tiny_llama = LlamaForCausalLM(config)

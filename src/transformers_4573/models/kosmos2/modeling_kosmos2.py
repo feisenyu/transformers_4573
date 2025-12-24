@@ -496,7 +496,7 @@ class Kosmos2VisionEncoder(nn.Module):
         )
 
 
-# Similar to `transformers.models.clip.modeling_clip.CLIPVisionTransformer` but without docstring for `forward`
+# Similar to `transformers_4573.models.clip.modeling_clip.CLIPVisionTransformer` but without docstring for `forward`
 class Kosmos2VisionTransformer(nn.Module):
     # Copied from transformers_4573.models.altclip.modeling_altclip.AltCLIPVisionTransformer.__init__ with AltCLIPVision->Kosmos2Vision,ALTCLIP_VISION->KOSMOS2_VISION,AltCLIP->Kosmos2Vision
     def __init__(self, config: Kosmos2VisionConfig):
@@ -551,7 +551,7 @@ class Kosmos2VisionTransformer(nn.Module):
         )
 
 
-# Similar to `transformers.models.m2m_100.modeling_m2m_100.M2M100SinusoidalPositionalEmbedding` but allowing to pass `position_ids`
+# Similar to `transformers_4573.models.m2m_100.modeling_m2m_100.M2M100SinusoidalPositionalEmbedding` but allowing to pass `position_ids`
 class Kosmos2TextSinusoidalPositionalEmbedding(nn.Module):
     """This module produces sinusoidal positional embeddings of any length."""
 
@@ -664,7 +664,7 @@ class Kosmos2TextSinusoidalPositionalEmbedding(nn.Module):
 class KosmosTextAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
-    # Similar to transformers.models.bart.modeling_bart.BartAttention.__init__ except an additional `inner_attn_ln`.
+    # Similar to transformers_4573.models.bart.modeling_bart.BartAttention.__init__ except an additional `inner_attn_ln`.
     def __init__(
         self,
         config,

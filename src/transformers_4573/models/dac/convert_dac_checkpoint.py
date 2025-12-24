@@ -37,7 +37,7 @@ from transformers_4573 import (
 # More information: https://github.com/descriptinc/descript-audio-codec/tree/main
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.dac")
+logger = logging.get_logger("transformers_4573.models.dac")
 
 
 def match_pattern(string, pattern):

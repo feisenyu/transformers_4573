@@ -292,7 +292,7 @@ class ZambaMambaMixer(nn.Module):
     ∆, B, C are input-dependent (this is a key difference between Mamba and the linear time invariant S4,
     and is why Mamba is called **selective** state spaces)
 
-    This module differs from `transformers.models.mamba.modeling_mamba.MambaMixer` in two ways:
+    This module differs from `transformers_4573.models.mamba.modeling_mamba.MambaMixer` in two ways:
     - Added multi-head: the output of `self.in_proj` is split into `self.n_mamba_heads` heads, and each head
     undergoes an independent forward pass, identical to the original `MambaMixer`, up until the pre-activations of
     `self.out_proj`. The pre-activations, coming from different mamba heads, are then concatenated and fed into `self.out_proj`.

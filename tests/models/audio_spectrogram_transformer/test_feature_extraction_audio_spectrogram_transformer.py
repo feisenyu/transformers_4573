@@ -203,7 +203,7 @@ class ASTFeatureExtractionTest(SequenceFeatureExtractionTestMixin, unittest.Test
 # exact same tests than before, except that we simulate that torchaudio is not available
 @require_torch
 @unittest.mock.patch(
-    "transformers.models.audio_spectrogram_transformer.feature_extraction_audio_spectrogram_transformer.is_speech_available",
+    "transformers_4573.models.audio_spectrogram_transformer.feature_extraction_audio_spectrogram_transformer.is_speech_available",
     lambda: False,
 )
 class ASTFeatureExtractionWithoutTorchaudioTest(ASTFeatureExtractionTest):

@@ -93,7 +93,7 @@ OpenAI GPT를 시작하는 데 도움이 되는 공식 Hugging Face 및 커뮤�
 
 [[autodoc]] OpenAIGPTTokenizerFast
 
-## OpenAI specific outputs [[transformers.models.openai.modeling_openai.OpenAIGPTDoubleHeadsModelOutput]]
+## OpenAI specific outputs [[transformers_4573.models.openai.modeling_openai.OpenAIGPTDoubleHeadsModelOutput]]
 
 [[autodoc]] models.openai.modeling_openai.OpenAIGPTDoubleHeadsModelOutput
 

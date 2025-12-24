@@ -33,7 +33,7 @@ from transformers_4573 import (
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.encodec")
+logger = logging.get_logger("transformers_4573.models.encodec")
 
 MAPPING_QUANTIZER = {
     "quantizer.vq.layers.*._codebook.inited": "quantizer.layers.*.codebook.inited",

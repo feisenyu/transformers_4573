@@ -211,10 +211,10 @@ class AutoTokenizerTest(unittest.TestCase):
     @require_tokenizers
     def test_voxtral_tokenizer_converts_from_tekken(self):
         repo_id = "mistralai/Voxtral-Mini-3B-2507"
-        tokenization_auto = transformers.models.auto.tokenization_auto
+        tokenization_auto = transformers_4573.models.auto.tokenization_auto
         with (
             mock.patch("transformers_4573.utils.import_utils.is_mistral_common_available", return_value=False),
-            mock.patch("transformers.models.auto.tokenization_auto.is_mistral_common_available", return_value=False),
+            mock.patch("transformers_4573.models.auto.tokenization_auto.is_mistral_common_available", return_value=False),
         ):
             tokenization_auto = importlib.reload(tokenization_auto)
             tokenizer = tokenization_auto.AutoTokenizer.from_pretrained(repo_id)  # should not raise

@@ -32,7 +32,7 @@ from transformers_4573.tokenization_python import AddedToken
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.speecht5")
+logger = logging.get_logger("transformers_4573.models.speecht5")
 
 MAPPING_SPEECH_ENCODER_PRENET = {
     "speech_encoder_prenet.layer_norm": "speecht5.encoder.prenet.feature_projection.layer_norm",

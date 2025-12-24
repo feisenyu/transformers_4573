@@ -19,7 +19,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from ....transformers.models.dinov2.modeling_dinov2 import (
+from ....transformers_4573.models.dinov2.modeling_dinov2 import (
     Dinov2Backbone,
     Dinov2Encoder,
     Dinov2ForImageClassification,

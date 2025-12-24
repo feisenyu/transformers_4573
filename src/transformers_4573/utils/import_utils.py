@@ -2422,7 +2422,7 @@ def create_import_structure_from_path(module_path):
     object will raise an error mentioning which backend(s) should be added to the environment in order to use
     that object.
 
-    Here's an example of an input import structure at the src.transformers.models level:
+    Here's an example of an input import structure at the src.transformers_4573.models level:
 
     {
         'albert': {
@@ -2598,7 +2598,7 @@ def spread_import_structure(nested_import_structure):
     This method takes as input an unordered import structure and brings the required backends at the top-level,
     aggregating modules and objects under their required backends.
 
-    Here's an example of an input import structure at the src.transformers.models level:
+    Here's an example of an input import structure at the src.transformers_4573.models level:
 
     {
         'albert': {
@@ -2623,7 +2623,7 @@ def spread_import_structure(nested_import_structure):
         }
     }
 
-    Here's an example of an output import structure at the src.transformers.models level:
+    Here's an example of an output import structure at the src.transformers_4573.models level:
 
     {
         frozenset({'tokenizers'}): {
@@ -2724,7 +2724,7 @@ def define_import_structure(module_path: str, prefix: str | None = None) -> IMPO
     """
     This method takes a module_path as input and creates an import structure digestible by a _LazyModule.
 
-    Here's an example of an output import structure at the src.transformers.models level:
+    Here's an example of an output import structure at the src.transformers_4573.models level:
 
     {
         frozenset({'tokenizers'}): {

@@ -46,7 +46,7 @@ rendered properly in your Markdown viewer.
 
 [[autodoc]] RagTokenizer
 
-## Rag specific outputs [[transformers.models.rag.modeling_rag.RetrievAugLMMarginOutput]]
+## Rag specific outputs [[transformers_4573.models.rag.modeling_rag.RetrievAugLMMarginOutput]]
 
 [[autodoc]] models.rag.modeling_rag.RetrievAugLMMarginOutput
 

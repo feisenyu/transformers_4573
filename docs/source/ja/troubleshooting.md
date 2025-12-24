@@ -190,6 +190,6 @@ tensor([[ 0.0082, -0.2307],
 
 >>> processor = AutoProcessor.from_pretrained("openai-community/gpt2-medium")
 >>> model = AutoModelForQuestionAnswering.from_pretrained("openai-community/gpt2-medium")
-ValueError: Unrecognized configuration class <class 'transformers.models.gpt2.configuration_gpt2.GPT2Config'> for this kind of AutoModel: AutoModelForQuestionAnswering.
+ValueError: Unrecognized configuration class <class 'transformers_4573.models.gpt2.configuration_gpt2.GPT2Config'> for this kind of AutoModel: AutoModelForQuestionAnswering.
 Model type should be one of AlbertConfig, BartConfig, BertConfig, BigBirdConfig, BigBirdPegasusConfig, BloomConfig, ...
 ```

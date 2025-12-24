@@ -41,8 +41,8 @@ class AutoConfigTest(unittest.TestCase):
         transformers.dynamic_module_utils.TIME_OUT_REMOTE_CODE = 0
 
     def test_module_spec(self):
-        self.assertIsNotNone(transformers.models.auto.__spec__)
-        self.assertIsNotNone(importlib.util.find_spec("transformers.models.auto"))
+        self.assertIsNotNone(transformers_4573.models.auto.__spec__)
+        self.assertIsNotNone(importlib.util.find_spec("transformers_4573.models.auto"))
 
     def test_config_from_model_shortcut(self):
         config = AutoConfig.from_pretrained("google-bert/bert-base-uncased")

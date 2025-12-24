@@ -362,7 +362,7 @@ class Kosmos2_5LayerNorm(nn.Module):
         return self.weight * hidden_states
 
 
-# similar to transformers.models.pix2struct.modeling_pix2struct.Pix2StructVisionEmbeddings but with `inplace=False`
+# similar to transformers_4573.models.pix2struct.modeling_pix2struct.Pix2StructVisionEmbeddings but with `inplace=False`
 # TODO: check with krip
 class Kosmos2_5VisionEmbeddings(nn.Module):
     def __init__(self, config: Kosmos2_5VisionConfig) -> None:
@@ -1282,7 +1282,7 @@ class Kosmos2_5VisionModel(Kosmos2_5PreTrainedModel):
     def get_input_embeddings(self):
         return self.embeddings.patch_projection
 
-    # Similar to transformers.models.pix2struct.modeling_pix2struct.Pix2StructVisionModel.forward without docstring
+    # Similar to transformers_4573.models.pix2struct.modeling_pix2struct.Pix2StructVisionModel.forward without docstring
     def forward(
         self,
         flattened_patches: Optional[torch.Tensor] = None,

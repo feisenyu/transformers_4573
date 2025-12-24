@@ -379,7 +379,7 @@ class CoreIntegrationDeepSpeed(TestCasePlus, TrainerIntegrationCommon):
         self.assertTrue(str(model.h[0].attn.q_proj.weight.dtype) == "torch.bfloat16")
         good_deepspeed_sin_cos = model.h[0].attn.embed_positions
 
-        good_deepspeed_create_sinusoidal_positions = transformers.models.gptj.modeling_gptj.create_sinusoidal_positions
+        good_deepspeed_create_sinusoidal_positions = transformers_4573.models.gptj.modeling_gptj.create_sinusoidal_positions
 
         good_torch_sin_cos = good_deepspeed_create_sinusoidal_positions(
             model.config.max_position_embeddings, model.config.rotary_dim

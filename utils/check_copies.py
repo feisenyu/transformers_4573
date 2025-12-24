@@ -492,7 +492,7 @@ def find_code_and_splits(object_name: str, base_path: str, buffer: dict | None =
 
     Args:
         object_name (`str`):
-            The name of the object, e.g. `transformers.models.bert.modeling_bert.BertAttention` or
+            The name of the object, e.g. `transformers_4573.models.bert.modeling_bert.BertAttention` or
             `tests.models.llama.test_modeling_llama.LlamaModelTest.test_config`.
         base_path (`str`):
             The path to the base directory within which the search will be performed. It could be either

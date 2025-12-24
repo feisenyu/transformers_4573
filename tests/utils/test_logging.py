@@ -48,7 +48,7 @@ class HfArgumentParserTest(unittest.TestCase):
     def test_integration(self):
         level_origin = logging.get_verbosity()
 
-        logger = logging.get_logger("transformers.models.roberta.tokenization_roberta")
+        logger = logging.get_logger("transformers_4573.models.roberta.tokenization_roberta")
         msg = "Testing 1, 2, 3"
 
         # should be able to log warnings (if default settings weren't overridden by `pytest --log-level-all`)
@@ -79,7 +79,7 @@ class HfArgumentParserTest(unittest.TestCase):
         # reset for the env var to take effect, next time some logger call is made
         transformers_4573.utils.logging._reset_library_root_logger()
         # this action activates the env var
-        _ = logging.get_logger("transformers.models.roberta.tokenization_roberta")
+        _ = logging.get_logger("transformers_4573.models.roberta.tokenization_roberta")
 
         env_level_str = os.getenv("TRANSFORMERS_VERBOSITY", None)
         env_level = logging.log_levels[env_level_str]
@@ -102,7 +102,7 @@ class HfArgumentParserTest(unittest.TestCase):
         logger = logging.logging.getLogger()
         with CaptureLogger(logger) as cl:
             # this action activates the env var
-            logging.get_logger("transformers.models.roberta.tokenization_roberta")
+            logging.get_logger("transformers_4573.models.roberta.tokenization_roberta")
         self.assertIn("Unknown option TRANSFORMERS_VERBOSITY=super-error", cl.out)
 
         # no need to restore as nothing was changed
@@ -111,7 +111,7 @@ class HfArgumentParserTest(unittest.TestCase):
         # testing `logger.warning_advice()`
         transformers_4573.utils.logging._reset_library_root_logger()
 
-        logger = logging.get_logger("transformers.models.roberta.tokenization_roberta")
+        logger = logging.get_logger("transformers_4573.models.roberta.tokenization_roberta")
         msg = "Testing 1, 2, 3"
 
         with mockenv_context(TRANSFORMERS_NO_ADVISORY_WARNINGS="1"):

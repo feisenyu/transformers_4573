@@ -23,7 +23,7 @@ from transformers_4573 import SpeechT5HifiGan, SpeechT5HifiGanConfig, logging
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.speecht5")
+logger = logging.get_logger("transformers_4573.models.speecht5")
 
 
 def load_weights(checkpoint, hf_model, config):

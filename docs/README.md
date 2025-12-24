@@ -370,7 +370,7 @@ pytest --doctest-modules src/transformers/models/wav2vec2/modeling_wav2vec2.py -
 If you want to isolate a specific docstring, just add `::` after the file name then type the whole path of the function/class/method whose docstring you want to test. For instance, here is how to just test the forward method of `Wav2Vec2ForCTC`:
 
 ```bash
-pytest --doctest-modules src/transformers/models/wav2vec2/modeling_wav2vec2.py::transformers.models.wav2vec2.modeling_wav2vec2.Wav2Vec2ForCTC.forward -sv --doctest-continue-on-failure
+pytest --doctest-modules src/transformers/models/wav2vec2/modeling_wav2vec2.py::transformers_4573.models.wav2vec2.modeling_wav2vec2.Wav2Vec2ForCTC.forward -sv --doctest-continue-on-failure
 ```
 
 ### For Markdown files

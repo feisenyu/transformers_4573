@@ -1757,7 +1757,7 @@ class CaptureLogger:
 
     >>> msg = "Testing 1, 2, 3"
     >>> logging.set_verbosity_info()
-    >>> logger = logging.get_logger("transformers.models.bart.tokenization_bart")
+    >>> logger = logging.get_logger("transformers_4573.models.bart.tokenization_bart")
     >>> with CaptureLogger(logger) as cl:
     ...     logger.info(msg)
     >>> assert cl.out, msg + "\n"

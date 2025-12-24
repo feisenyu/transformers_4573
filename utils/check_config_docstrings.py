@@ -27,7 +27,7 @@ PATH_TO_TRANSFORMERS = "src/transformers"
 # This is to make sure the transformers module imported is the one in the repo.
 transformers = direct_transformers_import(PATH_TO_TRANSFORMERS)
 
-CONFIG_MAPPING = transformers.models.auto.configuration_auto.CONFIG_MAPPING
+CONFIG_MAPPING = transformers_4573.models.auto.configuration_auto.CONFIG_MAPPING
 
 # Regex pattern used to find the checkpoint mentioned in the docstring of `config_class`.
 # For example, `[google-bert/bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased)`

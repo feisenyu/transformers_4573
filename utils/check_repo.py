@@ -469,7 +469,7 @@ def check_missing_backends():
 
 def check_model_list():
     """
-    Checks the model listed as subfolders of `models` match the models available in `transformers.models`.
+    Checks the model listed as subfolders of `models` match the models available in `transformers_4573.models`.
     """
     # Get the models from the directory structure of `src/transformers/models/`
     import transformers_4573 as tfrs
@@ -488,7 +488,7 @@ def check_model_list():
 
             _models.append(model)
 
-    # Get the models in the submodule `transformers.models`
+    # Get the models in the submodule `transformers_4573.models`
     models = [model for model in dir(tfrs.models) if not model.startswith("__")]
 
     missing_models = sorted(set(_models).difference(models))
@@ -512,12 +512,12 @@ def get_model_modules() -> list[str]:
         "modeling_vision_encoder_decoder",
     ]
     modules = []
-    for model in dir(transformers.models):
+    for model in dir(transformers_4573.models):
         # There are some magic dunder attributes in the dir, we ignore them
         if "deprecated" in model or model.startswith("__"):
             continue
 
-        model_module = getattr(transformers.models, model)
+        model_module = getattr(transformers_4573.models, model)
         for submodule in dir(model_module):
             if submodule.startswith("modeling") and submodule not in _ignore_modules:
                 modeling_module = getattr(model_module, submodule)
@@ -747,9 +747,9 @@ def get_all_auto_configured_models() -> list[str]:
     """Return the list of all models in at least one auto class."""
     result = set()  # To avoid duplicates we concatenate all model classes in a set.
     if is_torch_available():
-        for attr_name in dir(transformers.models.auto.modeling_auto):
+        for attr_name in dir(transformers_4573.models.auto.modeling_auto):
             if attr_name.startswith("MODEL_") and attr_name.endswith("MAPPING_NAMES"):
-                result = result | set(get_values(getattr(transformers.models.auto.modeling_auto, attr_name)))
+                result = result | set(get_values(getattr(transformers_4573.models.auto.modeling_auto, attr_name)))
     return list(result)
 
 
@@ -817,7 +817,7 @@ def check_all_auto_object_names_being_defined():
         "PROCESSOR_MAPPING_NAMES": PROCESSOR_MAPPING_NAMES,
     }
 
-    module = getattr(transformers.models.auto, "modeling_auto")
+    module = getattr(transformers_4573.models.auto, "modeling_auto")
     # all mappings in a single auto modeling file
     mapping_names = [x for x in dir(module) if x.endswith("_MAPPING_NAMES")]
     mappings_to_check.update({name: getattr(module, name) for name in mapping_names})
@@ -857,7 +857,7 @@ def check_all_auto_mapping_names_in_config_mapping_names():
         "PROCESSOR_MAPPING_NAMES": PROCESSOR_MAPPING_NAMES,
     }
 
-    module = getattr(transformers.models.auto, "modeling_auto")
+    module = getattr(transformers_4573.models.auto, "modeling_auto")
     # all mappings in a single auto modeling file
     mapping_names = [x for x in dir(module) if x.endswith("_MAPPING_NAMES")]
     mappings_to_check.update({name: getattr(module, name) for name in mapping_names})
@@ -881,7 +881,7 @@ def check_all_auto_mappings_importable():
     failures = []
     mappings_to_check = {}
 
-    module = getattr(transformers.models.auto, "modeling_auto")
+    module = getattr(transformers_4573.models.auto, "modeling_auto")
     # all mappings in a single auto modeling file
     mapping_names = [x for x in dir(module) if x.endswith("_MAPPING_NAMES")]
     mappings_to_check.update({name: getattr(module, name) for name in mapping_names})
@@ -1168,7 +1168,7 @@ def check_model_type_doc_match():
     model_doc_folder = Path(PATH_TO_DOC) / "model_doc"
     model_docs = [m.stem for m in model_doc_folder.glob("*.md")]
 
-    model_types = list(transformers.models.auto.configuration_auto.MODEL_NAMES_MAPPING.keys())
+    model_types = list(transformers_4573.models.auto.configuration_auto.MODEL_NAMES_MAPPING.keys())
     model_types = [MODEL_TYPE_TO_DOC_MAPPING.get(m, m) for m in model_types]
 
     errors = []
@@ -1197,7 +1197,7 @@ def check_deprecated_constant_is_up_to_date():
     deprecated_folder = os.path.join(PATH_TO_TRANSFORMERS, "models", "deprecated")
     deprecated_models = [m for m in os.listdir(deprecated_folder) if not m.startswith("_")]
 
-    constant_to_check = transformers.models.auto.configuration_auto.DEPRECATED_MODELS
+    constant_to_check = transformers_4573.models.auto.configuration_auto.DEPRECATED_MODELS
     message = []
     missing_models = sorted(set(deprecated_models) - set(constant_to_check))
     if len(missing_models) != 0:

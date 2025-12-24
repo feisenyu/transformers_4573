@@ -341,7 +341,7 @@ class Speech2TextFeatureExtractionTest(SequenceFeatureExtractionTestMixin, unitt
 # exact same tests than before, except that we simulate that torchaudio is not available
 @require_torch
 @unittest.mock.patch(
-    "transformers.models.speech_to_text.feature_extraction_speech_to_text.is_speech_available", lambda: False
+    "transformers_4573.models.speech_to_text.feature_extraction_speech_to_text.is_speech_available", lambda: False
 )
 class Speech2TextFeatureExtractionWithoutTorchaudioTest(Speech2TextFeatureExtractionTest):
     def test_using_audio_utils(self):

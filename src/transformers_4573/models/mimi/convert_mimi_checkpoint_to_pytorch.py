@@ -28,7 +28,7 @@ from transformers_4573 import (
 
 
 logging.set_verbosity_info()
-logger = logging.get_logger("transformers.models.mimi")
+logger = logging.get_logger("transformers_4573.models.mimi")
 
 
 def assert_param_count(model_1, model_2):
