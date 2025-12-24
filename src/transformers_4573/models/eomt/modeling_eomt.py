@@ -36,7 +36,7 @@ from ...file_utils import ModelOutput, is_scipy_available, requires_backends
 from ...modeling_layers import GradientCheckpointingLayer
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, is_accelerate_available
+from ...utils import transformersKwargs, auto_docstring, is_accelerate_available
 from ...utils.generic import check_model_inputs
 from .configuration_eomt import EomtConfig
 

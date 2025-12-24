@@ -19,7 +19,7 @@ from ...modeling_outputs import BaseModelOutputWithPastAndCrossAttentions, BaseM
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
 from ...pytorch_utils import apply_chunking_to_forward
-from ...utils import transformers_4573Kwargs, auto_docstring
+from ...utils import transformersKwargs, auto_docstring
 from ...utils.generic import check_model_inputs
 from .configuration_roberta import RobertaConfig
 

@@ -24,7 +24,7 @@ from typing import Optional
 import torch
 import torch.nn as nn
 
-from transformers_4573.utils.generic import transformers_4573Kwargs
+from transformers_4573.utils.generic import transformersKwargs
 
 from ...cache_utils import Cache
 from ...modeling_rope_utils import RopeParameters

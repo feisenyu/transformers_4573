@@ -7,7 +7,7 @@ from ... import initialization as init
 from ...masking_utils import create_causal_mask
 from ...modeling_outputs import BaseModelOutput, BaseModelOutputWithPooling
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, can_return_tuple, logging
+from ...utils import transformersKwargs, auto_docstring, can_return_tuple, logging
 from ...utils.generic import check_model_inputs
 from ..clip.configuration_clip import CLIPConfig, CLIPTextConfig, CLIPVisionConfig
 from ..clip.modeling_clip import (

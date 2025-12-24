@@ -22,7 +22,7 @@ from ...cache_utils import Cache, DynamicCache
 from ...masking_utils import create_causal_mask
 from ...modeling_outputs import BaseModelOutputWithPast, CausalLMOutputWithPast
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, logging
+from ...utils import transformersKwargs, logging
 from ..llama.modeling_llama import (
     LlamaAttention,
     LlamaDecoderLayer,

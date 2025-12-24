@@ -42,7 +42,7 @@ from ...modeling_outputs import BaseModelOutput, BaseModelOutputWithPast, ModelO
 from ...modeling_rope_utils import ROPE_INIT_FUNCTIONS, dynamic_rope_update
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, check_torch_load_is_safe, logging
+from ...utils import transformersKwargs, auto_docstring, check_torch_load_is_safe, logging
 from ...utils.deprecation import deprecate_kwarg
 from ...utils.generic import maybe_autocast
 from ...utils.hub import cached_file

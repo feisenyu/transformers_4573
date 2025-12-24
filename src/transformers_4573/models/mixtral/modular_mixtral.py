@@ -33,7 +33,7 @@ from ...modeling_layers import GradientCheckpointingLayer
 from ...modeling_outputs import MoeCausalLMOutputWithPast, MoeModelOutputWithPast
 from ...modeling_utils import PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, logging
+from ...utils import transformersKwargs, logging
 from ...utils.generic import OutputRecorder
 from ..mistral.modeling_mistral import (
     MistralAttention,

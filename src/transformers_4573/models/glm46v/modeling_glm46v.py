@@ -31,7 +31,7 @@ from ...generation import GenerationMixin
 from ...modeling_outputs import ModelOutput
 from ...modeling_utils import PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, can_return_tuple, is_torchdynamo_compiling
+from ...utils import transformersKwargs, auto_docstring, can_return_tuple, is_torchdynamo_compiling
 from ..auto import AutoModel
 from .configuration_glm46v import Glm46VConfig
 

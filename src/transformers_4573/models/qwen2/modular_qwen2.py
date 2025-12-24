@@ -14,7 +14,7 @@ from ...modeling_outputs import (
 )
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, logging
+from ...utils import transformersKwargs, auto_docstring, logging
 from ...utils.generic import check_model_inputs
 from ...utils.import_utils import get_torch_version
 from ..gemma2.modeling_gemma2 import Gemma2RotaryEmbedding

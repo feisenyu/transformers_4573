@@ -17,7 +17,7 @@ from ...integrations import use_kernel_func_from_hub, use_kernelized_func
 from ...modeling_layers import GenericForSequenceClassification, GradientCheckpointingLayer
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring
+from ...utils import transformersKwargs, auto_docstring
 from .configuration_my_new_model2 import MyNewModel2Config
 
 

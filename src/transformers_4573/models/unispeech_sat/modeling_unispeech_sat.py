@@ -48,7 +48,7 @@ from ...modeling_outputs import (
 )
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, is_peft_available, logging
+from ...utils import transformersKwargs, auto_docstring, is_peft_available, logging
 from .configuration_unispeech_sat import UniSpeechSatConfig
 
 

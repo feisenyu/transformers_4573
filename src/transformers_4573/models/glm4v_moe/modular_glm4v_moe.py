@@ -27,7 +27,7 @@ from ...modeling_outputs import MoeModelOutputWithPast
 from ...modeling_rope_utils import RopeParameters, RotaryEmbeddingConfigMixin
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, logging
+from ...utils import transformersKwargs, auto_docstring, logging
 from ...utils.generic import OutputRecorder, check_model_inputs
 from ..deepseek_v3.modeling_deepseek_v3 import DeepseekV3NaiveMoe
 from ..glm4.modeling_glm4 import Glm4Attention

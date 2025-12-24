@@ -19,7 +19,7 @@ import torch
 
 from ...configuration_utils import PreTrainedConfig
 from ...processing_utils import Unpack
-from ...utils.generic import transformers_4573Kwargs
+from ...utils.generic import transformersKwargs
 from ..auto import CONFIG_MAPPING, AutoConfig, AutoModel
 from ..sam2_video.configuration_sam2_video import Sam2VideoMaskDecoderConfig, Sam2VideoPromptEncoderConfig
 from ..sam2_video.modeling_sam2_video import (

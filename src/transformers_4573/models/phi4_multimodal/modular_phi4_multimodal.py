@@ -37,7 +37,7 @@ from ...modeling_rope_utils import RopeParameters
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
 from ...utils import auto_docstring, logging
-from ...utils.generic import transformers_4573Kwargs, check_model_inputs, maybe_autocast
+from ...utils.generic import transformersKwargs, check_model_inputs, maybe_autocast
 from ..phi3.configuration_phi3 import Phi3Config
 from ..phi3.modeling_phi3 import (
     Phi3DecoderLayer,

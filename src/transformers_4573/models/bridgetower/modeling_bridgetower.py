@@ -38,7 +38,7 @@ from ...modeling_outputs import (
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
 from ...pytorch_utils import apply_chunking_to_forward
-from ...utils import transformers_4573Kwargs, auto_docstring, logging, torch_int
+from ...utils import transformersKwargs, auto_docstring, logging, torch_int
 from ...utils.generic import can_return_tuple
 from .configuration_bridgetower import BridgeTowerConfig, BridgeTowerTextConfig, BridgeTowerVisionConfig
 

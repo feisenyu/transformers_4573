@@ -39,7 +39,7 @@ from ...modeling_outputs import MoeCausalLMOutputWithPast, MoeModelOutputWithPas
 from ...modeling_rope_utils import dynamic_rope_update
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, can_return_tuple, is_torchdynamo_compiling
+from ...utils import transformersKwargs, auto_docstring, can_return_tuple, is_torchdynamo_compiling
 from ...utils.generic import OutputRecorder, check_model_inputs, maybe_autocast
 from .configuration_ernie4_5_vl_moe import (
     Ernie4_5_VL_MoeConfig,

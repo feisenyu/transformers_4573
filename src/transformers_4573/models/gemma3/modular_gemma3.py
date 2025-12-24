@@ -32,7 +32,7 @@ from ...modeling_rope_utils import (
 )
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring, can_return_tuple, logging
+from ...utils import transformersKwargs, auto_docstring, can_return_tuple, logging
 from ...utils.generic import maybe_autocast
 from ..gemma2.configuration_gemma2 import Gemma2Config
 from ..gemma2.modeling_gemma2 import (

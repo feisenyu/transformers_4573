@@ -40,7 +40,7 @@ from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
 from ...pytorch_utils import compile_compatible_method_lru_cache
 from ...utils import auto_docstring, logging
-from ...utils.generic import transformers_4573Kwargs, check_model_inputs
+from ...utils.generic import transformersKwargs, check_model_inputs
 from ..auto import AutoModel
 from .configuration_sam3 import (
     Sam3Config,

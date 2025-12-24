@@ -20,7 +20,7 @@ import pathlib
 import fairseq
 import torch
 from fairseq.models.roberta import RobertaModel as FairseqRobertaModel
-from fairseq.modules import transformers_4573entenceEncoderLayer
+from fairseq.modules import transformersentenceEncoderLayer
 from packaging import version
 
 from transformers_4573 import XLMRobertaConfig, XLMRobertaXLForMaskedLM, XLMRobertaXLForSequenceClassification

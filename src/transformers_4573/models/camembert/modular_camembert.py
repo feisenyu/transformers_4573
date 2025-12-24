@@ -30,7 +30,7 @@ from ...modeling_outputs import (
     TokenClassifierOutput,
 )
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring
+from ...utils import transformersKwargs, auto_docstring
 from ...utils.generic import can_return_tuple
 from ..roberta.modeling_roberta import (
     RobertaForCausalLM,

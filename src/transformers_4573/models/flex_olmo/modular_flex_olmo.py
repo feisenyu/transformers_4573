@@ -24,7 +24,7 @@ from ...masking_utils import create_causal_mask
 from ...modeling_outputs import MoeModelOutputWithPast
 from ...modeling_rope_utils import RopeParameters
 from ...processing_utils import Unpack
-from ...utils import transformers_4573Kwargs, auto_docstring
+from ...utils import transformersKwargs, auto_docstring
 from ...utils.generic import OutputRecorder, check_model_inputs
 from ..mixtral.modeling_mixtral import MixtralModel, MixtralPreTrainedModel
 from ..olmo2.modeling_olmo2 import Olmo2Attention, Olmo2RMSNorm, Olmo2RotaryEmbedding
