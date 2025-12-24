@@ -17,7 +17,7 @@ import argparse
 import os
 from pathlib import Path
 
-import transformers
+import transformers_4573
 
 from .convert_slow_tokenizer import SLOW_TO_FAST_CONVERTERS
 from .utils import logging

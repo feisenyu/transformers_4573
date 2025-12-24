@@ -49,7 +49,7 @@ from huggingface_hub_4573 import HfApi
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     CONFIG_MAPPING,
     MODEL_MAPPING,
@@ -258,10 +258,10 @@ def main():
     logger.info(accelerator.state, main_process_only=False)
     if accelerator.is_local_main_process:
         datasets.utils.logging.set_verbosity_warning()
-        transformers.utils.logging.set_verbosity_info()
+        transformers_4573.utils.logging.set_verbosity_info()
     else:
         datasets.utils.logging.set_verbosity_error()
-        transformers.utils.logging.set_verbosity_error()
+        transformers_4573.utils.logging.set_verbosity_error()
 
     # If passed along, set the training seed now.
     if args.seed is not None:

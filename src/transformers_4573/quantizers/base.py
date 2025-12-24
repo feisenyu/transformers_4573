@@ -65,7 +65,7 @@ class HfQuantizer(ABC):
     yet.
 
     Attributes
-        quantization_config (`transformers.utils.quantization_config.QuantizationConfigMixin`):
+        quantization_config (`transformers_4573.utils.quantization_config.QuantizationConfigMixin`):
             The quantization config that defines the quantization parameters of your model that you want to quantize.
         requires_calibration (`bool`):
             Whether the quantization method requires to calibrate the model before using it.

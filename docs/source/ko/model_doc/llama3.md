@@ -17,7 +17,7 @@ rendered properly in your Markdown viewer.
 # Llama3[[llama3]]
 
 ```py3
-import transformers
+import transformers_4573
 import torch
 
 model_id = "meta-llama/Meta-Llama-3-8B"

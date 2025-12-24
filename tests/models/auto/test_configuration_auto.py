@@ -20,8 +20,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import transformers
-import transformers.models.auto
+import transformers_4573
+import transformers_4573.models.auto
 from transformers_4573.models.auto.configuration_auto import CONFIG_MAPPING, AutoConfig
 from transformers_4573.models.bert.configuration_bert import BertConfig
 from transformers_4573.models.roberta.configuration_roberta import RobertaConfig

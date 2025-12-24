@@ -37,7 +37,7 @@ from ...modeling_outputs import MoeCausalLMOutputWithPast, MoeModelOutputWithPas
 from ...modeling_rope_utils import ROPE_INIT_FUNCTIONS, dynamic_rope_update
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs, auto_docstring
+from ...utils import transformers_4573Kwargs, auto_docstring
 from ...utils.generic import can_return_tuple, check_model_inputs, maybe_autocast
 from .configuration_granitemoeshared import GraniteMoeSharedConfig
 

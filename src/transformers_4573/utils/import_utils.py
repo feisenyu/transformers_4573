@@ -1843,7 +1843,7 @@ def requires_backends(obj, backends):
     requires_backends(self, ["torch"])
     ```
 
-    The backends should be defined in the `BACKEND_MAPPING` defined in `transformers.utils.import_utils`.
+    The backends should be defined in the `BACKEND_MAPPING` defined in `transformers_4573.utils.import_utils`.
 
     Args:
         obj: object to be checked
@@ -2241,7 +2241,7 @@ def direct_transformers_import(path: str, file="__init__.py") -> ModuleType:
     Returns:
         `ModuleType`: The resulting imported module
     """
-    name = "transformers"
+    name = "transformers_4573"
     location = os.path.join(path, file)
     spec = importlib.util.spec_from_file_location(name, location, submodule_search_locations=[path])
     module = importlib.util.module_from_spec(spec)

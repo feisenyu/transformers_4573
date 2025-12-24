@@ -381,7 +381,7 @@ wichtig ist. Hier sind einige Ratschläge, um Ihre Debugging-Umgebung so effizie
   Originalcode so ändern müssen, dass Sie die ids direkt eingeben können, anstatt eine Zeichenkette einzugeben.
 - Vergewissern Sie sich, dass sich das Modell in Ihrem Debugging-Setup **nicht** im Trainingsmodus befindet, der oft dazu führt, dass das Modell
   Dies führt häufig zu zufälligen Ergebnissen, da das Modell mehrere Dropout-Schichten enthält. Stellen Sie sicher, dass der Vorwärtsdurchlauf in Ihrer Debugging
-  Umgebung **deterministisch** ist, damit die Dropout-Schichten nicht verwendet werden. Oder verwenden Sie *transformers.utils.set_seed*.
+  Umgebung **deterministisch** ist, damit die Dropout-Schichten nicht verwendet werden. Oder verwenden Sie *transformers_4573.utils.set_seed*.
   wenn sich die alte und die neue Implementierung im selben Framework befinden.
 
 Im folgenden Abschnitt finden Sie genauere Details/Tipps, wie Sie dies für *brand_new_bert* tun können.

@@ -24,7 +24,7 @@ import datasets
 from parameterized import parameterized
 
 import tests.trainer.test_trainer
-import transformers
+import transformers_4573
 from tests.trainer.test_trainer import TrainerIntegrationCommon  # noqa
 from transformers_4573 import AutoModel, TrainingArguments, is_torch_available, logging
 from transformers_4573.integrations.deepspeed import (

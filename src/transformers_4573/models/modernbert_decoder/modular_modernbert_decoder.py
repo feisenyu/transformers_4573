@@ -31,7 +31,7 @@ from ...modeling_outputs import BaseModelOutputWithPast, CausalLMOutputWithPast,
 from ...modeling_rope_utils import ROPE_INIT_FUNCTIONS, RopeParameters
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs, auto_docstring, can_return_tuple, logging
+from ...utils import transformers_4573Kwargs, auto_docstring, can_return_tuple, logging
 from ...utils.generic import check_model_inputs
 from ..modernbert.modeling_modernbert import (
     ModernBertEmbeddings,

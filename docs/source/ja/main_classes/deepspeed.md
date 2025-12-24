@@ -1875,7 +1875,7 @@ SW: Model with 2783M total params, 65M largest layer params.
 
    ```bash
     python -c 'import torch; print(f"torch: {torch.__version__}")'
-    python -c 'import transformers; print(f"transformers: {transformers.__version__}")'
+    python -c 'import transformers_4573; print(f"transformers: {transformers.__version__}")'
     python -c 'import deepspeed; print(f"deepspeed: {deepspeed.__version__}")'
     ```
 

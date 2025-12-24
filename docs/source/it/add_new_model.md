@@ -332,7 +332,7 @@ debug da questo punto. Questo vi garantisce un ottimo punto di partenza per scri
 gli input al modello, anziche delle stringhe in input.
 - Assicuratevi che il debugging **non** sia in training mode. Spesso questo potra il modello a dare degli output random, per
 via dei molteplici dropout layers. Assicuratevi che il forward pass nell'ambiente di debug sia **deterministico**, cosicche
-i dropout non siano usati. Alternativamente, potete usare *transformers.utils.set_seed* se la vecchia e nuova implementazione
+i dropout non siano usati. Alternativamente, potete usare *transformers_4573.utils.set_seed* se la vecchia e nuova implementazione
 sono nello stesso framework.
 
 La seguente sezione vi da ulteriori dettagli e accorgimenti su come potete fare tutto questo per *brand_new_bert*.

@@ -43,7 +43,7 @@ from typing import Optional
 import datasets
 from datasets import load_dataset
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     AutoConfig,
     AutoTokenizer,
@@ -252,14 +252,14 @@ def main():
 
     if training_args.should_log:
         # The default of training_args.log_level is passive, so we set log level at info here to have that default.
-        transformers.utils.logging.set_verbosity_info()
+        transformers_4573.utils.logging.set_verbosity_info()
 
     log_level = training_args.get_process_log_level()
     logger.setLevel(log_level)
     datasets.utils.logging.set_verbosity(log_level)
-    transformers.utils.logging.set_verbosity(log_level)
-    transformers.utils.logging.enable_default_handler()
-    transformers.utils.logging.enable_explicit_format()
+    transformers_4573.utils.logging.set_verbosity(log_level)
+    transformers_4573.utils.logging.enable_default_handler()
+    transformers_4573.utils.logging.enable_explicit_format()
 
     # Log on each process the small summary:
     logger.warning(

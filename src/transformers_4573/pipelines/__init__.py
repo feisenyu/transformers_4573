@@ -418,7 +418,7 @@ def check_task(task: str) -> tuple[str, dict, Any]:
 
 
 def clean_custom_task(task_info):
-    import transformers
+    import transformers_4573
 
     if "impl" not in task_info:
         raise RuntimeError("This model introduces a custom pipeline without specifying its implementation.")

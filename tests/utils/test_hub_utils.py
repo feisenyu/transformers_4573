@@ -80,7 +80,7 @@ class GetFromCacheTests(unittest.TestCase):
 
         # Under the mock environment, hf_hub_download will always raise an HTTPError
         with mock.patch(
-            "transformers.utils.hub.hf_hub_download",
+            "transformers_4573.utils.hub.hf_hub_download",
             side_effect=HfHubHTTPError("failed", response=mock.Mock(status_code=404)),
         ) as mock_head:
             path = cached_file(RANDOM_BERT, "conf", _raise_exceptions_for_connection_errors=False)
@@ -188,7 +188,7 @@ class GetFromCacheTests(unittest.TestCase):
     def test_cached_files_exception_raised(self):
         """Test that unhadled exceptions, e.g. ModuleNotFoundError, is properly re-raised by cached_files when hf_hub_download fails."""
         with mock.patch(
-            "transformers.utils.hub.hf_hub_download", side_effect=ModuleNotFoundError("No module named 'MockModule'")
+            "transformers_4573.utils.hub.hf_hub_download", side_effect=ModuleNotFoundError("No module named 'MockModule'")
         ):
             with self.assertRaises(ModuleNotFoundError):
                 # The error should be re-raised by cached_files, not caught in the exception handling block
@@ -197,8 +197,8 @@ class GetFromCacheTests(unittest.TestCase):
 
 class OfflineModeTests(unittest.TestCase):
     def test_list_repo_templates_w_offline(self):
-        with mock.patch("transformers.utils.hub.list_repo_tree", side_effect=OfflineModeIsEnabled()):
+        with mock.patch("transformers_4573.utils.hub.list_repo_tree", side_effect=OfflineModeIsEnabled()):
             with mock.patch(
-                "transformers.utils.hub.snapshot_download", side_effect=LocalEntryNotFoundError("no snapshot found")
+                "transformers_4573.utils.hub.snapshot_download", side_effect=LocalEntryNotFoundError("no snapshot found")
             ):
                 self.assertEqual(list_repo_templates(RANDOM_BERT, local_files_only=False), [])

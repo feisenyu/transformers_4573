@@ -42,7 +42,7 @@ import evaluate
 import torch
 from datasets import DatasetDict, load_dataset
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     AutoConfig,
     AutoModelForSpeechSeq2Seq,
@@ -320,9 +320,9 @@ def main():
     log_level = training_args.get_process_log_level()
     logger.setLevel(log_level)
     datasets.utils.logging.set_verbosity(log_level)
-    transformers.utils.logging.set_verbosity(log_level)
-    transformers.utils.logging.enable_default_handler()
-    transformers.utils.logging.enable_explicit_format()
+    transformers_4573.utils.logging.set_verbosity(log_level)
+    transformers_4573.utils.logging.enable_default_handler()
+    transformers_4573.utils.logging.enable_explicit_format()
 
     logger.setLevel(logging.INFO if is_main_process(training_args.local_process_index) else logging.WARN)
 
@@ -335,7 +335,7 @@ def main():
 
     # Set the verbosity to info of the Transformers logger (on main process only):
     if is_main_process(training_args.local_process_index):
-        transformers.utils.logging.set_verbosity_info()
+        transformers_4573.utils.logging.set_verbosity_info()
     logger.info("Training/evaluation parameters %s", training_args)
 
     # Set seed before initializing model.

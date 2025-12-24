@@ -42,7 +42,7 @@ import evaluate
 import torch
 from datasets import DatasetDict, load_dataset
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     AutoConfig,
     AutoFeatureExtractor,
@@ -444,7 +444,7 @@ def main():
     )
     # Set the verbosity to info of the Transformers logger (on main process only):
     if is_main_process(training_args.local_process_index):
-        transformers.utils.logging.set_verbosity_info()
+        transformers_4573.utils.logging.set_verbosity_info()
     logger.info("Training/evaluation parameters %s", training_args)
 
     # Set seed before initializing model.

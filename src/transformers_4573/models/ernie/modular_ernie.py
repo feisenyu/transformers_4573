@@ -36,7 +36,7 @@ from ...modeling_outputs import (
 )
 from ...modeling_utils import PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs, auto_docstring, logging
+from ...utils import transformers_4573Kwargs, auto_docstring, logging
 from ...utils.generic import can_return_tuple, check_model_inputs
 from ..bert.modeling_bert import (
     BertCrossAttention,

@@ -38,7 +38,7 @@ git cherry-pick 0bef4a273825d2cfc52ddfe62ba486ee61cc116f #2024-05-29 13:33:26+01
 import json
 import subprocess
 
-import transformers
+import transformers_4573
 
 
 LABEL = "for patch"  # Replace with your label

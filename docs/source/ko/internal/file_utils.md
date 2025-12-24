@@ -21,7 +21,7 @@ rendered properly in your Markdown viewer.
 이 함수들 대부분은 라이브러리의 일반적인 코드를 연구할 때만 유용합니다.
 
 
-## Enums 및 namedtuples [[transformers.utils.ExplicitEnum]]
+## Enums 및 namedtuples [[transformers_4573.utils.ExplicitEnum]]
 
 [[autodoc]] utils.ExplicitEnum
 
@@ -41,6 +41,6 @@ rendered properly in your Markdown viewer.
 
 [[autodoc]] utils.replace_return_docstrings
 
-## 기타 유틸리티 [[transformers.utils._LazyModule]]
+## 기타 유틸리티 [[transformers_4573.utils._LazyModule]]
 
 [[autodoc]] utils._LazyModule

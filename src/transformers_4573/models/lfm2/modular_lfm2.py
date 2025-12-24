@@ -23,7 +23,7 @@ from ...modeling_layers import GradientCheckpointingLayer
 from ...modeling_outputs import BaseModelOutputWithPast
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs, logging
+from ...utils import transformers_4573Kwargs, logging
 from ...utils.import_utils import is_causal_conv1d_available, is_torchdynamo_compiling
 from ..bamba.modeling_bamba import apply_mask_to_padding_states
 from ..gemma2.modeling_gemma2 import Gemma2RotaryEmbedding

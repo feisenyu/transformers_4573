@@ -97,11 +97,11 @@ class _LazyAutoProcessorMapping(dict):
     """
 
     _MAPPING_NAMES = {
-        "image_processor": ("transformers.models.auto.image_processing_auto", "AutoImageProcessor"),
-        "video_processor": ("transformers.models.auto.video_processing_auto", "AutoVideoProcessor"),
-        "feature_extractor": ("transformers.models.auto.feature_extraction_auto", "AutoFeatureExtractor"),
-        "audio_processor": ("transformers.models.auto.feature_extraction_auto", "AutoFeatureExtractor"),
-        "tokenizer": ("transformers.models.auto.tokenization_auto", "AutoTokenizer"),
+        "image_processor": ("transformers_4573.models.auto.image_processing_auto", "AutoImageProcessor"),
+        "video_processor": ("transformers_4573.models.auto.video_processing_auto", "AutoVideoProcessor"),
+        "feature_extractor": ("transformers_4573.models.auto.feature_extraction_auto", "AutoFeatureExtractor"),
+        "audio_processor": ("transformers_4573.models.auto.feature_extraction_auto", "AutoFeatureExtractor"),
+        "tokenizer": ("transformers_4573.models.auto.tokenization_auto", "AutoTokenizer"),
     }
 
     def __getitem__(self, key):
@@ -1455,7 +1455,7 @@ class ProcessorMixin(PushToHubMixin):
         if not isinstance(auto_class, str):
             auto_class = auto_class.__name__
 
-        import transformers.models.auto as auto_module
+        import transformers_4573.models.auto as auto_module
 
         if not hasattr(auto_module, auto_class):
             raise ValueError(f"{auto_class} is not a valid auto class.")

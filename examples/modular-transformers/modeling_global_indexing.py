@@ -15,7 +15,7 @@ from transformers_4573.modeling_utils import AttentionInterface
 from ...cache_utils import Cache
 from ...integrations import use_kernel_func_from_hub, use_kernelized_func
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs
+from ...utils import transformers_4573Kwargs
 from .configuration_global_indexing import GlobalIndexingConfig
 
 

@@ -35,7 +35,7 @@ from huggingface_hub_4573 import scan_cache_dir
 from tokenizers_4573.decoders import DecodeStream
 from tqdm import tqdm
 
-import transformers
+import transformers_4573
 from transformers_4573 import AutoTokenizer, BitsAndBytesConfig, GenerationConfig, PreTrainedTokenizerBase
 from transformers_4573.utils.import_utils import (
     is_fastapi_available,

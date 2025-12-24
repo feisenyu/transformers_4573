@@ -24,7 +24,7 @@ from dataclasses import dataclass, field
 import numpy as np
 from datasets import load_dataset, load_metric
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     AutoConfig,
     AutoModelForSequenceClassification,
@@ -202,9 +202,9 @@ def main():
     )
     # Set the verbosity to info of the Transformers logger (on main process only):
     if training_args.should_log:
-        transformers.utils.logging.set_verbosity_info()
-        transformers.utils.logging.enable_default_handler()
-        transformers.utils.logging.enable_explicit_format()
+        transformers_4573.utils.logging.set_verbosity_info()
+        transformers_4573.utils.logging.enable_default_handler()
+        transformers_4573.utils.logging.enable_explicit_format()
     logger.info(f"Training/evaluation parameters {training_args}")
 
     # Set seed before initializing model.

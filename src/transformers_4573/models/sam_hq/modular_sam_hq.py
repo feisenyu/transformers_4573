@@ -20,7 +20,7 @@ import torch
 from torch import nn
 
 from transformers_4573.modeling_outputs import ModelOutput
-from transformers_4573.utils.generic import TransformersKwargs, check_model_inputs
+from transformers_4573.utils.generic import transformers_4573Kwargs, check_model_inputs
 
 from ...processing_utils import Unpack
 from ...utils import auto_docstring, logging

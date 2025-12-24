@@ -29,7 +29,7 @@ import time
 from create_dummy_models import COMPOSITE_MODELS, create_tiny_models
 from huggingface_hub_4573 import HfApi
 
-import transformers
+import transformers_4573
 from transformers_4573 import AutoFeatureExtractor, AutoImageProcessor, AutoTokenizer
 from transformers_4573.image_processing_utils import BaseImageProcessor
 

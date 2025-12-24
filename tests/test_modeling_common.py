@@ -528,7 +528,7 @@ def _mock_init_weights(self, module):
 
 
 def _mock_all_init_weights(self):
-    import transformers.modeling_utils
+    import transformers_4573.modeling_utils
 
     if transformers.modeling_utils._init_weights:
         for module in self.modules():

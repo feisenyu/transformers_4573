@@ -38,7 +38,7 @@ from ...modeling_outputs import BackboneOutput, BaseModelOutputWithPooling
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
 from ...pytorch_utils import compile_compatible_method_lru_cache
-from ...utils import TransformersKwargs, auto_docstring, can_return_tuple, logging
+from ...utils import transformers_4573Kwargs, auto_docstring, can_return_tuple, logging
 from ...utils.backbone_utils import BackboneMixin
 from ...utils.generic import check_model_inputs, maybe_autocast
 from .configuration_dinov3_vit import DINOv3ViTConfig

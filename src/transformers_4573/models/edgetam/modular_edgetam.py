@@ -26,7 +26,7 @@ from ...processing_utils import Unpack
 from ...utils import (
     auto_docstring,
 )
-from ...utils.generic import TransformersKwargs, check_model_inputs
+from ...utils.generic import transformers_4573Kwargs, check_model_inputs
 from ..auto import CONFIG_MAPPING, AutoConfig
 from ..sam2.configuration_sam2 import Sam2Config, Sam2MaskDecoderConfig, Sam2PromptEncoderConfig
 from ..sam2.modeling_sam2 import (

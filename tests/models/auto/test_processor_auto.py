@@ -22,7 +22,7 @@ from shutil import copyfile
 
 from huggingface_hub_4573 import snapshot_download, upload_folder
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     CONFIG_MAPPING,
     FEATURE_EXTRACTOR_MAPPING,

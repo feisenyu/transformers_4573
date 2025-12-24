@@ -24,7 +24,7 @@ from unittest import mock
 
 import pytest
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     AutoTokenizer,
     BertConfig,
@@ -213,7 +213,7 @@ class AutoTokenizerTest(unittest.TestCase):
         repo_id = "mistralai/Voxtral-Mini-3B-2507"
         tokenization_auto = transformers.models.auto.tokenization_auto
         with (
-            mock.patch("transformers.utils.import_utils.is_mistral_common_available", return_value=False),
+            mock.patch("transformers_4573.utils.import_utils.is_mistral_common_available", return_value=False),
             mock.patch("transformers.models.auto.tokenization_auto.is_mistral_common_available", return_value=False),
         ):
             tokenization_auto = importlib.reload(tokenization_auto)
@@ -526,7 +526,7 @@ class AutoTokenizerTest(unittest.TestCase):
 
     def test_init_tokenizer_with_trust(self):
         nop_tokenizer_code = """
-import transformers
+import transformers_4573
 
 class NopTokenizer(transformers.PreTrainedTokenizer):
     def get_vocab(self):

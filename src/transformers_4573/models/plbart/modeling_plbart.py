@@ -44,7 +44,7 @@ from ...modeling_outputs import (
 )
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs, auto_docstring, is_torchdynamo_compiling, logging
+from ...utils import transformers_4573Kwargs, auto_docstring, is_torchdynamo_compiling, logging
 from .configuration_plbart import PLBartConfig
 
 

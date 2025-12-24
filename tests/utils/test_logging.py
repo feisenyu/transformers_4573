@@ -17,7 +17,7 @@ import unittest
 
 from huggingface_hub_4573.utils import are_progress_bars_disabled
 
-import transformers.models.roberta.tokenization_roberta
+import transformers_4573.models.roberta.tokenization_roberta
 from transformers_4573 import logging
 from transformers_4573.testing_utils import CaptureLogger, mockenv, mockenv_context
 from transformers_4573.utils.logging import disable_progress_bar, enable_progress_bar
@@ -77,7 +77,7 @@ class HfArgumentParserTest(unittest.TestCase):
     @mockenv(TRANSFORMERS_VERBOSITY="error")
     def test_env_override(self):
         # reset for the env var to take effect, next time some logger call is made
-        transformers.utils.logging._reset_library_root_logger()
+        transformers_4573.utils.logging._reset_library_root_logger()
         # this action activates the env var
         _ = logging.get_logger("transformers.models.roberta.tokenization_roberta")
 
@@ -93,12 +93,12 @@ class HfArgumentParserTest(unittest.TestCase):
 
         # restore to the original level
         os.environ["TRANSFORMERS_VERBOSITY"] = ""
-        transformers.utils.logging._reset_library_root_logger()
+        transformers_4573.utils.logging._reset_library_root_logger()
 
     @mockenv(TRANSFORMERS_VERBOSITY="super-error")
     def test_env_invalid_override(self):
         # reset for the env var to take effect, next time some logger call is made
-        transformers.utils.logging._reset_library_root_logger()
+        transformers_4573.utils.logging._reset_library_root_logger()
         logger = logging.logging.getLogger()
         with CaptureLogger(logger) as cl:
             # this action activates the env var
@@ -109,7 +109,7 @@ class HfArgumentParserTest(unittest.TestCase):
 
     def test_advisory_warnings(self):
         # testing `logger.warning_advice()`
-        transformers.utils.logging._reset_library_root_logger()
+        transformers_4573.utils.logging._reset_library_root_logger()
 
         logger = logging.get_logger("transformers.models.roberta.tokenization_roberta")
         msg = "Testing 1, 2, 3"

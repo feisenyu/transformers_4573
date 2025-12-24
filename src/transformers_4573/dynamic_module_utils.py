@@ -187,7 +187,7 @@ def get_imports(filename: Union[str, os.PathLike]) -> list[str]:
         content = f.read()
     imported_modules = set()
 
-    import transformers.utils
+    import transformers_4573.utils
 
     def recursive_look_for_imports(node):
         if isinstance(node, ast.Try):
@@ -200,10 +200,10 @@ def get_imports(filename: Union[str, os.PathLike]) -> list[str]:
                     if (
                         check_function.endswith("available")
                         and check_function.startswith("is_flash_attn")
-                        or hasattr(transformers.utils.import_utils, check_function)
+                        or hasattr(transformers_4573.utils.import_utils, check_function)
                     ):
                         # Don't recurse into "if flash_attn_available()" or any "if library_available" blocks
-                        # that appears in `transformers.utils.import_utils` and ignore imports in them
+                        # that appears in `transformers_4573.utils.import_utils` and ignore imports in them
                         return
         elif isinstance(node, ast.Import):
             # Handle 'import x' statements

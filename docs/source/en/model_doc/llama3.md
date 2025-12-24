@@ -23,7 +23,7 @@ rendered properly in your Markdown viewer.
 </div>
 
 ```py3
-import transformers
+import transformers_4573
 import torch
 
 model_id = "meta-llama/Meta-Llama-3-8B"

@@ -20,7 +20,7 @@ import pathlib
 
 import fairseq
 import torch
-from fairseq.modules import TransformerSentenceEncoderLayer
+from fairseq.modules import transformers_4573entenceEncoderLayer
 from packaging import version
 
 from transformers_4573 import (

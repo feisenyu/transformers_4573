@@ -36,8 +36,8 @@ This guide describes the backbone class, backbones from the [timm](https://hf.co
 
 There are two backbone classes.
 
-- [`~transformers.utils.BackboneMixin`] allows you to load a backbone and includes functions for extracting the feature maps and indices.
-- [`~transformers.utils.BackboneConfigMixin`] allows you to set the feature map and indices of a backbone configuration.
+- [`~transformers_4573.utils.BackboneMixin`] allows you to load a backbone and includes functions for extracting the feature maps and indices.
+- [`~transformers_4573.utils.BackboneConfigMixin`] allows you to set the feature map and indices of a backbone configuration.
 
 Refer to the [Backbone](./main_classes/backbones) API documentation to check which models support a backbone.
 

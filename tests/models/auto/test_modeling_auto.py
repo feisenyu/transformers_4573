@@ -21,7 +21,7 @@ from pathlib import Path
 
 import pytest
 
-import transformers
+import transformers_4573
 from transformers_4573 import BertConfig, GPT2Model, is_torch_available
 from transformers_4573.models.auto.configuration_auto import CONFIG_MAPPING
 from transformers_4573.testing_utils import (

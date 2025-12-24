@@ -214,7 +214,7 @@ def check_dummies(overwrite: bool = False):
         if dummy_files[backend] != actual_dummies[backend]:
             if overwrite:
                 print(
-                    f"Updating transformers.utils.dummy_{short_names.get(backend, backend)}_objects.py as the main "
+                    f"Updating transformers_4573.utils.dummy_{short_names.get(backend, backend)}_objects.py as the main "
                     "__init__ has new objects."
                 )
                 with open(dummy_file_paths[backend], "w", encoding="utf-8", newline="\n") as f:
@@ -237,7 +237,7 @@ def check_dummies(overwrite: bool = False):
 
                 raise ValueError(
                     "The main __init__ has objects that are not present in "
-                    f"transformers.utils.dummy_{short_names.get(backend, backend)}_objects.py.\n"
+                    f"transformers_4573.utils.dummy_{short_names.get(backend, backend)}_objects.py.\n"
                     f" It is likely the following objects are responsible, see these excerpts: \n"
                     f"---------------------------------- Actual -------------------------------------\n"
                     f" \n {actual_broken} \n"

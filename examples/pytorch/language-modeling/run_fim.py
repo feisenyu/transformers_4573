@@ -50,7 +50,7 @@ import numpy as np
 import torch
 from datasets import load_dataset
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     CONFIG_MAPPING,
     MODEL_FOR_CAUSAL_LM_MAPPING,
@@ -327,14 +327,14 @@ def main():
 
     if training_args.should_log:
         # The default of training_args.log_level is passive, so we set log level at info here to have that default.
-        transformers.utils.logging.set_verbosity_info()
+        transformers_4573.utils.logging.set_verbosity_info()
 
     log_level = training_args.get_process_log_level()
     logger.setLevel(log_level)
     datasets.utils.logging.set_verbosity(log_level)
-    transformers.utils.logging.set_verbosity(log_level)
-    transformers.utils.logging.enable_default_handler()
-    transformers.utils.logging.enable_explicit_format()
+    transformers_4573.utils.logging.set_verbosity(log_level)
+    transformers_4573.utils.logging.enable_default_handler()
+    transformers_4573.utils.logging.enable_explicit_format()
 
     # Log on each process the small summary:
     logger.warning(
@@ -579,7 +579,7 @@ def main():
     text_column_name = "text" if "text" in column_names else column_names[0]
 
     # since this will be pickled to avoid _LazyModule error in Hasher force logger loading before tokenize_function
-    tok_logger = transformers.utils.logging.get_logger("transformers.tokenization_utils_base")
+    tok_logger = transformers_4573.utils.logging.get_logger("transformers.tokenization_utils_base")
 
     def tokenize_function(examples):
         with CaptureLogger(tok_logger) as cl:

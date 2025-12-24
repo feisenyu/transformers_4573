@@ -472,7 +472,7 @@ def check_model_list():
     Checks the model listed as subfolders of `models` match the models available in `transformers.models`.
     """
     # Get the models from the directory structure of `src/transformers/models/`
-    import transformers as tfrs
+    import transformers_4573 as tfrs
 
     models_dir = os.path.join(PATH_TO_TRANSFORMERS, "models")
     _models = []

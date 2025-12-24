@@ -20,7 +20,7 @@
 import os
 import sys
 
-import transformers
+import transformers_4573
 from transformers_4573 import is_torch_hpu_available, is_torch_xpu_available
 
 

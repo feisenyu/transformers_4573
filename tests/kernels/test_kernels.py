@@ -44,7 +44,7 @@ if is_kernels_available():
     import kernels as kernels_pkg
     from kernels import Device, Mode, kernelize
 
-    import transformers.integrations.hub_kernels as hub_kernels_pkg
+    import transformers_4573.integrations.hub_kernels as hub_kernels_pkg
 
 
 @require_kernels

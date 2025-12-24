@@ -31,7 +31,7 @@ from ... import initialization as init
 from ...configuration_utils import PreTrainedConfig
 from ...modeling_outputs import BackboneOutput, BaseModelOutput, BaseModelOutputWithPooling, ImageClassifierOutput
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs, logging, torch_int
+from ...utils import transformers_4573Kwargs, logging, torch_int
 from ...utils.backbone_utils import BackboneConfigMixin, get_aligned_output_features_output_indices
 
 

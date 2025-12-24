@@ -60,7 +60,7 @@ outputs[:2]
 
 여기서부터는 두 가지 이상의 모델 유형에서 사용되는 일반 모델 출력을 다룹니다. 구체적인 출력 유형은 해당 모델 페이지에 문서화되어 있습니다.
 
-## ModelOutput[[transformers.utils.ModelOutput]]
+## ModelOutput[[transformers_4573.utils.ModelOutput]]
 
 [[autodoc]] utils.ModelOutput
     - to_tuple

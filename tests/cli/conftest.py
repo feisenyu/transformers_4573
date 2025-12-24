@@ -14,7 +14,7 @@
 import pytest
 from typer.testing import CliRunner
 
-import transformers.cli.transformers
+import transformers_4573.cli.transformers
 
 
 @pytest.fixture

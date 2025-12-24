@@ -23,7 +23,7 @@ rendered properly in your Markdown viewer.
 要更改日志详细程度，只需使用其中一个直接的setter。例如，以下是如何将日志详细程度更改为INFO级别的方法：
 
 ```python
-import transformers
+import transformers_4573
 
 transformers.logging.set_verbosity_info()
 ```

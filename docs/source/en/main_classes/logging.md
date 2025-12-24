@@ -24,7 +24,7 @@ To change the level of verbosity, just use one of the direct setters. For instan
 to the INFO level.
 
 ```python
-import transformers
+import transformers_4573
 
 transformers.logging.set_verbosity_info()
 ```

@@ -23,7 +23,7 @@ rendered properly in your Markdown viewer.
 출력 레벨을 변경하려면 직접적인 설정 메서드를 사용할 수 있습니다. 예를 들어, 출력 레벨을 INFO 수준으로 변경하는 방법은 다음과 같습니다.
 
 ```python
-import transformers
+import transformers_4573
 
 transformers.logging.set_verbosity_info()
 ```
@@ -62,7 +62,7 @@ logger.warning("WARN")
 
 기본적으로 모델 다운로드 중에는 `tqdm` 진행 표시줄이 표시됩니다. [`logging.disable_progress_bar`]와 [`logging.enable_progress_bar`]를 사용하여 이 동작을 숨기거나 다시 표시할 수 있습니다.
 
-## `logging` vs `warnings`[[transformers.utils.logging.captureWarnings]]
+## `logging` vs `warnings`[[transformers_4573.utils.logging.captureWarnings]]
 
 Python에는 종종 함께 사용되는 두 가지 로깅 시스템이 있습니다. 위에서 설명한 `logging`과 `warnings`입니다. `warnings`는 특정 범주로 경고를 세분화할 수 있습니다. 예를 들어, 이미 더 이상 사용되지 않는 기능이나 경로에 대해 `FutureWarning`이 사용되고, 곧 사용 중단될 기능을 알리기 위해 `DeprecationWarning`이 사용됩니다.
 
@@ -77,7 +77,7 @@ Python에는 종종 함께 사용되는 두 가지 로깅 시스템이 있습니
 
 [[autodoc]] logging.captureWarnings
 
-## 기본 설정자 [[transformers.utils.logging.set_verbosity_error]]
+## 기본 설정자 [[transformers_4573.utils.logging.set_verbosity_error]]
 
 [[autodoc]] logging.set_verbosity_error
 
@@ -87,7 +87,7 @@ Python에는 종종 함께 사용되는 두 가지 로깅 시스템이 있습니
 
 [[autodoc]] logging.set_verbosity_debug
 
-## 기타 함수 [[transformers.utils.logging.get_verbosity]]
+## 기타 함수 [[transformers_4573.utils.logging.get_verbosity]]
 
 [[autodoc]] logging.get_verbosity
 

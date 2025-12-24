@@ -2,7 +2,7 @@ from collections import Counter
 
 import datasets
 
-import transformers
+import transformers_4573
 from transformers_4573.convert_slow_tokenizer import SLOW_TO_FAST_CONVERTERS
 from transformers_4573.tokenization_utils_base import PreTrainedTokenizerBase
 from transformers_4573.utils import logging

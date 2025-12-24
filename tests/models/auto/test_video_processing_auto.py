@@ -19,7 +19,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     CONFIG_MAPPING,
     VIDEO_PROCESSOR_MAPPING,

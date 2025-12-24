@@ -135,7 +135,7 @@ if is_torch_available():
     from torch import nn
     from torch.utils.data import IterableDataset
 
-    import transformers.optimization
+    import transformers_4573.optimization
     from transformers_4573 import (
         AutoModelForCausalLM,
         AutoModelForSequenceClassification,

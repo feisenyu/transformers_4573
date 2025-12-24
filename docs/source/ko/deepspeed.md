@@ -1141,7 +1141,7 @@ transformers와 관련된 이슈를 개설할 때에는 다음 정보를 제공�
 
 ```bash
 python -c 'import torch; print(f"torch: {torch.__version__}")'
-python -c 'import transformers; print(f"transformers: {transformers.__version__}")'
+python -c 'import transformers_4573; print(f"transformers: {transformers.__version__}")'
 python -c 'import deepspeed; print(f"deepspeed: {deepspeed.__version__}")'
 ```
 

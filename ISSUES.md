@@ -117,7 +117,7 @@ You are not required to read the following guidelines before opening an issue. H
 3. If there is a software failure, always provide the full traceback, for example:
 
    ```python
-   $ python -c 'import transformers'
+   $ python -c 'import transformers_4573'
    Traceback (most recent call last):
      File "<string>", line 1, in <module>
      File "/transformers/src/transformers/__init__.py", line 34, in <module>

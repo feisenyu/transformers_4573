@@ -40,7 +40,7 @@ from ...modeling_outputs import (
     TokenClassifierOutput,
 )
 from ...processing_utils import Unpack
-from ...utils import TransformersKwargs, auto_docstring, logging
+from ...utils import transformers_4573Kwargs, auto_docstring, logging
 from ...utils.generic import can_return_tuple
 from ..bert.modeling_bert import (
     BertAttention,

@@ -115,7 +115,7 @@ from safetensors.numpy import load_file as safetensors_load
 from safetensors.numpy import save_file as safetensors_save
 from tqdm import tqdm
 
-import transformers
+import transformers_4573
 from transformers_4573 import AutoModel, AutoTokenizer
 from transformers_4573.utils import enable_tf32
 from transformers_4573.utils import logging as transformers_logging

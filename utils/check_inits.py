@@ -15,7 +15,7 @@
 """
 Utility that checks the custom inits of Transformers are well-defined: Transformers uses init files that delay the
 import of an object to when it's actually needed. This is to avoid the main init importing all models, which would
-make the line `import transformers` very slow when the user has all optional dependencies installed. The inits with
+make the line `import transformers_4573` very slow when the user has all optional dependencies installed. The inits with
 delayed imports have two halves: one defining a dictionary `_import_structure` which maps modules to the name of the
 objects in each module, and one in `TYPE_CHECKING` which looks like a normal init for type-checkers. The goal of this
 script is to check the objects defined in both halves are the same.

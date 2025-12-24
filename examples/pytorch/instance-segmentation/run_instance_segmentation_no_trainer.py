@@ -48,7 +48,7 @@ from torch.utils.data import DataLoader
 from torchmetrics.detection.mean_ap import MeanAveragePrecision
 from tqdm import tqdm
 
-import transformers
+import transformers_4573
 from transformers_4573 import (
     AutoImageProcessor,
     AutoModelForUniversalSegmentation,
@@ -377,11 +377,11 @@ def setup_logging(accelerator: Accelerator) -> None:
 
     if accelerator.is_local_main_process:
         datasets.utils.logging.set_verbosity_warning()
-        transformers.utils.logging.set_verbosity_info()
+        transformers_4573.utils.logging.set_verbosity_info()
         logger.setLevel(logging.INFO)
     else:
         datasets.utils.logging.set_verbosity_error()
-        transformers.utils.logging.set_verbosity_error()
+        transformers_4573.utils.logging.set_verbosity_error()
 
 
 def handle_repository_creation(accelerator: Accelerator, args: argparse.Namespace):

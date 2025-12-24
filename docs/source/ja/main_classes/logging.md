@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 
 
 ```python
-import transformers
+import transformers_4573
 
 transformers.logging.set_verbosity_info()
 ```

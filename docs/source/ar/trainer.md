@@ -194,7 +194,7 @@ logging.basicConfig(
 log_level = training_args.get_process_log_level()
 logger.setLevel(log_level)
 datasets.utils.logging.set_verbosity(log_level)
-transformers.utils.logging.set_verbosity(log_level)
+transformers_4573.utils.logging.set_verbosity(log_level)
 
 trainer = Trainer(...)
 ```

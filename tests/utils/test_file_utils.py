@@ -17,7 +17,7 @@ import importlib
 import io
 import unittest
 
-import transformers
+import transformers_4573
 
 # Try to import everything from transformers_4573 to ensure every object can be loaded.
 from transformers_4573 import *  # noqa F406

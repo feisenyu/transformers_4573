@@ -17,7 +17,7 @@ import os
 import unittest
 from pathlib import Path
 
-import transformers
+import transformers_4573
 from transformers_4573.testing_utils import require_torch, slow
 
 
