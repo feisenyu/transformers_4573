@@ -25,12 +25,12 @@ from shutil import copyfile
 from typing import Any, Optional, Union
 
 import tokenizers.pre_tokenizers as pre_tokenizers_fast
-from huggingface_hub import is_offline_mode
-from tokenizers import AddedToken, processors
-from tokenizers import Encoding as EncodingFast
-from tokenizers import Tokenizer as TokenizerFast
-from tokenizers.decoders import Decoder as DecoderFast
-from tokenizers.trainers import BpeTrainer, UnigramTrainer, WordLevelTrainer, WordPieceTrainer
+from huggingface_hub_4573 import is_offline_mode
+from tokenizers_4573 import AddedToken, processors
+from tokenizers_4573 import Encoding as EncodingFast
+from tokenizers_4573 import Tokenizer as TokenizerFast
+from tokenizers_4573.decoders import Decoder as DecoderFast
+from tokenizers_4573.trainers import BpeTrainer, UnigramTrainer, WordLevelTrainer, WordPieceTrainer
 
 from .integrations.ggml import convert_gguf_tokenizer
 from .modeling_gguf_pytorch_utils import load_gguf_checkpoint
@@ -241,7 +241,7 @@ class TokenizersBackend(PreTrainedTokenizerBase):
         if tokenizer_object is not None:
             fast_tokenizer = copy.deepcopy(tokenizer_object)
         elif fast_tokenizer_file is not None and os.path.isfile(fast_tokenizer_file):
-            # We have a serialization from tokenizers which let us directly build the backend
+            # We have a serialization from tokenizers_4573 which let us directly build the backend
             fast_tokenizer = TokenizerFast.from_file(fast_tokenizer_file)
         elif gguf_file is not None:
             # We need to convert a slow tokenizer to build the backend
@@ -1140,7 +1140,7 @@ class TokenizersBackend(PreTrainedTokenizerBase):
         """
         import re
 
-        from huggingface_hub import model_info
+        from huggingface_hub_4573 import model_info
         from packaging import version
 
         from transformers_4573.utils.hub import cached_file

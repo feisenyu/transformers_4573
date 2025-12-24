@@ -14,7 +14,7 @@
 
 import unittest
 
-from huggingface_hub import QuestionAnsweringOutputElement
+from huggingface_hub_4573 import QuestionAnsweringOutputElement
 
 from transformers_4573 import (
     MODEL_FOR_QUESTION_ANSWERING_MAPPING,

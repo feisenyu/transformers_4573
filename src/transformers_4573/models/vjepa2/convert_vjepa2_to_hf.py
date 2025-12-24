@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 import requests
 import torch
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 from PIL import Image
 
 from transformers_4573 import VJEPA2Config, VJEPA2Model, VJEPA2VideoProcessor

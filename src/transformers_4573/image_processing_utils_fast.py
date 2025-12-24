@@ -18,7 +18,7 @@ from functools import lru_cache, partial
 from typing import Any, Optional, Union
 
 import numpy as np
-from huggingface_hub.dataclasses import validate_typed_dict
+from huggingface_hub_4573.dataclasses import validate_typed_dict
 
 from .image_processing_utils import BaseImageProcessor, BatchFeature, get_size_dict
 from .image_transforms import (

@@ -197,7 +197,7 @@ classifier = pipeline("pair-classification", model="sgugger/finetuned-bert-mrpc"
 然后，我们可以通过在 `Repository` 中使用 `save_pretrained` 方法将其分享到 Hub 上：
 
 ```py
-from huggingface_hub import Repository
+from huggingface_hub_4573 import Repository
 
 repo = Repository("test-dynamic-pipeline", clone_from="{your_username}/test-dynamic-pipeline")
 classifier.save_pretrained("test-dynamic-pipeline")

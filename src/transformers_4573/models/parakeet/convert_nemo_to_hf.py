@@ -21,7 +21,7 @@ import tarfile
 
 import torch
 import yaml
-from tokenizers import AddedToken
+from tokenizers_4573 import AddedToken
 
 from transformers_4573 import (
     ParakeetCTCConfig,

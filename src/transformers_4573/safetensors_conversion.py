@@ -1,7 +1,7 @@
 from typing import Optional
 
 import httpx
-from huggingface_hub import Discussion, HfApi, get_repo_discussions
+from huggingface_hub_4573 import Discussion, HfApi, get_repo_discussions
 
 from .utils import cached_file, http_user_agent, logging
 

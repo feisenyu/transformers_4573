@@ -477,7 +477,7 @@ class VideoLlavaForConditionalGeneration(VideoLlavaPreTrainedModel, GenerationMi
         >>> import requests
         >>> import numpy as np
         >>> import av
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> from transformers_4573 import VideoLlavaProcessor, VideoLlavaForConditionalGeneration
 
 

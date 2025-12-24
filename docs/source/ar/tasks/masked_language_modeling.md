@@ -39,7 +39,7 @@ pip install transformers datasets evaluate
 نحن نشجعك على تسجيل الدخول إلى حساب Hugging Face الخاص بك حتى تتمكن من تحميل ومشاركة نموذجك مع المجتمع. عندما تتم مطالبتك، أدخل رمزك لتسجيل الدخول:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

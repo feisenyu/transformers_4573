@@ -23,9 +23,9 @@ from typing import Any, Optional, Union
 
 import httpx
 import yaml
-from huggingface_hub import is_offline_mode, model_info
-from huggingface_hub.errors import OfflineModeIsEnabled
-from huggingface_hub.utils import HFValidationError
+from huggingface_hub_4573 import is_offline_mode, model_info
+from huggingface_hub_4573.errors import OfflineModeIsEnabled
+from huggingface_hub_4573.utils import HFValidationError
 
 from . import __version__
 from .models.auto.modeling_auto import (

@@ -14,7 +14,7 @@
 
 import unittest
 
-from huggingface_hub import ZeroShotImageClassificationOutputElement
+from huggingface_hub_4573 import ZeroShotImageClassificationOutputElement
 
 from transformers_4573 import is_vision_available
 from transformers_4573.pipelines import pipeline

@@ -148,7 +148,7 @@ jobs:
           python << 'EOF'
           import os
           from pathlib import Path
-          from huggingface_hub import HfApi
+          from huggingface_hub_4573 import HfApi
           
           # Setup paths
           pr_number = os.environ["PR_NUMBER"]

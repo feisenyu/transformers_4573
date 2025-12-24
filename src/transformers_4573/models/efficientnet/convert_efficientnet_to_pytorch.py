@@ -25,7 +25,7 @@ import PIL
 import requests
 import tensorflow.keras.applications.efficientnet as efficientnet
 import torch
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from PIL import Image
 from tensorflow.keras.preprocessing import image
 

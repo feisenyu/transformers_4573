@@ -15,8 +15,8 @@
 import unittest
 
 import datasets
-from huggingface_hub import DepthEstimationOutput
-from huggingface_hub.utils import insecure_hashlib
+from huggingface_hub_4573 import DepthEstimationOutput
+from huggingface_hub_4573.utils import insecure_hashlib
 
 from transformers_4573 import MODEL_FOR_DEPTH_ESTIMATION_MAPPING, is_torch_available, is_vision_available
 from transformers_4573.pipelines import DepthEstimationPipeline, pipeline

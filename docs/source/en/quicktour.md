@@ -38,7 +38,7 @@ Create a [User Access Token](https://hf.co/docs/hub/security-tokens#user-access-
 Paste your User Access Token into [`~huggingface_hub.notebook_login`] when prompted to log in.
 
 ```py
-from huggingface_hub import notebook_login
+from huggingface_hub_4573 import notebook_login
 
 notebook_login()
 ```

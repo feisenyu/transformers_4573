@@ -25,7 +25,7 @@ from urllib.parse import urljoin, urlparse
 import httpx
 import typer
 import yaml
-from huggingface_hub import AsyncInferenceClient, ChatCompletionStreamOutput
+from huggingface_hub_4573 import AsyncInferenceClient, ChatCompletionStreamOutput
 
 from transformers_4573 import GenerationConfig
 from transformers_4573.utils import is_rich_available

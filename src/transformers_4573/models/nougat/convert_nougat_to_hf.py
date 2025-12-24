@@ -18,7 +18,7 @@ https://github.com/facebookresearch/nougat/tree/main"""
 import argparse
 
 import torch
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from nougat import NougatModel
 from nougat.dataset.rasterize import rasterize_paper
 from nougat.utils.checkpoint import get_checkpoint

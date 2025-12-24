@@ -35,7 +35,7 @@ from ..wav2vec2.test_feature_extraction_wav2vec2 import floats_list
 
 
 if is_pyctcdecode_available():
-    from huggingface_hub import snapshot_download
+    from huggingface_hub_4573 import snapshot_download
     from pyctcdecode import BeamSearchDecoderCTC
 
     from transformers_4573.models.wav2vec2_with_lm import Wav2Vec2ProcessorWithLM

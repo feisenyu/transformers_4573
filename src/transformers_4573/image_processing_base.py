@@ -18,7 +18,7 @@ import os
 from typing import Any, Optional, TypeVar, Union
 
 import numpy as np
-from huggingface_hub import create_repo, is_offline_mode
+from huggingface_hub_4573 import create_repo, is_offline_mode
 
 from .dynamic_module_utils import custom_object_save
 from .feature_extraction_utils import BatchFeature as BaseBatchFeature

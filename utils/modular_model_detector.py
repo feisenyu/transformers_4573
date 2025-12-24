@@ -109,8 +109,8 @@ from pathlib import Path
 
 import numpy as np
 import torch
-from huggingface_hub import HfApi, snapshot_download
-from huggingface_hub import logging as huggingface_hub_logging
+from huggingface_hub_4573 import HfApi, snapshot_download
+from huggingface_hub_4573 import logging as huggingface_hub_logging
 from safetensors.numpy import load_file as safetensors_load
 from safetensors.numpy import save_file as safetensors_save
 from tqdm import tqdm

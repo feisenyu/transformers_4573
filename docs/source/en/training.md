@@ -30,7 +30,7 @@ This guide will show you how to fine-tune a model with [`Trainer`] to classify Y
 Log in to your Hugging Face account with your user token to ensure you can access gated models and share your models on the Hub.
 
 ```py
-from huggingface_hub import login
+from huggingface_hub_4573 import login
 
 login()
 ```

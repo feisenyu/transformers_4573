@@ -17,7 +17,7 @@
 import json
 from typing import Optional
 
-from tokenizers import processors
+from tokenizers_4573 import processors
 
 from ...tokenization_utils_base import AddedToken, BatchEncoding
 from ...tokenization_utils_tokenizers import PreTrainedTokenizerFast

@@ -941,7 +941,7 @@ class XCLIPVisionModel(XCLIPPreTrainedModel):
         >>> import numpy as np
 
         >>> from transformers_4573 import AutoProcessor, XCLIPVisionModel
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> np.random.seed(0)
 
@@ -1256,7 +1256,7 @@ class XCLIPModel(XCLIPPreTrainedModel):
         >>> import numpy as np
 
         >>> from transformers_4573 import AutoProcessor, AutoModel
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> np.random.seed(0)
 
@@ -1358,7 +1358,7 @@ class XCLIPModel(XCLIPPreTrainedModel):
         >>> import numpy as np
 
         >>> from transformers_4573 import AutoProcessor, AutoModel
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> np.random.seed(0)
 

@@ -22,7 +22,7 @@ from os import path
 from typing import Optional, Union
 
 import torch
-from huggingface_hub import split_torch_state_dict_into_shards
+from huggingface_hub_4573 import split_torch_state_dict_into_shards
 from safetensors.torch import save_file
 
 from transformers_4573 import AutoTokenizer

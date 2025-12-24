@@ -18,7 +18,7 @@ from collections import Counter
 from copy import deepcopy
 
 from get_previous_daily_ci import get_last_daily_ci_run
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 
 
 if __name__ == "__main__":

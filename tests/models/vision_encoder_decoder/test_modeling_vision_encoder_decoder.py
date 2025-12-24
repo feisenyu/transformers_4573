@@ -18,7 +18,7 @@ import unittest
 from functools import cached_property
 
 from datasets import load_dataset
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from packaging import version
 
 from transformers_4573 import DonutProcessor, NougatProcessor, TrOCRProcessor

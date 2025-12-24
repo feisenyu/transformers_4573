@@ -423,7 +423,7 @@ class VivitModel(VivitPreTrainedModel):
         >>> import numpy as np
 
         >>> from transformers_4573 import VivitImageProcessor, VivitModel
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> np.random.seed(0)
 
@@ -552,7 +552,7 @@ class VivitForVideoClassification(VivitPreTrainedModel):
         >>> import torch
 
         >>> from transformers_4573 import VivitImageProcessor, VivitForVideoClassification
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> np.random.seed(0)
 

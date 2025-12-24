@@ -42,7 +42,7 @@ You will use [PyTorchVideo](https://pytorchvideo.org/) (dubbed `pytorchvideo`) t
 We encourage you to log in to your Hugging Face account so you can upload and share your model with the community. When prompted, enter your token to log in:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```
@@ -52,7 +52,7 @@ We encourage you to log in to your Hugging Face account so you can upload and sh
 Start by loading a subset of the [UCF-101 dataset](https://www.crcv.ucf.edu/data/UCF101.php). This will give you a chance to experiment and make sure everything works before spending more time training on the full dataset.
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 
 >>> hf_dataset_identifier = "sayakpaul/ucf101-subset"
 >>> filename = "UCF101_subset.tar.gz"

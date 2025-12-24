@@ -250,7 +250,7 @@ class VitMatteForImageMatting(VitMattePreTrainedModel):
         >>> from transformers_4573 import VitMatteImageProcessor, VitMatteForImageMatting
         >>> import torch
         >>> from PIL import Image
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> processor = VitMatteImageProcessor.from_pretrained("hustvl/vitmatte-small-composition-1k")
         >>> model = VitMatteForImageMatting.from_pretrained("hustvl/vitmatte-small-composition-1k")

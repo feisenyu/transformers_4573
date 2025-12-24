@@ -43,7 +43,7 @@ pip install transformers datasets evaluate jiwer
 Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에 공유할 수 있습니다. 토큰을 입력하여 로그인하세요.
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

@@ -95,7 +95,7 @@ class PixtralProcessor(ProcessorMixin):
         Override for BC. Pixtral requires a modified pre_tokenizer with ByteLevel prepended to handle
         the specific tokenization format expected by pretrained Pixtral models.
         """
-        from tokenizers import pre_tokenizers
+        from tokenizers_4573 import pre_tokenizers
 
         from ...models.llama import LlamaTokenizer
 

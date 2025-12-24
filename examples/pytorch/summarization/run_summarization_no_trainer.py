@@ -51,7 +51,7 @@ from accelerate.logging import get_logger
 from accelerate.utils import set_seed
 from datasets import load_dataset
 from filelock import FileLock
-from huggingface_hub import HfApi, is_offline_mode
+from huggingface_hub_4573 import HfApi, is_offline_mode
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 

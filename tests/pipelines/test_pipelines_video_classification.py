@@ -14,7 +14,7 @@
 
 import unittest
 
-from huggingface_hub import VideoClassificationOutputElement, hf_hub_download
+from huggingface_hub_4573 import VideoClassificationOutputElement, hf_hub_download
 
 from transformers_4573 import MODEL_FOR_VIDEO_CLASSIFICATION_MAPPING, VideoMAEImageProcessor
 from transformers_4573.pipelines import VideoClassificationPipeline, pipeline

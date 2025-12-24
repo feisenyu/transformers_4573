@@ -25,7 +25,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from git import Repo
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 from tqdm import tqdm
 
 from transformers_4573.models.auto.configuration_auto import DEPRECATED_MODELS, MODEL_NAMES_MAPPING

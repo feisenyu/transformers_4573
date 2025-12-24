@@ -19,7 +19,7 @@ import os
 import re
 
 import torch
-from huggingface_hub import snapshot_download
+from huggingface_hub_4573 import snapshot_download
 from safetensors.torch import load_file
 
 from transformers_4573 import (

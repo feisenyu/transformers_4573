@@ -19,7 +19,7 @@ import tempfile
 import warnings
 
 import torch
-from tokenizers import AddedToken, processors
+from tokenizers_4573 import AddedToken, processors
 
 from transformers_4573 import GenerationConfig, LlamaConfig, LlamaForCausalLM, LlamaTokenizer, PreTrainedTokenizerFast
 from transformers_4573.convert_slow_tokenizer import TikTokenConverter
@@ -57,7 +57,7 @@ come in several checkpoints they each contain a part of each weight of the model
 If you want your tokenizer to add a bos automatically you should update the tokenizer._tokenizers.post_processor:
 
 ```py
-from tokenizers import processors
+from tokenizers_4573 import processors
 bos = "<|begin_of_text|>"
 tokenizer._tokenizers.post_processor = processors.Sequence(
     [

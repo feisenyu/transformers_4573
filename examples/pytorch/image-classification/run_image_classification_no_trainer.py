@@ -40,7 +40,7 @@ from accelerate import Accelerator
 from accelerate.logging import get_logger
 from accelerate.utils import set_seed
 from datasets import load_dataset
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 from torch.utils.data import DataLoader
 from torchvision.transforms import (
     CenterCrop,

@@ -48,7 +48,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 토큰을 입력하여 로그인하세요.
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

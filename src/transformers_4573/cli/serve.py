@@ -31,8 +31,8 @@ from threading import Thread
 from typing import TYPE_CHECKING, Annotated, Optional, TypedDict, Union
 
 import typer
-from huggingface_hub import scan_cache_dir
-from tokenizers.decoders import DecodeStream
+from huggingface_hub_4573 import scan_cache_dir
+from tokenizers_4573.decoders import DecodeStream
 from tqdm import tqdm
 
 import transformers

@@ -20,8 +20,8 @@ from collections.abc import Mapping
 from typing import Optional, Union
 
 import numpy as np
-from tokenizers import Tokenizer, decoders, pre_tokenizers
-from tokenizers.models import BPE
+from tokenizers_4573 import Tokenizer, decoders, pre_tokenizers
+from tokenizers_4573.models import BPE
 
 from ...tokenization_python import PreTrainedTokenizer
 from ...tokenization_utils_base import (

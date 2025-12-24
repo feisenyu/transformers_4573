@@ -15,8 +15,8 @@
 
 from typing import Optional, Union
 
-from tokenizers import Tokenizer, decoders, pre_tokenizers, processors
-from tokenizers.models import BPE
+from tokenizers_4573 import Tokenizer, decoders, pre_tokenizers, processors
+from tokenizers_4573.models import BPE
 
 from ...tokenization_utils_base import (
     ENCODE_KWARGS_DOCSTRING,

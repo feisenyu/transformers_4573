@@ -21,8 +21,8 @@ from collections.abc import Mapping
 from typing import Optional, Union
 
 import numpy as np
-from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers
-from tokenizers.models import Unigram
+from tokenizers_4573 import Tokenizer, decoders, normalizers, pre_tokenizers
+from tokenizers_4573.models import Unigram
 
 from ...tokenization_utils_base import (
     ENCODE_KWARGS_DOCSTRING,
@@ -405,7 +405,7 @@ class MLukeTokenizer(TokenizersBackend):
         # Configure post processor for XLM-R/MLuke format:
         # single: <s> X </s>
         # pair: <s> A </s></s> B </s>
-        from tokenizers import processors
+        from tokenizers_4573 import processors
 
         self._tokenizer.post_processor = processors.TemplateProcessing(
             single=f"{self.cls_token}:0 $A:0 {self.sep_token}:0",

@@ -30,7 +30,7 @@ from unittest.mock import Mock, patch
 
 import numpy as np
 import pytest
-from huggingface_hub import ModelCard, create_branch, list_repo_commits, list_repo_files
+from huggingface_hub_4573 import ModelCard, create_branch, list_repo_commits, list_repo_files
 from parameterized import parameterized
 
 from transformers_4573 import (

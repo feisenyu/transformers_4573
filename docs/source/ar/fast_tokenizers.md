@@ -5,10 +5,10 @@
 قبل الدخول في التفاصيل، دعونا نبدأ أولاً بإنشاء مُجزىء لغوي تجريبي في بضع سطور:
 
 ```python
->>> from tokenizers import Tokenizer
->>> from tokenizers.models import BPE
->>> from tokenizers.trainers import BpeTrainer
->>> from tokenizers.pre_tokenizers import Whitespace
+>>> from tokenizers_4573 import Tokenizer
+>>> from tokenizers_4573.models import BPE
+>>> from tokenizers_4573.trainers import BpeTrainer
+>>> from tokenizers_4573.pre_tokenizers import Whitespace
 
 >>> tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
 >>> trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])

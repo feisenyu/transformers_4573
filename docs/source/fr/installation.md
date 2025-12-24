@@ -232,7 +232,7 @@ Une autre option pour utiliser 🤗 Transformers hors ligne est de télécharger
     2. Utilisez la fonction [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) pour télécharger un fichier vers un chemin de votre choix.  Par exemple, la commande suivante télécharge le fichier `config.json` du modèle [T0](https://huggingface.co/bigscience/T0_3B) vers le chemin de votre choix :
 
     ```py
-    >>> from huggingface_hub import hf_hub_download
+    >>> from huggingface_hub_4573 import hf_hub_download
 
     >>> hf_hub_download(repo_id="bigscience/T0_3B", filename="config.json", cache_dir="./your/path/bigscience_t0")
     ```

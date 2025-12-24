@@ -37,7 +37,7 @@ Before you begin, make sure you have all the necessary libraries installed:
 We encourage you to log in to your Hugging Face account so you can upload and share your model with the community. When prompted, enter your token to log in:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```
@@ -251,7 +251,7 @@ You'll also want to create a dictionary that maps a label id to a label class wh
 ```py
 >>> import json
 >>> from pathlib import Path
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 
 >>> repo_id = "huggingface/label-files"
 >>> filename = "ade20k-id2label.json"

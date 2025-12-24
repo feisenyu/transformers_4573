@@ -50,7 +50,7 @@ pip install -q transformers datasets
 메시지가 나타나면 로그인할 토큰을 입력하세요:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

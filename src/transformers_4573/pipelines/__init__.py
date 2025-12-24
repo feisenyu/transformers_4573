@@ -18,7 +18,7 @@ import warnings
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Optional, Union
 
-from huggingface_hub import is_offline_mode, model_info
+from huggingface_hub_4573 import is_offline_mode, model_info
 
 from ..configuration_utils import PreTrainedConfig
 from ..dynamic_module_utils import get_class_from_dynamic_module

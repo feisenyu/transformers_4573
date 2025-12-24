@@ -1432,7 +1432,7 @@ class AutoformerModel(AutoformerPreTrainedModel):
         Examples:
 
         ```python
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> import torch
         >>> from transformers_4573 import AutoformerModel
 
@@ -1691,7 +1691,7 @@ class AutoformerForPrediction(AutoformerPreTrainedModel):
         Examples:
 
         ```python
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> import torch
         >>> from transformers_4573 import AutoformerForPrediction
 
@@ -1737,7 +1737,7 @@ class AutoformerForPrediction(AutoformerPreTrainedModel):
         is equal to 1), initialize the model and call as shown below:
 
         ```
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> import torch
         >>> from transformers_4573 import AutoformerConfig, AutoformerForPrediction
 

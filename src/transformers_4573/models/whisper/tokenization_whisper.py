@@ -22,8 +22,8 @@ from functools import lru_cache
 from typing import Optional, Union
 
 import numpy as np
-from tokenizers import AddedToken, Tokenizer, decoders, pre_tokenizers, processors
-from tokenizers.models import BPE
+from tokenizers_4573 import AddedToken, Tokenizer, decoders, pre_tokenizers, processors
+from tokenizers_4573.models import BPE
 
 from ...tokenization_utils_tokenizers import TokenizersBackend
 from ...utils import logging

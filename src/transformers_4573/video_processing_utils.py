@@ -22,8 +22,8 @@ from functools import partial
 from typing import Any, Optional, Union
 
 import numpy as np
-from huggingface_hub import create_repo, is_offline_mode
-from huggingface_hub.dataclasses import validate_typed_dict
+from huggingface_hub_4573 import create_repo, is_offline_mode
+from huggingface_hub_4573.dataclasses import validate_typed_dict
 
 from .dynamic_module_utils import custom_object_save
 from .image_processing_utils import (

@@ -28,7 +28,7 @@ from pathlib import Path
 from check_config_docstrings import get_checkpoint_from_config_class
 from datasets import load_dataset
 from get_test_info import get_model_to_tester_mapping, get_tester_classes_for_model
-from huggingface_hub import create_repo, hf_api, upload_folder
+from huggingface_hub_4573 import create_repo, hf_api, upload_folder
 
 from transformers_4573 import (
     CONFIG_MAPPING,

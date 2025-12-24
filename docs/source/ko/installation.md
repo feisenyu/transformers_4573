@@ -219,7 +219,7 @@ Another option for using 🤗 Transformers offline is to download the files ahea
     2. [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) 함수로 파일을 특정 위치에 다운로드할 수 있습니다. 예를 들어 아래 명령은 [T0](https://huggingface.co/bigscience/T0_3B) 모델의 `config.json` 파일을 지정된 경로에 다운로드합니다.
 
     ```py
-    >>> from huggingface_hub import hf_hub_download
+    >>> from huggingface_hub_4573 import hf_hub_download
 
     >>> hf_hub_download(repo_id="bigscience/T0_3B", filename="config.json", cache_dir="./your/path/bigscience_t0")
     ```

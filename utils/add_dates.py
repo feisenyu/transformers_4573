@@ -6,7 +6,7 @@ from datetime import date, datetime
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-from huggingface_hub import paper_info
+from huggingface_hub_4573 import paper_info
 
 
 ROOT = os.getcwd().split("utils")[0]

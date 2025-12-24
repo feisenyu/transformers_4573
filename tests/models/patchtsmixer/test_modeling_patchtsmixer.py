@@ -20,7 +20,7 @@ import tempfile
 import unittest
 
 import numpy as np
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from parameterized import parameterized
 
 from transformers_4573 import is_torch_available

@@ -49,7 +49,7 @@ import numpy as np
 import safetensors.torch
 import torch
 import torch.distributed as dist
-from huggingface_hub import CommitInfo, ModelCard, create_repo, upload_folder
+from huggingface_hub_4573 import CommitInfo, ModelCard, create_repo, upload_folder
 from packaging import version
 from torch import nn
 from torch.utils.data import DataLoader, Dataset, IterableDataset, RandomSampler, SequentialSampler

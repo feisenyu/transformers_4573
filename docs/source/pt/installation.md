@@ -234,7 +234,7 @@ Outra opção para usar o 🤗 Transformers offline é baixar os arquivos antes 
     2. Utiliza a função [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) para baixar um arquivo para um caminho específico. Por exemplo, o comando a seguir baixará o arquivo `config.json` para o modelo [T0](https://huggingface.co/bigscience/T0_3B) no caminho desejado:
 
     ```py
-    >>> from huggingface_hub import hf_hub_download
+    >>> from huggingface_hub_4573 import hf_hub_download
 
     >>> hf_hub_download(repo_id="bigscience/T0_3B", filename="config.json", cache_dir="./your/path/bigscience_t0")
     ```

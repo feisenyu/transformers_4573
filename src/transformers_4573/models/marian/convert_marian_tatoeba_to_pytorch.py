@@ -278,7 +278,7 @@ class TatoebaConverter:
         global LANG_CODE_PATH
         Path(LANG_CODE_PATH).parent.mkdir(exist_ok=True)
         import wget
-        from huggingface_hub import hf_hub_download
+        from huggingface_hub_4573 import hf_hub_download
 
         if not os.path.exists(ISO_PATH):
             wget.download(ISO_URL, ISO_PATH)

@@ -399,7 +399,7 @@ class InstructBlipVideoForConditionalGeneration(InstructBlipForConditionalGenera
         ```python
         >>> from transformers_4573 import InstructBlipVideoProcessor, InstructBlipVideoForConditionalGeneration
         >>> import torch
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> import av
         >>> import numpy as np
 

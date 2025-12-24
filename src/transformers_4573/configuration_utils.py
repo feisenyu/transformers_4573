@@ -21,7 +21,7 @@ import os
 import warnings
 from typing import TYPE_CHECKING, Any, Optional, TypeVar, Union
 
-from huggingface_hub import create_repo
+from huggingface_hub_4573 import create_repo
 from packaging import version
 
 from . import __version__

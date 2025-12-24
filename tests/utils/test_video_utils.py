@@ -16,7 +16,7 @@
 import unittest
 
 import numpy as np
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 from transformers_4573 import is_torch_available, is_vision_available
 from transformers_4573.image_processing_utils import get_size_dict

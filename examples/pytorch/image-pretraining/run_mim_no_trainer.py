@@ -33,7 +33,7 @@ import torch
 from accelerate import Accelerator, DistributedType
 from accelerate.utils import set_seed
 from datasets import load_dataset
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 from torch.utils.data import DataLoader
 from torchvision.transforms import Compose, Lambda, Normalize, RandomHorizontalFlip, RandomResizedCrop, ToTensor
 from tqdm.auto import tqdm

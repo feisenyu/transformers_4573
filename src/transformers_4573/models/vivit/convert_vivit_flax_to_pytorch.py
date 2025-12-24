@@ -25,7 +25,7 @@ import numpy as np
 import requests
 import torch
 from flax.training.checkpoints import restore_checkpoint
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 from transformers_4573 import VivitConfig, VivitForVideoClassification, VivitImageProcessor
 from transformers_4573.image_utils import PILImageResampling

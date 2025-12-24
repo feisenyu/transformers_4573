@@ -95,7 +95,7 @@ class ImageDistilTrainer(Trainer):
 We will now login to Hugging Face Hub so we can push our model to the Hugging Face Hub through the `Trainer`.
 
 ```python
-from huggingface_hub import notebook_login
+from huggingface_hub_4573 import notebook_login
 
 notebook_login()
 ```

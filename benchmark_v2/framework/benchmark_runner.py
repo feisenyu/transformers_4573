@@ -12,7 +12,7 @@ from typing import Any
 
 import torch
 from datasets import Dataset
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 from tqdm import trange
 
 from transformers_4573 import (

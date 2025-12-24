@@ -142,9 +142,9 @@ This section will show you how to train a fast tokenizer and reuse it in Transfo
 To train a Byte-Pair Encoding (BPE) tokenizer, create a [`~tokenizers.Tokenizer`] and [`~tokenizers.trainers.BpeTrainer`] class and define the unknown token and special tokens.
 
 ```py
-from tokenizers import Tokenizer
-from tokenizers.models import BPE
-from tokenizers.trainers import BpeTrainer
+from tokenizers_4573 import Tokenizer
+from tokenizers_4573.models import BPE
+from tokenizers_4573.trainers import BpeTrainer
 
 tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
 trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])
@@ -153,7 +153,7 @@ trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]
 Split the tokens on [`~tokenizers.pre_tokenizers.Whitespace`] to create tokens that don't overlap with each other.
 
 ```py
-from tokenizers.pre_tokenizers import Whitespace
+from tokenizers_4573.pre_tokenizers import Whitespace
 
 tokenizer.pre_tokenizer = Whitespace()
 ```

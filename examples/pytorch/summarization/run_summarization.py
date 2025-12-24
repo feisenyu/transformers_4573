@@ -45,7 +45,7 @@ import nltk  # Here to have a nice missing dependency error message early on
 import numpy as np
 from datasets import load_dataset
 from filelock import FileLock
-from huggingface_hub import is_offline_mode
+from huggingface_hub_4573 import is_offline_mode
 
 import transformers
 from transformers_4573 import (

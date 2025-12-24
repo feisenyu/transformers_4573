@@ -58,7 +58,7 @@ pip install -q pytesseract
 프롬프트가 실행되면, 로그인을 위해 토큰을 입력하세요:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

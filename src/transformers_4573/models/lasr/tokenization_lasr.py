@@ -23,8 +23,8 @@ import itertools
 import re
 from typing import Optional, Union
 
-from tokenizers import Tokenizer, decoders, pre_tokenizers, processors
-from tokenizers.models import Unigram
+from tokenizers_4573 import Tokenizer, decoders, pre_tokenizers, processors
+from tokenizers_4573.models import Unigram
 
 from ...tokenization_utils_tokenizers import TokenizersBackend
 

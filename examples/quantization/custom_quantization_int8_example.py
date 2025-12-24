@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from accelerate import init_empty_weights
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 
 from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 from transformers_4573.quantizers import HfQuantizer, get_module_from_name, register_quantization_config, register_quantizer

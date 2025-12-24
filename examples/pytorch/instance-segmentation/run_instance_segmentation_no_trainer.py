@@ -43,7 +43,7 @@ import torch
 from accelerate import Accelerator
 from accelerate.utils import set_seed
 from datasets import load_dataset
-from huggingface_hub import HfApi
+from huggingface_hub_4573 import HfApi
 from torch.utils.data import DataLoader
 from torchmetrics.detection.mean_ap import MeanAveragePrecision
 from tqdm import tqdm

@@ -52,7 +52,7 @@ We encourage you to share your model with the community. Log in to your Hugging 
 When prompted, enter your token to log in:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

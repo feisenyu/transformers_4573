@@ -53,7 +53,7 @@ pip install huggingface_hub
 ثم استخدم `notebook_login` لتسجيل الدخول إلى Hub، واتبع الرابط [هنا](https://huggingface.co/settings/token) لإنشاء رمز للتسجيل:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

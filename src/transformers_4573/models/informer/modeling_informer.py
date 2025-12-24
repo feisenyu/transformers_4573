@@ -1392,7 +1392,7 @@ class InformerModel(InformerPreTrainedModel):
         Examples:
 
         ```python
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> import torch
         >>> from transformers_4573 import InformerModel
 
@@ -1678,7 +1678,7 @@ class InformerForPrediction(InformerPreTrainedModel):
         Examples:
 
         ```python
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> import torch
         >>> from transformers_4573 import InformerForPrediction
 

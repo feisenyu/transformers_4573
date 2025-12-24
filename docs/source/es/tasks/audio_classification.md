@@ -43,7 +43,7 @@ pip install transformers datasets evaluate
 Te aconsejamos iniciar sesión con tu cuenta de Hugging Face para que puedas subir tu modelo y compartirlo con la comunidad. Cuando se te solicite, ingresa tu token para iniciar sesión:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

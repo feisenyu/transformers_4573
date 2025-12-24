@@ -26,7 +26,7 @@ import timm
 import torch
 import torch.nn as nn
 from classy_vision.models.regnet import RegNet, RegNetParams, RegNetY32gf, RegNetY64gf, RegNetY128gf
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from torch import Tensor
 from vissl.models.model_helpers import get_trunk_forward_outputs
 

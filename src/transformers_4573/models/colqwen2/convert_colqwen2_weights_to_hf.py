@@ -38,7 +38,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 import torch
-from huggingface_hub import snapshot_download
+from huggingface_hub_4573 import snapshot_download
 from peft import PeftModel
 from safetensors import safe_open
 

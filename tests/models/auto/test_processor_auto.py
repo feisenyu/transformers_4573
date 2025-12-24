@@ -20,7 +20,7 @@ import unittest
 from pathlib import Path
 from shutil import copyfile
 
-from huggingface_hub import snapshot_download, upload_folder
+from huggingface_hub_4573 import snapshot_download, upload_folder
 
 import transformers
 from transformers_4573 import (

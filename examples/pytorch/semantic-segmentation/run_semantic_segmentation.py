@@ -39,7 +39,7 @@ import numpy as np
 import torch
 from albumentations.pytorch import ToTensorV2
 from datasets import load_dataset
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from torch import nn
 
 import transformers

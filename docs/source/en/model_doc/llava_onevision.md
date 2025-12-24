@@ -214,7 +214,7 @@ processor.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokeniza
 LLaVa-OneVision also can perform inference with videos as input, where video frames are treated as multiple images. Here is how you can do it:
 
 ```python
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 import torch
 from transformers_4573 import AutoProcessor, LlavaOnevisionForConditionalGeneration
 

@@ -19,7 +19,7 @@ import unittest
 from functools import cached_property
 
 import numpy as np
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from pytest import mark
 
 from transformers_4573 import VideoMAEConfig

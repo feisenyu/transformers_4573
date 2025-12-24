@@ -16,7 +16,7 @@
 
 from typing import Optional, Union
 
-from tokenizers import Tokenizer, decoders, models, pre_tokenizers, processors
+from tokenizers_4573 import Tokenizer, decoders, models, pre_tokenizers, processors
 
 from ...tokenization_utils_base import (
     BatchEncoding,

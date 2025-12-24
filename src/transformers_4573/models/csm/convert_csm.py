@@ -19,7 +19,7 @@ import os
 import re
 
 import torch
-from tokenizers.processors import TemplateProcessing
+from tokenizers_4573.processors import TemplateProcessing
 
 from transformers_4573 import (
     AutoFeatureExtractor,

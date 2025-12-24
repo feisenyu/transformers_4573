@@ -21,8 +21,8 @@ with extra methods beings exposed
 from array import array
 
 import numpy as np
-from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers, processors
-from tokenizers.models import BPE, Unigram
+from tokenizers_4573 import Tokenizer, decoders, normalizers, pre_tokenizers, processors
+from tokenizers_4573.models import BPE, Unigram
 
 from .. import AddedToken
 from ..convert_slow_tokenizer import GemmaConverter, GPT2Converter, LlamaConverter, Qwen2Converter, T5Converter

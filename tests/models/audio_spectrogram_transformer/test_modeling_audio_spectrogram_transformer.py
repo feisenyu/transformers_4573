@@ -17,7 +17,7 @@ import inspect
 import unittest
 from functools import cached_property
 
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 from transformers_4573 import ASTConfig
 from transformers_4573.testing_utils import require_torch, require_torchaudio, slow, torch_device

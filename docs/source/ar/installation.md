@@ -221,7 +221,7 @@ model = T5Model.from_pretrained("./path/to/local/directory", local_files_only=Tr
     2. استخدم وظيفة [`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub) لتنزيل ملف إلى مسار محدد. على سبيل المثال، يقوم الأمر التالي بتنزيل ملف `config.json` من نموذج [T0](https://huggingface.co/bigscience/T0_3B) إلى المسار المطلوب:
 
     ```py
-    >>> from huggingface_hub import hf_hub_download
+    >>> from huggingface_hub_4573 import hf_hub_download
 
     >>> hf_hub_download(repo_id="bigscience/T0_3B", filename="config.json", cache_dir="./your/path/bigscience_t0")
     ```

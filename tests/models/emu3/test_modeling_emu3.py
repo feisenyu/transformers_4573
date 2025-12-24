@@ -18,7 +18,7 @@ import unittest
 import numpy as np
 import pytest
 import requests
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 from transformers_4573 import BitsAndBytesConfig, Emu3Config, Emu3TextConfig, is_torch_available, is_vision_available
 from transformers_4573.testing_utils import (

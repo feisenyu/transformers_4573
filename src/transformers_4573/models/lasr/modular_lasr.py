@@ -18,8 +18,8 @@ from collections.abc import Callable
 from typing import Optional, Union
 
 import torch
-from tokenizers import Tokenizer
-from tokenizers.models import Unigram
+from tokenizers_4573 import Tokenizer
+from tokenizers_4573.models import Unigram
 from torch import nn
 
 from ...masking_utils import create_bidirectional_mask

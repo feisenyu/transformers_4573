@@ -283,7 +283,7 @@ hf auth login
 주피터 노트북의 경우에는 다음과 같습니다:
 
 ```py
-from huggingface_hub import notebook_login
+from huggingface_hub_4573 import notebook_login
 
 notebook_login()
 ```

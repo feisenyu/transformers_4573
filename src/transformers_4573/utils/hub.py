@@ -26,7 +26,7 @@ from typing import TypedDict
 from uuid import uuid4
 
 import httpx
-from huggingface_hub import (
+from huggingface_hub_4573 import (
     _CACHED_NO_EXIST,
     CommitOperationAdd,
     ModelCard,
@@ -42,8 +42,8 @@ from huggingface_hub import (
     snapshot_download,
     try_to_load_from_cache,
 )
-from huggingface_hub.file_download import REGEX_COMMIT_HASH
-from huggingface_hub.utils import (
+from huggingface_hub_4573.file_download import REGEX_COMMIT_HASH
+from huggingface_hub_4573.utils import (
     EntryNotFoundError,
     GatedRepoError,
     HfHubHTTPError,

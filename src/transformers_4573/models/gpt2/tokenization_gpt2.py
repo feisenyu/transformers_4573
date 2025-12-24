@@ -16,8 +16,8 @@
 
 from typing import Optional, Union
 
-from tokenizers import Tokenizer, decoders, pre_tokenizers
-from tokenizers.models import BPE
+from tokenizers_4573 import Tokenizer, decoders, pre_tokenizers
+from tokenizers_4573.models import BPE
 
 from ...tokenization_utils_tokenizers import AddedToken, TokenizersBackend
 from ...utils import logging

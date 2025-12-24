@@ -24,7 +24,7 @@ from typing import Optional
 import timm
 import torch
 import torch.nn as nn
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from torch import Tensor
 
 from transformers_4573 import AutoImageProcessor, ResNetConfig, ResNetForImageClassification

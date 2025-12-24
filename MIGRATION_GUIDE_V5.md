@@ -89,8 +89,8 @@ Defining a new tokenizer object should be as simple as this:
 
 ```python
 from transformers_4573 import TokenizersBackend, generate_merges
-from tokenizers import pre_tokenizers, Tokenizer
-from tokenizers.model import BPE
+from tokenizers_4573 import pre_tokenizers, Tokenizer
+from tokenizers_4573.model import BPE
 
 class Llama5Tokenizer(TokenizersBackend):
     def __init__(self, unk_token="<unk>",bos_token="<s>", eos_token="</s>", vocab=None, merges=None ):

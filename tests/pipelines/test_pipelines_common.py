@@ -21,8 +21,8 @@ import unittest
 from pathlib import Path
 
 import datasets
-from huggingface_hub import delete_repo, snapshot_download
-from huggingface_hub.errors import HfHubHTTPError
+from huggingface_hub_4573 import delete_repo, snapshot_download
+from huggingface_hub_4573.errors import HfHubHTTPError
 
 from transformers_4573 import (
     AutomaticSpeechRecognitionPipeline,

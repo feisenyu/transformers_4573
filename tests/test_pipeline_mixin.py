@@ -24,7 +24,7 @@ from pathlib import Path
 from textwrap import dedent
 from typing import get_args
 
-from huggingface_hub import (
+from huggingface_hub_4573 import (
     AudioClassificationInput,
     AutomaticSpeechRecognitionInput,
     DepthEstimationInput,

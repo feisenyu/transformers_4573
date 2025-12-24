@@ -21,7 +21,7 @@ import sys
 import types
 
 import torch
-from huggingface_hub import split_torch_state_dict_into_shards
+from huggingface_hub_4573 import split_torch_state_dict_into_shards
 from packaging import version
 
 from transformers_4573 import AutoTokenizer, GPT2Config

@@ -17,7 +17,7 @@ import unittest
 import httpx
 import numpy as np
 import pytest
-from huggingface_hub.file_download import hf_hub_download
+from huggingface_hub_4573.file_download import hf_hub_download
 
 from tests.pipelines.test_pipelines_document_question_answering import INVOICE_URL
 from transformers_4573 import is_torch_available, is_vision_available

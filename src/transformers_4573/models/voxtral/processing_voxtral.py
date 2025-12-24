@@ -118,7 +118,7 @@ class VoxtralProcessor(ProcessorMixin):
         The `content` field can be a string or a list of dictionaries with a `type` field. See example below.
 
         ```python
-        from huggingface_hub import hf_hub_download
+        from huggingface_hub_4573 import hf_hub_download
         from transformers_4573.audio_utils import load_audio_as
 
         audio_url = "https://huggingface.co/datasets/hf-internal-testing/dummy-audio-samples/resolve/main/bcn_weather.mp3"

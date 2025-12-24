@@ -18,8 +18,8 @@ import unittest
 import unittest.mock as mock
 from pathlib import Path
 
-from huggingface_hub import constants, hf_hub_download
-from huggingface_hub.errors import HfHubHTTPError, LocalEntryNotFoundError, OfflineModeIsEnabled
+from huggingface_hub_4573 import constants, hf_hub_download
+from huggingface_hub_4573.errors import HfHubHTTPError, LocalEntryNotFoundError, OfflineModeIsEnabled
 
 from transformers_4573.utils import CONFIG_NAME, WEIGHTS_NAME, cached_file, has_file, list_repo_templates
 

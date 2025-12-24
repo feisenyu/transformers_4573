@@ -20,8 +20,8 @@ import os
 from pathlib import Path
 from shutil import copyfile
 
-from huggingface_hub import hf_hub_download, snapshot_download
-from tokenizers import AddedToken
+from huggingface_hub_4573 import hf_hub_download, snapshot_download
+from tokenizers_4573 import AddedToken
 
 from transformers_4573 import (
     AutoTokenizer,

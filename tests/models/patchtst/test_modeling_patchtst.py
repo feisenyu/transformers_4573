@@ -18,7 +18,7 @@ import random
 import tempfile
 import unittest
 
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 from transformers_4573 import is_torch_available
 from transformers_4573.models.auto import get_values

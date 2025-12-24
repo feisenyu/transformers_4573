@@ -24,7 +24,7 @@ import torch
 import torch.nn as nn
 from clip.model import CLIP
 from flax.training import checkpoints
-from huggingface_hub import Repository
+from huggingface_hub_4573 import Repository
 
 from transformers_4573 import (
     CLIPTokenizer,

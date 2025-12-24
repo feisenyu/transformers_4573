@@ -22,7 +22,7 @@ from collections.abc import Callable
 from dataclasses import dataclass, is_dataclass
 from typing import TYPE_CHECKING, Any, Optional, Union
 
-from huggingface_hub import create_repo
+from huggingface_hub_4573 import create_repo
 
 from .. import __version__
 from ..utils import (

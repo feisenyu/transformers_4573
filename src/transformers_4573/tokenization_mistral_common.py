@@ -21,7 +21,7 @@ from pathlib import Path
 from typing import Any, Union, overload
 
 import numpy as np
-from huggingface_hub import create_repo
+from huggingface_hub_4573 import create_repo
 
 from transformers_4573.audio_utils import load_audio_as
 from transformers_4573.tokenization_utils_base import (

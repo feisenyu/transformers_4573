@@ -19,7 +19,7 @@ import tempfile
 import unittest
 import warnings
 
-from huggingface_hub import create_pull_request
+from huggingface_hub_4573 import create_pull_request
 from parameterized import parameterized
 
 from transformers_4573 import AutoConfig, GenerationConfig, WatermarkingConfig, is_torch_available

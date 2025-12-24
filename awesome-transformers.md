@@ -191,7 +191,7 @@ Keywords: Conversational, Speech
 
 ## [skorch](https://github.com/skorch-dev/skorch)
 
-Skorch is a scikit-learn compatible neural network library that wraps PyTorch. It has support for models within transformers_4573, and tokenizers from tokenizers.
+Skorch is a scikit-learn compatible neural network library that wraps PyTorch. It has support for models within transformers_4573, and tokenizers from tokenizers_4573.
 
 Keywords: Scikit-Learn, PyTorch
 

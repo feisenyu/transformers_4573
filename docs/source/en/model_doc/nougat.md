@@ -58,7 +58,7 @@ into a single instance to both extract the input features and decode the predict
 - Step-by-step PDF transcription
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 >>> import re
 >>> from PIL import Image
 

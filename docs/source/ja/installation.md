@@ -218,7 +218,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
     2. 指定のパスにファイルをダウンロードするために、[`hf_hub_download`](https://huggingface.co/docs/hub/adding-a-library#download-files-from-the-hub)関数を使用します。例えば、以下のコマンドで、[T0](https://huggingface.co/bigscience/T0_3B)モデルの`config.json`ファイルを指定のパスにダウンロードできます:
 
     ```py
-    >>> from huggingface_hub import hf_hub_download
+    >>> from huggingface_hub_4573 import hf_hub_download
 
     >>> hf_hub_download(repo_id="bigscience/T0_3B", filename="config.json", cache_dir="./your/path/bigscience_t0")
     ```

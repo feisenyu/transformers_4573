@@ -22,10 +22,10 @@ rendered properly in your Markdown viewer.
 구체적인 내용에 들어가기 전에, 몇 줄의 코드로 더미 토크나이저를 만들어 보겠습니다:
 
 ```python
->>> from tokenizers import Tokenizer
->>> from tokenizers.models import BPE
->>> from tokenizers.trainers import BpeTrainer
->>> from tokenizers.pre_tokenizers import Whitespace
+>>> from tokenizers_4573 import Tokenizer
+>>> from tokenizers_4573.models import BPE
+>>> from tokenizers_4573.trainers import BpeTrainer
+>>> from tokenizers_4573.pre_tokenizers import Whitespace
 
 >>> tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
 >>> trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])

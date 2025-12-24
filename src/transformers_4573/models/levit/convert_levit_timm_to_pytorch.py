@@ -23,7 +23,7 @@ from typing import Optional
 
 import timm
 import torch
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 from transformers_4573 import LevitConfig, LevitForImageClassificationWithTeacher, LevitImageProcessor
 from transformers_4573.utils import logging

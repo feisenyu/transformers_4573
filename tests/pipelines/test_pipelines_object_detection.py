@@ -15,7 +15,7 @@
 import unittest
 
 import datasets
-from huggingface_hub import ObjectDetectionOutputElement
+from huggingface_hub_4573 import ObjectDetectionOutputElement
 
 from transformers_4573 import (
     MODEL_FOR_OBJECT_DETECTION_MAPPING,

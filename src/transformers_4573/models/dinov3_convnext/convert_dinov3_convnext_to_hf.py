@@ -24,7 +24,7 @@ from typing import Optional
 
 import requests
 import torch
-from huggingface_hub import HfApi, hf_hub_download
+from huggingface_hub_4573 import HfApi, hf_hub_download
 from PIL import Image
 from torchvision import transforms
 

@@ -16,8 +16,8 @@
 
 from typing import Optional
 
-from tokenizers import Tokenizer, decoders, models, normalizers, pre_tokenizers, processors
-from tokenizers.pre_tokenizers import BertPreTokenizer, PreTokenizer
+from tokenizers_4573 import Tokenizer, decoders, models, normalizers, pre_tokenizers, processors
+from tokenizers_4573.pre_tokenizers import BertPreTokenizer, PreTokenizer
 
 from ...tokenization_utils_tokenizers import PreTrainedTokenizerFast
 from ...utils import logging

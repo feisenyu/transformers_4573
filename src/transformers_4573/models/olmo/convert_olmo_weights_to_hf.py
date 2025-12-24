@@ -20,7 +20,7 @@ from pathlib import Path
 
 import torch
 import yaml
-from tokenizers import Tokenizer
+from tokenizers_4573 import Tokenizer
 
 from transformers_4573 import OlmoConfig, OlmoForCausalLM
 from transformers_4573.models.gpt_neox.tokenization_gpt_neox_fast import GPTNeoXTokenizerFast

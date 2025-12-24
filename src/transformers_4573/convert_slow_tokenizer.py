@@ -24,8 +24,8 @@ from functools import lru_cache
 from typing import Optional
 
 from packaging import version
-from tokenizers import AddedToken, Regex, Tokenizer, decoders, normalizers, pre_tokenizers, processors
-from tokenizers.models import BPE, Unigram, WordPiece
+from tokenizers_4573 import AddedToken, Regex, Tokenizer, decoders, normalizers, pre_tokenizers, processors
+from tokenizers_4573.models import BPE, Unigram, WordPiece
 from tqdm import tqdm
 
 from .utils import is_protobuf_available, is_sentencepiece_available, logging, requires_backends
@@ -168,7 +168,7 @@ class SentencePieceExtractor:
         """
         self.proto.trainer_spec.unk_id
         if model_type is None:
-            from tokenizers.models import BPE, Unigram
+            from tokenizers_4573.models import BPE, Unigram
 
             model_type = Unigram if self.proto.trainer_spec.model_type == 2 else BPE
         vocab = [(piece.piece, piece.score) for piece in self.proto.pieces]

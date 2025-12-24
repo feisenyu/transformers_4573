@@ -21,7 +21,7 @@ import re
 import numpy as np
 import torch
 from decord import VideoReader
-from huggingface_hub import HfApi, hf_hub_download
+from huggingface_hub_4573 import HfApi, hf_hub_download
 
 from transformers_4573 import VJEPA2ForVideoClassification, VJEPA2VideoProcessor
 

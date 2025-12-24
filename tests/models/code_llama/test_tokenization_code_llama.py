@@ -17,7 +17,7 @@ import shutil
 import tempfile
 import unittest
 
-from tokenizers import AddedToken
+from tokenizers_4573 import AddedToken
 
 from transformers_4573 import CodeLlamaTokenizer
 from transformers_4573.testing_utils import (

@@ -42,7 +42,7 @@ pip install -q datasets transformers evaluate
 モデルをアップロードしてコミュニティと共有できるように、Hugging Face アカウントにログインすることをお勧めします。プロンプトが表示されたら、トークンを入力してログインします。
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```
@@ -84,7 +84,7 @@ pip install -q datasets transformers evaluate
 ```py
 >>> import json
 >>> from pathlib import Path
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 
 >>> repo_id = "huggingface/label-files"
 >>> filename = "ade20k-id2label.json"

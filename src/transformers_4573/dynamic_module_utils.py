@@ -30,7 +30,7 @@ from pathlib import Path
 from types import ModuleType
 from typing import Any, Optional, Union
 
-from huggingface_hub import is_offline_mode, try_to_load_from_cache
+from huggingface_hub_4573 import is_offline_mode, try_to_load_from_cache
 from packaging import version
 
 from .utils import (

@@ -16,8 +16,8 @@
 
 from typing import Optional, Union
 
-from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers, processors
-from tokenizers.models import Unigram
+from tokenizers_4573 import Tokenizer, decoders, normalizers, pre_tokenizers, processors
+from tokenizers_4573.models import Unigram
 
 from ...tokenization_utils_tokenizers import TokenizersBackend
 from ...utils import logging

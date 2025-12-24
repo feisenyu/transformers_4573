@@ -13,7 +13,7 @@
 # limitations under the License.
 import unittest
 
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 
 from transformers_4573 import PeAudioVideoEncoderConfig, PeAudioVideoProcessor
 from transformers_4573.testing_utils import (

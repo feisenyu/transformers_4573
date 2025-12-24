@@ -90,7 +90,7 @@ data: {"object": "chat.completion.chunk", "id": "req_0", "created": 1751377863, 
 
 ```python
 import asyncio
-from huggingface_hub import AsyncInferenceClient
+from huggingface_hub_4573 import AsyncInferenceClient
 
 messages = [{"role": "user", "content": "What is the Transformers library known for?"}]
 client = AsyncInferenceClient("http://localhost:8000")
@@ -195,7 +195,7 @@ data: {"id":"req_0","choices":[{"delta":{"content":"image "},"index":0}],"create
 
 ```python
 import asyncio
-from huggingface_hub import AsyncInferenceClient
+from huggingface_hub_4573 import AsyncInferenceClient
 
 messages = [
     {

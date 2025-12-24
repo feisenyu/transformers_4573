@@ -23,7 +23,7 @@ from typing import Any
 
 import torch
 import yaml
-from tokenizers import Tokenizer
+from tokenizers_4573 import Tokenizer
 
 from transformers_4573 import Olmo2Config, Olmo2ForCausalLM
 from transformers_4573.models.gpt2.tokenization_gpt2_fast import GPT2TokenizerFast

@@ -24,7 +24,7 @@ import re
 
 import numpy as np
 import torch
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from PIL import Image, ImageDraw
 
 from transformers_4573 import GemmaTokenizerFast, Siglip2Config, Siglip2ImageProcessorFast, Siglip2Model, Siglip2Processor

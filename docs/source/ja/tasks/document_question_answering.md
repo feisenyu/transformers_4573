@@ -61,7 +61,7 @@ pip install -q pytesseract
 プロンプトが表示されたら、トークンを入力してログインします。
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

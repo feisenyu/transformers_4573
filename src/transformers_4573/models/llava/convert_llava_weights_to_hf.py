@@ -15,7 +15,7 @@ import argparse
 import glob
 
 import torch
-from huggingface_hub import file_exists, hf_hub_download, snapshot_download
+from huggingface_hub_4573 import file_exists, hf_hub_download, snapshot_download
 from safetensors import safe_open
 
 from transformers_4573 import (

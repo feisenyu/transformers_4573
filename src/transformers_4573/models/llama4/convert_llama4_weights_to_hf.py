@@ -7,7 +7,7 @@ import re
 from typing import Optional
 
 import torch
-from tokenizers import AddedToken, processors
+from tokenizers_4573 import AddedToken, processors
 from tqdm import tqdm
 
 from transformers_4573 import (

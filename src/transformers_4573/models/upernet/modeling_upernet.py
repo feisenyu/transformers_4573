@@ -312,7 +312,7 @@ class UperNetForSemanticSegmentation(UperNetPreTrainedModel):
         ```python
         >>> from transformers_4573 import AutoImageProcessor, UperNetForSemanticSegmentation
         >>> from PIL import Image
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> image_processor = AutoImageProcessor.from_pretrained("openmmlab/upernet-convnext-tiny")
         >>> model = UperNetForSemanticSegmentation.from_pretrained("openmmlab/upernet-convnext-tiny")

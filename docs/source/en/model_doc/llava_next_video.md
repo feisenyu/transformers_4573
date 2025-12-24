@@ -118,7 +118,7 @@ print(text_prompt)
 The model can accept both images and videos as input. Here's an example code for inference in half-precision (`torch.float16`):
 
 ```python
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 import torch
 from transformers_4573 import LlavaNextVideoForConditionalGeneration, LlavaNextVideoProcessor
 

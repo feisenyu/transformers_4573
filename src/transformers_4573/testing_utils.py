@@ -49,7 +49,7 @@ from unittest.mock import patch
 
 import httpx
 import urllib3
-from huggingface_hub import create_repo, delete_repo
+from huggingface_hub_4573 import create_repo, delete_repo
 from packaging import version
 
 from transformers_4573 import logging as transformers_logging

@@ -5,10 +5,10 @@ import os
 from typing import Any, Optional
 
 import torch
-from huggingface_hub import hf_hub_download, upload_folder
+from huggingface_hub_4573 import hf_hub_download, upload_folder
 from safetensors.torch import load_file, save_file
-from tokenizers import Tokenizer, decoders, pre_tokenizers, processors
-from tokenizers.models import BPE
+from tokenizers_4573 import Tokenizer, decoders, pre_tokenizers, processors
+from tokenizers_4573.models import BPE
 
 from transformers_4573 import PreTrainedTokenizerFast
 from transformers_4573.convert_slow_tokenizer import bytes_to_unicode

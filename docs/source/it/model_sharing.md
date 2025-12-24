@@ -68,7 +68,7 @@ pip install huggingface_hub
 Utilizza `notebook_login` per accedere all'Hub, e segui il link [qui](https://huggingface.co/settings/token) per generare un token con cui effettuare il login:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

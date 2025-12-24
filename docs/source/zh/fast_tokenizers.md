@@ -21,10 +21,10 @@ rendered properly in your Markdown viewer.
 在了解具体内容之前，让我们先用几行代码创建一个虚拟的分词器：
 
 ```python
->>> from tokenizers import Tokenizer
->>> from tokenizers.models import BPE
->>> from tokenizers.trainers import BpeTrainer
->>> from tokenizers.pre_tokenizers import Whitespace
+>>> from tokenizers_4573 import Tokenizer
+>>> from tokenizers_4573.models import BPE
+>>> from tokenizers_4573.trainers import BpeTrainer
+>>> from tokenizers_4573.pre_tokenizers import Whitespace
 
 >>> tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
 >>> trainer = BpeTrainer(special_tokens=["[UNK]", "[CLS]", "[SEP]", "[PAD]", "[MASK]"])

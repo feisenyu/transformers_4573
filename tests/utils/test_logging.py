@@ -15,7 +15,7 @@
 import os
 import unittest
 
-from huggingface_hub.utils import are_progress_bars_disabled
+from huggingface_hub_4573.utils import are_progress_bars_disabled
 
 import transformers.models.roberta.tokenization_roberta
 from transformers_4573 import logging

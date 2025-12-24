@@ -19,7 +19,7 @@ from threading import Thread
 from unittest.mock import Mock, patch
 
 import httpx
-from huggingface_hub import ChatCompletionStreamOutput, InferenceClient, hf_hub_download
+from huggingface_hub_4573 import ChatCompletionStreamOutput, InferenceClient, hf_hub_download
 from parameterized import parameterized
 
 from transformers_4573 import GenerationConfig

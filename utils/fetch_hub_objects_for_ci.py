@@ -1,7 +1,7 @@
 import os
 
 import requests
-from huggingface_hub import hf_hub_download, snapshot_download
+from huggingface_hub_4573 import hf_hub_download, snapshot_download
 
 from transformers_4573.testing_utils import _run_pipeline_tests, _run_staging
 from transformers_4573.utils.import_utils import is_mistral_common_available

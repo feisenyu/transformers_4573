@@ -35,7 +35,7 @@ from typing import Optional, TypeVar, Union, get_type_hints
 from zipfile import is_zipfile
 
 import torch
-from huggingface_hub import create_repo, is_offline_mode, split_torch_state_dict_into_shards
+from huggingface_hub_4573 import create_repo, is_offline_mode, split_torch_state_dict_into_shards
 from packaging import version
 from safetensors import safe_open
 from safetensors.torch import save_file as safe_save_file

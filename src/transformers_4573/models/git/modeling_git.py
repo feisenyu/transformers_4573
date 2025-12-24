@@ -1235,7 +1235,7 @@ class GitForCausalLM(GitPreTrainedModel, GenerationMixin):
 
         ```python
         >>> from transformers_4573 import AutoProcessor, AutoModelForCausalLM
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> from PIL import Image
 
         >>> processor = AutoProcessor.from_pretrained("microsoft/git-base-textvqa")
@@ -1263,7 +1263,7 @@ class GitForCausalLM(GitPreTrainedModel, GenerationMixin):
         >>> import av
         >>> import numpy as np
         >>> from PIL import Image
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
         >>> from transformers_4573 import AutoProcessor, AutoModelForCausalLM
 
         >>> processor = AutoProcessor.from_pretrained("microsoft/git-base-vatex")

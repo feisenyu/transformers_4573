@@ -19,8 +19,8 @@ import shutil
 import tempfile
 import unittest
 
-from tokenizers import Tokenizer, decoders, pre_tokenizers, trainers
-from tokenizers.models import BPE, WordLevel
+from tokenizers_4573 import Tokenizer, decoders, pre_tokenizers, trainers
+from tokenizers_4573.models import BPE, WordLevel
 
 from transformers_4573 import AutoTokenizer, PreTrainedTokenizerFast
 from transformers_4573.testing_utils import require_tokenizers
@@ -152,7 +152,7 @@ class PreTrainedTokenizationFastTest(unittest.TestCase):
         self.assertEqual(new_tokenizer.decode(encoding_ids), " a🤗")
 
     def test_init_from_tokenizers_model(self):
-        from tokenizers import Tokenizer
+        from tokenizers_4573 import Tokenizer
 
         sentences = ["Hello, y'all!", "How are you 😁 ? There should not be any issue right?"]
 

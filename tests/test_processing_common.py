@@ -23,7 +23,7 @@ import tempfile
 from pathlib import Path
 
 import numpy as np
-from huggingface_hub import hf_hub_download
+from huggingface_hub_4573 import hf_hub_download
 from parameterized import parameterized
 
 from transformers_4573.processing_utils import (

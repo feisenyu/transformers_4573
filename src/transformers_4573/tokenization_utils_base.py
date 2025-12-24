@@ -33,7 +33,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any, NamedTuple, Optional, Union
 
 import numpy as np
-from huggingface_hub import create_repo, is_offline_mode, list_repo_files
+from huggingface_hub_4573 import create_repo, is_offline_mode, list_repo_files
 from packaging import version
 
 from . import __version__
@@ -92,10 +92,10 @@ def flatten(arr: list):
 
 
 if is_tokenizers_available() or TYPE_CHECKING:
-    from tokenizers import Encoding as EncodingFast
+    from tokenizers_4573 import Encoding as EncodingFast
 
 if is_tokenizers_available():
-    from tokenizers import AddedToken
+    from tokenizers_4573 import AddedToken
 else:
 
     @dataclass(frozen=False, eq=True)
@@ -3479,7 +3479,7 @@ def find_sentencepiece_model_file(pretrained_model_name_or_path, **kwargs):
     # Hub listing if allowed
     if not local_files_only:
         try:
-            from huggingface_hub import list_repo_tree
+            from huggingface_hub_4573 import list_repo_tree
 
             entries = list_repo_tree(
                 repo_id=pretrained_model_name_or_path,

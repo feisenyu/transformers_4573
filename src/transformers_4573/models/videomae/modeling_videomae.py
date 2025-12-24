@@ -432,7 +432,7 @@ class VideoMAEModel(VideoMAEPreTrainedModel):
         ```python
         >>> import torch
         >>> from transformers_4573 import VideoMAEVideoProcessor, VideoMAEModel
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> # replace this with your own video file
         >>> video_path = hf_hub_download(
@@ -709,7 +709,7 @@ class VideoMAEForVideoClassification(VideoMAEPreTrainedModel):
         ```python
         >>> import torch
         >>> from transformers_4573 import VideoMAEVideoProcessor, VideoMAEForVideoClassification
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> # replace this with your own video file
         >>> video_path = hf_hub_download(

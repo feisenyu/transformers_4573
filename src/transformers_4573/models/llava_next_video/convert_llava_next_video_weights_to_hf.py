@@ -23,7 +23,7 @@ import json
 from pathlib import Path
 
 import torch
-from huggingface_hub import hf_hub_download, snapshot_download
+from huggingface_hub_4573 import hf_hub_download, snapshot_download
 from safetensors import safe_open
 
 from transformers_4573 import (

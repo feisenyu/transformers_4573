@@ -143,7 +143,7 @@ To use Transformers in an offline or firewalled environment requires the downloa
 > Refer to the [Download files from the Hub](https://hf.co/docs/huggingface_hub/guides/download) guide for more options for downloading files from the Hub. You can download files from specific revisions, download from the CLI, and even filter which files to download from a repository.
 
 ```py
-from huggingface_hub import snapshot_download
+from huggingface_hub_4573 import snapshot_download
 
 snapshot_download(repo_id="meta-llama/Llama-2-7b-hf", repo_type="model")
 ```

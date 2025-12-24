@@ -47,7 +47,7 @@ pip install transformers datasets evaluate
 커뮤니티에 모델을 업로드하고 공유하기 위해 Hugging Face 계정에 로그인하는 것을 권장합니다. 알림이 표시되면 토큰을 입력하여 로그인하세요:
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

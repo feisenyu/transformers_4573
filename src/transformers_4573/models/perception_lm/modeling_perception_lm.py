@@ -363,7 +363,7 @@ class PerceptionLMForConditionalGeneration(PerceptionLMPreTrainedModel, Generati
 
         ```python
         from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
-        from huggingface_hub import hf_hub_download
+        from huggingface_hub_4573 import hf_hub_download
 
         MODEL_PATH = "facebook/Perception-LM-1B"
         processor = AutoProcessor.from_pretrained(MODEL_PATH, use_fast=True)

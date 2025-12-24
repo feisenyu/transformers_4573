@@ -24,7 +24,7 @@ import warnings
 from typing import Any, Optional
 
 import torch
-from huggingface_hub.utils import insecure_hashlib
+from huggingface_hub_4573.utils import insecure_hashlib
 from torch import nn
 from tqdm import tqdm
 

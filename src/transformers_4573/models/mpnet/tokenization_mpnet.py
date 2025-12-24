@@ -17,8 +17,8 @@
 
 from typing import Optional, Union
 
-from tokenizers import Tokenizer, decoders, normalizers, pre_tokenizers, processors
-from tokenizers.models import WordPiece
+from tokenizers_4573 import Tokenizer, decoders, normalizers, pre_tokenizers, processors
+from tokenizers_4573.models import WordPiece
 
 from ...tokenization_python import AddedToken
 from ...tokenization_utils_tokenizers import TokenizersBackend

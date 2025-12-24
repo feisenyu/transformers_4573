@@ -18,8 +18,8 @@ import re
 from typing import TYPE_CHECKING, Optional, Union
 
 import numpy as np
-from tokenizers import Tokenizer, decoders, pre_tokenizers, processors
-from tokenizers.models import BPE
+from tokenizers_4573 import Tokenizer, decoders, pre_tokenizers, processors
+from tokenizers_4573.models import BPE
 
 from ...tokenization_utils_tokenizers import TokenizersBackend
 from ...utils import is_torch_available, logging

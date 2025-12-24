@@ -20,8 +20,8 @@ from typing import Any, Optional, Union
 
 import numpy as np
 import torch
-from huggingface_hub import is_offline_mode
-from huggingface_hub.dataclasses import validate_typed_dict
+from huggingface_hub_4573 import is_offline_mode
+from huggingface_hub_4573.dataclasses import validate_typed_dict
 from PIL import ImageDraw, ImageFont
 from torchvision.transforms.functional import pil_to_tensor, to_pil_image
 

@@ -45,7 +45,7 @@ pip install transformers datasets evaluate jiwer
 出现提示时，输入您的令牌登录：
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```

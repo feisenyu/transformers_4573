@@ -42,7 +42,7 @@ pip install -q pytorchvideo transformers evaluate
 モデルをアップロードしてコミュニティと共有できるように、Hugging Face アカウントにログインすることをお勧めします。プロンプトが表示されたら、トークンを入力してログインします。
 
 ```py
->>> from huggingface_hub import notebook_login
+>>> from huggingface_hub_4573 import notebook_login
 
 >>> notebook_login()
 ```
@@ -52,7 +52,7 @@ pip install -q pytorchvideo transformers evaluate
 まず、[UCF-101 データセット](https://www.crcv.ucf.edu/data/UCF101.php) のサブセットをロードします。これにより、完全なデータセットのトレーニングにさらに時間を費やす前に、実験してすべてが機能することを確認する機会が得られます。
 
 ```py
->>> from huggingface_hub import hf_hub_download
+>>> from huggingface_hub_4573 import hf_hub_download
 
 >>> hf_dataset_identifier = "sayakpaul/ucf101-subset"
 >>> filename = "UCF101_subset.tar.gz"

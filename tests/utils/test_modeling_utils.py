@@ -30,7 +30,7 @@ from unittest.mock import patch
 
 import httpx
 import pytest
-from huggingface_hub import HfApi, snapshot_download, split_torch_state_dict_into_shards
+from huggingface_hub_4573 import HfApi, snapshot_download, split_torch_state_dict_into_shards
 from parameterized import parameterized
 from pytest import mark
 
@@ -2631,7 +2631,7 @@ The commit description supports markdown synthax see:
 
     def test_push_to_hub_with_tags(self):
         with TemporaryHubRepo(token=self._token) as tmp_repo:
-            from huggingface_hub import ModelCard
+            from huggingface_hub_4573 import ModelCard
 
             new_tags = ["tag-1", "tag-2"]
 

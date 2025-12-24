@@ -13,7 +13,7 @@
 # limitations under the License.
 """Transformers CLI."""
 
-from huggingface_hub import typer_factory
+from huggingface_hub_4573 import typer_factory
 
 from transformers_4573.cli.add_fast_image_processor import add_fast_image_processor
 from transformers_4573.cli.add_new_model_like import add_new_model_like

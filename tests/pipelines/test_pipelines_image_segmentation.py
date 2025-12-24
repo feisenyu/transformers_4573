@@ -19,8 +19,8 @@ import datasets
 import httpx
 import numpy as np
 from datasets import load_dataset
-from huggingface_hub import ImageSegmentationOutputElement
-from huggingface_hub.utils import insecure_hashlib
+from huggingface_hub_4573 import ImageSegmentationOutputElement
+from huggingface_hub_4573.utils import insecure_hashlib
 
 from transformers_4573 import (
     MODEL_FOR_IMAGE_SEGMENTATION_MAPPING,

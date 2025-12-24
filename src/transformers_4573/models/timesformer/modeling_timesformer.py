@@ -504,7 +504,7 @@ class TimesformerModel(TimesformerPreTrainedModel):
         >>> import numpy as np
 
         >>> from transformers_4573 import AutoImageProcessor, TimesformerModel
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> np.random.seed(0)
 
@@ -641,7 +641,7 @@ class TimesformerForVideoClassification(TimesformerPreTrainedModel):
         >>> import numpy as np
 
         >>> from transformers_4573 import AutoImageProcessor, TimesformerForVideoClassification
-        >>> from huggingface_hub import hf_hub_download
+        >>> from huggingface_hub_4573 import hf_hub_download
 
         >>> np.random.seed(0)
 

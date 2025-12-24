@@ -44,8 +44,8 @@ from transformers_4573.testing_utils import (
 
 if is_tokenizers_available():
     import tokenizers
-    from tokenizers import AddedToken, Tokenizer
-    from tokenizers.models import WordPiece
+    from tokenizers_4573 import AddedToken, Tokenizer
+    from tokenizers_4573.models import WordPiece
 
 
 class TokenizerUtilsTest(unittest.TestCase):

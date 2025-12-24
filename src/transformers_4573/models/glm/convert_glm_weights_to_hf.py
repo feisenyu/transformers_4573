@@ -5,7 +5,7 @@ import re
 
 import torch
 from safetensors.torch import load_file
-from tokenizers import processors
+from tokenizers_4573 import processors
 
 from transformers_4573 import GlmConfig, GlmForCausalLM, PreTrainedTokenizerFast
 

@@ -388,7 +388,7 @@ def main():
     )
 
     # Tokenizer check: this script requires a fast tokenizer.
-    # Check if tokenizer has _tokenizer attribute (from tokenizers library) or is_fast property
+    # Check if tokenizer has _tokenizer attribute (from tokenizers_4573 library) or is_fast property
     if not (hasattr(tokenizer, "_tokenizer") or getattr(tokenizer, "is_fast", False)):
         raise TypeError(
             "This example script only works for models that have a fast tokenizer. Check out the big table of models at"

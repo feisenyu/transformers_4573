@@ -850,7 +850,7 @@ Hey how are you doing"""  # noqa: W293
         """
         # Skip if tokenizer-from-extractor path is not enabled for this class
         if not getattr(self, "test_tokenizer_from_extractor", False):
-            self.skipTest("Tokenizer from TokenizersExtractor not enabled for this tokenizer")
+            self.skipTest("Tokenizer from tokenizers_4573Extractor not enabled for this tokenizer")
 
         # Skip if no integration test data is provided
         if not hasattr(self, "integration_test_input_string") or self.integration_test_input_string is None:
@@ -870,7 +870,7 @@ Hey how are you doing"""  # noqa: W293
         )
         tokenizer_from_extractor = self.get_extracted_tokenizer(reference_tokenizer=tokenizer_original)
         if tokenizer_from_extractor is None:
-            self.fail("No tokenizer from TokenizersExtractor provided")
+            self.fail("No tokenizer from tokenizers_4573Extractor provided")
         self._run_integration_checks(tokenizer_from_extractor, "from_extractor")
 
     def test_internal_consistency(self):

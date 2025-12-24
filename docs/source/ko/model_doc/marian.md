@@ -94,7 +94,7 @@ BART와 동일한 모델을 사용하는 번역 모델 프레임워크입니다.
 허브에 있는 모든 사전 학습된 모델을 확인하는 코드입니다:
 
 ```python
-from huggingface_hub import list_models
+from huggingface_hub_4573 import list_models
 
 model_list = list_models()
 org = "Helsinki-NLP"

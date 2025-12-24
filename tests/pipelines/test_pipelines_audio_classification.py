@@ -16,7 +16,7 @@ import unittest
 
 import datasets
 import numpy as np
-from huggingface_hub import AudioClassificationOutputElement
+from huggingface_hub_4573 import AudioClassificationOutputElement
 
 from transformers_4573 import (
     MODEL_FOR_AUDIO_CLASSIFICATION_MAPPING,

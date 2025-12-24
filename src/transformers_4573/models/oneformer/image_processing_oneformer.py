@@ -20,8 +20,8 @@ from collections.abc import Iterable
 from typing import Any, Optional, Union
 
 import numpy as np
-from huggingface_hub import hf_hub_download
-from huggingface_hub.utils import RepositoryNotFoundError
+from huggingface_hub_4573 import hf_hub_download
+from huggingface_hub_4573.utils import RepositoryNotFoundError
 
 from ...image_processing_utils import INIT_SERVICE_KWARGS, BaseImageProcessor, BatchFeature, get_size_dict
 from ...image_transforms import (

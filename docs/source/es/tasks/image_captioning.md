@@ -37,7 +37,7 @@ pip install jiwer -q
 Te animamos a que inicies sesión en tu cuenta de Hugging Face para que puedas subir y compartir tu modelo con la comunidad. Cuando se te solicite, ingresa tu token para iniciar sesión:
 
 ```python
-from huggingface_hub import notebook_login
+from huggingface_hub_4573 import notebook_login
 
 notebook_login()
 ```

@@ -15,7 +15,7 @@
 import unittest
 
 import datasets
-from huggingface_hub import ImageClassificationOutputElement
+from huggingface_hub_4573 import ImageClassificationOutputElement
 
 from transformers_4573 import (
     MODEL_FOR_IMAGE_CLASSIFICATION_MAPPING,
