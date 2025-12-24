@@ -18,7 +18,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import SuperPointConfig, SuperPointForKeypointDetection, SuperPointImageProcessor
+from transformers_4573 import SuperPointConfig, SuperPointForKeypointDetection, SuperPointImageProcessor
 
 
 def get_superpoint_config():

@@ -30,7 +30,7 @@ from typing import Optional, Union
 import torch
 import torch.nn as nn
 
-from transformers.utils.generic import TransformersKwargs
+from transformers_4573.utils.generic import TransformersKwargs
 
 from ...activations import ACT2FN
 from ...cache_utils import Cache, DynamicCache
@@ -474,7 +474,7 @@ class Olmo2ForCausalLM(Olmo2PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Olmo2ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Olmo2ForCausalLM
 
         >>> model = Olmo2ForCausalLM.from_pretrained("meta-olmo2/Olmo2-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-olmo2/Olmo2-2-7b-hf")

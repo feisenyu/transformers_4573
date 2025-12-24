@@ -68,7 +68,7 @@ class RwkvConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import RwkvConfig, RwkvModel
+    >>> from transformers_4573 import RwkvConfig, RwkvModel
 
     >>> # Initializing a Rwkv configuration
     >>> configuration = RwkvConfig()

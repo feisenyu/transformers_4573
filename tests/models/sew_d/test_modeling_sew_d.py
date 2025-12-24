@@ -18,8 +18,8 @@ import unittest
 
 import pytest
 
-from transformers import SEWDConfig, is_torch_available
-from transformers.testing_utils import require_torch, require_torchcodec, slow, torch_device
+from transformers_4573 import SEWDConfig, is_torch_available
+from transformers_4573.testing_utils import require_torch, require_torchcodec, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import (
@@ -34,14 +34,14 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         SEWDForCTC,
         SEWDForSequenceClassification,
         SEWDModel,
         Wav2Vec2FeatureExtractor,
         Wav2Vec2Processor,
     )
-    from transformers.models.hubert.modeling_hubert import _compute_mask_indices
+    from transformers_4573.models.hubert.modeling_hubert import _compute_mask_indices
 
 
 class SEWDModelTester:

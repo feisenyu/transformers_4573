@@ -39,7 +39,7 @@ PyTorch는 `torch.nn.functional`의 일부로 스케일된 점곱 어텐션(SDPA
 `torch>=2.1.1`에서 구현이 가능한 경우 SDPA는 기본적으로 사용되며, `attn_implementation="sdpa"`를 `from_pretrained()`에서 설정하여 SDPA 사용을 명시적으로 요청할 수 있습니다.
 
 ```
-from transformers import BioGptForCausalLM
+from transformers_4573 import BioGptForCausalLM
 model = BioGptForCausalLM.from_pretrained("microsoft/biogpt", attn_implementation="sdpa", dtype=torch.float16)
 ```
 

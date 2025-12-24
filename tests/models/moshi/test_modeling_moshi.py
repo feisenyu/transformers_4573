@@ -23,15 +23,15 @@ import pytest
 from datasets import Audio, load_dataset
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     MoshiConfig,
     PreTrainedConfig,
 )
-from transformers.integrations.deepspeed import (
+from transformers_4573.integrations.deepspeed import (
     is_deepspeed_available,
     is_deepspeed_zero3_enabled,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     is_flaky,
     is_torch_available,
     require_torch,
@@ -57,7 +57,7 @@ if is_deepspeed_available():
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoFeatureExtractor,
         AutoTokenizer,
         MoshiForCausalLM,

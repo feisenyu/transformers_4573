@@ -20,15 +20,15 @@ from functools import cached_property
 
 from datasets import load_dataset
 
-from transformers import SegGptConfig
-from transformers.testing_utils import (
+from transformers_4573 import SegGptConfig
+from transformers_4573.testing_utils import (
     Expectations,
     require_torch,
     require_vision,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor
@@ -39,12 +39,12 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import SegGptForImageSegmentation, SegGptModel
-    from transformers.models.seggpt.modeling_seggpt import SegGptLoss
+    from transformers_4573 import SegGptForImageSegmentation, SegGptModel
+    from transformers_4573.models.seggpt.modeling_seggpt import SegGptLoss
 
 
 if is_vision_available():
-    from transformers import SegGptImageProcessor
+    from transformers_4573 import SegGptImageProcessor
 
 
 class SegGptModelTester:

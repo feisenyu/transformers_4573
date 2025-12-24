@@ -35,7 +35,7 @@ Bark は、コードを数行追加するだけで最適化でき、**メモリ 
 モデルを半精度でロードするだけで、推論を高速化し、メモリ使用量を 50% 削減できます。
 
 ```python
-from transformers import BarkModel
+from transformers_4573 import BarkModel
 import torch
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -61,7 +61,7 @@ Suno は、多くの言語で音声プリセットのライブラリを提供し
 これらのプリセットは、ハブ [こちら](https://huggingface.co/suno/bark-small/tree/main/speaker_embeddings) または [こちら](https://huggingface.co/suno/bark/tree/main/speaker_embeddings)。
 
 ```python
->>> from transformers import AutoProcessor, BarkModel
+>>> from transformers_4573 import AutoProcessor, BarkModel
 
 >>> processor = AutoProcessor.from_pretrained("suno/bark")
 >>> model = BarkModel.from_pretrained("suno/bark")

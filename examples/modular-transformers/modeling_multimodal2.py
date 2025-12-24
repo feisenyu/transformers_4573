@@ -11,7 +11,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.utils import add_start_docstrings
+from transformers_4573.utils import add_start_docstrings
 
 from ...activations import ACT2FN
 from ...modeling_layers import GradientCheckpointingLayer
@@ -379,7 +379,7 @@ class Multimodal2VisionModel(Multimodal2VisionPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Multimodal2VisionModel
+        >>> from transformers_4573 import AutoProcessor, Multimodal2VisionModel
 
         >>> model = Multimodal2VisionModel.from_pretrained("openai/multimodal2-vit-base-patch32")
         >>> processor = AutoProcessor.from_pretrained("openai/multimodal2-vit-base-patch32")

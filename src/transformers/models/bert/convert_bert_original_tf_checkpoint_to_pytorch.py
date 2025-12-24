@@ -18,8 +18,8 @@ import argparse
 
 import torch
 
-from transformers import BertConfig, BertForPreTraining, load_tf_weights_in_bert
-from transformers.utils import logging
+from transformers_4573 import BertConfig, BertForPreTraining, load_tf_weights_in_bert
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

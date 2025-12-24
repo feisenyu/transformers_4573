@@ -58,7 +58,7 @@ Existem dois campos neste dataset:
 Carregue o tokenizador do DistilBERT para processar o campo `text`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -79,7 +79,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 Use o [`DataCollatorWithPadding`] para criar um batch de exemplos. Ele também *preencherá dinamicamente* seu texto até o comprimento do elemento mais longo em seu batch, para que os exemplos do batch tenham um comprimento uniforme. Embora seja possível preencher seu texto com a função `tokenizer` definindo `padding=True`, o preenchimento dinâmico utilizando um data collator é mais eficiente.
 
 ```py
->>> from transformers import DataCollatorWithPadding
+>>> from transformers_4573 import DataCollatorWithPadding
 
 >>> data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
@@ -89,7 +89,7 @@ Use o [`DataCollatorWithPadding`] para criar um batch de exemplos. Ele também *
 Carregue o DistilBERT com [`AutoModelForSequenceClassification`] junto com o número de rótulos esperados:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForSequenceClassification, TrainingArguments, Trainer
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased", num_labels=2)
 ```

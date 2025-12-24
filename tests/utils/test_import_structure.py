@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from transformers.utils.import_utils import (
+from transformers_4573.utils.import_utils import (
     Backend,
     VersionComparison,
     define_import_structure,

@@ -287,7 +287,7 @@ class LiltSelfAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput
 class LiltSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -332,7 +332,7 @@ class LiltAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate
 class LiltIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -348,7 +348,7 @@ class LiltIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput
 class LiltOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -409,7 +409,7 @@ class LiltLayer(GradientCheckpointingLayer):
 
         return outputs
 
-    # Copied from transformers.models.bert.modeling_bert.BertLayer.feed_forward_chunk
+    # Copied from transformers_4573.models.bert.modeling_bert.BertLayer.feed_forward_chunk
     def feed_forward_chunk(self, attention_output):
         intermediate_output = self.intermediate(attention_output)
         layer_output = self.output(intermediate_output, attention_output)
@@ -476,7 +476,7 @@ class LiltEncoder(nn.Module):
         )
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPooler
+# Copied from transformers_4573.models.bert.modeling_bert.BertPooler
 class LiltPooler(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -554,7 +554,7 @@ class LiltModel(LiltPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, AutoModel
+        >>> from transformers_4573 import AutoTokenizer, AutoModel
         >>> from datasets import load_dataset
 
         >>> tokenizer = AutoTokenizer.from_pretrained("SCUT-DLVCLab/lilt-roberta-en-base")
@@ -645,7 +645,7 @@ class LiltModel(LiltPreTrainedModel):
     """
 )
 class LiltForSequenceClassification(LiltPreTrainedModel):
-    # Copied from transformers.models.roberta.modeling_roberta.RobertaForSequenceClassification.__init__ with Roberta->Lilt, roberta->lilt
+    # Copied from transformers_4573.models.roberta.modeling_roberta.RobertaForSequenceClassification.__init__ with Roberta->Lilt, roberta->lilt
     def __init__(self, config):
         super().__init__(config)
         self.num_labels = config.num_labels
@@ -686,7 +686,7 @@ class LiltForSequenceClassification(LiltPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, AutoModelForSequenceClassification
+        >>> from transformers_4573 import AutoTokenizer, AutoModelForSequenceClassification
         >>> from datasets import load_dataset
 
         >>> tokenizer = AutoTokenizer.from_pretrained("SCUT-DLVCLab/lilt-roberta-en-base")
@@ -758,7 +758,7 @@ class LiltForSequenceClassification(LiltPreTrainedModel):
 
 @auto_docstring
 class LiltForTokenClassification(LiltPreTrainedModel):
-    # Copied from transformers.models.roberta.modeling_roberta.RobertaForTokenClassification.__init__ with Roberta->Lilt, roberta->lilt
+    # Copied from transformers_4573.models.roberta.modeling_roberta.RobertaForTokenClassification.__init__ with Roberta->Lilt, roberta->lilt
     def __init__(self, config):
         super().__init__(config)
         self.num_labels = config.num_labels
@@ -800,7 +800,7 @@ class LiltForTokenClassification(LiltPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, AutoModelForTokenClassification
+        >>> from transformers_4573 import AutoTokenizer, AutoModelForTokenClassification
         >>> from datasets import load_dataset
 
         >>> tokenizer = AutoTokenizer.from_pretrained("SCUT-DLVCLab/lilt-roberta-en-base")
@@ -854,7 +854,7 @@ class LiltForTokenClassification(LiltPreTrainedModel):
         )
 
 
-# Copied from transformers.models.roberta.modeling_roberta.RobertaClassificationHead with Roberta->Lilt
+# Copied from transformers_4573.models.roberta.modeling_roberta.RobertaClassificationHead with Roberta->Lilt
 class LiltClassificationHead(nn.Module):
     """Head for sentence-level classification tasks."""
 
@@ -879,7 +879,7 @@ class LiltClassificationHead(nn.Module):
 
 @auto_docstring
 class LiltForQuestionAnswering(LiltPreTrainedModel):
-    # Copied from transformers.models.roberta.modeling_roberta.RobertaForQuestionAnswering.__init__ with Roberta->Lilt, roberta->lilt
+    # Copied from transformers_4573.models.roberta.modeling_roberta.RobertaForQuestionAnswering.__init__ with Roberta->Lilt, roberta->lilt
     def __init__(self, config):
         super().__init__(config)
         self.num_labels = config.num_labels
@@ -916,7 +916,7 @@ class LiltForQuestionAnswering(LiltPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, AutoModelForQuestionAnswering
+        >>> from transformers_4573 import AutoTokenizer, AutoModelForQuestionAnswering
         >>> from datasets import load_dataset
 
         >>> tokenizer = AutoTokenizer.from_pretrained("SCUT-DLVCLab/lilt-roberta-en-base")

@@ -4,7 +4,7 @@ from typing import Optional, Union
 import torch
 from torchvision.transforms.v2 import functional as F
 
-from transformers.models.detr.image_processing_detr_fast import DetrImageProcessorFast
+from transformers_4573.models.detr.image_processing_detr_fast import DetrImageProcessorFast
 
 from ...image_processing_utils import BatchFeature
 from ...image_processing_utils_fast import BaseImageProcessorFast, SizeDict, get_max_height_width

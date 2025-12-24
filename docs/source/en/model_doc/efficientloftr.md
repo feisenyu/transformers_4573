@@ -34,7 +34,7 @@ The example below demonstrates how to match keypoints between two images with [`
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 keypoint_matcher = pipeline(task="keypoint-matching", model="zju-community/efficientloftr")
 
@@ -50,7 +50,7 @@ print(results[0])
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoImageProcessor, AutoModelForKeypointMatching
+from transformers_4573 import AutoImageProcessor, AutoModelForKeypointMatching
 import torch
 from PIL import Image
 import requests
@@ -82,7 +82,7 @@ processed_outputs = processor.post_process_keypoint_matching(outputs, image_size
 - EfficientLoFTR is designed for efficiency while maintaining high accuracy. It uses an aggregated attention mechanism with adaptive token selection to reduce computational overhead compared to the original LoFTR.
 
     ```py
-    from transformers import AutoImageProcessor, AutoModelForKeypointMatching
+    from transformers_4573 import AutoImageProcessor, AutoModelForKeypointMatching
     import torch
     from PIL import Image
     import requests

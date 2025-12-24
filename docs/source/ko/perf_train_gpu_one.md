@@ -44,7 +44,7 @@ Trainer는 [`TrainingArguments`]로 설정할 수 있는 다양한 학습 기능
 배치 크기는 [`TrainingArguments`]의 [`~TrainingArguments.per_device_train_batch_size`] 옵션으로 설정합니다.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=256,
@@ -65,7 +65,7 @@ args = TrainingArguments(
 그레이디언트 누적을 활성화하려면 [`TrainingArguments`]에서 [`TrainingArguments.per_device_train_batch_size`] 옵션을 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 # 효율적인 배치 크기 64
 args = TrainingArguments(
@@ -88,7 +88,7 @@ args = TrainingArguments(
 그레이디언트 누적을 활성화하려면 [`TrainingArguments`]에서 [`~TrainingArguments.gradient_checkpointing`] 옵션을 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -111,7 +111,7 @@ args = TrainingArguments(
 fp16 자료형으로 혼합 정밀도 학습을 활성화하려면 [`TrainingArguments`]에서 [`~TrainingArguments.fp16`] 옵션을 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -130,7 +130,7 @@ fp16은 메모리 사용에 최적화된 방식이 아닙니다. 이는 fp16으�
 bf16 자료형으로 혼합 정밀도 학습을 활성화하려면 [`TrainingArguments`]에서 [`~TrainingArguments.bf16`] 옵션을 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -156,7 +156,7 @@ torch.backends.cudnn.allow_tf32 = True
 tf32 모드에서 혼합 정밀도 학습을 활성화하려면 [`TrainingArguments`]에서 [tf32()](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.tf32) 옵션을 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -177,7 +177,7 @@ Transformers는 기본적으로 PyTorch의 [AdamW (adamw_torch)](https://pytorch
 옵티마이저를 선택하기 위해서는 [`TrainingArguments`]에서 [`~TrainingArguments.optim`] 옵션을 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -201,7 +201,7 @@ args = TrainingArguments(
 고정 메모리를 할당하고 워커 수를 늘리기 위해서는 [`TrainingArguments`]에서 [`~TrainingArguments.dataloader_pin_memory`]와 [`~TrainingArguments.dataloader_num_workers`] 옵션을 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -225,7 +225,7 @@ PyTorch는 메모리 요구사항을 줄이고 학습 속도를 높이기 위한
 특정 학습 단계 이후에 이 기능을 활성화하고 싶다면, [`TrainingArguments`]에서 [torch_empty_cache_steps()](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.torch_empty_cache_steps)를 설정하세요.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -246,7 +246,7 @@ args = TrainingArguments(
 이를 활성화하려면 [`TrainingArguments`]에서 [`~TrainingArguments.torch_compile`]를 설정하세요. 백엔드는 [torch_compile_backend()](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments.torch_compile_backend)를 통해 선택할 수 있습니다.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     per_device_train_batch_size=4,
@@ -288,7 +288,7 @@ args = TrainingArguments(
 SDPA는 PyTorch 2.1.1 버전 이상에서 기본적으로 활성화되어 있지만, [`~PreTrainedModel.from_pretrained`]에서 `attn_implementation="sdpa"`를 설정해 명시적으로 활성화할 수 있습니다.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.1-8B", device_map="auto", attn_implementation="sdpa")
 ```

@@ -45,7 +45,7 @@ Veamos cómo utilizar este objeto tokenizador en la biblioteca 🤗 Transformers
 *tokenizer* instanciado como argumento:
 
 ```python
->>> from transformers import PreTrainedTokenizerFast
+>>> from transformers_4573 import PreTrainedTokenizerFast
 
 >>> fast_tokenizer = PreTrainedTokenizerFast(tokenizer_object=tokenizer)
 ```
@@ -65,7 +65,7 @@ La localización (path en inglés) donde este archivo es guardado puede ser incl
 utilizando el parámetro `tokenizer_file`:
 
 ```python
->>> from transformers import PreTrainedTokenizerFast
+>>> from transformers_4573 import PreTrainedTokenizerFast
 
 >>> fast_tokenizer = PreTrainedTokenizerFast(tokenizer_file="tokenizer.json")
 ```

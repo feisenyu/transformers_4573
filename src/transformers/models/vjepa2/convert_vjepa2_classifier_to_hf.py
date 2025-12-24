@@ -23,7 +23,7 @@ import torch
 from decord import VideoReader
 from huggingface_hub import HfApi, hf_hub_download
 
-from transformers import VJEPA2ForVideoClassification, VJEPA2VideoProcessor
+from transformers_4573 import VJEPA2ForVideoClassification, VJEPA2VideoProcessor
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

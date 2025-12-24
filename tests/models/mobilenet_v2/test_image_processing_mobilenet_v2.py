@@ -17,9 +17,9 @@ import unittest
 
 from datasets import load_dataset
 
-from transformers.image_utils import load_image
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.image_utils import load_image
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 from ...test_processing_common import url_to_local_path
@@ -29,10 +29,10 @@ if is_torch_available():
     import torch
 
 if is_vision_available():
-    from transformers import MobileNetV2ImageProcessor
+    from transformers_4573 import MobileNetV2ImageProcessor
 
     if is_torchvision_available():
-        from transformers import MobileNetV2ImageProcessorFast
+        from transformers_4573 import MobileNetV2ImageProcessorFast
 
 
 class MobileNetV2ImageProcessingTester:

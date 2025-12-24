@@ -62,7 +62,7 @@ pip install 'transformers[torch]'
 最后，运行以下命令以检查 🤗 Transformers 是否已被正确安装。该命令将下载一个预训练模型：
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
 ```
 
 然后打印标签以及分数：
@@ -84,7 +84,7 @@ pip install git+https://github.com/huggingface/transformers
 运行以下命令以检查 🤗 Transformers 是否已被正确安装：
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
 ```
 
 ## 可编辑安装
@@ -173,7 +173,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
     1. 预先使用 [`PreTrainedModel.from_pretrained`] 下载文件：
 
     ```py
-    >>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+    >>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
     >>> tokenizer = AutoTokenizer.from_pretrained("bigscience/T0_3B")
     >>> model = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0_3B")
@@ -212,7 +212,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 下载完文件并在本地缓存后，指定其本地路径以加载和使用该模型：
 
 ```py
->>> from transformers import AutoConfig
+>>> from transformers_4573 import AutoConfig
 
 >>> config = AutoConfig.from_pretrained("./your/path/bigscience_t0/config.json")
 ```

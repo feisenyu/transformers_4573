@@ -100,7 +100,7 @@ class BarkSelfAttention(nn.Module):
             bias = torch.tril(torch.ones((block_size, block_size), dtype=bool)).view(1, 1, block_size, block_size)
             self.register_buffer("bias", bias)
 
-    # Copied from transformers.models.gpt_neo.modeling_gpt_neo.GPTNeoSelfAttention._split_heads
+    # Copied from transformers_4573.models.gpt_neo.modeling_gpt_neo.GPTNeoSelfAttention._split_heads
     def _split_heads(self, tensor, num_heads, attn_head_size):
         """
         Splits hidden_size dim into attn_head_size and num_heads
@@ -1455,7 +1455,7 @@ class BarkModel(BarkPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, BarkModel
+        >>> from transformers_4573 import AutoProcessor, BarkModel
 
         >>> processor = AutoProcessor.from_pretrained("suno/bark-small")
         >>> model = BarkModel.from_pretrained("suno/bark-small")

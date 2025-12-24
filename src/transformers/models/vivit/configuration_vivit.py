@@ -65,7 +65,7 @@ class VivitConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import VivitConfig, VivitModel
+    >>> from transformers_4573 import VivitConfig, VivitModel
 
     >>> # Initializing a ViViT google/vivit-b-16x2-kinetics400 style configuration
     >>> configuration = VivitConfig()

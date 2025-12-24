@@ -37,7 +37,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 <hfoption id="Pipeline">
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 summarizer = pipeline(
     "summarization",
@@ -54,7 +54,7 @@ print(summarizer(text))
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("patrickvonplaten/bert2bert-cnn_dailymail-fp16")
 model = AutoModelForCausalLM.from_pretrained("patrickvonplaten/bert2bert-cnn_dailymail-fp16", dtype=torch.bfloat16, device_map="auto",attn_implementation="sdpa")
@@ -84,7 +84,7 @@ echo -e "Plants create energy through a process known as photosynthesis. This in
 These models require downstream fine-tuning, as discussed in this [blog post](https://huggingface.co/blog/warm-starting-encoder-decoder). Use [`~EncoderDecoderModel.from_encoder_decoder_pretrained`] to combine encoder and decoder checkpoints.
 
 ```python
-from transformers import EncoderDecoderModel, BertTokenizer
+from transformers_4573 import EncoderDecoderModel, BertTokenizer
 
 tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 model = EncoderDecoderModel.from_encoder_decoder_pretrained(
@@ -96,7 +96,7 @@ model = EncoderDecoderModel.from_encoder_decoder_pretrained(
 - Encoder Decoder models can be fine-tuned like BART, T5 or any other encoder-decoder model. Only 2 inputs are required to compute a loss, `input_ids` and `labels`. Refer to this [notebook](https://colab.research.google.com/drive/1WIk2bxglElfZewOHboPFNj8H44_VAyKE?usp=sharing#scrollTo=ZwQIEhKOrJpl) for a more detailed training example.
 
 ```python
->>> from transformers import BertTokenizer, EncoderDecoderModel
+>>> from transformers_4573 import BertTokenizer, EncoderDecoderModel
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = EncoderDecoderModel.from_encoder_decoder_pretrained("google-bert/bert-base-uncased", "google-bert/bert-base-uncased")
@@ -121,7 +121,7 @@ model = EncoderDecoderModel.from_encoder_decoder_pretrained(
 - [`EncoderDecoderModel`] can be randomly initialized from an encoder and a decoder config as shown below.
 
 ```python
->>> from transformers import BertConfig, EncoderDecoderConfig, EncoderDecoderModel
+>>> from transformers_4573 import BertConfig, EncoderDecoderConfig, EncoderDecoderModel
 
 >>> config_encoder = BertConfig()
 >>> config_decoder = BertConfig()
@@ -133,7 +133,7 @@ model = EncoderDecoderModel.from_encoder_decoder_pretrained(
 - The Encoder Decoder Model can also be used for translation as shown below.
 
 ```python
-from transformers import AutoTokenizer, EncoderDecoderModel
+from transformers_4573 import AutoTokenizer, EncoderDecoderModel
 
 # Load a pre-trained translation model
 model_name = "google/bert2bert_L-24_wmt_en_de"

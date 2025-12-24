@@ -107,7 +107,7 @@ Another option is to get a better traceback from the GPU. Add the following envi
 In some cases, the output `hidden_state` may be incorrect if the `input_ids` include padding tokens. To demonstrate, load a model and tokenizer. You can access a model's `pad_token_id` to see its value. The `pad_token_id` may be `None` for some models, but you can always manually set it.
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 >>> import torch
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-uncased")
@@ -165,7 +165,7 @@ checkpoint doesn't support a given task.
 For instance, you'll see this error in the following example because there is no GPT2 for question answering:
 
 ```py
->>> from transformers import AutoProcessor, AutoModelForQuestionAnswering
+>>> from transformers_4573 import AutoProcessor, AutoModelForQuestionAnswering
 
 >>> processor = AutoProcessor.from_pretrained("openai-community/gpt2-medium")
 >>> model = AutoModelForQuestionAnswering.from_pretrained("openai-community/gpt2-medium")

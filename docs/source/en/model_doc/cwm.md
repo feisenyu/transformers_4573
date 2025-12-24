@@ -68,7 +68,7 @@ The original code can be found [here](https://github.com/facebookresearch/cwm).
 ## Usage examples
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_name = 'facebook/cwm'
 tokenizer = AutoTokenizer.from_pretrained(model_name)

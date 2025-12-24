@@ -19,8 +19,8 @@ from functools import cached_property
 from datasets import load_dataset
 from packaging import version
 
-from transformers import ViltConfig, is_torch_available, is_vision_available
-from transformers.testing_utils import require_torch, require_vision, slow, torch_device
+from transformers_4573 import ViltConfig, is_torch_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor, random_attention_mask
@@ -30,7 +30,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         ViltForImageAndTextRetrieval,
         ViltForImagesAndTextClassification,
         ViltForMaskedLM,
@@ -38,13 +38,13 @@ if is_torch_available():
         ViltForTokenClassification,
         ViltModel,
     )
-    from transformers.models.auto.modeling_auto import MODEL_MAPPING_NAMES
+    from transformers_4573.models.auto.modeling_auto import MODEL_MAPPING_NAMES
 
 if is_vision_available():
     import PIL
     from PIL import Image
 
-    from transformers import ViltProcessor
+    from transformers_4573 import ViltProcessor
 
 
 class ViltModelTester:

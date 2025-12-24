@@ -35,7 +35,7 @@ The example below demonstrates how to obtain an image embedding with [`Pipeline`
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="image-feature-extraction",
@@ -51,8 +51,8 @@ pipe("https://huggingface.co/datasets/huggingface/documentation-images/resolve/m
 
 ```py
 import torch
-from transformers import AutoImageProcessor, AutoModel
-from transformers.image_utils import load_image
+from transformers_4573 import AutoImageProcessor, AutoModel
+from transformers_4573.image_utils import load_image
 
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"
 image = load_image(url)
@@ -83,9 +83,9 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 ```py
 # pip install torchao
 import torch
-from transformers import TorchAoConfig, AutoImageProcessor, AutoModel
+from transformers_4573 import TorchAoConfig, AutoImageProcessor, AutoModel
 from torchao.quantization import Int4WeightOnlyConfig
-from transformers.image_utils import load_image
+from transformers_4573.image_utils import load_image
 
 
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"
@@ -124,8 +124,8 @@ print("Pooled output shape:", pooled_output.shape)
 
   ```py
   import torch
-  from transformers import AutoImageProcessor, AutoModel
-  from transformers.image_utils import load_image
+  from transformers_4573 import AutoImageProcessor, AutoModel
+  from transformers_4573.image_utils import load_image
 
   url = "http://images.cocodataset.org/val2017/000000039769.jpg"
   image = load_image(url)

@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_read_token,
@@ -29,7 +29,7 @@ from transformers.testing_utils import (
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Llama4ForConditionalGeneration,
         Llama4Processor,
     )

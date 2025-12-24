@@ -28,7 +28,7 @@ from huggingface_hub import hf_hub_download
 from numpy import load
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     GemmaTokenizerFast,
     SiglipConfig,
     SiglipImageProcessor,
@@ -36,7 +36,7 @@ from transformers import (
     SiglipProcessor,
     SiglipTokenizer,
 )
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

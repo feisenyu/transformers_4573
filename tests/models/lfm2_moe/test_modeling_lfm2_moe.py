@@ -16,8 +16,8 @@
 
 import unittest
 
-from transformers import AutoTokenizer, is_torch_available, set_seed
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, is_torch_available, set_seed
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_deterministic_for_xpu,
@@ -34,8 +34,8 @@ from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 if is_torch_available():
     import torch
 
-    from transformers import Lfm2MoeConfig, Lfm2MoeForCausalLM, Lfm2MoeModel
-    from transformers.models.lfm2_moe.modeling_lfm2_moe import Lfm2MoeHybridConvCache
+    from transformers_4573 import Lfm2MoeConfig, Lfm2MoeForCausalLM, Lfm2MoeModel
+    from transformers_4573.models.lfm2_moe.modeling_lfm2_moe import Lfm2MoeHybridConvCache
 
 
 class Lfm2MoeModelTester(CausalLMModelTester):

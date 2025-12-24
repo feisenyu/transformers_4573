@@ -253,7 +253,7 @@ class FlavaImageEmbeddings(nn.Module):
         self.patch_size = config.patch_size
         self.config = config
 
-    # Copied from transformers.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
+    # Copied from transformers_4573.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
     def interpolate_pos_encoding(self, embeddings: torch.Tensor, height: int, width: int) -> torch.Tensor:
         """
         This method allows to interpolate the pre-trained position encodings, to be able to use the model on higher resolution
@@ -537,7 +537,7 @@ class FlavaIntermediate(nn.Module):
         else:
             self.intermediate_act_fn = config.hidden_act
 
-    # Copied from transformers.models.vit.modeling_vit.ViTIntermediate.forward
+    # Copied from transformers_4573.models.vit.modeling_vit.ViTIntermediate.forward
     def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
         hidden_states = self.dense(hidden_states)
         hidden_states = self.intermediate_act_fn(hidden_states)
@@ -551,7 +551,7 @@ class FlavaOutput(nn.Module):
         self.dense = nn.Linear(config.intermediate_size, config.hidden_size)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
 
-    # Copied from transformers.models.vit.modeling_vit.ViTOutput.forward
+    # Copied from transformers_4573.models.vit.modeling_vit.ViTOutput.forward
     def forward(self, hidden_states: torch.Tensor, input_tensor: torch.Tensor) -> torch.Tensor:
         hidden_states = self.dense(hidden_states)
         hidden_states = self.dropout(hidden_states)
@@ -1025,7 +1025,7 @@ class FlavaModel(FlavaPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, FlavaModel
+        >>> from transformers_4573 import AutoProcessor, FlavaModel
 
         >>> model = FlavaModel.from_pretrained("{0}")
         >>> processor = AutoProcessor.from_pretrained("{0}")
@@ -1069,8 +1069,8 @@ class FlavaModel(FlavaPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, FlavaModel
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import AutoProcessor, FlavaModel
+        >>> from transformers_4573.image_utils import load_image
 
         >>> model = FlavaModel.from_pretrained("{0}")
         >>> processor = AutoProcessor.from_pretrained("{0}")
@@ -1136,7 +1136,7 @@ class FlavaModel(FlavaPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, FlavaModel
+        >>> from transformers_4573 import AutoProcessor, FlavaModel
 
         >>> model = FlavaModel.from_pretrained("facebook/flava-full")
         >>> processor = AutoProcessor.from_pretrained("facebook/flava-full")
@@ -1366,7 +1366,7 @@ class FlavaImageCodebook(FlavaPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoImageProcessor, FlavaImageCodebook
+        >>> from transformers_4573 import AutoImageProcessor, FlavaImageCodebook
 
         >>> model = FlavaImageCodebook.from_pretrained("{_CHECKPOINT_FOR_CODEBOOK_DOC}")
         >>> image_processor = AutoImageProcessor.from_pretrained("{_CHECKPOINT_FOR_CODEBOOK_DOC}")
@@ -1399,7 +1399,7 @@ class FlavaImageCodebook(FlavaPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoImageProcessor, FlavaImageCodebook
+        >>> from transformers_4573 import AutoImageProcessor, FlavaImageCodebook
 
         >>> model = FlavaImageCodebook.from_pretrained("{_CHECKPOINT_FOR_CODEBOOK_DOC}")
         >>> image_processor = AutoImageProcessor.from_pretrained("{_CHECKPOINT_FOR_CODEBOOK_DOC}")
@@ -1634,7 +1634,7 @@ class FlavaForPreTraining(FlavaPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import FlavaForPreTraining, AutoProcessor
+        >>> from transformers_4573 import FlavaForPreTraining, AutoProcessor
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = Image.open(requests.get(url, stream=True).raw)

@@ -176,7 +176,7 @@ Dataset({
 [`ViltProcessor`] は、BERT トークナイザーと ViLT 画像プロセッサを便利な単一プロセッサにラップします。
 
 ```py
->>> from transformers import ViltProcessor
+>>> from transformers_4573 import ViltProcessor
 
 >>> processor = ViltProcessor.from_pretrained(model_checkpoint)
 ```
@@ -236,7 +236,7 @@ Dataset({
 
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers_4573 import DefaultDataCollator
 
 >>> data_collator = DefaultDataCollator()
 ```
@@ -247,7 +247,7 @@ Dataset({
 ラベルマッピングとともに:
 
 ```py
->>> from transformers import ViltForQuestionAnswering
+>>> from transformers_4573 import ViltForQuestionAnswering
 
 >>> model = ViltForQuestionAnswering.from_pretrained(model_checkpoint, num_labels=len(id2label), id2label=id2label, label2id=label2id)
 ```
@@ -257,7 +257,7 @@ Dataset({
 1. [`TrainingArguments`] でトレーニング ハイパーパラメータを定義します。
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> repo_id = "MariaK/vilt_finetuned_200"
 
@@ -277,7 +277,7 @@ Dataset({
 2. トレーニング引数をモデル、データセット、プロセッサー、データ照合器とともに [`Trainer`] に渡します。
 
 ```py
->>> from transformers import Trainer
+>>> from transformers_4573 import Trainer
 
 >>> trainer = Trainer(
 ...     model=model,
@@ -306,7 +306,7 @@ ViLT モデルを微調整し、🤗 Hub にアップロードしたので、そ
 推論用に微調整されたモデルを試す方法は、それを [`pipeline`] で使用することです。
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> pipe = pipeline("visual-question-answering", model="MariaK/vilt_finetuned_200")
 ```
@@ -364,7 +364,7 @@ GPU (利用可能な場合)。これは [`Trainer`] が自動的に処理する�
 
 
 ```py
->>> from transformers import AutoProcessor, Blip2ForConditionalGeneration
+>>> from transformers_4573 import AutoProcessor, Blip2ForConditionalGeneration
 >>> import torch
 
 >>> processor = AutoProcessor.from_pretrained("Salesforce/blip2-opt-2.7b")

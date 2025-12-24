@@ -18,7 +18,7 @@ import collections
 import os
 from typing import Optional
 
-from transformers.utils import is_rjieba_available, requires_backends
+from transformers_4573.utils import is_rjieba_available, requires_backends
 
 
 if is_rjieba_available():

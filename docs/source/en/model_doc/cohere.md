@@ -38,7 +38,7 @@ The example below demonstrates how to generate text with [`Pipeline`] or the [`A
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -54,7 +54,7 @@ pipeline("Plants create energy through a process known as")
 
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("CohereForAI/c4ai-command-r-v01")
 model = AutoModelForCausalLM.from_pretrained("CohereForAI/c4ai-command-r-v01", dtype=torch.float16, device_map="auto", attn_implementation="sdpa")
@@ -89,7 +89,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to quantize 
 
 ```python
 import torch
-from transformers import BitsAndBytesConfig, AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import BitsAndBytesConfig, AutoTokenizer, AutoModelForCausalLM
 
 bnb_config = BitsAndBytesConfig(load_in_4bit=True)
 tokenizer = AutoTokenizer.from_pretrained("CohereForAI/c4ai-command-r-v01")
@@ -111,7 +111,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 Use the [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139) to better understand what tokens the model can and cannot attend to.
 
 ```py
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("CohereForAI/c4ai-command-r-v01")
 visualizer("Plants create energy through a process known as")

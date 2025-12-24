@@ -26,7 +26,7 @@ You can easily generate audio using the `"text-to-audio"` pipeline (or its alias
 Here's an example of how you would use the `"text-to-speech"` pipeline with [CSM](https://huggingface.co/sesame/csm-1b):
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> pipe = pipeline("text-to-audio", model="sesame/csm-1b")
 >>> output = pipe("Hello from Sesame.")
@@ -45,7 +45,7 @@ By default, CSM uses a random voice. You can do voice cloning by providing a ref
 >>> import soundfile as sf
 >>> import torch
 >>> from datasets import Audio, load_dataset
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> pipe = pipeline("text-to-audio", model="sesame/csm-1b")
 
@@ -67,7 +67,7 @@ By default, CSM uses a random voice. You can do voice cloning by providing a ref
 Some models, like [Dia](https://huggingface.co/nari-labs/Dia-1.6B-0626), can also be conditioned to generate non-verbal communications such as laughing, sighing and crying, or even add music. Below is such an example:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> pipe = pipeline("text-to-speech", model="nari-labs/Dia-1.6B-0626")
 >>> text = "[S1] (clears throat) Hello! How are you? [S2] I'm good, thanks! How about you?"
@@ -156,7 +156,7 @@ dataset = dataset.cast_column("audio", Audio(sampling_rate=16000))
 Let's begin by defining the model checkpoint to use and loading the appropriate processor:
 
 ```py
->>> from transformers import SpeechT5Processor
+>>> from transformers_4573 import SpeechT5Processor
 
 >>> checkpoint = "microsoft/speecht5_tts"
 >>> processor = SpeechT5Processor.from_pretrained(checkpoint)
@@ -486,7 +486,7 @@ multiple of 2.
 Load the pre-trained model from the same checkpoint as you used for loading the processor:
 
 ```py
->>> from transformers import SpeechT5ForTextToSpeech
+>>> from transformers_4573 import SpeechT5ForTextToSpeech
 
 >>> model = SpeechT5ForTextToSpeech.from_pretrained(checkpoint)
 ```
@@ -501,7 +501,7 @@ Define the training arguments. Here we are not computing any evaluation metrics 
 only look at the loss:
 
 ```python
->>> from transformers import Seq2SeqTrainingArguments
+>>> from transformers_4573 import Seq2SeqTrainingArguments
 
 >>> training_args = Seq2SeqTrainingArguments(
 ...     output_dir="speecht5_finetuned_voxpopuli_nl",  # change to a repo name of your choice
@@ -528,7 +528,7 @@ only look at the loss:
 Instantiate the `Trainer` object  and pass the model, dataset, and data collator to it.
 
 ```py
->>> from transformers import Seq2SeqTrainer
+>>> from transformers_4573 import Seq2SeqTrainer
 
 >>> trainer = Seq2SeqTrainer(
 ...     args=training_args,
@@ -569,7 +569,7 @@ First, let's see how you can use it with a corresponding pipeline. Let's create 
 checkpoint:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> pipe = pipeline("text-to-speech", model="YOUR_ACCOUNT_NAME/speecht5_finetuned_voxpopuli_nl")
 ```

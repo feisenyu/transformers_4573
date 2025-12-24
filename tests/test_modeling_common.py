@@ -33,7 +33,7 @@ from parameterized import parameterized
 from pytest import mark
 from safetensors.torch import load_file
 
-from transformers import (
+from transformers_4573 import (
     AutoModel,
     AutoModelForSequenceClassification,
     BitsAndBytesConfig,
@@ -43,18 +43,18 @@ from transformers import (
     logging,
     set_seed,
 )
-from transformers.conversion_mapping import get_model_conversion_mapping
-from transformers.core_model_loading import WeightRenaming
-from transformers.integrations import HfDeepSpeedConfig
-from transformers.integrations.deepspeed import (
+from transformers_4573.conversion_mapping import get_model_conversion_mapping
+from transformers_4573.core_model_loading import WeightRenaming
+from transformers_4573.integrations import HfDeepSpeedConfig
+from transformers_4573.integrations.deepspeed import (
     is_deepspeed_available,
     is_deepspeed_zero3_enabled,
     unset_hf_deepspeed_config,
 )
-from transformers.modeling_layers import GradientCheckpointingLayer
-from transformers.modeling_utils import FLASH_ATTN_KERNEL_FALLBACK, _get_tied_weight_keys
-from transformers.models.auto import get_values
-from transformers.models.auto.modeling_auto import (
+from transformers_4573.modeling_layers import GradientCheckpointingLayer
+from transformers_4573.modeling_utils import FLASH_ATTN_KERNEL_FALLBACK, _get_tied_weight_keys
+from transformers_4573.models.auto import get_values
+from transformers_4573.models.auto.modeling_auto import (
     MODEL_FOR_AUDIO_CLASSIFICATION_MAPPING_NAMES,
     MODEL_FOR_AUDIO_XVECTOR_MAPPING_NAMES,
     MODEL_FOR_BACKBONE_MAPPING_NAMES,
@@ -78,7 +78,7 @@ from transformers.models.auto.modeling_auto import (
     MODEL_FOR_VISION_2_SEQ_MAPPING_NAMES,
     MODEL_MAPPING_NAMES,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     CaptureLogger,
     force_serialization_as_bin_files,
     get_device_properties,
@@ -105,7 +105,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     CONFIG_NAME,
     GENERATION_CONFIG_NAME,
     SAFE_WEIGHTS_NAME,
@@ -123,11 +123,11 @@ if is_torch_available():
     from safetensors.torch import save_file as safe_save_file
     from torch import nn
 
-    from transformers import MODEL_MAPPING
-    from transformers.integrations.accelerate import compute_module_sizes
-    from transformers.integrations.tensor_parallel import _get_parameter_tp_plan
-    from transformers.modeling_utils import load_state_dict
-    from transformers.pytorch_utils import id_tensor_storage
+    from transformers_4573 import MODEL_MAPPING
+    from transformers_4573.integrations.accelerate import compute_module_sizes
+    from transformers_4573.integrations.tensor_parallel import _get_parameter_tp_plan
+    from transformers_4573.modeling_utils import load_state_dict
+    from transformers_4573.pytorch_utils import id_tensor_storage
 
 if is_deepspeed_available():
     import deepspeed

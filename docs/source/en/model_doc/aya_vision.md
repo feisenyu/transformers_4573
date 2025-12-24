@@ -38,7 +38,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 <hfoption id="Pipeline">
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(model="CohereLabs/aya-vision-8b", task="image-text-to-text", device_map="auto")
 
@@ -61,7 +61,7 @@ print(outputs)
 ```python
 # pip install 'git+https://github.com/huggingface/transformers.git@v4.49.0-Aya Vision'
 import torch
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
 model_id = "CohereLabs/aya-vision-8b"
 
@@ -102,7 +102,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```python
 import torch
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     AutoModelForImageTextToText,
     BitsAndBytesConfig
@@ -149,7 +149,7 @@ print(processor.tokenizer.decode(generated[0], skip_special_tokens=True))
   
     ```py
     import torch
-    from transformers import AutoProcessor, AutoModelForImageTextToText
+    from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
         
     processor = AutoProcessor.from_pretrained("CohereForAI/aya-vision-8b")
     model = AutoModelForImageTextToText.from_pretrained(
@@ -195,7 +195,7 @@ print(processor.tokenizer.decode(generated[0], skip_special_tokens=True))
   
     ```py
     import torch
-    from transformers import AutoProcessor, AutoModelForImageTextToText
+    from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
         
     processor = AutoProcessor.from_pretrained(model_id)
     model = AutoModelForImageTextToText.from_pretrained(

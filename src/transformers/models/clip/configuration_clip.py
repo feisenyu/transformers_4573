@@ -70,7 +70,7 @@ class CLIPTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import CLIPTextConfig, CLIPTextModel
+    >>> from transformers_4573 import CLIPTextConfig, CLIPTextModel
 
     >>> # Initializing a CLIPTextConfig with openai/clip-vit-base-patch32 style configuration
     >>> configuration = CLIPTextConfig()
@@ -165,7 +165,7 @@ class CLIPVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import CLIPVisionConfig, CLIPVisionModel
+    >>> from transformers_4573 import CLIPVisionConfig, CLIPVisionModel
 
     >>> # Initializing a CLIPVisionConfig with openai/clip-vit-base-patch32 style configuration
     >>> configuration = CLIPVisionConfig()
@@ -239,7 +239,7 @@ class CLIPConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import CLIPConfig, CLIPModel
+    >>> from transformers_4573 import CLIPConfig, CLIPModel
 
     >>> # Initializing a CLIPConfig with openai/clip-vit-base-patch32 style configuration
     >>> configuration = CLIPConfig()
@@ -251,7 +251,7 @@ class CLIPConfig(PreTrainedConfig):
     >>> configuration = model.config
 
     >>> # We can also initialize a CLIPConfig from a CLIPTextConfig and a CLIPVisionConfig
-    >>> from transformers import CLIPTextConfig, CLIPVisionConfig
+    >>> from transformers_4573 import CLIPTextConfig, CLIPVisionConfig
 
     >>> # Initializing a CLIPText and CLIPVision configuration
     >>> config_text = CLIPTextConfig()

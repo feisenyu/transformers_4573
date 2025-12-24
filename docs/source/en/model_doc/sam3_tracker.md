@@ -48,7 +48,7 @@ This model was contributed by [yonigozlan](https://huggingface.co/yonigozlan) an
 Sam3Tracker can be used for automatic mask generation to segment all objects in an image using the `mask-generation` pipeline:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline("mask-generation", model="facebook/sam3", device=0)
 >>> image_url = "https://huggingface.co/datasets/hf-internal-testing/sam2-fixtures/resolve/main/truck.jpg"
@@ -65,7 +65,7 @@ Sam3Tracker can be used for automatic mask generation to segment all objects in 
 You can segment objects by providing a single point click on the object you want to segment:
 
 ```python
->>> from transformers import Sam3TrackerProcessor, Sam3TrackerModel
+>>> from transformers_4573 import Sam3TrackerProcessor, Sam3TrackerModel
 from accelerate import Accelerator
 >>> import torch
 >>> from PIL import Image
@@ -154,7 +154,7 @@ Generated masks for 2 objects
 Process multiple images simultaneously for improved efficiency:
 
 ```python
->>> from transformers import Sam3TrackerProcessor, Sam3TrackerModel
+>>> from transformers_4573 import Sam3TrackerProcessor, Sam3TrackerModel
 from accelerate import Accelerator
 >>> import torch
 >>> from PIL import Image

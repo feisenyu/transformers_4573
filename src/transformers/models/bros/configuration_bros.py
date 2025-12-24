@@ -74,7 +74,7 @@ class BrosConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import BrosConfig, BrosModel
+    >>> from transformers_4573 import BrosConfig, BrosModel
 
     >>> # Initializing a BROS jinho8345/bros-base-uncased style configuration
     >>> configuration = BrosConfig()

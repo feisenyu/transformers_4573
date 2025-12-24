@@ -101,7 +101,7 @@ class DINOv3ViTConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import DINOv3ViTConfig, DINOv3ViTModel
+    >>> from transformers_4573 import DINOv3ViTConfig, DINOv3ViTModel
 
     >>> # Initializing a DINOv3 ViT-small style configuration
     >>> config = DINOv3ViTConfig()

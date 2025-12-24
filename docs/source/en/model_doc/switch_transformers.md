@@ -39,7 +39,7 @@ The example below demonstrates how to predict the masked token with [`Pipeline`]
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text2text-generation", 
@@ -55,7 +55,7 @@ print(pipeline("The capital of France is <extra_id_0>."))
 
 ```python
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("google/switch-base-8")
 model = AutoModelForSeq2SeqLM.from_pretrained("google/switch-base-8", device_map="auto", dtype=torch.float16)
@@ -85,7 +85,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes/) to only qua
 ```py
 # pip install bitsandbytes
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer, BitsAndBytesConfig
 
 tokenizer = AutoTokenizer.from_pretrained("google/switch-base-8")
 quantization_config = BitsAndBytesConfig(load_in_8bit=True)

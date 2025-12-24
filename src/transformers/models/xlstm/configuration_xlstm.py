@@ -137,7 +137,7 @@ class xLSTMConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import xLSTMConfig, xLSTMModel
+    >>> from transformers_4573 import xLSTMConfig, xLSTMModel
 
     >>> # Initializing a xLSTM configuration
     >>> configuration = xLSTMConfig()

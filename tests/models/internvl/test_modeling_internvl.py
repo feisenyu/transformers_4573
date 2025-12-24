@@ -20,14 +20,14 @@ from io import BytesIO
 import pytest
 import requests
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     BitsAndBytesConfig,
     InternVLConfig,
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_av,
@@ -48,7 +48,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import InternVLForConditionalGeneration, InternVLModel
+    from transformers_4573 import InternVLForConditionalGeneration, InternVLModel
 
 
 if is_vision_available():

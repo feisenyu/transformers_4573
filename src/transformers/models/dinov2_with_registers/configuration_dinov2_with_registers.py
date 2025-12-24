@@ -90,7 +90,7 @@ class Dinov2WithRegistersConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Dinov2WithRegistersConfig, Dinov2WithRegistersModel
+    >>> from transformers_4573 import Dinov2WithRegistersConfig, Dinov2WithRegistersModel
 
     >>> # Initializing a Dinov2WithRegisters base style configuration
     >>> configuration = Dinov2WithRegistersConfig()

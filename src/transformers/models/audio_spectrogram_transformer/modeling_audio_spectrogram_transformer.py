@@ -97,7 +97,7 @@ class ASTPatchEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -127,7 +127,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfAttention with ViT->AST
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfAttention with ViT->AST
 class ASTSelfAttention(nn.Module):
     def __init__(self, config: ASTConfig):
         super().__init__()
@@ -178,7 +178,7 @@ class ASTSelfAttention(nn.Module):
         return context_layer, attention_probs
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfOutput with ViT->AST
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfOutput with ViT->AST
 class ASTSelfOutput(nn.Module):
     """
     The residual connection is defined in ASTLayer instead of here (as is the case with other models), due to the
@@ -196,7 +196,7 @@ class ASTSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTAttention with ViT->AST
+# Copied from transformers_4573.models.vit.modeling_vit.ViTAttention with ViT->AST
 class ASTAttention(nn.Module):
     def __init__(self, config: ASTConfig):
         super().__init__()
@@ -209,7 +209,7 @@ class ASTAttention(nn.Module):
         return output
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTIntermediate with ViT->AST
+# Copied from transformers_4573.models.vit.modeling_vit.ViTIntermediate with ViT->AST
 class ASTIntermediate(nn.Module):
     def __init__(self, config: ASTConfig):
         super().__init__()
@@ -225,7 +225,7 @@ class ASTIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTOutput with ViT->AST
+# Copied from transformers_4573.models.vit.modeling_vit.ViTOutput with ViT->AST
 class ASTOutput(nn.Module):
     def __init__(self, config: ASTConfig):
         super().__init__()
@@ -239,7 +239,7 @@ class ASTOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTLayer with ViT->AST,VIT->AST
+# Copied from transformers_4573.models.vit.modeling_vit.ViTLayer with ViT->AST,VIT->AST
 class ASTLayer(GradientCheckpointingLayer):
     """This corresponds to the Block class in the timm implementation."""
 
@@ -270,7 +270,7 @@ class ASTLayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTEncoder with ViT->AST
+# Copied from transformers_4573.models.vit.modeling_vit.ViTEncoder with ViT->AST
 class ASTEncoder(nn.Module):
     def __init__(self, config: ASTConfig):
         super().__init__()

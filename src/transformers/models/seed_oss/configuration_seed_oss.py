@@ -15,8 +15,8 @@
 
 from typing import Optional
 
-from transformers.configuration_utils import PreTrainedConfig
-from transformers.modeling_rope_utils import RopeParameters
+from transformers_4573.configuration_utils import PreTrainedConfig
+from transformers_4573.modeling_rope_utils import RopeParameters
 
 
 class SeedOssConfig(PreTrainedConfig):
@@ -91,7 +91,7 @@ class SeedOssConfig(PreTrainedConfig):
             The attention head dimension.
 
     ```python
-    >>> from transformers import SeedOssModel, SeedOssConfig
+    >>> from transformers_4573 import SeedOssModel, SeedOssConfig
 
     >>> # Initializing a SeedOss-36b style configuration
     >>> configuration = SeedOssConfig()

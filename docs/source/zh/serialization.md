@@ -85,7 +85,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 生成的 `model.onnx` 文件可以在支持 ONNX 标准的 [许多加速引擎（accelerators）](https://onnx.ai/supported-tools.html#deployModel) 之一上运行。例如，我们可以使用 [ONNX Runtime](https://onnxruntime.ai/) 加载和运行模型，如下所示：
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> from optimum.onnxruntime import ORTModelForQuestionAnswering
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert_base_uncased_squad_onnx")
@@ -100,7 +100,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 
 ```python
 >>> from optimum.onnxruntime import ORTModelForSequenceClassification
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> model_checkpoint = "distilbert_base_uncased_squad"
 >>> save_directory = "onnx/"

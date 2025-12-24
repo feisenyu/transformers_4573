@@ -112,7 +112,7 @@ class Qwen3NextConfig(PreTrainedConfig):
             Types of each layer (attention or linear).
 
     ```python
-    >>> from transformers import Qwen3NextModel, Qwen3NextConfig
+    >>> from transformers_4573 import Qwen3NextModel, Qwen3NextConfig
 
     >>> # Initializing a Qwen3Next style configuration
     >>> configuration =  Qwen3NextConfig()

@@ -68,7 +68,7 @@ class AudioFlamingo3EncoderConfig(PretrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import AudioFlamingo3EncoderConfig, AudioFlamingo3Encoder
+    >>> from transformers_4573 import AudioFlamingo3EncoderConfig, AudioFlamingo3Encoder
 
     >>> # Initializing an AudioFlamingo3EncoderConfig
     >>> configuration = AudioFlamingo3EncoderConfig()
@@ -151,7 +151,7 @@ class AudioFlamingo3Config(PretrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import AudioFlamingo3ForConditionalGeneration, AudioFlamingo3Config, AudioFlamingo3EncoderConfig, Qwen2Config
+    >>> from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AudioFlamingo3Config, AudioFlamingo3EncoderConfig, Qwen2Config
 
     >>> # Initializing an AudioFlamingo3Encoder config
     >>> audio_config = AudioFlamingo3EncoderConfig()

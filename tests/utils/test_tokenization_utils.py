@@ -21,9 +21,9 @@ from pathlib import Path
 
 import httpx
 
-from transformers import AutoTokenizer, BertTokenizer, BertTokenizerFast, GPT2TokenizerFast, is_tokenizers_available
-from transformers.testing_utils import TOKEN, TemporaryHubRepo, is_staging_test, require_tokenizers
-from transformers.tokenization_python import ExtensionsTrie, Trie
+from transformers_4573 import AutoTokenizer, BertTokenizer, BertTokenizerFast, GPT2TokenizerFast, is_tokenizers_available
+from transformers_4573.testing_utils import TOKEN, TemporaryHubRepo, is_staging_test, require_tokenizers
+from transformers_4573.tokenization_python import ExtensionsTrie, Trie
 
 
 sys.path.append(str(Path(__file__).parent.parent.parent / "utils"))

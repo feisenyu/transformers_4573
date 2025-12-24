@@ -45,7 +45,7 @@ class LlamaTokenizer(TokenizersBackend):
     This uses notably ByteFallback and no normalization.
 
     ```python
-    >>> from transformers import LlamaTokenizer
+    >>> from transformers_4573 import LlamaTokenizer
 
     >>> tokenizer = LlamaTokenizer.from_pretrained("hf-internal-testing/llama-tokenizer")
     >>> tokenizer.encode("Hello this is a test")

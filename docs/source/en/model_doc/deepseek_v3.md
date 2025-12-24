@@ -41,7 +41,7 @@ You can run the model in `FP8` automatically, using 2 nodes of 8 H100 should be 
 
 ```python
 # `run_deepseek_v1.py`
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 import torch
 torch.manual_seed(30)
 

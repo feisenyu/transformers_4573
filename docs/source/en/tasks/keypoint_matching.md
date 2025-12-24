@@ -24,7 +24,7 @@ Keypoint matching matches different points of interests that belong to same obje
 In this tutorial, you will extract keypoint matches with the [`EfficientLoFTR`] model trained with the [MatchAnything framework](https://huggingface.co/zju-community/matchanything_eloftr), and refine the matches. This model is only 16M parameters and can be run on a CPU. You will use the [`AutoModelForKeypointMatching`] class.
 
 ```python
-from transformers import AutoImageProcessor, AutoModelForKeypointMatching
+from transformers_4573 import AutoImageProcessor, AutoModelForKeypointMatching
 import torch
 
 processor = AutoImageProcessor.from_pretrained("zju-community/matchanything_eloftr")
@@ -43,7 +43,7 @@ Load two images that have the same object of interest. The second photo is taken
 </div>
 
 ```python
-from transformers.image_utils import load_image
+from transformers_4573.image_utils import load_image
 image1 = load_image("https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bee.jpg")
 image2 = load_image("https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bee_edited.jpg")
 
@@ -103,7 +103,7 @@ plot_images
 Optionally, you can use the [`Pipeline`] API and set the task to `keypoint-matching`.
 
 ```python
-from transformers import pipeline 
+from transformers_4573 import pipeline 
 
 image_1 = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bee.jpg"
 image_2 = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bee_edited.jpg"

@@ -40,7 +40,7 @@ rendered properly in your Markdown viewer.
 
 
 ```py
-from transformers import AutoModel
+from transformers_4573 import AutoModel
 
 model = AutoModel.from_pretrained("google-bert/bert-base-cased")
 ```
@@ -109,7 +109,7 @@ dict_keys(['metadata', 'weight_map'])
 
 
 ```py
->>> from transformers.trainer_utils import load_sharded_checkpoint
+>>> from transformers_4573.trainer_utils import load_sharded_checkpoint
 
 >>> with tempfile.TemporaryDirectory() as tmp_dir:
 ...     model.save_pretrained(tmp_dir, max_shard_size="200MB")

@@ -9,7 +9,7 @@
 دعونا نجعل هذا ملموسًا بمثال سريع باستخدام نموذج `BlenderBot`. لدى BlenderBot قالب افتراضي بسيط للغاية، والذي يضيف في الغالب مسافات بيضاء بين جولات الحوار:
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("facebook/blenderbot-400M-distill")
 
 >>> chat = [
@@ -25,7 +25,7 @@
 لاحظ كيف تم ضغط الدردشة بأكملها في سلسلة واحدة. إذا استخدمنا `tokenize=True`، وهو الإعداد الافتراضي، فسيتم أيضًا تحليل السلسلة نحويًا نيابة عنا. ولكن، لنشاهد قالبًا أكثر تعقيدًا في العمل، دعونا نستخدم نموذج `mistralai/Mistral-7B-Instruct-v0.1`.
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
 
 >>> chat = [
@@ -58,7 +58,7 @@ I'd like to show off how chat templating works!</s>
 فيما يلي مثال على إعداد الإدخال لـ `model.generate()`، باستخدام Zephyr مرة أخرى:
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 checkpoint = "HuggingFaceH4/zephyr-7b-beta"
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -111,7 +111,7 @@ Matey, I'm afraid I must inform ye that humans cannot eat helicopters. Helicopte
 نعم يوجد ! تدعم قنوات المعالجة توليد النصوص مدخلات الدردشة ، مما يُسهّل استخدام نماذج الدردشة . في الماضي ، كنا نستخدم فئة "ConversationalPipeline" المُخصّصة ، ولكن تم الآن إيقافها وتم دمج وظائفها في [`TextGenerationPipeline`]. دعونا نجرّب مثال Zephyr مرة أخرى ، ولكن هذه المرة باستخدام قناة معالجة:
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("text-generation", "HuggingFaceH4/zephyr-7b-beta")
 messages = [
@@ -201,7 +201,7 @@ model.generate(**formatted_chat)
 نعم ! تُعد هذه طريقة جيدة للتأكد من أن قالب الدردشة يتطابق مع الرموز التي يراها النموذج أثناء التدريب . نوصي بتطبيق قالب الدردشة كخطوة معالجة أولية لمجموعة بياناتك . بعد ذلك ، يمكنك ببساطة متابعة عملية التدريب كما هو الحال مع أي مهمة تدريب نماذج لغات أخرى . عند التدريب ، يجب أن تُعيّن عادةً  `add_generation_prompt=False` ، لأنه لن تكون الرموز المُضافة لتحفيز رد المساعد مفيدة أثناء التدريب . دعونا نرى مثالاً :
 
 ```python
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 from datasets import Dataset
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceH4/zephyr-7b-beta")
@@ -299,7 +299,7 @@ model_input = tokenizer.apply_chat_template(
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 checkpoint = "NousResearch/Hermes-2-Pro-Llama-3-8B"
 
@@ -372,7 +372,7 @@ The current temperature in Paris, France is 22.0 ° Celsius.<|im_end|>
 يجب أن يكون إنشاء مخططات JSON لتمريرها إلى القالب تلقائيًا وغير مرئي طالما أن دوالك تتبع المواصفات الموضحة أعلاه، ولكن إذا واجهت مشكلات، أو إذا كنت تريد ببساطة مزيدًا من التحكم في التحويل، فيمكنك التعامل مع التحويل يدويًا. فيما يلي مثال على تحويل مخطط يدوي:
 
 ```python
-from transformers.utils import get_json_schema
+from transformers_4573.utils import get_json_schema
 
 def multiply(a: float, b: float):
     """
@@ -466,7 +466,7 @@ model_input = tokenizer.apply_chat_template(
 فيما يلي مثال على قالب RAG بالفعل:
 
 ```python
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 # تحميل النموذج والمجزىء اللغوي
 model_id = "CohereForAI/c4ai-command-r-v01-4bit"

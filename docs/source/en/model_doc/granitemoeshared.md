@@ -25,7 +25,7 @@ Additionally this class GraniteMoeSharedModel adds shared experts for Moe.
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_path = "ibm-research/moe-7b-1b-active-shared-experts"
 tokenizer = AutoTokenizer.from_pretrained(model_path)

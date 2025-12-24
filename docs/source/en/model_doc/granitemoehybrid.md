@@ -22,7 +22,7 @@ rendered properly in your Markdown viewer.
 The [GraniteMoeHybrid](https://www.ibm.com/new/announcements/ibm-granite-4-0-tiny-preview-sneak-peek) model builds on top of GraniteMoeSharedModel and Bamba. Its decoding layers consist of state space layers or MoE attention layers with shared experts. By default, the attention layers do not use positional encoding.
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_path = "ibm-granite/granite-4.0-tiny-preview"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
@@ -64,7 +64,7 @@ This HF implementation is contributed by [Sukriti Sharma](https://huggingface.co
   The `attention_mask` inputs should not be provided. The [`DataCollatorWithFlattening`] programmatically generates the set of additional arguments above using `return_seq_idx=True` and `return_flash_attn_kwargs=True`. See the [Improving Hugging Face Training Efficiency Through Packing with Flash Attention](https://huggingface.co/blog/packing-with-FA2) blog post for additional information.
 
   ```python
-  from transformers import DataCollatorWithFlattening
+  from transformers_4573 import DataCollatorWithFlattening
 
   # Example of using padding-free training
   data_collator = DataCollatorWithFlattening(

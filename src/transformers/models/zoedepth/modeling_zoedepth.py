@@ -144,14 +144,14 @@ class ZoeDepthReassembleLayer(nn.Module):
             # so should downsample
             self.resize = nn.Conv2d(channels, channels, kernel_size=3, stride=int(1 / factor), padding=1)
 
-    # Copied from transformers.models.dpt.modeling_dpt.DPTReassembleLayer.forward with DPT->ZoeDepth
+    # Copied from transformers_4573.models.dpt.modeling_dpt.DPTReassembleLayer.forward with DPT->ZoeDepth
     def forward(self, hidden_state):
         hidden_state = self.projection(hidden_state)
         hidden_state = self.resize(hidden_state)
         return hidden_state
 
 
-# Copied from transformers.models.dpt.modeling_dpt.DPTFeatureFusionStage with DPT->ZoeDepth
+# Copied from transformers_4573.models.dpt.modeling_dpt.DPTFeatureFusionStage with DPT->ZoeDepth
 class ZoeDepthFeatureFusionStage(nn.Module):
     def __init__(self, config: ZoeDepthConfig):
         super().__init__()
@@ -176,7 +176,7 @@ class ZoeDepthFeatureFusionStage(nn.Module):
         return fused_hidden_states
 
 
-# Copied from transformers.models.dpt.modeling_dpt.DPTPreActResidualLayer with DPT->ZoeDepth
+# Copied from transformers_4573.models.dpt.modeling_dpt.DPTPreActResidualLayer with DPT->ZoeDepth
 class ZoeDepthPreActResidualLayer(nn.Module):
     """
     ResidualConvUnit, pre-activate residual unit.
@@ -239,7 +239,7 @@ class ZoeDepthPreActResidualLayer(nn.Module):
         return hidden_state + residual
 
 
-# Copied from transformers.models.dpt.modeling_dpt.DPTFeatureFusionLayer with DPT->ZoeDepth
+# Copied from transformers_4573.models.dpt.modeling_dpt.DPTFeatureFusionLayer with DPT->ZoeDepth
 class ZoeDepthFeatureFusionLayer(nn.Module):
     """Feature fusion layer, merges feature maps from different stages.
 
@@ -289,7 +289,7 @@ class ZoeDepthNeck(nn.Module):
         config (dict): config dict.
     """
 
-    # Copied from transformers.models.dpt.modeling_dpt.DPTNeck.__init__ with DPT->ZoeDepth
+    # Copied from transformers_4573.models.dpt.modeling_dpt.DPTNeck.__init__ with DPT->ZoeDepth
     def __init__(self, config: ZoeDepthConfig):
         super().__init__()
         self.config = config
@@ -774,7 +774,7 @@ class ZoeDepthProjector(nn.Module):
         return hidden_state
 
 
-# Copied from transformers.models.grounding_dino.modeling_grounding_dino.GroundingDinoMultiheadAttention with GroundingDino->ZoeDepth
+# Copied from transformers_4573.models.grounding_dino.modeling_grounding_dino.GroundingDinoMultiheadAttention with GroundingDino->ZoeDepth
 class ZoeDepthMultiheadAttention(nn.Module):
     """Equivalent implementation of nn.MultiheadAttention with `batch_first=True`."""
 
@@ -1202,7 +1202,7 @@ class ZoeDepthMetricDepthEstimationHead(nn.Module):
         return out, None
 
 
-# Modified from transformers.models.dpt.modeling_dpt.DPTPreTrainedModel with DPT->ZoeDepth,dpt->zoedepth
+# Modified from transformers_4573.models.dpt.modeling_dpt.DPTPreTrainedModel with DPT->ZoeDepth,dpt->zoedepth
 # avoiding sdpa and flash_attn_2 support, it's done int the backend
 @auto_docstring
 class ZoeDepthPreTrainedModel(PreTrainedModel):
@@ -1266,7 +1266,7 @@ class ZoeDepthForDepthEstimation(ZoeDepthPreTrainedModel):
 
         Examples:
         ```python
-        >>> from transformers import AutoImageProcessor, ZoeDepthForDepthEstimation
+        >>> from transformers_4573 import AutoImageProcessor, ZoeDepthForDepthEstimation
         >>> import torch
         >>> import numpy as np
         >>> from PIL import Image

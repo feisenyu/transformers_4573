@@ -24,8 +24,8 @@ import argparse
 import tensorflow as tf
 import torch
 
-from transformers import BertConfig, BertForMaskedLM
-from transformers.models.bert.modeling_bert import (
+from transformers_4573 import BertConfig, BertForMaskedLM
+from transformers_4573.models.bert.modeling_bert import (
     BertIntermediate,
     BertLayer,
     BertOutput,
@@ -33,7 +33,7 @@ from transformers.models.bert.modeling_bert import (
     BertSelfAttention,
     BertSelfOutput,
 )
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

@@ -87,7 +87,7 @@ When you load a model, configure the following parameters to ensure the model is
 - `dtype="auto"` directly initializes the model weights in the data type they're stored in, which can help avoid loading the weights twice (PyTorch loads weights in `torch.float32` by default).
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", dtype="auto", device_map="auto")
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf")
@@ -127,7 +127,7 @@ Create a [`Pipeline`] object and select a task. By default, [`Pipeline`] downloa
 Use [`Accelerator`] to automatically detect an available accelerator for inference.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -148,7 +148,7 @@ pipeline("The secret to baking a good cake is ", max_length=50)
 Use [`Accelerator`] to automatically detect an available accelerator for inference.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -176,7 +176,7 @@ segments[1]["label"]
 Use [`Accelerator`] to automatically detect an available accelerator for inference.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -203,7 +203,7 @@ Use the [`TrainingArguments`] class to customize the training process. It provid
 Load a model, tokenizer, and dataset for training.
 
 ```py
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from transformers_4573 import AutoModelForSequenceClassification, AutoTokenizer
 from datasets import load_dataset
 
 model = AutoModelForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased")
@@ -222,7 +222,7 @@ dataset = dataset.map(tokenize_dataset, batched=True)
 Load a data collator to create batches of data and pass the tokenizer to it.
 
 ```py
-from transformers import DataCollatorWithPadding
+from transformers_4573 import DataCollatorWithPadding
 
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
@@ -230,7 +230,7 @@ data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 Next, set up [`TrainingArguments`] with the training features and hyperparameters.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 training_args = TrainingArguments(
     output_dir="distilbert-rotten-tomatoes",
@@ -245,7 +245,7 @@ training_args = TrainingArguments(
 Finally, pass all these separate components to [`Trainer`] and call [`~Trainer.train`] to start.
 
 ```py
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 trainer = Trainer(
     model=model,

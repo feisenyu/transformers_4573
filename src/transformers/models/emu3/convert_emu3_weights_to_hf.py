@@ -21,7 +21,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     AutoModel,
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -32,7 +32,7 @@ from transformers import (
     Emu3TextConfig,
     GenerationConfig,
 )
-from transformers.models.gpt2.tokenization_gpt2 import bytes_to_unicode
+from transformers_4573.models.gpt2.tokenization_gpt2 import bytes_to_unicode
 
 
 """
@@ -46,7 +46,7 @@ python src/transformers/models/emu3/convert_emu3_weights_to_hf.py \
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import Emu3ForConditionalGeneration, Emu3Processor
+from transformers_4573 import Emu3ForConditionalGeneration, Emu3Processor
 
 model = Emu3ForConditionalGeneration.from_pretrained("/output/path")
 processor = Emu3Processor.from_pretrained("/output/path")

@@ -26,7 +26,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.utils.generic import check_model_inputs
+from transformers_4573.utils.generic import check_model_inputs
 
 from ...activations import ACT2FN
 from ...cache_utils import Cache, DynamicCache
@@ -479,7 +479,7 @@ class Phi3ForCausalLM(Phi3PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Phi3ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Phi3ForCausalLM
 
         >>> model = Phi3ForCausalLM.from_pretrained("meta-phi3/Phi3-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-phi3/Phi3-2-7b-hf")

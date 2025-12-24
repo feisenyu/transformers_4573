@@ -20,8 +20,8 @@ from functools import cached_property
 import numpy as np
 
 from tests.test_modeling_common import floats_tensor
-from transformers import AutoModelForImageClassification, OneFormerConfig, is_torch_available, is_vision_available
-from transformers.testing_utils import (
+from transformers_4573 import AutoModelForImageClassification, OneFormerConfig, is_torch_available, is_vision_available
+from transformers_4573.testing_utils import (
     Expectations,
     is_flaky,
     require_timm,
@@ -42,10 +42,10 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import OneFormerForUniversalSegmentation, OneFormerModel
+    from transformers_4573 import OneFormerForUniversalSegmentation, OneFormerModel
 
     if is_vision_available():
-        from transformers import OneFormerProcessor
+        from transformers_4573 import OneFormerProcessor
 
 if is_vision_available():
     from PIL import Image

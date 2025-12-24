@@ -500,7 +500,7 @@ class UnivNetModel(PreTrainedModel):
         Example:
 
          ```python
-         >>> from transformers import UnivNetFeatureExtractor, UnivNetModel
+         >>> from transformers_4573 import UnivNetFeatureExtractor, UnivNetModel
          >>> from datasets import load_dataset, Audio
 
          >>> model = UnivNetModel.from_pretrained("dg845/univnet-dev")

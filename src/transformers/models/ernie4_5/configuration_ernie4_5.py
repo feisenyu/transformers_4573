@@ -78,7 +78,7 @@ class Ernie4_5Config(PreTrainedConfig):
             The attention head dimension. If None, it will default to hidden_size // num_attention_heads
 
     ```python
-    >>> from transformers import Ernie4_5Model, Ernie4_5Config
+    >>> from transformers_4573 import Ernie4_5Model, Ernie4_5Config
 
     >>> # Initializing a Ernie4_5 0.3B style configuration
     >>> configuration = Ernie4_5Config()

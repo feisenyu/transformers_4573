@@ -22,7 +22,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from transformers.models.llama4.configuration_llama4 import Llama4VisionConfig
+from transformers_4573.models.llama4.configuration_llama4 import Llama4VisionConfig
 
 from ... import initialization as init
 from ...activations import ACT2FN
@@ -169,7 +169,7 @@ class Llama4TextMoe(nn.Module):
         return out, router_logits
 
 
-# Copied from transformers.models.llama.modeling_llama.LlamaRotaryEmbedding with Llama->Llama4Text
+# Copied from transformers_4573.models.llama.modeling_llama.LlamaRotaryEmbedding with Llama->Llama4Text
 class Llama4TextRotaryEmbedding(nn.Module):
     inv_freq: torch.Tensor  # fix linting for `register_buffer`
 
@@ -260,7 +260,7 @@ def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
 
 
-# Adapted from transformers.models.llama.modeling_llama.eager_attention_forward -> llama4 doesn't cast attn weights to fp32
+# Adapted from transformers_4573.models.llama.modeling_llama.eager_attention_forward -> llama4 doesn't cast attn weights to fp32
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -287,7 +287,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Adapted from transformers.models.llama.modeling_llama.eager_attention_forward -> llama4 doesn't cast attn weights to fp32
+# Adapted from transformers_4573.models.llama.modeling_llama.eager_attention_forward -> llama4 doesn't cast attn weights to fp32
 def vision_eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -630,7 +630,7 @@ class Llama4ForCausalLM(Llama4PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Llama4ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Llama4ForCausalLM
 
         >>> model = Llama4ForCausalLM.from_pretrained("meta-llama4/Llama4-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-llama4/Llama4-2-7b-hf")
@@ -1081,7 +1081,7 @@ class Llama4VisionModel(Llama4PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, MllamaVisionModel
+        >>> from transformers_4573 import AutoProcessor, MllamaVisionModel
 
         >>> checkpoint = "meta-llama/Llama-3.2-11B-Vision"
         >>> model = MllamaVisionModel.from_pretrained(checkpoint)
@@ -1277,7 +1277,7 @@ class Llama4ForConditionalGeneration(Llama4PreTrainedModel, GenerationMixin):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, LlavaForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, LlavaForConditionalGeneration
 
         >>> model = LlavaForConditionalGeneration.from_pretrained("llava-hf/llava-1.5-7b-hf")
         >>> processor = AutoProcessor.from_pretrained("llava-hf/llava-1.5-7b-hf")

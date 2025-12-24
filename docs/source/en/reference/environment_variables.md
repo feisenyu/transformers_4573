@@ -31,7 +31,7 @@ import os
 
 os.environ["HF_ENABLE_PARALLEL_LOADING"] = "true"
 
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 model = pipeline(task="text-generation", model="facebook/opt-30b", device_map="auto")
 ```
@@ -52,7 +52,7 @@ import os
 os.environ["HF_ENABLE_PARALLEL_LOADING"] = "true"
 os.environ["HF_PARALLEL_LOADING_WORKERS"] = "4"
 
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 model = pipeline(task="text-generation", model="facebook/opt-30b", device_map="auto")
 ```

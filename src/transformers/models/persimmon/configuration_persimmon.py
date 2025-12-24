@@ -74,7 +74,7 @@ class PersimmonConfig(PreTrainedConfig):
         Example:
 
     ```python
-    >>> from transformers import PersimmonModel, PersimmonConfig
+    >>> from transformers_4573 import PersimmonModel, PersimmonConfig
 
     >>> # Initializing a Persimmon persimmon-7b style configuration
     >>> configuration = PersimmonConfig()

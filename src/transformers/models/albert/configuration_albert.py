@@ -74,7 +74,7 @@ class AlbertConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import AlbertConfig, AlbertModel
+    >>> from transformers_4573 import AlbertConfig, AlbertModel
 
     >>> # Initializing an ALBERT-xxlarge style configuration
     >>> albert_xxlarge_configuration = AlbertConfig()

@@ -14,8 +14,8 @@
 import binascii
 import unittest
 
-from transformers import MyT5Tokenizer
-from transformers.testing_utils import slow
+from transformers_4573 import MyT5Tokenizer
+from transformers_4573.testing_utils import slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

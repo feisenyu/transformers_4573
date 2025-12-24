@@ -76,7 +76,7 @@ class YosoConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import YosoConfig, YosoModel
+    >>> from transformers_4573 import YosoConfig, YosoModel
 
     >>> # Initializing a YOSO uw-madison/yoso-4096 style configuration
     >>> configuration = YosoConfig()

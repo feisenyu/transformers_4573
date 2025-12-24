@@ -1,4 +1,4 @@
-from transformers import ProcessorMixin
+from transformers_4573 import ProcessorMixin
 
 
 class CustomProcessor(ProcessorMixin):

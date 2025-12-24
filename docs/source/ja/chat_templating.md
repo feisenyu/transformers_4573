@@ -41,7 +41,7 @@ LLM（Language Model）のますます一般的な使用事例の1つは「チ�
 
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("facebook/blenderbot-400M-distill")
 
 >>> chat = [
@@ -60,7 +60,7 @@ LLM（Language Model）のますます一般的な使用事例の1つは「チ�
 このコードを実行する場合は[リポジトリでアクセスをリクエスト](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)する必要があります。
 
 ```python
->> from transformers import AutoTokenizer
+>> from transformers_4573 import AutoTokenizer
 >> tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 
 >> chat = [
@@ -82,7 +82,7 @@ LLM（Language Model）のますます一般的な使用事例の1つは「チ�
 
 ```python
 
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("facebook/blenderbot-400M-distill")
 
 >>> tokenizer.chat_template

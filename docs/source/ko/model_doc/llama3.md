@@ -65,7 +65,7 @@ pipeline("Hey how are you doing today?")
 - 변환 후, 모델과 토크나이저는 다음을 통해 로드된다.
 
     ```python
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
     
     tokenizer = AutoTokenizer.from_pretrained("/output/path")
     model = AutoModelForCausalLM.from_pretrained("/output/path")

@@ -31,12 +31,12 @@ from .configuration_vision_text_dual_encoder import VisionTextDualEncoderConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.clip.modeling_clip.contrastive_loss
+# Copied from transformers_4573.models.clip.modeling_clip.contrastive_loss
 def contrastive_loss(logits: torch.Tensor) -> torch.Tensor:
     return nn.functional.cross_entropy(logits, torch.arange(len(logits), device=logits.device))
 
 
-# Copied from transformers.models.clip.modeling_clip.clip_loss
+# Copied from transformers_4573.models.clip.modeling_clip.clip_loss
 def clip_loss(similarity: torch.Tensor) -> torch.Tensor:
     caption_loss = contrastive_loss(similarity)
     image_loss = contrastive_loss(similarity.t())
@@ -122,7 +122,7 @@ class VisionTextDualEncoderModel(PreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import VisionTextDualEncoderModel, AutoTokenizer
+        >>> from transformers_4573 import VisionTextDualEncoderModel, AutoTokenizer
 
         >>> model = VisionTextDualEncoderModel.from_pretrained("clip-italian/clip-italian")
         >>> tokenizer = AutoTokenizer.from_pretrained("clip-italian/clip-italian")
@@ -153,8 +153,8 @@ class VisionTextDualEncoderModel(PreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import VisionTextDualEncoderModel, AutoImageProcessor
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import VisionTextDualEncoderModel, AutoImageProcessor
+        >>> from transformers_4573.image_utils import load_image
 
         >>> model = VisionTextDualEncoderModel.from_pretrained("clip-italian/clip-italian")
         >>> image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
@@ -195,7 +195,7 @@ class VisionTextDualEncoderModel(PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import (
+        >>> from transformers_4573 import (
         ...     VisionTextDualEncoderModel,
         ...     VisionTextDualEncoderProcessor,
         ...     AutoImageProcessor,
@@ -331,7 +331,7 @@ class VisionTextDualEncoderModel(PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import VisionTextDualEncoderModel
+        >>> from transformers_4573 import VisionTextDualEncoderModel
 
         >>> # initialize a model from pretrained ViT and BERT models. Note that the projection layers will be randomly initialized.
         >>> model = VisionTextDualEncoderModel.from_vision_text_pretrained(

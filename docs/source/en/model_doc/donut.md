@@ -39,7 +39,7 @@ The examples below demonstrate how to perform document understanding tasks using
 ```py
 # pip install datasets
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 from PIL import Image
 
 pipeline = pipeline(
@@ -61,7 +61,7 @@ pipeline(image=image, question="What time is the coffee break?")
 # pip install datasets
 import torch
 from datasets import load_dataset
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
 processor = AutoProcessor.from_pretrained("naver-clova-ix/donut-base-finetuned-docvqa")
 model = AutoModelForImageTextToText.from_pretrained("naver-clova-ix/donut-base-finetuned-docvqa")
@@ -92,7 +92,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 # pip install datasets torchao
 import torch
 from datasets import load_dataset
-from transformers import TorchAoConfig, AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import TorchAoConfig, AutoProcessor, AutoModelForImageTextToText
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 processor = AutoProcessor.from_pretrained("naver-clova-ix/donut-base-finetuned-docvqa")
@@ -119,7 +119,7 @@ print(answer)
 
     ```py
     >>> import re
-    >>> from transformers import DonutProcessor, VisionEncoderDecoderModel
+    >>> from transformers_4573 import DonutProcessor, VisionEncoderDecoderModel
     >>> from accelerate import Accelerator
     >>> from datasets import load_dataset
     >>> import torch
@@ -164,7 +164,7 @@ print(answer)
     >>> import re
     >>> from accelerate import Accelerator
     >>> from datasets import load_dataset
-    >>> from transformers import DonutProcessor, VisionEncoderDecoderModel
+    >>> from transformers_4573 import DonutProcessor, VisionEncoderDecoderModel
     >>> import torch
 
     >>> processor = DonutProcessor.from_pretrained("naver-clova-ix/donut-base-finetuned-cord-v2")

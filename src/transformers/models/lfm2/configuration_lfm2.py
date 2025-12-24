@@ -86,7 +86,7 @@ class Lfm2Config(PreTrainedConfig):
             Type of each layers.
 
     ```python
-    >>> from transformers import Lfm2Model, Lfm2Config
+    >>> from transformers_4573 import Lfm2Model, Lfm2Config
 
     >>> # Initializing a LFM2 model
     >>> configuration = Lfm2Config()

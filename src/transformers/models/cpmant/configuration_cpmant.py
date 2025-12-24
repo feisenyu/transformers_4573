@@ -68,7 +68,7 @@ class CpmAntConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import CpmAntModel, CpmAntConfig
+    >>> from transformers_4573 import CpmAntModel, CpmAntConfig
 
     >>> # Initializing a CPMAnt cpm-ant-10b style configuration
     >>> configuration = CpmAntConfig()

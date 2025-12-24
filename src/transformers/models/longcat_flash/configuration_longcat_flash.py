@@ -108,7 +108,7 @@ class LongcatFlashConfig(PreTrainedConfig):
             Scaling factor applied to the routing weights.
 
     ```python
-    >>> from transformers import LongcatFlashModel, LongcatFlashConfig
+    >>> from transformers_4573 import LongcatFlashModel, LongcatFlashConfig
 
     >>> # Initializing a LongCat Flash style configuration
     >>> configuration = LongcatFlashConfig()

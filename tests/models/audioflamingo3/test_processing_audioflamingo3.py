@@ -20,13 +20,13 @@ import unittest
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AudioFlamingo3Processor,
     AutoProcessor,
     AutoTokenizer,
     WhisperFeatureExtractor,
 )
-from transformers.testing_utils import require_librosa, require_torch, require_torchaudio
+from transformers_4573.testing_utils import require_librosa, require_torch, require_torchaudio
 
 from ...test_processing_common import MODALITY_INPUT_DATA, ProcessorTesterMixin
 

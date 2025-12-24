@@ -36,8 +36,8 @@ from tokenizers.decoders import DecodeStream
 from tqdm import tqdm
 
 import transformers
-from transformers import AutoTokenizer, BitsAndBytesConfig, GenerationConfig, PreTrainedTokenizerBase
-from transformers.utils.import_utils import (
+from transformers_4573 import AutoTokenizer, BitsAndBytesConfig, GenerationConfig, PreTrainedTokenizerBase
+from transformers_4573.utils.import_utils import (
     is_fastapi_available,
     is_librosa_available,
     is_openai_available,
@@ -54,7 +54,7 @@ from ..utils import logging
 
 
 if TYPE_CHECKING:
-    from transformers import (
+    from transformers_4573 import (
         PreTrainedModel,
         PreTrainedTokenizerFast,
         ProcessorMixin,
@@ -735,7 +735,7 @@ class Serve:
         """
         List LLMs and VLMs in the cache.
         """
-        from transformers.models.auto.modeling_auto import (
+        from transformers_4573.models.auto.modeling_auto import (
             MODEL_FOR_CAUSAL_LM_MAPPING_NAMES,
             MODEL_FOR_IMAGE_TEXT_TO_TEXT_MAPPING_NAMES,
         )
@@ -931,7 +931,7 @@ class Serve:
             if isinstance(processor, PreTrainedTokenizerBase):
                 return Modality.LLM
 
-        from transformers.models.auto.modeling_auto import (
+        from transformers_4573.models.auto.modeling_auto import (
             MODEL_FOR_CAUSAL_LM_MAPPING_NAMES,
             MODEL_FOR_IMAGE_TEXT_TO_TEXT_MAPPING_NAMES,
         )
@@ -1785,7 +1785,7 @@ class Serve:
         """
         import torch
 
-        from transformers import AutoConfig, AutoProcessor
+        from transformers_4573 import AutoConfig, AutoProcessor
 
         logger.info(f"Loading {model_id_and_revision}")
 

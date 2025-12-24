@@ -27,12 +27,12 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     IJepaConfig,
     IJepaModel,
     ViTImageProcessor,
 )
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

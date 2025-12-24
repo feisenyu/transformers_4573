@@ -6,13 +6,13 @@ import torch.distributed as dist
 import torch.nn as nn
 from torch.utils.data import Dataset
 
-from transformers import (
+from transformers_4573 import (
     HfArgumentParser,
     Trainer,
     TrainingArguments,
     set_seed,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     TestCasePlus,
     backend_device_count,
     execute_subprocess_async,

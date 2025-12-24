@@ -72,7 +72,7 @@ pip install transformers datasets evaluate accelerate
 الخطوة التالية هي تحميل المُجزِّئ النص DistilBERT لتهيئة لحقل `text`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -94,7 +94,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 
 
 ```py
->>> from transformers import DataCollatorWithPadding
+>>> from transformers_4573 import DataCollatorWithPadding
 
 >>> data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
@@ -140,7 +140,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 أنت مستعد الآن لبدء تدريب نموذجك! قم بتحميل DistilBERT مع [`AutoModelForSequenceClassification`] جنبًا إلى جنب مع عدد التصنيفات المتوقعة، وتصنيفات الخرائط:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForSequenceClassification, TrainingArguments, Trainer
 
 >>> model = AutoModelForSequenceClassification.from_pretrained(
 ...     "distilbert/distilbert-base-uncased", num_labels=2, id2label=id2label, label2id=label2id
@@ -213,7 +213,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 أسهل طريقة لتجربة النموذج المضبوط للاستدلال هي استخدامه ضمن [`pipeline`]. قم بإنشاء `pipeline` لتحليل المشاعر مع نموذجك، ومرر نصك إليه:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("sentiment-analysis", model="stevhliu/my_awesome_model")
 >>> classifier(text)
@@ -225,7 +225,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 قم يتجزئة النص وإرجاع تنسورات PyTorch:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("stevhliu/my_awesome_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -234,7 +234,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 مرر المدخلات إلى النموذج واسترجع `logits`:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("stevhliu/my_awesome_model")
 >>> with torch.no_grad():

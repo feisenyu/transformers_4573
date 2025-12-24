@@ -23,7 +23,7 @@ from tempfile import TemporaryDirectory
 import torch
 import yaml
 
-from transformers import (
+from transformers_4573 import (
     FastSpeech2ConformerConfig,
     FastSpeech2ConformerModel,
     FastSpeech2ConformerTokenizer,

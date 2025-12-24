@@ -21,8 +21,8 @@ from typing import Optional
 
 import torch
 
-from transformers import set_seed
-from transformers.testing_utils import Colors, build_cpu_memory_monitor, init_test_logger, is_training_test
+from transformers_4573 import set_seed
+from transformers_4573.testing_utils import Colors, build_cpu_memory_monitor, init_test_logger, is_training_test
 
 
 logger = logging.getLogger("transformers.training_test")

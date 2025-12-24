@@ -17,9 +17,9 @@ from types import SimpleNamespace
 import torch
 import torch.nn as nn
 
-from transformers import PretrainedConfig
-from transformers.conversion_mapping import get_checkpoint_conversion_mapping, register_checkpoint_conversion_mapping
-from transformers.core_model_loading import (
+from transformers_4573 import PretrainedConfig
+from transformers_4573.conversion_mapping import get_checkpoint_conversion_mapping, register_checkpoint_conversion_mapping
+from transformers_4573.core_model_loading import (
     Chunk,
     Concatenate,
     ErnieFuseAndSplitTextVisionExperts,
@@ -32,7 +32,7 @@ from transformers.core_model_loading import (
     rename_source_key,
     revert_weight_conversion,
 )
-from transformers.utils.import_utils import is_triton_available
+from transformers_4573.utils.import_utils import is_triton_available
 
 from ..test_modeling_common import compare_state_dicts
 
@@ -386,7 +386,7 @@ class TestConvertAndLoadStateDict(unittest.TestCase):
 
     def test_qkv_chunk_rope_permute_with_fp8_quantization(self):
         if is_triton_available():
-            from transformers.integrations.finegrained_fp8 import Fp8Dequantize
+            from transformers_4573.integrations.finegrained_fp8 import Fp8Dequantize
         else:
             self.skipTest("Fine-grained FP8 integration tests require Triton to be installed.")
         n_heads = 2

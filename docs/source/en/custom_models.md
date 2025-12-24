@@ -38,7 +38,7 @@ The main rules for customizing a configuration are:
 > Add `model_type` to the configuration class to enable [AutoClass](./models#autoclass) support.
 
 ```py
-from transformers import PreTrainedConfig
+from transformers_4573 import PreTrainedConfig
 from typing import List
 
 class ResnetConfig(PreTrainedConfig):
@@ -100,7 +100,7 @@ Define a mapping between the block types and classes. Everything else is created
 > Add `config_class` to the model class to enable [AutoClass](#autoclass-support) support.
 
 ```py
-from transformers import PreTrainedModel
+from transformers_4573 import PreTrainedModel
 from timm.models.resnet import BasicBlock, Bottleneck, ResNet
 from .configuration_resnet import ResnetConfig
 
@@ -197,7 +197,7 @@ Make sure you have the `model_type` attribute (must be different from existing m
 > The first argument to [`AutoConfig.register`] must match the `model_type` attribute in the custom configuration class, and the first argument to [`AutoModel.register`] must match the `config_class` of the custom model class.
 
 ```py
-from transformers import AutoConfig, AutoModel, AutoModelForImageClassification
+from transformers_4573 import AutoConfig, AutoModel, AutoModelForImageClassification
 
 AutoConfig.register("resnet", ResnetConfig)
 AutoModel.register(ResnetConfig, ResnetModel)
@@ -215,7 +215,7 @@ Ensure the model directory is structured correctly as shown below. The directory
 - `modeling.py`: Contains the code for `ResnetModel` and `ResnetModelForImageClassification`. This file can rely on relative imports to other files as long as they're in the same directory.
 
 > [!WARNING]
-> When copying a Transformers' model file, replace all relative imports at the top of the `modeling.py` file to import from Transformers instead.
+> When copying a Transformers' model file, replace all relative imports at the top of the `modeling.py` file to import from transformers_4573 instead.
 
 - `configuration.py`: Contains the code for `ResnetConfig`.
 - `__init__.py`: Can be empty, this file allows Python `resnet_model` to be used as a module.

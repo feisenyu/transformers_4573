@@ -22,7 +22,7 @@ import fairseq
 import torch
 from fairseq.data import Dictionary
 
-from transformers import (
+from transformers_4573 import (
     Wav2Vec2Config,
     Wav2Vec2CTCTokenizer,
     Wav2Vec2FeatureExtractor,
@@ -31,7 +31,7 @@ from transformers import (
     Wav2Vec2Processor,
     logging,
 )
-from transformers.models.wav2vec2.modeling_wav2vec2 import Wav2Vec2ForSequenceClassification
+from transformers_4573.models.wav2vec2.modeling_wav2vec2 import Wav2Vec2ForSequenceClassification
 
 
 logging.set_verbosity_info()

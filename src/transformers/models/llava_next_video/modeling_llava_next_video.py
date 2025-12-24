@@ -752,7 +752,7 @@ class LlavaNextVideoForConditionalGeneration(LlavaNextVideoPreTrainedModel, Gene
         >>> from PIL import Image
         >>> import requests
         >>> import av
-        >>> from transformers import AutoProcessor, LlavaNextVideoForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, LlavaNextVideoForConditionalGeneration
 
         >>> def read_video_pyav(container, indices):
         ...     '''

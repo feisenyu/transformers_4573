@@ -20,8 +20,8 @@ import unittest
 import pytest
 import torch
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.testing_utils import require_flash_attn, require_flash_attn_3, require_torch_gpu, slow
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573.testing_utils import require_flash_attn, require_flash_attn_3, require_torch_gpu, slow
 
 
 class FlashAttentionParityTest(unittest.TestCase):

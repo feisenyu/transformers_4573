@@ -33,7 +33,7 @@ MeCab과 WordPiece 토큰화를 사용하는 모델 예시:
 
 ```python
 >>> import torch
->>> from transformers import AutoModel, AutoTokenizer
+>>> from transformers_4573 import AutoModel, AutoTokenizer
 
 >>> bertjapanese = AutoModel.from_pretrained("cl-tohoku/bert-base-japanese")
 >>> tokenizer = AutoTokenizer.from_pretrained("cl-tohoku/bert-base-japanese")

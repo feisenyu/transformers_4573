@@ -149,7 +149,7 @@ class VJEPA2Embeddings(nn.Module):
         return embeddings
 
 
-# Adapted from transformers.models.vit.modeling_vit.eager_attention_forward
+# Adapted from transformers_4573.models.vit.modeling_vit.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -342,7 +342,7 @@ class VJEPA2RopeAttention(nn.Module):
         return outputs
 
 
-# Adapted from transformers.models.beit.modeling_dinov2.drop_path
+# Adapted from transformers_4573.models.beit.modeling_dinov2.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -358,7 +358,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Adapted from transformers.models.beit.modeling_beit.BeitDropPath
+# Adapted from transformers_4573.models.beit.modeling_beit.BeitDropPath
 class VJEPA2DropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -1101,7 +1101,7 @@ class VJEPA2ForVideoClassification(VJEPA2PreTrainedModel):
         ```python
         >>> import torch
         >>> import numpy as np
-        >>> from transformers import AutoVideoProcessor, VJEPA2ForVideoClassification
+        >>> from transformers_4573 import AutoVideoProcessor, VJEPA2ForVideoClassification
 
         >>> device = "cuda"
 

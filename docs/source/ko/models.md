@@ -24,7 +24,7 @@ Transformers는 한 줄의 코드로 사용할 수 있는 많은 사전 훈련�
 > [`~PreTrainedModel.from_pretrained`] 메소드는 [safetensors](https://hf.co/docs/safetensors/index) 파일 형식으로 저장된 가중치가 있으면 이를 로드합니다. 전통적으로 PyTorch 모델 가중치는 보안에 취약한 것으로 알려진 [pickle](https://docs.python.org/3/library/pickle.html) 유틸리티로 직렬화됩니다. Safetensor 파일은 더 안전하고 로드 속도가 빠릅니다.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", torch_dtype="auto", device_map="auto")
 ```
@@ -51,7 +51,7 @@ model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", torch_d
 <hfoption id="PyTorch">
 
 ```py
-from transformers import AutoModelForCausalLM, MistralForCausalLM
+from transformers_4573 import AutoModelForCausalLM, MistralForCausalLM
 
 # AutoClass 또는 모델별 클래스(model-specific class) 를 이용해 로드
 model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1", torch_dtype="auto", device_map="auto")
@@ -62,7 +62,7 @@ model = MistralForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1", torch_dt
 <hfoption id="TensorFlow">
 
 ```py
-from transformers import TFAutoModelForCausalLM, TFMistralForCausalLM
+from transformers_4573 import TFAutoModelForCausalLM, TFMistralForCausalLM
 
 # AutoClass 또는 모델별 클래스(model-specific class) 를 이용해 로드
 model = TFAutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1")
@@ -73,7 +73,7 @@ model = TFMistralForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1")
 <hfoption id="Flax">
 
 ```py
-from transformers import FlaxAutoModelForCausalLM, FlaxMistralForCausalLM
+from transformers_4573 import FlaxAutoModelForCausalLM, FlaxMistralForCausalLM
 
 # AutoClass 또는 모델별 클래스(model-specific class) 를 이용해 로드
 model = FlaxAutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1")
@@ -101,7 +101,7 @@ model = FlaxMistralForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1")
 예를 들어, 동일한 모델을 서로 다른 작업에 사용할 수 있습니다.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoModelForSequenceClassification, AutoModelForQuestionAnswering
+from transformers_4573 import AutoModelForCausalLM, AutoModelForSequenceClassification, AutoModelForQuestionAnswering
 
 # 동일한 API를 3가지 다른 작업에 사용
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
@@ -112,7 +112,7 @@ model = AutoModelForQuestionAnswering.from_pretrained("meta-llama/Llama-2-7b-hf"
 다른 경우에는, 하나의 작업에 대해 여러 가지 모델을 빠르게 시험해보고 싶을 수도 있습니다.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 # 동일한 API를 사용하여 3가지 다른 모델 로드
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
@@ -128,7 +128,7 @@ model = AutoModelForCausalLM.from_pretrained("google/gemma-7b")
 이미 사용하려는 모델 클래스를 알고 있다면 해당 모델별 클래스를 직접 사용할 수 있습니다.
 
 ```py
-from transformers import LlamaModel, LlamaForCausalLM
+from transformers_4573 import LlamaModel, LlamaForCausalLM
 
 model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
 ```
@@ -160,7 +160,7 @@ transformers는 빠른 초기화, 분할된 체크포인트, Accelerate의 [Big 
 예를 들어, [`~PreTrainedModel.save_pretrained`]에서 [BioMistral/BioMistral-7B](https://hf.co/BioMistral/BioMistral-7B)에 대한 분할된 체크포인트를 생성해보겠습니다.
 
 ```py
-from transformers import AutoModel
+from transformers_4573 import AutoModel
 import tempfile
 import os
 
@@ -181,7 +181,7 @@ with tempfile.TemporaryDirectory() as tmp_dir:
 분할된 체크포인트는 [`~transformers.trainer_utils.load_sharded_checkpoint`]로도 직접 불러올 수 있습니다.
 
 ```py
-from transformers.trainer_utils import load_sharded_checkpoint
+from transformers_4573.trainer_utils import load_sharded_checkpoint
 
 with tempfile.TemporaryDirectory() as tmp_dir:
     model.save_pretrained(tmp_dir, max_shard_size="5GB")
@@ -243,7 +243,7 @@ index["weight_map"]
 대형 모델 추론을 활성화하려면 [device_map](https://github.com/huggingface/transformers/blob/026a173a64372e9602a16523b8fae9de4b0ff428/src/transformers/modeling_utils.py#L3061)을 `"auto"`로 설정합니다.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("google/gemma-7b", device_map="auto")
 ```
@@ -268,7 +268,7 @@ PyTorch 모델 가중치는 기본적으로 `torch.float32`로 초기화됩니�
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 gemma = AutoModelForCausalLM.from_pretrained("google/gemma-7b", torch_dtype=torch.float16)
 ```
@@ -277,7 +277,7 @@ gemma = AutoModelForCausalLM.from_pretrained("google/gemma-7b", torch_dtype=torc
 <hfoption id="auto dtype">
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 gemma = AutoModelForCausalLM.from_pretrained("google/gemma-7b", torch_dtype="auto")
 ```
@@ -289,7 +289,7 @@ gemma = AutoModelForCausalLM.from_pretrained("google/gemma-7b", torch_dtype="aut
 
 ```py
 import torch
-from transformers import AutoConfig, AutoModel
+from transformers_4573 import AutoConfig, AutoModel
 
 my_config = AutoConfig.from_pretrained("google/gemma-2b", torch_dtype=torch.float16)
 model = AutoModel.from_config(my_config)
@@ -304,7 +304,7 @@ model = AutoModel.from_config(my_config)
 커스텀 모델을 로드하려면 [`~PreTrainedModel.from_pretrained`]에서 `trust_remote_code=True`를 설정하세요.
 
 ```py
-from transformers import AutoModelForImageClassification
+from transformers_4573 import AutoModelForImageClassification
 
 model = AutoModelForImageClassification.from_pretrained("sgugger/custom-resnet50d", trust_remote_code=True)
 ```

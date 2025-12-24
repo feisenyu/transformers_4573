@@ -677,7 +677,7 @@ def get_user_input():
     """
     Ask the user for the necessary inputs to add the new model.
     """
-    from transformers.models.auto.configuration_auto import MODEL_NAMES_MAPPING
+    from transformers_4573.models.auto.configuration_auto import MODEL_NAMES_MAPPING
 
     model_types = list(MODEL_NAMES_MAPPING.keys())
 

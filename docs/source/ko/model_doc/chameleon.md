@@ -49,7 +49,7 @@ alt="drawing" width="600"/>
 Chameleon은 게이티드(gated) 모델이므로 Hugging Face Hub에 대한 액세스 권한이 있고 토큰으로 로그인했는지 확인하세요. 다음은 모델을 로드하고 반정밀도(`torch.bfloat16`)로 추론하는 방법입니다:
 
 ```python
-from transformers import ChameleonProcessor, ChameleonForConditionalGeneration
+from transformers_4573 import ChameleonProcessor, ChameleonForConditionalGeneration
 import torch
 from PIL import Image
 import requests
@@ -74,7 +74,7 @@ print(processor.decode(output[0], skip_special_tokens=True))
 Chameleon은 여러 이미지를 입력으로 받아들이며, 이미지들은 동일한 프롬프트에 속하거나 다른 프롬프트에 속할 수 있습니다(배치 추론에서). 다음은 그 방법입니다:
 
 ```python
-from transformers import ChameleonProcessor, ChameleonForConditionalGeneration
+from transformers_4573 import ChameleonProcessor, ChameleonForConditionalGeneration
 import torch
 from PIL import Image
 import requests
@@ -125,7 +125,7 @@ bitsandbytes는 CUDA 이외의 여러 백엔드를 지원하도록 리팩터링�
 위의 코드 스니펫을 다음과 같이 변경하면 됩니다:
 
 ```python
-from transformers import ChameleonForConditionalGeneration, BitsAndBytesConfig
+from transformers_4573 import ChameleonForConditionalGeneration, BitsAndBytesConfig
 
 # 모델 양자화 방식 지정
 quantization_config = BitsAndBytesConfig(
@@ -142,7 +142,7 @@ model = ChameleonForConditionalGeneration.from_pretrained("facebook/chameleon-7b
 이 모델은 최적화를 위해 Flash-Attention 2와 PyTorch의 [`torch.nn.functional.scaled_dot_product_attention`](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention.html)를 모두 지원합니다. SDPA는 모델을 로드할 때 기본 옵션입니다. Flash Attention 2로 전환하려면 먼저 flash-attn을 설치해야 합니다. 해당 패키지 설치에 대해서는 [원본 리포지토리](https://github.com/Dao-AILab/flash-attention)를 참고하십시오. 위의 코드 스니펫을 다음과 같이 변경하면 됩니다:
 
 ```python
-from transformers import ChameleonForConditionalGeneration
+from transformers_4573 import ChameleonForConditionalGeneration
 
 model_id = "facebook/chameleon-7b"
 model = ChameleonForConditionalGeneration.from_pretrained(

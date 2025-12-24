@@ -7,8 +7,8 @@ from typing import TYPE_CHECKING
 
 from parameterized import parameterized
 
-from transformers import TokenizersBackend
-from transformers.tokenization_utils_base import PreTrainedTokenizerBase
+from transformers_4573 import TokenizersBackend
+from transformers_4573.tokenization_utils_base import PreTrainedTokenizerBase
 
 
 SMALL_TRAINING_CORPUS = [
@@ -51,7 +51,7 @@ class TokenizersBackendTesterMixin:
         # save the first pretrained tokenizer to tmpdirname for tests to use
         if cls.from_pretrained_id and tokenizer_class is not None:
             try:
-                from transformers import AutoTokenizer
+                from transformers_4573 import AutoTokenizer
 
                 tokenizer = AutoTokenizer.from_pretrained(
                     cls.from_pretrained_id[0],
@@ -438,7 +438,7 @@ class TokenizersBackendTesterMixin:
                 self.assertEqual(fast_tokenizer.backend_tokenizer.pre_tokenizer.add_prefix_space, add_prefix_space)
 
     def test_local_files_only(self):
-        from transformers import AutoTokenizer
+        from transformers_4573 import AutoTokenizer
 
         pretrained_list = getattr(self, "from_pretrained_id", []) or []
         for pretrained_name in pretrained_list:

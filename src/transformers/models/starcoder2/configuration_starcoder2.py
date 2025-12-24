@@ -87,7 +87,7 @@ class Starcoder2Config(PreTrainedConfig):
 
 
     ```python
-    >>> from transformers import Starcoder2Model, Starcoder2Config
+    >>> from transformers_4573 import Starcoder2Model, Starcoder2Config
 
     >>> # Initializing a Starcoder2 7B style configuration
     >>> configuration = Starcoder2Config()

@@ -18,8 +18,8 @@ import os
 import tempfile
 from pathlib import Path
 
-from transformers import is_torch_available
-from transformers.utils import direct_transformers_import
+from transformers_4573 import is_torch_available
+from transformers_4573.utils import direct_transformers_import
 
 from .utils.test_configuration_utils import config_common_kwargs
 

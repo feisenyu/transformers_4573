@@ -22,15 +22,15 @@ from unittest.mock import patch
 import numpy as np
 import torch
 
-from transformers.image_utils import load_image
-from transformers.models.auto.tokenization_auto import AutoTokenizer
-from transformers.testing_utils import (
+from transformers_4573.image_utils import load_image
+from transformers_4573.models.auto.tokenization_auto import AutoTokenizer
+from transformers_4573.testing_utils import (
     is_flaky,
     require_mistral_common,
 )
-from transformers.tokenization_mistral_common import MistralCommonBackend
-from transformers.tokenization_utils_base import BatchEncoding, TruncationStrategy
-from transformers.utils import PaddingStrategy, is_mistral_common_available
+from transformers_4573.tokenization_mistral_common import MistralCommonBackend
+from transformers_4573.tokenization_utils_base import BatchEncoding, TruncationStrategy
+from transformers_4573.utils import PaddingStrategy, is_mistral_common_available
 
 
 if is_mistral_common_available():

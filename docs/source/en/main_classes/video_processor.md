@@ -27,7 +27,7 @@ When adding a new VLM or updating an existing one to enable distinct video prepr
 Here's an example of how to load a video processor with [`llava-hf/llava-onevision-qwen2-0.5b-ov-hf`](https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf) model:
 
 ```python
-from transformers import AutoVideoProcessor
+from transformers_4573 import AutoVideoProcessor
 
 processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf")
 ```
@@ -38,8 +38,8 @@ Fast video processors are available for all models and are loaded by default whe
 
 ```python
 import torch
-from transformers.video_utils import load_video
-from transformers import AutoVideoProcessor
+from transformers_4573.video_utils import load_video
+from transformers_4573 import AutoVideoProcessor
 
 video = load_video("video.mp4")
 processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf", device="cuda")
@@ -60,7 +60,7 @@ The video processor can also sample video frames using the technique best suited
 </Tip>
 
 ```python
-from transformers import AutoVideoProcessor
+from transformers_4573 import AutoVideoProcessor
 
 processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf", device="cuda")
 processed_video_inputs = processor(videos=["video_path.mp4"], return_metadata=True, do_sample_frames=True, return_tensors="pt")
@@ -73,8 +73,8 @@ print(video_metadata.total_num_frames, video_metadata.fps)
 If you pass an already decoded video array but still want to enable model-specific frame sampling, it is strongly recommended to provide video_metadata. This allows the sampler to know the original video’s duration and FPS. You can pass metadata as a `VideoMetadata` object or as a plain dict.
 
 ```python
-from transformers import AutoVideoProcessor
-from transformers.video_utils import VideoMetadata
+from transformers_4573 import AutoVideoProcessor
+from transformers_4573.video_utils import VideoMetadata
 
 processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf", device="cuda")
 my_decodec_video = torch.randint(0, 255, size=(100, 3, 1280, 1280)) # short video of 100 frames

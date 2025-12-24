@@ -20,15 +20,15 @@ import pytest
 from huggingface_hub.file_download import hf_hub_download
 
 from tests.pipelines.test_pipelines_document_question_answering import INVOICE_URL
-from transformers import is_torch_available, is_vision_available
-from transformers.image_utils import (
+from transformers_4573 import is_torch_available, is_vision_available
+from transformers_4573.image_utils import (
     ChannelDimension,
     get_channel_dimension_axis,
     make_flat_list_of_images,
     make_list_of_images,
     make_nested_list_of_images,
 )
-from transformers.testing_utils import is_flaky, require_torch, require_vision
+from transformers_4573.testing_utils import is_flaky, require_torch, require_vision
 
 
 if is_torch_available():
@@ -37,8 +37,8 @@ if is_torch_available():
 if is_vision_available():
     import PIL.Image
 
-    from transformers import ImageFeatureExtractionMixin
-    from transformers.image_utils import get_image_size, infer_channel_dimension_format, load_image
+    from transformers_4573 import ImageFeatureExtractionMixin
+    from transformers_4573.image_utils import get_image_size, infer_channel_dimension_format, load_image
 
 
 def get_image_from_hub_dataset(dataset_id: str, filename: str, revision: str | None = None) -> "PIL.Image.Image":

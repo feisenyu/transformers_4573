@@ -21,7 +21,7 @@ import re
 import torch
 from tokenizers.processors import TemplateProcessing
 
-from transformers import (
+from transformers_4573 import (
     AutoFeatureExtractor,
     AutoTokenizer,
     CsmConfig,
@@ -30,7 +30,7 @@ from transformers import (
     CsmProcessor,
     MimiModel,
 )
-from transformers.utils.hub import cached_file
+from transformers_4573.utils.hub import cached_file
 
 
 # fmt: off

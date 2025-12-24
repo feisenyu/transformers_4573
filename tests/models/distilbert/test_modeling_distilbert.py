@@ -16,8 +16,8 @@ import unittest
 
 import pytest
 
-from transformers import DistilBertConfig, is_torch_available
-from transformers.testing_utils import require_flash_attn, require_torch, require_torch_accelerator, slow, torch_device
+from transformers_4573 import DistilBertConfig, is_torch_available
+from transformers_4573.testing_utils import require_flash_attn, require_torch, require_torch_accelerator, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, ids_tensor, random_attention_mask
@@ -27,7 +27,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoTokenizer,
         DistilBertForMaskedLM,
         DistilBertForMultipleChoice,
@@ -36,8 +36,8 @@ if is_torch_available():
         DistilBertForTokenClassification,
         DistilBertModel,
     )
-    from transformers.models.distilbert.modeling_distilbert import _create_sinusoidal_embeddings
-    from transformers.pytorch_utils import is_torch_greater_or_equal_than_2_4
+    from transformers_4573.models.distilbert.modeling_distilbert import _create_sinusoidal_embeddings
+    from transformers_4573.pytorch_utils import is_torch_greater_or_equal_than_2_4
 
 
 class DistilBertModelTester:

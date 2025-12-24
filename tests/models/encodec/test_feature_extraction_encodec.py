@@ -19,9 +19,9 @@ import unittest
 
 import numpy as np
 
-from transformers import EncodecFeatureExtractor
-from transformers.testing_utils import require_torch
-from transformers.utils.import_utils import is_torch_available
+from transformers_4573 import EncodecFeatureExtractor
+from transformers_4573.testing_utils import require_torch
+from transformers_4573.utils.import_utils import is_torch_available
 
 from ...test_sequence_feature_extraction_common import SequenceFeatureExtractionTestMixin
 

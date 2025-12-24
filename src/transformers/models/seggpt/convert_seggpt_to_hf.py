@@ -23,8 +23,8 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import SegGptConfig, SegGptForImageSegmentation, SegGptImageProcessor
-from transformers.utils import logging
+from transformers_4573 import SegGptConfig, SegGptForImageSegmentation, SegGptImageProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

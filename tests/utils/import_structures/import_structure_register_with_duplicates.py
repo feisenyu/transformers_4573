@@ -14,7 +14,7 @@
 
 # fmt: off
 
-from transformers.utils.import_utils import requires
+from transformers_4573.utils.import_utils import requires
 
 
 @requires(backends=("torch", "torch"))

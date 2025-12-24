@@ -16,7 +16,7 @@ import argparse
 
 from fairseq.checkpoint_utils import load_checkpoint_to_cpu
 
-from transformers import Kosmos2_5Config, Kosmos2_5ForConditionalGeneration
+from transformers_4573 import Kosmos2_5Config, Kosmos2_5ForConditionalGeneration
 
 
 KEYS_TO_MODIFY_MAPPING = {

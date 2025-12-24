@@ -58,7 +58,7 @@ The following code provides an example of how to load the Minitron-4B model and 
 
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 from accelerate import Accelerator
 
 # Load the tokenizer and model

@@ -48,7 +48,7 @@ This model was contributed by [Nithin Rao Koluguri](https://huggingface.co/nithi
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("automatic-speech-recognition", model="nvidia/parakeet-ctc-1.1b")
 out = pipe("https://huggingface.co/datasets/hf-internal-testing/dummy-audio-samples/resolve/main/bcn_weather.mp3")
@@ -59,7 +59,7 @@ print(out)
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoModelForCTC, AutoProcessor
+from transformers_4573 import AutoModelForCTC, AutoProcessor
 from datasets import load_dataset, Audio
 import torch
 
@@ -86,7 +86,7 @@ print(processor.batch_decode(outputs))
 Parakeet supports full-graph compilation with CUDA graphs! This optimization is most effective when you know the maximum audio length you want to transcribe. The key idea is using static input shapes to avoid recompilation. For example, if you know your audio will be under 30 seconds, you can use the processor to pad all inputs to 30 seconds, preparing consistent input features and attention masks. See the example below!
 
 ```python
-from transformers import AutoModelForCTC, AutoProcessor
+from transformers_4573 import AutoModelForCTC, AutoProcessor
 from datasets import load_dataset, Audio
 import torch
 
@@ -166,7 +166,7 @@ print(processor.batch_decode(outputs))
 ### Training
 
 ```python
-from transformers import AutoModelForCTC, AutoProcessor
+from transformers_4573 import AutoModelForCTC, AutoProcessor
 from datasets import load_dataset, Audio
 import torch
 

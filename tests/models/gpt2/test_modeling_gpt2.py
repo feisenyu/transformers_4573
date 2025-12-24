@@ -16,8 +16,8 @@ import unittest
 
 import pytest
 
-from transformers import is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_flash_attn,
@@ -34,7 +34,7 @@ from ...test_modeling_common import floats_tensor, ids_tensor
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         GPT2DoubleHeadsModel,
         GPT2ForQuestionAnswering,
         GPT2ForSequenceClassification,

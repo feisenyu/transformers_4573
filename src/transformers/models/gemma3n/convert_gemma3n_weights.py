@@ -36,7 +36,7 @@ import tree
 from absl import app, flags, logging
 from orbax import checkpoint as obc
 
-from transformers import (
+from transformers_4573 import (
     Gemma3nAudioConfig,
     Gemma3nAudioFeatureExtractor,
     Gemma3nConfig,
@@ -48,7 +48,7 @@ from transformers import (
     GenerationConfig,
     SiglipImageProcessorFast,
 )
-from transformers.image_utils import PILImageResampling
+from transformers_4573.image_utils import PILImageResampling
 
 
 # ==== Internal Constants and Classes ====

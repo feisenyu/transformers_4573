@@ -1,12 +1,12 @@
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     FuyuImageProcessor,
     FuyuProcessor,
     is_torch_available,
 )
-from transformers.image_utils import load_image
-from transformers.testing_utils import require_torch, require_vision
+from transformers_4573.image_utils import load_image
+from transformers_4573.testing_utils import require_torch, require_vision
 
 from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 
@@ -14,7 +14,7 @@ from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 if is_torch_available():
     import torch
 
-    from transformers.models.fuyu.processing_fuyu import construct_full_unpacked_stream, full_unpacked_stream_to_tensor
+    from transformers_4573.models.fuyu.processing_fuyu import construct_full_unpacked_stream, full_unpacked_stream_to_tensor
 
 
 @require_torch

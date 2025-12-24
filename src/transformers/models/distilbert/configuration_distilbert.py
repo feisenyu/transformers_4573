@@ -66,7 +66,7 @@ class DistilBertConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import DistilBertConfig, DistilBertModel
+    >>> from transformers_4573 import DistilBertConfig, DistilBertModel
 
     >>> # Initializing a DistilBERT configuration
     >>> configuration = DistilBertConfig()

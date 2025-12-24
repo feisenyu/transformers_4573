@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     is_flaky,
     require_torch,
@@ -29,11 +29,11 @@ from transformers.testing_utils import (
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MiniMaxForCausalLM,
         MiniMaxModel,
     )
-    from transformers.models.minimax.modeling_minimax import MiniMaxCache
+    from transformers_4573.models.minimax.modeling_minimax import MiniMaxCache
 from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 
 

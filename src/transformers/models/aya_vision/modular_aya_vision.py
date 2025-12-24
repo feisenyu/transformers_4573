@@ -19,7 +19,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.models.llava.modeling_llava import (
+from transformers_4573.models.llava.modeling_llava import (
     LlavaCausalLMOutputWithPast,
     LlavaForConditionalGeneration,
     LlavaModel,
@@ -250,7 +250,7 @@ class AyaVisionForConditionalGeneration(LlavaForConditionalGeneration):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, AyaVisionForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, AyaVisionForConditionalGeneration
         >>> import torch
 
         >>> torch_device = "cuda:0"

@@ -16,7 +16,7 @@ import unittest
 
 import pytest
 
-from transformers import (
+from transformers_4573 import (
     MODEL_FOR_SEQ_TO_SEQ_CAUSAL_LM_MAPPING,
     MBart50Tokenizer,
     MBartConfig,
@@ -24,7 +24,7 @@ from transformers import (
     TranslationPipeline,
     pipeline,
 )
-from transformers.testing_utils import is_pipeline_test, require_torch, slow
+from transformers_4573.testing_utils import is_pipeline_test, require_torch, slow
 
 from .test_pipelines_common import ANY
 

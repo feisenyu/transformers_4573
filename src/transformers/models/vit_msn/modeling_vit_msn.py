@@ -52,7 +52,7 @@ class ViTMSNEmbeddings(nn.Module):
         self.patch_size = config.patch_size
         self.config = config
 
-    # Copied from transformers.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
+    # Copied from transformers_4573.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
     def interpolate_pos_encoding(self, embeddings: torch.Tensor, height: int, width: int) -> torch.Tensor:
         """
         This method allows to interpolate the pre-trained position encodings, to be able to use the model on higher resolution
@@ -124,7 +124,7 @@ class ViTMSNEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTPatchEmbeddings with ViT->ViTMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTPatchEmbeddings with ViT->ViTMSN
 class ViTMSNPatchEmbeddings(nn.Module):
     """
     This class turns `pixel_values` of shape `(batch_size, num_channels, height, width)` into the initial
@@ -164,7 +164,7 @@ class ViTMSNPatchEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -194,7 +194,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfAttention with ViT->ViTMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfAttention with ViT->ViTMSN
 class ViTMSNSelfAttention(nn.Module):
     def __init__(self, config: ViTMSNConfig):
         super().__init__()
@@ -245,7 +245,7 @@ class ViTMSNSelfAttention(nn.Module):
         return context_layer, attention_probs
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfOutput with ViT->ViTMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfOutput with ViT->ViTMSN
 class ViTMSNSelfOutput(nn.Module):
     """
     The residual connection is defined in ViTMSNLayer instead of here (as is the case with other models), due to the
@@ -263,7 +263,7 @@ class ViTMSNSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTAttention with ViT->ViTMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTAttention with ViT->ViTMSN
 class ViTMSNAttention(nn.Module):
     def __init__(self, config: ViTMSNConfig):
         super().__init__()
@@ -276,7 +276,7 @@ class ViTMSNAttention(nn.Module):
         return output
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTIntermediate with ViT->ViTMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTIntermediate with ViT->ViTMSN
 class ViTMSNIntermediate(nn.Module):
     def __init__(self, config: ViTMSNConfig):
         super().__init__()
@@ -292,7 +292,7 @@ class ViTMSNIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTOutput with ViT->ViTMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTOutput with ViT->ViTMSN
 class ViTMSNOutput(nn.Module):
     def __init__(self, config: ViTMSNConfig):
         super().__init__()
@@ -306,7 +306,7 @@ class ViTMSNOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTLayer with ViT->ViTMSN, VIT->VITMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTLayer with ViT->ViTMSN, VIT->VITMSN
 class ViTMSNLayer(GradientCheckpointingLayer):
     """This corresponds to the Block class in the timm implementation."""
 
@@ -337,7 +337,7 @@ class ViTMSNLayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTEncoder with ViT->ViTMSN
+# Copied from transformers_4573.models.vit.modeling_vit.ViTEncoder with ViT->ViTMSN
 class ViTMSNEncoder(nn.Module):
     def __init__(self, config: ViTMSNConfig):
         super().__init__()
@@ -425,7 +425,7 @@ class ViTMSNModel(ViTMSNPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, ViTMSNModel
+        >>> from transformers_4573 import AutoImageProcessor, ViTMSNModel
         >>> import torch
         >>> from PIL import Image
         >>> import requests
@@ -483,7 +483,7 @@ class ViTMSNForImageClassification(ViTMSNPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, ViTMSNForImageClassification
+        >>> from transformers_4573 import AutoImageProcessor, ViTMSNForImageClassification
         >>> import torch
         >>> from PIL import Image
         >>> import requests

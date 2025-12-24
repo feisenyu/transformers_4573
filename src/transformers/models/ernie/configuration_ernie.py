@@ -76,7 +76,7 @@ class ErnieConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import ErnieConfig, ErnieModel
+    >>> from transformers_4573 import ErnieConfig, ErnieModel
 
     >>> # Initializing a ERNIE nghuyong/ernie-3.0-base-zh style configuration
     >>> configuration = ErnieConfig()

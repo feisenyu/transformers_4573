@@ -43,7 +43,7 @@ TRANSFORMERS_NO_ADVISORY_WARNINGS=1 ./myprogram.py
 다음은 라이브러리와 동일한 로거를 자신의 모듈이나 스크립트에서 사용하는 방법에 대한 예시입니다.
 
 ```python
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 logging.set_verbosity_info()
 logger = logging.get_logger("transformers")

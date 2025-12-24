@@ -73,7 +73,7 @@ class ChineseCLIPTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import ChineseCLIPTextConfig, ChineseCLIPTextModel
+    >>> from transformers_4573 import ChineseCLIPTextConfig, ChineseCLIPTextModel
 
     >>> # Initializing a ChineseCLIPTextConfig with OFA-Sys/chinese-clip-vit-base-patch16 style configuration
     >>> configuration = ChineseCLIPTextConfig()
@@ -167,7 +167,7 @@ class ChineseCLIPVisionConfig(PreTrainedConfig):
             testing).
     Example:
     ```python
-    >>> from transformers import ChineseCLIPVisionConfig, ChineseCLIPVisionModel
+    >>> from transformers_4573 import ChineseCLIPVisionConfig, ChineseCLIPVisionModel
 
     >>> # Initializing a ChineseCLIPVisionConfig with OFA-Sys/chinese-clip-vit-base-patch16 style configuration
     >>> configuration = ChineseCLIPVisionConfig()
@@ -243,7 +243,7 @@ class ChineseCLIPConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import ChineseCLIPConfig, ChineseCLIPModel
+    >>> from transformers_4573 import ChineseCLIPConfig, ChineseCLIPModel
 
     >>> # Initializing a ChineseCLIPConfig with OFA-Sys/chinese-clip-vit-base-patch16 style configuration
     >>> configuration = ChineseCLIPConfig()

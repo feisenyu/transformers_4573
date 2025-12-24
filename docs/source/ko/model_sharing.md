@@ -127,7 +127,7 @@ pip install huggingface_hub
 이렇게 하면 사용자 이름 아래에 모델 이름 `my-awesome-model`로 저장소가 생성됩니다. 이제 사용자는 `from_pretrained` 함수를 사용하여 모델을 가져올 수 있습니다:
 
 ```py
->>> from transformers import AutoModel
+>>> from transformers_4573 import AutoModel
 
 >>> model = AutoModel.from_pretrained("your_username/my-awesome-model")
 ```

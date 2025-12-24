@@ -90,7 +90,7 @@ class OlmoeConfig(PreTrainedConfig):
             Whether to normalize the topk probabilities.
 
     ```python
-    >>> from transformers import OlmoeModel, OlmoeConfig
+    >>> from transformers_4573 import OlmoeModel, OlmoeConfig
 
     >>> # Initializing a OLMoE 7B A1B style configuration
     >>> configuration = OlmoeConfig()

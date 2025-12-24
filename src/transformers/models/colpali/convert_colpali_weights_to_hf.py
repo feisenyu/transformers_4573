@@ -45,10 +45,10 @@ import torch
 from huggingface_hub import snapshot_download
 from safetensors import safe_open
 
-from transformers import AutoConfig
-from transformers.models.colpali import ColPaliForRetrieval
-from transformers.models.colpali.configuration_colpali import ColPaliConfig
-from transformers.utils import logging
+from transformers_4573 import AutoConfig
+from transformers_4573.models.colpali import ColPaliForRetrieval
+from transformers_4573.models.colpali.configuration_colpali import ColPaliConfig
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

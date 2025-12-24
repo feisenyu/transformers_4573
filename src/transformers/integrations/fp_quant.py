@@ -26,7 +26,7 @@ if is_fp_quant_available():
     from fp_quant import FPQuantConfig as FPQuantLinearConfig
     from fp_quant import FPQuantDtype
 
-from transformers.utils.quantization_config import FPQuantConfig
+from transformers_4573.utils.quantization_config import FPQuantConfig
 
 from ..core_model_loading import ConversionOps
 from ..quantizers.quantizers_utils import get_module_from_name

@@ -25,9 +25,9 @@ import torch
 from torch.profiler import ProfilerActivity, profile
 from tqdm import tqdm
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, CompileConfig
-from transformers.generation import GenerationConfig
-from transformers.generation.continuous_batching.requests import logger
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, CompileConfig
+from transformers_4573.generation import GenerationConfig
+from transformers_4573.generation.continuous_batching.requests import logger
 
 
 def generate_without_cb(

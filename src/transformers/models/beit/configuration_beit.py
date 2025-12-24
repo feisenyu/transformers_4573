@@ -105,7 +105,7 @@ class BeitConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BeitConfig, BeitModel
+    >>> from transformers_4573 import BeitConfig, BeitModel
 
     >>> # Initializing a BEiT beit-base-patch16-224-pt22k style configuration
     >>> configuration = BeitConfig()

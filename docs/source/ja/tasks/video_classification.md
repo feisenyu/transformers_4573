@@ -144,7 +144,7 @@ UCF101_subset/
 事前トレーニングされたチェックポイントとそれに関連する画像プロセッサからビデオ分類モデルをインスタンス化します。モデルのエンコーダーには事前トレーニングされたパラメーターが付属しており、分類ヘッドはランダムに初期化されます。画像プロセッサは、データセットの前処理パイプラインを作成するときに役立ちます。
 
 ```py
->>> from transformers import VideoMAEImageProcessor, VideoMAEForVideoClassification
+>>> from transformers_4573 import VideoMAEImageProcessor, VideoMAEForVideoClassification
 
 >>> model_ckpt = "MCG-NJU/videomae-base"
 >>> image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -346,7 +346,7 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 トレーニング引数のほとんどは一目瞭然ですが、ここで非常に重要なのは`remove_unused_columns=False`です。これにより、モデルの呼び出し関数で使用されない機能が削除されます。デフォルトでは`True`です。これは、通常、未使用の特徴列を削除し、モデルの呼び出し関数への入力を解凍しやすくすることが理想的であるためです。ただし、この場合、`pixel_values` (モデルが入力で期待する必須キーです) を作成するには、未使用の機能 (特に`video`) が必要です。
 
 ```py
->>> from transformers import TrainingArguments, Trainer
+>>> from transformers_4573 import TrainingArguments, Trainer
 
 >>> model_name = model_ckpt.split("/")[-1]
 >>> new_model_name = f"{model_name}-finetuned-ucf101-subset"
@@ -447,7 +447,7 @@ def compute_metrics(eval_pred):
 
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> video_cls = pipeline(model="my_awesome_video_cls_model")
 >>> video_cls("https://huggingface.co/datasets/sayakpaul/ucf101-subset/resolve/main/v_BasketballDunk_g14_c06.avi")

@@ -40,7 +40,7 @@ The example below demonstrates how to classify text with [`Pipeline`] or the [`A
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 classifier = pipeline(
     task="text-classification",
@@ -56,7 +56,7 @@ classifier("This restaurant has amazing food!")
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers_4573 import AutoTokenizer, AutoModelForSequenceClassification
 
 tokenizer = AutoTokenizer.from_pretrained(
     "bhadresh-savani/electra-base-emotion",

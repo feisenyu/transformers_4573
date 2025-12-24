@@ -81,7 +81,7 @@ pip install transformers datasets evaluate sacrebleu
 다음 단계로 영어-프랑스어 쌍을 처리하기 위해 T5 토크나이저를 가져오세요.
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> checkpoint = "google-t5/t5-small"
 >>> tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -115,7 +115,7 @@ pip install transformers datasets evaluate sacrebleu
 이제 [`DataCollatorForSeq2Seq`]를 사용하여 예제 배치를 생성합니다. 데이터세트의 최대 길이로 전부를 padding하는 대신, 데이터 정렬 중 각 배치의 최대 길이로 문장을 *동적으로 padding*하는 것이 더 효율적입니다.
 
 ```py
->>> from transformers import DataCollatorForSeq2Seq
+>>> from transformers_4573 import DataCollatorForSeq2Seq
 
 >>> data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=checkpoint)
 ```
@@ -176,7 +176,7 @@ pip install transformers datasets evaluate sacrebleu
 모델을 훈련시킬 준비가 되었군요! [`AutoModelForSeq2SeqLM`]으로 T5를 로드하세요:
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 ```
@@ -240,7 +240,7 @@ pip install transformers datasets evaluate sacrebleu
 파인튜닝된 모델로 추론하기에 제일 간단한 방법은 [`pipeline`]을 사용하는 것입니다. 해당 모델로 번역 `pipeline`을 만든 뒤, 텍스트를 전달하세요:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Change `xx` to the language of the input and `yy` to the language of the desired output.
 # Examples: "en" for English, "fr" for French, "de" for German, "es" for Spanish, "zh" for Chinese, etc; translation_en_to_fr translates English to French
@@ -255,7 +255,7 @@ pip install transformers datasets evaluate sacrebleu
 텍스트를 토큰화하고 `input_ids`를 PyTorch 텐서로 반환하세요:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("my_awesome_opus_books_model")
 >>> inputs = tokenizer(text, return_tensors="pt").input_ids
@@ -264,7 +264,7 @@ pip install transformers datasets evaluate sacrebleu
 [`~generation.GenerationMixin.generate`] 메서드로 번역을 생성하세요. 다양한 텍스트 생성 전략 및 생성을 제어하기 위한 매개변수에 대한 자세한 내용은 [Text Generation](../main_classes/text_generation) API를 살펴보시기 바랍니다.
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM
+>>> from transformers_4573 import AutoModelForSeq2SeqLM
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("my_awesome_opus_books_model")
 >>> outputs = model.generate(inputs, max_new_tokens=40, do_sample=True, top_k=30, top_p=0.95)

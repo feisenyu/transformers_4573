@@ -166,7 +166,7 @@ class WhisperConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import WhisperConfig, WhisperModel
+    >>> from transformers_4573 import WhisperConfig, WhisperModel
 
     >>> # Initializing a Whisper tiny style configuration
     >>> configuration = WhisperConfig()

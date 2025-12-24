@@ -18,7 +18,7 @@ import argparse
 
 import torch
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, FalconH1Config, FalconH1ForCausalLM
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, FalconH1Config, FalconH1ForCausalLM
 
 
 CONVERSION_MAPPING = {

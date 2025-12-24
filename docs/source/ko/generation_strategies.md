@@ -41,7 +41,7 @@ generate 메소드에 입력되는 값들은 모델의 데이터 형태에 따�
 모델을 명시적으로 로드할 때, `model.generation_config`을 통해 제공되는 생성 설정을 검사할 수 있습니다.
 
 ```python
->>> from transformers import AutoModelForCausalLM
+>>> from transformers_4573 import AutoModelForCausalLM
 
 >>> model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
 >>> model.generation_config
@@ -79,7 +79,7 @@ GenerationConfig {
 * 모델의 저장소에 설정을 업로드하기 위해 `push_to_hub`를 `True`로 설정합니다.
 
 ```python
->>> from transformers import AutoModelForCausalLM, GenerationConfig
+>>> from transformers_4573 import AutoModelForCausalLM, GenerationConfig
 
 >>> model = AutoModelForCausalLM.from_pretrained("my_account/my_model")  # doctest: +SKIP
 >>> generation_config = GenerationConfig(
@@ -91,7 +91,7 @@ GenerationConfig {
 단일 디렉토리에 여러 생성 설정을 저장할 수 있으며, 이때 [`GenerationConfig.save_pretrained`]의 `config_file_name` 인자를 사용합니다. 나중에 [`GenerationConfig.from_pretrained`]로 이들을 인스턴스화할 수 있습니다. 이는 단일 모델에 대해 여러 생성 설정을 저장하고 싶을 때 유용합니다(예: 샘플링을 이용한 창의적 텍스트 생성을 위한 하나, 빔 탐색을 이용한 요약을 위한 다른 하나 등). 모델에 설정 파일을 추가하기 위해 적절한 Hub 권한을 가지고 있어야 합니다.
 
 ```python
->>> from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, GenerationConfig
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer, GenerationConfig
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("google-t5/t5-small")
@@ -128,7 +128,7 @@ GenerationConfig {
 실제로 다양한 목적을 위해 자체 스트리밍 클래스를 만들 수 있습니다! 또한, 기본적인 스트리밍 클래스들도 준비되어 있어 바로 사용할 수 있습니다. 예를 들어, [`TextStreamer`] 클래스를 사용하여 `generate()`의 출력을 화면에 한 단어씩 스트리밍할 수 있습니다:
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TextStreamer
 
 >>> tok = AutoTokenizer.from_pretrained("openai-community/gpt2")
 >>> model = AutoModelForCausalLM.from_pretrained("openai-community/gpt2")
@@ -151,7 +151,7 @@ An increasing sequence: one, two, three, four, five, six, seven, eight, nine, te
 [`generate`]는 기본적으로 탐욕 탐색 디코딩을 사용하므로 이를 활성화하기 위해 별도의 매개변수를 지정할 필요가 없습니다. 이는 `num_beams`가 1로 설정되고 `do_sample=False`로 되어 있다는 의미입니다."
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> prompt = "I look forward to"
 >>> checkpoint = "distilbert/distilgpt2"
@@ -172,7 +172,7 @@ An increasing sequence: one, two, three, four, five, six, seven, eight, nine, te
 다항 샘플링을 활성화하려면 `do_sample=True` 및 `num_beams=1`을 설정하세요.
 
 ```python
->>> from transformers import AutoTokenizer, AutoModelForCausalLM, set_seed
+>>> from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, set_seed
 >>> set_seed(0)  # 재현성을 위해
 
 >>> checkpoint = "openai-community/gpt2-large"
@@ -195,7 +195,7 @@ that\'s a terrible feeling."']
 이 디코딩 전략을 활성화하려면 `num_beams` (추적할 가설 수라고도 함)를 1보다 크게 지정하세요.
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> prompt = "It is astonishing how one can"
 >>> checkpoint = "openai-community/gpt2-medium"
@@ -216,7 +216,7 @@ time."\n\nHe added: "I am very proud of the work I have been able to do in the l
 이 디코딩 전략은 이름에서 알 수 있듯이 빔 탐색과 다항 샘플링을 결합한 것입니다. 이 디코딩 전략을 사용하기 위해서는 `num_beams`를 1보다 큰 값으로 설정하고, `do_sample=True`로 설정해야 합니다.
 
 ```python
->>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, set_seed
+>>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM, set_seed
 >>> set_seed(0)  # 재현성을 위해
 
 >>> prompt = "translate English to German: The house is wonderful."
@@ -241,7 +241,7 @@ time."\n\nHe added: "I am very proud of the work I have been able to do in the l
 보조 디코딩을 활성화하려면 모델과 함께 `assistant_model` 인수를 설정하세요.
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> prompt = "Alice and Bob"
 >>> checkpoint = "EleutherAI/pythia-1.4b-deduped"
@@ -260,7 +260,7 @@ time."\n\nHe added: "I am very proud of the work I have been able to do in the l
 샘플링 방법과 함께 보조 디코딩을 사용하는 경우 다항 샘플링과 마찬가지로 `temperature` 인수를 사용하여 무작위성을 제어할 수 있습니다. 그러나 보조 디코딩에서는 `temperature`를 낮추면 대기 시간을 개선하는 데 도움이 될 수 있습니다.
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer, set_seed
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, set_seed
 >>> set_seed(42)  # 재현성을 위해
 
 >>> prompt = "Alice and Bob"

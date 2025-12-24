@@ -19,9 +19,9 @@ from functools import cached_property
 
 import pytest
 
-from transformers import T5Config, is_torch_available
-from transformers.pytorch_utils import is_torch_greater_or_equal_than_2_4
-from transformers.testing_utils import (
+from transformers_4573 import T5Config, is_torch_available
+from transformers_4573.pytorch_utils import is_torch_greater_or_equal_than_2_4
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_accelerate,
@@ -43,7 +43,7 @@ if is_torch_available():
     import torch
     import torch.nn.functional as F
 
-    from transformers import (
+    from transformers_4573 import (
         AutoTokenizer,
         ByT5Tokenizer,
         GenerationConfig,
@@ -1494,7 +1494,7 @@ class T5ModelIntegrationTests(unittest.TestCase):
         if not is_torch_greater_or_equal_than_2_4:
             self.skipTest("This test requires torch >= 2.4 to run.")
 
-        from transformers.integrations.executorch import Seq2SeqLMEncoderExportableModule
+        from transformers_4573.integrations.executorch import Seq2SeqLMEncoderExportableModule
 
         model_id = "google-t5/t5-small"
         device = "cpu"
@@ -1531,8 +1531,8 @@ class T5ModelIntegrationTests(unittest.TestCase):
         if not is_torch_greater_or_equal_than_2_4:
             self.skipTest("This test requires torch >= 2.4 to run.")
 
-        from transformers import AutoModelForSeq2SeqLM, T5ForConditionalGeneration
-        from transformers.integrations.executorch import Seq2SeqLMDecoderExportableModuleWithStaticCache
+        from transformers_4573 import AutoModelForSeq2SeqLM, T5ForConditionalGeneration
+        from transformers_4573.integrations.executorch import Seq2SeqLMDecoderExportableModuleWithStaticCache
 
         model_id = "google-t5/t5-small"
 
@@ -1593,8 +1593,8 @@ class T5ModelIntegrationTests(unittest.TestCase):
         if not is_torch_greater_or_equal_than_2_4:
             self.skipTest("This test requires torch >= 2.4 to run.")
 
-        from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, T5ForConditionalGeneration
-        from transformers.integrations.executorch import Seq2SeqLMExportableModule
+        from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer, T5ForConditionalGeneration
+        from transformers_4573.integrations.executorch import Seq2SeqLMExportableModule
 
         device = torch_device
         batch_size = 1

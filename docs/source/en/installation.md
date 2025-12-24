@@ -66,7 +66,7 @@ uv pip install transformers
 Test whether the install was successful with the following command. It should return a label and score for the provided text.
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('hugging face is the best'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('hugging face is the best'))"
 [{'label': 'POSITIVE', 'score': 0.9998704791069031}]
 ```
 
@@ -85,7 +85,7 @@ uv pip install git+https://github.com/huggingface/transformers
 Check if the install was successful with the command below. It should return a label and score for the provided text.
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('hugging face is the best'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('hugging face is the best'))"
 [{'label': 'POSITIVE', 'score': 0.9998704791069031}]
 ```
 
@@ -158,7 +158,7 @@ python examples/pytorch/language-modeling/run_clm.py --model_name_or_path meta-l
 Another option for only loading cached files is to set `local_files_only=True` in [`~PreTrainedModel.from_pretrained`].
 
 ```py
-from transformers import LlamaForCausalLM
+from transformers_4573 import LlamaForCausalLM
 
 model = LlamaForCausalLM.from_pretrained("./path/to/local/directory", local_files_only=True)
 ```

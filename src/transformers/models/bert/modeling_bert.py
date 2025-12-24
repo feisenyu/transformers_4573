@@ -807,7 +807,7 @@ class BertForPreTraining(BertPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BertForPreTraining
+        >>> from transformers_4573 import AutoTokenizer, BertForPreTraining
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
@@ -1079,7 +1079,7 @@ class BertForNextSentencePrediction(BertPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BertForNextSentencePrediction
+        >>> from transformers_4573 import AutoTokenizer, BertForNextSentencePrediction
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")

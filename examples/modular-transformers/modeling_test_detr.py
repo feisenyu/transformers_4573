@@ -1398,7 +1398,7 @@ class TestDetrModel(TestDetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, TestDetrModel
+        >>> from transformers_4573 import AutoImageProcessor, TestDetrModel
         >>> from PIL import Image
         >>> import requests
 

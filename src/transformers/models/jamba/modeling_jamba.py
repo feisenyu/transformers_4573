@@ -1001,7 +1001,7 @@ class JambaForCausalLM(JambaPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, JambaForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, JambaForCausalLM
 
         >>> model = JambaForCausalLM.from_pretrained("ai21labs/Jamba-v0.1")
         >>> tokenizer = AutoTokenizer.from_pretrained("ai21labs/Jamba-v0.1")

@@ -24,8 +24,8 @@ import requests
 from datasets import load_dataset
 from packaging import version
 
-from transformers import AutoImageProcessor
-from transformers.testing_utils import (
+from transformers_4573 import AutoImageProcessor
+from transformers_4573.testing_utils import (
     check_json_file_has_correct_format,
     require_torch,
     require_torch_accelerator,
@@ -33,7 +33,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -44,10 +44,10 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import ImageGPTImageProcessor
+    from transformers_4573 import ImageGPTImageProcessor
 
     if is_torchvision_available():
-        from transformers import ImageGPTImageProcessorFast
+        from transformers_4573 import ImageGPTImageProcessorFast
 
 
 class ImageGPTImageProcessingTester:

@@ -19,7 +19,7 @@
 1. ابدأ بإنشاء [`pipeline`] وحدد مهمة الاستدلال:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> transcriber = pipeline(task="automatic-speech-recognition")
 ```
@@ -177,7 +177,7 @@ for out in pipe(data()):
 
 ```py
 # KeyDataset هي أداة مساعدة ستقوم فقط بإخراج العنصر الذي نهتم به.
-from transformers.pipelines.pt_utils import KeyDataset
+from transformers_4573.pipelines.pt_utils import KeyDataset
 from datasets import load_dataset
 
 pipe = pipeline(model="hf-internal-testing/tiny-random-wav2vec2", device=0)
@@ -204,7 +204,7 @@ for out in pipe(KeyDataset(dataset, "audio")):
 ![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
@@ -220,7 +220,7 @@ for out in pipe(KeyDataset(dataset, "audio")):
 إن استخدام [`pipeline`] لمهام NLP مماثل تمامًا.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> # هذا النموذج هو نموذج "zero-shot-classification".
 >>> # سيصنف النص، ولكن يمكنك اختيار أي تسمية قد تتخيلها
@@ -239,7 +239,7 @@ for out in pipe(KeyDataset(dataset, "audio")):
 على سبيل المثال، إذا كنت تستخدم هذه [صورة الفاتورة](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png):
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> output = vqa(
@@ -271,7 +271,7 @@ pip install pytesseract
 ```py
 # pip install accelerate
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(model="facebook/opt-1.3b", dtype=torch.bfloat16, device_map="auto")
 output = pipe("This is a cool example!", do_sample=True, top_p=0.95)
@@ -282,7 +282,7 @@ output = pipe("This is a cool example!", do_sample=True, top_p=0.95)
 ```py
 # pip install accelerate bitsandbytes
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(model="facebook/opt-1.3b", device_map="auto", model_kwargs={"load_in_8bit": True})
 output = pipe("This is a cool example!", do_sample=True, top_p=0.95)
@@ -301,7 +301,7 @@ pip install gradio
 بعد ذلك، يمكنك إنشاء عرض توضيحي ويب حول خط أنابيب تصنيف الصور (أو أي خط أنابيب آخر) في سطر واحد من التعليمات البرمجية عن طريق استدعاء وظيفة [`Interface.from_pipeline`](https://www.gradio.app/docs/interface#interface-from-pipeline) في Gradio لإطلاق خط الأنابيب. يقوم هذا بإنشاء واجهة بديهية للسحب والإفلات في مستعرضك:
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import gradio as gr
 
 pipe = pipeline("image-classification", model="google/vit-base-patch16-224")

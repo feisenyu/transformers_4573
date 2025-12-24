@@ -65,7 +65,7 @@ class MambaCache:
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, MambaForCausalLM, MambaCache
+        >>> from transformers_4573 import AutoTokenizer, MambaForCausalLM, MambaCache
 
         >>> model = MambaForCausalLM.from_pretrained("state-spaces/mamba-130m-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("state-spaces/mamba-130m-hf")

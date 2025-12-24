@@ -19,7 +19,7 @@ import tensorflow as tf
 import torch
 from tqdm import tqdm
 
-from transformers import BigBirdPegasusConfig, BigBirdPegasusForConditionalGeneration
+from transformers_4573 import BigBirdPegasusConfig, BigBirdPegasusForConditionalGeneration
 
 
 INIT_COMMON = [

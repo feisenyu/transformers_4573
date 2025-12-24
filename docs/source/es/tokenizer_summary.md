@@ -71,7 +71,7 @@ Los algoritmos de tokenización de subpalabras se basan en el principio de que l
 La tokenización de subpalabras permite al modelo tener un tamaño de vocabulario razonable mientras puede aprender representaciones contextuales independientes significativas. Además, la tokenización de subpalabras permite al modelo procesar palabras que nunca ha visto antes, descomponiéndolas en subpalabras conocidas. Por ejemplo, el tokenizador [BertTokenizer](https://huggingface.co/docs/transformers/en/model_doc/bert#transformers.BertTokenizer) tokeniza `"I have a new GPU!"` de la siguiente manera:
 
 ```py
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> tokenizer.tokenize("I have a new GPU!")
@@ -83,7 +83,7 @@ Debido a que estamos considerando el modelo sin mayúsculas, la oración se conv
 Como otro ejemplo, el tokenizador [XLNetTokenizer](https://huggingface.co/docs/transformers/en/model_doc/xlnet#transformers.XLNetTokenizer) tokeniza nuestro texto de ejemplo anterior de la siguiente manera:
 
 ```py
->>> from transformers import XLNetTokenizer
+>>> from transformers_4573 import XLNetTokenizer
 
 >>> tokenizer = XLNetTokenizer.from_pretrained("xlnet/xlnet-base-cased")
 >>> tokenizer.tokenize("Don't you love 🤗 Transformers? We sure do.")

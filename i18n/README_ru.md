@@ -136,7 +136,7 @@ Hugging Face Hub. Мы хотим, чтобы Transformers позволил ра
 Для использования модели на заданном входе (текст, изображение, звук, ...) мы предоставляем API `pipeline`. Конвейеры объединяют предварительно обученную модель с препроцессингом, который использовался при ее обучении. Вот как можно быстро использовать конвейер для классификации положительных и отрицательных текстов:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Выделение конвейера для анализа настроений
 >>> classifier = pipeline('sentiment-analysis')
@@ -151,7 +151,7 @@ Hugging Face Hub. Мы хотим, чтобы Transformers позволил ра
 ``` python
 >>> import requests
 >>> from PIL import Image
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Скачиваем изображение с милыми котиками
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png"
@@ -189,7 +189,7 @@ Hugging Face Hub. Мы хотим, чтобы Transformers позволил ра
 
 В дополнение к `pipeline`, для загрузки и использования любой из предварительно обученных моделей в заданной задаче достаточно трех строк кода. Вот версия для PyTorch:
 ```python
->>> from transformers import AutoTokenizer, AutoModel
+>>> from transformers_4573 import AutoTokenizer, AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
@@ -200,7 +200,7 @@ Hugging Face Hub. Мы хотим, чтобы Transformers позволил ра
 
 А вот эквивалентный код для TensorFlow:
 ```python
->>> from transformers import AutoTokenizer, TFAutoModel
+>>> from transformers_4573 import AutoTokenizer, TFAutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = TFAutoModel.from_pretrained("google-bert/bert-base-uncased")

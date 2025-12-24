@@ -71,7 +71,7 @@ Each **checkpoint** is trained with a specific prompt format, depending on the u
 Here's an example of how to structure your input. We will use [LLaVA-NeXT-Video-7B-hf](https://huggingface.co/llava-hf/LLaVA-NeXT-Video-7B-hf) and a conversation history of videos and images.
 
 ```python
-from transformers import LlavaNextVideoProcessor
+from transformers_4573 import LlavaNextVideoProcessor
 
 processor = LlavaNextVideoProcessor.from_pretrained("llava-hf/LLaVA-NeXT-Video-7B-hf")
 
@@ -120,7 +120,7 @@ The model can accept both images and videos as input. Here's an example code for
 ```python
 from huggingface_hub import hf_hub_download
 import torch
-from transformers import LlavaNextVideoForConditionalGeneration, LlavaNextVideoProcessor
+from transformers_4573 import LlavaNextVideoForConditionalGeneration, LlavaNextVideoProcessor
 
 # Load the model in half-precision
 model = LlavaNextVideoForConditionalGeneration.from_pretrained("llava-hf/LLaVA-NeXT-Video-7B-hf", dtype=torch.float16, device_map="auto")
@@ -203,7 +203,7 @@ We value your feedback to help identify bugs before the full release! Check out 
 Then simply load the quantized model by adding [`BitsAndBytesConfig`](../main_classes/quantization#transformers.BitsAndBytesConfig) as shown below:
 
 ```python
-from transformers import LlavaNextVideoForConditionalGeneration, LlavaNextVideoProcessor
+from transformers_4573 import LlavaNextVideoForConditionalGeneration, LlavaNextVideoProcessor
 
 # specify how to quantize the model
 quantization_config = BitsAndBytesConfig(
@@ -230,7 +230,7 @@ Also, you should have a hardware that is compatible with Flash-Attention 2. Read
 To load and run a model using Flash Attention-2, simply add `attn_implementation="flash_attention_2"` when loading the model as follows:
 
 ```python
-from transformers import LlavaNextVideoForConditionalGeneration
+from transformers_4573 import LlavaNextVideoForConditionalGeneration
 
 model = LlavaNextVideoForConditionalGeneration.from_pretrained(
     "llava-hf/LLaVA-NeXT-Video-7B-hf", 

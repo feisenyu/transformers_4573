@@ -204,7 +204,7 @@ class Sam3TrackerVideoConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     Sam3VisionConfig,
     ...     Sam3TrackerVideoPromptEncoderConfig,
     ...     Sam3TrackerVideoMaskDecoderConfig,

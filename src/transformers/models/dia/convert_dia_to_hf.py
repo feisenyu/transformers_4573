@@ -22,7 +22,7 @@ import torch
 from huggingface_hub import snapshot_download
 from safetensors.torch import load_file
 
-from transformers import (
+from transformers_4573 import (
     DacModel,
     DiaConfig,
     DiaFeatureExtractor,
@@ -31,7 +31,7 @@ from transformers import (
     DiaTokenizer,
     GenerationConfig,
 )
-from transformers.utils.import_utils import _is_package_available
+from transformers_4573.utils.import_utils import _is_package_available
 
 
 # Provide just the list of layer keys you want to fix

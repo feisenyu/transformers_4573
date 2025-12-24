@@ -16,8 +16,8 @@
 import unittest
 
 from tests.test_tokenization_common import TokenizerTesterMixin
-from transformers import RemBertTokenizer
-from transformers.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers
+from transformers_4573 import RemBertTokenizer
+from transformers_4573.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers
 
 
 SENTENCEPIECE_UNDERLINE = "▁"

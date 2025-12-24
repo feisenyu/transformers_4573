@@ -810,7 +810,7 @@ class Lfm2MoeForCausalLM(Lfm2MoePreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Lfm2MoeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Lfm2MoeForCausalLM
 
         >>> model = Lfm2MoeForCausalLM.from_pretrained("meta-lfm2_moe/Lfm2Moe-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-lfm2_moe/Lfm2Moe-2-7b-hf")

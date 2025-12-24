@@ -17,8 +17,8 @@ import unittest
 
 from parameterized import parameterized
 
-from transformers import AutoTokenizer, is_torch_available, xLSTMConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, is_torch_available, xLSTMConfig
+from transformers_4573.testing_utils import (
     require_read_token,
     require_torch,
     require_torch_accelerator,
@@ -35,11 +35,11 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         xLSTMForCausalLM,
         xLSTMModel,
     )
-    from transformers.models.xlstm.modeling_xlstm import xLSTMBlock, xLSTMCache
+    from transformers_4573.models.xlstm.modeling_xlstm import xLSTMBlock, xLSTMCache
 
 
 class xLSTMModelTester:

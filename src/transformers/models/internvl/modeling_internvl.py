@@ -815,7 +815,7 @@ class InternVLForConditionalGeneration(InternVLPreTrainedModel, GenerationMixin)
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, AutoModelForImageTextToText
+        >>> from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
         >>> torch_device = "cuda"
         >>> processor = AutoProcessor.from_pretrained("OpenGVLab/InternVL3-1B-hf")

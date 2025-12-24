@@ -15,7 +15,7 @@
 
 import unittest
 
-from transformers.models.parakeet import ParakeetTokenizerFast
+from transformers_4573.models.parakeet import ParakeetTokenizerFast
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

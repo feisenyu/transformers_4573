@@ -20,7 +20,7 @@ import safetensors
 import sentencepiece
 import torch
 
-from transformers import (
+from transformers_4573 import (
     AutoFeatureExtractor,
     GenerationConfig,
     MimiModel,  # initial audio encoder
@@ -29,7 +29,7 @@ from transformers import (
     PreTrainedTokenizerFast,
     logging,
 )
-from transformers.convert_slow_tokenizer import MoshiConverter
+from transformers_4573.convert_slow_tokenizer import MoshiConverter
 
 
 logging.set_verbosity_info()

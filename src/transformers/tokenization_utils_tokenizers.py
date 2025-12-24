@@ -1143,7 +1143,7 @@ class TokenizersBackend(PreTrainedTokenizerBase):
         from huggingface_hub import model_info
         from packaging import version
 
-        from transformers.utils.hub import cached_file
+        from transformers_4573.utils.hub import cached_file
 
         def is_base_mistral(model_id: str) -> bool:
             model = model_info(model_id)

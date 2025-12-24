@@ -16,9 +16,9 @@ limitations under the License.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg">
-    <img alt="Hugging Face Transformers Library" src="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg" width="352" height="59" style="max-width: 100%;">
+    <source media="(prefers-color-scheme: dark)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers_4573-logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers_4573-logo-light.svg">
+    <img alt="Hugging Face transformers_4573 Library" src="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers_4573-logo-light.svg" width="352" height="59" style="max-width: 100%;">
   </picture>
   <br/>
   <br/>
@@ -26,33 +26,33 @@ limitations under the License.
 
 <p align="center">
     <a href="https://huggingface.com/models"><img alt="Checkpoints on Hub" src="https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/models&color=brightgreen"></a>
-    <a href="https://circleci.com/gh/huggingface/transformers"><img alt="Build" src="https://img.shields.io/circleci/build/github/huggingface/transformers/main"></a>
-    <a href="https://github.com/huggingface/transformers/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/huggingface/transformers.svg?color=blue"></a>
-    <a href="https://huggingface.co/docs/transformers/index"><img alt="Documentation" src="https://img.shields.io/website/http/huggingface.co/docs/transformers/index.svg?down_color=red&down_message=offline&up_message=online"></a>
-    <a href="https://github.com/huggingface/transformers/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/transformers.svg"></a>
-    <a href="https://github.com/huggingface/transformers/blob/main/CODE_OF_CONDUCT.md"><img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg"></a>
+    <a href="https://circleci.com/gh/huggingface/transformers_4573"><img alt="Build" src="https://img.shields.io/circleci/build/github/huggingface/transformers_4573/main"></a>
+    <a href="https://github.com/huggingface/transformers_4573/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/huggingface/transformers_4573.svg?color=blue"></a>
+    <a href="https://huggingface.co/docs/transformers_4573/index"><img alt="Documentation" src="https://img.shields.io/website/http/huggingface.co/docs/transformers_4573/index.svg?down_color=red&down_message=offline&up_message=online"></a>
+    <a href="https://github.com/huggingface/transformers_4573/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/transformers_4573.svg"></a>
+    <a href="https://github.com/huggingface/transformers_4573/blob/main/CODE_OF_CONDUCT.md"><img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg"></a>
     <a href="https://zenodo.org/badge/latestdoi/155220641"><img src="https://zenodo.org/badge/155220641.svg" alt="DOI"></a>
 </p>
 
 <h4 align="center">
     <p>
         <b>English</b> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hans.md">简体中文</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hant.md">繁體中文</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ko.md">한국어</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_es.md">Español</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ja.md">日本語</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_hd.md">हिन्दी</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ru.md">Русский</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_pt-br.md">Português</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_te.md">తెలుగు</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_fr.md">Français</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_de.md">Deutsch</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_it.md">Italiano</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_vi.md">Tiếng Việt</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ar.md">العربية</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ur.md">اردو</a> |
-        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_bn.md">বাংলা</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_zh-hans.md">简体中文</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_zh-hant.md">繁體中文</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_ko.md">한국어</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_es.md">Español</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_ja.md">日本語</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_hd.md">हिन्दी</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_ru.md">Русский</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_pt-br.md">Português</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_te.md">తెలుగు</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_fr.md">Français</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_de.md">Deutsch</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_it.md">Italiano</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_vi.md">Tiếng Việt</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_ar.md">العربية</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_ur.md">اردو</a> |
+        <a href="https://github.com/huggingface/transformers_4573/blob/main/i18n/README_bn.md">বাংলা</a> |
     </p>
 </h4>
 
@@ -61,27 +61,27 @@ limitations under the License.
 </h3>
 
 <h3 align="center">
-    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png"/>
+    <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_4573/transformers_4573_as_a_model_definition.png"/>
 </h3>
 
-Transformers acts as the model-definition framework for state-of-the-art machine learning with text, computer
+transformers_4573 acts as the model-definition framework for state-of-the-art machine learning with text, computer
 vision, audio, video, and multimodal models, for both inference and training.
 
-It centralizes the model definition so that this definition is agreed upon across the ecosystem. `transformers` is the
+It centralizes the model definition so that this definition is agreed upon across the ecosystem. `transformers_4573` is the
 pivot across frameworks: if a model definition is supported, it will be compatible with the majority of training
 frameworks (Axolotl, Unsloth, DeepSpeed, FSDP, PyTorch-Lightning, ...), inference engines (vLLM, SGLang, TGI, ...),
-and adjacent modeling libraries (llama.cpp, mlx, ...) which leverage the model definition from `transformers`.
+and adjacent modeling libraries (llama.cpp, mlx, ...) which leverage the model definition from `transformers_4573`.
 
 We pledge to help support new state-of-the-art models and democratize their usage by having their model definition be
 simple, customizable, and efficient.
 
-There are over 1M+ Transformers [model checkpoints](https://huggingface.co/models?library=transformers&sort=trending) on the [Hugging Face Hub](https://huggingface.com/models) you can use.
+There are over 1M+ transformers_4573 [model checkpoints](https://huggingface.co/models?library=transformers_4573&sort=trending) on the [Hugging Face Hub](https://huggingface.com/models) you can use.
 
-Explore the [Hub](https://huggingface.com/) today to find a model and use Transformers to help you get started right away.
+Explore the [Hub](https://huggingface.com/) today to find a model and use transformers_4573 to help you get started right away.
 
 ## Installation
 
-Transformers works with Python 3.9+, and [PyTorch](https://pytorch.org/get-started/locally/) 2.1+.
+transformers_4573 works with Python 3.9+, and [PyTorch](https://pytorch.org/get-started/locally/) 2.1+.
 
 Create and activate a virtual environment with [venv](https://docs.python.org/3/library/venv.html) or [uv](https://docs.astral.sh/uv/), a fast Rust-based Python package and project manager.
 
@@ -94,21 +94,21 @@ uv venv .my-env
 source .my-env/bin/activate
 ```
 
-Install Transformers in your virtual environment.
+Install transformers_4573 in your virtual environment.
 
 ```py
 # pip
-pip install "transformers[torch]"
+pip install "transformers_4573[torch]"
 
 # uv
-uv pip install "transformers[torch]"
+uv pip install "transformers_4573[torch]"
 ```
 
-Install Transformers from source if you want the latest changes in the library or are interested in contributing. However, the *latest* version may not be stable. Feel free to open an [issue](https://github.com/huggingface/transformers/issues) if you encounter an error.
+Install transformers_4573 from source if you want the latest changes in the library or are interested in contributing. However, the *latest* version may not be stable. Feel free to open an [issue](https://github.com/huggingface/transformers_4573/issues) if you encounter an error.
 
 ```shell
-git clone https://github.com/huggingface/transformers.git
-cd transformers
+git clone https://github.com/huggingface/transformers_4573.git
+cd transformers_4573
 
 # pip
 pip install '.[torch]'
@@ -119,12 +119,12 @@ uv pip install '.[torch]'
 
 ## Quickstart
 
-Get started with Transformers right away with the [Pipeline](https://huggingface.co/docs/transformers/pipeline_tutorial) API. The `Pipeline` is a high-level inference class that supports text, audio, vision, and multimodal tasks. It handles preprocessing the input and returns the appropriate output.
+Get started with transformers_4573 right away with the [Pipeline](https://huggingface.co/docs/transformers_4573/pipeline_tutorial) API. The `Pipeline` is a high-level inference class that supports text, audio, vision, and multimodal tasks. It handles preprocessing the input and returns the appropriate output.
 
 Instantiate a pipeline and specify model to use for text generation. The model is downloaded and cached so you can easily reuse it again. Finally, pass some text to prompt the model.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
 pipeline("the secret to baking a really good cake is ")
@@ -134,14 +134,14 @@ pipeline("the secret to baking a really good cake is ")
 To chat with a model, the usage pattern is the same. The only difference is you need to construct a chat history (the input to `Pipeline`) between you and the system.
 
 > [!TIP]
-> You can also chat with a model directly from the command line, as long as [`transformers serve` is running](https://huggingface.co/docs/transformers/main/en/serving).
+> You can also chat with a model directly from the command line, as long as [`transformers_4573 serve` is running](https://huggingface.co/docs/transformers_4573/main/en/serving).
 > ```shell
-> transformers chat Qwen/Qwen2.5-0.5B-Instruct
+> transformers_4573 chat Qwen/Qwen2.5-0.5B-Instruct
 > ```
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 chat = [
     {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
@@ -159,7 +159,7 @@ Expand the examples below to see how `Pipeline` works for different modalities a
 <summary>Automatic speech recognition</summary>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
 pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
@@ -176,7 +176,7 @@ pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac
 </h3>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="image-classification", model="facebook/dinov2-small-imagenet1k-1-layer")
 pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
@@ -195,15 +195,15 @@ pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.pn
 <summary>Visual question answering</summary>
 
 <h3 align="center">
-    <a><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg"></a>
+    <a><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_4573/tasks/idefics-few-shot.jpg"></a>
 </h3>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="visual-question-answering", model="Salesforce/blip-vqa-base")
 pipeline(
-    image="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg",
+    image="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers_4573/tasks/idefics-few-shot.jpg",
     question="What is in the image?",
 )
 [{'answer': 'statue of liberty'}]
@@ -211,7 +211,7 @@ pipeline(
 
 </details>
 
-## Why should I use Transformers?
+## Why should I use transformers_4573?
 
 1. Easy-to-use state-of-the-art models:
     - High performance on natural language understanding & generation, computer vision, audio, video, and multimodal tasks.
@@ -238,21 +238,21 @@ pipeline(
     <img alt="Hugging Face Enterprise Hub" src="https://github.com/user-attachments/assets/247fb16d-d251-4583-96c4-d3d76dda4925">
 </a><br>
 
-## Why shouldn't I use Transformers?
+## Why shouldn't I use transformers_4573?
 
 - This library is not a modular toolbox of building blocks for neural nets. The code in the model files is not refactored with additional abstractions on purpose, so that researchers can quickly iterate on each of the models without diving into additional abstractions/files.
-- The training API is optimized to work with PyTorch models provided by Transformers. For generic machine learning loops, you should use another library like [Accelerate](https://huggingface.co/docs/accelerate).
-- The [example scripts](https://github.com/huggingface/transformers/tree/main/examples) are only *examples*. They may not necessarily work out-of-the-box on your specific use case and you'll need to adapt the code for it to work.
+- The training API is optimized to work with PyTorch models provided by transformers_4573. For generic machine learning loops, you should use another library like [Accelerate](https://huggingface.co/docs/accelerate).
+- The [example scripts](https://github.com/huggingface/transformers_4573/tree/main/examples) are only *examples*. They may not necessarily work out-of-the-box on your specific use case and you'll need to adapt the code for it to work.
 
-## 100 projects using Transformers
+## 100 projects using transformers_4573
 
-Transformers is more than a toolkit to use pretrained models, it's a community of projects built around it and the
-Hugging Face Hub. We want Transformers to enable developers, researchers, students, professors, engineers, and anyone
+transformers_4573 is more than a toolkit to use pretrained models, it's a community of projects built around it and the
+Hugging Face Hub. We want transformers_4573 to enable developers, researchers, students, professors, engineers, and anyone
 else to build their dream projects.
 
-In order to celebrate Transformers 100,000 stars, we wanted to put the spotlight on the
-community with the [awesome-transformers](./awesome-transformers.md) page which lists 100
-incredible projects built with Transformers.
+In order to celebrate transformers_4573 100,000 stars, we wanted to put the spotlight on the
+community with the [awesome-transformers_4573](./awesome-transformers_4573.md) page which lists 100
+incredible projects built with transformers_4573.
 
 If you own or use a project that you believe should be part of the list, please open a PR to add it!
 
@@ -320,10 +320,10 @@ Expand each modality below to see a few example models for various use cases.
 
 ## Citation
 
-We now have a [paper](https://www.aclweb.org/anthology/2020.emnlp-demos.6/) you can cite for the 🤗 Transformers library:
+We now have a [paper](https://www.aclweb.org/anthology/2020.emnlp-demos.6/) you can cite for the 🤗 transformers_4573 library:
 ```bibtex
-@inproceedings{wolf-etal-2020-transformers,
-    title = "Transformers: State-of-the-Art Natural Language Processing",
+@inproceedings{wolf-etal-2020-transformers_4573,
+    title = "transformers_4573: State-of-the-Art Natural Language Processing",
     author = "Thomas Wolf and Lysandre Debut and Victor Sanh and Julien Chaumond and Clement Delangue and Anthony Moi and Pierric Cistac and Tim Rault and Rémi Louf and Morgan Funtowicz and Joe Davison and Sam Shleifer and Patrick von Platen and Clara Ma and Yacine Jernite and Julien Plu and Canwen Xu and Teven Le Scao and Sylvain Gugger and Mariama Drame and Quentin Lhoest and Alexander M. Rush",
     booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
     month = oct,

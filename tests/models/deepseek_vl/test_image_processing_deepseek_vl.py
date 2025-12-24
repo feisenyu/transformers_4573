@@ -16,8 +16,8 @@
 
 import unittest
 
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -27,10 +27,10 @@ if is_torch_available():
 
 
 if is_vision_available():
-    from transformers import DeepseekVLImageProcessor
+    from transformers_4573 import DeepseekVLImageProcessor
 
     if is_torchvision_available():
-        from transformers import DeepseekVLImageProcessorFast
+        from transformers_4573 import DeepseekVLImageProcessorFast
 
 
 # Copied from tests.models.vit.test_image_processing_vit.ViTImageProcessingTester with ViT->DeepseekVL

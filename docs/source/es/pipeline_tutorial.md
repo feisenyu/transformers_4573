@@ -35,7 +35,7 @@ Si bien cada tarea tiene un [`pipeline`] asociado, es más sencillo usar la abst
 1. Comienza creando un [`pipeline`] y específica una tarea de inferencia:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> transcriber = pipeline(task="automatic-speech-recognition")
 ```
@@ -186,7 +186,7 @@ La forma más sencilla de iterar sobre un conjunto de datos es cargandolo desde 
 
 ```py
 # KeyDataset is a util that will just output the item we're interested in.
-from transformers.pipelines.pt_utils import KeyDataset
+from transformers_4573.pipelines.pt_utils import KeyDataset
 from datasets import load_dataset
 
 pipe = pipeline(model="hf-internal-testing/tiny-random-wav2vec2", device=0)
@@ -213,7 +213,7 @@ Especifica tu tarea y pasa tu imagen al clasificador. La imagen puede ser un enl
 ![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
@@ -229,7 +229,7 @@ Especifica tu tarea y pasa tu imagen al clasificador. La imagen puede ser un enl
 Usar un [`pipeline`] para tareas de PLN es prácticamente idéntico.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> # This model is a `zero-shot-classification` model.
 >>> # It will classify text, except you are free to choose any label you might imagine
@@ -248,7 +248,7 @@ Usar un [`pipeline`] para tareas de PLN es prácticamente idéntico.
 Por ejemplo, si usas esta [imagen de factura](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png):
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> output = vqa(
@@ -280,7 +280,7 @@ pip install pytesseract
 ```py
 # pip install accelerate
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(model="facebook/opt-1.3b", dtype=torch.bfloat16, device_map="auto")
 output = pipe("This is a cool example!", do_sample=True, top_p=0.95)
@@ -291,7 +291,7 @@ También puedes pasar modelos cargados de 8 bits sí instalas `bitsandbytes` y a
 ```py
 # pip install accelerate bitsandbytes
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(model="facebook/opt-1.3b", device_map="auto", model_kwargs={"quantization_config": BitsAndBytesConfig(load_in_8bit=True)})
 output = pipe("This is a cool example!", do_sample=True, top_p=0.95)
@@ -310,7 +310,7 @@ pip install gradio
 Luego, puedes crear una demo web alrededor de una pipeline de clasificación de imágenes (o cualquier otra pipeline) en una sola línea de código llamando a la función `Interface.from_pipeline` de Gradio para lanzar la pipeline. Esto crea una interfaz intuitiva *drag-and-drop* en tu navegador:
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import gradio as gr
 
 pipe = pipeline("image-classification", model="google/vit-base-patch16-224")

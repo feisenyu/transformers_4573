@@ -30,7 +30,7 @@ from benchmarks_entrypoint import MetricsRecorder
 try:
     import torch
 
-    from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig, StaticCache
+    from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, GenerationConfig, StaticCache
 
     TRANSFORMERS_AVAILABLE = True
 except ImportError:

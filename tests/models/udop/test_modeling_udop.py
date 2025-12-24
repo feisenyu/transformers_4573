@@ -19,8 +19,8 @@ from functools import cached_property
 
 from datasets import load_dataset
 
-from transformers import UdopConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import UdopConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_sentencepiece,
     require_tokenizers,
     require_torch,
@@ -39,7 +39,7 @@ if is_torch_available():
     import torch
     import torch.nn.functional as F
 
-    from transformers import UdopEncoderModel, UdopForConditionalGeneration, UdopModel, UdopProcessor
+    from transformers_4573 import UdopEncoderModel, UdopForConditionalGeneration, UdopModel, UdopProcessor
 
 
 class UdopModelTester:

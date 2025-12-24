@@ -1273,7 +1273,7 @@ class DFineModel(DFinePreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, DFineModel
+        >>> from transformers_4573 import AutoImageProcessor, DFineModel
         >>> from PIL import Image
         >>> import requests
 
@@ -1609,8 +1609,8 @@ class DFineForObjectDetection(DFinePreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers.image_utils import load_image
-        >>> from transformers import AutoImageProcessor, DFineForObjectDetection
+        >>> from transformers_4573.image_utils import load_image
+        >>> from transformers_4573 import AutoImageProcessor, DFineForObjectDetection
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = load_image(url)

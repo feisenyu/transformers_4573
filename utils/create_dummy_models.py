@@ -30,7 +30,7 @@ from datasets import load_dataset
 from get_test_info import get_model_to_tester_mapping, get_tester_classes_for_model
 from huggingface_hub import create_repo, hf_api, upload_folder
 
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     FEATURE_EXTRACTOR_MAPPING,
     IMAGE_PROCESSOR_MAPPING,
@@ -42,13 +42,13 @@ from transformers import (
     PythonBackend,
     logging,
 )
-from transformers.feature_extraction_utils import FeatureExtractionMixin
-from transformers.file_utils import is_torch_available
-from transformers.image_processing_utils import BaseImageProcessor
-from transformers.models.auto.configuration_auto import AutoConfig, model_type_to_module_name
-from transformers.models.fsmt import configuration_fsmt
-from transformers.processing_utils import ProcessorMixin, transformers_module
-from transformers.tokenization_utils_base import PreTrainedTokenizerBase
+from transformers_4573.feature_extraction_utils import FeatureExtractionMixin
+from transformers_4573.file_utils import is_torch_available
+from transformers_4573.image_processing_utils import BaseImageProcessor
+from transformers_4573.models.auto.configuration_auto import AutoConfig, model_type_to_module_name
+from transformers_4573.models.fsmt import configuration_fsmt
+from transformers_4573.processing_utils import ProcessorMixin, transformers_module
+from transformers_4573.tokenization_utils_base import PreTrainedTokenizerBase
 
 
 # make sure tokenizer plays nice with multiprocessing
@@ -823,7 +823,7 @@ def upload_model(model_dir, organization, token):
 def build_composite_models(config_class, output_dir):
     import tempfile
 
-    from transformers import (
+    from transformers_4573 import (
         BertConfig,
         BertLMHeadModel,
         BertModel,

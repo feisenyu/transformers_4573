@@ -278,7 +278,7 @@ class WhisperTokenizer(TokenizersBackend):
         self.predict_timestamps = predict_timestamps
         self.set_prefix_tokens()
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._decode_with_timestamps
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._decode_with_timestamps
     def _decode_with_timestamps(
         self, token_ids, skip_special_tokens=False, time_precision=0.02, segment_size=1500
     ) -> str:
@@ -327,7 +327,7 @@ class WhisperTokenizer(TokenizersBackend):
                 decoded_outputs.append("")
         return "".join(decoded_outputs)
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._compute_offsets
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._compute_offsets
     def _compute_offsets(self, token_ids, time_precision=0.02, segment_size=1500):
         """
         Compute offsets for a given tokenized input
@@ -397,7 +397,7 @@ class WhisperTokenizer(TokenizersBackend):
         return offsets
 
     @lru_cache
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.timestamp_ids
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.timestamp_ids
     def timestamp_ids(self, time_precision=0.02):
         """
         Compute the timestamp token ids for a given precision and save to least-recently used (LRU) cache.
@@ -408,7 +408,7 @@ class WhisperTokenizer(TokenizersBackend):
         """
         return self.convert_tokens_to_ids([("<|%.2f|>" % (i * time_precision)) for i in range(1500 + 1)])
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._preprocess_token_ids
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._preprocess_token_ids
     def _preprocess_token_ids(self, token_ids, skip_special_tokens: bool = False):
         """
         Pre-process the token ids for decoding by removing the prompt tokens ids and timestamp token ids.
@@ -427,11 +427,11 @@ class WhisperTokenizer(TokenizersBackend):
 
         return token_ids
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._filter_timestamp_ids
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._filter_timestamp_ids
     def _filter_timestamp_ids(self, text):
         return re.sub(self.timestamp_pat, "", text)
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.decode
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.decode
     def decode(
         self,
         token_ids,
@@ -528,7 +528,7 @@ class WhisperTokenizer(TokenizersBackend):
         else:
             return text
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._normalize
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._normalize
     def _normalize(self, text):
         warnings.warn(
             "The private method `_normalize` is deprecated and will be removed in v5 of Transformers."
@@ -536,7 +536,7 @@ class WhisperTokenizer(TokenizersBackend):
         )
         return self.normalize(text)
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._basic_normalize
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._basic_normalize
     def _basic_normalize(self, text, remove_diacritics=False):
         warnings.warn(
             "The private method `_basic_normalize` is deprecated and will be removed in v5 of Transformers."
@@ -544,7 +544,7 @@ class WhisperTokenizer(TokenizersBackend):
         )
         return self.basic_normalize(text, remove_diacritics=remove_diacritics)
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.normalize
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.normalize
     def normalize(self, text):
         """
         Normalize a given string using the `EnglishTextNormalizer` class, which performs commons transformation on
@@ -554,7 +554,7 @@ class WhisperTokenizer(TokenizersBackend):
         return normalizer(text)
 
     @staticmethod
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.basic_normalize
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.basic_normalize
     def basic_normalize(text, remove_diacritics=False):
         """
         Normalize a given string using the `BasicTextNormalizer` class, which performs commons transformation on
@@ -634,7 +634,7 @@ class WhisperTokenizer(TokenizersBackend):
         )
 
     @property
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.prefix_tokens
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.prefix_tokens
     def prefix_tokens(self) -> list[int]:
         bos_token_id = self.convert_tokens_to_ids("<|startoftranscript|>")
         translate_token_id = self.convert_tokens_to_ids("<|translate|>")
@@ -668,7 +668,7 @@ class WhisperTokenizer(TokenizersBackend):
             bos_sequence.append(notimestamps_token_id)
         return bos_sequence
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.build_inputs_with_special_tokens
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.build_inputs_with_special_tokens
     def build_inputs_with_special_tokens(self, token_ids_0, token_ids_1=None) -> list[int]:
         """Build model inputs from a sequence by appending eos_token_id."""
         if token_ids_1 is None:
@@ -676,7 +676,7 @@ class WhisperTokenizer(TokenizersBackend):
         # We don't expect to process pairs, but leave the pair logic for API consistency
         return self.prefix_tokens + token_ids_0 + token_ids_1 + [self.eos_token_id]
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.get_special_tokens_mask
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.get_special_tokens_mask
     def get_special_tokens_mask(
         self, token_ids_0: list[int], token_ids_1: Optional[list[int]] = None, already_has_special_tokens: bool = False
     ) -> list[int]:
@@ -707,7 +707,7 @@ class WhisperTokenizer(TokenizersBackend):
             return prefix_ones + ([0] * len(token_ids_0)) + suffix_ones
         return prefix_ones + ([0] * len(token_ids_0)) + ([0] * len(token_ids_1)) + suffix_ones
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.get_decoder_prompt_ids
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.get_decoder_prompt_ids
     def get_decoder_prompt_ids(self, task=None, language=None, no_timestamps=True):
         self.set_prefix_tokens(task=task, language=language, predict_timestamps=not no_timestamps)
         # prefix tokens are of the form: <|startoftranscript|> <|lang_id|> <|task|> <|notimestamps|>
@@ -727,7 +727,7 @@ class WhisperTokenizer(TokenizersBackend):
             time_precision=time_precision,
         )
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer.get_prompt_ids
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer.get_prompt_ids
     def get_prompt_ids(self, text: str, return_tensors="np"):
         """Converts prompt text to IDs that can be passed to [`~WhisperForConditionalGeneration.generate`]."""
         batch_encoding = self("<|startofprev|>", " " + text.strip(), add_special_tokens=False)
@@ -742,7 +742,7 @@ class WhisperTokenizer(TokenizersBackend):
         batch_encoding.convert_to_tensors(tensor_type=return_tensors)
         return batch_encoding["input_ids"]
 
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._strip_prompt
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._strip_prompt
     def _strip_prompt(self, token_ids: list[int], prompt_token_id: int, decoder_start_token_id: int):
         if not isinstance(token_ids, list):
             token_ids = self._convert_to_list(token_ids)
@@ -762,7 +762,7 @@ class WhisperTokenizer(TokenizersBackend):
         return token_ids
 
     @staticmethod
-    # Copied from transformers.models.whisper.tokenization_whisper.WhisperTokenizer._convert_to_list
+    # Copied from transformers_4573.models.whisper.tokenization_whisper.WhisperTokenizer._convert_to_list
     def _convert_to_list(token_ids):
         # convert type to ndarray if necessary
         if hasattr(token_ids, "numpy"):

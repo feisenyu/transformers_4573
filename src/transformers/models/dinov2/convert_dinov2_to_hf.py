@@ -28,9 +28,9 @@ from huggingface_hub import hf_hub_download
 from PIL import Image
 from torchvision import transforms
 
-from transformers import BitImageProcessor, Dinov2Config, Dinov2ForImageClassification, Dinov2Model
-from transformers.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling
-from transformers.utils import logging
+from transformers_4573 import BitImageProcessor, Dinov2Config, Dinov2ForImageClassification, Dinov2Model
+from transformers_4573.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

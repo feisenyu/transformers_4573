@@ -40,7 +40,7 @@ Disable the cache by configuring `use_cache=False` in [`~GenerationMixin.generat
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", dtype=torch.float16, device_map="auto")
@@ -55,7 +55,7 @@ In most cases, it's easier to define the cache strategy in the [cache_implementa
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, DynamicCache
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, DynamicCache
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", dtype=torch.float16, device_map="auto")
@@ -77,7 +77,7 @@ You can enable [`StaticCache`] by configuring `cache_implementation="static"` in
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", dtype=torch.float16, device_map="auto")
@@ -108,7 +108,7 @@ these layers are usually short anyway, it may be better to avoid offloading them
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 ckpt = "microsoft/Phi-3-mini-4k-instruct"
 tokenizer = AutoTokenizer.from_pretrained(ckpt)
@@ -124,7 +124,7 @@ The example below shows how you can fallback to an offloaded cache if you run ou
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 from accelerate import Accelerator
 
 def resilient_generate(model, *args, **kwargs):
@@ -170,7 +170,7 @@ For the `hqq` backend, we recommend setting the `axis-key` and `axis-value` para
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, QuantizedCache
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, QuantizedCache
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", dtype=torch.float16, device_map="auto")
@@ -185,7 +185,7 @@ For `quanto` backend, we recommend setting the `axis-key` and `axis-value` param
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", dtype=torch.float16, device_map="auto")
@@ -220,7 +220,7 @@ For example, some models use special `<think> ... </think>` tokens during reason
 
 ```py
 import torch
-from transformers import AutoTokenizer,AutoModelForCausalLM, DynamicCache, StaticCache
+from transformers_4573 import AutoTokenizer,AutoModelForCausalLM, DynamicCache, StaticCache
 
 model_id = "meta-llama/Llama-2-7b-chat-hf"
 model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.bfloat16, device_map='auto')
@@ -249,7 +249,7 @@ The example below initializes a [`StaticCache`], and then caches an initial prom
 ```py
 import copy
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache, StaticCache
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, DynamicCache, StaticCache
 
 model_id = "meta-llama/Llama-2-7b-chat-hf"
 model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.bfloat16, device_map={"": 0})

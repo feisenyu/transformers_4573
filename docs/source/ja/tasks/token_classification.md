@@ -101,7 +101,7 @@ pip install transformers datasets evaluate seqeval
 次のステップでは、DistilBERT トークナイザーをロードして`tokens`フィールドを前処理します。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -157,7 +157,7 @@ pip install transformers datasets evaluate seqeval
 
 
 ```py
->>> from transformers import DataCollatorForTokenClassification
+>>> from transformers_4573 import DataCollatorForTokenClassification
 
 >>> data_collator = DataCollatorForTokenClassification(tokenizer=tokenizer)
 ```
@@ -249,7 +249,7 @@ pip install transformers datasets evaluate seqeval
 これでモデルのトレーニングを開始する準備が整いました。 [`AutoModelForTokenClassification`] を使用して、予期されるラベルの数とラベル マッピングを指定して DistilBERT を読み込みます。
 
 ```py
->>> from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForTokenClassification, TrainingArguments, Trainer
 
 >>> model = AutoModelForTokenClassification.from_pretrained(
 ...     "distilbert/distilbert-base-uncased", num_labels=13, id2label=id2label, label2id=label2id
@@ -317,7 +317,7 @@ pip install transformers datasets evaluate seqeval
 推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`] で使用することです。モデルを使用して NER の`pipeline`をインスタンス化し、テキストをそれに渡します。
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("ner", model="stevhliu/my_awesome_wnut_model")
 >>> classifier(text)
@@ -358,7 +358,7 @@ pip install transformers datasets evaluate seqeval
 テキストをトークン化して PyTorch テンソルを返します。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("stevhliu/my_awesome_wnut_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -367,7 +367,7 @@ pip install transformers datasets evaluate seqeval
 入力をモデルに渡し、`logits`を返します。
 
 ```py
->>> from transformers import AutoModelForTokenClassification
+>>> from transformers_4573 import AutoModelForTokenClassification
 
 >>> model = AutoModelForTokenClassification.from_pretrained("stevhliu/my_awesome_wnut_model")
 >>> with torch.no_grad():

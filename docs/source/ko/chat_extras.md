@@ -64,7 +64,7 @@ tools = [get_current_temperature, get_current_wind_speed]
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained( "NousResearch/Hermes-2-Pro-Llama-3-8B")
 tokenizer = AutoTokenizer.from_pretrained( "NousResearch/Hermes-2-Pro-Llama-3-8B")
@@ -151,7 +151,7 @@ print(tokenizer.decode(out[0][len(inputs["input_ids"][0]):]))
 함수가 앞서 나열된 규칙을 따르면, 내부에서 JSON 스키마가 자동으로 생성됩니다. 하지만 더 나은 가독성이나 디버깅을 위해 [get_json_schema](https://github.com/huggingface/transformers/blob/14561209291255e51c55260306c7d00c159381a5/src/transformers/utils/chat_template_utils.py#L205)를 사용하여 스키마를 수동으로 변환할 수 있습니다.
 
 ```py
-from transformers.utils import get_json_schema
+from transformers_4573.utils import get_json_schema
 
 def multiply(a: float, b: float):
     """
@@ -265,7 +265,7 @@ documents = [
 [`~PreTrainedTokenizerBase.apply_chat_template`]에서 `chat_template="rag"`를 설정하고 응답을 생성하세요.
 
 ```py
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 # 모델과 토크나이저 로드
 tokenizer = AutoTokenizer.from_pretrained("CohereForAI/c4ai-command-r-v01-4bit")

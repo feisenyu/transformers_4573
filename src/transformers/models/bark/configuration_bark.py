@@ -106,7 +106,7 @@ class BarkSubModelConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BarkSemanticConfig, BarkSemanticModel
+    >>> from transformers_4573 import BarkSemanticConfig, BarkSemanticModel
 
     >>> # Initializing a Bark sub-module style configuration
     >>> configuration = BarkSemanticConfig()
@@ -129,7 +129,7 @@ class BarkSemanticConfig(BarkSubModelConfig):
     Example:
 
     ```python
-    >>> from transformers import BarkCoarseConfig, BarkCoarseModel
+    >>> from transformers_4573 import BarkCoarseConfig, BarkCoarseModel
 
     >>> # Initializing a Bark sub-module style configuration
     >>> configuration = BarkCoarseConfig()
@@ -157,7 +157,7 @@ class BarkCoarseConfig(BarkSubModelConfig):
     Example:
 
     ```python
-    >>> from transformers import BarkFineConfig, BarkFineModel
+    >>> from transformers_4573 import BarkFineConfig, BarkFineModel
 
     >>> # Initializing a Bark sub-module style configuration
     >>> configuration = BarkFineConfig()
@@ -204,7 +204,7 @@ class BarkConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     BarkSemanticConfig,
     ...     BarkCoarseConfig,
     ...     BarkFineConfig,

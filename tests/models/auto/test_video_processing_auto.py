@@ -20,7 +20,7 @@ import unittest
 from pathlib import Path
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     VIDEO_PROCESSOR_MAPPING,
     AutoConfig,
@@ -28,7 +28,7 @@ from transformers import (
     LlavaOnevisionConfig,
     LlavaOnevisionVideoProcessor,
 )
-from transformers.testing_utils import DUMMY_UNKNOWN_IDENTIFIER, require_torch
+from transformers_4573.testing_utils import DUMMY_UNKNOWN_IDENTIFIER, require_torch
 
 
 sys.path.append(str(Path(__file__).parent.parent.parent.parent / "utils"))

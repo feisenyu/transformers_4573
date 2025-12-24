@@ -19,7 +19,7 @@ import unittest
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     PreTrainedTokenizerBase,
     UdopTokenizer,
@@ -27,7 +27,7 @@ from transformers import (
     is_torch_available,
     logging,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     get_tests_dir,
     require_pandas,
     require_sentencepiece,
@@ -127,8 +127,8 @@ class UdopTokenizationTest(TokenizerTesterMixin, unittest.TestCase):
 
     #     # We have a SentencePiece fixture for testing
     #     # Create tokenizer from SentencePiece model using converter
-    #     from transformers.convert_slow_tokenizer import UdopConverter
-    #     from transformers.tokenization_utils import PreTrainedTokenizer
+    #     from transformers_4573.convert_slow_tokenizer import UdopConverter
+    #     from transformers_4573.tokenization_utils import PreTrainedTokenizer
 
     #     # Create a minimal mock tokenizer for the converter
     #     class _MockTokenizer:

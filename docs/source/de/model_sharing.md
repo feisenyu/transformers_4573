@@ -127,7 +127,7 @@ Geben Sie den Namen Ihres Modells in "push_to_hub" an:
 Dadurch wird ein Repository unter Ihrem Benutzernamen mit dem Modellnamen `my-awesome-model` erstellt. Benutzer können nun Ihr Modell mit der Funktion `from_pretrained` laden:
 
 ```py
->>> from transformers import AutoModel
+>>> from transformers_4573 import AutoModel
 
 >>> model = AutoModel.from_pretrained("your_username/my-awesome-model")
 ```

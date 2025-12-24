@@ -19,7 +19,7 @@ from typing import Optional, Union
 
 import numpy as np
 
-from transformers import AutoConfig, DacConfig, HubertConfig, WavLMConfig
+from transformers_4573 import AutoConfig, DacConfig, HubertConfig, WavLMConfig
 
 from ...configuration_utils import PreTrainedConfig
 from ...utils import logging
@@ -67,7 +67,7 @@ class XcodecConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import XcodecModel, XcodecConfig
+    >>> from transformers_4573 import XcodecModel, XcodecConfig
 
     >>> # Initializing configuration
     >>> configuration = XcodecConfig()

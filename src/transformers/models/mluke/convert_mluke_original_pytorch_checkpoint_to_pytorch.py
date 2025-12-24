@@ -21,8 +21,8 @@ from collections import OrderedDict
 
 import torch
 
-from transformers import LukeConfig, LukeForMaskedLM, MLukeTokenizer, XLMRobertaTokenizer
-from transformers.tokenization_utils_base import AddedToken
+from transformers_4573 import LukeConfig, LukeForMaskedLM, MLukeTokenizer, XLMRobertaTokenizer
+from transformers_4573.tokenization_utils_base import AddedToken
 
 
 @torch.no_grad()

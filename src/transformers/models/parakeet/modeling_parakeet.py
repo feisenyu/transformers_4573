@@ -590,7 +590,7 @@ class ParakeetEncoder(ParakeetPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, ParakeetEncoder
+        >>> from transformers_4573 import AutoProcessor, ParakeetEncoder
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = "nvidia/parakeet-ctc-1.1b"
@@ -699,7 +699,7 @@ class ParakeetForCTC(ParakeetPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, ParakeetForCTC
+        >>> from transformers_4573 import AutoProcessor, ParakeetForCTC
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = "nvidia/parakeet-ctc-1.1b"
@@ -771,7 +771,7 @@ class ParakeetForCTC(ParakeetPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, ParakeetForCTC
+        >>> from transformers_4573 import AutoProcessor, ParakeetForCTC
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = "nvidia/parakeet-ctc-1.1b"

@@ -26,9 +26,9 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from transformers.activations import ACT2FN
-from transformers.models.jamba.modeling_jamba import HybridMambaAttentionDynamicCache
-from transformers.models.llama.modeling_llama import (
+from transformers_4573.activations import ACT2FN
+from transformers_4573.models.jamba.modeling_jamba import HybridMambaAttentionDynamicCache
+from transformers_4573.models.llama.modeling_llama import (
     LlamaAttention,
     LlamaForCausalLM,
     LlamaMLP,
@@ -37,7 +37,7 @@ from transformers.models.llama.modeling_llama import (
     apply_rotary_pos_emb,
     eager_attention_forward,
 )
-from transformers.models.mamba2.modeling_mamba2 import (
+from transformers_4573.models.mamba2.modeling_mamba2 import (
     MambaRMSNormGated,
     apply_mask_to_padding_states,
     pad_tensor_by_size,
@@ -287,7 +287,7 @@ class FalconH1RMSNormGated(MambaRMSNormGated):
         return hidden_states.to(input_dtype)
 
 
-# Adapted from transformers.models.mamba2.modeling_mamba2.Mamba2Mixer
+# Adapted from transformers_4573.models.mamba2.modeling_mamba2.Mamba2Mixer
 class FalconH1Mixer(nn.Module):
     """
     FalconH1Mixer is identical to classic Mamba2 mixer classes but differs on two different things
@@ -972,7 +972,7 @@ def compute_mup_vector(config):
 
 
 @auto_docstring
-# Adapted from transformers.models.jamba.modeling_jamba.JambaModel
+# Adapted from transformers_4573.models.jamba.modeling_jamba.JambaModel
 class FalconH1Model(FalconH1PreTrainedModel):
     def __init__(self, config: FalconH1Config):
         super().__init__(config)
@@ -1244,7 +1244,7 @@ class FalconH1ForCausalLM(LlamaForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, FalconH1ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, FalconH1ForCausalLM
 
         >>> model = FalconH1ForCausalLM.from_pretrained("...")
         >>> tokenizer = AutoTokenizer.from_pretrained("...")

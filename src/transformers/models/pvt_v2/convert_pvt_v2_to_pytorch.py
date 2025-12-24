@@ -23,8 +23,8 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import PvtImageProcessor, PvtV2Config, PvtV2ForImageClassification
-from transformers.utils import logging
+from transformers_4573 import PvtImageProcessor, PvtV2Config, PvtV2ForImageClassification
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

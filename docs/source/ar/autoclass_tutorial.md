@@ -19,7 +19,7 @@
 قم بتحميل المُجزّئ باستخدام [`AutoTokenizer.from_pretrained`]:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -40,7 +40,7 @@
 بالنسبة لمهمات الرؤية، يقوم معالج الصور بمعالجة الصورة إلى تنسيق الإدخال الصحيح.
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
 ```
@@ -66,7 +66,7 @@
 على سبيل المثال، في الرسم التخطيطي أعلاه، لإرجاع خريطة الميزات من المرحلة الأولى من العمود الفقري Swin، يمكنك تعيين `out_indices=(1,)`:
 
 ```py
->>> from transformers import AutoImageProcessor, AutoBackbone
+>>> from transformers_4573 import AutoImageProcessor, AutoBackbone
 >>> import torch
 >>> from PIL import Image
 >>> import requests
@@ -94,7 +94,7 @@
 قم بتحميل مستخرج ميزات باستخدام [`AutoFeatureExtractor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained(
 ...     "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition"
@@ -108,7 +108,7 @@
 قم بتحميل معالج باستخدام [`AutoProcessor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoProcessor
+>>> from transformers_4573 import AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained("microsoft/layoutlmv2-base-uncased")
 ```
@@ -118,7 +118,7 @@
 تسمح لك فئات `AutoModelFor` بتحميل نموذج مُدرب مسبقًا لمهمة معينة (راجع [هنا](model_doc/auto) للحصول على قائمة كاملة بالمهام المتاحة). على سبيل المثال، قم بتحميل نموذج لتصنيف التسلسل باستخدام [`AutoModelForSequenceClassification.from_pretrained`]:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -126,7 +126,7 @@
 أعد استخدام نفس نقطة التفتيش لتحميل بنية لمهمة مختلفة:
 
 ```py
->>> from transformers import AutoModelForTokenClassification
+>>> from transformers_4573 import AutoModelForTokenClassification
 
 >>> model = AutoModelForTokenClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```

@@ -20,7 +20,7 @@ import torch
 from datasets import load_dataset
 from donut import DonutModel
 
-from transformers import (
+from transformers_4573 import (
     DonutImageProcessor,
     DonutProcessor,
     DonutSwinConfig,

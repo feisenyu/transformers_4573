@@ -18,8 +18,8 @@ import tempfile
 import unittest
 
 from tests.test_modeling_common import floats_tensor, ids_tensor, random_attention_mask
-from transformers import Data2VecTextConfig, is_torch_available
-from transformers.testing_utils import TestCasePlus, require_torch, slow, torch_device
+from transformers_4573 import Data2VecTextConfig, is_torch_available
+from transformers_4573.testing_utils import TestCasePlus, require_torch, slow, torch_device
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -30,7 +30,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Data2VecTextForCausalLM,
         Data2VecTextForMaskedLM,
         Data2VecTextForMultipleChoice,
@@ -40,7 +40,7 @@ if is_torch_available():
         Data2VecTextModel,
         DataCollatorWithFlattening,
     )
-    from transformers.models.data2vec.modeling_data2vec_text import Data2VecTextEmbeddings
+    from transformers_4573.models.data2vec.modeling_data2vec_text import Data2VecTextEmbeddings
 
 
 class Data2VecTextModelTester:

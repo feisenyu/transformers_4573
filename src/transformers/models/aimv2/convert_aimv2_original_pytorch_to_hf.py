@@ -23,7 +23,7 @@ import torch
 from huggingface_hub import snapshot_download
 from safetensors import safe_open
 
-from transformers import (
+from transformers_4573 import (
     Aimv2Config,
     Aimv2Model,
     Aimv2VisionConfig,

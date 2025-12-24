@@ -25,7 +25,7 @@ from unittest import mock
 import pytest
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     BertConfig,
     BertTokenizer,
@@ -41,15 +41,15 @@ from transformers import (
     is_tokenizers_available,
     logging,
 )
-from transformers.models.auto.configuration_auto import CONFIG_MAPPING, AutoConfig
-from transformers.models.auto.tokenization_auto import (
+from transformers_4573.models.auto.configuration_auto import CONFIG_MAPPING, AutoConfig
+from transformers_4573.models.auto.tokenization_auto import (
     TOKENIZER_MAPPING,
     TOKENIZER_MAPPING_NAMES,
     get_tokenizer_config,
     tokenizer_class_from_name,
 )
-from transformers.models.roberta.configuration_roberta import RobertaConfig
-from transformers.testing_utils import (
+from transformers_4573.models.roberta.configuration_roberta import RobertaConfig
+from transformers_4573.testing_utils import (
     DUMMY_DIFF_TOKENIZER_IDENTIFIER,
     DUMMY_UNKNOWN_IDENTIFIER,
     SMALL_MODEL_IDENTIFIER,
@@ -534,7 +534,7 @@ class NopTokenizer(transformers.PreTrainedTokenizer):
 """
 
         nop_config_code = """
-from transformers import PreTrainedConfig
+from transformers_4573 import PreTrainedConfig
 
 class NopConfig(PreTrainedConfig):
     model_type = "test_unregistered_dynamic"

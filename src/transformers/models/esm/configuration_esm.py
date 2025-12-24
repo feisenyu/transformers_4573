@@ -233,7 +233,7 @@ class EsmConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import EsmModel, EsmConfig
+    >>> from transformers_4573 import EsmModel, EsmConfig
 
     >>> # Initializing a ESM facebook/esm-1b style configuration
     >>> configuration = EsmConfig(vocab_size=33)

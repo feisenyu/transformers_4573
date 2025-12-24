@@ -91,7 +91,7 @@ There are several important fields here:
 The next step is to load a DistilBERT tokenizer to process the `question` and `context` fields:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -168,7 +168,7 @@ To apply the preprocessing function over the entire dataset, use 🤗 Datasets [
 Now create a batch of examples using [`DefaultDataCollator`]. Unlike other data collators in 🤗 Transformers, the [`DefaultDataCollator`] does not apply any additional preprocessing such as padding.
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers_4573 import DefaultDataCollator
 
 >>> data_collator = DefaultDataCollator()
 ```
@@ -184,7 +184,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You're ready to start training your model now! Load DistilBERT with [`AutoModelForQuestionAnswering`]:
 
 ```py
->>> from transformers import AutoModelForQuestionAnswering, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForQuestionAnswering, TrainingArguments, Trainer
 
 >>> model = AutoModelForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -252,7 +252,7 @@ Come up with a question and some context you'd like the model to predict:
 The simplest way to try out your finetuned model for inference is to use it in a [`pipeline`]. Instantiate a `pipeline` for question answering with your model, and pass your text to it:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> question_answerer = pipeline("question-answering", model="my_awesome_qa_model")
 >>> question_answerer(question=question, context=context)
@@ -267,7 +267,7 @@ You can also manually replicate the results of the `pipeline` if you'd like:
 Tokenize the text and return PyTorch tensors:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("my_awesome_qa_model")
 >>> inputs = tokenizer(question, context, return_tensors="pt")
@@ -277,7 +277,7 @@ Pass your inputs to the model and return the `logits`:
 
 ```py
 >>> import torch
->>> from transformers import AutoModelForQuestionAnswering
+>>> from transformers_4573 import AutoModelForQuestionAnswering
 
 >>> model = AutoModelForQuestionAnswering.from_pretrained("my_awesome_qa_model")
 >>> with torch.no_grad():

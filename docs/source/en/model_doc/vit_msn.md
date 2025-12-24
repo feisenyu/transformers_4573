@@ -68,7 +68,7 @@ SDPA is used by default for `torch>=2.1.1` when an implementation is available, 
 `attn_implementation="sdpa"` in `from_pretrained()` to explicitly request SDPA to be used.
 
 ```py
-from transformers import ViTMSNForImageClassification
+from transformers_4573 import ViTMSNForImageClassification
 model = ViTMSNForImageClassification.from_pretrained("facebook/vit-msn-base", attn_implementation="sdpa", dtype=torch.float16)
 ...
 ```

@@ -38,7 +38,7 @@ The example below demonstrates how to predict the `<mask>` token with [`Pipeline
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="fill-mask",
@@ -54,7 +54,7 @@ pipeline("Bonjour, je suis un modèle <mask>.")
 
 ```python
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "facebook/xlm-roberta-xl",
@@ -95,7 +95,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 
 ```py
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer, TorchAoConfig
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer, TorchAoConfig
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 tokenizer = AutoTokenizer.from_pretrained(

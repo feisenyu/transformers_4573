@@ -100,7 +100,7 @@ class Ernie4_5_MoeConfig(PreTrainedConfig):
             The aux loss factor for the total loss.
 
     ```python
-    >>> from transformers import Ernie4_5_MoeModel, Ernie4_5_MoEConfig
+    >>> from transformers_4573 import Ernie4_5_MoeModel, Ernie4_5_MoEConfig
 
     >>> # Initializing a Ernie4_5_MoE style configuration
     >>> configuration = Ernie4_5_MoEConfig()

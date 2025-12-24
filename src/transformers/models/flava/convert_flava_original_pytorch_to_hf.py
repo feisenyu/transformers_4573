@@ -18,8 +18,8 @@ import os
 
 import torch
 
-from transformers import FlavaConfig, FlavaForPreTraining
-from transformers.models.flava.convert_dalle_to_flava_codebook import convert_dalle_checkpoint
+from transformers_4573 import FlavaConfig, FlavaForPreTraining
+from transformers_4573.models.flava.convert_dalle_to_flava_codebook import convert_dalle_checkpoint
 
 
 def count_parameters(state_dict):

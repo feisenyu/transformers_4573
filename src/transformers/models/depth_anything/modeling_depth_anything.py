@@ -45,7 +45,7 @@ class DepthAnythingReassembleLayer(nn.Module):
             # so should downsample
             self.resize = nn.Conv2d(channels, channels, kernel_size=3, stride=int(1 / factor), padding=1)
 
-    # Copied from transformers.models.dpt.modeling_dpt.DPTReassembleLayer.forward
+    # Copied from transformers_4573.models.dpt.modeling_dpt.DPTReassembleLayer.forward
     def forward(self, hidden_state):
         hidden_state = self.projection(hidden_state)
         hidden_state = self.resize(hidden_state)
@@ -178,7 +178,7 @@ class DepthAnythingFeatureFusionLayer(nn.Module):
 
 
 class DepthAnythingFeatureFusionStage(nn.Module):
-    # Copied from transformers.models.dpt.modeling_dpt.DPTFeatureFusionStage.__init__ with DPT->DepthAnything
+    # Copied from transformers_4573.models.dpt.modeling_dpt.DPTFeatureFusionStage.__init__ with DPT->DepthAnything
     def __init__(self, config: DepthAnythingConfig):
         super().__init__()
         self.layers = nn.ModuleList()
@@ -206,7 +206,7 @@ class DepthAnythingFeatureFusionStage(nn.Module):
         return fused_hidden_states
 
 
-# Modified from transformers.models.dpt.modeling_dpt.DPTPreTrainedModel with DPT->DepthAnything,dpt->depth_anything
+# Modified from transformers_4573.models.dpt.modeling_dpt.DPTPreTrainedModel with DPT->DepthAnything,dpt->depth_anything
 # avoiding sdpa and flash_attn_2 support, it's done in the backend
 @auto_docstring
 class DepthAnythingPreTrainedModel(PreTrainedModel):
@@ -345,7 +345,7 @@ class DepthAnythingForDepthEstimation(DepthAnythingPreTrainedModel):
 
         Examples:
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModelForDepthEstimation
+        >>> from transformers_4573 import AutoImageProcessor, AutoModelForDepthEstimation
         >>> import torch
         >>> import numpy as np
         >>> from PIL import Image

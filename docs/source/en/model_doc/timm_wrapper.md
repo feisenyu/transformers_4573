@@ -28,7 +28,7 @@ Helper class to enable loading timm models to be used with the transformers libr
 >>> import torch
 >>> from PIL import Image
 >>> from urllib.request import urlopen
->>> from transformers import AutoModelForImageClassification, AutoImageProcessor
+>>> from transformers_4573 import AutoModelForImageClassification, AutoImageProcessor
 
 >>> # Load image
 >>> image = Image.open(urlopen(

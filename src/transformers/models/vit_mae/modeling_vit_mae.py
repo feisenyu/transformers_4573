@@ -198,7 +198,7 @@ class ViTMAEEmbeddings(nn.Module):
         # timm's trunc_normal_(std=.02) is effectively normal_(std=0.02) as cutoff is too big (2.)
         init.normal_(self.cls_token, std=self.config.initializer_range)
 
-    # Copied from transformers.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
+    # Copied from transformers_4573.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
     def interpolate_pos_encoding(self, embeddings: torch.Tensor, height: int, width: int) -> torch.Tensor:
         """
         This method allows to interpolate the pre-trained position encodings, to be able to use the model on higher resolution
@@ -329,7 +329,7 @@ class ViTMAEPatchEmbeddings(nn.Module):
         return x
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -359,7 +359,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfAttention ViT->ViTMAE
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfAttention ViT->ViTMAE
 class ViTMAESelfAttention(nn.Module):
     def __init__(self, config: ViTMAEConfig):
         super().__init__()
@@ -410,7 +410,7 @@ class ViTMAESelfAttention(nn.Module):
         return context_layer, attention_probs
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfOutput with ViT->ViTMAE
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfOutput with ViT->ViTMAE
 class ViTMAESelfOutput(nn.Module):
     """
     The residual connection is defined in ViTMAELayer instead of here (as is the case with other models), due to the
@@ -428,7 +428,7 @@ class ViTMAESelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTAttention with ViT->ViTMAE
+# Copied from transformers_4573.models.vit.modeling_vit.ViTAttention with ViT->ViTMAE
 class ViTMAEAttention(nn.Module):
     def __init__(self, config: ViTMAEConfig):
         super().__init__()
@@ -441,7 +441,7 @@ class ViTMAEAttention(nn.Module):
         return output
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTIntermediate ViT->ViTMAE
+# Copied from transformers_4573.models.vit.modeling_vit.ViTIntermediate ViT->ViTMAE
 class ViTMAEIntermediate(nn.Module):
     def __init__(self, config: ViTMAEConfig):
         super().__init__()
@@ -457,7 +457,7 @@ class ViTMAEIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTOutput ViT->ViTMAE
+# Copied from transformers_4573.models.vit.modeling_vit.ViTOutput ViT->ViTMAE
 class ViTMAEOutput(nn.Module):
     def __init__(self, config: ViTMAEConfig):
         super().__init__()
@@ -471,7 +471,7 @@ class ViTMAEOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTLayer with ViT->ViTMAE,VIT->VITMAE
+# Copied from transformers_4573.models.vit.modeling_vit.ViTLayer with ViT->ViTMAE,VIT->VITMAE
 class ViTMAELayer(GradientCheckpointingLayer):
     """This corresponds to the Block class in the timm implementation."""
 
@@ -502,7 +502,7 @@ class ViTMAELayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTEncoder with ViT->ViTMAE
+# Copied from transformers_4573.models.vit.modeling_vit.ViTEncoder with ViT->ViTMAE
 class ViTMAEEncoder(nn.Module):
     def __init__(self, config: ViTMAEConfig):
         super().__init__()
@@ -586,7 +586,7 @@ class ViTMAEModel(ViTMAEPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, ViTMAEModel
+        >>> from transformers_4573 import AutoImageProcessor, ViTMAEModel
         >>> from PIL import Image
         >>> import requests
 
@@ -878,7 +878,7 @@ class ViTMAEForPreTraining(ViTMAEPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, ViTMAEForPreTraining
+        >>> from transformers_4573 import AutoImageProcessor, ViTMAEForPreTraining
         >>> from PIL import Image
         >>> import requests
 

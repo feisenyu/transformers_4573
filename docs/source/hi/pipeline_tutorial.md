@@ -39,7 +39,7 @@ rendered properly in your Markdown viewer.
 1. एक [`pipeline`] बनाकर प्रारंभ करें और अनुमान कार्य निर्दिष्ट करें:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> transcriber = pipeline(task="automatic-speech-recognition")
 ```
@@ -203,7 +203,7 @@ for out in pipe(data()):
 
 ```py
 # KeyDataset is a util that will just output the item we're interested in.
-from transformers.pipelines.pt_utils import KeyDataset
+from transformers_4573.pipelines.pt_utils import KeyDataset
 from datasets import load_dataset
 
 pipe = pipeline(model="hf-internal-testing/tiny-random-wav2vec2", device=0)
@@ -232,7 +232,7 @@ for out in pipe(KeyDataset(dataset, "audio")):
 ![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
@@ -248,7 +248,7 @@ for out in pipe(KeyDataset(dataset, "audio")):
 NLP कार्यों के लिए [`pipeline`] का उपयोग करना व्यावहारिक रूप से समान है।
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> # This model is a `zero-shot-classification` model.
 >>> # It will classify text, except you are free to choose any label you might imagine
@@ -267,7 +267,7 @@ NLP कार्यों के लिए [`pipeline`] का उपयोग �
 उदाहरण के लिए, यदि आप इस [invoice image](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png) का उपयोग करते हैं:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> output = vqa(
@@ -299,7 +299,7 @@ pip install pytesseract
 ```py
 # pip install accelerate
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(model="facebook/opt-1.3b", dtype=torch.bfloat16, device_map="auto")
 output = pipe("This is a cool example!", do_sample=True, top_p=0.95)
@@ -310,7 +310,7 @@ output = pipe("This is a cool example!", do_sample=True, top_p=0.95)
 ```py
 # pip install accelerate bitsandbytes
 import torch
-from transformers import pipeline, BitsAndBytesConfig
+from transformers_4573 import pipeline, BitsAndBytesConfig
 
 pipe = pipeline(model="facebook/opt-1.3b", device_map="auto", model_kwargs={"quantization_config": BitsAndBytesConfig(load_in_8bit=True)})
 output = pipe("This is a cool example!", do_sample=True, top_p=0.95)

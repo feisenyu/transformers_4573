@@ -35,7 +35,7 @@ The example below demonstrates how to fill the `<mask>` token with [`Pipeline`],
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="fill-mask",
@@ -53,7 +53,7 @@ Tarell Brown and Donald Strickland will compete to replace Spencer with the 49er
 
 ```python
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("allenai/longformer-base-4096")
 model = AutoModelForMaskedLM.from_pretrained("allenai/longformer-base-4096")

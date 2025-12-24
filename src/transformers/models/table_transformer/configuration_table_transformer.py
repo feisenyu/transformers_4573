@@ -114,7 +114,7 @@ class TableTransformerConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import TableTransformerModel, TableTransformerConfig
+    >>> from transformers_4573 import TableTransformerModel, TableTransformerConfig
 
     >>> # Initializing a Table Transformer microsoft/table-transformer-detection style configuration
     >>> configuration = TableTransformerConfig()
@@ -134,7 +134,7 @@ class TableTransformerConfig(PreTrainedConfig):
         "num_attention_heads": "encoder_attention_heads",
     }
 
-    # Copied from transformers.models.detr.configuration_detr.DetrConfig.__init__
+    # Copied from transformers_4573.models.detr.configuration_detr.DetrConfig.__init__
     def __init__(
         self,
         use_timm_backbone=True,

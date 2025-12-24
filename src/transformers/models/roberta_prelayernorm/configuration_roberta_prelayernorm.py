@@ -22,7 +22,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.roberta.configuration_roberta.RobertaConfig with FacebookAI/roberta-base->andreasmadsen/efficient_mlm_m0.40,RoBERTa->RoBERTa-PreLayerNorm,Roberta->RobertaPreLayerNorm,roberta->roberta-prelayernorm
+# Copied from transformers_4573.models.roberta.configuration_roberta.RobertaConfig with FacebookAI/roberta-base->andreasmadsen/efficient_mlm_m0.40,RoBERTa->RoBERTa-PreLayerNorm,Roberta->RobertaPreLayerNorm,roberta->roberta-prelayernorm
 class RobertaPreLayerNormConfig(PreTrainedConfig):
     r"""
     This is the configuration class to store the configuration of a [`RobertaPreLayerNormModel`]. It is
@@ -73,7 +73,7 @@ class RobertaPreLayerNormConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import RobertaPreLayerNormConfig, RobertaPreLayerNormModel
+    >>> from transformers_4573 import RobertaPreLayerNormConfig, RobertaPreLayerNormModel
 
     >>> # Initializing a RoBERTa-PreLayerNorm configuration
     >>> configuration = RobertaPreLayerNormConfig()

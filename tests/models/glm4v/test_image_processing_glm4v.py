@@ -17,8 +17,8 @@ import unittest
 
 import numpy as np
 
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -30,11 +30,11 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import Glm4vImageProcessor
-    from transformers.models.glm4v.image_processing_glm4v import smart_resize
+    from transformers_4573 import Glm4vImageProcessor
+    from transformers_4573.models.glm4v.image_processing_glm4v import smart_resize
 
     if is_torchvision_available():
-        from transformers import Glm4vImageProcessorFast
+        from transformers_4573 import Glm4vImageProcessorFast
 
 
 class Glm4vImageProcessingTester:

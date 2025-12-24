@@ -95,7 +95,7 @@ rendered properly in your Markdown viewer.
 예를 들어, [`~transformers.BertTokenizer`]는 `"I have a new GPU!"` 라는 문장을 아래와 같이 토큰화합니다:
 
 ```py
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> tokenizer.tokenize("I have a new GPU!")
@@ -109,7 +109,7 @@ rendered properly in your Markdown viewer.
 
 또 다른 예로, [`~transformers.XLNetTokenizer`]는 이전에 예시 문장을 다음과 같이 토큰화합니다:
 ```py
->>> from transformers import XLNetTokenizer
+>>> from transformers_4573 import XLNetTokenizer
 
 >>> tokenizer = XLNetTokenizer.from_pretrained("xlnet/xlnet-base-cased")
 >>> tokenizer.tokenize("Don't you love 🤗 Transformers? We sure do.")

@@ -77,7 +77,7 @@ While it looks like there are a lot of fields here, it is actually pretty straig
 The next step is to load a BERT tokenizer to process the sentence starts and the four possible endings:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -115,7 +115,7 @@ To apply the preprocessing function over the entire dataset, use 🤗 Datasets [
 To create a batch of examples, it's more efficient to *dynamically pad* the sentences to the longest length in a batch during collation, instead of padding the whole dataset to the maximum length. [`DataCollatorForMultipleChoice`] flattens all the model inputs, applies padding, and then unflattens the results.
 
 ```py
->>> from transformers import DataCollatorForMultipleChoice
+>>> from transformers_4573 import DataCollatorForMultipleChoice
 >>> collator = DataCollatorForMultipleChoice(tokenizer=tokenizer)
 ```
 
@@ -154,7 +154,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You're ready to start training your model now! Load BERT with [`AutoModelForMultipleChoice`]:
 
 ```py
->>> from transformers import AutoModelForMultipleChoice, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForMultipleChoice, TrainingArguments, Trainer
 
 >>> model = AutoModelForMultipleChoice.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -220,7 +220,7 @@ Come up with some text and two candidate answers:
 Tokenize each prompt and candidate answer pair and return PyTorch tensors. You should also create some `labels`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_swag_model")
 >>> inputs = tokenizer([[prompt, candidate1], [prompt, candidate2]], return_tensors="pt", padding=True)
@@ -230,7 +230,7 @@ Tokenize each prompt and candidate answer pair and return PyTorch tensors. You s
 Pass your inputs and labels to the model and return the `logits`:
 
 ```py
->>> from transformers import AutoModelForMultipleChoice
+>>> from transformers_4573 import AutoModelForMultipleChoice
 
 >>> model = AutoModelForMultipleChoice.from_pretrained("username/my_awesome_swag_model")
 >>> outputs = model(**{k: v.unsqueeze(0) for k, v in inputs.items()}, labels=labels)

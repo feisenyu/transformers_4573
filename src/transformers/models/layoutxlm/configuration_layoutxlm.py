@@ -104,7 +104,7 @@ class LayoutXLMConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import LayoutXLMConfig, LayoutXLMModel
+    >>> from transformers_4573 import LayoutXLMConfig, LayoutXLMModel
 
     >>> # Initializing a LayoutXLM microsoft/layoutxlm-base style configuration
     >>> configuration = LayoutXLMConfig()

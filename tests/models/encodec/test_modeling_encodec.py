@@ -22,8 +22,8 @@ import numpy as np
 from datasets import Audio, load_dataset
 from parameterized import parameterized
 
-from transformers import AutoProcessor, EncodecConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoProcessor, EncodecConfig
+from transformers_4573.testing_utils import (
     is_torch_available,
     require_torch,
     slow,
@@ -38,7 +38,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import EncodecFeatureExtractor, EncodecModel
+    from transformers_4573 import EncodecFeatureExtractor, EncodecModel
 
 
 def prepare_inputs_dict(

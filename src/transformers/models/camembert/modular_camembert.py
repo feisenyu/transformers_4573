@@ -472,7 +472,7 @@ class CamembertForCausalLM(RobertaForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, CamembertForCausalLM, AutoConfig
+        >>> from transformers_4573 import AutoTokenizer, CamembertForCausalLM, AutoConfig
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("almanach/camembert-base")

@@ -18,8 +18,8 @@ import unittest
 
 import pytest
 
-from transformers import BitsAndBytesConfig, EsmConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import BitsAndBytesConfig, EsmConfig, is_torch_available
+from transformers_4573.testing_utils import (
     TestCasePlus,
     is_flaky,
     require_bitsandbytes,
@@ -38,8 +38,8 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import EsmForMaskedLM, EsmForSequenceClassification, EsmForTokenClassification, EsmModel
-    from transformers.models.esm.modeling_esm import (
+    from transformers_4573 import EsmForMaskedLM, EsmForSequenceClassification, EsmForTokenClassification, EsmModel
+    from transformers_4573.models.esm.modeling_esm import (
         EsmEmbeddings,
         create_position_ids_from_input_ids,
     )

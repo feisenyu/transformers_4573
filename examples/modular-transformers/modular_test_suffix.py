@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from transformers.models.llama.modeling_llama import LlamaDecoderLayer
+from transformers_4573.models.llama.modeling_llama import LlamaDecoderLayer
 
 
 class TestSuffixDecoderLayer(nn.module):

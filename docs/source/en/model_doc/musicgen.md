@@ -85,7 +85,7 @@ The inputs for unconditional (or 'null') generation can be obtained through the 
 [`MusicgenForConditionalGeneration.get_unconditional_inputs`]:
 
 ```python
->>> from transformers import MusicgenForConditionalGeneration
+>>> from transformers_4573 import MusicgenForConditionalGeneration
 
 >>> model = MusicgenForConditionalGeneration.from_pretrained("facebook/musicgen-small")
 >>> unconditional_inputs = model.get_unconditional_inputs(num_samples=1)
@@ -118,7 +118,7 @@ The model can generate an audio sample conditioned on a text prompt through use 
 the inputs:
 
 ```python
->>> from transformers import AutoProcessor, MusicgenForConditionalGeneration
+>>> from transformers_4573 import AutoProcessor, MusicgenForConditionalGeneration
 
 >>> processor = AutoProcessor.from_pretrained("facebook/musicgen-small")
 >>> model = MusicgenForConditionalGeneration.from_pretrained("facebook/musicgen-small")
@@ -149,7 +149,7 @@ pip install datasets[audio]
 ```
 
 ```python
->>> from transformers import AutoProcessor, MusicgenForConditionalGeneration
+>>> from transformers_4573 import AutoProcessor, MusicgenForConditionalGeneration
 >>> from datasets import load_dataset
 
 >>> processor = AutoProcessor.from_pretrained("facebook/musicgen-small")
@@ -175,7 +175,7 @@ For batched audio-prompted generation, the generated `audio_values` can be post-
 [`MusicgenProcessor`] class:
 
 ```python
->>> from transformers import AutoProcessor, MusicgenForConditionalGeneration
+>>> from transformers_4573 import AutoProcessor, MusicgenForConditionalGeneration
 >>> from datasets import load_dataset
 
 >>> processor = AutoProcessor.from_pretrained("facebook/musicgen-small")
@@ -209,7 +209,7 @@ The default parameters that control the generation process, such as sampling, gu
 tokens, can be found in the model's generation config, and updated as desired:
 
 ```python
->>> from transformers import MusicgenForConditionalGeneration
+>>> from transformers_4573 import MusicgenForConditionalGeneration
 
 >>> model = MusicgenForConditionalGeneration.from_pretrained("facebook/musicgen-small")
 
@@ -241,7 +241,7 @@ or as a composite model that includes the text encoder and audio encoder/decoder
 specifying the correct config, or be accessed through the `.decoder` attribute of the composite model:
 
 ```python
->>> from transformers import AutoConfig, MusicgenForCausalLM, MusicgenForConditionalGeneration
+>>> from transformers_4573 import AutoConfig, MusicgenForCausalLM, MusicgenForConditionalGeneration
 
 >>> # Option 1: get decoder config and pass to `.from_pretrained`
 >>> decoder_config = AutoConfig.from_pretrained("facebook/musicgen-small").decoder

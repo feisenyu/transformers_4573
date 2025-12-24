@@ -37,7 +37,7 @@ class AlignProcessor(ProcessorMixin):
     information.
     The preferred way of passing kwargs is as a dictionary per modality, see usage example below.
         ```python
-        from transformers import AlignProcessor
+        from transformers_4573 import AlignProcessor
         from PIL import Image
         model_id = "kakaobrain/align-base"
         processor = AlignProcessor.from_pretrained(model_id)

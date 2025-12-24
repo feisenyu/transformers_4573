@@ -24,12 +24,12 @@ import pytest
 import requests
 from parameterized import parameterized
 
-from transformers import AutoProcessor, Kosmos2_5Config
-from transformers.models.kosmos2_5.configuration_kosmos2_5 import (
+from transformers_4573 import AutoProcessor, Kosmos2_5Config
+from transformers_4573.models.kosmos2_5.configuration_kosmos2_5 import (
     Kosmos2_5TextConfig,
     Kosmos2_5VisionConfig,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_flash_attn,
     require_torch,
     require_torch_accelerator,
@@ -37,7 +37,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -53,7 +53,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import Kosmos2_5ForConditionalGeneration, Kosmos2_5Model
+    from transformers_4573 import Kosmos2_5ForConditionalGeneration, Kosmos2_5Model
 
 
 if is_vision_available():

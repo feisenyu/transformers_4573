@@ -38,7 +38,7 @@ The example below demonstrates zero-shot image classification with [`Pipeline`] 
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="zero-shot-image-classification",
@@ -63,7 +63,7 @@ pipeline("https://huggingface.co/datasets/huggingface/documentation-images/resol
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, AutoModelForZeroShotImageClassification
+from transformers_4573 import AutoProcessor, AutoModelForZeroShotImageClassification
 
 processor = AutoProcessor.from_pretrained("kakaobrain/align-base")
 model = AutoModelForZeroShotImageClassification.from_pretrained("kakaobrain/align-base", device_map="auto")
@@ -101,7 +101,7 @@ for label, score in zip(candidate_labels, probs):
 
   ```py
   # Example of using ALIGN for image-text similarity
-  from transformers import AlignProcessor, AlignModel
+  from transformers_4573 import AlignProcessor, AlignModel
   import torch
   from PIL import Image
   import requests

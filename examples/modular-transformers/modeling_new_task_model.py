@@ -309,7 +309,7 @@ class NewTaskModelModel(NewTaskModelPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, NewTaskModelForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, NewTaskModelForConditionalGeneration
 
         >>> model = NewTaskModelForConditionalGeneration.from_pretrained("google/new_task_model2-3b-mix-224")
         >>> processor = AutoProcessor.from_pretrained("google/new_task_model2-3b-mix-224")

@@ -48,7 +48,7 @@ class TimmBackboneConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import TimmBackboneConfig, TimmBackbone
+    >>> from transformers_4573 import TimmBackboneConfig, TimmBackbone
 
     >>> # Initializing a timm backbone
     >>> configuration = TimmBackboneConfig("resnet50")

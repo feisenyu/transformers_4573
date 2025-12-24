@@ -50,7 +50,7 @@ Below is an example on how to run mask generation given an image and a 2D point:
 import torch
 from PIL import Image
 import requests
-from transformers import SamModel, SamProcessor
+from transformers_4573 import SamModel, SamProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -77,7 +77,7 @@ You can also process your own masks alongside the input images in the processor 
 import torch
 from PIL import Image
 import requests
-from transformers import SamModel, SamProcessor
+from transformers_4573 import SamModel, SamProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device

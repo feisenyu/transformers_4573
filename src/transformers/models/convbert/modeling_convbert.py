@@ -501,7 +501,7 @@ class ConvBertPredictionHeadTransform(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->ConvBert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->ConvBert
 class ConvBertSequenceSummary(nn.Module):
     r"""
     Compute a single vector summary of a sequence hidden states.

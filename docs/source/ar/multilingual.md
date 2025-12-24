@@ -24,7 +24,7 @@
 
 ```py
 >>> import torch
->>> from transformers import XLMTokenizer, XLMWithLMHeadModel
+>>> from transformers_4573 import XLMTokenizer, XLMWithLMHeadModel
 
 >>> tokenizer = XLMTokenizer.from_pretrained("FacebookAI/xlm-clm-enfr-1024")
 >>> model = XLMWithLMHeadModel.from_pretrained("FacebookAI/xlm-clm-enfr-1024")
@@ -98,7 +98,7 @@
 في هذا المثال، قم بتحميل نسحة  `facebook/m2m100_418M` لترجمة النص من الصينية إلى الإنجليزية. يمكنك تعيين اللغة المصدر في المجزىء اللغوى:
 
 ```py
->>> from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
+>>> from transformers_4573 import M2M100ForConditionalGeneration, M2M100Tokenizer
 
 >>> en_text = "Do not meddle in the affairs of wizards, for they are subtle and quick to anger."
 >>> chinese_text = "不要插手巫師的事務, 因為他們是微妙的, 很快就會發怒."
@@ -134,7 +134,7 @@
 في هذا المثال، قم بتحميل نسخة `facebook/mbart-large-50-many-to-many-mmt` لترجمة النص من الفنلندية إلى الإنجليزية. يمكنك تعيين اللغة المصدر في المجزىء:
 
 ```py
->>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+>>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
 >>> en_text = "Do not meddle in the affairs of wizards, for they are subtle and quick to anger."
 >>> fi_text = "Älä sekaannu velhojen asioihin, sillä ne ovat hienovaraisia ja nopeasti vihaisia."

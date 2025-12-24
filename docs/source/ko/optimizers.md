@@ -22,7 +22,7 @@ Transformers는 AdamW 및 AdaFactor와 같은 두 가지 기본 옵티마이저�
 
 ```py
 import torch
-from transformers import TrainingArguments, AutoTokenizer, AutoModelForCausalLM, Trainer
+from transformers_4573 import TrainingArguments, AutoTokenizer, AutoModelForCausalLM, Trainer
 
 args = TrainingArguments(
     output_dir="./test-optimizer",
@@ -51,7 +51,7 @@ pip install apollo-torch
 
 ```diff
 import torch
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     output_dir="./test-apollo",
@@ -83,7 +83,7 @@ args = TrainingArguments(
 아래 예시는 APOLLO-Mini 옵티마이저를 활성화하는 방법입니다.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     output_dir="./test-apollo_mini",
@@ -105,7 +105,7 @@ pip install grokadamw
 
 ```diff
 import torch
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     output_dir="./test-grokadamw",

@@ -36,7 +36,7 @@ pip install -Uq albumentations trackio transformers datasets
 Initialize [`DetrConfig`] with the pre-trained DINOv3 ConvNext backbone. Use `num_labels=1` to detect the license plate bounding boxes. Create [`DetrForObjectDetection`] with this configuration. Freeze the backbone to preserve DINOv3 features without updating weights. Load the [`DetrImageProcessor`].
 
 ```py
-from transformers import DetrConfig, DetrForObjectDetection, AutoImageProcessor
+from transformers_4573 import DetrConfig, DetrForObjectDetection, AutoImageProcessor
 
 config = DetrConfig(backbone="facebook/dinov3-convnext-large-pretrain-lvd1689m",
                     use_pretrained_backbone=True, use_timm_backbone=False,
@@ -166,7 +166,7 @@ def collate_fn(examples):
 Initialize the [`Trainer`] and set up [`TrainingArguments`] for model convergence. Pass datasets, data collator, arguments, and model to `Trainer` to start training.
 
 ```py
-from transformers import Trainer, TrainingArguments
+from transformers_4573 import Trainer, TrainingArguments
 
 training_args = TrainingArguments(
     output_dir="./license-plate-detr-dinov3",
@@ -208,7 +208,7 @@ image_processor.push_to_hub("merve/license-plate-detr-dinov3")
 Test the model with an object detection pipeline.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 obj_detector = pipeline(
     "object-detection", model="merve/license-plate-detr-dinov3"

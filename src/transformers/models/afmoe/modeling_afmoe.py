@@ -668,7 +668,7 @@ class AfmoeForCausalLM(AfmoePreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, AfmoeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, AfmoeForCausalLM
 
         >>> model = AfmoeForCausalLM.from_pretrained("meta-afmoe/Afmoe-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-afmoe/Afmoe-2-7b-hf")

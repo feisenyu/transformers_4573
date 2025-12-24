@@ -17,20 +17,20 @@ import unittest
 import numpy as np
 import torch
 
-from transformers import (
+from transformers_4573 import (
     MODEL_FOR_TEXT_TO_WAVEFORM_MAPPING,
     AutoProcessor,
     TextToAudioPipeline,
     pipeline,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     is_pipeline_test,
     require_torch,
     require_torch_accelerator,
     slow,
     torch_device,
 )
-from transformers.trainer_utils import set_seed
+from transformers_4573.trainer_utils import set_seed
 
 from .test_pipelines_common import ANY
 

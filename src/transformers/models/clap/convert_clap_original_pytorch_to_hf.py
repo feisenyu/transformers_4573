@@ -18,7 +18,7 @@ import re
 
 from laion_clap import CLAP_Module
 
-from transformers import AutoFeatureExtractor, ClapConfig, ClapModel
+from transformers_4573 import AutoFeatureExtractor, ClapConfig, ClapModel
 
 
 KEYS_TO_MODIFY_MAPPING = {

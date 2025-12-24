@@ -136,7 +136,7 @@ class SpeechT5FeatureExtractor(SequenceFeatureExtractor):
             )
 
     @staticmethod
-    # Copied from transformers.models.wav2vec2.feature_extraction_wav2vec2.Wav2Vec2FeatureExtractor.zero_mean_unit_var_norm
+    # Copied from transformers_4573.models.wav2vec2.feature_extraction_wav2vec2.Wav2Vec2FeatureExtractor.zero_mean_unit_var_norm
     def zero_mean_unit_var_norm(
         input_values: list[np.ndarray], attention_mask: list[np.ndarray], padding_value: float = 0.0
     ) -> list[np.ndarray]:

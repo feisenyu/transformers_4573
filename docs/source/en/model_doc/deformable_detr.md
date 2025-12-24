@@ -43,7 +43,7 @@ The example below demonstrates how to perform object detection with the [`Pipeli
 <hfoption id="Pipeline">
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(
@@ -60,7 +60,7 @@ pipeline("http://images.cocodataset.org/val2017/000000039769.jpg")
 <hfoption id="AutoModel">
 
 ```python
-from transformers import AutoImageProcessor, AutoModelForObjectDetection
+from transformers_4573 import AutoImageProcessor, AutoModelForObjectDetection
 from PIL import Image
 import requests
 import torch

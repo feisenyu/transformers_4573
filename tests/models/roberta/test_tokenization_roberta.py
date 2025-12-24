@@ -16,8 +16,8 @@
 import json
 import unittest
 
-from transformers import AutoTokenizer, RobertaTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573 import AutoTokenizer, RobertaTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

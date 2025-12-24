@@ -41,7 +41,7 @@ The example below demonstrates how to generate similarity scores between texts a
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 image = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 candidate_labels = ["a Pallas cat", "a lion", "a Siberian tiger"]
@@ -57,7 +57,7 @@ pipeline(image, candidate_labels=candidate_labels)
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, AutoModel
+from transformers_4573 import AutoProcessor, AutoModel
 
 model = AutoModel.from_pretrained("google/siglip-base-patch16-224", dtype=torch.float16, device_map="auto", attn_implementation="sdpa")
 processor = AutoProcessor.from_pretrained("google/siglip-base-patch16-224")
@@ -87,7 +87,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, AutoModel, BitsAndBytesConfig
+from transformers_4573 import AutoProcessor, AutoModel, BitsAndBytesConfig
 
 bnb_config = BitsAndBytesConfig(load_in_4bit=True)
 model = AutoModel.from_pretrained("google/siglip-base-patch16-224", quantization_config=bnb_config, device_map="auto", attn_implementation="sdpa")
@@ -117,7 +117,7 @@ print(f"{probs[0][0]:.1%} that image 0 is '{candidate_labels[0]}'")
     ```py
     # pip install -U flash-attn --no-build-isolation
 
-    from transformers import SiglipModel
+    from transformers_4573 import SiglipModel
 
     model = SiglipModel.from_pretrained(
         "google/siglip-so400m-patch14-384",

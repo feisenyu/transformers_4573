@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import AutoTokenizer, Mamba2Config, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, Mamba2Config, is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     require_read_token,
     require_torch,
@@ -24,7 +24,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils.import_utils import is_causal_conv1d_available, is_mamba_2_ssm_available
+from transformers_4573.utils.import_utils import is_causal_conv1d_available, is_mamba_2_ssm_available
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -35,11 +35,11 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Mamba2ForCausalLM,
         Mamba2Model,
     )
-    from transformers.models.mamba2.modeling_mamba2 import Mamba2Cache, Mamba2Mixer
+    from transformers_4573.models.mamba2.modeling_mamba2 import Mamba2Cache, Mamba2Mixer
 
 
 class Mamba2ConfigTester(ConfigTester):

@@ -19,12 +19,12 @@ import requests
 import torch
 from PIL import Image
 
-from transformers.models.bert.tokenization_bert import BertTokenizer
-from transformers.models.grounding_dino.image_processing_grounding_dino import GroundingDinoImageProcessor
-from transformers.models.grounding_dino.processing_grounding_dino import GroundingDinoProcessor
-from transformers.models.mm_grounding_dino.configuration_mm_grounding_dino import MMGroundingDinoConfig
-from transformers.models.mm_grounding_dino.modeling_mm_grounding_dino import MMGroundingDinoForObjectDetection
-from transformers.models.swin.configuration_swin import SwinConfig
+from transformers_4573.models.bert.tokenization_bert import BertTokenizer
+from transformers_4573.models.grounding_dino.image_processing_grounding_dino import GroundingDinoImageProcessor
+from transformers_4573.models.grounding_dino.processing_grounding_dino import GroundingDinoProcessor
+from transformers_4573.models.mm_grounding_dino.configuration_mm_grounding_dino import MMGroundingDinoConfig
+from transformers_4573.models.mm_grounding_dino.modeling_mm_grounding_dino import MMGroundingDinoForObjectDetection
+from transformers_4573.models.swin.configuration_swin import SwinConfig
 
 
 MODEL_NAME_TO_CHECKPOINT_URL_MAPPING = {
@@ -387,7 +387,7 @@ def preprocess_old_state(state_dict: dict, config: MMGroundingDinoConfig) -> dic
     return new_state_dict
 
 
-# Copied from transformers/models/siglip2/convert_siglip2_to_hf.py
+# Copied from transformers_4573/models/siglip2/convert_siglip2_to_hf.py
 def convert_old_keys_to_new_keys(state_dict_keys: list) -> dict:
     """
     This function should be applied only once, on the concatenated keys to efficiently rename using

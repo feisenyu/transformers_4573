@@ -1210,7 +1210,7 @@ class CanineForTokenClassification(CaninePreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, CanineForTokenClassification
+        >>> from transformers_4573 import AutoTokenizer, CanineForTokenClassification
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/canine-s")

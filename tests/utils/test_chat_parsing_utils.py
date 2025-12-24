@@ -15,9 +15,9 @@
 import tempfile
 import unittest
 
-from transformers import AutoTokenizer
-from transformers.testing_utils import require_jmespath
-from transformers.utils.chat_parsing_utils import recursive_parse
+from transformers_4573 import AutoTokenizer
+from transformers_4573.testing_utils import require_jmespath
+from transformers_4573.utils.chat_parsing_utils import recursive_parse
 
 
 cohere_schema = {

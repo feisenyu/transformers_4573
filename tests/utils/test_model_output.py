@@ -18,9 +18,9 @@ from dataclasses import dataclass
 
 import pytest
 
-from transformers import AlbertForMaskedLM
-from transformers.testing_utils import require_torch
-from transformers.utils import ModelOutput, is_torch_available
+from transformers_4573 import AlbertForMaskedLM
+from transformers_4573.testing_utils import require_torch
+from transformers_4573.utils import ModelOutput, is_torch_available
 
 
 if is_torch_available():

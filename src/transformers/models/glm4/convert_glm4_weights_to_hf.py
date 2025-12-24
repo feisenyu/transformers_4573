@@ -7,7 +7,7 @@ import torch
 from safetensors.torch import load_file
 from tokenizers import processors
 
-from transformers import Glm4Config, Glm4ForCausalLM, PreTrainedTokenizerFast
+from transformers_4573 import Glm4Config, Glm4ForCausalLM, PreTrainedTokenizerFast
 
 
 # fmt: off

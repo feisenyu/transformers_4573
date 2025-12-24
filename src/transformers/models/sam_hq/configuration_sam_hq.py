@@ -126,7 +126,7 @@ class SamHQVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     SamHQVisionConfig,
     ...     SamHQVisionModel,
     ... )

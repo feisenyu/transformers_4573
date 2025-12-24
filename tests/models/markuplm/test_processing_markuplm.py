@@ -19,23 +19,23 @@ import tempfile
 import unittest
 from functools import cached_property
 
-from transformers import (
+from transformers_4573 import (
     MarkupLMProcessor,
     MarkupLMTokenizer,
     PreTrainedTokenizerBase,
     PreTrainedTokenizerFast,
     PythonBackend,
 )
-from transformers.models.markuplm.tokenization_markuplm import VOCAB_FILES_NAMES
-from transformers.testing_utils import require_bs4, require_tokenizers, require_torch, slow
-from transformers.utils import is_bs4_available, is_tokenizers_available
+from transformers_4573.models.markuplm.tokenization_markuplm import VOCAB_FILES_NAMES
+from transformers_4573.testing_utils import require_bs4, require_tokenizers, require_torch, slow
+from transformers_4573.utils import is_bs4_available, is_tokenizers_available
 
 
 if is_bs4_available():
-    from transformers import MarkupLMFeatureExtractor
+    from transformers_4573 import MarkupLMFeatureExtractor
 
 if is_tokenizers_available():
-    from transformers import MarkupLMTokenizerFast
+    from transformers_4573 import MarkupLMTokenizerFast
 
 
 @require_bs4

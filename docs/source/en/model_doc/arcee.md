@@ -39,7 +39,7 @@ The example below demonstrates how to generate text with Arcee using [`Pipeline`
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -57,7 +57,7 @@ print(output[0]["generated_text"])
 
 ```py
 import torch
-from transformers import AutoTokenizer, ArceeForCausalLM
+from transformers_4573 import AutoTokenizer, ArceeForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("arcee-ai/AFM-4.5B")
 model = ArceeForCausalLM.from_pretrained(

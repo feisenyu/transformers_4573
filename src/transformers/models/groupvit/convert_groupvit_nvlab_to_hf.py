@@ -25,7 +25,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import CLIPProcessor, GroupViTConfig, GroupViTModel
+from transformers_4573 import CLIPProcessor, GroupViTConfig, GroupViTModel
 
 
 def rename_key(name):

@@ -26,8 +26,8 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-from transformers import BeitConfig, ZoeDepthConfig, ZoeDepthForDepthEstimation, ZoeDepthImageProcessor
-from transformers.utils import logging
+from transformers_4573 import BeitConfig, ZoeDepthConfig, ZoeDepthForDepthEstimation, ZoeDepthImageProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

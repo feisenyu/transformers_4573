@@ -15,8 +15,8 @@
 import unittest
 
 from tests.test_tokenization_common import TokenizerTesterMixin
-from transformers.models.xglm.tokenization_xglm import XGLMTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573.models.xglm.tokenization_xglm import XGLMTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 
 @require_tokenizers

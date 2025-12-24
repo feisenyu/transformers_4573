@@ -56,7 +56,7 @@
 !pip install transformers accelerate bitsandbytes optimum
 ```
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("bigscience/bloom", device_map="auto", pad_token_id=0)
 ```
@@ -70,7 +70,7 @@ model = AutoModelForCausalLM.from_pretrained("bigscience/bloom", device_map="aut
 نقوم أولاً بتحميل النموذج والمجزىء اللغوي ثم نقوم بتمرير كلاهما إلى كائن [قنوات المعالجة](https://huggingface.co/docs/transformers/main_classes/pipelines) في Transformers.
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, pipeline
 import torch
 
 model = AutoModelForCausalLM.from_pretrained("bigcode/octocoder", dtype=torch.bfloat16, device_map="auto", pad_token_id=0)

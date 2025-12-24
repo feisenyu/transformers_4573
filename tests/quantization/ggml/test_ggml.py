@@ -16,7 +16,7 @@ import unittest
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     AutoModelForCausalLM,
     AutoModelForSeq2SeqLM,
@@ -24,14 +24,14 @@ from transformers import (
     UMT5Config,
     UMT5EncoderModel,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_gguf,
     require_read_token,
     require_torch_accelerator,
     slow,
     torch_device,
 )
-from transformers.utils import is_gguf_available, is_torch_available
+from transformers_4573.utils import is_gguf_available, is_torch_available
 
 
 if is_torch_available():
@@ -1021,7 +1021,7 @@ class GgufModelTests(unittest.TestCase):
 
     def test_deci_config_mapping(self):
         """Test that Deci GGUF config mapping is correctly applied."""
-        from transformers.integrations.ggml import GGUF_CONFIG_MAPPING
+        from transformers_4573.integrations.ggml import GGUF_CONFIG_MAPPING
 
         self.assertIn("deci", GGUF_CONFIG_MAPPING)
 
@@ -1046,7 +1046,7 @@ class GgufModelTests(unittest.TestCase):
 
     def test_deci_architecture_mapping(self):
         """Test that Deci architectures are mapped to GGUFLlamaConverter."""
-        from transformers.integrations.ggml import GGUF_TO_FAST_CONVERTERS, GGUFLlamaConverter
+        from transformers_4573.integrations.ggml import GGUF_TO_FAST_CONVERTERS, GGUFLlamaConverter
 
         self.assertIn("deci", GGUF_TO_FAST_CONVERTERS)
         self.assertIn("decilm", GGUF_TO_FAST_CONVERTERS)

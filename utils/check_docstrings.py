@@ -49,8 +49,8 @@ from typing import Any
 from check_repo import ignore_undocumented
 from git import Repo
 
-from transformers.utils import direct_transformers_import
-from transformers.utils.auto_docstring import (
+from transformers_4573.utils import direct_transformers_import
+from transformers_4573.utils.auto_docstring import (
     ImageProcessorArgs,
     ModelArgs,
     ModelOutputArgs,

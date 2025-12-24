@@ -72,7 +72,7 @@ Tips:
 - After conversion, the model and tokenizer can be loaded via:
 
     ```python
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
     tokenizer = AutoTokenizer.from_pretrained("/output/path")
     model = AutoModelForCausalLM.from_pretrained("/output/path")

@@ -39,7 +39,7 @@ The example below demonstrates how to predict the [MASK] token with [`Pipeline`]
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
    task="fill-mask",
@@ -55,7 +55,7 @@ pipeline("這家餐廳的拉麵是我[MASK]過的最好的拉麵之")
 
 ```py
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
    "weiweishi/roc-bert-base-zh",

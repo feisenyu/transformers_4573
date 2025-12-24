@@ -19,8 +19,8 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.modeling_outputs import ModelOutput
-from transformers.utils.generic import TransformersKwargs, check_model_inputs
+from transformers_4573.modeling_outputs import ModelOutput
+from transformers_4573.utils.generic import TransformersKwargs, check_model_inputs
 
 from ...processing_utils import Unpack
 from ...utils import auto_docstring, logging
@@ -549,7 +549,7 @@ class SamHQModel(SamModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoModel, AutoProcessor
+        >>> from transformers_4573 import AutoModel, AutoProcessor
 
         >>> model = AutoModel.from_pretrained("sushmanth/sam_hq_vit_b")
         >>> processor = AutoProcessor.from_pretrained("sushmanth/sam_hq_vit_b")

@@ -18,14 +18,14 @@ import re
 import tempfile
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     DeepseekVLConfig,
     DeepseekVLForConditionalGeneration,
     DeepseekVLModel,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     slow,

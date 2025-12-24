@@ -19,8 +19,8 @@ from functools import cached_property
 import pytest
 from parameterized import parameterized
 
-from transformers import BitsAndBytesConfig, IdeficsConfig, is_torch_available, is_vision_available
-from transformers.testing_utils import (
+from transformers_4573 import BitsAndBytesConfig, IdeficsConfig, is_torch_available, is_vision_available
+from transformers_4573.testing_utils import (
     TestCasePlus,
     require_bitsandbytes,
     require_torch,
@@ -44,8 +44,8 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import IdeficsForVisionText2Text, IdeficsModel, IdeficsProcessor
-    from transformers.models.idefics.configuration_idefics import IdeficsPerceiverConfig, IdeficsVisionConfig
+    from transformers_4573 import IdeficsForVisionText2Text, IdeficsModel, IdeficsProcessor
+    from transformers_4573.models.idefics.configuration_idefics import IdeficsPerceiverConfig, IdeficsVisionConfig
 
 if is_vision_available():
     from PIL import Image

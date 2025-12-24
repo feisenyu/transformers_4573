@@ -68,7 +68,7 @@ TensorFlowの[model.save](https://www.tensorflow.org/tutorials/keras/save_and_lo
 - モデルの重みを`h5`ファイル拡張子で保存し、[`~TFPreTrainedModel.from_pretrained`]を使用してモデルを再読み込みする：
 
 ```py
->>> from transformers import TFPreTrainedModel
+>>> from transformers_4573 import TFPreTrainedModel
 
 >>> model.save_weights("some_folder/tf_model.h5")
 >>> model = TFPreTrainedModel.from_pretrained("some_folder")
@@ -77,7 +77,7 @@ TensorFlowの[model.save](https://www.tensorflow.org/tutorials/keras/save_and_lo
 - Save the model with [`~TFPretrainedModel.save_pretrained`] and load it again with [`~TFPreTrainedModel.from_pretrained`]:
 
 ```py
->>> from transformers import TFPreTrainedModel
+>>> from transformers_4573 import TFPreTrainedModel
 
 >>> model.save_pretrained("path_to/model")
 >>> model = TFPreTrainedModel.from_pretrained("path_to/model")
@@ -129,7 +129,7 @@ GPUからより良いトレースバックを取得する別のオプション�
 
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 >>> import torch
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-uncased")
@@ -186,7 +186,7 @@ tensor([[ 0.0082, -0.2307],
 
 
 ```py
->>> from transformers import AutoProcessor, AutoModelForQuestionAnswering
+>>> from transformers_4573 import AutoProcessor, AutoModelForQuestionAnswering
 
 >>> processor = AutoProcessor.from_pretrained("openai-community/gpt2-medium")
 >>> model = AutoModelForQuestionAnswering.from_pretrained("openai-community/gpt2-medium")

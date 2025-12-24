@@ -1807,7 +1807,7 @@ class Gemma3nForCausalLM(Gemma3nPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Gemma3nForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Gemma3nForCausalLM
 
         >>> model = Gemma3nForCausalLM.from_pretrained("google/gemma-2-9b")
         >>> tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b")
@@ -2033,7 +2033,7 @@ class Gemma3nModel(Gemma3nPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Gemma3nForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Gemma3nForConditionalGeneration
 
         >>> model = Gemma3nForConditionalGeneration.from_pretrained("google/gemma3n2-3b-mix-224")
         >>> processor = AutoProcessor.from_pretrained("google/gemma3n2-3b-mix-224")
@@ -2224,7 +2224,7 @@ class Gemma3nForConditionalGeneration(Gemma3nPreTrainedModel, GenerationMixin):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Gemma3ForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Gemma3ForConditionalGeneration
 
         >>> model = Gemma3ForConditionalGeneration.from_pretrained("google/gemma-3-4b-it")
         >>> processor = AutoProcessor.from_pretrained("google/gemma-3-4b-it")

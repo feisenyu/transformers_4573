@@ -156,7 +156,7 @@ class Block(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->OpenAIGPT
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->OpenAIGPT
 class OpenAIGPTSequenceSummary(nn.Module):
     r"""
     Compute a single vector summary of a sequence hidden states.
@@ -544,7 +544,7 @@ class OpenAIGPTDoubleHeadsModel(OpenAIGPTPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, OpenAIGPTDoubleHeadsModel
+        >>> from transformers_4573 import AutoTokenizer, OpenAIGPTDoubleHeadsModel
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("openai-community/openai-gpt")

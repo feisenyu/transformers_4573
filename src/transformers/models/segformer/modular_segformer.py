@@ -19,7 +19,7 @@ from typing import Optional, Union
 import torch
 from torchvision.transforms.v2 import functional as F
 
-from transformers.models.beit.image_processing_beit_fast import BeitImageProcessorFast
+from transformers_4573.models.beit.image_processing_beit_fast import BeitImageProcessorFast
 
 from ...image_processing_utils import BatchFeature
 from ...image_processing_utils_fast import (

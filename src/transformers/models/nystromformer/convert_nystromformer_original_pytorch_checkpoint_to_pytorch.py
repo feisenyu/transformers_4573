@@ -19,7 +19,7 @@ import argparse
 
 import torch
 
-from transformers import NystromformerConfig, NystromformerForMaskedLM
+from transformers_4573 import NystromformerConfig, NystromformerForMaskedLM
 
 
 def rename_key(orig_key):

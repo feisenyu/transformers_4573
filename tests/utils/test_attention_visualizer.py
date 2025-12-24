@@ -17,8 +17,8 @@ import io
 import re
 import unittest
 
-from transformers.testing_utils import require_read_token, require_torch
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.testing_utils import require_read_token, require_torch
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 
 ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")

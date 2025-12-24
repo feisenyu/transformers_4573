@@ -292,7 +292,7 @@ class ErnieModel(BertModel):
             past_key_values=encoder_outputs.past_key_values,
         )
 
-    # Copied from transformers.models.bert.modeling_bert.BertModel._create_attention_masks
+    # Copied from transformers_4573.models.bert.modeling_bert.BertModel._create_attention_masks
     def _create_attention_masks(
         self,
         attention_mask,
@@ -372,7 +372,7 @@ class ErnieForPreTraining(BertForPreTraining):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, ErnieForPreTraining
+        >>> from transformers_4573 import AutoTokenizer, ErnieForPreTraining
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("nghuyong/ernie-1.0-base-zh")
@@ -575,7 +575,7 @@ class ErnieForNextSentencePrediction(BertForNextSentencePrediction):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, ErnieForNextSentencePrediction
+        >>> from transformers_4573 import AutoTokenizer, ErnieForNextSentencePrediction
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("nghuyong/ernie-1.0-base-zh")

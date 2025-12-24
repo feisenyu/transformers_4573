@@ -81,7 +81,7 @@ class BlenderbotSmallConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BlenderbotSmallConfig, BlenderbotSmallModel
+    >>> from transformers_4573 import BlenderbotSmallConfig, BlenderbotSmallModel
 
     >>> # Initializing a BlenderbotSmall facebook/blenderbot_small-90M style configuration
     >>> configuration = BlenderbotSmallConfig()

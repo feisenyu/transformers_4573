@@ -91,7 +91,7 @@ pip install transformers datasets evaluate
 다음 단계에서는 `question` 및 `context` 항목을 처리하기 위해 DistilBERT 토크나이저를 가져옵니다:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -166,7 +166,7 @@ pip install transformers datasets evaluate
 이제 [`DefaultDataCollator`]를 이용해 예시 배치를 생성합니다. 🤗 Transformers의 다른 데이터 콜레이터(data collator)와 달리, [`DefaultDataCollator`]는 패딩과 같은 추가 전처리를 적용하지 않습니다:
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers_4573 import DefaultDataCollator
 
 >>> data_collator = DefaultDataCollator()
 ```
@@ -182,7 +182,7 @@ pip install transformers datasets evaluate
 이제 모델 훈련을 시작할 준비가 되었습니다! [`AutoModelForQuestionAnswering`]으로 DistilBERT를 가져옵니다:
 
 ```py
->>> from transformers import AutoModelForQuestionAnswering, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForQuestionAnswering, TrainingArguments, Trainer
 
 >>> model = AutoModelForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -249,7 +249,7 @@ pip install transformers datasets evaluate
 추론을 위해 미세 조정한 모델을 테스트하는 가장 쉬운 방법은 [`pipeline`]을 사용하는 것 입니다. 모델을 사용해 질의 응답을 하기 위해서 `pipeline`을 인스턴스화하고 텍스트를 입력합니다:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> question_answerer = pipeline("question-answering", model="my_awesome_qa_model")
 >>> question_answerer(question=question, context=context)
@@ -264,7 +264,7 @@ pip install transformers datasets evaluate
 텍스트를 토큰화해서 PyTorch 텐서를 반환합니다:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("my_awesome_qa_model")
 >>> inputs = tokenizer(question, context, return_tensors="pt")
@@ -273,7 +273,7 @@ pip install transformers datasets evaluate
 모델에 입력을 전달하고 `logits`을 반환합니다:
 
 ```py
->>> from transformers import AutoModelForQuestionAnswering
+>>> from transformers_4573 import AutoModelForQuestionAnswering
 
 >>> model = AutoModelForQuestionAnswering.from_pretrained("my_awesome_qa_model")
 >>> with torch.no_grad():

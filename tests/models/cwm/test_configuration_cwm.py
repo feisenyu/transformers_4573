@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers.models.cwm import CwmConfig
-from transformers.testing_utils import require_torch
+from transformers_4573.models.cwm import CwmConfig
+from transformers_4573.testing_utils import require_torch
 
 from ...test_configuration_common import ConfigTester
 

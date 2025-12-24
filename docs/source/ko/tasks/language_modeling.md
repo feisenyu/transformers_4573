@@ -96,7 +96,7 @@ pip install transformers datasets evaluate
 다음 단계는 `text` 필드를 전처리하기 위해 DistilGPT2 토크나이저를 불러오는 것입니다.
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilgpt2")
 ```
@@ -178,7 +178,7 @@ pip install transformers datasets evaluate
 패딩 토큰으로 종결 토큰을 사용하고 `mlm=False`로 설정하세요. 이렇게 하면 입력을 오른쪽으로 한 칸씩 시프트한 값을 레이블로 사용합니다:
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -197,7 +197,7 @@ pip install transformers datasets evaluate
 이제 모델을 훈련하기 준비가 되었습니다! [`AutoModelForCausalLM`]를 사용하여 DistilGPT2를 불러옵니다:
 
 ```py
->>> from transformers import AutoModelForCausalLM, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForCausalLM, TrainingArguments, Trainer
 
 >>> model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
 ```
@@ -263,7 +263,7 @@ Perplexity: 49.61
 추론을 위해 미세 조정된 모델을 간단히 사용하는 가장 간단한 방법은 [`pipeline`]에서 사용하는 것입니다. 모델과 함께 텍스트 생성을 위한 `pipeline`을 인스턴스화하고 텍스트를 전달하세요:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline("text-generation", model="my_awesome_eli5_clm-model")
 >>> generator(prompt)
@@ -273,7 +273,7 @@ Perplexity: 49.61
 텍스트를 토큰화하고 `input_ids`를 PyTorch 텐서로 반환하세요:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("my_awesome_eli5_clm-model")
 >>> inputs = tokenizer(prompt, return_tensors="pt").input_ids
@@ -282,7 +282,7 @@ Perplexity: 49.61
 [`~generation.GenerationMixin.generate`] 메소드를 사용하여 텍스트를 생성하세요. 생성을 제어하는 다양한 텍스트 생성 전략과 매개변수에 대한 자세한 내용은 [텍스트 생성 전략](../generation_strategies) 페이지를 확인하세요.
 
 ```py
->>> from transformers import AutoModelForCausalLM
+>>> from transformers_4573 import AutoModelForCausalLM
 
 >>> model = AutoModelForCausalLM.from_pretrained("my_awesome_eli5_clm-model")
 >>> outputs = model.generate(inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)

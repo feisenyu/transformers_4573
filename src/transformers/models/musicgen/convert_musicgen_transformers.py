@@ -21,7 +21,7 @@ from pathlib import Path
 import torch
 from audiocraft.models import MusicGen
 
-from transformers import (
+from transformers_4573 import (
     AutoFeatureExtractor,
     AutoTokenizer,
     EncodecModel,
@@ -30,8 +30,8 @@ from transformers import (
     MusicgenProcessor,
     T5EncoderModel,
 )
-from transformers.models.musicgen.modeling_musicgen import MusicgenForCausalLM
-from transformers.utils import logging
+from transformers_4573.models.musicgen.modeling_musicgen import MusicgenForCausalLM
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

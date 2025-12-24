@@ -70,7 +70,7 @@ BART와 동일한 모델을 사용하는 번역 모델 프레임워크입니다.
 
 
 ```python
->>> from transformers import MarianMTModel, MarianTokenizer
+>>> from transformers_4573 import MarianMTModel, MarianTokenizer
 
 >>> src_text = [
 ...     ">>fra<< this is a sentence in english that we want to translate to french",
@@ -135,7 +135,7 @@ GROUP_MEMBERS = {
 
 
 ```python
->>> from transformers import MarianMTModel, MarianTokenizer
+>>> from transformers_4573 import MarianMTModel, MarianTokenizer
 
 >>> src_text = [
 ...     ">>fr<< this is a sentence in english that we want to translate to french",

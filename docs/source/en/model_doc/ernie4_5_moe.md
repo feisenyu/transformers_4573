@@ -46,7 +46,7 @@ Other models from the family can be found at [Ernie 4.5](./ernie4_5) and [Ernie 
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "baidu/ERNIE-4.5-21B-A3B-PT"
 
@@ -86,7 +86,7 @@ generate_text = tokenizer.decode(output_ids, skip_special_tokens=True)
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "baidu/ERNIE-4.5-21B-A3B-PT"
 
@@ -127,7 +127,7 @@ generate_text = tokenizer.decode(output_ids, skip_special_tokens=True)
 
 ```python
 import torch
-from transformers import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer
 
 model_name = "baidu/ERNIE-4.5-21B-A3B-PT"
 

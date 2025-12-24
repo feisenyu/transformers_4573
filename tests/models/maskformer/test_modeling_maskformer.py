@@ -20,8 +20,8 @@ from functools import cached_property
 import numpy as np
 
 from tests.test_modeling_common import floats_tensor
-from transformers import DetrConfig, MaskFormerConfig, SwinConfig, is_torch_available, is_vision_available
-from transformers.testing_utils import (
+from transformers_4573 import DetrConfig, MaskFormerConfig, SwinConfig, is_torch_available, is_vision_available
+from transformers_4573.testing_utils import (
     Expectations,
     require_timm,
     require_torch,
@@ -42,10 +42,10 @@ if is_torch_available():
     import torch
     import torch.nn.functional as F
 
-    from transformers import MaskFormerForInstanceSegmentation, MaskFormerModel
+    from transformers_4573 import MaskFormerForInstanceSegmentation, MaskFormerModel
 
     if is_vision_available():
-        from transformers import MaskFormerImageProcessor
+        from transformers_4573 import MaskFormerImageProcessor
 
 if is_vision_available():
     from PIL import Image

@@ -20,8 +20,8 @@ import unittest
 import numpy as np
 import requests
 
-from transformers import BlipConfig, BlipTextConfig, BlipVisionConfig
-from transformers.testing_utils import (
+from transformers_4573 import BlipConfig, BlipTextConfig, BlipVisionConfig
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     require_torch_fp16,
@@ -29,7 +29,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import (
@@ -45,7 +45,7 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import (
+    from transformers_4573 import (
         BlipForConditionalGeneration,
         BlipForImageTextRetrieval,
         BlipForQuestionAnswering,
@@ -58,7 +58,7 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import BlipProcessor
+    from transformers_4573 import BlipProcessor
 
 
 class BlipVisionModelTester:

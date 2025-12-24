@@ -68,7 +68,7 @@ _TRIVIA_QA_MAPPING = {
 class BigBirdEmbeddings(nn.Module):
     """Construct the embeddings from word, position and token_type embeddings."""
 
-    # Copied from transformers.models.bert.modeling_bert.BertEmbeddings.__init__
+    # Copied from transformers_4573.models.bert.modeling_bert.BertEmbeddings.__init__
     def __init__(self, config):
         super().__init__()
         self.word_embeddings = nn.Embedding(config.vocab_size, config.hidden_size, padding_idx=config.pad_token_id)
@@ -1111,7 +1111,7 @@ class BigBirdBlockSparseAttention(nn.Module):
         return np.array(selected_random_blocks, dtype=np.int32)
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput with Bert->BigBird
 class BigBirdSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1213,7 +1213,7 @@ class BigBirdAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate with Bert->BigBird
 class BigBirdIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1229,7 +1229,7 @@ class BigBirdIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput with Bert->BigBird
 class BigBirdOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1439,7 +1439,7 @@ class BigBirdEncoder(nn.Module):
         )
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPredictionHeadTransform with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertPredictionHeadTransform with Bert->BigBird
 class BigBirdPredictionHeadTransform(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1457,7 +1457,7 @@ class BigBirdPredictionHeadTransform(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertLMPredictionHead with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertLMPredictionHead with Bert->BigBird
 class BigBirdLMPredictionHead(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1474,7 +1474,7 @@ class BigBirdLMPredictionHead(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOnlyMLMHead with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertOnlyMLMHead with Bert->BigBird
 class BigBirdOnlyMLMHead(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1485,7 +1485,7 @@ class BigBirdOnlyMLMHead(nn.Module):
         return prediction_scores
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOnlyNSPHead with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertOnlyNSPHead with Bert->BigBird
 class BigBirdOnlyNSPHead(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1496,7 +1496,7 @@ class BigBirdOnlyNSPHead(nn.Module):
         return seq_relationship_score
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPreTrainingHeads with Bert->BigBird
+# Copied from transformers_4573.models.bert.modeling_bert.BertPreTrainingHeads with Bert->BigBird
 class BigBirdPreTrainingHeads(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1939,7 +1939,7 @@ class BigBirdForPreTraining(BigBirdPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BigBirdForPreTraining
+        >>> from transformers_4573 import AutoTokenizer, BigBirdForPreTraining
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/bigbird-roberta-base")
@@ -2044,7 +2044,7 @@ class BigBirdForMaskedLM(BigBirdPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, BigBirdForMaskedLM
+        >>> from transformers_4573 import AutoTokenizer, BigBirdForMaskedLM
         >>> from datasets import load_dataset
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/bigbird-roberta-base")
@@ -2294,7 +2294,7 @@ class BigBirdForSequenceClassification(BigBirdPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, BigBirdForSequenceClassification
+        >>> from transformers_4573 import AutoTokenizer, BigBirdForSequenceClassification
         >>> from datasets import load_dataset
 
         >>> tokenizer = AutoTokenizer.from_pretrained("l-yohai/bigbird-roberta-base-mnli")
@@ -2609,7 +2609,7 @@ class BigBirdForQuestionAnswering(BigBirdPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, BigBirdForQuestionAnswering
+        >>> from transformers_4573 import AutoTokenizer, BigBirdForQuestionAnswering
         >>> from datasets import load_dataset
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/bigbird-roberta-base")

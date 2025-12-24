@@ -80,7 +80,7 @@ To summarize:
 Initializing a model with a pre-trained base and randomly initialized classification heads from the hub can be done as shown below.
 
 ```py
->>> from transformers import TapasConfig, TapasForQuestionAnswering
+>>> from transformers_4573 import TapasConfig, TapasForQuestionAnswering
 
 >>> # for example, the base sized model with default SQA configuration
 >>> model = TapasForQuestionAnswering.from_pretrained("google/tapas-base")
@@ -97,7 +97,7 @@ Initializing a model with a pre-trained base and randomly initialized classifica
 Of course, you don't necessarily have to follow one of these three ways in which TAPAS was fine-tuned. You can also experiment by defining any hyperparameters you want when initializing [`TapasConfig`], and then create a [`TapasForQuestionAnswering`] based on that configuration. For example, if you have a dataset that has both conversational questions and questions that might involve aggregation, then you can do it this way. Here's an example:
 
 ```py
->>> from transformers import TapasConfig, TapasForQuestionAnswering
+>>> from transformers_4573 import TapasConfig, TapasForQuestionAnswering
 
 >>> # you can initialize the classification heads any way you want (see docs of TapasConfig)
 >>> config = TapasConfig(num_aggregation_labels=3, average_logits_per_cell=True)
@@ -139,7 +139,7 @@ inputs to be fine-tuned:
 [`TapasTokenizer`] creates the `labels`, `numeric_values` and `numeric_values_scale` based on the `answer_coordinates` and `answer_text` columns of the TSV file. The `float_answer` and `aggregation_labels` are already in the TSV file of step 2. Here's an example:
 
 ```py
->>> from transformers import TapasTokenizer
+>>> from transformers_4573 import TapasTokenizer
 >>> import pandas as pd
 
 >>> model_name = "google/tapas-base"
@@ -220,7 +220,7 @@ index) and batch encode each table with its questions. This will make sure that 
 You can then fine-tune [`TapasForQuestionAnswering`] as follows (shown here for the weak supervision for aggregation case):
 
 ```py
->>> from transformers import TapasConfig, TapasForQuestionAnswering, AdamW
+>>> from transformers_4573 import TapasConfig, TapasForQuestionAnswering, AdamW
 
 >>> # this is the default WTQ configuration
 >>> config = TapasConfig(
@@ -275,7 +275,7 @@ Here we explain how you can use [`TapasForQuestionAnswering`] for inference (i.e
 However, note that inference is **different** depending on whether or not the setup is conversational. In a non-conversational set-up, inference can be done in parallel on all table-question pairs of a batch. Here's an example of that:
 
 ```py
->>> from transformers import TapasTokenizer, TapasForQuestionAnswering
+>>> from transformers_4573 import TapasTokenizer, TapasForQuestionAnswering
 >>> import pandas as pd
 
 >>> model_name = "google/tapas-base-finetuned-wtq"

@@ -22,14 +22,14 @@ import torch
 from accelerate.utils.modeling import find_tied_parameters
 from seamless_communication.models.inference.translator import Translator
 
-from transformers import (
+from transformers_4573 import (
     SeamlessM4TConfig,
     SeamlessM4TFeatureExtractor,
     SeamlessM4TModel,
     SeamlessM4TProcessor,
     SeamlessM4TTokenizer,
 )
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 
 UNIT_SUPPORTED_LANGUAGES = ["__arb__", "__ben__", "__cat__", "__ces__", "__cmn__", "__cym__", "__dan__", "__deu__", "__eng__", "__est__", "__fin__", "__fra__", "__hin__", "__ind__", "__ita__", "__jpn__", "__kan__", "__kor__", "__mlt__", "__nld__", "__pes__", "__pol__", "__por__", "__ron__", "__rus__", "__slk__", "__spa__", "__swe__", "__swh__", "__tam__", "__tel__", "__tgl__", "__tha__", "__tur__", "__ukr__", "__urd__", "__uzn__", "__vie__", ]  # fmt: skip

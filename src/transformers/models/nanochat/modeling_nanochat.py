@@ -477,7 +477,7 @@ class NanoChatForCausalLM(NanoChatPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, AutoModelForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
         >>> model = AutoModelForCausalLM.from_pretrained("karpathy/nanochat-d32")
 

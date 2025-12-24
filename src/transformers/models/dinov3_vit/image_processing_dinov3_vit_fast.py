@@ -19,15 +19,15 @@ from typing import Optional, Union
 import torch
 from torchvision.transforms.v2 import functional as F
 
-from transformers.image_processing_base import BatchFeature
-from transformers.image_processing_utils_fast import BaseImageProcessorFast, group_images_by_shape, reorder_images
-from transformers.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling, SizeDict
-from transformers.utils import (
+from transformers_4573.image_processing_base import BatchFeature
+from transformers_4573.image_processing_utils_fast import BaseImageProcessorFast, group_images_by_shape, reorder_images
+from transformers_4573.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling, SizeDict
+from transformers_4573.utils import (
     TensorType,
     auto_docstring,
     logging,
 )
-from transformers.utils.import_utils import requires
+from transformers_4573.utils.import_utils import requires
 
 
 logger = logging.get_logger(__name__)

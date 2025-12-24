@@ -242,7 +242,7 @@ class T5Gemma2EncoderConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import T5Gemma2EncoderForConditionalGeneration, T5Gemma2EncoderConfig, SiglipVisionConfig, T5Gemma2EncoderTextConfig
+    >>> from transformers_4573 import T5Gemma2EncoderForConditionalGeneration, T5Gemma2EncoderConfig, SiglipVisionConfig, T5Gemma2EncoderTextConfig
 
     >>> # Initializing a Siglip-like vision config
     >>> vision_config = SiglipVisionConfig()
@@ -515,7 +515,7 @@ class T5Gemma2Config(PreTrainedConfig):
             The image token index to encode the image prompt. Defaults to 256001, which is right after the eoi_token_index.
             Note this is different from Gemma 3.
     ```python
-    >>> from transformers import T5Gemma2Config, T5Gemma2Model
+    >>> from transformers_4573 import T5Gemma2Config, T5Gemma2Model
     >>> t5gemma2_config = T5Gemma2Config.from_pretrained("google/t5gemma-270m-270m")
     >>> model = T5Gemma2Model(t5gemma2_config)
     ```

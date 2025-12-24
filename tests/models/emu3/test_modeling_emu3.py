@@ -20,8 +20,8 @@ import pytest
 import requests
 from huggingface_hub import hf_hub_download
 
-from transformers import BitsAndBytesConfig, Emu3Config, Emu3TextConfig, is_torch_available, is_vision_available
-from transformers.testing_utils import (
+from transformers_4573 import BitsAndBytesConfig, Emu3Config, Emu3TextConfig, is_torch_available, is_vision_available
+from transformers_4573.testing_utils import (
     Expectations,
     require_bitsandbytes,
     require_torch,
@@ -42,7 +42,7 @@ if is_vision_available():
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Emu3ForCausalLM,
         Emu3ForConditionalGeneration,
         Emu3Model,

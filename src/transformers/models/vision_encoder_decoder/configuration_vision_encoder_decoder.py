@@ -43,7 +43,7 @@ class VisionEncoderDecoderConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import BertConfig, ViTConfig, VisionEncoderDecoderConfig, VisionEncoderDecoderModel
+    >>> from transformers_4573 import BertConfig, ViTConfig, VisionEncoderDecoderConfig, VisionEncoderDecoderModel
 
     >>> # Initializing a ViT & BERT style configuration
     >>> config_encoder = ViTConfig()

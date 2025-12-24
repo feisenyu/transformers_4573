@@ -13,8 +13,8 @@
 # limitations under the License.
 import unittest
 
-from transformers import T5Tokenizer
-from transformers.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers
+from transformers_4573 import T5Tokenizer
+from transformers_4573.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

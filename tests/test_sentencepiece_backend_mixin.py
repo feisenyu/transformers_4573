@@ -4,8 +4,8 @@ import shutil
 import tempfile
 from typing import TYPE_CHECKING
 
-from transformers import AutoTokenizer, PythonBackend, TokenizersBackend
-from transformers.tokenization_python import AddedToken
+from transformers_4573 import AutoTokenizer, PythonBackend, TokenizersBackend
+from transformers_4573.tokenization_python import AddedToken
 
 
 if TYPE_CHECKING:

@@ -1514,7 +1514,7 @@ class RTDetrV2Model(RTDetrV2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, RTDetrV2Model
+        >>> from transformers_4573 import AutoImageProcessor, RTDetrV2Model
         >>> from PIL import Image
         >>> import requests
 
@@ -1878,7 +1878,7 @@ class RTDetrV2ForObjectDetection(RTDetrV2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import RTDetrV2ImageProcessor, RTDetrV2ForObjectDetection
+        >>> from transformers_4573 import RTDetrV2ImageProcessor, RTDetrV2ForObjectDetection
         >>> from PIL import Image
         >>> import requests
         >>> import torch

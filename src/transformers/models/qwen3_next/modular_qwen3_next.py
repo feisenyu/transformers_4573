@@ -871,7 +871,7 @@ class Qwen3NextForCausalLM(MixtralForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Qwen3NextForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Qwen3NextForCausalLM
 
         >>> model = Qwen3NextForCausalLM.from_pretrained("Qwen/Qwen3-Next-80B-A3B-Instruct")
         >>> tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-Next-80B-A3B-Instruct")

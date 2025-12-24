@@ -18,15 +18,15 @@ import numpy as np
 import pytest
 from packaging import version
 
-from transformers.image_utils import load_image
-from transformers.testing_utils import (
+from transformers_4573.image_utils import load_image
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     require_vision,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 from ...test_processing_common import url_to_local_path
@@ -38,10 +38,10 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import PixtralImageProcessor
+    from transformers_4573 import PixtralImageProcessor
 
     if is_torchvision_available():
-        from transformers import PixtralImageProcessorFast
+        from transformers_4573 import PixtralImageProcessorFast
 
 
 class PixtralImageProcessingTester:

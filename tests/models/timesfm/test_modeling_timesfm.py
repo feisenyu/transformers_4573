@@ -19,15 +19,15 @@ import unittest
 import numpy as np
 import torch
 
-from transformers import TimesFmConfig, is_torch_available
-from transformers.testing_utils import require_torch, slow, torch_device
+from transformers_4573 import TimesFmConfig, is_torch_available
+from transformers_4573.testing_utils import require_torch, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin
 
 
 if is_torch_available():
-    from transformers import TimesFmModelForPrediction
+    from transformers_4573 import TimesFmModelForPrediction
 
 TOLERANCE = 1e-4
 

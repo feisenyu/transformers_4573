@@ -60,7 +60,7 @@ IDEFICS 프로세서는 [`LlamaTokenizer`]와 IDEFICS 이미지 프로세서를 
 ```py
 >>> import torch
 
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained(checkpoint)
 
@@ -75,7 +75,7 @@ IDEFICS 프로세서는 [`LlamaTokenizer`]와 IDEFICS 이미지 프로세서를 
 
 ```py
 >>> import torch
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor, BitsAndBytesConfig
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor, BitsAndBytesConfig
 
 >>> quantization_config = BitsAndBytesConfig(
 ...     load_in_4bit=True,
@@ -351,7 +351,7 @@ This is an image of a vegetable stand.
 
 ```py
 >>> import torch
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor
 
 >>> checkpoint = "HuggingFaceM4/idefics-9b-instruct"
 >>> model = IdeficsForVisionText2Text.from_pretrained(checkpoint, dtype=torch.bfloat16, device_map="auto")

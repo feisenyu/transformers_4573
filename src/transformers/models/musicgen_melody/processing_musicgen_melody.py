@@ -44,7 +44,7 @@ class MusicgenMelodyProcessor(ProcessorMixin):
     def __init__(self, feature_extractor, tokenizer):
         super().__init__(feature_extractor, tokenizer)
 
-    # Copied from transformers.models.musicgen.processing_musicgen.MusicgenProcessor.get_decoder_prompt_ids
+    # Copied from transformers_4573.models.musicgen.processing_musicgen.MusicgenProcessor.get_decoder_prompt_ids
     def get_decoder_prompt_ids(self, task=None, language=None, no_timestamps=True):
         return self.tokenizer.get_decoder_prompt_ids(task=task, language=language, no_timestamps=no_timestamps)
 
@@ -59,7 +59,7 @@ class MusicgenMelodyProcessor(ProcessorMixin):
             kwargs["audio"] = args[0]
         return super().__call__(*args, **kwargs)
 
-    # Copied from transformers.models.musicgen.processing_musicgen.MusicgenProcessor.batch_decode with padding_mask->attention_mask
+    # Copied from transformers_4573.models.musicgen.processing_musicgen.MusicgenProcessor.batch_decode with padding_mask->attention_mask
     def batch_decode(self, *args, **kwargs):
         """
         This method is used to decode either batches of audio outputs from the MusicGen model, or batches of token ids
@@ -78,7 +78,7 @@ class MusicgenMelodyProcessor(ProcessorMixin):
         else:
             return self.tokenizer.batch_decode(*args, **kwargs)
 
-    # Copied from transformers.models.musicgen.processing_musicgen.MusicgenProcessor._decode_audio with padding_mask->attention_mask
+    # Copied from transformers_4573.models.musicgen.processing_musicgen.MusicgenProcessor._decode_audio with padding_mask->attention_mask
     def _decode_audio(self, audio_values, attention_mask: Any = None) -> list[np.ndarray]:
         """
         This method strips any padding from the audio values to return a list of numpy audio arrays.
@@ -117,7 +117,7 @@ class MusicgenMelodyProcessor(ProcessorMixin):
 
         Example:
         ```python
-        >>> from transformers import MusicgenMelodyForConditionalGeneration, MusicgenMelodyProcessor
+        >>> from transformers_4573 import MusicgenMelodyForConditionalGeneration, MusicgenMelodyProcessor
 
         >>> model = MusicgenMelodyForConditionalGeneration.from_pretrained("facebook/musicgen-melody")
 

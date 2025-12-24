@@ -33,7 +33,7 @@ from torchvision.transforms import Compose, Lambda, Normalize, RandomHorizontalF
 from torchvision.transforms.functional import InterpolationMode
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     HfArgumentParser,
     Trainer,
     TrainingArguments,
@@ -41,8 +41,8 @@ from transformers import (
     ViTMAEConfig,
     ViTMAEForPreTraining,
 )
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 """ Pre-training a 🤗 ViT model as an MAE (masked autoencoder), as proposed in https://huggingface.co/papers/2111.06377."""

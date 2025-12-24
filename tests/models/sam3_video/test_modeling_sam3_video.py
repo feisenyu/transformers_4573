@@ -17,19 +17,19 @@
 import gc
 import unittest
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available
-from transformers.video_utils import load_video
+from transformers_4573.utils import is_torch_available
+from transformers_4573.video_utils import load_video
 
 
 if is_torch_available():
     import torch
 
-    from transformers import Sam3VideoModel, Sam3VideoProcessor
+    from transformers_4573 import Sam3VideoModel, Sam3VideoProcessor
 
 
 def prepare_video():
@@ -535,7 +535,7 @@ class Sam3VideoModelIntegrationTest(unittest.TestCase):
 
     def test_custom_image_size(self):
         """Test that custom image size can be set and propagates correctly to detector and tracker configs."""
-        from transformers import Sam3VideoConfig
+        from transformers_4573 import Sam3VideoConfig
 
         config = Sam3VideoConfig.from_pretrained("facebook/sam3")
         config.image_size = 560

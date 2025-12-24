@@ -22,13 +22,13 @@ from functools import cached_property
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     RTDetrResNetConfig,
     RTDetrV2Config,
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     require_torch,
     require_torch_accelerator,
@@ -45,12 +45,12 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import RTDetrV2ForObjectDetection, RTDetrV2Model
+    from transformers_4573 import RTDetrV2ForObjectDetection, RTDetrV2Model
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import RTDetrImageProcessor
+    from transformers_4573 import RTDetrImageProcessor
 
 
 CHECKPOINT = "PekingU/rtdetr_v2_r18vd"

@@ -447,7 +447,7 @@ class VoxtralForConditionalGeneration(VoxtralPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import VoxtralForConditionalGeneration, AutoProcessor
+        >>> from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
         >>> import torch
 
         >>> device = "cuda" if torch.cuda.is_available() else "cpu"

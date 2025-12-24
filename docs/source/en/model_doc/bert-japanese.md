@@ -39,7 +39,7 @@ Example of using a model with MeCab and WordPiece tokenization:
 
 ```python
 >>> import torch
->>> from transformers import AutoModel, AutoTokenizer
+>>> from transformers_4573 import AutoModel, AutoTokenizer
 
 >>> bertjapanese = AutoModel.from_pretrained("cl-tohoku/bert-base-japanese")
 >>> tokenizer = AutoTokenizer.from_pretrained("cl-tohoku/bert-base-japanese")

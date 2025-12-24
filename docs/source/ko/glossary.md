@@ -31,7 +31,7 @@ rendered properly in your Markdown viewer.
 예를 들어, 다음 두 개의 시퀀스가 있다고 가정해 봅시다:
 
 ```python
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -190,7 +190,7 @@ DataParallel 방식에 대해 더 알아보려면 [여기](perf_train_gpu_many#d
 토크나이저마다 작동 방식은 다르지만, 기본 메커니즘은 동일합니다. 다음은 [WordPiece](https://huggingface.co/papers/1609.08144) 토크나이저인 BERT 토크나이저를 사용한 예시입니다:
 
 ```python
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -402,7 +402,7 @@ RNN 모델과 달리 트랜스포머는 각 토큰의 위치 정보를 내부적
 두 개의 시퀀스를 `tokenizer`에 리스트가 아닌 개별 인자로 전달하면, 토크나이저가 자동으로 이러한 문장을 생성해 줍니다. 예시는 다음과 같습니다:
 
 ```python
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-cased")
 >>> sequence_a = "HuggingFace is based in NYC"

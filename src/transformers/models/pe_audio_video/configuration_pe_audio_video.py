@@ -70,7 +70,7 @@ class PeAudioVideoEncoderConfig(PreTrainedConfig):
             Dropout ratio applied to attention probabilities.
 
     ```python
-    >>> from transformers import PeAudioVideoEncoder, PeAudioVideoEncoderConfig
+    >>> from transformers_4573 import PeAudioVideoEncoder, PeAudioVideoEncoderConfig
 
     >>> # Initializing a PeAudioVideoEncoder style configuration
     >>> configuration = PeAudioVideoEncoderConfig()
@@ -160,7 +160,7 @@ class PeAudioVideoConfig(PretrainedConfig):
             Configuration for the audio-video encoder component.
 
     ```python
-    >>> from transformers import PeAudioVideoModel, PeAudioVideoConfig
+    >>> from transformers_4573 import PeAudioVideoModel, PeAudioVideoConfig
 
     >>> # Initializing a PeAudioVideoModel style configuration
     >>> configuration = PeAudioVideoConfig()

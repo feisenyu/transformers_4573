@@ -17,9 +17,9 @@ import unittest
 
 from datasets import load_dataset
 
-from transformers.file_utils import is_torch_available, is_vision_available
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torchvision_available
+from transformers_4573.file_utils import is_torch_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torchvision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -28,10 +28,10 @@ if is_torch_available():
     import torch
 
 if is_vision_available():
-    from transformers import SamImageProcessor
+    from transformers_4573 import SamImageProcessor
 
     if is_torchvision_available():
-        from transformers import SamImageProcessorFast
+        from transformers_4573 import SamImageProcessorFast
 
 
 class SamImageProcessingTester:
@@ -101,14 +101,14 @@ class SamImageProcessingTester:
         )
 
 
-# Copied from transformers.tests.models.beit.test_image_processing_beit.prepare_semantic_single_inputs
+# Copied from transformers_4573.tests.models.beit.test_image_processing_beit.prepare_semantic_single_inputs
 def prepare_semantic_single_inputs():
     ds = load_dataset("hf-internal-testing/fixtures_ade20k", split="test")
     example = ds[0]
     return example["image"], example["map"]
 
 
-# Copied from transformers.tests.models.beit.test_image_processing_beit.prepare_semantic_batch_inputs
+# Copied from transformers_4573.tests.models.beit.test_image_processing_beit.prepare_semantic_batch_inputs
 def prepare_semantic_batch_inputs():
     ds = load_dataset("hf-internal-testing/fixtures_ade20k", split="test")
     return list(ds["image"][:2]), list(ds["map"][:2])

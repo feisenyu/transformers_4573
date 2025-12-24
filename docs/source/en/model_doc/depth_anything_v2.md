@@ -42,7 +42,7 @@ There are 2 main ways to use Depth Anything V2: either using the pipeline API, w
 The pipeline allows to use the model in a few lines of code:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 >>> from PIL import Image
 >>> import requests
 
@@ -62,7 +62,7 @@ The pipeline allows to use the model in a few lines of code:
 If you want to do the pre- and post-processing yourself, here's how to do that:
 
 ```python
->>> from transformers import AutoImageProcessor, AutoModelForDepthEstimation
+>>> from transformers_4573 import AutoImageProcessor, AutoModelForDepthEstimation
 >>> import torch
 >>> import numpy as np
 >>> from PIL import Image

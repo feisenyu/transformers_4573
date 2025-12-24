@@ -37,7 +37,7 @@ The example below demonstrates how to use NanoChat for text generation with chat
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 chatbot = pipeline(
     task="text-generation",
@@ -59,7 +59,7 @@ print(outputs[0]["generated_text"][-1]["content"])
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_id = "karpathy/nanochat-d32"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

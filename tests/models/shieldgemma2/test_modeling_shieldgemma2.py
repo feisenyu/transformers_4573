@@ -19,8 +19,8 @@ from io import BytesIO
 import requests
 from PIL import Image
 
-from transformers import BitsAndBytesConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import BitsAndBytesConfig, is_torch_available
+from transformers_4573.testing_utils import (
     cleanup,
     require_read_token,
     require_torch_accelerator,
@@ -30,7 +30,7 @@ from transformers.testing_utils import (
 
 
 if is_torch_available():
-    from transformers import ShieldGemma2ForImageClassification, ShieldGemma2Processor
+    from transformers_4573 import ShieldGemma2ForImageClassification, ShieldGemma2Processor
 
 
 @slow

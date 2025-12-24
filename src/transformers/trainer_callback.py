@@ -176,7 +176,7 @@ class TrainerState:
             self.trial_name = trainer.hp_name(trainer._trial)
         self.trial_params = None
         if trial is not None:
-            from transformers.integrations import hp_params
+            from transformers_4573.integrations import hp_params
 
             self.trial_params = hp_params(trial)
 

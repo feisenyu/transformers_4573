@@ -137,7 +137,7 @@ Transformers에 달린 100,000개의 별을 축하하기 위해, 우리는 커�
 주어진 입력(텍스트, 이미지, 오디오, ...)에 바로 모델을 사용할 수 있도록, 우리는 `pipeline` API를 제공합니다. Pipeline은 사전학습 모델과 그 모델을 학습할 때 적용한 전처리 방식을 하나로 합칩니다. 다음은 긍정적인 텍스트와 부정적인 텍스트를 분류하기 위해 pipeline을 사용한 간단한 예시입니다:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # 감정 분석 파이프라인을 할당하세요
 >>> classifier = pipeline('sentiment-analysis')
@@ -152,7 +152,7 @@ Transformers에 달린 100,000개의 별을 축하하기 위해, 우리는 커�
 ``` python
 >>> import requests
 >>> from PIL import Image
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # 귀여운 고양이가 있는 이미지를 다운로드하세요
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png"
@@ -188,7 +188,7 @@ Transformers에 달린 100,000개의 별을 축하하기 위해, 우리는 커�
 
 코드 3줄로 원하는 과제에 맞게 사전학습 모델을 다운로드 받고 사용할 수 있습니다. 다음은 PyTorch 버전입니다:
 ```python
->>> from transformers import AutoTokenizer, AutoModel
+>>> from transformers_4573 import AutoTokenizer, AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
@@ -198,7 +198,7 @@ Transformers에 달린 100,000개의 별을 축하하기 위해, 우리는 커�
 ```
 다음은 TensorFlow 버전입니다:
 ```python
->>> from transformers import AutoTokenizer, TFAutoModel
+>>> from transformers_4573 import AutoTokenizer, TFAutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = TFAutoModel.from_pretrained("google-bert/bert-base-uncased")

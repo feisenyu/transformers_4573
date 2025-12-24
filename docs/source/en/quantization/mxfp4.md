@@ -35,7 +35,7 @@ cuda.get_device_capability()
 Check a model's quantization config as shown below to see if it supports MXFP4. If `'quant_method': 'mxfp4'`, then the model automatically uses MXFP4.
 
 ```py
-from transformers import GptOssConfig
+from transformers_4573 import GptOssConfig
 
 model_id = "openai/gpt-oss-120b"
 cfg = GptOssConfig.from_pretrained(model_id)

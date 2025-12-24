@@ -36,7 +36,7 @@ The example below demonstrates how to match keypoints between two images with [`
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 keypoint_matcher = pipeline(task="keypoint-matching", model="magic-leap-community/superglue_outdoor")
 
@@ -52,7 +52,7 @@ print(results[0])
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoImageProcessor, AutoModel
+from transformers_4573 import AutoImageProcessor, AutoModel
 import torch
 from PIL import Image
 import requests
@@ -84,7 +84,7 @@ processed_outputs = processor.post_process_keypoint_matching(outputs, image_size
 - SuperGlue performs feature matching between two images simultaneously, requiring pairs of images as input.
 
     ```python
-    from transformers import AutoImageProcessor, AutoModel
+    from transformers_4573 import AutoImageProcessor, AutoModel
     import torch
     from PIL import Image
     import requests

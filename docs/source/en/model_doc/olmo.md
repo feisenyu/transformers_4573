@@ -42,7 +42,7 @@ The example below demonstrates how to generate text with [`Pipeline`] or the [`A
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="text-generation",
@@ -60,7 +60,7 @@ print(result)
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "allenai/OLMo-7B-hf"
@@ -94,7 +94,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,

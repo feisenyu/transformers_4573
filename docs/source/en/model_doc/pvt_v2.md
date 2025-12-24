@@ -53,7 +53,7 @@ This model was contributed by [FoamoftheSea](https://huggingface.co/FoamoftheSea
 import requests
 import torch
 
-from transformers import AutoModelForImageClassification, AutoImageProcessor
+from transformers_4573 import AutoModelForImageClassification, AutoImageProcessor
 from PIL import Image
 
 model = AutoModelForImageClassification.from_pretrained("OpenGVLab/pvt_v2_b0")
@@ -70,7 +70,7 @@ To use the PVTv2 as a backbone for more complex architectures like DeformableDET
 import requests
 import torch
 
-from transformers import AutoConfig, AutoModelForObjectDetection, AutoImageProcessor
+from transformers_4573 import AutoConfig, AutoModelForObjectDetection, AutoImageProcessor
 from PIL import Image
 
 model = AutoModelForObjectDetection.from_config(

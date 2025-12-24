@@ -48,7 +48,7 @@ This model was contributed by [yonigozlan](https://huggingface.co/yonigozlan) an
 Process a video with all frames already available using text prompts:
 
 ```python
->>> from transformers import Sam3VideoModel, Sam3VideoProcessor
+>>> from transformers_4573 import Sam3VideoModel, Sam3VideoProcessor
 >>> from accelerate import Accelerator
 >>> import torch
 
@@ -57,7 +57,7 @@ Process a video with all frames already available using text prompts:
 >>> processor = Sam3VideoProcessor.from_pretrained("facebook/sam3")
 
 >>> # Load video frames
->>> from transformers.video_utils import load_video
+>>> from transformers_4573.video_utils import load_video
 >>> video_url = "https://huggingface.co/datasets/hf-internal-testing/sam2-fixtures/resolve/main/bedroom.mp4"
 >>> video_frames, _ = load_video(video_url)
 

@@ -60,7 +60,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
 أولاً، تحتاج إلى تحميل النموذج.
 
 ```py
->>> from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+>>> from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 >>> model = AutoModelForCausalLM.from_pretrained(
 ...     "mistralai/Mistral-7B-v0.1", device_map="auto", quantization_config=BitsAndBytesConfig(load_in_4bit=True)
@@ -77,7 +77,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
 بعد ذلك، تحتاج إلى معالجة إدخال النص الخاص بك باستخدام [مُجزّئ اللغوي](tokenizer_summary).
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1", padding_side="left")
 >>> model_inputs = tokenizer(["A list of colors: red, blue"], return_tensors="pt").to("cuda")
@@ -113,7 +113,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
 هناك العديد من [استراتيجيات التوليد](generation_strategies)، وفي بعض الأحيان قد لا تكون القيم الافتراضية مناسبة لحالتك الاستخدام. إذا لم تكن الإخراج الخاصة بك متوافقة مع ما تتوقعه، فقد قمنا بإنشاء قائمة بأكثر الأخطاء الشائعة وكيفية تجنبها.
 
 ```py
->>> from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
 >>> tokenizer.pad_token = tokenizer.eos_token  # Most LLMs don't have a pad token by default
@@ -145,7 +145,7 @@ pip install transformers bitsandbytes>=0.39.0 -q
 
 ```py
 >>> # Set seed or reproducibility -- you don't need this unless you want full reproducibility
->>> from transformers import set_seed
+>>> from transformers_4573 import set_seed
 >>> set_seed(42)
 
 >>> model_inputs = tokenizer(["I am a cat."], return_tensors="pt").to("cuda")

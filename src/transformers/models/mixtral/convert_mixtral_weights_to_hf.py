@@ -17,7 +17,7 @@ import os
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     MixtralConfig,
     MixtralForCausalLM,
 )
@@ -34,7 +34,7 @@ python src/transformers/models/mixtral/convert_mixtral_weights_to_hf.py \
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import MixtralForCausalLM
+from transformers_4573 import MixtralForCausalLM
 
 model = MixtralForCausalLM.from_pretrained("/output/path")
 ```

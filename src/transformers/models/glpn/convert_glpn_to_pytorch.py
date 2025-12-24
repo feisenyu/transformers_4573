@@ -21,8 +21,8 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import GLPNConfig, GLPNForDepthEstimation, GLPNImageProcessor
-from transformers.utils import logging
+from transformers_4573 import GLPNConfig, GLPNForDepthEstimation, GLPNImageProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

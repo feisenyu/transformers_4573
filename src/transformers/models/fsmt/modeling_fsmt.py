@@ -1005,7 +1005,7 @@ class FSMTForConditionalGeneration(PretrainedFSMTModel, GenerationMixin):
         Example Translation:
 
         ```python
-        >>> from transformers import AutoTokenizer, FSMTForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, FSMTForConditionalGeneration
 
         >>> mname = "facebook/wmt19-ru-en"
         >>> model = FSMTForConditionalGeneration.from_pretrained(mname)

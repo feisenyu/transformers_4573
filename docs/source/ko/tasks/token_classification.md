@@ -102,7 +102,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티에
 다음으로 `tokens` 필드를 전처리하기 위해 DistilBERT 토크나이저를 가져옵니다:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -156,7 +156,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티에
 이제 [`DataCollatorWithPadding`]를 사용하여 예제 배치를 만들어봅시다. 데이터 세트 전체를 최대 길이로 패딩하는 대신, *동적 패딩*을 사용하여 배치에서 가장 긴 길이에 맞게 문장을 패딩하는 것이 효율적입니다.
 
 ```py
->>> from transformers import DataCollatorForTokenClassification
+>>> from transformers_4573 import DataCollatorForTokenClassification
 
 >>> data_collator = DataCollatorForTokenClassification(tokenizer=tokenizer)
 ```
@@ -249,7 +249,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티에
 이제 모델을 훈련시킬 준비가 되었습니다! [`AutoModelForSequenceClassification`]로 DistilBERT를 가져오고 예상되는 레이블 수와 레이블 매핑을 지정하세요:
 
 ```py
->>> from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForTokenClassification, TrainingArguments, Trainer
 
 >>> model = AutoModelForTokenClassification.from_pretrained(
 ...     "distilbert/distilbert-base-uncased", num_labels=13, id2label=id2label, label2id=label2id
@@ -316,7 +316,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티에
 파인 튜닝된 모델로 추론을 시도하는 가장 간단한 방법은 [`pipeline`]를 사용하는 것입니다. 모델로 NER의 `pipeline`을 인스턴스화하고, 텍스트를 전달해보세요:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("ner", model="stevhliu/my_awesome_wnut_model")
 >>> classifier(text)
@@ -357,7 +357,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티에
 텍스트를 토큰화하고 PyTorch 텐서를 반환합니다:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("stevhliu/my_awesome_wnut_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -366,7 +366,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티에
 입력을 모델에 전달하고 `logits`을 반환합니다:
 
 ```py
->>> from transformers import AutoModelForTokenClassification
+>>> from transformers_4573 import AutoModelForTokenClassification
 
 >>> model = AutoModelForTokenClassification.from_pretrained("stevhliu/my_awesome_wnut_model")
 >>> with torch.no_grad():

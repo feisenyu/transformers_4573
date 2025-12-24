@@ -44,7 +44,7 @@ The original code can be found [here](https://github.com/facebookresearch/EdgeTA
 EdgeTAM can be used for automatic mask generation to segment all objects in an image using the `mask-generation` pipeline:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline("mask-generation", model="yonigozlan/edgetam-1", device=0)
 >>> image_url = "https://huggingface.co/datasets/hf-internal-testing/sam2-fixtures/resolve/main/truck.jpg"
@@ -61,7 +61,7 @@ EdgeTAM can be used for automatic mask generation to segment all objects in an i
 You can segment objects by providing a single point click on the object you want to segment:
 
 ```python
->>> from transformers import Sam2Processor, EdgeTamModel
+>>> from transformers_4573 import Sam2Processor, EdgeTamModel
 from accelerate import Accelerator
 >>> import torch
 >>> from PIL import Image
@@ -158,7 +158,7 @@ IoU scores: tensor([0.7616, 0.9465], device='cuda:0')
 Process multiple images simultaneously for improved efficiency:
 
 ```python
->>> from transformers import Sam2Processor, EdgeTamModel
+>>> from transformers_4573 import Sam2Processor, EdgeTamModel
 from accelerate import Accelerator
 >>> import torch
 >>> from PIL import Image

@@ -53,19 +53,19 @@ from .configuration_clvp import (
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.clip.modeling_clip.contrastive_loss
+# Copied from transformers_4573.models.clip.modeling_clip.contrastive_loss
 def contrastive_loss(logits: torch.Tensor) -> torch.Tensor:
     return nn.functional.cross_entropy(logits, torch.arange(len(logits), device=logits.device))
 
 
-# Copied from transformers.models.clip.modeling_clip.clip_loss with clip->clvp, image_loss->speech_loss
+# Copied from transformers_4573.models.clip.modeling_clip.clip_loss with clip->clvp, image_loss->speech_loss
 def clvp_loss(similarity: torch.Tensor) -> torch.Tensor:
     caption_loss = contrastive_loss(similarity)
     speech_loss = contrastive_loss(similarity.t())
     return (caption_loss + speech_loss) / 2.0
 
 
-# Copied from transformers.models.llama.modeling_llama.rotate_half
+# Copied from transformers_4573.models.llama.modeling_llama.rotate_half
 def rotate_half(x):
     """Rotates half the hidden dims of the input."""
     x1 = x[..., : x.shape[-1] // 2]
@@ -214,7 +214,7 @@ class ClvpOutput(ModelOutput):
     speech_encoder_hidden_states: Optional[torch.FloatTensor] = None
 
 
-# Copied from transformers.models.llama.modeling_llama.LlamaRMSNorm with Llama->Clvp
+# Copied from transformers_4573.models.llama.modeling_llama.LlamaRMSNorm with Llama->Clvp
 class ClvpRMSNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
         """
@@ -473,7 +473,7 @@ class ClvpEncoderLayer(nn.Module):
         return hidden_states, attn_weights
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->Clvp
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->Clvp
 class ClvpSequenceSummary(nn.Module):
     r"""
     Compute a single vector summary of a sequence hidden states.
@@ -573,7 +573,7 @@ class ClvpSequenceSummary(nn.Module):
         return output
 
 
-# Copied from transformers.models.gpt2.modeling_gpt2.GPT2MLP with GPT2->ClvpDecoderMLP
+# Copied from transformers_4573.models.gpt2.modeling_gpt2.GPT2MLP with GPT2->ClvpDecoderMLP
 class ClvpDecoderMLP(nn.Module):
     def __init__(self, intermediate_size, config):
         super().__init__()
@@ -1519,7 +1519,7 @@ class ClvpModelForConditionalGeneration(ClvpPreTrainedModel, GenerationMixin):
         Examples:
 
         ```python
-        >>> from transformers import ClvpProcessor, ClvpModelForConditionalGeneration
+        >>> from transformers_4573 import ClvpProcessor, ClvpModelForConditionalGeneration
 
         >>> # Define the Text
         >>> text = "This is an example text."
@@ -1585,7 +1585,7 @@ class ClvpModelForConditionalGeneration(ClvpPreTrainedModel, GenerationMixin):
 
         ```python
         >>> import datasets
-        >>> from transformers import ClvpProcessor, ClvpModelForConditionalGeneration
+        >>> from transformers_4573 import ClvpProcessor, ClvpModelForConditionalGeneration
 
         >>> # Define the Text and Load the Audio (We are taking an audio example from HuggingFace Hub using `datasets` library)
         >>> text = "This is an example text."
@@ -1664,7 +1664,7 @@ class ClvpModelForConditionalGeneration(ClvpPreTrainedModel, GenerationMixin):
 
         ```python
         >>> import datasets
-        >>> from transformers import ClvpProcessor, ClvpModelForConditionalGeneration
+        >>> from transformers_4573 import ClvpProcessor, ClvpModelForConditionalGeneration
 
         >>> # Define the Text and Load the Audio (We are taking an audio example from HuggingFace Hub using `datasets` library)
         >>> text = "This is an example text."

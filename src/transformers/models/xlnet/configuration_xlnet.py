@@ -119,7 +119,7 @@ class XLNetConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import XLNetConfig, XLNetModel
+    >>> from transformers_4573 import XLNetConfig, XLNetModel
 
     >>> # Initializing a XLNet configuration
     >>> configuration = XLNetConfig()

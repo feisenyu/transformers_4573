@@ -18,8 +18,8 @@ import os
 import tempfile
 import unittest
 
-from transformers.models.xlm.tokenization_xlm import VOCAB_FILES_NAMES, XLMTokenizer
-from transformers.testing_utils import slow
+from transformers_4573.models.xlm.tokenization_xlm import VOCAB_FILES_NAMES, XLMTokenizer
+from transformers_4573.testing_utils import slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

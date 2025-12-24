@@ -32,7 +32,7 @@ Pass `assistant_model` to [`~GenerationMixin.generate`]. Set `do_sample=True` to
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceTB/SmolLM-1.7B")
 model = AutoModelForCausalLM.from_pretrained("HuggingFaceTB/SmolLM-1.7B", dtype="auto")
@@ -48,7 +48,7 @@ The `assistant_model` argument is also available in the [`Pipeline`] API.
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     "text-generation",
@@ -65,7 +65,7 @@ pipeline("Hugging Face is an open-source company, ", max_new_tokens=50, do_sampl
 Set `temperature` to control randomness. Lower temperatures often improve latency.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceTB/SmolLM-1.7B")
 model = AutoModelForCausalLM.from_pretrained("HuggingFaceTB/SmolLM-1.7B", dtype="auto")
@@ -91,7 +91,7 @@ Pass `prompt_lookup_num_tokens` to [`~GenerationMixin.generate`]. This sets how 
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceTB/SmolLM-1.7B")
 model = AutoModelForCausalLM.from_pretrained("HuggingFaceTB/SmolLM-1.7B", dtype="auto")
@@ -107,7 +107,7 @@ tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceTB/SmolLM-1.7B")
 model = AutoModelForCausalLM.from_pretrained("HuggingFaceTB/SmolLM-1.7B", dtype="auto")
@@ -131,7 +131,7 @@ Pass `assistant_early_exit` to [`~GenerationMixin.generate`] to set the exit lay
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("facebook/layerskip-llama3.2-1B")
 model = AutoModelForCausalLM.from_pretrained("facebook/layerskip-llama3.2-1B", dtype="auto")
@@ -149,7 +149,7 @@ Pass `tokenizer`, `assistant_tokenizer`, and `assistant_model` to [`~GenerationM
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 assistant_tokenizer = AutoTokenizer.from_pretrained("double7/vicuna-68m")
 tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b")

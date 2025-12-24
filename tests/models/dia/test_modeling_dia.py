@@ -20,8 +20,8 @@ import unittest
 
 import pytest
 
-from transformers.models.dia import DiaConfig, DiaDecoderConfig, DiaEncoderConfig
-from transformers.testing_utils import (
+from transformers_4573.models.dia import DiaConfig, DiaDecoderConfig, DiaEncoderConfig
+from transformers_4573.testing_utils import (
     cleanup,
     is_flaky,
     require_torch,
@@ -29,8 +29,8 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_soundfile_available, is_torch_available, is_torchaudio_available
-from transformers.utils.import_utils import is_datasets_available
+from transformers_4573.utils import is_soundfile_available, is_torch_available, is_torchaudio_available
+from transformers_4573.utils.import_utils import is_datasets_available
 
 from ...generation.test_utils import GenerationTesterMixin, has_similar_generate_outputs
 from ...test_configuration_common import ConfigTester
@@ -44,17 +44,17 @@ if is_datasets_available():
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         DiaForConditionalGeneration,
         DiaModel,
         DiaProcessor,
         PreTrainedConfig,
         PreTrainedModel,
     )
-    from transformers.cache_utils import (
+    from transformers_4573.cache_utils import (
         StaticCache,
     )
-    from transformers.models.dia.modeling_dia import DiaDecoder, DiaEncoder
+    from transformers_4573.models.dia.modeling_dia import DiaDecoder, DiaEncoder
 
 if is_torchaudio_available():
     import torchaudio

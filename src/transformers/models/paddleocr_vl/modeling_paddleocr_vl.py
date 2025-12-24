@@ -1399,7 +1399,7 @@ class PaddleOCRVLForConditionalGeneration(PaddleOCRVLPreTrainedModel, Generation
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, PaddleOCRVLForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, PaddleOCRVLForConditionalGeneration
 
         >>> model = PaddleOCRVLForConditionalGeneration.from_pretrained("PaddlePaddle/PaddleOCR-VL", dtype="bfloat16")
         >>> processor = AutoProcessor.from_pretrained("PaddlePaddle/PaddleOCR-VL")

@@ -46,7 +46,7 @@ The simplest way to try out inference with models is to use it in a [`pipeline`]
 for zero-shot object detection from a [checkpoint on the Hugging Face Hub](https://huggingface.co/models?pipeline_tag=zero-shot-object-detection):
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> # Use any checkpoint from the hf.co/models?pipeline_tag=zero-shot-object-detection
 >>> checkpoint = "iSEE-Laboratory/llmdet_large"
@@ -57,7 +57,7 @@ Next, choose an image you'd like to detect objects in. Here we'll use the image 
 a part of the [NASA](https://www.nasa.gov/multimedia/imagegallery/index.html) Great Images dataset.
 
 ```py
->>> from transformers.image_utils import load_image
+>>> from transformers_4573.image_utils import load_image
 
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/zero-sh-obj-detection_1.png"
 >>> image = load_image(url)
@@ -132,7 +132,7 @@ Start by loading the model and associated processor from a [checkpoint on the Hu
 Here we'll use the same checkpoint as before:
 
 ```py
->>> from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
+>>> from transformers_4573 import AutoProcessor, AutoModelForZeroShotObjectDetection
 
 >>> model = AutoModelForZeroShotObjectDetection.from_pretrained(checkpoint, device_map="auto")
 >>> processor = AutoProcessor.from_pretrained(checkpoint)
@@ -248,7 +248,7 @@ In addition to zero-shot object detection with text queries, models like [OWL-Vi
 objects in the target image.
 
 ```py
->>> from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
+>>> from transformers_4573 import AutoProcessor, AutoModelForZeroShotObjectDetection
 
 >>> checkpoint = "google/owlv2-base-patch16-ensemble"
 >>> model = AutoModelForZeroShotObjectDetection.from_pretrained(checkpoint, device_map="auto")

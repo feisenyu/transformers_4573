@@ -40,7 +40,7 @@ The Transformers library allows you to use the model with just a few lines of co
 >>> import numpy as np
 
 >>> from PIL import Image
->>> from transformers import AutoImageProcessor, AutoModelForDepthEstimation
+>>> from transformers_4573 import AutoImageProcessor, AutoModelForDepthEstimation
 
 >>> url = "https://github.com/DepthAnything/PromptDA/blob/main/assets/example_images/image.jpg?raw=true"
 >>> image = Image.open(requests.get(url, stream=True).raw)

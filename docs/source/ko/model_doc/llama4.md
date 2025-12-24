@@ -55,7 +55,7 @@ Meta는 Llama 4 Scout을 누구나 쉽게 사용할 수 있도록 설계했습�
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
@@ -79,7 +79,7 @@ print(output[0]["generated_text"][-1]["content"])
 <hfoption id="AutoModel - Text only">
 
 ```py
-from transformers import AutoTokenizer, Llama4ForConditionalGeneration
+from transformers_4573 import AutoTokenizer, Llama4ForConditionalGeneration
 import torch
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
@@ -106,7 +106,7 @@ print(outputs[0])
 <hfoption id="AutoModel - Multimodal">
 
 ```py
-from transformers import AutoProcessor, Llama4ForConditionalGeneration
+from transformers_4573 import AutoProcessor, Llama4ForConditionalGeneration
 import torch
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
@@ -150,7 +150,7 @@ print(response)
 <hfoption id="AutoModel - Multimodal with multiple images">
 
 ```py
-from transformers import AutoProcessor, Llama4ForConditionalGeneration
+from transformers_4573 import AutoProcessor, Llama4ForConditionalGeneration
 import torch
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
@@ -202,7 +202,7 @@ print(response)
 작업할 예정입니다.
 
 ```py
-from transformers import Llama4ForConditionalGeneration, AutoTokenizer, infer_device
+from transformers_4573 import Llama4ForConditionalGeneration, AutoTokenizer, infer_device
 import torch
 import time
 
@@ -265,7 +265,7 @@ Flex Attention은 모델이 긴 컨텍스트를 처리할 때 최적의 성능�
 > 작업할 예정입니다.
 
 ```py
-from transformers import Llama4ForConditionalGeneration
+from transformers_4573 import Llama4ForConditionalGeneration
 import torch
 
 model = Llama4ForConditionalGeneration.from_pretrained(
@@ -280,7 +280,7 @@ model = Llama4ForConditionalGeneration.from_pretrained(
 `sdpa` 어텐션 방법은 일반적으로 `eager` 방법보다 계산 효율적입니다.
 
 ```py
-from transformers import Llama4ForConditionalGeneration
+from transformers_4573 import Llama4ForConditionalGeneration
 import torch
 
 model = Llama4ForConditionalGeneration.from_pretrained(
@@ -295,7 +295,7 @@ model = Llama4ForConditionalGeneration.from_pretrained(
 `eager` 어텐션 방법이 기본으로 설정되어 있으므로 모델 로드 시 다른 설정이 필요하지 않습니다:
 
 ```py
-from transformers import Llama4ForConditionalGeneration
+from transformers_4573 import Llama4ForConditionalGeneration
 import torch
 
 model = Llama4ForConditionalGeneration.from_pretrained(
@@ -323,7 +323,7 @@ model = Llama4ForConditionalGeneration.from_pretrained(
 <hfoption id="FBGEMM">
 
 ```python
-from transformers import AutoTokenizer, Llama4ForConditionalGeneration, FbgemmFp8Config
+from transformers_4573 import AutoTokenizer, Llama4ForConditionalGeneration, FbgemmFp8Config
 import torch
 
 model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct"
@@ -353,7 +353,7 @@ print(outputs[0])
 LLLM-Compressor를 사용할 때는 함께 제공되는 사전 양자화된 FP8 체크포인트를 쓰는 것이 좋습니다:
 
 ```python
-from transformers import AutoTokenizer, Llama4ForConditionalGeneration
+from transformers_4573 import AutoTokenizer, Llama4ForConditionalGeneration
 import torch
 
 model_id = "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
@@ -387,7 +387,7 @@ CPU 오프로딩을 활성화하면, GPU 메모리가 부족할 때 모델이 �
 CPU 오프로딩을 활성화하려면 모델 로드 시 `device_map`을 `auto`로 지정하면 됩니다
 
 ```py
-from transformers import Llama4ForConditionalGeneration
+from transformers_4573 import Llama4ForConditionalGeneration
 import torch
 
 model = Llama4ForConditionalGeneration.from_pretrained(

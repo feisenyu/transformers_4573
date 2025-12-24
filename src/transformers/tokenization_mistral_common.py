@@ -23,8 +23,8 @@ from typing import Any, Union, overload
 import numpy as np
 from huggingface_hub import create_repo
 
-from transformers.audio_utils import load_audio_as
-from transformers.tokenization_utils_base import (
+from transformers_4573.audio_utils import load_audio_as
+from transformers_4573.tokenization_utils_base import (
     LARGE_INTEGER,
     VERY_LARGE_INTEGER,
     BatchEncoding,
@@ -33,10 +33,10 @@ from transformers.tokenization_utils_base import (
     TextInput,
     TruncationStrategy,
 )
-from transformers.utils import PaddingStrategy, TensorType, add_end_docstrings, logging, to_py_obj
-from transformers.utils.generic import is_torch_tensor
-from transformers.utils.hub import PushToHubMixin
-from transformers.utils.import_utils import is_mistral_common_available, is_torch_available, requires
+from transformers_4573.utils import PaddingStrategy, TensorType, add_end_docstrings, logging, to_py_obj
+from transformers_4573.utils.generic import is_torch_tensor
+from transformers_4573.utils.hub import PushToHubMixin
+from transformers_4573.utils.import_utils import is_mistral_common_available, is_torch_available, requires
 
 
 if is_mistral_common_available():
@@ -192,7 +192,7 @@ class MistralCommonBackend(PushToHubMixin):
     - Pair of sequences are not supported. The signature have been kept for compatibility but all arguments related to pair of sequences are ignored. The return values of pairs are returned as `None`.
     - The `is_split_into_words` argument is not supported.
     - The `return_token_type_ids` argument is not supported.
-    - It is not possible to add new tokens to the tokenizer. Also the special tokens are handled differently from Transformers. In `mistral-common`, special tokens are never encoded directly. This means that: `tokenizer.encode("<s>")` will not return the ID of the `<s>` token. Instead, it will return a list of IDs corresponding to the tokenization of the string `"<s>"`. For more information, see the [mistral-common documentation](https://mistralai.github.io/mistral-common/usage/tokenizers/#special-tokens).
+    - It is not possible to add new tokens to the tokenizer. Also the special tokens are handled differently from transformers_4573. In `mistral-common`, special tokens are never encoded directly. This means that: `tokenizer.encode("<s>")` will not return the ID of the `<s>` token. Instead, it will return a list of IDs corresponding to the tokenization of the string `"<s>"`. For more information, see the [mistral-common documentation](https://mistralai.github.io/mistral-common/usage/tokenizers/#special-tokens).
 
     If you have suggestions to improve this class, please open an issue on the [mistral-common GitHub repository](https://github.com/mistralai/mistral-common/issues) if it is related to the tokenizer or on the [Transformers GitHub repository](https://github.com/huggingface/transformers/issues) if it is related to the Hugging Face interface.
     """

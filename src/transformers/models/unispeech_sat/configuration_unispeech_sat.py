@@ -179,7 +179,7 @@ class UniSpeechSatConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import UniSpeechSatModel, UniSpeechSatConfig
+    >>> from transformers_4573 import UniSpeechSatModel, UniSpeechSatConfig
 
     >>> # Initializing a UniSpeechSat microsoft/unispeech-sat-base-100h-libri-ft style configuration
     >>> configuration = UniSpeechSatConfig()

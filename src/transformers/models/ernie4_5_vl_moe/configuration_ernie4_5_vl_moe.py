@@ -275,7 +275,7 @@ class Ernie4_5_VL_MoeConfig(PreTrainedConfig):
             The video token index to encode the video prompt.
 
     ```python
-    >>> from transformers import Ernie4_5_VL_MoeForConditionalGeneration, Ernie4_5_VL_MoeConfig
+    >>> from transformers_4573 import Ernie4_5_VL_MoeForConditionalGeneration, Ernie4_5_VL_MoeConfig
 
     >>> # Initializing a Ernie4_5_VL_Moe style configuration
     >>> configuration = Ernie4_5_VL_MoeConfig()

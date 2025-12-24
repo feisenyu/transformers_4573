@@ -8,11 +8,11 @@ from flax import serialization
 from flax.traverse_util import flatten_dict, unflatten_dict
 from tensorflow.io import gfile
 
-from transformers.models.switch_transformers.convert_switch_transformers_original_flax_checkpoint_to_pytorch import (
+from transformers_4573.models.switch_transformers.convert_switch_transformers_original_flax_checkpoint_to_pytorch import (
     rename_keys,
 )
-from transformers.utils import WEIGHTS_INDEX_NAME, WEIGHTS_NAME
-from transformers.utils.hub import convert_file_size_to_int
+from transformers_4573.utils import WEIGHTS_INDEX_NAME, WEIGHTS_NAME
+from transformers_4573.utils.hub import convert_file_size_to_int
 
 
 def rename_base_flax_keys(flax_key_tuple, flax_tensor):
@@ -178,7 +178,7 @@ if __name__ == "__main__":
 
 
 def sanity_check():
-    from transformers import SwitchTransformersConfig, SwitchTransformersForConditionalGeneration, T5Tokenizer
+    from transformers_4573 import SwitchTransformersConfig, SwitchTransformersForConditionalGeneration, T5Tokenizer
 
     config = SwitchTransformersConfig.from_pretrained("google/switch-base-8")
     config.save_pretrained("/home/arthur_huggingface_co/transformers/switch_converted")

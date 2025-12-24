@@ -76,7 +76,7 @@ class SegGptConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SegGptConfig, SegGptModel
+    >>> from transformers_4573 import SegGptConfig, SegGptModel
 
     >>> # Initializing a SegGPT seggpt-vit-large style configuration
     >>> configuration = SegGptConfig()

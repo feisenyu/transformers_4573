@@ -17,21 +17,21 @@ from tests.models.superglue.test_image_processing_superglue import (
     SuperGlueImageProcessingTest,
     SuperGlueImageProcessingTester,
 )
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 
 if is_torch_available():
     import numpy as np
     import torch
 
-    from transformers.models.lightglue.modeling_lightglue import LightGlueKeypointMatchingOutput
+    from transformers_4573.models.lightglue.modeling_lightglue import LightGlueKeypointMatchingOutput
 
 if is_vision_available():
-    from transformers import LightGlueImageProcessor
+    from transformers_4573 import LightGlueImageProcessor
 
     if is_torchvision_available():
-        from transformers import LightGlueImageProcessorFast
+        from transformers_4573 import LightGlueImageProcessorFast
 
 
 def random_array(size):

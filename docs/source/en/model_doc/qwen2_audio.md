@@ -46,7 +46,7 @@ The abstract from the paper is the following:
 from io import BytesIO
 from urllib.request import urlopen
 import librosa
-from transformers import AutoProcessor, Qwen2AudioForConditionalGeneration
+from transformers_4573 import AutoProcessor, Qwen2AudioForConditionalGeneration
 
 model = Qwen2AudioForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B", trust_remote_code=True, device_map="auto")
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B", trust_remote_code=True)
@@ -81,7 +81,7 @@ In the voice chat mode, users can freely engage in voice interactions with Qwen2
 from io import BytesIO
 from urllib.request import urlopen
 import librosa
-from transformers import Qwen2AudioForConditionalGeneration, AutoProcessor
+from transformers_4573 import Qwen2AudioForConditionalGeneration, AutoProcessor
 
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct")
 model = Qwen2AudioForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct", device_map="auto")
@@ -123,7 +123,7 @@ In the audio analysis, users could provide both audio and text instructions for 
 from io import BytesIO
 from urllib.request import urlopen
 import librosa
-from transformers import Qwen2AudioForConditionalGeneration, AutoProcessor
+from transformers_4573 import Qwen2AudioForConditionalGeneration, AutoProcessor
 
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct")
 model = Qwen2AudioForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct", device_map="auto")
@@ -173,7 +173,7 @@ We also support batch inference:
 from io import BytesIO
 from urllib.request import urlopen
 import librosa
-from transformers import Qwen2AudioForConditionalGeneration, AutoProcessor
+from transformers_4573 import Qwen2AudioForConditionalGeneration, AutoProcessor
 
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct")
 model = Qwen2AudioForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct", device_map="auto")

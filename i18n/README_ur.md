@@ -143,7 +143,7 @@ limitations under the License.
 
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # جذبات کے تجزیے کے لیے ایک پائپ لائن مختص کریں
 >>> classifier = pipeline('sentiment-analysis')
@@ -159,7 +159,7 @@ limitations under the License.
 ``` python
 >>> import requests
 >>> from PIL import Image
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # جذبات کے تجزیے کے لیے ایک پائپ لائن مختص کریں
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png"
@@ -199,7 +199,7 @@ limitations under the License.
 &#8207;`pipeline` کے علاوہ، کسی بھی پیشگی تربیت یافتہ ماڈل کو آپ کے دیے گئے کام پر ڈاؤن لوڈ اور استعمال کرنے کے لیے، صرف تین لائنوں کا کوڈ کافی ہے۔ یہاں PyTorch ورژن ہے:
 
 ```python
->>> from transformers import AutoTokenizer، AutoModel
+>>> from transformers_4573 import AutoTokenizer، AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
@@ -210,7 +210,7 @@ limitations under the License.
 
 اور یہاں TensorFlow کے لیے مساوی کوڈ ہے:
 ```python
->>> from transformers import AutoTokenizer، TFAutoModel
+>>> from transformers_4573 import AutoTokenizer، TFAutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = TFAutoModel.from_pretrained("google-bert/bert-base-uncased")

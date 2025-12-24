@@ -49,7 +49,7 @@ alt="drawing" width="600"/>
 
 >>> import torch
 >>> from PIL import Image
->>> from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
+>>> from transformers_4573 import AutoProcessor, AutoModelForZeroShotObjectDetection
 
 >>> model_id = "IDEA-Research/grounding-dino-tiny"
 >>> device = "cuda"

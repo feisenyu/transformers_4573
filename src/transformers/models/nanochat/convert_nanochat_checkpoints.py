@@ -21,7 +21,7 @@ from pathlib import Path
 
 import torch
 
-from transformers import AutoTokenizer, NanoChatConfig, NanoChatForCausalLM
+from transformers_4573 import AutoTokenizer, NanoChatConfig, NanoChatForCausalLM
 
 
 def infer_kv_heads(config: NanoChatConfig, state_dict: dict[str, torch.Tensor]) -> int:
@@ -232,7 +232,7 @@ def write_tokenizer(input_dir, output_dir):
         try:
             import pickle
 
-            from transformers.integrations.tiktoken import convert_tiktoken_to_fast
+            from transformers_4573.integrations.tiktoken import convert_tiktoken_to_fast
 
             with open(tokenizer_pkl, "rb") as f:
                 tok_pkl = pickle.load(f)

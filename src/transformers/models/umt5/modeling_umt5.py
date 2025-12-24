@@ -57,7 +57,7 @@ if is_torch_flex_attn_available():
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerNorm with T5->UMT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerNorm with T5->UMT5
 class UMT5LayerNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
         """
@@ -83,7 +83,7 @@ class UMT5LayerNorm(nn.Module):
         return self.weight * hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5DenseActDense with T5->UMT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5DenseActDense with T5->UMT5
 class UMT5DenseActDense(nn.Module):
     def __init__(self, config: UMT5Config):
         super().__init__()
@@ -106,7 +106,7 @@ class UMT5DenseActDense(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5DenseGatedActDense with T5->UMT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5DenseGatedActDense with T5->UMT5
 class UMT5DenseGatedActDense(nn.Module):
     def __init__(self, config: UMT5Config):
         super().__init__()
@@ -136,7 +136,7 @@ class UMT5DenseGatedActDense(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerFF with T5->UMT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerFF with T5->UMT5
 class UMT5LayerFF(nn.Module):
     def __init__(self, config: UMT5Config):
         super().__init__()
@@ -463,7 +463,7 @@ class UMT5Block(GradientCheckpointingLayer):
         return outputs
 
 
-# Copied from transformers.models.t5.modeling_t5.T5ClassificationHead with T5->UMT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5ClassificationHead with T5->UMT5
 class UMT5ClassificationHead(nn.Module):
     """Head for sentence-level classification tasks."""
 
@@ -770,7 +770,7 @@ class UMT5Stack(UMT5PreTrainedModel):
             cross_attentions=all_cross_attentions,
         )
 
-    # Copied from transformers.models.gptj.modeling_gptj.GPTJModel._update_causal_mask
+    # Copied from transformers_4573.models.gptj.modeling_gptj.GPTJModel._update_causal_mask
     def _update_causal_mask(
         self,
         attention_mask: Union[torch.Tensor, "BlockMask"],
@@ -840,7 +840,7 @@ class UMT5Stack(UMT5PreTrainedModel):
         return causal_mask
 
     @staticmethod
-    # Copied from transformers.models.gptj.modeling_gptj.GPTJModel._prepare_4d_causal_attention_mask_with_cache_position
+    # Copied from transformers_4573.models.gptj.modeling_gptj.GPTJModel._prepare_4d_causal_attention_mask_with_cache_position
     def _prepare_4d_causal_attention_mask_with_cache_position(
         attention_mask: torch.Tensor,
         sequence_length: int,
@@ -902,7 +902,7 @@ class UMT5Model(UMT5PreTrainedModel):
     Examples:
 
     ```python
-    >>> from transformers import UMT5Model, AutoTokenizer
+    >>> from transformers_4573 import UMT5Model, AutoTokenizer
 
     >>> model = UMT5Model.from_pretrained("google/umt5-small")
     >>> tokenizer = AutoTokenizer.from_pretrained("google/umt5-small")
@@ -939,11 +939,11 @@ class UMT5Model(UMT5PreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.t5.modeling_t5.T5Model.get_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Model.get_input_embeddings
     def get_input_embeddings(self):
         return self.shared
 
-    # Copied from transformers.models.t5.modeling_t5.T5Model.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Model.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.shared = new_embeddings
         self.encoder.set_input_embeddings(new_embeddings)
@@ -998,7 +998,7 @@ class UMT5Model(UMT5PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, UMT5Model
+        >>> from transformers_4573 import AutoTokenizer, UMT5Model
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/umt5-small")
         >>> model = UMT5Model.from_pretrained("google/umt5-small")
@@ -1078,7 +1078,7 @@ class UMT5ForConditionalGeneration(UMT5PreTrainedModel, GenerationMixin):
     Examples:
 
     ```python
-    >>> from transformers import UMT5ForConditionalGeneration, AutoTokenizer
+    >>> from transformers_4573 import UMT5ForConditionalGeneration, AutoTokenizer
 
     >>> model = UMT5ForConditionalGeneration.from_pretrained("google/umt5-small")
     >>> tokenizer = AutoTokenizer.from_pretrained("google/umt5-small")
@@ -1118,11 +1118,11 @@ class UMT5ForConditionalGeneration(UMT5PreTrainedModel, GenerationMixin):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForConditionalGeneration.get_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForConditionalGeneration.get_input_embeddings
     def get_input_embeddings(self):
         return self.shared
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForConditionalGeneration.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForConditionalGeneration.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.shared = new_embeddings
         self.encoder.set_input_embeddings(new_embeddings)
@@ -1182,7 +1182,7 @@ class UMT5ForConditionalGeneration(UMT5PreTrainedModel, GenerationMixin):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, UMT5ForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, UMT5ForConditionalGeneration
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/umt5-small")
         >>> model = UMT5ForConditionalGeneration.from_pretrained("google/umt5-small")
@@ -1273,7 +1273,7 @@ class UMT5ForConditionalGeneration(UMT5PreTrainedModel, GenerationMixin):
             encoder_attentions=encoder_outputs.attentions,
         )
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForConditionalGeneration.prepare_decoder_input_ids_from_labels
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForConditionalGeneration.prepare_decoder_input_ids_from_labels
     def prepare_decoder_input_ids_from_labels(self, labels: torch.Tensor):
         return self._shift_right(labels)
 
@@ -1284,7 +1284,7 @@ class UMT5EncoderModel(UMT5PreTrainedModel):
     Examples:
 
     ```python
-    >>> from transformers import UMT5EncoderModel, AutoTokenizer
+    >>> from transformers_4573 import UMT5EncoderModel, AutoTokenizer
 
     >>> model = UMT5EncoderModel.from_pretrained("google/umt5-small")
     >>> tokenizer = AutoTokenizer.from_pretrained("google/umt5-small")
@@ -1312,17 +1312,17 @@ class UMT5EncoderModel(UMT5PreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.t5.modeling_t5.T5EncoderModel.get_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5EncoderModel.get_input_embeddings
     def get_input_embeddings(self):
         return self.shared
 
-    # Copied from transformers.models.t5.modeling_t5.T5EncoderModel.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5EncoderModel.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.shared = new_embeddings
         self.encoder.set_input_embeddings(new_embeddings)
 
     @auto_docstring
-    # Copied from transformers.models.t5.modeling_t5.T5EncoderModel.forward with T5->UMT5, google-t5/t5-small->google/umt5-small, t5#training->umt5#training
+    # Copied from transformers_4573.models.t5.modeling_t5.T5EncoderModel.forward with T5->UMT5, google-t5/t5-small->google/umt5-small, t5#training->umt5#training
     def forward(
         self,
         input_ids: Optional[torch.LongTensor] = None,
@@ -1346,7 +1346,7 @@ class UMT5EncoderModel(UMT5PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, UMT5EncoderModel
+        >>> from transformers_4573 import AutoTokenizer, UMT5EncoderModel
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/umt5-small")
         >>> model = UMT5EncoderModel.from_pretrained("google/umt5-small")
@@ -1379,7 +1379,7 @@ class UMT5EncoderModel(UMT5PreTrainedModel):
 class UMT5ForSequenceClassification(UMT5PreTrainedModel):
     _keys_to_ignore_on_load_unexpected = ["decoder.block.0.layer.1.EncDecAttention.relative_attention_bias.weight"]
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForSequenceClassification.__init__ with T5->UMT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForSequenceClassification.__init__ with T5->UMT5
     def __init__(self, config: UMT5Config):
         super().__init__(config)
         self.transformer = UMT5Model(config)
@@ -1523,7 +1523,7 @@ class UMT5ForSequenceClassification(UMT5PreTrainedModel):
 class UMT5ForTokenClassification(UMT5PreTrainedModel):
     _keys_to_ignore_on_load_unexpected = ["decoder.block.0.layer.1.EncDecAttention.relative_attention_bias.weight"]
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForTokenClassification.__init__ with T5->UMT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForTokenClassification.__init__ with T5->UMT5
     def __init__(self, config: UMT5Config):
         super().__init__(config)
         self.num_labels = config.num_labels
@@ -1536,7 +1536,7 @@ class UMT5ForTokenClassification(UMT5PreTrainedModel):
         self.post_init()
 
     @auto_docstring
-    # Copied from transformers.models.t5.modeling_t5.T5ForTokenClassification.forward with T5->UMT5, t5->umt5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForTokenClassification.forward with T5->UMT5, t5->umt5
     def forward(
         self,
         input_ids: Optional[torch.Tensor] = None,
@@ -1623,11 +1623,11 @@ class UMT5ForQuestionAnswering(UMT5PreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForQuestionAnswering.get_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForQuestionAnswering.get_input_embeddings
     def get_input_embeddings(self):
         return self.shared
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForQuestionAnswering.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForQuestionAnswering.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.shared = new_embeddings
         self.encoder.set_input_embeddings(new_embeddings)

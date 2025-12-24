@@ -20,15 +20,15 @@ import unittest
 import numpy as np
 import pytest
 
-from transformers import AutoProcessor, LlamaTokenizerFast
-from transformers.testing_utils import require_av, require_torch, require_torchvision, require_vision
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573 import AutoProcessor, LlamaTokenizerFast
+from transformers_4573.testing_utils import require_av, require_torch, require_torchvision, require_vision
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_vision_available():
-    from transformers import Ernie4_5_VL_MoeImageProcessorFast, Ernie4_5_VL_MoeProcessor
+    from transformers_4573 import Ernie4_5_VL_MoeImageProcessorFast, Ernie4_5_VL_MoeProcessor
 
 if is_torch_available():
     import torch

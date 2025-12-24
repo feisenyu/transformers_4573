@@ -35,7 +35,7 @@ from huggingface_hub import hf_hub_download, snapshot_download
 from PIL import Image
 from safetensors import safe_open
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     AutoConfig,
     AutoTokenizer,

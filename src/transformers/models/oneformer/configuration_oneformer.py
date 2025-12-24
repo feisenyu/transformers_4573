@@ -134,7 +134,7 @@ class OneFormerConfig(PreTrainedConfig):
 
     Examples:
     ```python
-    >>> from transformers import OneFormerConfig, OneFormerModel
+    >>> from transformers_4573 import OneFormerConfig, OneFormerModel
 
     >>> # Initializing a OneFormer shi-labs/oneformer_ade20k_swin_tiny configuration
     >>> configuration = OneFormerConfig()

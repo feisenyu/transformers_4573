@@ -55,7 +55,7 @@ Load the AWQ-quantized model with [`~PreTrainedModel.from_pretrained`]. This aut
 If the model is loaded on the CPU, use the `device_map` parameter to move it to an accelerator.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 from accelerate import Accelerator
 import torch
 
@@ -71,7 +71,7 @@ model = AutoModelForCausalLM.from_pretrained(
 Use `attn_implementation` to enable [FlashAttention2](../perf_infer_gpu_one#flashattention-2) to further accelerate inference.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained(
   "TheBloke/zephyr-7B-alpha-AWQ",
@@ -96,7 +96,7 @@ The example below fuses the AWQ modules of the [TheBloke/Mistral-7B-OpenOrca-AWQ
 
 ```python
 import torch
-from transformers import AwqConfig, AutoModelForCausalLM
+from transformers_4573 import AwqConfig, AutoModelForCausalLM
 
 quantization_config = AwqConfig(
     bits=4,
@@ -157,7 +157,7 @@ The example below fuses the AWQ modules of the [TheBloke/Yi-34B-AWQ](https://hug
 
 ```python
 import torch
-from transformers import AwqConfig, AutoModelForCausalLM
+from transformers_4573 import AwqConfig, AutoModelForCausalLM
 
 quantization_config = AwqConfig(
     bits=4,
@@ -214,7 +214,7 @@ Set `version="exllama"` in [`AwqConfig`] to enable ExLlamaV2 kernels.
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, AwqConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, AwqConfig
 
 quantization_config = AwqConfig(version="exllama")
 
@@ -238,7 +238,7 @@ Set `version="ipex"` in [`AwqConfig`] to enable ExLlamaV2 kernels.
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, AwqConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, AwqConfig
 
 device = "cpu" # set to "xpu" for Intel GPU
 quantization_config = AwqConfig(version="ipex")

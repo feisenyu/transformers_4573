@@ -63,7 +63,7 @@ All model weights including quantized versions are available at [Huggingface Col
 For general use, you can use the EXAONE 4.0 models with the following example:
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "LGAI-EXAONE/EXAONE-4.0-32B"
 

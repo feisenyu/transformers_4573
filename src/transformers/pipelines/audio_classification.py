@@ -73,7 +73,7 @@ class AudioClassificationPipeline(Pipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> classifier = pipeline(model="superb/wav2vec2-base-superb-ks")
     >>> classifier("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac")

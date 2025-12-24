@@ -18,7 +18,7 @@ import os
 import tempfile
 import unittest
 
-from transformers.modelcard import ModelCard, TrainingSummary
+from transformers_4573.modelcard import ModelCard, TrainingSummary
 
 
 class ModelCardTester(unittest.TestCase):

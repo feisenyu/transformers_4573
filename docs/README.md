@@ -322,7 +322,7 @@ The syntax for Example docstrings can look as follows:
 ```python
     Example:
 
-    >>> from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
+    >>> from transformers_4573 import Wav2Vec2Processor, Wav2Vec2ForCTC
     >>> from datasets import load_dataset
     >>> import torch
 

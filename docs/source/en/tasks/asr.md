@@ -107,7 +107,7 @@ There are two fields:
 The next step is to load a Wav2Vec2 processor to process the audio signal:
 
 ```py
->>> from transformers import AutoProcessor
+>>> from transformers_4573 import AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained("facebook/wav2vec2-base")
 ```
@@ -237,7 +237,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You are now ready to start training your model! Load Wav2Vec2 with [`AutoModelForCTC`]. Specify the reduction to apply with the `ctc_loss_reduction` parameter. It is often better to use the average instead of the default summation:
 
 ```py
->>> from transformers import AutoModelForCTC, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForCTC, TrainingArguments, Trainer
 
 >>> model = AutoModelForCTC.from_pretrained(
 ...     "facebook/wav2vec2-base",
@@ -317,7 +317,7 @@ Load an audio file you'd like to run inference on. Remember to resample the samp
 The simplest way to try out your fine-tuned model for inference is to use it in a [`pipeline`]. Instantiate a `pipeline` for automatic speech recognition with your model, and pass your audio file to it:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> transcriber = pipeline("automatic-speech-recognition", model="stevhliu/my_awesome_asr_minds_model")
 >>> transcriber(audio_file)
@@ -335,7 +335,7 @@ You can also manually replicate the results of the `pipeline` if you'd like:
 Load a processor to preprocess the audio file and transcription and return the `input` as PyTorch tensors:
 
 ```py
->>> from transformers import AutoProcessor
+>>> from transformers_4573 import AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained("stevhliu/my_awesome_asr_mind_model")
 >>> inputs = processor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -344,7 +344,7 @@ Load a processor to preprocess the audio file and transcription and return the `
 Pass your inputs to the model and return the logits:
 
 ```py
->>> from transformers import AutoModelForCTC
+>>> from transformers_4573 import AutoModelForCTC
 
 >>> model = AutoModelForCTC.from_pretrained("stevhliu/my_awesome_asr_mind_model")
 >>> with torch.no_grad():

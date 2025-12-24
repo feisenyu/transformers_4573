@@ -7,7 +7,7 @@ import numpy as np
 import timesfm
 import torch
 
-from transformers import TimesFmConfig, TimesFmModelForPrediction
+from transformers_4573 import TimesFmConfig, TimesFmModelForPrediction
 
 
 """

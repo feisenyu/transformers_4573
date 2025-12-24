@@ -18,9 +18,9 @@ import unittest
 from contextlib import ExitStack, contextmanager
 from unittest.mock import patch
 
-from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, FineGrainedFP8Config, OPTForCausalLM
-from transformers.quantizers.quantizer_finegrained_fp8 import FineGrainedFP8HfQuantizer
-from transformers.testing_utils import (
+from transformers_4573 import AutoConfig, AutoModelForCausalLM, AutoTokenizer, FineGrainedFP8Config, OPTForCausalLM
+from transformers_4573.quantizers.quantizer_finegrained_fp8 import FineGrainedFP8HfQuantizer
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     get_device_properties,
     require_accelerate,
@@ -30,7 +30,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available
+from transformers_4573.utils import is_torch_available
 
 
 if is_torch_available():
@@ -136,7 +136,7 @@ class FP8QuantizerTest(unittest.TestCase):
         Simple test that checks if the quantized model has been converted properly
         """
 
-        from transformers.integrations import FP8Linear, replace_with_fp8_linear
+        from transformers_4573.integrations import FP8Linear, replace_with_fp8_linear
 
         model_id = "facebook/opt-350m"
         config = AutoConfig.from_pretrained(model_id, revision="cb32f77e905cccbca1d970436fb0f5e6b58ee3c5")
@@ -325,10 +325,10 @@ class FP8QuantizerTest(unittest.TestCase):
         Test if we compute the right module sizes needed to generate the device map.
         Also test if we get the right values for `total_byte_count` in `caching_allocator_warmup`.
         """
-        from transformers.integrations import FP8Linear
-        from transformers.integrations.accelerate import compute_module_sizes
-        from transformers.modeling_utils import expand_device_map, get_total_byte_count
-        from transformers.quantizers import AutoHfQuantizer
+        from transformers_4573.integrations import FP8Linear
+        from transformers_4573.integrations.accelerate import compute_module_sizes
+        from transformers_4573.modeling_utils import expand_device_map, get_total_byte_count
+        from transformers_4573.quantizers import AutoHfQuantizer
 
         # we need to preprocess the model like that because device_map calculation happens before we load the weights inside the model.
         # For normal wieghts, it's fine but for quantized weights, the tensors dtype might change during loading.
@@ -382,7 +382,7 @@ class FP8LinearTest(unittest.TestCase):
         """
         Test that FP8Linear preserves shape when in_features == out_features.
         """
-        from transformers.integrations import FP8Linear
+        from transformers_4573.integrations import FP8Linear
 
         linear = FP8Linear(256, 256, block_size=(128, 128)).to(self.device)
         x = torch.rand((1, 5, 256)).to(self.device)
@@ -394,7 +394,7 @@ class FP8LinearTest(unittest.TestCase):
         """
         Test that FP8Linear generates the correct shape when in_features != out_features.
         """
-        from transformers.integrations import FP8Linear
+        from transformers_4573.integrations import FP8Linear
 
         linear = FP8Linear(128, 256, block_size=(128, 128)).to(self.device)
         x = torch.rand((1, 5, 128)).to(self.device)

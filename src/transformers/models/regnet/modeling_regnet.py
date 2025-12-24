@@ -87,7 +87,7 @@ class RegNetEmbeddings(nn.Module):
         return hidden_state
 
 
-# Copied from transformers.models.resnet.modeling_resnet.ResNetShortCut with ResNet->RegNet
+# Copied from transformers_4573.models.resnet.modeling_resnet.ResNetShortCut with ResNet->RegNet
 class RegNetShortCut(nn.Module):
     """
     RegNet shortcut, used to project the residual features to the correct size. If needed, it is also used to
@@ -285,7 +285,7 @@ class RegNetPreTrainedModel(PreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.resnet.modeling_resnet.ResNetModel with RESNET->REGNET,ResNet->RegNet
+# Copied from transformers_4573.models.resnet.modeling_resnet.ResNetModel with RESNET->REGNET,ResNet->RegNet
 class RegNetModel(RegNetPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -335,7 +335,7 @@ class RegNetModel(RegNetPreTrainedModel):
     ImageNet.
     """
 )
-# Copied from transformers.models.resnet.modeling_resnet.ResNetForImageClassification with RESNET->REGNET,ResNet->RegNet,resnet->regnet
+# Copied from transformers_4573.models.resnet.modeling_resnet.ResNetForImageClassification with RESNET->REGNET,ResNet->RegNet,resnet->regnet
 class RegNetForImageClassification(RegNetPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)

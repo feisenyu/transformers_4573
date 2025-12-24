@@ -51,7 +51,7 @@ logger = logging.get_logger(__name__)
     Class defining the outputs of [`InstructBlipForConditionalGeneration`].
     """
 )
-# Copied from transformers.models.blip_2.modeling_blip_2.Blip2ForConditionalGenerationModelOutput with Blip2->InstructBlip
+# Copied from transformers_4573.models.blip_2.modeling_blip_2.Blip2ForConditionalGenerationModelOutput with Blip2->InstructBlip
 class InstructBlipForConditionalGenerationModelOutput(ModelOutput):
     r"""
     loss (`torch.FloatTensor`, *optional*, returned when `labels` is provided, `torch.FloatTensor` of shape `(1,)`):
@@ -81,7 +81,7 @@ class InstructBlipForConditionalGenerationModelOutput(ModelOutput):
         )
 
 
-# Copied from transformers.models.blip.modeling_blip.BlipVisionEmbeddings with Blip->InstructBlip
+# Copied from transformers_4573.models.blip.modeling_blip.BlipVisionEmbeddings with Blip->InstructBlip
 class InstructBlipVisionEmbeddings(nn.Module):
     def __init__(self, config: InstructBlipVisionConfig):
         super().__init__()
@@ -156,7 +156,7 @@ class InstructBlipVisionEmbeddings(nn.Module):
         return embeddings
 
 
-# Adapted from transformers.models.siglip.modeling_siglip.eager_attention_forward -> InstructBLIP doesn't cast attn weights to fp32
+# Adapted from transformers_4573.models.siglip.modeling_siglip.eager_attention_forward -> InstructBLIP doesn't cast attn weights to fp32
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -180,7 +180,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.blip_2.modeling_blip_2.Blip2Attention with Blip2->InstructBlip
+# Copied from transformers_4573.models.blip_2.modeling_blip_2.Blip2Attention with Blip2->InstructBlip
 class InstructBlipAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
@@ -256,7 +256,7 @@ class InstructBlipAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.blip.modeling_blip.BlipMLP
+# Copied from transformers_4573.models.blip.modeling_blip.BlipMLP
 class InstructBlipMLP(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -272,7 +272,7 @@ class InstructBlipMLP(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.blip.modeling_blip.BlipEncoderLayer with Blip->InstructBlip
+# Copied from transformers_4573.models.blip.modeling_blip.BlipEncoderLayer with Blip->InstructBlip
 class InstructBlipEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: InstructBlipConfig):
         super().__init__()
@@ -339,7 +339,7 @@ class InstructBlipPreTrainedModel(PreTrainedModel):
             init.copy_(module.position_ids, torch.arange(module.position_ids.shape[-1]).expand((1, -1)))
 
 
-# Copied from transformers.models.blip.modeling_blip.BlipEncoder with Blip->InstructBlip
+# Copied from transformers_4573.models.blip.modeling_blip.BlipEncoder with Blip->InstructBlip
 class InstructBlipEncoder(nn.Module):
     """
     Transformer encoder consisting of `config.num_hidden_layers` self attention layers. Each layer is a
@@ -372,7 +372,7 @@ class InstructBlipEncoder(nn.Module):
         return BaseModelOutput(last_hidden_state=hidden_states)
 
 
-# Copied from transformers.models.blip.modeling_blip.BlipVisionModel with Blip->InstructBlip, BLIP->INSTRUCTBLIP
+# Copied from transformers_4573.models.blip.modeling_blip.BlipVisionModel with Blip->InstructBlip, BLIP->INSTRUCTBLIP
 class InstructBlipVisionModel(InstructBlipPreTrainedModel):
     main_input_name = "pixel_values"
     input_modalities = ("image",)
@@ -523,7 +523,7 @@ class InstructBlipQFormerMultiHeadAttention(nn.Module):
         return context_layer, attention_probs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput with Bert->InstructBlipQFormer
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput with Bert->InstructBlipQFormer
 class InstructBlipQFormerSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -538,7 +538,7 @@ class InstructBlipQFormerSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.blip_2.modeling_blip_2.Blip2QFormerAttention with Blip2->InstructBlip
+# Copied from transformers_4573.models.blip_2.modeling_blip_2.Blip2QFormerAttention with Blip2->InstructBlip
 class InstructBlipQFormerAttention(nn.Module):
     def __init__(self, config, is_cross_attention=False):
         super().__init__()
@@ -564,7 +564,7 @@ class InstructBlipQFormerAttention(nn.Module):
         return attention_output
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate with Bert->InstructBlipQFormer
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate with Bert->InstructBlipQFormer
 class InstructBlipQFormerIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -580,7 +580,7 @@ class InstructBlipQFormerIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput with Bert->InstructBlipQFormer
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput with Bert->InstructBlipQFormer
 class InstructBlipQFormerOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -680,7 +680,7 @@ class InstructBlipQFormerLayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.blip_2.modeling_blip_2.Blip2QFormerEncoder with Blip2->InstructBlip
+# Copied from transformers_4573.models.blip_2.modeling_blip_2.Blip2QFormerEncoder with Blip2->InstructBlip
 class InstructBlipQFormerEncoder(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -1153,7 +1153,7 @@ class InstructBlipForConditionalGeneration(InstructBlipPreTrainedModel, Generati
     def get_decoder(self):
         return self.language_model.get_decoder()
 
-    # Copied from transformers.models.instructblip.modeling_instructblip.InstructBlipModel._preprocess_accelerate
+    # Copied from transformers_4573.models.instructblip.modeling_instructblip.InstructBlipModel._preprocess_accelerate
     def _preprocess_accelerate(self):
         r"""
         Some pre-processing hacks to make the model `accelerate` compatible. Check
@@ -1283,7 +1283,7 @@ class InstructBlipForConditionalGeneration(InstructBlipPreTrainedModel, Generati
         Examples:
 
         ```python
-        >>> from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
+        >>> from transformers_4573 import InstructBlipProcessor, InstructBlipForConditionalGeneration
         >>> import torch
         >>> from PIL import Image
         >>> import requests

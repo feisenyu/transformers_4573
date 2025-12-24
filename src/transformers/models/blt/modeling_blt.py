@@ -151,7 +151,7 @@ class BltRotaryEmbedding(nn.Module):
         return cos.to(dtype=x.dtype), sin.to(dtype=x.dtype)
 
 
-# Modified from transformers.models.llama.modeling_llama.LlamaDecoderLayer
+# Modified from transformers_4573.models.llama.modeling_llama.LlamaDecoderLayer
 class BltTransformerLayer(GradientCheckpointingLayer):
     def __init__(self, config, layer_idx: int):
         super().__init__()
@@ -1435,7 +1435,7 @@ class BltForCausalLM(BltPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BltForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, BltForCausalLM
 
         >>> model = BltForCausalLM.from_pretrained("Llama-3.2-11B-Vision")
         >>> tokenizer = AutoTokenizer.from_pretrained("Llama-3.2-11B-Vision")

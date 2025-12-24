@@ -17,7 +17,7 @@ import unittest
 import numpy as np
 import pytest
 
-from transformers import (
+from transformers_4573 import (
     MODEL_MAPPING,
     TOKENIZER_MAPPING,
     ImageFeatureExtractionPipeline,
@@ -25,7 +25,7 @@ from transformers import (
     is_vision_available,
     pipeline,
 )
-from transformers.testing_utils import is_pipeline_test, nested_simplify, require_torch
+from transformers_4573.testing_utils import is_pipeline_test, nested_simplify, require_torch
 
 
 if is_torch_available():

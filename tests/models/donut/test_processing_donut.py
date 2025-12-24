@@ -15,7 +15,7 @@
 
 import unittest
 
-from transformers import DonutProcessor
+from transformers_4573 import DonutProcessor
 
 from ...test_processing_common import ProcessorTesterMixin
 

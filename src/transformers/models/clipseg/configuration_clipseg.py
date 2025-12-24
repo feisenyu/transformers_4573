@@ -68,7 +68,7 @@ class CLIPSegTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import CLIPSegTextConfig, CLIPSegTextModel
+    >>> from transformers_4573 import CLIPSegTextConfig, CLIPSegTextModel
 
     >>> # Initializing a CLIPSegTextConfig with CIDAS/clipseg-rd64 style configuration
     >>> configuration = CLIPSegTextConfig()
@@ -157,7 +157,7 @@ class CLIPSegVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import CLIPSegVisionConfig, CLIPSegVisionModel
+    >>> from transformers_4573 import CLIPSegVisionConfig, CLIPSegVisionModel
 
     >>> # Initializing a CLIPSegVisionConfig with CIDAS/clipseg-rd64 style configuration
     >>> configuration = CLIPSegVisionConfig()
@@ -248,7 +248,7 @@ class CLIPSegConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import CLIPSegConfig, CLIPSegModel
+    >>> from transformers_4573 import CLIPSegConfig, CLIPSegModel
 
     >>> # Initializing a CLIPSegConfig with CIDAS/clipseg-rd64 style configuration
     >>> configuration = CLIPSegConfig()

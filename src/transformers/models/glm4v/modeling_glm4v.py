@@ -1424,7 +1424,7 @@ class Glm4vForConditionalGeneration(Glm4vPreTrainedModel, GenerationMixin):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Glm4vForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Glm4vForConditionalGeneration
 
         >>> model = Glm4vForConditionalGeneration.from_pretrained("THUDM/GLM-4.1V-9B-Thinking")
         >>> processor = AutoProcessor.from_pretrained("THUDM/GLM-4.1V-9B-Thinking")

@@ -47,7 +47,7 @@ class SeamlessM4TTokenizer(TokenizersBackend):
     Examples:
 
     ```python
-    >>> from transformers import SeamlessM4TTokenizer
+    >>> from transformers_4573 import SeamlessM4TTokenizer
 
     >>> tokenizer = SeamlessM4TTokenizer.from_pretrained(
     ...     "facebook/hf-seamless-m4t-medium", src_lang="eng", tgt_lang="fra"

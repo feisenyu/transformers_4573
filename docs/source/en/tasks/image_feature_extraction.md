@@ -42,7 +42,7 @@ Let's see the pipeline in action. First, initialize the pipeline. If you don't p
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 # automatically detects the underlying device type (CUDA, CPU, XPU, MPS, etc.)
 device = Accelerator().device
@@ -100,7 +100,7 @@ print(np.array(outputs).shape)
 We can also use `AutoModel` class of transformers to get the features. `AutoModel` loads any transformers model with no task-specific head, and we can use this to get the features.
 
 ```python
-from transformers import AutoImageProcessor, AutoModel
+from transformers_4573 import AutoImageProcessor, AutoModel
 
 processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
 model = AutoModel.from_pretrained("google/vit-base-patch16-224").to(DEVICE)

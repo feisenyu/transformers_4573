@@ -16,7 +16,7 @@
 اطلع على [DistilBERT](model_doc/distilbert) من خلال [`DistilBertConfig`] لمعاينة خصائصه:
 
 ```py
->>> from transformers import DistilBertConfig
+>>> from transformers_4573 import DistilBertConfig
 
 >>> config = DistilBertConfig()
 >>> print(config)
@@ -84,7 +84,7 @@ DistilBertConfig {
 قم بتحميل خصائص التكوين المخصصة الخاصة بك في النموذج:
 
 ```py
->>> from transformers import DistilBertModel
+>>> from transformers_4573 import DistilBertModel
 
 >>> my_config = DistilBertConfig.from_pretrained("./your_model_save_path/config.json")
 >>> model = DistilBertModel(my_config)
@@ -111,7 +111,7 @@ DistilBertConfig {
 على سبيل المثال، [`DistilBertForSequenceClassification`] هو نموذج DistilBERT الأساس  مزودًا برأس تصنيف تسلسلي.  يُشكّل رأس التصنيف التسلسلي طبقة خطية فوق المخرجات المجمعة.
 
 ```py
->>> from transformers import DistilBertForSequenceClassification
+>>> from transformers_4573 import DistilBertForSequenceClassification
 
 >>> model = DistilBertForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -119,7 +119,7 @@ DistilBertConfig {
 أعد استخدام هذا نقطة التحقق هذه لمهمة أخرى بسهولة، وذلك بتغيير رأس النموذج.ففي مهمة الإجابة على الأسئلة، ستستخدم رأس النموذج [`DistilBertForQuestionAnswering`]. رأس الإجابة على الأسئلة مشابه لرأس التصنيف التسلسلي باستثناء أنه طبقة خطية فوق مخرجات الحالات الكامنة.
 
 ```py
->>> from transformers import DistilBertForQuestionAnswering
+>>> from transformers_4573 import DistilBertForQuestionAnswering
 
 >>> model = DistilBertForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -142,7 +142,7 @@ DistilBertConfig {
 إذا دربت مجزئ النصوص خاص بك، فيمكنك إنشاء واحد من *قاموسك*:```
 
 ```py
->>> from transformers import DistilBertTokenizer
+>>> from transformers_4573 import DistilBertTokenizer
 
 >>> my_tokenizer = DistilBertTokenizer(vocab_file="my_vocab_file.txt"، do_lower_case=False، padding_side="left")
 ```
@@ -150,7 +150,7 @@ DistilBertConfig {
 من المهم أن تتذكر أن قاموس مجزئ النصوص المُخصص سيكون مختلفًا عن قاموس مجزئ النصوص نموذج مُدرّب مسبقًا. يجب عليك استخدام قاموس نموذج مُدرّب مسبقًا إذا كنت تستخدم نموذجًا مُدرّبًا مسبقًا، وإلا فلن تكون المدخلات ذات معنى. قم بإنشاء مجزئ النصوص باستخدام قاموس نموذج مُدرّب مسبقًا باستخدام فئة [`DistilBertTokenizer`]:
 
 ```py
->>> from transformers import DistilBertTokenizer
+>>> from transformers_4573 import DistilBertTokenizer
 
 >>> slow_tokenizer = DistilBertTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -158,7 +158,7 @@ DistilBertConfig {
 قم بإنشاء مجزئ نصوص سريع باستخدام فئة [`DistilBertTokenizerFast`]:
 
 ```py
->>> from transformers import DistilBertTokenizerFast
+>>> from transformers_4573 import DistilBertTokenizerFast
 
 >>> fast_tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -174,7 +174,7 @@ DistilBertConfig {
 لبناء معالج صور خاص بالنموذج المستخدم، أنشئ مثلاً مُعالج  [`ViTImageProcessor`] افتراضيًا إذا كنت تستخدم [ViT](model_doc/vit) لتصنيف الصور:
 
 ```py
->>> from transformers import ViTImageProcessor
+>>> from transformers_4573 import ViTImageProcessor
 
 >>> vit_extractor = ViTImageProcessor()
 >>> print(vit_extractor)
@@ -206,7 +206,7 @@ ViTImageProcessor {
 عدل أيًا من معلمات [`ViTImageProcessor`] لإنشاء معالج الصور المخصص الخاص بك:
 
 ```py
->>> from transformers import ViTImageProcessor
+>>> from transformers_4573 import ViTImageProcessor
 
 >>> my_vit_extractor = ViTImageProcessor(resample="PIL.Image.BOX", do_normalize=False, image_mean=[0.3, 0.3, 0.3])
 >>> print(my_vit_extractor)
@@ -244,7 +244,7 @@ ViTImageProcessor {
 قم بتعيين `use_pretrained_backbone=True` لتحميل الأوزان المسبقة التدريب لـ ResNet للعمود الفقري.
 
 ```py
-from transformers import MaskFormerConfig, MaskFormerForInstanceSegmentation
+from transformers_4573 import MaskFormerConfig, MaskFormerForInstanceSegmentation
 
 config = MaskFormerConfig(backbone="microsoft/resnet-50", use_pretrained_backbone=True) # تكوين الجزء الأساسي والجزء الوسيط
 model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة النهائي
@@ -256,7 +256,7 @@ model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة ال
 قم بتعيين `use_pretrained_backbone=False` لتهيئة جزء ResNet الأساسي بشكل عشوائي.
 
 ```py
-from transformers import MaskFormerConfig, MaskFormerForInstanceSegmentation
+from transformers_4573 import MaskFormerConfig, MaskFormerForInstanceSegmentation
 
 config = MaskFormerConfig(backbone="microsoft/resnet-50", use_pretrained_backbone=False) # تكوين الجزء الأساسي والجزء الوسيط
 model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة النهائي
@@ -265,7 +265,7 @@ model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة ال
 يمكنك أيضًا تحميل تكوين الجزء الأساسي بشكل منفصل، ثم تمريره إلى تكوين النموذج.```
 
 ```py
-from transformers import MaskFormerConfig, MaskFormerForInstanceSegmentation, ResNetConfig
+from transformers_4573 import MaskFormerConfig, MaskFormerForInstanceSegmentation, ResNetConfig
 
 backbone_config = ResNetConfig()
 config = MaskFormerConfig(backbone_config=backbone_config)
@@ -280,7 +280,7 @@ model = MaskFormerForInstanceSegmentation(config)
 استخدم `use_timm_backbone=True` و `use_pretrained_backbone=True` لتحميل أوزان timm المُدرّبة مسبقًا للجزء الأساسي.
 
 ```python
-from transformers import MaskFormerConfig, MaskFormerForInstanceSegmentation
+from transformers_4573 import MaskFormerConfig, MaskFormerForInstanceSegmentation
 
 config = MaskFormerConfig(backbone="resnet50", use_pretrained_backbone=True, use_timm_backbone=True) # تكوين الجزء الأساسي والجزء الوسيط
 model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة النهائي
@@ -289,7 +289,7 @@ model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة ال
 قم بتعيين `use_timm_backbone=True` و `use_pretrained_backbone=False` لتحميل عمود فقري timm مبدئي عشوائي.
 
 ```python
-from transformers import MaskFormerConfig, MaskFormerForInstanceSegmentation
+from transformers_4573 import MaskFormerConfig, MaskFormerForInstanceSegmentation
 
 config = MaskFormerConfig(backbone="resnet50", use_pretrained_backbone=False, use_timm_backbone=True) # تكوين الجزء الأساسي والجزء الوسيط
 model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة النهائي
@@ -298,7 +298,7 @@ model = MaskFormerForInstanceSegmentation(config) # جزء المعالجة ال
 يمكنك أيضًا تحميل تكوين الجزء الأساسي واستخدامه لإنشاء `TimmBackbone` أو تمريره إلى تكوين النموذج. سيتم تحميلأوزان الجزء الأساسي لـ Timm المُدرّبة مسبقًا افتراضيًا. عيّن `use_pretrained_backbone=False` لتحميل الأوزان المبدئية العشوائية.
 
 ```python
-from transformers import TimmBackboneConfig, TimmBackbone
+from transformers_4573 import TimmBackboneConfig, TimmBackbone
 
 backbone_config = TimmBackboneConfig("resnet50", use_pretrained_backbone=False)
 
@@ -306,7 +306,7 @@ backbone_config = TimmBackboneConfig("resnet50", use_pretrained_backbone=False)
 backbone = TimmBackbone(config=backbone_config)
 
 # قم بإنشاء نموذج باستخدام عمود فقري timm
-from transformers import MaskFormerConfig, MaskFormerForInstanceSegmentation
+from transformers_4573 import MaskFormerConfig, MaskFormerForInstanceSegmentation
 
 config = MaskFormerConfig(backbone_config=backbone_config)
 model = MaskFormerForInstanceSegmentation(config)
@@ -319,7 +319,7 @@ model = MaskFormerForInstanceSegmentation(config)
 للاستخدام، قم بإنشاء مستخرج ميزات مرتبط بالنموذج الذي تستخدمه. على سبيل المثال، قم بإنشاء مستخرج ميزات Wav2Vec2 الافتراضي إذا كنت تستخدم [Wav2Vec2](model_doc/wav2vec2) لتصنيف الصوت:
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> w2v2_extractor = Wav2Vec2FeatureExtractor()
 >>> print(w2v2_extractor)
@@ -341,7 +341,7 @@ Wav2Vec2FeatureExtractor {
 قم بتعديل أي من معلمات [`Wav2Vec2FeatureExtractor`] لإنشاء مستخرج ميزات مخصص:
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> w2v2_extractor = Wav2Vec2FeatureExtractor(sampling_rate=8000، do_normalize=False)
 >>> print(w2v2_extractor)
@@ -363,7 +363,7 @@ Wav2Vec2FeatureExtractor {
 قم بإنشاء مستخرج ميزات لمعالجة المدخلات الصوتية:
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor(padding_value=1.0, do_normalize=True)
 ```
@@ -371,7 +371,7 @@ Wav2Vec2FeatureExtractor {
 قم بإنشاء مقسّم رموز لمعالجة المدخلات النصية:
 
 ```py
->>> from transformers import Wav2Vec2CTCTokenizer
+>>> from transformers_4573 import Wav2Vec2CTCTokenizer
 
 >>> tokenizer = Wav2Vec2CTCTokenizer(vocab_file="my_vocab_file.txt")
 ```
@@ -379,7 +379,7 @@ Wav2Vec2FeatureExtractor {
 قم بدمج مستخرج الميزات ومقسّم الرموز في [`Wav2Vec2Processor`]:
 
 ```py
->>> from transformers import Wav2Vec2Processor
+>>> from transformers_4573 import Wav2Vec2Processor
 
 >>> processor = Wav2Vec2Processor(feature_extractor=feature_extractor, tokenizer=tokenizer)
 ```

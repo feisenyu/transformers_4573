@@ -24,9 +24,9 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import BitImageProcessor, PixioConfig, PixioModel
-from transformers.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling
-from transformers.utils import logging
+from transformers_4573 import BitImageProcessor, PixioConfig, PixioModel
+from transformers_4573.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

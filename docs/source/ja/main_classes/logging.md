@@ -50,7 +50,7 @@ TRANSFORMERS_NO_ADVISORY_WARNINGS=1 ./myprogram.py
 以下は、独自のモジュールまたはスクリプトでライブラリと同じロガーを使用する方法の例です。
 
 ```python
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 logging.set_verbosity_info()
 logger = logging.get_logger("transformers")

@@ -20,9 +20,9 @@ import numpy as np
 import pytest
 
 from tests.test_modeling_common import floats_tensor
-from transformers import AutoModelForImageClassification, Mask2FormerConfig, is_torch_available, is_vision_available
-from transformers.pytorch_utils import is_torch_greater_or_equal_than_2_4
-from transformers.testing_utils import (
+from transformers_4573 import AutoModelForImageClassification, Mask2FormerConfig, is_torch_available, is_vision_available
+from transformers_4573.pytorch_utils import is_torch_greater_or_equal_than_2_4
+from transformers_4573.testing_utils import (
     Expectations,
     require_timm,
     require_torch,
@@ -42,10 +42,10 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import Mask2FormerForUniversalSegmentation, Mask2FormerModel
+    from transformers_4573 import Mask2FormerForUniversalSegmentation, Mask2FormerModel
 
     if is_vision_available():
-        from transformers import Mask2FormerImageProcessor
+        from transformers_4573 import Mask2FormerImageProcessor
 
 if is_vision_available():
     from PIL import Image

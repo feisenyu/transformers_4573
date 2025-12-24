@@ -35,7 +35,7 @@ Use the `attn_implementation` argument in [`~PreTrainedModel.from_pretrained`] t
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(
     "meta-llama/Llama-3.2-1B", attn_implementation="flash_attention_2"
@@ -56,7 +56,7 @@ Kernels automatically register to [`AttentionInterface`] upon detection. You don
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(
     "meta-llama/Llama-3.2-1B", attn_implementation="kernels-community/flash-attn2"
@@ -72,7 +72,7 @@ Force SDPA to use a specific implementation with the [torch.nn.attention.sdpa_ke
 ```py
 import torch
 from torch.nn.attention import SDPBackend, sdpa_kernel
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(
     "meta-llama/Llama-3.2-1B", attn_implementation="sdpa"
@@ -89,7 +89,7 @@ Multimodal models use different backbones for each modality. Optimize performanc
 Map vision backbones to different attention functions with a dict while the text backbone continues to use FlashAttention. Keys in the attention implementation must match sub-config names.
 
 ```py
-from transformers import AutoModelForImageTextToText
+from transformers_4573 import AutoModelForImageTextToText
 
 attention_implementation_per_backbone = {"vision_config": "sdpa", "text_config": "flash_attention_2"}
 
@@ -133,8 +133,8 @@ This example customizes the attention function to print a statement for each lay
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AttentionInterface
-from transformers.integrations.sdpa_attention import sdpa_attention_forward
+from transformers_4573 import AutoModelForCausalLM, AttentionInterface
+from transformers_4573.integrations.sdpa_attention import sdpa_attention_forward
 
 def my_new_sdpa(*args, **kwargs):
     print("I just entered the attention computation")
@@ -150,8 +150,8 @@ You can also add new arguments to the attention function. Models supporting [`At
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AttentionInterface
-from transformers.integrations.sdpa_attention import sdpa_attention_forward
+from transformers_4573 import AutoModelForCausalLM, AttentionInterface
+from transformers_4573.integrations.sdpa_attention import sdpa_attention_forward
 
 def custom_attention(
     module: torch.nn.Module,  # required arg
@@ -180,8 +180,8 @@ Configure which key and value tokens queries attend to with [`AttentionMaskInter
 
 ```python
 import torch
-from transformers import AttentionMaskInterface
-from transformers.masking_utils import sdpa_mask
+from transformers_4573 import AttentionMaskInterface
+from transformers_4573.masking_utils import sdpa_mask
 
 def my_new_sdpa_mask(*args, **kwargs):
     print("I just entered the attention mask computation")

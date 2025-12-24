@@ -20,7 +20,7 @@ from typing import Optional
 import torch
 from torch import nn
 
-from transformers import AutoModelForImageTextToText
+from transformers_4573 import AutoModelForImageTextToText
 
 from ... import initialization as init
 from ...cache_utils import Cache

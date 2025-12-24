@@ -64,7 +64,7 @@ class MLCDVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import MLCDVisionConfig, MLCDVisionModel
+    >>> from transformers_4573 import MLCDVisionConfig, MLCDVisionModel
 
     >>> # Initializing a MLCDVisionConfig with DeepGlint-AI/mlcd-vit-bigG-patch14-336 style configuration
     >>> configuration = MLCDVisionConfig()

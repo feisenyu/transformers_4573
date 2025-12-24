@@ -22,14 +22,14 @@ import torch
 from accelerate.utils.modeling import find_tied_parameters
 from seamless_communication.inference import Translator
 
-from transformers import (
+from transformers_4573 import (
     SeamlessM4TFeatureExtractor,
     SeamlessM4TProcessor,
     SeamlessM4TTokenizer,
     SeamlessM4Tv2Config,
     SeamlessM4Tv2Model,
 )
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 
 # fmt: off

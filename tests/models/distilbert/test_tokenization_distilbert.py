@@ -13,9 +13,9 @@
 # limitations under the License.
 
 
-from transformers import AutoTokenizer
-from transformers.models.distilbert.tokenization_distilbert import DistilBertTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573 import AutoTokenizer
+from transformers_4573.models.distilbert.tokenization_distilbert import DistilBertTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 from ..bert import test_tokenization_bert
 

@@ -19,7 +19,7 @@ import json
 
 import torch
 
-from transformers import Pop2PianoConfig, Pop2PianoForConditionalGeneration
+from transformers_4573 import Pop2PianoConfig, Pop2PianoForConditionalGeneration
 
 
 ########################## MODEL WEIGHTS ##########################

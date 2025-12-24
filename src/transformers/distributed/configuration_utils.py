@@ -48,7 +48,7 @@ class DistributedConfig:
             kwargs.pop(key, None)
         return config
 
-    # Copied from transformers.utils.quantization_config.QuantizationConfigMixin.to_json_file
+    # Copied from transformers_4573.utils.quantization_config.QuantizationConfigMixin.to_json_file
     def to_json_file(self, json_file_path: str | os.PathLike):
         """
         Save this instance to a JSON file.
@@ -72,13 +72,13 @@ class DistributedConfig:
         """
         return copy.deepcopy(self.__dict__)
 
-    # Copied from transformers.utils.quantization_config.QuantizationConfigMixin.__iter__
+    # Copied from transformers_4573.utils.quantization_config.QuantizationConfigMixin.__iter__
     def __iter__(self):
         """allows `dict(obj)` for situations where obj may be a dict or QuantizationConfigMixin"""
         for attr, value in copy.deepcopy(self.__dict__).items():
             yield attr, value
 
-    # Copied from transformers.utils.quantization_config.QuantizationConfigMixin.__repr__
+    # Copied from transformers_4573.utils.quantization_config.QuantizationConfigMixin.__repr__
     def __repr__(self):
         return f"{self.__class__.__name__} {self.to_json_string()}"
 

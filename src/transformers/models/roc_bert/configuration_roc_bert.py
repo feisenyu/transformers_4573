@@ -88,7 +88,7 @@ class RoCBertConfig(PreTrainedConfig):
         Example:
 
     ```python
-    >>> from transformers import RoCBertModel, RoCBertConfig
+    >>> from transformers_4573 import RoCBertModel, RoCBertConfig
 
     >>> # Initializing a RoCBert weiweishi/roc-bert-base-zh style configuration
     >>> configuration = RoCBertConfig()

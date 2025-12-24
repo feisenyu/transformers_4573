@@ -911,7 +911,7 @@ class T5Model(T5PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, T5Model
+        >>> from transformers_4573 import AutoTokenizer, T5Model
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
         >>> model = T5Model.from_pretrained("google-t5/t5-small")
@@ -1079,7 +1079,7 @@ class T5ForConditionalGeneration(T5PreTrainedModel, GenerationMixin):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, T5ForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, T5ForConditionalGeneration
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
         >>> model = T5ForConditionalGeneration.from_pretrained("google-t5/t5-small")
@@ -1223,7 +1223,7 @@ class T5EncoderModel(T5PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, T5EncoderModel
+        >>> from transformers_4573 import AutoTokenizer, T5EncoderModel
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
         >>> model = T5EncoderModel.from_pretrained("google-t5/t5-small")

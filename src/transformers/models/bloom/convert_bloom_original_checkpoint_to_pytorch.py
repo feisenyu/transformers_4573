@@ -21,9 +21,9 @@ import re
 
 import torch
 
-from transformers import BloomConfig, BloomModel
-from transformers.file_utils import CONFIG_NAME, WEIGHTS_NAME
-from transformers.utils import logging
+from transformers_4573 import BloomConfig, BloomModel
+from transformers_4573.file_utils import CONFIG_NAME, WEIGHTS_NAME
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

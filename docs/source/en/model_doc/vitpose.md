@@ -36,7 +36,7 @@ import requests
 import numpy as np
 import supervision as sv
 from PIL import Image
-from transformers import AutoProcessor, RTDetrForObjectDetection, VitPoseForPoseEstimation
+from transformers_4573 import AutoProcessor, RTDetrForObjectDetection, VitPoseForPoseEstimation
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -118,7 +118,7 @@ import torch
 import requests
 import numpy as np
 from PIL import Image
-from transformers import AutoProcessor, RTDetrForObjectDetection, VitPoseForPoseEstimation, TorchAoConfig
+from transformers_4573 import AutoProcessor, RTDetrForObjectDetection, VitPoseForPoseEstimation, TorchAoConfig
 
 url = "https://www.fcbarcelona.com/fcbarcelona/photo/2021/01/31/3c55a19f-dfc1-4451-885e-afd14e890a11/mini_2021-01-31-BARCELONA-ATHLETIC-BILBAOI-30.JPG"
 image = Image.open(requests.get(url, stream=True).raw)
@@ -163,7 +163,7 @@ image_pose_result = pose_results[0]
 - ViTPose++ has 6 different MoE expert heads (COCO validation `0`, AiC `1`, MPII `2`, AP-10K `3`, APT-36K `4`, COCO-WholeBody `5`) which supports 6 different datasets. Pass a specific value corresponding to the dataset to the `dataset_index` to indicate which expert to use.
 
     ```py
-    from transformers import AutoProcessor, VitPoseForPoseEstimation
+    from transformers_4573 import AutoProcessor, VitPoseForPoseEstimation
     from accelerate import Accelerator
 
     device = Accelerator().device

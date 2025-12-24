@@ -68,7 +68,7 @@ Create the [`TextGenerationPipeline`] and pass `chat` to it. For large models, s
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="HuggingFaceTB/SmolLM2-1.7B-Instruct", dtype="auto", device_map="auto")
 response = pipeline(chat, max_new_tokens=512)
@@ -104,7 +104,7 @@ Transformers load models in full `float32` precision by default, and for a 8B mo
 To lower memory usage even lower, you can quantize the model to 8-bit or 4-bit with [bitsandbytes](https://hf.co/docs/bitsandbytes/index). Create a [`BitsAndBytesConfig`] with your desired quantization settings and pass it to the pipelines `model_kwargs` parameter. The example below quantizes a model to 8-bits.
 
 ```py
-from transformers import pipeline, BitsAndBytesConfig
+from transformers_4573 import pipeline, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_8bit=True)
 pipeline = pipeline(task="text-generation", model="meta-llama/Meta-Llama-3-8B-Instruct", device_map="auto", model_kwargs={"quantization_config": quantization_config})

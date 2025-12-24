@@ -68,7 +68,7 @@ Here’s an example of how to structure your input.
 We will use [llava-onevision-qwen2-7b-si-hf](https://huggingface.co/llava-hf/llava-onevision-qwen2-7b-si-hf) and a conversation history of text and image. Each content field has to be a list of dicts, as follows:
 
 ```python
-from transformers import AutoProcessor
+from transformers_4573 import AutoProcessor
 
 processor = AutoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-7b-si-hf")
 
@@ -112,7 +112,7 @@ The original code can be found [here](https://github.com/LLaVA-VL/LLaVA-NeXT/tre
 Here's how to load the model and perform inference in half-precision (`torch.float16`):
 
 ```python
-from transformers import AutoProcessor, LlavaOnevisionForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaOnevisionForConditionalGeneration
 from accelerate import Accelerator
 import torch
 
@@ -153,7 +153,7 @@ LLaVa-OneVision can perform inference with multiple images as input, where image
 import requests
 from PIL import Image
 import torch
-from transformers import AutoProcessor, LlavaOnevisionForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaOnevisionForConditionalGeneration
 
 # Load the model in half-precision
 model = LlavaOnevisionForConditionalGeneration.from_pretrained("llava-hf/llava-onevision-qwen2-7b-ov-hf", dtype=torch.float16, device_map="auto")
@@ -216,7 +216,7 @@ LLaVa-OneVision also can perform inference with videos as input, where video fra
 ```python
 from huggingface_hub import hf_hub_download
 import torch
-from transformers import AutoProcessor, LlavaOnevisionForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaOnevisionForConditionalGeneration
 
 # Load the model in half-precision
 model = LlavaOnevisionForConditionalGeneration.from_pretrained("llava-hf/llava-onevision-qwen2-7b-ov-hf", dtype=torch.float16, device_map="auto")
@@ -265,7 +265,7 @@ We value your feedback to help identify bugs before the full release! Check out 
 Simply change the snippet above with:
 
 ```python
-from transformers import LlavaOnevisionForConditionalGeneration, BitsAndBytesConfig
+from transformers_4573 import LlavaOnevisionForConditionalGeneration, BitsAndBytesConfig
 
 # specify how to quantize the model
 quantization_config = BitsAndBytesConfig(
@@ -282,7 +282,7 @@ model = LlavaOnevisionForConditionalGeneration.from_pretrained(model_id, quantiz
 First make sure to install flash-attn. Refer to the [original repository of Flash Attention](https://github.com/Dao-AILab/flash-attention) regarding that package installation. Simply change the snippet above with:
 
 ```python
-from transformers import LlavaOnevisionForConditionalGeneration
+from transformers_4573 import LlavaOnevisionForConditionalGeneration
 
 model = LlavaOnevisionForConditionalGeneration.from_pretrained(
     model_id,

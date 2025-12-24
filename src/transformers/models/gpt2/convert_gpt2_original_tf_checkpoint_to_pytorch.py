@@ -19,8 +19,8 @@ import os
 
 import torch
 
-from transformers import GPT2Config, GPT2Model
-from transformers.utils import CONFIG_NAME, WEIGHTS_NAME, logging
+from transformers_4573 import GPT2Config, GPT2Model
+from transformers_4573.utils import CONFIG_NAME, WEIGHTS_NAME, logging
 
 
 logging.set_verbosity_info()

@@ -38,8 +38,8 @@ import requests
 import torch
 from torchvision import io
 from typing import Dict
-from transformers.image_utils import load_images, load_video
-from transformers import AutoModelForImageTextToText, AutoTokenizer, AutoProcessor
+from transformers_4573.image_utils import load_images, load_video
+from transformers_4573 import AutoModelForImageTextToText, AutoTokenizer, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device

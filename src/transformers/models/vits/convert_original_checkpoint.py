@@ -21,7 +21,7 @@ import tempfile
 import torch
 from huggingface_hub import hf_hub_download
 
-from transformers import VitsConfig, VitsModel, VitsTokenizer, logging
+from transformers_4573 import VitsConfig, VitsModel, VitsTokenizer, logging
 
 
 logging.set_verbosity_info()

@@ -46,7 +46,7 @@ logger = logging.get_logger(__name__)
     Swinv2 encoder's outputs, with potential hidden states and attentions.
     """
 )
-# Copied from transformers.models.swin.modeling_swin.SwinEncoderOutput with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinEncoderOutput with Swin->Swinv2
 class Swinv2EncoderOutput(ModelOutput):
     r"""
     reshaped_hidden_states (`tuple(torch.FloatTensor)`, *optional*, returned when `output_hidden_states=True` is passed or when `config.output_hidden_states=True`):
@@ -69,7 +69,7 @@ class Swinv2EncoderOutput(ModelOutput):
     Swinv2 model's outputs that also contains a pooling of the last hidden states.
     """
 )
-# Copied from transformers.models.swin.modeling_swin.SwinModelOutput with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinModelOutput with Swin->Swinv2
 class Swinv2ModelOutput(ModelOutput):
     r"""
     pooler_output (`torch.FloatTensor` of shape `(batch_size, hidden_size)`, *optional*, returned when `add_pooling_layer=True` is passed):
@@ -95,7 +95,7 @@ class Swinv2ModelOutput(ModelOutput):
     Swinv2 masked image model outputs.
     """
 )
-# Copied from transformers.models.swin.modeling_swin.SwinMaskedImageModelingOutput with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinMaskedImageModelingOutput with Swin->Swinv2
 class Swinv2MaskedImageModelingOutput(ModelOutput):
     r"""
     loss (`torch.FloatTensor` of shape `(1,)`, *optional*, returned when `bool_masked_pos` is provided):
@@ -132,7 +132,7 @@ class Swinv2MaskedImageModelingOutput(ModelOutput):
     Swinv2 outputs for image classification.
     """
 )
-# Copied from transformers.models.swin.modeling_swin.SwinImageClassifierOutput with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinImageClassifierOutput with Swin->Swinv2
 class Swinv2ImageClassifierOutput(ModelOutput):
     r"""
     loss (`torch.FloatTensor` of shape `(1,)`, *optional*, returned when `labels` is provided):
@@ -154,7 +154,7 @@ class Swinv2ImageClassifierOutput(ModelOutput):
     reshaped_hidden_states: Optional[tuple[torch.FloatTensor, ...]] = None
 
 
-# Copied from transformers.models.swin.modeling_swin.window_partition
+# Copied from transformers_4573.models.swin.modeling_swin.window_partition
 def window_partition(input_feature, window_size):
     """
     Partitions the given input into windows.
@@ -167,7 +167,7 @@ def window_partition(input_feature, window_size):
     return windows
 
 
-# Copied from transformers.models.swin.modeling_swin.window_reverse
+# Copied from transformers_4573.models.swin.modeling_swin.window_reverse
 def window_reverse(windows, window_size, height, width):
     """
     Merges windows to produce higher resolution features.
@@ -178,7 +178,7 @@ def window_reverse(windows, window_size, height, width):
     return windows
 
 
-# Copied from transformers.models.swin.modeling_swin.drop_path
+# Copied from transformers_4573.models.swin.modeling_swin.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -194,7 +194,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.swin.modeling_swin.SwinDropPath with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinDropPath with Swin->Swinv2
 class Swinv2DropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -209,7 +209,7 @@ class Swinv2DropPath(nn.Module):
         return f"p={self.drop_prob}"
 
 
-# Copied from transformers.models.swin.modeling_swin.SwinEmbeddings with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinEmbeddings with Swin->Swinv2
 class Swinv2Embeddings(nn.Module):
     """
     Construct the patch and position embeddings. Optionally, also the mask token.
@@ -233,7 +233,7 @@ class Swinv2Embeddings(nn.Module):
         self.patch_size = config.patch_size
         self.config = config
 
-    # Copied from transformers.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
+    # Copied from transformers_4573.models.vit.modeling_vit.ViTEmbeddings.interpolate_pos_encoding
     def interpolate_pos_encoding(self, embeddings: torch.Tensor, height: int, width: int) -> torch.Tensor:
         """
         This method allows to interpolate the pre-trained position encodings, to be able to use the model on higher resolution
@@ -302,7 +302,7 @@ class Swinv2Embeddings(nn.Module):
         return embeddings, output_dimensions
 
 
-# Copied from transformers.models.swin.modeling_swin.SwinPatchEmbeddings with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinPatchEmbeddings with Swin->Swinv2
 class Swinv2PatchEmbeddings(nn.Module):
     """
     This class turns `pixel_values` of shape `(batch_size, num_channels, height, width)` into the initial
@@ -536,7 +536,7 @@ class Swinv2SelfAttention(nn.Module):
         return relative_coords_table, relative_position_index
 
 
-# Copied from transformers.models.swin.modeling_swin.SwinSelfOutput with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinSelfOutput with Swin->Swinv2
 class Swinv2SelfOutput(nn.Module):
     def __init__(self, config, dim):
         super().__init__()
@@ -576,7 +576,7 @@ class Swinv2Attention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.swin.modeling_swin.SwinIntermediate with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinIntermediate with Swin->Swinv2
 class Swinv2Intermediate(nn.Module):
     def __init__(self, config, dim):
         super().__init__()
@@ -592,7 +592,7 @@ class Swinv2Intermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.swin.modeling_swin.SwinOutput with Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinOutput with Swin->Swinv2
 class Swinv2Output(nn.Module):
     def __init__(self, config, dim):
         super().__init__()
@@ -915,7 +915,7 @@ class Swinv2PreTrainedModel(PreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.swin.modeling_swin.SwinModel with SWIN->SWINV2,Swin->Swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinModel with SWIN->SWINV2,Swin->Swinv2
 class Swinv2Model(Swinv2PreTrainedModel):
     def __init__(self, config, add_pooling_layer=True, use_mask_token=False):
         r"""
@@ -1012,7 +1012,7 @@ class Swinv2Model(Swinv2PreTrainedModel):
         </Tip>
     """
 )
-# Copied from transformers.models.swin.modeling_swin.SwinForMaskedImageModeling with swin->swinv2, base-simmim-window6-192->tiny-patch4-window8-256,SWIN->SWINV2,Swin->Swinv2,192->256
+# Copied from transformers_4573.models.swin.modeling_swin.SwinForMaskedImageModeling with swin->swinv2, base-simmim-window6-192->tiny-patch4-window8-256,SWIN->SWINV2,Swin->Swinv2,192->256
 class Swinv2ForMaskedImageModeling(Swinv2PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1047,7 +1047,7 @@ class Swinv2ForMaskedImageModeling(Swinv2PreTrainedModel):
 
         Examples:
         ```python
-        >>> from transformers import AutoImageProcessor, Swinv2ForMaskedImageModeling
+        >>> from transformers_4573 import AutoImageProcessor, Swinv2ForMaskedImageModeling
         >>> import torch
         >>> from PIL import Image
         >>> import requests
@@ -1129,7 +1129,7 @@ class Swinv2ForMaskedImageModeling(Swinv2PreTrainedModel):
     </Tip>
     """
 )
-# Copied from transformers.models.swin.modeling_swin.SwinForImageClassification with SWIN->SWINV2,Swin->Swinv2,swin->swinv2
+# Copied from transformers_4573.models.swin.modeling_swin.SwinForImageClassification with SWIN->SWINV2,Swin->Swinv2,swin->swinv2
 class Swinv2ForImageClassification(Swinv2PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1226,7 +1226,7 @@ class Swinv2Backbone(Swinv2PreTrainedModel, BackboneMixin):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoBackbone
+        >>> from transformers_4573 import AutoImageProcessor, AutoBackbone
         >>> import torch
         >>> from PIL import Image
         >>> import requests

@@ -40,8 +40,8 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import ColQwen2ForRetrieval, ColQwen2Processor
-from transformers.utils.import_utils import is_flash_attn_2_available
+from transformers_4573 import ColQwen2ForRetrieval, ColQwen2Processor
+from transformers_4573.utils.import_utils import is_flash_attn_2_available
 
 
 # Load the model and the processor
@@ -107,7 +107,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import BitsAndBytesConfig, ColQwen2ForRetrieval, ColQwen2Processor
+from transformers_4573 import BitsAndBytesConfig, ColQwen2ForRetrieval, ColQwen2Processor
 from accelerate import Accelerator
 
 model_name = "vidore/colqwen2-v1.0-hf"
@@ -162,8 +162,8 @@ You can also use checkpoints for `ColQwen2.5` that are **compatible with the Col
 
 ```python
 import torch
-from transformers import ColQwen2ForRetrieval, ColQwen2Processor
-from transformers.utils.import_utils import is_flash_attn_2_available
+from transformers_4573 import ColQwen2ForRetrieval, ColQwen2Processor
+from transformers_4573.utils.import_utils import is_flash_attn_2_available
 
 model_name = "Sahil-Kabir/colqwen2.5-v0.2-hf" # An existing compatible checkpoint
 

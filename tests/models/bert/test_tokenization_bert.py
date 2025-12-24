@@ -15,10 +15,10 @@
 
 import unittest
 
-from transformers.models.bert.tokenization_bert import (
+from transformers_4573.models.bert.tokenization_bert import (
     BertTokenizer,
 )
-from transformers.testing_utils import require_read_token, require_tokenizers
+from transformers_4573.testing_utils import require_read_token, require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

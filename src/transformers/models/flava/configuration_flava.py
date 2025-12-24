@@ -72,7 +72,7 @@ class FlavaImageConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FlavaImageConfig, FlavaImageModel
+    >>> from transformers_4573 import FlavaImageConfig, FlavaImageModel
 
     >>> # Initializing a FlavaImageModel with  style configuration
     >>> configuration = FlavaImageConfig()
@@ -179,7 +179,7 @@ class FlavaTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FlavaTextConfig, FlavaTextModel
+    >>> from transformers_4573 import FlavaTextConfig, FlavaTextModel
 
     >>> # Initializing a FlavaTextModel with  style configuration
     >>> configuration = FlavaTextConfig()
@@ -271,7 +271,7 @@ class FlavaMultimodalConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FlavaMultimodalConfig, FlavaMultimodalModel
+    >>> from transformers_4573 import FlavaMultimodalConfig, FlavaMultimodalModel
 
     >>> # Initializing a FlavaMultimodalModel with  style configuration
     >>> configuration = FlavaMultimodalConfig()
@@ -351,7 +351,7 @@ class FlavaImageCodebookConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FlavaImageCodebookConfig, FlavaImageCodebook
+    >>> from transformers_4573 import FlavaImageCodebookConfig, FlavaImageCodebook
 
     >>> # Initializing a FlavaImageCodebook with style configuration
     >>> configuration = FlavaImageCodebookConfig()
@@ -439,7 +439,7 @@ class FlavaConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FlavaConfig, FlavaModel, FlavaForPreTraining
+    >>> from transformers_4573 import FlavaConfig, FlavaModel, FlavaForPreTraining
 
     >>> # Initializing a FlavaConfig with style configuration
     >>> configuration = FlavaConfig()

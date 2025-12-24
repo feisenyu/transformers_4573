@@ -39,7 +39,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -55,7 +55,7 @@ pipeline("Plants create energy through a process known as")
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("mistralai/Mamba-Codestral-7B-v0.1")
 model = AutoModelForCausalLM.from_pretrained("mistralai/Mamba-Codestral-7B-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -81,7 +81,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 tokenizer = AutoTokenizer.from_pretrained("mistralai/Mamba-Codestral-7B-v0.1")

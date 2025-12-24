@@ -49,7 +49,7 @@ class ImageToImagePipeline(Pipeline):
     >>> import httpx
     >>> import io
 
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> upscaler = pipeline("image-to-image", model="caidas/swin2SR-classical-sr-x2-64")
     >>> img = Image.open(io.BytesIO(httpx.get("http://images.cocodataset.org/val2017/000000039769.jpg").content))

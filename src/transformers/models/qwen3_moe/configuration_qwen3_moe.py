@@ -100,7 +100,7 @@ class Qwen3MoeConfig(PreTrainedConfig):
             If `mlp_only_layers` is empty, `decoder_sparse_step` is used to determine the sparsity.
 
     ```python
-    >>> from transformers import Qwen3MoeModel, Qwen3MoeConfig
+    >>> from transformers_4573 import Qwen3MoeModel, Qwen3MoeConfig
 
     >>> # Initializing a Qwen3MoE style configuration
     >>> configuration = Qwen3MoeConfig()

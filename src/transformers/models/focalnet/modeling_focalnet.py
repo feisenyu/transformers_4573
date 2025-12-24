@@ -243,7 +243,7 @@ class FocalNetPatchEmbeddings(nn.Module):
         return embeddings, output_dimensions
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -259,7 +259,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.beit.modeling_beit.BeitDropPath with Beit->FocalNet
+# Copied from transformers_4573.models.beit.modeling_beit.BeitDropPath with Beit->FocalNet
 class FocalNetDropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -719,7 +719,7 @@ class FocalNetForMaskedImageModeling(FocalNetPreTrainedModel):
 
         Examples:
         ```python
-        >>> from transformers import AutoImageProcessor, FocalNetConfig, FocalNetForMaskedImageModeling
+        >>> from transformers_4573 import AutoImageProcessor, FocalNetConfig, FocalNetForMaskedImageModeling
         >>> import torch
         >>> from PIL import Image
         >>> import requests
@@ -792,7 +792,7 @@ class FocalNetForMaskedImageModeling(FocalNetPreTrainedModel):
     """
 )
 class FocalNetForImageClassification(FocalNetPreTrainedModel):
-    # Copied from transformers.models.swin.modeling_swin.SwinForImageClassification.__init__ with Swin->FocalNet, swin->focalnet
+    # Copied from transformers_4573.models.swin.modeling_swin.SwinForImageClassification.__init__ with Swin->FocalNet, swin->focalnet
     def __init__(self, config):
         super().__init__(config)
 
@@ -880,7 +880,7 @@ class FocalNetBackbone(FocalNetPreTrainedModel, BackboneMixin):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoBackbone
+        >>> from transformers_4573 import AutoImageProcessor, AutoBackbone
         >>> import torch
         >>> from PIL import Image
         >>> import requests

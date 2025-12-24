@@ -52,7 +52,7 @@ from torch.nn.attention import SDPBackend, sdpa_kernel
 from torch.utils.data import DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 
 # torch.use_deterministic_algorithms(True)

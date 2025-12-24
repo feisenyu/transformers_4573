@@ -44,7 +44,7 @@ rendered properly in your Markdown viewer.
 
 ### 간단한 생성 예: 
 ```python 
-from transformers import Mamba2Config, Mamba2ForCausalLM, AutoTokenizer
+from transformers_4573 import Mamba2Config, Mamba2ForCausalLM, AutoTokenizer
 import torch
 model_id = 'mistralai/Mamba-Codestral-7B-v0.1'
 tokenizer = AutoTokenizer.from_pretrained(model_id, revision='refs/pr/9', from_slow=True, legacy=False)

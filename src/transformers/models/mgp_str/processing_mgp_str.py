@@ -14,9 +14,9 @@
 # limitations under the License.
 """Processor class for MGP-STR."""
 
-from transformers import AutoTokenizer
-from transformers.utils import is_torch_available
-from transformers.utils.generic import ExplicitEnum
+from transformers_4573 import AutoTokenizer
+from transformers_4573.utils import is_torch_available
+from transformers_4573.utils.generic import ExplicitEnum
 
 from ...processing_utils import ProcessorMixin
 from ...utils.import_utils import requires

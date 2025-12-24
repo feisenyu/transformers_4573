@@ -50,7 +50,7 @@ class CohereTokenizer(TokenizersBackend):
     This uses notably ByteFallback and NFC normalization.
 
     ```python
-    >>> from transformers import AutoTokenizer
+    >>> from transformers_4573 import AutoTokenizer
 
     >>> tokenizer = AutoTokenizer.from_pretrained("CohereForAI/c4ai-command-r-v01")
     >>> tokenizer.encode("Hello this is a test")

@@ -21,19 +21,19 @@ from pathlib import Path
 import torch
 from audiocraft.models import MusicGen
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     EncodecModel,
     T5EncoderModel,
 )
-from transformers.models.musicgen_melody.configuration_musicgen_melody import MusicgenMelodyDecoderConfig
-from transformers.models.musicgen_melody.feature_extraction_musicgen_melody import MusicgenMelodyFeatureExtractor
-from transformers.models.musicgen_melody.modeling_musicgen_melody import (
+from transformers_4573.models.musicgen_melody.configuration_musicgen_melody import MusicgenMelodyDecoderConfig
+from transformers_4573.models.musicgen_melody.feature_extraction_musicgen_melody import MusicgenMelodyFeatureExtractor
+from transformers_4573.models.musicgen_melody.modeling_musicgen_melody import (
     MusicgenMelodyForCausalLM,
     MusicgenMelodyForConditionalGeneration,
 )
-from transformers.models.musicgen_melody.processing_musicgen_melody import MusicgenMelodyProcessor
-from transformers.utils import logging
+from transformers_4573.models.musicgen_melody.processing_musicgen_melody import MusicgenMelodyProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

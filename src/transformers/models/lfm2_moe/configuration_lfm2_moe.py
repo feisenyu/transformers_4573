@@ -91,7 +91,7 @@ class Lfm2MoeConfig(PreTrainedConfig):
             Type of each layers.
 
     ```python
-    >>> from transformers import Lfm2MoeModel, Lfm2MoeConfig
+    >>> from transformers_4573 import Lfm2MoeModel, Lfm2MoeConfig
 
     >>> # Initializing a LFM2 Moe model
     >>> configuration = Lfm2MoeConfig()

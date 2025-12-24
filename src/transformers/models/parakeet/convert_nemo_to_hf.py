@@ -23,7 +23,7 @@ import torch
 import yaml
 from tokenizers import AddedToken
 
-from transformers import (
+from transformers_4573 import (
     ParakeetCTCConfig,
     ParakeetEncoder,
     ParakeetEncoderConfig,
@@ -32,8 +32,8 @@ from transformers import (
     ParakeetProcessor,
     ParakeetTokenizerFast,
 )
-from transformers.convert_slow_tokenizer import ParakeetConverter
-from transformers.utils.hub import cached_file
+from transformers_4573.convert_slow_tokenizer import ParakeetConverter
+from transformers_4573.utils.hub import cached_file
 
 
 NEMO_TO_HF_WEIGHT_MAPPING = {

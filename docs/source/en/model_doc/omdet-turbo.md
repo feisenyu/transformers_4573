@@ -53,7 +53,7 @@ Here's how to load the model and prepare the inputs to perform zero-shot object 
 >>> import requests
 >>> from PIL import Image
 
->>> from transformers import AutoProcessor, OmDetTurboForObjectDetection
+>>> from transformers_4573 import AutoProcessor, OmDetTurboForObjectDetection
 
 >>> processor = AutoProcessor.from_pretrained("omlab/omdet-turbo-swin-tiny-hf")
 >>> model = OmDetTurboForObjectDetection.from_pretrained("omlab/omdet-turbo-swin-tiny-hf")
@@ -94,7 +94,7 @@ OmDet-Turbo can perform batched multi-image inference, with support for differen
 >>> import requests
 >>> from io import BytesIO
 >>> from PIL import Image
->>> from transformers import AutoProcessor, OmDetTurboForObjectDetection
+>>> from transformers_4573 import AutoProcessor, OmDetTurboForObjectDetection
 
 >>> processor = AutoProcessor.from_pretrained("omlab/omdet-turbo-swin-tiny-hf")
 >>> model = OmDetTurboForObjectDetection.from_pretrained("omlab/omdet-turbo-swin-tiny-hf")

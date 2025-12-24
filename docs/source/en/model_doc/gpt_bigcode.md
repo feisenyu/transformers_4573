@@ -64,7 +64,7 @@ To load and run a model using Flash Attention 2, refer to the snippet below:
 
 ```python
 >>> import torch
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 from accelerate import Accelerator
 >>> device = Accelerator().device # the device to load the model onto
 

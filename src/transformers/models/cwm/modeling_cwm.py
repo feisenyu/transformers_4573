@@ -471,7 +471,7 @@ class CwmForCausalLM(CwmPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, CwmForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, CwmForCausalLM
 
         >>> model = CwmForCausalLM.from_pretrained("meta-cwm/Cwm-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-cwm/Cwm-2-7b-hf")

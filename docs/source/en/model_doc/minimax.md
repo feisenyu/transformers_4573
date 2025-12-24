@@ -56,7 +56,7 @@ For more details refer to the [release blog post](https://www.minimaxi.com/en/ne
 The pre-trained model can be used as follows:
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> model = AutoModelForCausalLM.from_pretrained("MiniMaxAI/MiniMax-Text-01-hf", device_map="auto")
 >>> tokenizer = AutoTokenizer.from_pretrained("MiniMaxAI/MiniMax-Text-01-hf")
@@ -92,7 +92,7 @@ To load and run a model using Flash Attention-2, refer to the snippet below:
 
 ```python
 >>> import torch
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> model = AutoModelForCausalLM.from_pretrained("MiniMaxAI/MiniMax-Text-01-hf", dtype=torch.float16, attn_implementation="flash_attention_2", device_map="auto")
 >>> tokenizer = AutoTokenizer.from_pretrained("MiniMaxAI/MiniMax-Text-01-hf")
@@ -122,7 +122,7 @@ Quantizing a model is as simple as passing a `quantization_config` to the model.
 
 ```python
 >>> import torch
->>> from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 >>> # specify how to quantize the model
 >>> quantization_config = BitsAndBytesConfig(

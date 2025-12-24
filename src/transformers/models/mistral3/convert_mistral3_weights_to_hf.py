@@ -19,7 +19,7 @@ import re
 import torch
 from safetensors.torch import load_file
 
-from transformers import (
+from transformers_4573 import (
     Mistral3Config,
     Mistral3ForConditionalGeneration,
     MistralConfig,
@@ -27,7 +27,7 @@ from transformers import (
     PixtralProcessor,
     PixtralVisionConfig,
 )
-from transformers.integrations.mistral import convert_tekken_tokenizer
+from transformers_4573.integrations.mistral import convert_tekken_tokenizer
 
 
 # fmt: off

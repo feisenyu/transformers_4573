@@ -27,8 +27,8 @@ import torch.nn as nn
 from huggingface_hub import hf_hub_download
 from torch import Tensor
 
-from transformers import AutoImageProcessor, ResNetConfig, ResNetForImageClassification
-from transformers.utils import logging
+from transformers_4573 import AutoImageProcessor, ResNetConfig, ResNetForImageClassification
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

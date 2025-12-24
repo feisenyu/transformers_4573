@@ -19,8 +19,8 @@ import unittest
 
 from pytest import mark
 
-from transformers import LongcatFlashConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import LongcatFlashConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_bitsandbytes,
     require_flash_attn,
     require_large_cpu_ram,
@@ -37,7 +37,7 @@ from ...test_modeling_common import ids_tensor
 if is_torch_available():
     import torch
 
-    from transformers import AutoTokenizer, Cache, LongcatFlashForCausalLM, LongcatFlashModel
+    from transformers_4573 import AutoTokenizer, Cache, LongcatFlashForCausalLM, LongcatFlashModel
 
 
 class LongcatFlashModelTester(CausalLMModelTester):

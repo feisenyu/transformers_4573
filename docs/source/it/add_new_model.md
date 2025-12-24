@@ -443,7 +443,7 @@ del codice richiesto e poi correggere e migliorare iterativamente. L'unica cosa 
 instanza:
 
 ```python
-from transformers import BrandNewBertModel, BrandNewBertConfig
+from transformers_4573 import BrandNewBertModel, BrandNewBertConfig
 
 model = BrandNewBertModel(BrandNewBertConfig())
 ```
@@ -678,7 +678,7 @@ A volte capita di dover riscrivere il tokenizer nella repo originaria, di modo d
 A quel punto uno script analogo é necessario in 🤗 Transformers:
 
 ```python
-from transformers import BrandNewBertTokenizer
+from transformers_4573 import BrandNewBertTokenizer
 
 input_str = "This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words."
 

@@ -264,7 +264,7 @@ class EdgeTamConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     EdgeTamVisionConfig,
     ...     EdgeTamPromptEncoderConfig,
     ...     EdgeTamMaskDecoderConfig,

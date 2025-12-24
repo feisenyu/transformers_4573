@@ -730,7 +730,7 @@ SUPPORTED_PEFT_TASKS = {
 }
 
 if is_torch_available():
-    from transformers.pipelines.pt_utils import (
+    from transformers_4573.pipelines.pt_utils import (
         PipelineChunkIterator,
         PipelineDataset,
         PipelineIterator,

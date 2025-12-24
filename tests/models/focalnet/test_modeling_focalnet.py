@@ -17,9 +17,9 @@ import collections
 import unittest
 from functools import cached_property
 
-from transformers import FocalNetConfig
-from transformers.testing_utils import Expectations, require_torch, require_vision, slow, torch_device
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573 import FocalNetConfig
+from transformers_4573.testing_utils import Expectations, require_torch, require_vision, slow, torch_device
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_backbone_common import BackboneTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -31,7 +31,7 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import (
+    from transformers_4573 import (
         FocalNetBackbone,
         FocalNetForImageClassification,
         FocalNetForMaskedImageModeling,
@@ -41,7 +41,7 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import AutoImageProcessor
+    from transformers_4573 import AutoImageProcessor
 
 
 class FocalNetModelTester:

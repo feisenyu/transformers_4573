@@ -41,7 +41,7 @@ The example below demonstrates how to translate text with [`Pipeline`] or the [`
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="translation",
@@ -59,7 +59,7 @@ print(pipeline("UN Chief Says There Is No Military Solution in Syria"))
 
 ```py
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 article_en = "UN Chief Says There Is No Military Solution in Syria"
 
@@ -83,7 +83,7 @@ print(tokenizer.batch_decode(generated_tokens, skip_special_tokens=True))
 
     ```py
     import torch
-    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+    from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
     model = AutoModelForSeq2SeqLM.from_pretrained("facebook/mbart-large-en-ro", dtype=torch.bfloat16, attn_implementation="sdpa", device_map="auto")
     tokenizer = MBartTokenizer.from_pretrained("facebook/mbart-large-en-ro", src_lang="en_XX")
@@ -100,7 +100,7 @@ print(tokenizer.batch_decode(generated_tokens, skip_special_tokens=True))
 
     ```py
     import torch
-    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+    from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
     model = AutoModelForSeq2SeqLM.from_pretrained("facebook/mbart-large-50-many-to-many-mmt", dtype=torch.bfloat16, attn_implementation="sdpa", device_map="auto")
     tokenizer = MBartTokenizer.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")

@@ -120,7 +120,7 @@ class LayoutLMEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.align.modeling_align.eager_attention_forward
+# Copied from transformers_4573.models.align.modeling_align.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -144,7 +144,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextSelfAttention with AlignText->LayoutLM
+# Copied from transformers_4573.models.align.modeling_align.AlignTextSelfAttention with AlignText->LayoutLM
 class LayoutLMSelfAttention(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -201,7 +201,7 @@ class LayoutLMSelfAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput with Bert->LayoutLM
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput with Bert->LayoutLM
 class LayoutLMSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -216,7 +216,7 @@ class LayoutLMSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextAttention with AlignText->LayoutLM
+# Copied from transformers_4573.models.align.modeling_align.AlignTextAttention with AlignText->LayoutLM
 class LayoutLMAttention(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -241,7 +241,7 @@ class LayoutLMAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate
 class LayoutLMIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -257,7 +257,7 @@ class LayoutLMIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput with Bert->LayoutLM
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput with Bert->LayoutLM
 class LayoutLMOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -272,7 +272,7 @@ class LayoutLMOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextLayer with AlignText->LayoutLM
+# Copied from transformers_4573.models.align.modeling_align.AlignTextLayer with AlignText->LayoutLM
 class LayoutLMLayer(GradientCheckpointingLayer):
     def __init__(self, config):
         super().__init__()
@@ -311,7 +311,7 @@ class LayoutLMLayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextEncoder with AlignText->LayoutLM
+# Copied from transformers_4573.models.align.modeling_align.AlignTextEncoder with AlignText->LayoutLM
 class LayoutLMEncoder(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -357,7 +357,7 @@ class LayoutLMEncoder(nn.Module):
         )
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPooler
+# Copied from transformers_4573.models.bert.modeling_bert.BertPooler
 class LayoutLMPooler(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -373,7 +373,7 @@ class LayoutLMPooler(nn.Module):
         return pooled_output
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPredictionHeadTransform with Bert->LayoutLM
+# Copied from transformers_4573.models.bert.modeling_bert.BertPredictionHeadTransform with Bert->LayoutLM
 class LayoutLMPredictionHeadTransform(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -391,7 +391,7 @@ class LayoutLMPredictionHeadTransform(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertLMPredictionHead with Bert->LayoutLM
+# Copied from transformers_4573.models.bert.modeling_bert.BertLMPredictionHead with Bert->LayoutLM
 class LayoutLMLMPredictionHead(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -408,7 +408,7 @@ class LayoutLMLMPredictionHead(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOnlyMLMHead with Bert->LayoutLM
+# Copied from transformers_4573.models.bert.modeling_bert.BertOnlyMLMHead with Bert->LayoutLM
 class LayoutLMOnlyMLMHead(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -479,7 +479,7 @@ class LayoutLMModel(LayoutLMPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, LayoutLMModel
+        >>> from transformers_4573 import AutoTokenizer, LayoutLMModel
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("microsoft/layoutlm-base-uncased")
@@ -619,7 +619,7 @@ class LayoutLMForMaskedLM(LayoutLMPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, LayoutLMForMaskedLM
+        >>> from transformers_4573 import AutoTokenizer, LayoutLMForMaskedLM
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("microsoft/layoutlm-base-uncased")
@@ -736,7 +736,7 @@ class LayoutLMForSequenceClassification(LayoutLMPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, LayoutLMForSequenceClassification
+        >>> from transformers_4573 import AutoTokenizer, LayoutLMForSequenceClassification
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("microsoft/layoutlm-base-uncased")
@@ -869,7 +869,7 @@ class LayoutLMForTokenClassification(LayoutLMPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, LayoutLMForTokenClassification
+        >>> from transformers_4573 import AutoTokenizer, LayoutLMForTokenClassification
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("microsoft/layoutlm-base-uncased")
@@ -984,7 +984,7 @@ class LayoutLMForQuestionAnswering(LayoutLMPreTrainedModel):
         of what it thinks the answer is (the span of the answer within the texts parsed from the image).
 
         ```python
-        >>> from transformers import AutoTokenizer, LayoutLMForQuestionAnswering
+        >>> from transformers_4573 import AutoTokenizer, LayoutLMForQuestionAnswering
         >>> from datasets import load_dataset
         >>> import torch
 

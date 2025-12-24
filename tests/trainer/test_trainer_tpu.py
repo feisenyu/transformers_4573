@@ -21,8 +21,8 @@
 
 import sys
 
-from transformers import EvalPrediction, HfArgumentParser, TrainingArguments, is_torch_available
-from transformers.utils import logging
+from transformers_4573 import EvalPrediction, HfArgumentParser, TrainingArguments, is_torch_available
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)
@@ -33,7 +33,7 @@ if is_torch_available():
     from torch import nn
     from torch.utils.data import Dataset
 
-    from transformers import Trainer
+    from transformers_4573 import Trainer
 
     class DummyDataset(Dataset):
         def __init__(self, length: int = 101):

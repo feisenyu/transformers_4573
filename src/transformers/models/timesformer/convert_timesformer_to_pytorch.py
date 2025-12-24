@@ -22,7 +22,7 @@ import numpy as np
 import torch
 from huggingface_hub import hf_hub_download
 
-from transformers import TimesformerConfig, TimesformerForVideoClassification, VideoMAEImageProcessor
+from transformers_4573 import TimesformerConfig, TimesformerForVideoClassification, VideoMAEImageProcessor
 
 
 def get_timesformer_config(model_name):

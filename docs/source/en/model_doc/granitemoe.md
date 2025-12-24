@@ -40,7 +40,7 @@ Tips:
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_path = "ibm/PowerMoE-3b"
 tokenizer = AutoTokenizer.from_pretrained(model_path)

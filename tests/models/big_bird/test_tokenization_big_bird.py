@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import BigBirdTokenizer
-from transformers.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers
+from transformers_4573 import BigBirdTokenizer
+from transformers_4573.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

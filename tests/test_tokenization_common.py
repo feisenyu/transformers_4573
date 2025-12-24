@@ -29,7 +29,7 @@ from typing import TYPE_CHECKING, Any, Optional, Union
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     BertTokenizer,
     BertTokenizerFast,
@@ -42,14 +42,14 @@ from transformers import (
     is_torch_available,
     logging,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     get_tests_dir,
     require_jinja,
     require_tokenizers,
     require_torch,
     slow,
 )
-from transformers.tokenization_python import AddedToken
+from transformers_4573.tokenization_python import AddedToken
 
 from .test_sentencepiece_backend_mixin import SentencePieceBackendTesterMixin
 from .test_tokenizers_backend_mixin import TokenizersBackendTesterMixin
@@ -82,7 +82,7 @@ if is_torch_available():
 
 
 if TYPE_CHECKING:
-    from transformers import PretrainedConfig, PreTrainedModel
+    from transformers_4573 import PretrainedConfig, PreTrainedModel
 
 
 def use_cache_if_possible(func):
@@ -468,7 +468,7 @@ Hey how are you doing"""  # noqa: W293
         """
         Build a tokenizer from extracted vocab/merges using SentencePieceExtractor.
         """
-        from transformers.tokenization_utils_sentencepiece import SentencePieceExtractor
+        from transformers_4573.tokenization_utils_sentencepiece import SentencePieceExtractor
 
         try:
             sentencepiece_model_path = os.path.join(self.tmpdirname, "tokenizer.model")
@@ -2701,7 +2701,7 @@ Hey how are you doing"""  # noqa: W293
         self.assertIsNotNone(output["input_ids"])
 
     def test_local_files_only(self):
-        from transformers import AutoTokenizer
+        from transformers_4573 import AutoTokenizer
 
         pretrained_list = getattr(self, "from_pretrained_id", []) or []
         for pretrained_name in pretrained_list:
@@ -2807,7 +2807,7 @@ class SentencePieceBackendCommonTest(unittest.TestCase, SentencePieceBackendTest
         self.skipTest("SentencePiece fast tokenizers do not expose token alignment metadata.")
 
     def test_local_files_only(self):
-        from transformers import AutoTokenizer
+        from transformers_4573 import AutoTokenizer
 
         pretrained_list = getattr(self, "from_pretrained_id", []) or []
         for pretrained_name in pretrained_list:

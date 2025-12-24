@@ -22,7 +22,7 @@ from pathlib import Path
 import yaml
 from tqdm import tqdm
 
-from transformers.models.marian.convert_marian_to_pytorch import (
+from transformers_4573.models.marian.convert_marian_to_pytorch import (
     FRONT_MATTER_TEMPLATE,
     convert,
     convert_opus_name_to_hf_name,

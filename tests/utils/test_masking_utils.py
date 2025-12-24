@@ -14,7 +14,7 @@
 
 import unittest
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     cleanup,
     is_torch_available,
     require_torch,
@@ -26,9 +26,9 @@ if is_torch_available():
     import torch
     from torch.nn.attention.flex_attention import create_block_mask
 
-    from transformers import DynamicCache, LlamaConfig
-    from transformers.cache_utils import DynamicSlidingWindowLayer
-    from transformers.masking_utils import (
+    from transformers_4573 import DynamicCache, LlamaConfig
+    from transformers_4573.cache_utils import DynamicSlidingWindowLayer
+    from transformers_4573.masking_utils import (
         create_bidirectional_mask,
         create_causal_mask,
         create_chunked_causal_mask,

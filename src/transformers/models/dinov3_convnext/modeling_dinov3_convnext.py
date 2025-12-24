@@ -33,7 +33,7 @@ from .configuration_dinov3_convnext import DINOv3ConvNextConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -49,7 +49,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextDropPath with ConvNext->DINOv3ConvNext
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextDropPath with ConvNext->DINOv3ConvNext
 class DINOv3ConvNextDropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 

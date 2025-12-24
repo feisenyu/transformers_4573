@@ -18,7 +18,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.models.llava.modeling_llava import (
+from transformers_4573.models.llava.modeling_llava import (
     LlavaCausalLMOutputWithPast,
     LlavaForConditionalGeneration,
     LlavaModel,
@@ -212,7 +212,7 @@ class VipLlavaForConditionalGeneration(LlavaForConditionalGeneration):
         >>> import torch
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, VipLlavaForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, VipLlavaForConditionalGeneration
 
         >>> model = VipLlavaForConditionalGeneration.from_pretrained("llava-hf/vip-llava-7b-hf", device_map="auto", dtype=torch.float16)
         >>> processor = AutoProcessor.from_pretrained("llava-hf/vip-llava-7b-hf")

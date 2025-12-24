@@ -32,7 +32,7 @@ rendered properly in your Markdown viewer.
 [DistilBERT](model_doc/distilbert)をより詳しく調べるために、[`DistilBertConfig`]にアクセスしてその属性を調べてみましょう：
 
 ```py
->>> from transformers import DistilBertConfig
+>>> from transformers_4573 import DistilBertConfig
 
 >>> config = DistilBertConfig()
 >>> print(config)
@@ -119,7 +119,7 @@ Once you are satisfied with your model configuration, you can save it with [`Pre
 モデルにカスタム構成属性をロードします：
 
 ```py
->>> from transformers import DistilBertModel
+>>> from transformers_4573 import DistilBertModel
 
 >>> my_config = DistilBertConfig.from_pretrained("./your_model_save_path/config.json")
 >>> model = DistilBertModel(my_config)
@@ -151,7 +151,7 @@ Once you are satisfied with your model configuration, you can save it with [`Pre
 たとえば、[`DistilBertForSequenceClassification`]は、シーケンス分類ヘッドを持つベースのDistilBERTモデルです。シーケンス分類ヘッドは、プールされた出力の上にある線形層です。
 
 ```py
->>> from transformers import DistilBertForSequenceClassification
+>>> from transformers_4573 import DistilBertForSequenceClassification
 
 >>> model = DistilBertForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -161,7 +161,7 @@ Once you are satisfied with your model configuration, you can save it with [`Pre
 質問応答ヘッドはシーケンス分類ヘッドと類似していますが、隠れ状態の出力の上に線形層があります。
 
 ```py
->>> from transformers import DistilBertForQuestionAnswering
+>>> from transformers_4573 import DistilBertForQuestionAnswering
 
 >>> model = DistilBertForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -189,7 +189,7 @@ Once you are satisfied with your model configuration, you can save it with [`Pre
 独自のトークナイザをトレーニングした場合、*ボキャブラリー*ファイルからトークナイザを作成できます。
 
 ```py
->>> from transformers import DistilBertTokenizer
+>>> from transformers_4573 import DistilBertTokenizer
 
 >>> my_tokenizer = DistilBertTokenizer(vocab_file="my_vocab_file.txt", do_lower_case=False, padding_side="left")
 ```
@@ -200,7 +200,7 @@ Once you are satisfied with your model configuration, you can save it with [`Pre
 
 
 ```py
->>> from transformers import DistilBertTokenizer
+>>> from transformers_4573 import DistilBertTokenizer
 
 >>> slow_tokenizer = DistilBertTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -208,7 +208,7 @@ Once you are satisfied with your model configuration, you can save it with [`Pre
 [`DistilBertTokenizerFast`]クラスを使用して高速なトークナイザを作成します：
 
 ```py
->>> from transformers import DistilBertTokenizerFast
+>>> from transformers_4573 import DistilBertTokenizerFast
 
 >>> fast_tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -227,7 +227,7 @@ Once you are satisfied with your model configuration, you can save it with [`Pre
 たとえば、画像分類に[ViT](model_doc/vit)を使用する場合、デフォルトの [`ViTImageProcessor`] を作成します。
 
 ```py
->>> from transformers import ViTImageProcessor
+>>> from transformers_4573 import ViTImageProcessor
 
 >>> vit_extractor = ViTImageProcessor()
 >>> print(vit_extractor)
@@ -260,7 +260,7 @@ ViTImageProcessor {
 
 
 ```py
->>> from transformers import ViTImageProcessor
+>>> from transformers_4573 import ViTImageProcessor
 
 >>> my_vit_extractor = ViTImageProcessor(resample="PIL.Image.BOX", do_normalize=False, image_mean=[0.3, 0.3, 0.3])
 >>> print(my_vit_extractor)
@@ -291,7 +291,7 @@ ViTImageProcessor {
 
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> w2v2_extractor = Wav2Vec2FeatureExtractor()
 >>> print(w2v2_extractor)
@@ -315,7 +315,7 @@ Wav2Vec2FeatureExtractor {
 [`Wav2Vec2FeatureExtractor`] のパラメーターを変更して、カスタム特徴抽出器を作成できます:
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> w2v2_extractor = Wav2Vec2FeatureExtractor(sampling_rate=8000, do_normalize=False)
 >>> print(w2v2_extractor)
@@ -340,7 +340,7 @@ ASRは音声をテキストに転写するタスクであり、音声入力を�
 音声入力を処理する特徴量抽出器を作成します：
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor(padding_value=1.0, do_normalize=True)
 ```
@@ -348,7 +348,7 @@ ASRは音声をテキストに転写するタスクであり、音声入力を�
 テキスト入力を処理するトークナイザを作成します:
 
 ```py
->>> from transformers import Wav2Vec2CTCTokenizer
+>>> from transformers_4573 import Wav2Vec2CTCTokenizer
 
 >>> tokenizer = Wav2Vec2CTCTokenizer(vocab_file="my_vocab_file.txt")
 ```
@@ -357,7 +357,7 @@ ASRは音声をテキストに転写するタスクであり、音声入力を�
 
 
 ```py
->>> from transformers import Wav2Vec2Processor
+>>> from transformers_4573 import Wav2Vec2Processor
 
 >>> processor = Wav2Vec2Processor(feature_extractor=feature_extractor, tokenizer=tokenizer)
 ```

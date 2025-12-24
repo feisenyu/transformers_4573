@@ -17,8 +17,8 @@ import unittest
 import numpy as np
 from parameterized import parameterized
 
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils.import_utils import is_torch_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils.import_utils import is_torch_available, is_vision_available
 
 
 if is_torch_available():
@@ -27,7 +27,7 @@ if is_torch_available():
 if is_vision_available():
     import PIL.Image
 
-    from transformers.image_transforms import (
+    from transformers_4573.image_transforms import (
         center_crop,
         center_to_corners_format,
         convert_to_rgb,

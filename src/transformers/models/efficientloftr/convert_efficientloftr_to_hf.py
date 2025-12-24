@@ -20,8 +20,8 @@ import torch
 from datasets import load_dataset
 from huggingface_hub import hf_hub_download
 
-from transformers.models.efficientloftr.image_processing_efficientloftr import EfficientLoFTRImageProcessor
-from transformers.models.efficientloftr.modeling_efficientloftr import (
+from transformers_4573.models.efficientloftr.image_processing_efficientloftr import EfficientLoFTRImageProcessor
+from transformers_4573.models.efficientloftr.modeling_efficientloftr import (
     EfficientLoFTRConfig,
     EfficientLoFTRForKeypointMatching,
 )

@@ -1689,7 +1689,7 @@ class Phi4MultimodalForCausalLM(Phi4MultimodalPreTrainedModel, GenerationMixin):
 
         Example:
         ```python
-        >>> from transformers import AutoTokenizer, Phi4MultimodalForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Phi4MultimodalForCausalLM
         >>> model = Phi4MultimodalForCausalLM.from_pretrained("TBA")
         >>> tokenizer = AutoTokenizer.from_pretrained("TBA")
         >>> prompt = "This is an example script ."

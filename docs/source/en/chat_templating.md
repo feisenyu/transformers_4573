@@ -32,7 +32,7 @@ You can access these with the [`apply_chat_template`] method. Let's see two exam
 <hfoption id="Mistral">
 
 ```py
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
 chat = [
@@ -52,7 +52,7 @@ tokenizer.apply_chat_template(chat, tokenize=False)
 <hfoption id="Zephyr">
 
 ```py
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceH4/zephyr-7b-beta")
 chat = [
@@ -85,7 +85,7 @@ The input to `apply_chat_template` should be structured as a list of dictionarie
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceH4/zephyr-7b-beta")
 model = AutoModelForCausalLM.from_pretrained("HuggingFaceH4/zephyr-7b-beta", device_map="auto", dtype=torch.bfloat16)
@@ -198,7 +198,7 @@ Training a model with a chat template is a good way to ensure the template match
 An example of preprocessing a dataset with a chat template is shown below.
 
 ```py
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 from datasets import Dataset
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceH4/zephyr-7b-beta")

@@ -40,7 +40,7 @@ Gemma 3의 모든 원본 체크포인트는 [Gemma 3](https://huggingface.co/col
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="image-text-to-text",
@@ -59,7 +59,7 @@ pipeline(
 
 ```py
 import torch
-from transformers import AutoProcessor, Gemma3ForConditionalGeneration
+from transformers_4573 import AutoProcessor, Gemma3ForConditionalGeneration
 
 model = Gemma3ForConditionalGeneration.from_pretrained(
     "google/gemma-3-4b-it",
@@ -115,7 +115,7 @@ echo -e "Plants create energy through a process known as" | transformers run --t
 ```py
 # pip install torchao
 import torch
-from transformers import TorchAoConfig, Gemma3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import TorchAoConfig, Gemma3ForConditionalGeneration, AutoProcessor
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 model = Gemma3ForConditionalGeneration.from_pretrained(
@@ -158,7 +158,7 @@ print(processor.decode(output[0], skip_special_tokens=True))
 [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139)를 사용하여 모델이 주목할 수 있는 토큰과 주목할 수 없는 토큰을 더 잘 이해할 수 있습니다.
 
 ```py
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("google/gemma-3-4b-it")
 visualizer("<img>What is shown in this image?")
@@ -212,7 +212,7 @@ visualizer("<img>What is shown in this image?")
 
     ```py
     import torch
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
     tokenizer = AutoTokenizer.from_pretrained(
         "google/gemma-3-1b-pt",

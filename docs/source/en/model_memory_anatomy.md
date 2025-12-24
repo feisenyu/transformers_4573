@@ -95,7 +95,7 @@ First, we load the `google-bert/bert-large-uncased` model. We load the model wei
 how much space just the weights use.
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-large-uncased").to("cuda")
@@ -161,7 +161,7 @@ default_args = {
 Let's use the [`Trainer`] and train the model without using any GPU performance optimization techniques and a batch size of 4:
 
 ```py
->>> from transformers import TrainingArguments, Trainer, logging
+>>> from transformers_4573 import TrainingArguments, Trainer, logging
 
 >>> logging.set_verbosity_error()
 

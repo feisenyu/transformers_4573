@@ -41,7 +41,7 @@ The example below demonstrates how to automatically transcribe speech into text 
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="automatic-speech-recognition",
@@ -58,7 +58,7 @@ pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/1.flac")
 
 ```python
 import torch
-from transformers import AutoProcessor, AutoModelForCTC
+from transformers_4573 import AutoProcessor, AutoModelForCTC
 from datasets import load_dataset
 
 dataset = load_dataset("hf-internal-testing/librispeech_asr_demo", "clean", split="validation").sort("id")
@@ -88,7 +88,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to quantize 
 
 ```python
 import torch
-from transformers import AutoProcessor, AutoModelForCTC, BitsAndBytesConfig
+from transformers_4573 import AutoProcessor, AutoModelForCTC, BitsAndBytesConfig
 from datasets import load_dataset
 
 bnb_config = BitsAndBytesConfig(

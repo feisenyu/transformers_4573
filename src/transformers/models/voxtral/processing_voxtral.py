@@ -119,7 +119,7 @@ class VoxtralProcessor(ProcessorMixin):
 
         ```python
         from huggingface_hub import hf_hub_download
-        from transformers.audio_utils import load_audio_as
+        from transformers_4573.audio_utils import load_audio_as
 
         audio_url = "https://huggingface.co/datasets/hf-internal-testing/dummy-audio-samples/resolve/main/bcn_weather.mp3"
         audio_path = hf_hub_download(repo_id="hf-internal-testing/dummy-audio-samples", filename="bcn_weather.mp3", repo_type="dataset")
@@ -285,7 +285,7 @@ class VoxtralProcessor(ProcessorMixin):
         It relies on MistralCommonBackend and WhisperFeatureExtractor to prepare input ids and input features to the model.
 
         ```python
-        from transformers import VoxtralProcessor
+        from transformers_4573 import VoxtralProcessor
 
         model_id = "mistralai/Voxtral-Mini-3B-2507"
         processor = VoxtralProcessor.from_pretrained(model_id)

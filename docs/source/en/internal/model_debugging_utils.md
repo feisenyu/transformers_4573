@@ -42,8 +42,8 @@ Add this context manager as follows to debug a model:
 import torch
 from PIL import Image
 import requests
-from transformers import LlavaProcessor, LlavaForConditionalGeneration
-from transformers.model_debugging_utils import model_addition_debugger_context
+from transformers_4573 import LlavaProcessor, LlavaForConditionalGeneration
+from transformers_4573.model_debugging_utils import model_addition_debugger_context
 torch.random.manual_seed(673)
 
 # load pretrained model and processor

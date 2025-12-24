@@ -60,7 +60,7 @@ class MobileNetV2ImageProcessorFast(BaseImageProcessorFast):
     def __init__(self, **kwargs: Unpack[MobileNetV2ImageProcessorKwargs]):
         super().__init__(**kwargs)
 
-    # Copied from transformers.models.beit.image_processing_beit_fast.BeitImageProcessorFast.reduce_label
+    # Copied from transformers_4573.models.beit.image_processing_beit_fast.BeitImageProcessorFast.reduce_label
     def reduce_label(self, labels: list["torch.Tensor"]):
         for idx in range(len(labels)):
             label = labels[idx]
@@ -183,7 +183,7 @@ class MobileNetV2ImageProcessorFast(BaseImageProcessorFast):
 
         return BatchFeature(data={"pixel_values": processed_images}, tensor_type=return_tensors)
 
-    # Copied from transformers.models.beit.image_processing_beit_fast.BeitImageProcessorFast.post_process_semantic_segmentation with Beit->MobileNetV2
+    # Copied from transformers_4573.models.beit.image_processing_beit_fast.BeitImageProcessorFast.post_process_semantic_segmentation with Beit->MobileNetV2
     def post_process_semantic_segmentation(self, outputs, target_sizes: Optional[list[tuple]] = None):
         """
         Converts the output of [`MobileNetV2ForSemanticSegmentation`] into semantic segmentation maps.

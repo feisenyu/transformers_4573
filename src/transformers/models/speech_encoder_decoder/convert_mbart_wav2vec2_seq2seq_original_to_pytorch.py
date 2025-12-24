@@ -20,7 +20,7 @@ import fairseq
 import torch
 from torch import nn
 
-from transformers import (
+from transformers_4573 import (
     MBart50Tokenizer,
     MBartConfig,
     MBartForCausalLM,

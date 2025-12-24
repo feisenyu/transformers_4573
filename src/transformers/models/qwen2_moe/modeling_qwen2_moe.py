@@ -664,7 +664,7 @@ class Qwen2MoeForCausalLM(Qwen2MoePreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Qwen2MoeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Qwen2MoeForCausalLM
 
         >>> model = Qwen2MoeForCausalLM.from_pretrained("mistralai/Qwen2Moe-8x7B-v0.1")
         >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Qwen2Moe-8x7B-v0.1")

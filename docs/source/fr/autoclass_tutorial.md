@@ -39,7 +39,7 @@ Quasiment toutes les tâches de traitement du langage (NLP) commencent avec un t
 Chargez un tokenizer avec [`AutoTokenizer.from_pretrained`]:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -59,7 +59,7 @@ Puis, transformez votre texte initial comme montré ci-dessous:
 Pour les tâches de vision, un processeur d'image traite l'image pour la formater correctment.
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
 ```
@@ -86,7 +86,7 @@ Ces paramètres peuvent être utilisés de manière interchangeable, mais si vou
 Par exemple, dans le diagramme ci-dessus, pour renvoyer la carte de caractéristiques de la première étape du backbone Swin, vous pouvez définir `out_indices=(1,)` :
 
 ```py
->>> from transformers import AutoImageProcessor, AutoBackbone
+>>> from transformers_4573 import AutoImageProcessor, AutoBackbone
 >>> import torch
 >>> from PIL import Image
 >>> import requests
@@ -115,7 +115,7 @@ Pour les tâches audio, un extracteur de caractéristiques (aussi appelés "feat
 Chargez un extracteur de caractéristiques avec [`AutoFeatureExtractor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained(
 ...     "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition"
@@ -129,7 +129,7 @@ Les tâches multimodales nécessitent un processeur qui combine deux types d'out
 Chargez un processeur avec [`AutoProcessor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoProcessor
+>>> from transformers_4573 import AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained("microsoft/layoutlmv2-base-uncased")
 ```
@@ -139,7 +139,7 @@ Chargez un processeur avec [`AutoProcessor.from_pretrained`]:
 Enfin, les classes `AutoModelFor` vous permettent de charger un modèle pré-entraîné pour une tâche donnée (voir [ici](model_doc/auto) pour une liste complète des tâches disponibles). Par exemple, chargez un modèle pour la classification de séquence avec [`AutoModelForSequenceClassification.from_pretrained`]:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -147,7 +147,7 @@ Enfin, les classes `AutoModelFor` vous permettent de charger un modèle pré-ent
 Réutilisez facilement le même ensemble de poids pour charger une architecture pour une tâche différente :
 
 ```py
->>> from transformers import AutoModelForTokenClassification
+>>> from transformers_4573 import AutoModelForTokenClassification
 
 >>> model = AutoModelForTokenClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```

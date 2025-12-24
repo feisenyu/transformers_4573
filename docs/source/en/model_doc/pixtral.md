@@ -42,7 +42,7 @@ You can find all the original Pixtral checkpoints under the [Mistral AI](https:/
 
 ```python
 import torch
-from transformers import AutoProcessor, LlavaForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaForConditionalGeneration
 
 model_id = "mistral-community/pixtral-12b"
 model = LlavaForConditionalGeneration.from_pretrained(model_id, dtype="auto", device_map="auto")
@@ -79,7 +79,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to quantize 
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, LlavaForConditionalGeneration, BitsAndBytesConfig
+from transformers_4573 import AutoProcessor, LlavaForConditionalGeneration, BitsAndBytesConfig
 
 model_id = "mistral-community/pixtral-12b"
 

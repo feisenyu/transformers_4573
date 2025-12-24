@@ -392,7 +392,7 @@ class AyaVisionForConditionalGeneration(AyaVisionPreTrainedModel, GenerationMixi
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, AyaVisionForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, AyaVisionForConditionalGeneration
         >>> import torch
 
         >>> torch_device = "cuda:0"

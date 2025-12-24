@@ -19,7 +19,7 @@ import re
 import torch
 from datasets import load_dataset
 
-from transformers import (
+from transformers_4573 import (
     AutoModelForKeypointDetection,
     SuperGlueConfig,
     SuperGlueForKeypointMatching,

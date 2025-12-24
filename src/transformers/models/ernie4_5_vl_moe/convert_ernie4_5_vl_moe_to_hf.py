@@ -23,7 +23,7 @@ from shutil import copyfile
 from huggingface_hub import hf_hub_download, snapshot_download
 from tokenizers import AddedToken
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     Ernie4_5_VL_MoeConfig,
     Ernie4_5_VL_MoeImageProcessorFast,

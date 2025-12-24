@@ -20,9 +20,9 @@ import pytest
 from packaging import version
 from parameterized import parameterized
 
-from transformers import AutoTokenizer, BitsAndBytesConfig, DynamicCache, is_torch_available, set_seed
-from transformers.cache_utils import DynamicSlidingWindowLayer
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, BitsAndBytesConfig, DynamicCache, is_torch_available, set_seed
+from transformers_4573.cache_utils import DynamicSlidingWindowLayer
+from transformers_4573.testing_utils import (
     DeviceProperties,
     Expectations,
     backend_empty_cache,
@@ -41,7 +41,7 @@ from transformers.testing_utils import (
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MistralForCausalLM,
         MistralModel,
     )

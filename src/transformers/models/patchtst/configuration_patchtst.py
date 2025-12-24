@@ -16,8 +16,8 @@
 
 from typing import Optional, Union
 
-from transformers.configuration_utils import PreTrainedConfig
-from transformers.utils import logging
+from transformers_4573.configuration_utils import PreTrainedConfig
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)
@@ -126,7 +126,7 @@ class PatchTSTConfig(PreTrainedConfig):
 
 
     ```python
-    >>> from transformers import PatchTSTConfig, PatchTSTModel
+    >>> from transformers_4573 import PatchTSTConfig, PatchTSTModel
 
     >>> # Initializing an PatchTST configuration with 12 time steps for prediction
     >>> configuration = PatchTSTConfig(prediction_length=12)

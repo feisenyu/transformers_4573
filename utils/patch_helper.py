@@ -46,7 +46,7 @@ REPO = "huggingface/transformers"  # Optional if already in correct repo
 
 
 def get_release_branch_name():
-    """Derive branch name from transformers version."""
+    """Derive branch name from transformers_4573 version."""
     major, minor, *_ = transformers.__version__.split(".")
     major = int(major)
     minor = int(minor)

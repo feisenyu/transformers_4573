@@ -56,7 +56,7 @@ class Glm46VConfig(PreTrainedConfig):
             The video end token index to encode the end of video.
 
     ```python
-    >>> from transformers import Glm46VForConditionalGeneration, Glm46VConfig
+    >>> from transformers_4573 import Glm46VForConditionalGeneration, Glm46VConfig
 
     >>> # Initializing a GLM-4.6V style configuration
     >>> configuration = Glm46VConfig()

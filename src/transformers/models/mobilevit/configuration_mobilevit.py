@@ -78,7 +78,7 @@ class MobileViTConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import MobileViTConfig, MobileViTModel
+    >>> from transformers_4573 import MobileViTConfig, MobileViTModel
 
     >>> # Initializing a mobilevit-small style configuration
     >>> configuration = MobileViTConfig()

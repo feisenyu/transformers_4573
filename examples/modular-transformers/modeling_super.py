@@ -10,7 +10,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.modeling_outputs import CausalLMOutputWithPast
+from transformers_4573.modeling_outputs import CausalLMOutputWithPast
 
 from ...activations import ACT2FN
 from ...cache_utils import Cache

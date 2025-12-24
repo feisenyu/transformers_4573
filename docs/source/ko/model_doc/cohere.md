@@ -33,7 +33,7 @@ Hub에 업로드된 체크포인트들은 `dtype = 'float16'`을 사용합니다
 
 ```python
 # pip install transformers
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 model_id = "CohereForAI/c4ai-command-r-v01"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -67,7 +67,7 @@ Command-R을 시작하는 데 도움이 되는 Hugging Face와 community 자료 
 FP16 모델 로딩
 ```python
 # pip install transformers
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 model_id = "CohereForAI/c4ai-command-r-v01"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -92,7 +92,7 @@ print(gen_text)
 bitsandbytes 라이브러리를 이용해서 4bit 양자화된 모델 로딩
 ```python
 # pip install transformers bitsandbytes accelerate
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 bnb_config = BitsAndBytesConfig(load_in_4bit=True)
 

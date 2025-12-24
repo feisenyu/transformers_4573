@@ -21,12 +21,12 @@ import warnings
 import torch
 from tokenizers import AddedToken, processors
 
-from transformers import GenerationConfig, LlamaConfig, LlamaForCausalLM, LlamaTokenizer, PreTrainedTokenizerFast
-from transformers.convert_slow_tokenizer import TikTokenConverter
+from transformers_4573 import GenerationConfig, LlamaConfig, LlamaForCausalLM, LlamaTokenizer, PreTrainedTokenizerFast
+from transformers_4573.convert_slow_tokenizer import TikTokenConverter
 
 
 try:
-    from transformers import LlamaTokenizerFast
+    from transformers_4573 import LlamaTokenizerFast
 except ImportError as e:
     warnings.warn(e)
     warnings.warn(
@@ -45,7 +45,7 @@ python src/transformers/models/llama/convert_llama_weights_to_hf.py \
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import LlamaForCausalLM, LlamaTokenizer
+from transformers_4573 import LlamaForCausalLM, LlamaTokenizer
 
 model = LlamaForCausalLM.from_pretrained("/output/path")
 tokenizer = LlamaTokenizer.from_pretrained("/output/path")
@@ -454,7 +454,7 @@ class Llama3Converter(TikTokenConverter):
         if instruct or llama_version == "Guard-3":
             model_id, revision = templates_for_version.get(llama_version, (None, None))
             if model_id is not None:
-                from transformers import AutoTokenizer
+                from transformers_4573 import AutoTokenizer
 
                 t = AutoTokenizer.from_pretrained(model_id, revision=revision)
                 additional_kwargs["chat_template"] = t.chat_template

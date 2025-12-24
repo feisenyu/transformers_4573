@@ -48,7 +48,7 @@ class SuperPointConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import SuperPointConfig, SuperPointForKeypointDetection
+    >>> from transformers_4573 import SuperPointConfig, SuperPointForKeypointDetection
 
     >>> # Initializing a SuperPoint superpoint style configuration
     >>> configuration = SuperPointConfig()

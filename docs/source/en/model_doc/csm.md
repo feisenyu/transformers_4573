@@ -38,7 +38,7 @@ CSM can be used to simply generate speech from a text prompt:
 
 ```python
 import torch
-from transformers import CsmForConditionalGeneration, AutoProcessor
+from transformers_4573 import CsmForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 model_id = "sesame/csm-1b"
@@ -73,7 +73,7 @@ CSM can be used to generate speech given a conversation, allowing consistency in
 
 ```python
 import torch
-from transformers import CsmForConditionalGeneration, AutoProcessor
+from transformers_4573 import CsmForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 from datasets import load_dataset, Audio
 
@@ -119,7 +119,7 @@ CSM supports batched inference!
 
 ```python
 import torch
-from transformers import CsmForConditionalGeneration, AutoProcessor
+from transformers_4573 import CsmForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 from datasets import load_dataset, Audio
 
@@ -177,7 +177,7 @@ CSM supports full-graph compilation with CUDA graphs!
 ```python
 import torch
 import copy
-from transformers import CsmForConditionalGeneration, AutoProcessor
+from transformers_4573 import CsmForConditionalGeneration, AutoProcessor
 from datasets import load_dataset
 
 model_id = "sesame/csm-1b"
@@ -309,7 +309,7 @@ print("="*50)
 CSM Transformers integration supports training!
 
 ```python
-from transformers import CsmForConditionalGeneration, AutoProcessor
+from transformers_4573 import CsmForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 from datasets import load_dataset, Audio
 

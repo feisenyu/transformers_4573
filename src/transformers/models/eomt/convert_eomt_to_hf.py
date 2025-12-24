@@ -23,7 +23,7 @@ from typing import Optional
 import torch
 from huggingface_hub import snapshot_download
 
-from transformers import EomtConfig, EomtForUniversalSegmentation, EomtImageProcessorFast
+from transformers_4573 import EomtConfig, EomtForUniversalSegmentation, EomtImageProcessorFast
 
 
 # fmt: off

@@ -38,17 +38,17 @@ try:
     from detectron2.projects.deeplab import add_deeplab_config
 except ImportError:
     pass
-from transformers import CLIPTokenizer, DinatConfig, SwinConfig
-from transformers.models.oneformer.image_processing_oneformer import OneFormerImageProcessor
-from transformers.models.oneformer.modeling_oneformer import (
+from transformers_4573 import CLIPTokenizer, DinatConfig, SwinConfig
+from transformers_4573.models.oneformer.image_processing_oneformer import OneFormerImageProcessor
+from transformers_4573.models.oneformer.modeling_oneformer import (
     OneFormerConfig,
     OneFormerForUniversalSegmentation,
     OneFormerForUniversalSegmentationOutput,
     OneFormerModel,
     OneFormerModelOutput,
 )
-from transformers.models.oneformer.processing_oneformer import OneFormerProcessor
-from transformers.utils import logging
+from transformers_4573.models.oneformer.processing_oneformer import OneFormerProcessor
+from transformers_4573.utils import logging
 
 
 StateDict = dict[str, Tensor]

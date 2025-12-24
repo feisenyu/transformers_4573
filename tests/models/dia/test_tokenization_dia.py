@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers.models.dia import DiaTokenizer
-from transformers.testing_utils import slow
+from transformers_4573.models.dia import DiaTokenizer
+from transformers_4573.testing_utils import slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

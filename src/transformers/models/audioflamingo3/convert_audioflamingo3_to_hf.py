@@ -28,7 +28,7 @@ from typing import Any
 import torch
 from safetensors.torch import safe_open
 
-from transformers import (
+from transformers_4573 import (
     AudioFlamingo3Config,
     AudioFlamingo3ForConditionalGeneration,
     AudioFlamingo3Processor,

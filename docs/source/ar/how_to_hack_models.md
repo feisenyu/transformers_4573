@@ -30,7 +30,7 @@
 ```python
 import torch
 import torch.nn as nn
-from transformers.models.sam.modeling_sam import SamVisionAttention
+from transformers_4573.models.sam.modeling_sam import SamVisionAttention
 
 class SamVisionAttentionSplit(SamVisionAttention, nn.Module):
     def __init__(self, config, window_size):
@@ -97,8 +97,8 @@ class SamVisionAttentionSplit(SamVisionAttention, nn.Module):
 استبدل فئة `SamVisionAttention` الأصلية بفئتك المخصصة بحيث يستخدم النموذج آلية الانتباه المعدلة.
 
 ```python
-from transformers import SamModel
-from transformers.models.sam import modeling_sam
+from transformers_4573 import SamModel
+from transformers_4573.models.sam import modeling_sam
 
 # استبدال فئة الاهتمام في وحدة نمطية modeling_sam
 modeling_sam.SamVisionAttention = SamVisionAttentionSplit

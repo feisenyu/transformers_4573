@@ -70,7 +70,7 @@ class Qwen2AudioCausalLMOutputWithPast(ModelOutput):
     attention_mask: Optional[torch.FloatTensor] = None
 
 
-# Copied from transformers.models.whisper.modeling_whisper.eager_attention_forward
+# Copied from transformers_4573.models.whisper.modeling_whisper.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -100,7 +100,7 @@ def eager_attention_forward(
 class Qwen2AudioAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
-    # Copied from transformers.models.whisper.modeling_whisper.WhisperAttention.__init__ with Whisper->Qwen2Audio
+    # Copied from transformers_4573.models.whisper.modeling_whisper.WhisperAttention.__init__ with Whisper->Qwen2Audio
     def __init__(
         self,
         embed_dim: int,
@@ -186,7 +186,7 @@ class Qwen2AudioAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.whisper.modeling_whisper.WhisperEncoderLayer with Whisper->Qwen2Audio, WHISPER->QWEN2AUDIO
+# Copied from transformers_4573.models.whisper.modeling_whisper.WhisperEncoderLayer with Whisper->Qwen2Audio, WHISPER->QWEN2AUDIO
 class Qwen2AudioEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: Qwen2AudioConfig):
         super().__init__()
@@ -263,7 +263,7 @@ class Qwen2AudioPreTrainedModel(PreTrainedModel):
     The audio model from Qwen2Audio without any head or projection on top.
     """
 )
-# Copied from transformers.models.whisper.modeling_whisper.WhisperEncoder with Whisper->Qwen2Audio
+# Copied from transformers_4573.models.whisper.modeling_whisper.WhisperEncoder with Whisper->Qwen2Audio
 class Qwen2AudioEncoder(Qwen2AudioPreTrainedModel):
     """
     Transformer encoder consisting of *config.encoder_layers* self attention layers. Each layer is a
@@ -705,7 +705,7 @@ class Qwen2AudioForConditionalGeneration(Qwen2AudioPreTrainedModel, GenerationMi
         >>> from io import BytesIO
         >>> from urllib.request import urlopen
         >>> import librosa
-        >>> from transformers import AutoProcessor, Qwen2AudioForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Qwen2AudioForConditionalGeneration
 
         >>> model = Qwen2AudioForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B")
         >>> processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B")

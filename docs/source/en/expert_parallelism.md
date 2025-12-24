@@ -26,8 +26,8 @@ Enable expert parallelism with the [`DistributedConfig`] class and the `enable_e
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.distributed.configuration_utils import DistributedConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573.distributed.configuration_utils import DistributedConfig
 
 distributed_config = DistributedConfig(enable_expert_parallel=True)
 

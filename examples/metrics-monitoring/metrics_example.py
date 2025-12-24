@@ -1,6 +1,6 @@
 # Example usage of the trace and attach_tracer decorators
 
-from transformers.utils.metrics import attach_tracer, traced
+from transformers_4573.utils.metrics import attach_tracer, traced
 
 
 @attach_tracer()

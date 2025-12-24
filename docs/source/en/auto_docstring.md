@@ -36,7 +36,7 @@ Select whether you'd like to apply `@auto_docstring` to a class or function belo
 Place `@auto_docstring` directly above the class definition. The decorator derives parameter descriptions from the `__init__` method's signature and docstring.
 
 ```python
-from transformers.modeling_utils import PreTrainedModel
+from transformers_4573.modeling_utils import PreTrainedModel
 from ...utils import auto_docstring
 
 @auto_docstring
@@ -282,7 +282,7 @@ The `@auto_docstring` decorator automatically generates docstrings by:
 
     `@auto_docstring` also accepts the `custom_intro` argument to describe a class or function.
 
-5. Using a templating system to allow predefined docstrings to include dynamic information from Transformers' [auto_modules](https://github.com/huggingface/transformers/tree/main/src/transformers/models/auto) such as `{{processor_class}}` and `{{config_class}}`.
+5. Using a templating system to allow predefined docstrings to include dynamic information from transformers_4573' [auto_modules](https://github.com/huggingface/transformers/tree/main/src/transformers/models/auto) such as `{{processor_class}}` and `{{config_class}}`.
 
 6. Finding appropriate usage examples based on the model's task or pipeline compatibility. It extracts checkpoint information form the model's configuration class to provide concrete examples with real model identifiers.
 

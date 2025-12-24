@@ -62,7 +62,7 @@ El campo `answers` es un diccionario que contiene la posición inicial de la res
 Carga el tokenizer de DistilBERT para procesar los campos `question` (pregunta) y `context` (contexto):
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -139,7 +139,7 @@ Quita las columnas que no necesites:
 Usa el [`DefaultDataCollator`] para crear un lote de ejemplos. A diferencia de los otros collators de datos en 🤗 Transformers, el `DefaultDataCollator` no aplica ningún procesamiento adicional (como el rellenado).
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers_4573 import DefaultDataCollator
 
 >>> data_collator = DefaultDataCollator()
 ```
@@ -149,7 +149,7 @@ Usa el [`DefaultDataCollator`] para crear un lote de ejemplos. A diferencia de l
 Carga el modelo DistilBERT con [`AutoModelForQuestionAnswering`]:
 
 ```py
->>> from transformers import AutoModelForQuestionAnswering, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForQuestionAnswering, TrainingArguments, Trainer
 
 >>> model = AutoModelForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased")
 ```

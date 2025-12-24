@@ -145,7 +145,7 @@ class MMGroundingDinoConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import MMGroundingDinoConfig, MMGroundingDinoModel
+    >>> from transformers_4573 import MMGroundingDinoConfig, MMGroundingDinoModel
 
     >>> # Initializing a MM Grounding DINO configuration
     >>> configuration = MMGroundingDinoConfig()

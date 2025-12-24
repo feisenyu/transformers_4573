@@ -38,7 +38,7 @@ The example below demonstrates how to predict the `[MASK]` token with [`Pipeline
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="fill-mask",
@@ -54,7 +54,7 @@ pipeline("Plants create [MASK] through a process known as photosynthesis.")
 
 ```py
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "google-bert/bert-base-uncased",

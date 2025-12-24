@@ -69,7 +69,7 @@ class LlavaOnevisionImageProcessorKwargs(ImagesKwargs, total=False):
     image_grid_pinpoints: list[list[int]]
 
 
-# Copied from transformers.models.llava_next.image_processing_llava_next.divide_to_patches
+# Copied from transformers_4573.models.llava_next.image_processing_llava_next.divide_to_patches
 def divide_to_patches(image: np.ndarray, patch_size: int, input_data_format) -> list[np.ndarray]:
     """
     Divides an image into patches of a specified size.
@@ -98,7 +98,7 @@ def divide_to_patches(image: np.ndarray, patch_size: int, input_data_format) -> 
     return patches
 
 
-# Copied from transformers.models.llava_next.image_processing_llava_next.expand_to_square
+# Copied from transformers_4573.models.llava_next.image_processing_llava_next.expand_to_square
 def expand_to_square(image: np.ndarray, background_color, input_data_format) -> np.ndarray:
     """
     Expands an image to a square by adding a background color.
@@ -233,7 +233,7 @@ class LlavaOnevisionImageProcessor(BaseImageProcessor):
         self.do_pad = do_pad
         self.do_convert_rgb = do_convert_rgb
 
-    # Copied from transformers.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor.pad
+    # Copied from transformers_4573.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor.pad
     def pad(
         self,
         image: np.ndarray,
@@ -302,7 +302,7 @@ class LlavaOnevisionImageProcessor(BaseImageProcessor):
         )
         return image
 
-    # Copied from transformers.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._resize_for_patching
+    # Copied from transformers_4573.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._resize_for_patching
     def _resize_for_patching(
         self, image: np.ndarray, target_resolution: tuple, resample, input_data_format: ChannelDimension
     ) -> np.ndarray:
@@ -329,7 +329,7 @@ class LlavaOnevisionImageProcessor(BaseImageProcessor):
 
         return resized_image
 
-    # Copied from transformers.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._get_padding_size
+    # Copied from transformers_4573.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._get_padding_size
     def _get_padding_size(self, original_resolution: tuple, target_resolution: tuple):
         original_height, original_width = original_resolution
         target_height, target_width = target_resolution
@@ -337,7 +337,7 @@ class LlavaOnevisionImageProcessor(BaseImageProcessor):
         paste_y, r_y = divmod(target_height - original_height, 2)
         return (paste_y, paste_y + r_y), (paste_x, paste_x + r_x)
 
-    # Copied from transformers.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._pad_for_patching
+    # Copied from transformers_4573.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._pad_for_patching
     def _pad_for_patching(
         self, image: np.ndarray, target_resolution: tuple, input_data_format: ChannelDimension
     ) -> np.ndarray:
@@ -351,7 +351,7 @@ class LlavaOnevisionImageProcessor(BaseImageProcessor):
 
         return padded_image
 
-    # Copied from transformers.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor.get_image_patches
+    # Copied from transformers_4573.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor.get_image_patches
     def get_image_patches(
         self,
         image: np.ndarray,
@@ -416,7 +416,7 @@ class LlavaOnevisionImageProcessor(BaseImageProcessor):
 
         return image_patches
 
-    # Copied from transformers.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._pad_for_batching
+    # Copied from transformers_4573.models.llava_next.image_processing_llava_next.LlavaNextImageProcessor._pad_for_batching
     def _pad_for_batching(
         self,
         pixel_values: list[np.ndarray],
@@ -456,7 +456,7 @@ class LlavaOnevisionImageProcessor(BaseImageProcessor):
 
         return pixel_values
 
-    # Copied from transformers.models.llava.image_processing_llava.LlavaImageProcessor.pad_to_square
+    # Copied from transformers_4573.models.llava.image_processing_llava.LlavaImageProcessor.pad_to_square
     def pad_to_square(
         self,
         image: np.ndarray,

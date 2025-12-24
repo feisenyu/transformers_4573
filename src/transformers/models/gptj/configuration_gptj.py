@@ -65,7 +65,7 @@ class GPTJConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import GPTJModel, GPTJConfig
+    >>> from transformers_4573 import GPTJModel, GPTJConfig
 
     >>> # Initializing a GPT-J 6B configuration
     >>> configuration = GPTJConfig()

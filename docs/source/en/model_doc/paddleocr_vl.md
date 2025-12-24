@@ -74,7 +74,7 @@ The example below demonstrates how to generate text with PaddleOCRVL using [`Pip
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("image-text-to-text", model="PaddlePaddle/PaddleOCR-VL", dtype="bfloat16")
 messages = [
@@ -95,7 +95,7 @@ print(result[0]["generated_text"])
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
 model = AutoModelForImageTextToText.from_pretrained("PaddlePaddle/PaddleOCR-VL", dtype="bfloat16")
 processor = AutoProcessor.from_pretrained("PaddlePaddle/PaddleOCR-VL")
@@ -132,7 +132,7 @@ PaddleOCRVL also supports batched inference. We advise users to use `padding_sid
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("image-text-to-text", model="PaddlePaddle/PaddleOCR-VL", dtype="bfloat16")
 messages = [
@@ -154,7 +154,7 @@ print(result[1][0]["generated_text"])
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
 model = AutoModelForImageTextToText.from_pretrained("PaddlePaddle/PaddleOCR-VL", dtype="bfloat16")
 processor = AutoProcessor.from_pretrained("PaddlePaddle/PaddleOCR-VL")
@@ -198,7 +198,7 @@ pip install flash-attn --no-build-isolation
 ```
 
 ```python
-from transformers import AutoModelForImageTextToText
+from transformers_4573 import AutoModelForImageTextToText
 model = AutoModelForImageTextToText.from_pretrained("PaddlePaddle/PaddleOCR-VL", dtype="bfloat16", attn_implementation="flash_attention_2")
 ```
 

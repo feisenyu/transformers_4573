@@ -102,7 +102,7 @@ Now you can convert the label id to a label name:
 The next step is to load a ViT image processor to process the image into a tensor:
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> checkpoint = "google/vit-base-patch16-224-in21k"
 >>> image_processor = AutoImageProcessor.from_pretrained(checkpoint)
@@ -142,7 +142,7 @@ To apply the preprocessing function over the entire dataset, use 🤗 Datasets [
 Now create a batch of examples using [`DefaultDataCollator`]. Unlike other data collators in 🤗 Transformers, the `DefaultDataCollator` does not apply additional preprocessing such as padding.
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers_4573 import DefaultDataCollator
 
 >>> data_collator = DefaultDataCollator()
 ```
@@ -184,7 +184,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You're ready to start training your model now! Load ViT with [`AutoModelForImageClassification`]. Specify the number of labels along with the number of expected labels, and the label mappings:
 
 ```py
->>> from transformers import AutoModelForImageClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForImageClassification, TrainingArguments, Trainer
 
 >>> model = AutoModelForImageClassification.from_pretrained(
 ...     checkpoint,
@@ -261,7 +261,7 @@ Load an image you'd like to run inference on:
 The simplest way to try out your finetuned model for inference is to use it in a [`pipeline`]. Instantiate a `pipeline` for image classification with your model, and pass your image to it:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("image-classification", model="my_awesome_food_model")
 >>> classifier(image)
@@ -277,7 +277,7 @@ You can also manually replicate the results of the `pipeline` if you'd like:
 Load an image processor to preprocess the image and return the `input` as PyTorch tensors:
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 >>> import torch
 
 >>> image_processor = AutoImageProcessor.from_pretrained("my_awesome_food_model")
@@ -287,7 +287,7 @@ Load an image processor to preprocess the image and return the `input` as PyTorc
 Pass your inputs to the model and return the logits:
 
 ```py
->>> from transformers import AutoModelForImageClassification
+>>> from transformers_4573 import AutoModelForImageClassification
 
 >>> model = AutoModelForImageClassification.from_pretrained("my_awesome_food_model")
 >>> with torch.no_grad():

@@ -85,7 +85,7 @@ class Aimv2VisionConfig(SiglipVisionConfig):
     Example:
 
     ```python
-    >>> from transformers import SiglipVisionConfig, SiglipVisionModel
+    >>> from transformers_4573 import SiglipVisionConfig, SiglipVisionModel
 
     >>> # Initializing a Aimv2VisionConfig with apple/aimv2-large-patch14-224 style configuration
     >>> configuration = Aimv2VisionConfig()
@@ -256,7 +256,7 @@ class Aimv2Config(SiglipConfig):
     Example:
 
     ```python
-    >>> from transformers import Aimv2Config, Aimv2Model
+    >>> from transformers_4573 import Aimv2Config, Aimv2Model
 
     >>> # Initializing a Aimv2Config with apple/aimv2-large-patch14-224-lit style configuration
     >>> configuration = Aimv2Config()
@@ -268,7 +268,7 @@ class Aimv2Config(SiglipConfig):
     >>> configuration = model.config
 
     >>> # We can also initialize a Aimv2Config from a Aimv2TextConfig and a Aimv2VisionConfig
-    >>> from transformers import Aimv2TextConfig, Aimv2VisionConfig
+    >>> from transformers_4573 import Aimv2TextConfig, Aimv2VisionConfig
 
     >>> # Initializing a AIMv2Text and AIMv2Vision configuration
     >>> config_text = Aimv2TextConfig()
@@ -506,7 +506,7 @@ class Aimv2VisionModel(Aimv2PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Siglip2VisionModel
+        >>> from transformers_4573 import AutoProcessor, Siglip2VisionModel
 
         >>> model = Aimv2VisionModel.from_pretrained("apple/aimv2-large-patch14-native")
         >>> processor = AutoProcessor.from_pretrained("apple/aimv2-large-patch14-native")
@@ -649,7 +649,7 @@ class Aimv2Model(CLIPModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Aimv2Model
+        >>> from transformers_4573 import AutoProcessor, Aimv2Model
 
         >>> model = Aimv2Model.from_pretrained("apple/aimv2-large-patch14-224-lit")
         >>> processor = AutoProcessor.from_pretrained("apple/aimv2-large-patch14-224-lit")

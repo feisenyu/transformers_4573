@@ -2,7 +2,7 @@ from typing import Optional, Union
 
 import torch
 
-from transformers.models.bert.modeling_bert import BertModel
+from transformers_4573.models.bert.modeling_bert import BertModel
 
 from ...modeling_outputs import BaseModelOutputWithPoolingAndCrossAttentions
 from ...processing_utils import Unpack

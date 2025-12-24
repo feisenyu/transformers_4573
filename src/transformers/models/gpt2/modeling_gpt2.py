@@ -365,7 +365,7 @@ class GPT2Block(GradientCheckpointingLayer):
         return outputs
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->GPT2
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->GPT2
 class GPT2SequenceSummary(nn.Module):
     r"""
     Compute a single vector summary of a sequence hidden states.
@@ -916,7 +916,7 @@ class GPT2DoubleHeadsModel(GPT2PreTrainedModel, GenerationMixin):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, GPT2DoubleHeadsModel
+        >>> from transformers_4573 import AutoTokenizer, GPT2DoubleHeadsModel
 
         >>> tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2")
         >>> model = GPT2DoubleHeadsModel.from_pretrained("openai-community/gpt2")

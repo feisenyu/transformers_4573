@@ -38,7 +38,7 @@ The example below demonstrates how to generate text for an image with [`Pipeline
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 messages = [
     {"role": "user",
@@ -67,7 +67,7 @@ outputs[0]["generated_text"]
 
 ```py
 import torch
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 from accelerate import Accelerator 
 
 torch_device = Accelerator().device
@@ -111,7 +111,7 @@ decoded_output
 
 ```py
 import torch
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 from accelerate import Accelerator
 
 torch_device = Accelerator().device
@@ -152,7 +152,7 @@ print(decoded_output)
 
 ```py
 import torch
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 from accelerate import Accelerator
 
 torch_device = Accelerator().device
@@ -196,7 +196,7 @@ messages = [
 
 ```py
 import torch
-from transformers import AutoProcessor, AutoModelForImageTextToText, BitsAndBytesConfig
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText, BitsAndBytesConfig
 from accelerate import Accelerator
 
 torch_device = Accelerator().device

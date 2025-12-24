@@ -72,7 +72,7 @@ class ClapTextConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import ClapTextConfig, ClapTextModel
+    >>> from transformers_4573 import ClapTextConfig, ClapTextModel
 
     >>> # Initializing a CLAP text configuration
     >>> configuration = ClapTextConfig()
@@ -204,7 +204,7 @@ class ClapAudioConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import ClapAudioConfig, ClapAudioModel
+    >>> from transformers_4573 import ClapAudioConfig, ClapAudioModel
 
     >>> # Initializing a ClapAudioConfig with laion/clap-htsat-fused style configuration
     >>> configuration = ClapAudioConfig()
@@ -310,7 +310,7 @@ class ClapConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import ClapConfig, ClapModel
+    >>> from transformers_4573 import ClapConfig, ClapModel
 
     >>> # Initializing a ClapConfig with laion-ai/base style configuration
     >>> configuration = ClapConfig()
@@ -322,7 +322,7 @@ class ClapConfig(PreTrainedConfig):
     >>> configuration = model.config
 
     >>> # We can also initialize a ClapConfig from a ClapTextConfig and a ClapAudioConfig
-    >>> from transformers import ClapTextConfig, ClapAudioConfig
+    >>> from transformers_4573 import ClapTextConfig, ClapAudioConfig
 
     >>> # Initializing a ClapText and ClapAudioConfig configuration
     >>> config_text = ClapTextConfig()

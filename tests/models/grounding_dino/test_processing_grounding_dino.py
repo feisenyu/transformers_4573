@@ -15,10 +15,10 @@
 import os
 import unittest
 
-from transformers import GroundingDinoProcessor
-from transformers.models.bert.tokenization_bert import VOCAB_FILES_NAMES
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available
+from transformers_4573 import GroundingDinoProcessor
+from transformers_4573.models.bert.tokenization_bert import VOCAB_FILES_NAMES
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
@@ -26,7 +26,7 @@ from ...test_processing_common import ProcessorTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers.models.grounding_dino.modeling_grounding_dino import GroundingDinoObjectDetectionOutput
+    from transformers_4573.models.grounding_dino.modeling_grounding_dino import GroundingDinoObjectDetectionOutput
 
 
 @require_torch

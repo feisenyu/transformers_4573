@@ -18,8 +18,8 @@ import time
 import datasets
 import torch
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.generation import GenerationConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573.generation import GenerationConfig
 
 
 MODEL_ID = "Qwen/Qwen3-4B-Instruct-2507"

@@ -39,7 +39,7 @@ The example below demonstrates how to summarize text with [`Pipeline`], [`AutoMo
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="summarization",
@@ -57,7 +57,7 @@ Plants play a crucial role in sustaining life on Earth by generating oxygen and 
 
 ```py
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "google/pegasus-xsum"
@@ -94,7 +94,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import BitsAndBytesConfig, AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import BitsAndBytesConfig, AutoModelForSeq2SeqLM, AutoTokenizer
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,

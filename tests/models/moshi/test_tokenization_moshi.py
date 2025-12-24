@@ -15,14 +15,14 @@
 import inspect
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     SPIECE_UNDERLINE,
     AddedToken,
     AutoTokenizer,
     PreTrainedTokenizerFast,
 )
-from transformers.convert_slow_tokenizer import MoshiConverter
-from transformers.testing_utils import (
+from transformers_4573.convert_slow_tokenizer import MoshiConverter
+from transformers_4573.testing_utils import (
     get_tests_dir,
     nested_simplify,
     require_sentencepiece,

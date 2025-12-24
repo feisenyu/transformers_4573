@@ -23,7 +23,7 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-from transformers import AutoImageProcessor, Swinv2Config, Swinv2ForImageClassification
+from transformers_4573 import AutoImageProcessor, Swinv2Config, Swinv2ForImageClassification
 
 
 def get_swinv2_config(swinv2_name):

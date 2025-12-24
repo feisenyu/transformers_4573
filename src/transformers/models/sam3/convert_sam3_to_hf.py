@@ -26,8 +26,8 @@ from typing import Optional
 import regex as re
 import torch
 
-from transformers import CLIPTokenizerFast, Sam3Config, Sam3ImageProcessorFast, Sam3Model, Sam3Processor
-from transformers.utils import logging
+from transformers_4573 import CLIPTokenizerFast, Sam3Config, Sam3ImageProcessorFast, Sam3Model, Sam3Processor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()
@@ -420,7 +420,7 @@ def convert_sam3_checkpoint(
     print("=" * 80)
     print(f"Output directory: {output_path}")
     print("\nTo test the model, you can run:")
-    print(">>> from transformers import Sam3Model")
+    print(">>> from transformers_4573 import Sam3Model")
     print(f">>> model = Sam3Model.from_pretrained('{output_path}')")
     print("=" * 80)
 

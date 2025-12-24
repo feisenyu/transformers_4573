@@ -85,7 +85,7 @@ pip install transformers datasets evaluate rouge_score
 الخطوة التالية هي تحميل مجزء النصوص T5 لمعالجة `text` و `summary`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> checkpoint = "google-t5/t5-small"
 >>> tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -120,7 +120,7 @@ pip install transformers datasets evaluate rouge_score
 
 
 ```py
->>> from transformers import DataCollatorForSeq2Seq
+>>> from transformers_4573 import DataCollatorForSeq2Seq
 
 >>> data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=checkpoint)
 ```
@@ -168,7 +168,7 @@ pip install transformers datasets evaluate rouge_score
 أنت جاهز لبدء تدريب نموذجك الآن! قم بتحميل T5 باستخدام [`AutoModelForSeq2SeqLM`]:
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 ```
@@ -233,7 +233,7 @@ pip install transformers datasets evaluate rouge_score
 أبسط طريقة لتجربة نموذجك المضبوط للاستدلال هي استخدامه في [`pipeline`]. استخدم `pipeline` للتلخيص باستخدام نموذجك، ومرر نصك إليه:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> summarizer = pipeline("summarization", model="username/my_awesome_billsum_model")
 >>> summarizer(text)
@@ -245,7 +245,7 @@ pip install transformers datasets evaluate rouge_score
 قسم النص وإرجع `input_ids` كتنسورات PyTorch:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_billsum_model")
 >>> inputs = tokenizer(text, return_tensors="pt").input_ids
@@ -254,7 +254,7 @@ pip install transformers datasets evaluate rouge_score
 استخدم طريقة [`~generation.GenerationMixin.generate`] لإنشاء التلخيص. لمزيد من التفاصيل حول استراتيجيات توليد النص المختلفة والمعلمات للتحكم في التوليد، راجع واجهة برمجة تطبيقات [توليد النص](../main_classes/text_generation).
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM
+>>> from transformers_4573 import AutoModelForSeq2SeqLM
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("username/my_awesome_billsum_model")
 >>> outputs = model.generate(inputs, max_new_tokens=100, do_sample=False)

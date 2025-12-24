@@ -43,7 +43,7 @@ class ZeroShotAudioClassificationPipeline(Pipeline):
 
     Example:
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
     >>> from datasets import load_dataset
 
     >>> dataset = load_dataset("ashraq/esc50")

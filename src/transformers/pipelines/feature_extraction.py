@@ -20,7 +20,7 @@ class FeatureExtractionPipeline(Pipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> extractor = pipeline(model="google-bert/bert-base-uncased", task="feature-extraction")
     >>> result = extractor("This is a simple test.", return_tensors=True)

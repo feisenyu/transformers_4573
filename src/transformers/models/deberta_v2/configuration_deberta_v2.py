@@ -81,7 +81,7 @@ class DebertaV2Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import DebertaV2Config, DebertaV2Model
+    >>> from transformers_4573 import DebertaV2Config, DebertaV2Model
 
     >>> # Initializing a DeBERTa-v2 microsoft/deberta-v2-xlarge style configuration
     >>> configuration = DebertaV2Config()

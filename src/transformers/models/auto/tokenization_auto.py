@@ -20,7 +20,7 @@ import os
 from collections import OrderedDict
 from typing import Any, Optional, Union
 
-from transformers.utils.import_utils import is_mistral_common_available
+from transformers_4573.utils.import_utils import is_mistral_common_available
 
 from ...configuration_utils import PreTrainedConfig
 from ...dynamic_module_utils import get_class_from_dynamic_module, resolve_trust_remote_code
@@ -502,7 +502,7 @@ def get_tokenizer_config(
     tokenizer_config = get_tokenizer_config("FacebookAI/xlm-roberta-base")
 
     # Save a pretrained tokenizer locally and you can reload its config
-    from transformers import AutoTokenizer
+    from transformers_4573 import AutoTokenizer
 
     tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
     tokenizer.save_pretrained("tokenizer-test")
@@ -611,7 +611,7 @@ class AutoTokenizer:
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer
+        >>> from transformers_4573 import AutoTokenizer
 
         >>> # Download vocabulary from huggingface.co and cache.
         >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")

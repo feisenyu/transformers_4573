@@ -605,7 +605,7 @@ class ModernBertDecoderForCausalLM(ModernBertDecoderPreTrainedModel, GenerationM
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, ModernBertDecoderForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, ModernBertDecoderForCausalLM
 
         >>> model = ModernBertDecoderForCausalLM.from_pretrained("blab-jhu/test-32m-dec")
         >>> tokenizer = AutoTokenizer.from_pretrained("blab-jhu/test-32m-dec")

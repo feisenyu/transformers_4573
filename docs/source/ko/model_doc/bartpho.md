@@ -35,7 +35,7 @@ BARTpho 모델은 Nguyen Luong Tran, Duong Minh Le, Dat Quoc Nguyen에 의해 [B
 
 ```python
 >>> import torch
->>> from transformers import AutoModel, AutoTokenizer
+>>> from transformers_4573 import AutoModel, AutoTokenizer
 
 >>> bartpho = AutoModel.from_pretrained("vinai/bartpho-syllable")
 
@@ -49,7 +49,7 @@ BARTpho 모델은 Nguyen Luong Tran, Duong Minh Le, Dat Quoc Nguyen에 의해 [B
 ...     features = bartpho(**input_ids)  # 이제 모델 출력은 튜플입니다
 
 >>> # With TensorFlow 2.0+:
->>> from transformers import TFAutoModel
+>>> from transformers_4573 import TFAutoModel
 
 >>> bartpho = TFAutoModel.from_pretrained("vinai/bartpho-syllable")
 >>> input_ids = tokenizer(line, return_tensors="tf")
@@ -64,7 +64,7 @@ BART 전용 클래스를 mBART 전용 클래스로 대체하여 조정해야 합
 예를 들어:
 
 ```python
->>> from transformers import MBartForConditionalGeneration
+>>> from transformers_4573 import MBartForConditionalGeneration
 
 >>> bartpho = MBartForConditionalGeneration.from_pretrained("vinai/bartpho-syllable")
 >>> TXT = "Chúng tôi là <mask> nghiên cứu viên."

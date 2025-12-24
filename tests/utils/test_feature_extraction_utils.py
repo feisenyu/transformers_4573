@@ -22,10 +22,10 @@ from pathlib import Path
 import httpx
 import numpy as np
 
-from transformers import AutoFeatureExtractor, Wav2Vec2FeatureExtractor
-from transformers.feature_extraction_utils import BatchFeature
-from transformers.testing_utils import TOKEN, TemporaryHubRepo, get_tests_dir, is_staging_test, require_torch
-from transformers.utils import is_torch_available
+from transformers_4573 import AutoFeatureExtractor, Wav2Vec2FeatureExtractor
+from transformers_4573.feature_extraction_utils import BatchFeature
+from transformers_4573.testing_utils import TOKEN, TemporaryHubRepo, get_tests_dir, is_staging_test, require_torch
+from transformers_4573.utils import is_torch_available
 
 
 sys.path.append(str(Path(__file__).parent.parent.parent / "utils"))

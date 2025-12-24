@@ -61,7 +61,7 @@ class PixtralVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PixtralVisionModel, PixtralVisionConfig
+    >>> from transformers_4573 import PixtralVisionModel, PixtralVisionConfig
 
     >>> # Initializing a Pixtral-12B style configuration
     >>> config = PixtralVisionConfig()

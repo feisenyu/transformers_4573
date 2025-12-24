@@ -18,8 +18,8 @@ import os
 import torch
 from torch import nn
 
-from transformers import NllbMoeConfig, NllbMoeModel
-from transformers.utils import WEIGHTS_INDEX_NAME, WEIGHTS_NAME
+from transformers_4573 import NllbMoeConfig, NllbMoeModel
+from transformers_4573.utils import WEIGHTS_INDEX_NAME, WEIGHTS_NAME
 
 
 def remove_ignore_keys_(state_dict):

@@ -18,7 +18,7 @@ rendered properly in your Markdown viewer.
 
 The Hugging Face [Hub](https://hf.co/models) is a platform for sharing, discovering, and consuming models of all different types and sizes. We highly recommend sharing your model on the Hub to push open-source machine learning forward for everyone!
 
-This guide will show you how to share a model to the Hub from Transformers.
+This guide will show you how to share a model to the Hub from transformers_4573.
 
 ## Set up
 
@@ -86,7 +86,7 @@ There are several ways to upload a model to the Hub depending on your workflow p
 [`~transformers.Trainer.push_to_hub`] automatically adds useful information like training hyperparameters and results to the model card.
 
 ```py
-from transformers import TrainingArguments, Trainer
+from transformers_4573 import TrainingArguments, Trainer
 
 training_args = TrainingArguments(output_dir="my-awesome-model", push_to_hub=True)
 trainer = Trainer(

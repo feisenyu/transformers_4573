@@ -57,7 +57,7 @@ class GitVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import GitVisionConfig, GitVisionModel
+    >>> from transformers_4573 import GitVisionConfig, GitVisionModel
 
     >>> # Initializing a GitVisionConfig with microsoft/git-base style configuration
     >>> configuration = GitVisionConfig()
@@ -148,7 +148,7 @@ class GitConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import GitConfig, GitModel
+    >>> from transformers_4573 import GitConfig, GitModel
 
     >>> # Initializing a GIT microsoft/git-base style configuration
     >>> configuration = GitConfig()

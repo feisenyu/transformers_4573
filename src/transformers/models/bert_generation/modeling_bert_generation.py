@@ -42,7 +42,7 @@ from .configuration_bert_generation import BertGenerationConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput with Bert->BertGeneration
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput with Bert->BertGeneration
 class BertGenerationSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -57,7 +57,7 @@ class BertGenerationSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -87,7 +87,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfAttention with Bert->BertGeneration
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfAttention with Bert->BertGeneration
 class BertGenerationSelfAttention(nn.Module):
     def __init__(self, config, is_causal=False, layer_idx=None):
         super().__init__()
@@ -161,7 +161,7 @@ class BertGenerationSelfAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.bert.modeling_bert.BertCrossAttention with Bert->BertGeneration
+# Copied from transformers_4573.models.bert.modeling_bert.BertCrossAttention with Bert->BertGeneration
 class BertGenerationCrossAttention(nn.Module):
     def __init__(self, config, is_causal=False, layer_idx=None):
         super().__init__()
@@ -239,7 +239,7 @@ class BertGenerationCrossAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.bert.modeling_bert.BertAttention with Bert->BertGeneration,BERT->BERT_GENERATION
+# Copied from transformers_4573.models.bert.modeling_bert.BertAttention with Bert->BertGeneration,BERT->BERT_GENERATION
 class BertGenerationAttention(nn.Module):
     def __init__(self, config, is_causal=False, layer_idx=None, is_cross_attention=False):
         super().__init__()
@@ -271,7 +271,7 @@ class BertGenerationAttention(nn.Module):
         return attention_output, attn_weights
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate with Bert->BertGeneration
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate with Bert->BertGeneration
 class BertGenerationIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -287,7 +287,7 @@ class BertGenerationIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput with Bert->BertGeneration
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput with Bert->BertGeneration
 class BertGenerationOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -302,7 +302,7 @@ class BertGenerationOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertLayer with Bert->BertGeneration
+# Copied from transformers_4573.models.bert.modeling_bert.BertLayer with Bert->BertGeneration
 class BertGenerationLayer(GradientCheckpointingLayer):
     def __init__(self, config, layer_idx=None):
         super().__init__()
@@ -370,7 +370,7 @@ class BertGenerationLayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.bert.modeling_bert.BertEncoder
+# Copied from transformers_4573.models.bert.modeling_bert.BertEncoder
 class BertEncoder(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -582,7 +582,7 @@ class BertGenerationEncoder(BertGenerationPreTrainedModel):
             past_key_values=encoder_outputs.past_key_values,
         )
 
-    # Copied from transformers.models.bert.modeling_bert.BertModel._create_attention_masks
+    # Copied from transformers_4573.models.bert.modeling_bert.BertModel._create_attention_masks
     def _create_attention_masks(
         self,
         attention_mask,
@@ -685,7 +685,7 @@ class BertGenerationDecoder(BertGenerationPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BertGenerationDecoder, BertGenerationConfig
+        >>> from transformers_4573 import AutoTokenizer, BertGenerationDecoder, BertGenerationConfig
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/bert_for_seq_generation_L-24_bbc_encoder")

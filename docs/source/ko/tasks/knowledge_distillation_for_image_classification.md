@@ -42,7 +42,7 @@ dataset = load_dataset("beans")
 
 
 ```python
-from transformers import AutoImageProcessor
+from transformers_4573 import AutoImageProcessor
 teacher_processor = AutoImageProcessor.from_pretrained("merve/beans-vit-224")
 
 def process(examples):
@@ -56,7 +56,7 @@ processed_datasets = dataset.map(process, batched=True)
 
 
 ```python
-from transformers import TrainingArguments, Trainer
+from transformers_4573 import TrainingArguments, Trainer
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -109,7 +109,7 @@ notebook_login()
 
 
 ```python
-from transformers import AutoModelForImageClassification, MobileNetV2Config, MobileNetV2ForImageClassification
+from transformers_4573 import AutoModelForImageClassification, MobileNetV2Config, MobileNetV2ForImageClassification
 
 training_args = TrainingArguments(
     output_dir="my-awesome-model",
@@ -159,7 +159,7 @@ def compute_metrics(eval_pred):
 정의한 훈련 인수로 `Trainer`를 초기화해봅시다. 또한 데이터 콜레이터(data collator)를 초기화하겠습니다.
 
 ```python
-from transformers import DefaultDataCollator
+from transformers_4573 import DefaultDataCollator
 
 data_collator = DefaultDataCollator()
 trainer = ImageDistilTrainer(

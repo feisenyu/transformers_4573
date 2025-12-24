@@ -17,8 +17,8 @@ import re
 
 import safetensors.torch
 
-from transformers.models.pe_audio_video.modeling_pe_audio_video import PeAudioVideoConfig, PeAudioVideoModel
-from transformers.utils import cached_file
+from transformers_4573.models.pe_audio_video.modeling_pe_audio_video import PeAudioVideoConfig, PeAudioVideoModel
+from transformers_4573.utils import cached_file
 
 
 ORIGINAL_TO_CONVERTED_KEY_MAPPING = {

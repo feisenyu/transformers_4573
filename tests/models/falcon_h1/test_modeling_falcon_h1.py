@@ -18,8 +18,8 @@ import unittest
 
 import pytest
 
-from transformers import FalconH1Config, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import FalconH1Config, is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     get_device_properties,
     require_torch,
@@ -37,8 +37,8 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import AutoTokenizer, FalconH1ForCausalLM, FalconH1Model
-    from transformers.models.falcon_h1.modeling_falcon_h1 import (
+    from transformers_4573 import AutoTokenizer, FalconH1ForCausalLM, FalconH1Model
+    from transformers_4573.models.falcon_h1.modeling_falcon_h1 import (
         FalconHybridMambaAttentionDynamicCache,
     )
 

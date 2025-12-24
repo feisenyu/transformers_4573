@@ -18,9 +18,9 @@ import os
 import tempfile
 import unittest
 
-from transformers import FlaubertTokenizer
-from transformers.models.flaubert.tokenization_flaubert import VOCAB_FILES_NAMES
-from transformers.testing_utils import slow
+from transformers_4573 import FlaubertTokenizer
+from transformers_4573.models.flaubert.tokenization_flaubert import VOCAB_FILES_NAMES
+from transformers_4573.testing_utils import slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 
@@ -30,7 +30,7 @@ class FlaubertTokenizationTest(TokenizerTesterMixin, unittest.TestCase):
     tokenizer_class = FlaubertTokenizer
     test_rust_tokenizer = False
 
-    # Copied from transformers.tests.models.xlm.test_tokenization_xlm.XLMTokenizationTest.test_full_tokenizer
+    # Copied from transformers_4573.tests.models.xlm.test_tokenization_xlm.XLMTokenizationTest.test_full_tokenizer
     def test_full_tokenizer(self):
         """Adapted from Sennrich et al. 2015 and https://github.com/rsennrich/subword-nmt"""
 
@@ -58,7 +58,7 @@ class FlaubertTokenizationTest(TokenizerTesterMixin, unittest.TestCase):
         self.assertListEqual(tokenizer.convert_tokens_to_ids(input_tokens), input_bpe_tokens)
 
     @slow
-    # Copied from transformers.tests.models.xlm.test_tokenization_xlm.XLMTokenizationTest.test_sequence_builders
+    # Copied from transformers_4573.tests.models.xlm.test_tokenization_xlm.XLMTokenizationTest.test_sequence_builders
     def test_sequence_builders(self):
         tokenizer = FlaubertTokenizer.from_pretrained("flaubert/flaubert_base_cased")
 

@@ -38,7 +38,7 @@ The example below demonstrates how to detect interest points in an image with th
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoImageProcessor, SuperPointForKeypointDetection
+from transformers_4573 import AutoImageProcessor, SuperPointForKeypointDetection
 import torch
 from PIL import Image
 import requests
@@ -66,7 +66,7 @@ processed_outputs = processor.post_process_keypoint_detection(outputs, [image_si
 - SuperPoint outputs a dynamic number of keypoints per image, which makes it suitable for tasks requiring variable-length feature representations.
 
     ```py
-    from transformers import AutoImageProcessor, SuperPointForKeypointDetection
+    from transformers_4573 import AutoImageProcessor, SuperPointForKeypointDetection
     import torch
     from PIL import Image
     import requests

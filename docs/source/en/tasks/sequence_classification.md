@@ -77,7 +77,7 @@ There are two fields in this dataset:
 The next step is to load a DistilBERT tokenizer to preprocess the `text` field:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -98,7 +98,7 @@ tokenized_imdb = imdb.map(preprocess_function, batched=True)
 Now create a batch of examples using [`DataCollatorWithPadding`]. It's more efficient to *dynamically pad* the sentences to the longest length in a batch during collation, instead of padding the whole dataset to the maximum length.
 
 ```py
->>> from transformers import DataCollatorWithPadding
+>>> from transformers_4573 import DataCollatorWithPadding
 
 >>> data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 ```
@@ -145,7 +145,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You're ready to start training your model now! Load DistilBERT with [`AutoModelForSequenceClassification`] along with the number of expected labels, and the label mappings:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForSequenceClassification, TrainingArguments, Trainer
 
 >>> model = AutoModelForSequenceClassification.from_pretrained(
 ...     "distilbert/distilbert-base-uncased", num_labels=2, id2label=id2label, label2id=label2id
@@ -217,7 +217,7 @@ Grab some text you'd like to run inference on:
 The simplest way to try out your finetuned model for inference is to use it in a [`pipeline`]. Instantiate a `pipeline` for sentiment analysis with your model, and pass your text to it:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("sentiment-analysis", model="stevhliu/my_awesome_model")
 >>> classifier(text)
@@ -229,7 +229,7 @@ You can also manually replicate the results of the `pipeline` if you'd like:
 Tokenize the text and return PyTorch tensors:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("stevhliu/my_awesome_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -238,7 +238,7 @@ Tokenize the text and return PyTorch tensors:
 Pass your inputs to the model and return the `logits`:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("stevhliu/my_awesome_model")
 >>> with torch.no_grad():

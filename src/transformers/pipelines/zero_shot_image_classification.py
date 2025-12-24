@@ -35,7 +35,7 @@ class ZeroShotImageClassificationPipeline(Pipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> classifier = pipeline(model="google/siglip-so400m-patch14-384")
     >>> classifier(

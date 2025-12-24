@@ -21,13 +21,13 @@ import datasets
 import pytest
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     KyutaiSpeechToTextConfig,
     KyutaiSpeechToTextForConditionalGeneration,
     KyutaiSpeechToTextProcessor,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     cleanup,
     require_accelerate,
     require_torch,
@@ -50,7 +50,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         KyutaiSpeechToTextForConditionalGeneration,
         KyutaiSpeechToTextModel,
     )

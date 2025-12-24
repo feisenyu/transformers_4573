@@ -37,7 +37,7 @@ rendered properly in your Markdown viewer.
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="fill-mask",
@@ -53,7 +53,7 @@ pipeline("Plants create [MASK] through a process known as photosynthesis.")
 
 ```py
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "google/bigbird-roberta-base",

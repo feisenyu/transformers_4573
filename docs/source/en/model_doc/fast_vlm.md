@@ -73,7 +73,7 @@ Each **checkpoint** is trained with a specific prompt format, depending on the u
 
 ```python
 import torch
-from transformers import AutoProcessor, FastVlmForConditionalGeneration
+from transformers_4573 import AutoProcessor, FastVlmForConditionalGeneration
 
 # Load the model in half-precision
 model = FastVlmForConditionalGeneration.from_pretrained("KamilaMila/FastVLM-0.5B", dtype=torch.bfloat16, device_map="auto")
@@ -108,7 +108,7 @@ FastVLM also supports batched inference. Here is how you can do it:
 
 ```python
 import torch
-from transformers import AutoProcessor, FastVlmForConditionalGeneration
+from transformers_4573 import AutoProcessor, FastVlmForConditionalGeneration
 
 # Load the model in half-precision
 model = FastVlmForConditionalGeneration.from_pretrained("KamilaMila/FastVLM-0.5B", dtype=torch.bfloat16, device_map="auto")

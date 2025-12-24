@@ -109,7 +109,7 @@ class BartScaledWordEmbedding(nn.Embedding):
         return super().forward(input_ids) * self.embed_scale
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -1108,7 +1108,7 @@ class BartForConditionalGeneration(BartPreTrainedModel, GenerationMixin):
         Example summarization:
 
         ```python
-        >>> from transformers import AutoTokenizer, BartForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, BartForConditionalGeneration
 
         >>> model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
@@ -1129,7 +1129,7 @@ class BartForConditionalGeneration(BartPreTrainedModel, GenerationMixin):
         Mask filling example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BartForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, BartForConditionalGeneration
 
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/bart-base")
         >>> model = BartForConditionalGeneration.from_pretrained("facebook/bart-base")
@@ -1529,7 +1529,7 @@ class BartForCausalLM(BartPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BartForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, BartForCausalLM
 
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/bart-base")
         >>> model = BartForCausalLM.from_pretrained("facebook/bart-base", add_cross_attention=False)

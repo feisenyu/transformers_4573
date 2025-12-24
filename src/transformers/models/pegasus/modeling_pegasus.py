@@ -52,7 +52,7 @@ from .configuration_pegasus import PegasusConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.bart.modeling_bart.shift_tokens_right
+# Copied from transformers_4573.models.bart.modeling_bart.shift_tokens_right
 def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start_token_id: int):
     """
     Shift input ids one token to the right.
@@ -69,7 +69,7 @@ def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start
     return shifted_input_ids
 
 
-# Copied from transformers.models.marian.modeling_marian.MarianSinusoidalPositionalEmbedding with Marian->Pegasus
+# Copied from transformers_4573.models.marian.modeling_marian.MarianSinusoidalPositionalEmbedding with Marian->Pegasus
 class PegasusSinusoidalPositionalEmbedding(nn.Embedding):
     """This module produces sinusoidal positional embeddings of any length."""
 
@@ -104,7 +104,7 @@ class PegasusSinusoidalPositionalEmbedding(nn.Embedding):
         return super().forward(position_ids)
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -134,7 +134,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.bart.modeling_bart.BartAttention with Bart->Pegasus
+# Copied from transformers_4573.models.bart.modeling_bart.BartAttention with Bart->Pegasus
 class PegasusAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
@@ -260,7 +260,7 @@ class PegasusAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->Pegasus, MBART->PEGASUS
+# Copied from transformers_4573.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->Pegasus, MBART->PEGASUS
 class PegasusEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: PegasusConfig):
         super().__init__()
@@ -320,7 +320,7 @@ class PegasusEncoderLayer(GradientCheckpointingLayer):
         return hidden_states, attn_weights
 
 
-# Copied from transformers.models.mbart.modeling_mbart.MBartDecoderLayer with MBart->Pegasus, MBART->PEGASUS
+# Copied from transformers_4573.models.mbart.modeling_mbart.MBartDecoderLayer with MBart->Pegasus, MBART->PEGASUS
 class PegasusDecoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: PegasusConfig, layer_idx: Optional[int] = None):
         super().__init__()
@@ -971,7 +971,7 @@ class PegasusModel(PegasusPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, PegasusModel
+        >>> from transformers_4573 import AutoTokenizer, PegasusModel
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/pegasus-large")
         >>> model = PegasusModel.from_pretrained("google/pegasus-large")
@@ -1141,7 +1141,7 @@ class PegasusForConditionalGeneration(PegasusPreTrainedModel, GenerationMixin):
         Example Summarization:
 
         ```python
-        >>> from transformers import AutoTokenizer, PegasusForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, PegasusForConditionalGeneration
 
         >>> model = PegasusForConditionalGeneration.from_pretrained("google/pegasus-xsum")
         >>> tokenizer = AutoTokenizer.from_pretrained("google/pegasus-xsum")
@@ -1212,7 +1212,7 @@ class PegasusForConditionalGeneration(PegasusPreTrainedModel, GenerationMixin):
         return shift_tokens_right(labels, self.config.pad_token_id, self.config.decoder_start_token_id)
 
 
-# Copied from transformers.models.bart.modeling_bart.BartDecoderWrapper with Bart->Pegasus
+# Copied from transformers_4573.models.bart.modeling_bart.BartDecoderWrapper with Bart->Pegasus
 class PegasusDecoderWrapper(PegasusPreTrainedModel):
     """
     This wrapper class is a helper class to correctly load pretrained checkpoints when the causal language model is
@@ -1274,7 +1274,7 @@ class PegasusForCausalLM(PegasusPreTrainedModel, GenerationMixin):
         self.model.decoder.resize_position_embeddings(new_num_position_embeddings)
 
     @auto_docstring
-    # Copied from transformers.models.bart.modeling_bart.BartForCausalLM.forward with Bart->Pegasus, facebook/bart-base->google/pegasus-large
+    # Copied from transformers_4573.models.bart.modeling_bart.BartForCausalLM.forward with Bart->Pegasus, facebook/bart-base->google/pegasus-large
     def forward(
         self,
         input_ids: Optional[torch.LongTensor] = None,
@@ -1301,7 +1301,7 @@ class PegasusForCausalLM(PegasusPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, PegasusForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, PegasusForCausalLM
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/pegasus-large")
         >>> model = PegasusForCausalLM.from_pretrained("google/pegasus-large", add_cross_attention=False)

@@ -35,7 +35,7 @@ rendered properly in your Markdown viewer.
 1. 먼저 [`pipeline`]을 생성하고 태스크를 지정하세요.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline(task="automatic-speech-recognition")
 ```
@@ -170,7 +170,7 @@ for out in pipe(data()):
 
 ```py
 # KeyDataset is a util that will just output the item we're interested in.
-from transformers.pipelines.pt_utils import KeyDataset
+from transformers_4573.pipelines.pt_utils import KeyDataset
 
 pipe = pipeline(model="hf-internal-testing/tiny-random-wav2vec2", device=0)
 dataset = load_dataset("hf-internal-testing/librispeech_asr_dummy", "clean", split="validation[:10]")
@@ -197,7 +197,7 @@ for out in pipe(KeyDataset(dataset["audio"])):
 ![pipeline-cat-chonk](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg)
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vision_classifier = pipeline(model="google/vit-base-patch16-224")
 >>> preds = vision_classifier(
@@ -213,7 +213,7 @@ for out in pipe(KeyDataset(dataset["audio"])):
 NLP 태스크를 위해 [`pipeline`]을 사용하는 일도 거의 동일합니다.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> # This model is a `zero-shot-classification` model.
 >>> # It will classify text, except you are free to choose any label you might imagine
@@ -232,7 +232,7 @@ NLP 태스크를 위해 [`pipeline`]을 사용하는 일도 거의 동일합니�
 예를 들어 이 [거래명세서 사진](https://huggingface.co/spaces/impira/docquery/resolve/2359223c1837a7587402bda0f2643382a6eefeab/invoice.png)에서 거래명세서 번호를 묻고 싶다면,
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> vqa = pipeline(model="impira/layoutlm-document-qa")
 >>> vqa(

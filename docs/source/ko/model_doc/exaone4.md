@@ -61,7 +61,7 @@ EXAONE 4.0의 모델 구조는 이전 EXAONE 모델들과 다른 아키텍처 �
 일반적인 대화의 경우 아래 예제와 같이 EXAONE 4.0을 사용할 수 있습니다.
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "LGAI-EXAONE/EXAONE-4.0-32B"
 

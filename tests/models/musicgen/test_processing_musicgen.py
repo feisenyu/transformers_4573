@@ -20,13 +20,13 @@ import unittest
 
 import numpy as np
 
-from transformers import T5Tokenizer, T5TokenizerFast
-from transformers.testing_utils import require_sentencepiece, require_torch
-from transformers.utils.import_utils import is_speech_available
+from transformers_4573 import T5Tokenizer, T5TokenizerFast
+from transformers_4573.testing_utils import require_sentencepiece, require_torch
+from transformers_4573.utils.import_utils import is_speech_available
 
 
 if is_speech_available():
-    from transformers import EncodecFeatureExtractor, MusicgenProcessor
+    from transformers_4573 import EncodecFeatureExtractor, MusicgenProcessor
 
 
 global_rng = random.Random()

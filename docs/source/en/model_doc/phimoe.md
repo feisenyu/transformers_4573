@@ -63,7 +63,7 @@ transformers==4.43.0
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline 
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, pipeline 
 
 torch.random.manual_seed(0) 
 

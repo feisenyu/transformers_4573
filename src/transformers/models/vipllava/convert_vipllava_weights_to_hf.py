@@ -16,7 +16,7 @@ import argparse
 import torch
 from huggingface_hub import hf_hub_download
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     AutoConfig,
     AutoTokenizer,
@@ -42,7 +42,7 @@ KEYS_TO_MODIFY_MAPPING = {
 }
 
 
-# Copied from transformers.models.llava.convert_llava_weights_to_hf.convert_state_dict_to_hf
+# Copied from transformers_4573.models.llava.convert_llava_weights_to_hf.convert_state_dict_to_hf
 def convert_state_dict_to_hf(state_dict):
     new_state_dict = {}
     for key, value in state_dict.items():

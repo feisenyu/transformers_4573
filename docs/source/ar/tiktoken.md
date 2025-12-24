@@ -13,7 +13,7 @@
 يمكن تحميله من نفس الملف بالضبط:
 
 ```py
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 
 model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_id, subfolder="original")
@@ -26,7 +26,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id, subfolder="original")
 
 ```py
 
-from transformers.integrations.tiktoken import convert_tiktoken_to_fast
+from transformers_4573.integrations.tiktoken import convert_tiktoken_to_fast
 from tiktoken import get_encoding
 
 # يمكنك تحميل ترميزك المخصص أو الترميز الذي توفره OpenAI

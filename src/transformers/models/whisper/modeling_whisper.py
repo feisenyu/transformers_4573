@@ -64,7 +64,7 @@ def sinusoids(length: int, channels: int, max_timescale: float = 10000) -> torch
     return torch.cat([scaled_time.sin(), scaled_time.cos()], dim=1)
 
 
-# Copied from transformers.models.bart.modeling_bart.shift_tokens_right
+# Copied from transformers_4573.models.bart.modeling_bart.shift_tokens_right
 def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start_token_id: int):
     """
     Shift input ids one token to the right.
@@ -81,7 +81,7 @@ def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start
     return shifted_input_ids
 
 
-# Copied from transformers.models.wav2vec2.modeling_wav2vec2._compute_mask_indices
+# Copied from transformers_4573.models.wav2vec2.modeling_wav2vec2._compute_mask_indices
 def _compute_mask_indices(
     shape: tuple[int, int],
     mask_prob: float,
@@ -362,7 +362,7 @@ class WhisperAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->Whisper, MBART->WHISPER
+# Copied from transformers_4573.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->Whisper, MBART->WHISPER
 class WhisperEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: WhisperConfig):
         super().__init__()
@@ -1015,7 +1015,7 @@ class WhisperModel(WhisperPreTrainedModel):
         Example:
          ```python
          >>> import torch
-         >>> from transformers import AutoFeatureExtractor, WhisperModel
+         >>> from transformers_4573 import AutoFeatureExtractor, WhisperModel
          >>> from datasets import load_dataset
 
          >>> model = WhisperModel.from_pretrained("openai/whisper-base")
@@ -1168,7 +1168,7 @@ class WhisperForConditionalGeneration(WhisperGenerationMixin, WhisperPreTrainedM
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, WhisperForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, WhisperForConditionalGeneration
         >>> from datasets import load_dataset
 
         >>> processor = AutoProcessor.from_pretrained("openai/whisper-tiny.en")
@@ -1319,7 +1319,7 @@ class WhisperForCausalLM(WhisperPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import WhisperForCausalLM, WhisperForConditionalGeneration, WhisperProcessor
+        >>> from transformers_4573 import WhisperForCausalLM, WhisperForConditionalGeneration, WhisperProcessor
         >>> import torch
         >>> from datasets import load_dataset
 
@@ -1441,7 +1441,7 @@ class WhisperForAudioClassification(WhisperPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoFeatureExtractor, WhisperForAudioClassification
+        >>> from transformers_4573 import AutoFeatureExtractor, WhisperForAudioClassification
         >>> from datasets import load_dataset
 
         >>> feature_extractor = AutoFeatureExtractor.from_pretrained("sanchit-gandhi/whisper-medium-fleurs-lang-id")

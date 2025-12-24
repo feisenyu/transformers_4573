@@ -44,7 +44,7 @@ Other models from the family can be found at [Ernie 4.5 Moe](./ernie4_5_moe) and
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "baidu/ERNIE-4.5-0.3B-PT"
 

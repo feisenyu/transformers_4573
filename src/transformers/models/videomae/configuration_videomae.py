@@ -79,7 +79,7 @@ class VideoMAEConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import VideoMAEConfig, VideoMAEModel
+    >>> from transformers_4573 import VideoMAEConfig, VideoMAEModel
 
     >>> # Initializing a VideoMAE videomae-base style configuration
     >>> configuration = VideoMAEConfig()

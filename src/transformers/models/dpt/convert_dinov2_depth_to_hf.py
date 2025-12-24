@@ -25,8 +25,8 @@ import torch
 from PIL import Image
 from torchvision import transforms
 
-from transformers import Dinov2Config, DPTConfig, DPTForDepthEstimation, DPTImageProcessor
-from transformers.utils import logging
+from transformers_4573 import Dinov2Config, DPTConfig, DPTForDepthEstimation, DPTImageProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

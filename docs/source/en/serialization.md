@@ -72,7 +72,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 The `model.onnx` file can be deployed with any [accelerator](https://onnx.ai/supported-tools.html#deployModel) that supports ONNX. The example below demonstrates loading and running a model with ONNX Runtime.
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> from optimum.onnxruntime import ORTModelForQuestionAnswering
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert_base_uncased_squad_onnx")
@@ -87,7 +87,7 @@ The `optimum.onnxruntime` module supports programmatically exporting a Transform
 
 ```python
 >>> from optimum.onnxruntime import ORTModelForSequenceClassification
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> model_checkpoint = "distilbert/distilbert-base-uncased-distilled-squad"
 >>> save_directory = "onnx/"

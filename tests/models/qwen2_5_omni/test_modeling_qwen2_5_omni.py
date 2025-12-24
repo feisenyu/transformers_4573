@@ -24,7 +24,7 @@ import librosa
 import pytest
 import requests
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     Qwen2_5OmniForConditionalGeneration,
     Qwen2_5OmniThinkerConfig,
@@ -32,7 +32,7 @@ from transformers import (
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_flash_attn,

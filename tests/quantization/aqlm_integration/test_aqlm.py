@@ -21,8 +21,8 @@ from unittest import skip
 import pytest
 from packaging import version
 
-from transformers import AqlmConfig, AutoConfig, AutoModelForCausalLM, AutoTokenizer, OPTForCausalLM, StaticCache
-from transformers.testing_utils import (
+from transformers_4573 import AqlmConfig, AutoConfig, AutoModelForCausalLM, AutoTokenizer, OPTForCausalLM, StaticCache
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_accelerate,
     require_aqlm,
@@ -31,7 +31,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_aqlm_available, is_torch_available
+from transformers_4573.utils import is_aqlm_available, is_torch_available
 
 
 if is_torch_available():
@@ -103,7 +103,7 @@ class AqlmTest(unittest.TestCase):
         """
         from aqlm import QuantizedLinear
 
-        from transformers.integrations import replace_with_aqlm_linear
+        from transformers_4573.integrations import replace_with_aqlm_linear
 
         model_id = "facebook/opt-350m"
         config = AutoConfig.from_pretrained(model_id, revision="cb32f77e905cccbca1d970436fb0f5e6b58ee3c5")

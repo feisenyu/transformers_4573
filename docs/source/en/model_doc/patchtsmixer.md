@@ -41,8 +41,8 @@ The code snippet below shows how to randomly initialize a PatchTSMixer model. Th
 
 ```python
 
-from transformers import PatchTSMixerConfig, PatchTSMixerForPrediction
-from transformers import Trainer, TrainingArguments,
+from transformers_4573 import PatchTSMixerConfig, PatchTSMixerForPrediction
+from transformers_4573 import Trainer, TrainingArguments,
 
 
 config = PatchTSMixerConfig(context_length = 512, prediction_length = 96)

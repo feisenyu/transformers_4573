@@ -68,7 +68,7 @@ Chameleon is a gated model so make sure to have access and login to Hugging Face
 Here's how to load the model and perform inference in half-precision (`torch.bfloat16`):
 
 ```python
-from transformers import ChameleonProcessor, ChameleonForConditionalGeneration
+from transformers_4573 import ChameleonProcessor, ChameleonForConditionalGeneration
 import torch
 from PIL import Image
 import requests
@@ -93,7 +93,7 @@ print(processor.decode(output[0], skip_special_tokens=True))
 Chameleon can perform inference with multiple images as input, where images either belong to the same prompt or different prompts (in batched inference). Here is how you can do it:
 
 ```python
-from transformers import ChameleonProcessor, ChameleonForConditionalGeneration
+from transformers_4573 import ChameleonProcessor, ChameleonForConditionalGeneration
 import torch
 from PIL import Image
 import requests
@@ -144,7 +144,7 @@ We value your feedback to help identify bugs before the full release! Check out 
 Simply change the snippet above with:
 
 ```python
-from transformers import ChameleonForConditionalGeneration, BitsAndBytesConfig
+from transformers_4573 import ChameleonForConditionalGeneration, BitsAndBytesConfig
 
 # specify how to quantize the model
 quantization_config = BitsAndBytesConfig(
@@ -161,7 +161,7 @@ model = ChameleonForConditionalGeneration.from_pretrained("facebook/chameleon-7b
 The models supports both, Flash-Attention 2 and PyTorch's [`torch.nn.functional.scaled_dot_product_attention`](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention.html) which can be enables for optimization. SDPA is the default options when you load the model, If you want to switch for Flash Attention 2, first make sure to install flash-attn. Refer to the [original repository](https://github.com/Dao-AILab/flash-attention) regarding that package installation. Simply change the snippet above with:
 
 ```python
-from transformers import ChameleonForConditionalGeneration
+from transformers_4573 import ChameleonForConditionalGeneration
 
 model_id = "facebook/chameleon-7b"
 model = ChameleonForConditionalGeneration.from_pretrained(

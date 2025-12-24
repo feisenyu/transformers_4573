@@ -57,7 +57,7 @@ Example of how to use the processor on chat messages:
 ```python
 import requests
 from PIL import Image
-from transformers import Idefics2Processor, Idefics2ForConditionalGeneration
+from transformers_4573 import Idefics2Processor, Idefics2ForConditionalGeneration
 from accelerate import Accelerator
 import torch
 
@@ -100,7 +100,7 @@ print("Generated text:", generated_text)
 ```python
 import requests
 from PIL import Image
-from transformers import Idefics2Processor, Idefics2ForConditionalGeneration
+from transformers_4573 import Idefics2Processor, Idefics2ForConditionalGeneration
 from accelerate import Accelerator
 import torch
 
@@ -177,7 +177,7 @@ As the Idefics2 model has 8 billion parameters, that would require about 16GB of
 Quantizing a model is as simple as passing a `quantization_config` to the model. One can change the code snippet above with the changes below. We'll leverage the BitsAndyBytes quantization (but refer to [this page](../quantization) for other quantization methods):
 
 ```diff
-+ from transformers import BitsAndBytesConfig
++ from transformers_4573 import BitsAndBytesConfig
 
 + quantization_config = BitsAndBytesConfig(
 +    load_in_4bit=True,

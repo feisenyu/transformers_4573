@@ -750,7 +750,7 @@ class GraniteMoeSharedForCausalLM(GraniteMoeSharedPreTrainedModel, GenerationMix
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, GraniteMoeSharedForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, GraniteMoeSharedForCausalLM
 
         >>> model = GraniteMoeSharedForCausalLM.from_pretrained("ibm/PowerMoE-3b")
         >>> tokenizer = AutoTokenizer.from_pretrained("ibm/PowerMoE-3b")

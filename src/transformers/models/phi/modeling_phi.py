@@ -493,7 +493,7 @@ class PhiForCausalLM(PhiPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, PhiForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, PhiForCausalLM
 
         >>> model = PhiForCausalLM.from_pretrained("meta-phi/Phi-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-phi/Phi-2-7b-hf")

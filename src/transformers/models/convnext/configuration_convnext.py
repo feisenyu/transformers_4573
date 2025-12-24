@@ -67,7 +67,7 @@ class ConvNextConfig(BackboneConfigMixin, PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import ConvNextConfig, ConvNextModel
+    >>> from transformers_4573 import ConvNextConfig, ConvNextModel
 
     >>> # Initializing a ConvNext convnext-tiny-224 style configuration
     >>> configuration = ConvNextConfig()

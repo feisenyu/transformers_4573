@@ -25,8 +25,8 @@ from nemo.collections.nlp.parts.nlp_overrides import NLPDDPStrategy
 from nemo.utils import logging
 from pytorch_lightning import Trainer
 
-from transformers import LlamaTokenizer, PreTrainedTokenizerFast
-from transformers.convert_slow_tokenizer import LlamaConverter
+from transformers_4573 import LlamaTokenizer, PreTrainedTokenizerFast
+from transformers_4573.convert_slow_tokenizer import LlamaConverter
 
 
 """

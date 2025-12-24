@@ -14,7 +14,7 @@
 import os
 import tempfile
 
-from transformers.testing_utils import require_torch
+from transformers_4573.testing_utils import require_torch
 
 
 @require_torch

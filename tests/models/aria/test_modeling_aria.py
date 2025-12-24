@@ -17,7 +17,7 @@ import unittest
 
 import requests
 
-from transformers import (
+from transformers_4573 import (
     AriaConfig,
     AriaForConditionalGeneration,
     AriaModel,
@@ -28,8 +28,8 @@ from transformers import (
     is_torch_available,
     is_vision_available,
 )
-from transformers.models.idefics3 import Idefics3VisionConfig
-from transformers.testing_utils import (
+from transformers_4573.models.idefics3 import Idefics3VisionConfig
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_bitsandbytes,

@@ -125,7 +125,7 @@ class DogeConfig(PreTrainedConfig):
             The aux loss factor for the total loss.
 
     ```python
-    >>> from transformers import DogeConfig, DogeModel
+    >>> from transformers_4573 import DogeConfig, DogeModel
 
     >>> # Initializing a Doge-320M style configuration
     >>> configuration = DogeConfig()
@@ -681,7 +681,7 @@ class DogeForCausalLM(MixtralForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, DogeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, DogeForCausalLM
 
         >>> model = DogeForCausalLM.from_pretrained("SmallDoge/Doge-320M")
         >>> tokenizer = AutoTokenizer.from_pretrained("SmallDoge/Doge-320M")

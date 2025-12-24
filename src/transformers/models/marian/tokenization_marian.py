@@ -90,7 +90,7 @@ class MarianTokenizer(PreTrainedTokenizer):
     Examples:
 
     ```python
-    >>> from transformers import MarianForCausalLM, MarianTokenizer
+    >>> from transformers_4573 import MarianForCausalLM, MarianTokenizer
 
     >>> model = MarianForCausalLM.from_pretrained("Helsinki-NLP/opus-mt-en-de")
     >>> tokenizer = MarianTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-de")

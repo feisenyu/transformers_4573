@@ -46,7 +46,7 @@ class NllbTokenizer(TokenizersBackend):
     Examples:
 
     ```python
-    >>> from transformers import NllbTokenizer
+    >>> from transformers_4573 import NllbTokenizer
 
     >>> tokenizer = NllbTokenizer.from_pretrained(
     ...     "facebook/nllb-200-distilled-600M", src_lang="eng_Latn", tgt_lang="fra_Latn"

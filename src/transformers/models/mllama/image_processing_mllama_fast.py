@@ -178,7 +178,7 @@ def convert_aspect_ratios_to_ids(aspect_ratios: list[list[tuple[int, int]]], max
     return aspect_ratios_ids
 
 
-# Copied from transformers.models.idefics2.image_processing_idefics2.convert_to_rgb
+# Copied from transformers_4573.models.idefics2.image_processing_idefics2.convert_to_rgb
 def convert_to_rgb(image: ImageInput) -> ImageInput:
     """
     Converts an image to RGB format. Only converts if the image is of type PIL.Image.Image, otherwise returns the image

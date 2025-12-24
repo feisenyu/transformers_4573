@@ -131,7 +131,7 @@ class DeformableDetrConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import DeformableDetrConfig, DeformableDetrModel
+    >>> from transformers_4573 import DeformableDetrConfig, DeformableDetrModel
 
     >>> # Initializing a Deformable DETR SenseTime/deformable-detr style configuration
     >>> configuration = DeformableDetrConfig()

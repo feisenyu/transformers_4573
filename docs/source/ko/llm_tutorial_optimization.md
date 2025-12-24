@@ -64,7 +64,7 @@ GPT3/4, [Falcon](https://huggingface.co/tiiuae/falcon-40b), [Llama](https://hugg
 !pip install transformers accelerate bitsandbytes optimum
 ```
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("bigscience/bloom", device_map="auto", pad_token_id=0)
 ```
@@ -78,7 +78,7 @@ model = AutoModelForCausalLM.from_pretrained("bigscience/bloom", device_map="aut
 먼저 모델과 토크나이저를 로드한 다음, 둘 다 Transformers의 [파이프라인](https://huggingface.co/docs/transformers/main_classes/pipelines) 객체에 전달합니다.
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, pipeline
 import torch
 
 model = AutoModelForCausalLM.from_pretrained("bigcode/octocoder", dtype=torch.bfloat16, device_map="auto", pad_token_id=0)

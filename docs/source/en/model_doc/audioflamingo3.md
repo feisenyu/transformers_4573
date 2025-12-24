@@ -54,7 +54,7 @@ The model supports audio-text instructions, including multi-turn interactions, a
 ➡️ audio + text instruction
 
 ```python
-from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
 model_id = "nvidia/audio-flamingo-3-hf"
 processor = AutoProcessor.from_pretrained(model_id)
@@ -86,7 +86,7 @@ print(decoded_outputs)
 ➡️ multi-turn:
 
 ```python
-from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
 model_id = "nvidia/audio-flamingo-3-hf"
 processor = AutoProcessor.from_pretrained(model_id)
@@ -131,7 +131,7 @@ print(decoded_outputs)
 ➡️ text only:
 
 ```python
-from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
 model_id = "nvidia/audio-flamingo-3-hf"
 processor = AutoProcessor.from_pretrained(model_id)
@@ -162,7 +162,7 @@ print(decoded_outputs)
 ➡️ audio only:
 
 ```python
-from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
 model_id = "nvidia/audio-flamingo-3-hf"
 processor = AutoProcessor.from_pretrained(model_id)
@@ -193,7 +193,7 @@ print(decoded_outputs)
 ➡️ batched inference!
 
 ```python
-from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
 model_id = "nvidia/audio-flamingo-3-hf"
 processor = AutoProcessor.from_pretrained(model_id)
@@ -242,7 +242,7 @@ print(decoded_outputs)
 ➡️ Training:
 
 ```python
-from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
 model_id = "nvidia/audio-flamingo-3-hf"
 processor = AutoProcessor.from_pretrained(model_id)
@@ -297,7 +297,7 @@ loss.backward()
 ➡️ transcription shortcut
 
 ```python
-from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
 model_id = "nvidia/audio-flamingo-3-hf"
 processor = AutoProcessor.from_pretrained(model_id)

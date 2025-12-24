@@ -14,8 +14,8 @@
 import json
 import unittest
 
-from transformers import AutoTokenizer, LlavaProcessor
-from transformers.testing_utils import require_vision
+from transformers_4573 import AutoTokenizer, LlavaProcessor
+from transformers_4573.testing_utils import require_vision
 
 from ...test_processing_common import ProcessorTesterMixin
 

@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import FunnelTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573 import FunnelTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

@@ -18,8 +18,8 @@ import os
 import unittest
 from functools import cached_property
 
-from transformers.models.fsmt.tokenization_fsmt import VOCAB_FILES_NAMES, FSMTTokenizer
-from transformers.testing_utils import slow
+from transformers_4573.models.fsmt.tokenization_fsmt import VOCAB_FILES_NAMES, FSMTTokenizer
+from transformers_4573.testing_utils import slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

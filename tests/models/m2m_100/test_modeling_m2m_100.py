@@ -20,8 +20,8 @@ from functools import cached_property
 
 import pytest
 
-from transformers import M2M100Config, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import M2M100Config, is_torch_available
+from transformers_4573.testing_utils import (
     require_flash_attn,
     require_sentencepiece,
     require_tokenizers,
@@ -41,8 +41,8 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import M2M100ForConditionalGeneration, M2M100Model, M2M100Tokenizer
-    from transformers.models.m2m_100.modeling_m2m_100 import M2M100Decoder, M2M100Encoder
+    from transformers_4573 import M2M100ForConditionalGeneration, M2M100Model, M2M100Tokenizer
+    from transformers_4573.models.m2m_100.modeling_m2m_100 import M2M100Decoder, M2M100Encoder
 
 
 def prepare_m2m_100_inputs_dict(

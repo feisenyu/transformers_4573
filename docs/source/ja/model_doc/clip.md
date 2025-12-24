@@ -63,7 +63,7 @@ CLIP は、マルチモーダルなビジョンおよび言語モデルです。
 >>> from PIL import Image
 >>> import requests
 
->>> from transformers import CLIPProcessor, CLIPModel
+>>> from transformers_4573 import CLIPProcessor, CLIPModel
 
 >>> model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 >>> processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")

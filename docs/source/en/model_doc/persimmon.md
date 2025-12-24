@@ -70,7 +70,7 @@ tar -xvf 8b_base_model_release.tar
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import PersimmonForCausalLM, PersimmonTokenizer
+from transformers_4573 import PersimmonForCausalLM, PersimmonTokenizer
 
 model = PersimmonForCausalLM.from_pretrained("/output/path")
 tokenizer = PersimmonTokenizer.from_pretrained("/output/path")

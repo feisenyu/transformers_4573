@@ -2,7 +2,7 @@ from typing import Optional, Union
 
 import torch
 
-from transformers.models.detr.image_processing_detr_fast import DetrImageProcessorFast
+from transformers_4573.models.detr.image_processing_detr_fast import DetrImageProcessorFast
 
 from ...image_transforms import center_to_corners_format
 from ...utils import (

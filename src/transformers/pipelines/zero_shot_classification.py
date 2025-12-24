@@ -56,7 +56,7 @@ class ZeroShotClassificationPipeline(ChunkPipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> oracle = pipeline(model="facebook/bart-large-mnli")
     >>> oracle(

@@ -18,8 +18,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -28,10 +28,10 @@ if is_torch_available():
     import torch
 
 if is_vision_available():
-    from transformers import ZoeDepthImageProcessor
+    from transformers_4573 import ZoeDepthImageProcessor
 
     if is_torchvision_available():
-        from transformers import ZoeDepthImageProcessorFast
+        from transformers_4573 import ZoeDepthImageProcessorFast
 
 
 @dataclass

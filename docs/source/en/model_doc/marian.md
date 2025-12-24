@@ -44,7 +44,7 @@ The example below demonstrates how to translate text using [`Pipeline`] or the [
 ```python
 
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline("translation_en_to_de", model="Helsinki-NLP/opus-mt-en-de", dtype=torch.float16, device=0)
 pipeline("Hello, how are you?")
@@ -58,7 +58,7 @@ pipeline("Hello, how are you?")
 ```python
 
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-de")
 model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-de", dtype=torch.float16, attn_implementation="sdpa", device_map="auto")
@@ -75,7 +75,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 Use the [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139) to better understand what tokens the model can and cannot attend to.
 
 ```python
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("Helsinki-NLP/opus-mt-en-de")
 visualizer("Hello, how are you?")
@@ -94,7 +94,7 @@ visualizer("Hello, how are you?")
 
 ```python
 
-from transformers import MarianMTModel, MarianTokenizer
+from transformers_4573 import MarianMTModel, MarianTokenizer
 
 # Model trained on multiple source languages → multiple target languages
 # Example: multilingual to Arabic (arb)
@@ -119,7 +119,7 @@ print(translated_texts[0])
 
 ```python
 
-from transformers import MarianMTModel, MarianTokenizer
+from transformers_4573 import MarianMTModel, MarianTokenizer
 
 # Example: older multilingual model (like en → many)
 model_name = "Helsinki-NLP/opus-mt-en-ROMANCE"  # English → French, Spanish, Italian, etc.

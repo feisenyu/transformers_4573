@@ -45,7 +45,7 @@ alt="drawing" width="600"/>
 ```python
 
 import torch
-from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor
+from transformers_4573 import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor
 
 # 사용 가능한 장치에서 모델을 반 정밀도(half-precision)로 로드
 model = Qwen2VLForConditionalGeneration.from_pretrained("Qwen/Qwen2-VL-7B-Instruct", device_map="auto")
@@ -265,7 +265,7 @@ pip install -U flash-attn --no-build-isolation
 Flash Attention-2를 사용하여 모델을 로드하고 실행하려면, 다음과 같이 모델을 로드할 때 `attn_implementation="flash_attention_2"` 옵션을 추가하면 됩니다:
 
 ```python
-from transformers import Qwen2VLForConditionalGeneration
+from transformers_4573 import Qwen2VLForConditionalGeneration
 
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-7B-Instruct", 

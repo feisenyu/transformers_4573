@@ -34,7 +34,7 @@ TODO
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("automatic-speech-recognition", model="path/to/lasr-model")
 out = pipe("path/to/audio.mp3")
@@ -45,7 +45,7 @@ print(out)
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoModelForCTC, AutoProcessor
+from transformers_4573 import AutoModelForCTC, AutoProcessor
 from datasets import load_dataset, Audio
 import torch
 

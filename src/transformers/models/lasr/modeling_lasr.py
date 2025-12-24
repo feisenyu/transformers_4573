@@ -500,7 +500,7 @@ class LasrEncoder(LasrPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, LasrEncoder
+        >>> from transformers_4573 import AutoProcessor, LasrEncoder
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = TODO
@@ -612,7 +612,7 @@ class LasrForCTC(LasrPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, LasrForCTC
+        >>> from transformers_4573 import AutoProcessor, LasrForCTC
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = "nvidia/lasr-ctc-1.1b"
@@ -684,7 +684,7 @@ class LasrForCTC(LasrPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, LasrForCTC
+        >>> from transformers_4573 import AutoProcessor, LasrForCTC
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = TODO

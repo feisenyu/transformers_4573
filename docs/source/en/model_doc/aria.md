@@ -39,7 +39,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     "image-to-text",
@@ -58,7 +58,7 @@ pipeline(
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoProcessor
+from transformers_4573 import AutoModelForCausalLM, AutoProcessor
 
 model = AutoModelForCausalLM.from_pretrained(
     "rhymes-ai/Aria",
@@ -104,7 +104,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 ```py
 # pip install torchao
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoProcessor
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoProcessor
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 model = AutoModelForCausalLM.from_pretrained(

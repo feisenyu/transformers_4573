@@ -54,7 +54,7 @@ The original code can be found [here](https://github.com/baaivision/Emu3).
 Here's how to load the model and perform inference in half-precision (`torch.bfloat16`) to generate textual output from text or text and image inputs:
 
 ```python
-from transformers import Emu3Processor, Emu3ForConditionalGeneration
+from transformers_4573 import Emu3Processor, Emu3ForConditionalGeneration
 import torch
 from PIL import Image
 import requests

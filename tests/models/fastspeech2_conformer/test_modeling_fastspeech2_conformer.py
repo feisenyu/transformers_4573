@@ -17,14 +17,14 @@ import inspect
 import tempfile
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     FastSpeech2ConformerConfig,
     FastSpeech2ConformerHifiGanConfig,
     FastSpeech2ConformerTokenizer,
     FastSpeech2ConformerWithHifiGanConfig,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     require_g2p_en,
     require_torch,
@@ -39,7 +39,7 @@ from ...test_modeling_common import ModelTesterMixin, ids_tensor
 if is_torch_available():
     import torch
 
-    from transformers import FastSpeech2ConformerModel, FastSpeech2ConformerWithHifiGan, set_seed
+    from transformers_4573 import FastSpeech2ConformerModel, FastSpeech2ConformerWithHifiGan, set_seed
 
 
 class FastSpeech2ConformerModelTester:

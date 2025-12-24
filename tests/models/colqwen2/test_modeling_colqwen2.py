@@ -23,11 +23,11 @@ from datasets import load_dataset
 
 from tests.test_configuration_common import ConfigTester
 from tests.test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor
-from transformers import BitsAndBytesConfig, is_torch_available
-from transformers.models.colqwen2.configuration_colqwen2 import ColQwen2Config
-from transformers.models.colqwen2.modeling_colqwen2 import ColQwen2ForRetrieval, ColQwen2ForRetrievalOutput
-from transformers.models.colqwen2.processing_colqwen2 import ColQwen2Processor
-from transformers.testing_utils import (
+from transformers_4573 import BitsAndBytesConfig, is_torch_available
+from transformers_4573.models.colqwen2.configuration_colqwen2 import ColQwen2Config
+from transformers_4573.models.colqwen2.modeling_colqwen2 import ColQwen2ForRetrieval, ColQwen2ForRetrievalOutput
+from transformers_4573.models.colqwen2.processing_colqwen2 import ColQwen2Processor
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_bitsandbytes,

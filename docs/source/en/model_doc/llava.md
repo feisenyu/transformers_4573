@@ -66,7 +66,7 @@ Here's an example of how to structure your input.
 We will use [llava-hf/llava-1.5-7b-hf](https://huggingface.co/llava-hf/llava-1.5-7b-hf) and a conversation history of text and image. Each content field has to be a list of dicts, as follows:
 
 ```python
-from transformers import AutoProcessor
+from transformers_4573 import AutoProcessor
 
 processor = AutoProcessor.from_pretrained("llava-hf/llava-1.5-7b-hf")
 
@@ -132,7 +132,7 @@ For multiple turns conversation:
 
 ```python
 import torch
-from transformers import AutoProcessor, LlavaForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaForConditionalGeneration
 
 # Load the model in half-precision
 model = LlavaForConditionalGeneration.from_pretrained("llava-hf/llava-1.5-7b-hf", dtype=torch.float16, device_map="auto")
@@ -167,7 +167,7 @@ LLaVa also supports batched inference. Here is how you can do it:
 
 ```python
 import torch
-from transformers import AutoProcessor, LlavaForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaForConditionalGeneration
 
 # Load the model in half-precision
 model = LlavaForConditionalGeneration.from_pretrained("llava-hf/llava-1.5-7b-hf", dtype=torch.float16, device_map="auto")
@@ -215,7 +215,7 @@ processor.batch_decode(generate_ids, skip_special_tokens=True)
 In order to match the logits of the [original implementation](https://github.com/haotian-liu/LLaVA/tree/main), one needs to additionally specify `do_pad=True` when instantiating `LlavaImageProcessor`:
 
 ```python
-from transformers import LlavaImageProcessor
+from transformers_4573 import LlavaImageProcessor
 
 image_processor = LlavaImageProcessor.from_pretrained("llava-hf/llava-1.5-7b-hf", do_pad=True)
 ```

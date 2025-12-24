@@ -22,7 +22,7 @@ import unittest
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     MarkupLMTokenizerFast,
     PreTrainedTokenizerBase,
@@ -30,8 +30,8 @@ from transformers import (
     is_torch_available,
     logging,
 )
-from transformers.models.markuplm.tokenization_markuplm import VOCAB_FILES_NAMES, MarkupLMTokenizer
-from transformers.testing_utils import require_tokenizers, slow
+from transformers_4573.models.markuplm.tokenization_markuplm import VOCAB_FILES_NAMES, MarkupLMTokenizer
+from transformers_4573.testing_utils import require_tokenizers, slow
 
 from ...test_tokenization_common import SMALL_TRAINING_CORPUS, TokenizersExtractor, TokenizerTesterMixin
 

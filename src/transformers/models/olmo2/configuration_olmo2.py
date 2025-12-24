@@ -89,7 +89,7 @@ class Olmo2Config(PreTrainedConfig):
             The epsilon used by the rms normalization layers.
 
     ```python
-    >>> from transformers import Olmo2Model, Olmo2Config
+    >>> from transformers_4573 import Olmo2Model, Olmo2Config
 
     >>> # Initializing a Olmo2 7B style configuration
     >>> configuration = Olmo2Config()

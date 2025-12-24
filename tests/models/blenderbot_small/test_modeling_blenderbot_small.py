@@ -17,8 +17,8 @@ import tempfile
 import unittest
 from functools import cached_property
 
-from transformers import BlenderbotSmallConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import BlenderbotSmallConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_fp16,
     slow,
@@ -34,8 +34,8 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import BlenderbotSmallForConditionalGeneration, BlenderbotSmallModel, BlenderbotSmallTokenizer
-    from transformers.models.blenderbot_small.modeling_blenderbot_small import (
+    from transformers_4573 import BlenderbotSmallForConditionalGeneration, BlenderbotSmallModel, BlenderbotSmallTokenizer
+    from transformers_4573.models.blenderbot_small.modeling_blenderbot_small import (
         BlenderbotSmallDecoder,
         BlenderbotSmallEncoder,
         BlenderbotSmallForCausalLM,

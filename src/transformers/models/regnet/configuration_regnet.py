@@ -52,7 +52,7 @@ class RegNetConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import RegNetConfig, RegNetModel
+    >>> from transformers_4573 import RegNetConfig, RegNetModel
 
     >>> # Initializing a RegNet regnet-y-40 style configuration
     >>> configuration = RegNetConfig()

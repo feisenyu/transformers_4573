@@ -15,18 +15,18 @@ import unittest
 
 import numpy as np
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_torch,
     require_torchvision,
     require_vision,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_vision_available():
-    from transformers import Sam2Processor
+    from transformers_4573 import Sam2Processor
 
 if is_torch_available():
     import torch

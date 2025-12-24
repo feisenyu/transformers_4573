@@ -57,7 +57,7 @@ image_processor = SmolVLMImageProcessor(do_resize=True, size={"longest_edge": 2 
 
 ```python
 import torch
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
 processor = AutoProcessor.from_pretrained("HuggingFaceTB/SmolVLM2-256M-Video-Instruct")
 model = AutoModelForImageTextToText.from_pretrained(
@@ -119,7 +119,7 @@ print(generated_texts[0])
 
 ```python
 import torch
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
 processor = AutoProcessor.from_pretrained("HuggingFaceTB/SmolVLM2-256M-Video-Instruct")
 model = AutoModelForImageTextToText.from_pretrained(

@@ -120,7 +120,7 @@ class Zamba2Config(PreTrainedConfig):
         use_long_context (`bool`, *optional*, defaults to `False`):
             Activates the context-extended version of Zamba by modifying RoPE.
     ```python
-    >>> from transformers import Zamba2Model, Zamba2Config
+    >>> from transformers_4573 import Zamba2Model, Zamba2Config
     >>> # Initializing a Zamba2-2.7B style configuration
     >>> configuration = Zamba2Config()
     >>> # Initializing a model from the Zamba2-2.7B style configuration

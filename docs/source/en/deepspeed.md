@@ -55,7 +55,7 @@ DeepSpeed provides a tool for estimating the required CPU and GPU memory for the
 Run the command below to check the memory requirements for [bigscience/T0_3B](https://huggingface.co/docs/transformers/main/en/bigscience/T0_3B) on a single GPU.
 
 ```bash
-$ python -c 'from transformers import AutoModel; \
+$ python -c 'from transformers_4573 import AutoModel; \
 from deepspeed.runtime.zero.stage3 import estimate_zero3_model_states_mem_needs_all_live; \
 model = AutoModel.from_pretrained("bigscience/T0_3B"); \
 estimate_zero3_model_states_mem_needs_all_live(model, num_gpus_per_node=1, num_nodes=1)'
@@ -249,7 +249,7 @@ ZeRO-3 shards the optimizer and gradient states, and parameters across GPUs. Unl
 With ZeRO-3, use the [deepspeed.zero.Init](https://deepspeed.readthedocs.io/en/latest/zero3.html#deepspeed.zero.Init) context manager to initialize a model faster.
 
 ```py
-from transformers import T5ForConditionalGeneration, T5Config
+from transformers_4573 import T5ForConditionalGeneration, T5Config
 import deepspeed
 
 with deepspeed.zero.Init():
@@ -263,7 +263,7 @@ The DeepSped config file needs to have `is_deepspeed_zero3_enabled: true` setup 
 > You'll need ZeRO-3 when the fp16 weights don't fit on a single GPU. But if you're able to load the fp16 weights, set `dtype=torch.float16` in [`~PreTrainedModel.from_pretrained`].
 
 ```py
-from transformers import AutoModel, Trainer, TrainingArguments
+from transformers_4573 import AutoModel, Trainer, TrainingArguments
 
 training_args = TrainingArguments(..., deepspeed=ds_config)
 model = AutoModel.from_pretrained("google-t5/t5-small")
@@ -430,7 +430,7 @@ Important configuration parameters include the following.
 When using sequence parallelism, ensure your sequences are properly padded. Use `pad_to_multiple_of` in your data collator to ensure sequences are divisible by `sp_size`. For example, with `sp_size=4`, set `pad_to_multiple_of=4` or higher.
 
 ```py
-from transformers import DataCollatorForLanguageModeling
+from transformers_4573 import DataCollatorForLanguageModeling
 
 data_collator = DataCollatorForLanguageModeling(
     tokenizer=tokenizer,
@@ -976,7 +976,7 @@ fp32_model = load_state_dict_from_zero_checkpoint(trainer.model, checkpoint_dir)
 You must have saved at least one checkpoint to load the latest checkpoint as shown in the example below.
 
 ```py
-from transformers.trainer_utils import get_last_checkpoint
+from transformers_4573.trainer_utils import get_last_checkpoint
 from deepspeed.utils.zero_to_fp32 import load_state_dict_from_zero_checkpoint
 
 checkpoint_dir = get_last_checkpoint(trainer.args.output_dir)
@@ -1006,8 +1006,8 @@ You must instantiate [`~integrations.HfDeepSpeedConfig`] before loading a model 
 <hfoption id="pretrained model">
 
 ```py
-from transformers.integrations import HfDeepSpeedConfig
-from transformers import AutoModel
+from transformers_4573.integrations import HfDeepSpeedConfig
+from transformers_4573 import AutoModel
 import deepspeed
 
 # DeepSpeed config object or path to the file
@@ -1024,8 +1024,8 @@ engine = deepspeed.initialize(model=model, config_params=ds_config, ...)
 [`~integrations.HfDeepSpeedConfig`] is not required for ZeRO-1 or ZeRO-2.
 
 ```py
-from transformers.integrations import HfDeepSpeedConfig
-from transformers import AutoModel, AutoConfig
+from transformers_4573.integrations import HfDeepSpeedConfig
+from transformers_4573 import AutoModel, AutoConfig
 import deepspeed
 
 # DeepSpeed config object or path to the file

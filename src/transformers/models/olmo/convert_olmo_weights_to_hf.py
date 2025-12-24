@@ -22,8 +22,8 @@ import torch
 import yaml
 from tokenizers import Tokenizer
 
-from transformers import OlmoConfig, OlmoForCausalLM
-from transformers.models.gpt_neox.tokenization_gpt_neox_fast import GPTNeoXTokenizerFast
+from transformers_4573 import OlmoConfig, OlmoForCausalLM
+from transformers_4573.models.gpt_neox.tokenization_gpt_neox_fast import GPTNeoXTokenizerFast
 
 
 """
@@ -37,7 +37,7 @@ python src/transformers/models/olmo/convert_olmo_weights_to_hf.py \
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import OlmoForCausalLM, AutoTokenizer
+from transformers_4573 import OlmoForCausalLM, AutoTokenizer
 
 model = OlmoForCausalLM.from_pretrained("/output/path")
 tokenizer = AutoTokenizer.from_pretrained("/output/path")

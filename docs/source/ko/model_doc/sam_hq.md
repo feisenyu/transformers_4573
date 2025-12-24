@@ -56,7 +56,7 @@ SAM-HQ 사용 팁:
 import torch
 from PIL import Image
 import requests
-from transformers import infer_device, SamHQModel, SamHQProcessor
+from transformers_4573 import infer_device, SamHQModel, SamHQProcessor
 
 device = infer_device()
 model = SamHQModel.from_pretrained("syscv-community/sam-hq-vit-base").to(device)
@@ -82,7 +82,7 @@ scores = outputs.iou_scores
 import torch
 from PIL import Image
 import requests
-from transformers import infer_device, SamHQModel, SamHQProcessor
+from transformers_4573 import infer_device, SamHQModel, SamHQProcessor
 
 device = infer_device()
 model = SamHQModel.from_pretrained("syscv-community/sam-hq-vit-base").to(device)

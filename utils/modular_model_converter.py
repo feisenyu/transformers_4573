@@ -35,8 +35,8 @@ from modular_integrations import (
     convert_relative_import_to_absolute,
 )
 
-from transformers import logging
-from transformers.models.auto.configuration_auto import CONFIG_MAPPING_NAMES
+from transformers_4573 import logging
+from transformers_4573.models.auto.configuration_auto import CONFIG_MAPPING_NAMES
 
 
 logger = logging.get_logger(__name__)

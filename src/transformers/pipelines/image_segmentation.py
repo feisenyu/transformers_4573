@@ -32,7 +32,7 @@ class ImageSegmentationPipeline(Pipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> segmenter = pipeline(model="facebook/detr-resnet-50-panoptic")
     >>> segments = segmenter("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")

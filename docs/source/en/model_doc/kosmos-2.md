@@ -45,7 +45,7 @@ alt="drawing" width="600"/>
 ```python
 >>> from PIL import Image
 >>> import requests
->>> from transformers import AutoProcessor, Kosmos2ForConditionalGeneration
+>>> from transformers_4573 import AutoProcessor, Kosmos2ForConditionalGeneration
 
 >>> model = Kosmos2ForConditionalGeneration.from_pretrained("microsoft/kosmos-2-patch14-224")
 >>> processor = AutoProcessor.from_pretrained("microsoft/kosmos-2-patch14-224")

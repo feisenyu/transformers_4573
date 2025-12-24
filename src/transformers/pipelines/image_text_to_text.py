@@ -65,7 +65,7 @@ class ImageTextToTextPipeline(Pipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> pipe = pipeline(task="image-text-to-text", model="Salesforce/blip-image-captioning-base")
     >>> pipe("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png", text="A photo of")
@@ -73,7 +73,7 @@ class ImageTextToTextPipeline(Pipeline):
     ```
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> pipe = pipeline("image-text-to-text", model="llava-hf/llava-interleave-qwen-0.5b-hf")
     >>> messages = [

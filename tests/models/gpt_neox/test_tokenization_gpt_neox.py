@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import GPTNeoXTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573 import GPTNeoXTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

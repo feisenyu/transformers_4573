@@ -43,7 +43,7 @@ Laden Sie einen vortrainierten Tokenizer mit der Klasse [AutoTokenizer], um schn
 Laden Sie einen vortrainierten Tokenizer mit [`AutoTokenizer.from_pretrained`]:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 ```
@@ -245,7 +245,7 @@ Der nächste Schritt ist das Laden eines Merkmalsextraktors, um die Eingabe zu n
 Laden Sie den Merkmalsextraktor mit [`AutoFeatureExtractor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base")
 ```
@@ -329,7 +329,7 @@ Als Nächstes sehen Sie sich das Bild mit dem Merkmal 🤗 Datensätze [Bild](ht
 Laden Sie den Merkmalsextraktor mit [`AutoImageProcessor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
 ```
@@ -451,7 +451,7 @@ Erinnern Sie sich an den früheren Abschnitt über die Verarbeitung von Audiodat
 Ein Processor kombiniert einen Feature-Extraktor und einen Tokenizer. Laden Sie einen Processor mit [`AutoProcessor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoProcessor
+>>> from transformers_4573 import AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained("facebook/wav2vec2-base-960h")
 ```

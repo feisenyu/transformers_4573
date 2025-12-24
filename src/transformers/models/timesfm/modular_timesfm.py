@@ -663,7 +663,7 @@ class TimesFmModelForPrediction(TimesFmPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import TimesFmModelForPrediction
+        >>> from transformers_4573 import TimesFmModelForPrediction
 
         >>> model = TimesFmModelForPrediction.from_pretrained("google/timesfm-2.0-500m-pytorch")
 

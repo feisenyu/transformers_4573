@@ -39,7 +39,7 @@ Start by loading the [Yelp Reviews](https://hf.co/datasets/Yelp/yelp_review_full
 
 ```py
 from datasets import load_dataset
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 
 dataset = load_dataset("yelp_review_full")
 tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
@@ -67,7 +67,7 @@ dataset = dataset.map(tokenize, batched=True)
 Load a model and provide the number of expected labels (you can find this information on the Yelp Review [dataset card](https://huggingface.co/datasets/Yelp/yelp_review_full#data-fields)).
 
 ```py
-from transformers import AutoModelForSequenceClassification
+from transformers_4573 import AutoModelForSequenceClassification
 
 model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 "Some weights of BertForSequenceClassification were not initialized from the model checkpoint at google-bert/bert-base-cased and are newly initialized: ['classifier.bias', 'classifier.weight']"
@@ -99,7 +99,7 @@ def compute_metrics(eval_pred):
 Set up [`TrainingArguments`] with where to save the model and when to compute accuracy during training. The example below sets it to `"epoch"`, which reports the accuracy at the end of each epoch. Add `push_to_hub=True` to upload the model to the Hub after training.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 training_args = TrainingArguments(
     output_dir="yelp_review_classifier",
@@ -111,7 +111,7 @@ training_args = TrainingArguments(
 Create a [`Trainer`] instance and pass it the model, training arguments, training and test datasets, and evaluation function. Call [`~Trainer.train`] to start training.
 
 ```py
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 trainer = Trainer(
     model=model,

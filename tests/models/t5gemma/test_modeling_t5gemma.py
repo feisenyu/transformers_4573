@@ -21,8 +21,8 @@ import pytest
 from parameterized import parameterized
 from pytest import mark
 
-from transformers import T5GemmaConfig, T5GemmaModuleConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import T5GemmaConfig, T5GemmaModuleConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_flash_attn,
     require_torch,
     require_torch_accelerator,
@@ -39,7 +39,7 @@ if is_torch_available():
     import torch
     import torch.nn.functional as F
 
-    from transformers import (
+    from transformers_4573 import (
         T5GemmaEncoderModel,
         T5GemmaForConditionalGeneration,
         T5GemmaForSequenceClassification,

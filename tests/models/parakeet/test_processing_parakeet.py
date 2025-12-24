@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import ParakeetProcessor
-from transformers.testing_utils import require_torch, require_torchaudio
+from transformers_4573 import ParakeetProcessor
+from transformers_4573.testing_utils import require_torch, require_torchaudio
 
 from ...test_processing_common import ProcessorTesterMixin
 

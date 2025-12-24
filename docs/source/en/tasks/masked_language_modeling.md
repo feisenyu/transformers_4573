@@ -97,7 +97,7 @@ While this may look like a lot, you're only really interested in the `text` fiel
 For masked language modeling, the next step is to load a DistilRoBERTa tokenizer to process the `text` subfield:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -185,7 +185,7 @@ Now create a batch of examples using [`DataCollatorForLanguageModeling`]. It's m
 Use the end-of-sequence token as the padding token and specify `mlm_probability` to randomly mask tokens each time you iterate over the data:
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
@@ -202,7 +202,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You're ready to start training your model now! Load DistilRoBERTa with [`AutoModelForMaskedLM`]:
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -271,7 +271,7 @@ Come up with some text you'd like the model to fill in the blank with, and use t
 The simplest way to try out your finetuned model for inference is to use it in a [`pipeline`]. Instantiate a `pipeline` for fill-mask with your model, and pass your text to it. If you like, you can use the `top_k` parameter to specify how many predictions to return:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> mask_filler = pipeline("fill-mask", "username/my_awesome_eli5_mlm_model")
 >>> mask_filler(text, top_k=3)
@@ -292,7 +292,7 @@ The simplest way to try out your finetuned model for inference is to use it in a
 Tokenize the text and return the `input_ids` as PyTorch tensors. You'll also need to specify the position of the `<mask>` token:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_eli5_mlm_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -302,7 +302,7 @@ Tokenize the text and return the `input_ids` as PyTorch tensors. You'll also nee
 Pass your inputs to the model and return the `logits` of the masked token:
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("username/my_awesome_eli5_mlm_model")
 >>> logits = model(**inputs).logits

@@ -68,7 +68,7 @@ class PaddleOCRVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PaddleOCRVisionConfig, PaddleOCRVisionModel
+    >>> from transformers_4573 import PaddleOCRVisionConfig, PaddleOCRVisionModel
 
     >>> # Initializing a PaddleOCRVisionConfig with PaddlePaddle/PaddleOCR-VL style configuration
     >>> configuration = PaddleOCRVisionConfig()
@@ -173,7 +173,7 @@ class PaddleOCRTextConfig(PreTrainedConfig):
             The attention head dimension. If None, it will default to hidden_size // num_attention_heads
 
     ```python
-    >>> from transformers import PaddleOCRTextModel, PaddleOCRTextConfig
+    >>> from transformers_4573 import PaddleOCRTextModel, PaddleOCRTextConfig
 
     >>> # Initializing a PaddleOCRText 0.3B style configuration
     >>> configuration = PaddleOCRTextConfig()
@@ -281,7 +281,7 @@ class PaddleOCRVLConfig(PreTrainedConfig):
             The token index to denote end of vision input.
 
     ```python
-    >>> from transformers import PaddleOCRVLForConditionalGeneration, PaddleOCRVLConfig
+    >>> from transformers_4573 import PaddleOCRVLForConditionalGeneration, PaddleOCRVLConfig
 
     >>> # Initializing a PaddleOCRVL style configuration
     >>> configuration = PaddleOCRVLConfig()

@@ -74,7 +74,7 @@ IDEFICS プロセッサは、[`LlamaTokenizer`] と IDEFICS 画像プロセッ�
 ```py
 >>> import torch
 
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained(checkpoint)
 
@@ -93,7 +93,7 @@ IDEFICS プロセッサは、[`LlamaTokenizer`] と IDEFICS 画像プロセッ�
 
 ```py
 >>> import torch
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor, BitsAndBytesConfig
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor, BitsAndBytesConfig
 
 >>> quantization_config = BitsAndBytesConfig(
 ...     load_in_4bit=True,
@@ -390,7 +390,7 @@ This is an image of a vegetable stand.
 
 ```py
 >>> import torch
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor
 
 >>> device = "cuda" if torch.cuda.is_available() else "cpu"
 

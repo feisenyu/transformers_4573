@@ -18,8 +18,8 @@ import unittest
 from contextlib import ExitStack, contextmanager
 from unittest.mock import patch
 
-from transformers import AutoTokenizer, GptOssForCausalLM, Mxfp4Config
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, GptOssForCausalLM, Mxfp4Config
+from transformers_4573.testing_utils import (
     require_kernels,
     require_torch,
     require_torch_gpu,
@@ -28,7 +28,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_torch_available,
 )
 
@@ -113,7 +113,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
     def test_quantizer_validation_no_torch(self):
         """Test quantizer validation when torch is not available"""
         with patch("transformers.quantizers.quantizer_mxfp4.is_torch_available", return_value=False):
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             config = Mxfp4Config()
             quantizer = Mxfp4HfQuantizer(config)
@@ -124,7 +124,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
     def test_quantizer_validation_no_accelerator(self):
         """Test quantizer validation when CUDA/XPU is not available"""
         with _patch_no_accelerator():
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             config = Mxfp4Config()
             quantizer = Mxfp4HfQuantizer(config)
@@ -137,7 +137,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
     def test_quantizer_validation_low_compute_capability(self):
         """Test quantizer validation with CUDA low compute capability"""
         with patch("torch.cuda.get_device_capability", return_value=(7, 0)):
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             config = Mxfp4Config()
             quantizer = Mxfp4HfQuantizer(config)
@@ -150,7 +150,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
     def test_quantizer_validation_low_compute_capability_with_prequantized(self):
         """Test quantizer validation with CUDA low compute capability"""
         with patch("torch.cuda.get_device_capability", return_value=(7, 0)):
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             config = Mxfp4Config()
             quantizer = Mxfp4HfQuantizer(config)
@@ -163,7 +163,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
     def test_quantizer_validation_low_compute_capability_with_dequantize(self):
         """Test quantizer validation with CUDA low compute capability but dequantize enabled"""
         with patch("torch.cuda.get_device_capability", return_value=(7, 0)):
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             config = Mxfp4Config(dequantize=True)
             quantizer = Mxfp4HfQuantizer(config)
@@ -179,7 +179,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
         """Test that dequantize check happens before CUDA/XPU availability check"""
         # Mock torch.cuda.is_available
         with _patch_no_accelerator():
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             # Test with dequantize=True - should pass even without CUDA/XPU and accelerate
             config = Mxfp4Config(dequantize=True)
@@ -202,7 +202,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
             patch("transformers.quantizers.quantizer_mxfp4.is_triton_available", return_value=False),
             patch("transformers.quantizers.quantizer_mxfp4.is_kernels_available", return_value=False),
         ):
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             config = Mxfp4Config()
             quantizer = Mxfp4HfQuantizer(config)
@@ -216,7 +216,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
             patch("transformers.quantizers.quantizer_mxfp4.is_triton_available", return_value=False),
             patch("transformers.quantizers.quantizer_mxfp4.is_kernels_available", return_value=False),
         ):
-            from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+            from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
             config = Mxfp4Config()
             quantizer = Mxfp4HfQuantizer(config)
@@ -228,7 +228,7 @@ class Mxfp4QuantizerTest(unittest.TestCase):
 
     def test_is_trainable(self):
         """Test trainability"""
-        from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+        from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
         config = Mxfp4Config()
         quantizer = Mxfp4HfQuantizer(config)
@@ -242,7 +242,7 @@ class Mxfp4IntegrationTest(unittest.TestCase):
 
     def test_should_convert_module(self):
         """Test module conversion decision logic"""
-        from transformers.quantizers.quantizers_utils import should_convert_module
+        from transformers_4573.quantizers.quantizers_utils import should_convert_module
 
         # Should convert by default
         self.assertTrue(should_convert_module("model", None))
@@ -256,7 +256,7 @@ class Mxfp4IntegrationTest(unittest.TestCase):
     @require_torch
     def test_convert_moe_packed_tensors(self):
         """Test unpacking of quantized tensors"""
-        from transformers.integrations.mxfp4 import convert_moe_packed_tensors
+        from transformers_4573.integrations.mxfp4 import convert_moe_packed_tensors
 
         # Create dummy packed tensors
         blocks = torch.randint(0, 255, (2, 4, 8, 16), dtype=torch.uint8)
@@ -271,8 +271,8 @@ class Mxfp4IntegrationTest(unittest.TestCase):
     @require_torch
     def test_quantize_to_mxfp4(self):
         """Test quantization function"""
-        from transformers.integrations.mxfp4 import quantize_to_mxfp4
-        from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+        from transformers_4573.integrations.mxfp4 import quantize_to_mxfp4
+        from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
         config = Mxfp4Config()
         quantizer = Mxfp4HfQuantizer(config)
@@ -363,7 +363,7 @@ class Mxfp4ModelTest(unittest.TestCase):
 
     def test_model_device_map_validation(self):
         """Test device map validation"""
-        from transformers.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
+        from transformers_4573.quantizers.quantizer_mxfp4 import Mxfp4HfQuantizer
 
         config = Mxfp4Config()
         quantizer = Mxfp4HfQuantizer(config)
@@ -460,11 +460,11 @@ class Mxfp4ModelTest(unittest.TestCase):
         Test if we compute the right module sizes needed to generate the device map.
         Also test if we get the right values for `total_byte_count` in `caching_allocator_warmup`.
         """
-        from transformers import AutoConfig, AutoModelForCausalLM
-        from transformers.integrations import Mxfp4GptOssExperts
-        from transformers.integrations.accelerate import compute_module_sizes
-        from transformers.modeling_utils import expand_device_map, get_total_byte_count
-        from transformers.quantizers import AutoHfQuantizer
+        from transformers_4573 import AutoConfig, AutoModelForCausalLM
+        from transformers_4573.integrations import Mxfp4GptOssExperts
+        from transformers_4573.integrations.accelerate import compute_module_sizes
+        from transformers_4573.modeling_utils import expand_device_map, get_total_byte_count
+        from transformers_4573.quantizers import AutoHfQuantizer
 
         # we need to preprocess the model like that because device_map calculation happens before we load the weights inside the model.
         # For normal wieghts, it's fine but for quantized weights, the tensors dtype might change during loading.

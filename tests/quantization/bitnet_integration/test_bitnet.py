@@ -15,21 +15,21 @@
 import gc
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoModelForCausalLM,
     AutoTokenizer,
     BitNetQuantConfig,
     OPTForCausalLM,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_accelerate,
     require_torch_accelerator,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available
+from transformers_4573.utils import is_torch_available
 
 
 if is_torch_available():
@@ -72,7 +72,7 @@ class BitNetTest(unittest.TestCase):
         gc.collect()
 
     def test_replace_with_bitlinear(self):
-        from transformers.integrations import BitLinear, replace_with_bitnet_linear
+        from transformers_4573.integrations import BitLinear, replace_with_bitnet_linear
 
         model_id = "facebook/opt-350m"
         config = AutoConfig.from_pretrained(model_id)
@@ -108,7 +108,7 @@ class BitNetTest(unittest.TestCase):
         Simple test the packing and unpacking logic
         """
 
-        from transformers.integrations import pack_weights, unpack_weights
+        from transformers_4573.integrations import pack_weights, unpack_weights
 
         u = torch.randint(0, 255, (256, 256), dtype=torch.uint8)
         unpacked_u = unpack_weights(u, dtype=torch.bfloat16)
@@ -122,7 +122,7 @@ class BitNetTest(unittest.TestCase):
         test the activation function behaviour
         """
 
-        from transformers.integrations import BitLinear
+        from transformers_4573.integrations import BitLinear
 
         layer = BitLinear(in_features=4, out_features=2, bias=False, dtype=torch.float32)
         layer.to(torch_device)
@@ -165,7 +165,7 @@ class BitNetTest(unittest.TestCase):
         test that the BitNet layer weight shapes are correct, and the weight_scale is correctly initialized to 1
         """
 
-        from transformers.integrations import replace_with_bitnet_linear
+        from transformers_4573.integrations import replace_with_bitnet_linear
 
         out_features = 1024
         in_features = 512

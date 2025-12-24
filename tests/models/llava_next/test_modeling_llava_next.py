@@ -20,7 +20,7 @@ import requests
 from huggingface_hub import hf_hub_download
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     BitsAndBytesConfig,
     LlavaNextConfig,
@@ -29,14 +29,14 @@ from transformers import (
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     cleanup,
     require_bitsandbytes,
     require_torch,
     slow,
     torch_device,
 )
-from transformers.utils import check_torch_load_is_safe
+from transformers_4573.utils import check_torch_load_is_safe
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -50,7 +50,7 @@ from ...test_modeling_common import (
 if is_torch_available():
     import torch
 
-    from transformers.models.llava_next.modeling_llava_next import image_size_to_num_patches
+    from transformers_4573.models.llava_next.modeling_llava_next import image_size_to_num_patches
 
 
 if is_vision_available():

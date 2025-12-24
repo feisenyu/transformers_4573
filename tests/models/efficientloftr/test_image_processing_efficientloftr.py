@@ -19,14 +19,14 @@ import pytest
 from packaging import version
 from parameterized import parameterized
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     require_vision,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -34,13 +34,13 @@ from ...test_image_processing_common import ImageProcessingTestMixin, prepare_im
 if is_torch_available():
     import torch
 
-    from transformers.models.efficientloftr.modeling_efficientloftr import EfficientLoFTRKeypointMatchingOutput
+    from transformers_4573.models.efficientloftr.modeling_efficientloftr import EfficientLoFTRKeypointMatchingOutput
 
 if is_vision_available():
-    from transformers import EfficientLoFTRImageProcessor
+    from transformers_4573 import EfficientLoFTRImageProcessor
 
     if is_torchvision_available():
-        from transformers import EfficientLoFTRImageProcessorFast
+        from transformers_4573 import EfficientLoFTRImageProcessorFast
 
 
 def random_array(size):

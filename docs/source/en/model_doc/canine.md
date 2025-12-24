@@ -37,7 +37,7 @@ The example below demonstrates how to generate embeddings with [`Pipeline`], [`A
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="feature-extraction",
@@ -53,7 +53,7 @@ pipeline("Plant create energy through a process known as photosynthesis.")
 
 ```py
 import torch
-from transformers import AutoModel
+from transformers_4573 import AutoModel
 
 model = AutoModel.from_pretrained("google/canine-c")
 
@@ -80,7 +80,7 @@ echo -e "Plant create energy through a process known as photosynthesis." | trans
 - CANINE skips tokenization entirely — it works directly on raw characters, not subwords. You can use it with or without a tokenizer. For batched inference and training, it is recommended to use the tokenizer to pad and truncate all sequences to the same length.
 
     ```py
-    from transformers import AutoTokenizer, AutoModel
+    from transformers_4573 import AutoTokenizer, AutoModel
 
     tokenizer = AutoTokenizer("google/canine-c")
     inputs = ["Life is like a box of chocolates.", "You never know what you gonna get."]

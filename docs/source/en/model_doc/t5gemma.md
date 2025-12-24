@@ -41,7 +41,7 @@ The example below demonstrates how to chat with the model with [`Pipeline`] or t
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     "text2text-generation",
@@ -64,7 +64,7 @@ pipe(prompt, max_new_tokens=32)
 ```python
 # pip install accelerate
 import torch
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
 tokenizer = AutoTokenizer.from_pretrained("google/t5gemma-2b-2b-prefixlm-it")
 model = AutoModelForSeq2SeqLM.from_pretrained(

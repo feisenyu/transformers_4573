@@ -24,9 +24,9 @@ from typing import Optional, TypedDict, Union
 import torch
 from torch import nn
 
-from transformers.activations import ACT2FN
-from transformers.models.jamba.modeling_jamba import HybridMambaAttentionDynamicCache, JambaAttentionDecoderLayer
-from transformers.models.llama.modeling_llama import (
+from transformers_4573.activations import ACT2FN
+from transformers_4573.models.jamba.modeling_jamba import HybridMambaAttentionDynamicCache, JambaAttentionDecoderLayer
+from transformers_4573.models.llama.modeling_llama import (
     LlamaAttention,
     LlamaForCausalLM,
     LlamaMLP,
@@ -34,7 +34,7 @@ from transformers.models.llama.modeling_llama import (
     LlamaRotaryEmbedding,
     rotate_half,
 )
-from transformers.models.mamba2.modeling_mamba2 import (
+from transformers_4573.models.mamba2.modeling_mamba2 import (
     MambaRMSNormGated,
     apply_mask_to_padding_states,
     pad_tensor_by_size,
@@ -84,7 +84,7 @@ class BambaFlashAttentionKwargs(TypedDict, total=False):
     seq_idx: torch.IntTensor
 
 
-# Adapted from transformers.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache for the v2 mixer
+# Adapted from transformers_4573.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache for the v2 mixer
 class HybridMambaAttentionDynamicCache(HybridMambaAttentionDynamicCache):
     """
     A dynamic cache that can handle both the attention cache (which has a seq_len dimension) and the mamba cache
@@ -142,7 +142,7 @@ class BambaRotaryEmbedding(LlamaRotaryEmbedding):
     pass
 
 
-# Adapted from transformers.models.glm.modular_glm.apply_rotary_pos_emb
+# Adapted from transformers_4573.models.glm.modular_glm.apply_rotary_pos_emb
 def apply_rotary_pos_emb(q, k, cos, sin, position_ids=None, unsqueeze_dim=1):
     """Applies Rotary Position Embedding to the query and key tensors.
 
@@ -191,7 +191,7 @@ class BambaRMSNormGated(MambaRMSNormGated):
     pass
 
 
-# Adapted from transformers.models.mamba2.modeling_mamba2.Mamba2Mixer
+# Adapted from transformers_4573.models.mamba2.modeling_mamba2.Mamba2Mixer
 class BambaMixer(nn.Module):
     """
     Compute ∆, A, B, C, and D the state space parameters and compute the `contextualized_states`.
@@ -1089,7 +1089,7 @@ class BambaForCausalLM(LlamaForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BambaForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, BambaForCausalLM
 
         >>> model = BambaForCausalLM.from_pretrained("...")
         >>> tokenizer = AutoTokenizer.from_pretrained("...")

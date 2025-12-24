@@ -36,7 +36,7 @@ The example below demonstrates how to match keypoints between two images with [`
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 keypoint_matcher = pipeline(task="keypoint-matching", model="ETH-CVG/lightglue_superpoint")
 
@@ -52,7 +52,7 @@ print(results[0])
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoImageProcessor, AutoModel
+from transformers_4573 import AutoImageProcessor, AutoModel
 import torch
 from PIL import Image
 import requests
@@ -84,7 +84,7 @@ processed_outputs = processor.post_process_keypoint_matching(outputs, image_size
 - LightGlue is adaptive to the task difficulty. Inference is much faster on image pairs that are intuitively easy to match, for example, because of a larger visual overlap or limited appearance change.
 
     ```py
-    from transformers import AutoImageProcessor, AutoModel
+    from transformers_4573 import AutoImageProcessor, AutoModel
     import torch
     from PIL import Image
     import requests

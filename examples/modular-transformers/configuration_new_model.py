@@ -72,7 +72,7 @@ class NewModelConfig(PreTrainedConfig):
             If True, the model will attend to all text tokens instead of using a causal mask.
 
     ```python
-    >>> from transformers import NewModelModel, NewModelConfig
+    >>> from transformers_4573 import NewModelModel, NewModelConfig
     >>> # Initializing a NewModel new_model-7b style configuration
     >>> configuration = NewModelConfig()
     >>> # Initializing a model from the new_model-7b style configuration

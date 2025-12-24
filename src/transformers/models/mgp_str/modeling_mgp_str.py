@@ -32,7 +32,7 @@ from .configuration_mgp_str import MgpstrConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -48,7 +48,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.beit.modeling_beit.BeitDropPath with Beit->Mgpstr
+# Copied from transformers_4573.models.beit.modeling_beit.BeitDropPath with Beit->Mgpstr
 class MgpstrDropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -396,7 +396,7 @@ class MgpstrForSceneTextRecognition(MgpstrPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import (
+        >>> from transformers_4573 import (
         ...     MgpstrProcessor,
         ...     MgpstrForSceneTextRecognition,
         ... )

@@ -3,8 +3,8 @@ import os
 import requests
 from huggingface_hub import hf_hub_download, snapshot_download
 
-from transformers.testing_utils import _run_pipeline_tests, _run_staging
-from transformers.utils.import_utils import is_mistral_common_available
+from transformers_4573.testing_utils import _run_pipeline_tests, _run_staging
+from transformers_4573.utils.import_utils import is_mistral_common_available
 
 
 URLS_FOR_TESTING_DATA = [
@@ -183,8 +183,8 @@ if __name__ == "__main__":
         if is_mistral_common_available():
             from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-            from transformers import AutoTokenizer
-            from transformers.tokenization_mistral_common import MistralCommonBackend
+            from transformers_4573 import AutoTokenizer
+            from transformers_4573.tokenization_mistral_common import MistralCommonBackend
 
             repo_id = "hf-internal-testing/namespace-mistralai-repo_name-Mistral-Small-3.1-24B-Instruct-2503"
             AutoTokenizer.from_pretrained(repo_id, tokenizer_type="mistral")

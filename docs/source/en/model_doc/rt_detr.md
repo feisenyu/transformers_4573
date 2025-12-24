@@ -47,7 +47,7 @@ Initially, an image is processed using a pre-trained convolutional neural networ
 >>> import requests
 
 >>> from PIL import Image
->>> from transformers import RTDetrForObjectDetection, RTDetrImageProcessor
+>>> from transformers_4573 import RTDetrForObjectDetection, RTDetrImageProcessor
 
 >>> url = 'http://images.cocodataset.org/val2017/000000039769.jpg'
 >>> image = Image.open(requests.get(url, stream=True).raw)

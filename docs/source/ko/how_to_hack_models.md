@@ -23,8 +23,8 @@ rendered properly in your Markdown viewer.
 > 모델 코드를 반복적으로 수정하고 개발할 때 [clear_import_cache](https://github.com/huggingface/transformers/blob/9985d06add07a4cc691dc54a7e34f54205c04d40/src/transformers/utils/import_utils.py#L2286) 유틸리티가 매우 유용합니다. 이 기능은 캐시된 모든 트랜스포머 모듈을 제거하여 Python이 환경을 재시작하지 않고도 수정된 코드를 다시 가져올 수 있도록 합니다.
 >
 > ```py
-> from transformers import AutoModel
-> from transformers.utils.import_utils import clear_import_cache
+> from transformers_4573 import AutoModel
+> from transformers_4573.utils.import_utils import clear_import_cache
 >
 > model = AutoModel.from_pretrained("bert-base-uncased")
 > # 모델 코드 수정
@@ -43,7 +43,7 @@ rendered properly in your Markdown viewer.
 ```py
 import torch
 import torch.nn as nn
-from transformers.models.sam.modeling_sam import SamVisionAttention
+from transformers_4573.models.sam.modeling_sam import SamVisionAttention
 
 class SamVisionAttentionSplit(SamVisionAttention, nn.Module):
     def __init__(self, config, window_size):
@@ -108,7 +108,7 @@ class SamVisionAttentionSplit(SamVisionAttention, nn.Module):
 [`~PreTrainedModel.from_pretrained`]로 모델을 가져오세요.
 
 ```py
-from transformers import SamModel
+from transformers_4573 import SamModel
 
 # 사전 훈련된 SAM 모델 가져오기
 model = SamModel.from_pretrained("facebook/sam-vit-base")

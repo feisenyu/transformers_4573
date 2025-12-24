@@ -69,7 +69,7 @@ class XLMRobertaXLConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import XLMRobertaXLConfig, XLMRobertaXLModel
+    >>> from transformers_4573 import XLMRobertaXLConfig, XLMRobertaXLModel
 
     >>> # Initializing a XLM_ROBERTA_XL google-bert/bert-base-uncased style configuration
     >>> configuration = XLMRobertaXLConfig()

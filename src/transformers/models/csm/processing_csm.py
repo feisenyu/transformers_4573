@@ -67,7 +67,7 @@ class CsmProcessor(ProcessorMixin):
     information.
     The preferred way of passing kwargs is as a dictionary per modality, see usage example below.
         ```python
-        from transformers import CsmProcessor
+        from transformers_4573 import CsmProcessor
         from datasets import load_dataset
 
         ds = load_dataset("hf-internal-testing/dailytalk-dummy", split="train")

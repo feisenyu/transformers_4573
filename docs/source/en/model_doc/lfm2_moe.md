@@ -30,7 +30,7 @@ LFM2‑MoE keeps this fast backbone and introduces sparse MoE feed‑forward net
 The following example shows how to generate an answer using the `AutoModelForCausalLM` class.
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 # Load model and tokenizer
 model_id = "LiquidAI/LFM2-8B-A1B"

@@ -21,7 +21,7 @@ from io import BytesIO
 import pytest
 import requests
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     BitsAndBytesConfig,
     Idefics2Config,
@@ -30,7 +30,7 @@ from transformers import (
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_bitsandbytes,

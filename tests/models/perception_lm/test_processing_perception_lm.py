@@ -14,11 +14,11 @@
 import json
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     PerceptionLMProcessor,
 )
-from transformers.testing_utils import require_read_token, require_vision
-from transformers.utils import is_torch_available
+from transformers_4573.testing_utils import require_read_token, require_vision
+from transformers_4573.utils import is_torch_available
 
 from ...test_processing_common import ProcessorTesterMixin
 

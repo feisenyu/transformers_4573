@@ -38,7 +38,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 pipe = pipeline(
     task="image-text-to-text",
     model="Qwen/Qwen2.5-VL-7B-Instruct",
@@ -67,7 +67,7 @@ pipe(text=messages,max_new_tokens=20, return_full_text=False)
 
 ```py
 import torch
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
+from transformers_4573 import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2.5-VL-7B-Instruct",
@@ -120,7 +120,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 
 ```python
 import torch
-from transformers import TorchAoConfig, Qwen2_5_VLForConditionalGeneration, AutoProcessor
+from transformers_4573 import TorchAoConfig, Qwen2_5_VLForConditionalGeneration, AutoProcessor
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
@@ -168,7 +168,7 @@ model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
 
     ```python
     import torch
-    from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
+    from transformers_4573 import Qwen2_5_VLForConditionalGeneration, AutoProcessor
     
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         "Qwen/Qwen2.5-VL-7B-Instruct",

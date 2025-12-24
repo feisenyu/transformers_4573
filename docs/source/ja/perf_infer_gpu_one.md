@@ -41,7 +41,7 @@ Flash Attention 2は、モデルのdtypeが`fp16`または`bf16`の場合にの�
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
 
 model_id = "tiiuae/falcon-7b"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -98,7 +98,7 @@ Flash Attentionは、アテンション計算をよりメモリ効率の良い�
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
 
 model_id = "tiiuae/falcon-7b"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -116,7 +116,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, LlamaForCausalLM
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, LlamaForCausalLM
 
 model_id = "tiiuae/falcon-7b"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -134,7 +134,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, LlamaForCausalLM
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, LlamaForCausalLM
 from peft import LoraConfig
 
 model_id = "tiiuae/falcon-7b"
@@ -190,7 +190,7 @@ Note that this feature can also be used in a multi GPU setup.
 
 
 ```py
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 model_name = "bigscience/bloom-2b5"
 model_4bit = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", quantization_config=BitsAndBytesConfig(load_in_4bit=True))
@@ -258,7 +258,7 @@ Int8混合精度行列分解は、行列乗算を2つのストリームに分割
 必要なライブラリをインストールした後、ミックス 8 ビットモデルを読み込む方法は次の通りです：
 
 ```py
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 model_name = "bigscience/bloom-2b5"
 model_8bit = AutoModelForCausalLM.from_pretrained(model_name, quantization_config=BitsAndBytesConfig(load_in_8bit=True))
@@ -271,7 +271,7 @@ model_8bit = AutoModelForCausalLM.from_pretrained(model_name, quantization_confi
 
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 model_name = "bigscience/bloom-2b5"
 tokenizer = AutoTokenizer.from_pretrained(model_name)

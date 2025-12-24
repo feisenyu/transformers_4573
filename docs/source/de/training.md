@@ -46,7 +46,7 @@ Laden Sie zunächst den Datensatz [Yelp Reviews](https://huggingface.co/datasets
 Wie Sie nun wissen, benötigen Sie einen Tokenizer, um den Text zu verarbeiten und eine Auffüll- und Abschneidungsstrategie einzubauen, um mit variablen Sequenzlängen umzugehen. Um Ihren Datensatz in einem Schritt zu verarbeiten, verwenden Sie die 🤗 Methode Datasets [`map`](https://huggingface.co/docs/datasets/process#map), um eine Vorverarbeitungsfunktion auf den gesamten Datensatz anzuwenden:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -82,7 +82,7 @@ klicken Sie einfach auf die Schaltfläche oben rechts im Block des jeweiligen Fr
 Beginnen Sie mit dem Laden Ihres Modells und geben Sie die Anzahl der erwarteten Labels an. Aus dem Yelp Review [dataset card](https://huggingface.co/datasets/Yelp/yelp_review_full#data-fields) wissen Sie, dass es fünf Labels gibt:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -101,7 +101,7 @@ Als Nächstes erstellen Sie eine Klasse [`TrainingArguments`], die alle Hyperpar
 Geben Sie an, wo die Kontrollpunkte Ihres Trainings gespeichert werden sollen:
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(output_dir="test_trainer")
 ```
@@ -129,7 +129,7 @@ Rufen Sie [`~evaluate.compute`] auf `metric` auf, um die Genauigkeit Ihrer Vorhe
 Wenn Sie Ihre Bewertungsmetriken während der Feinabstimmung überwachen möchten, geben Sie den Parameter `eval_strategy` in Ihren Trainingsargumenten an, um die Bewertungsmetrik am Ende jeder Epoche zu ermitteln:
 
 ```py
->>> from transformers import TrainingArguments, Trainer
+>>> from transformers_4573 import TrainingArguments, Trainer
 
 >>> training_args = TrainingArguments(output_dir="test_trainer", eval_strategy="epoch")
 ```
@@ -212,7 +212,7 @@ Erstellen Sie einen `DataLoader` für Ihre Trainings- und Testdatensätze, damit
 Laden Sie Ihr Modell mit der Anzahl der erwarteten Kennzeichnungen:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -230,7 +230,7 @@ Erstellen Sie einen Optimierer und einen Scheduler für die Lernrate, um das Mod
 Erstellen Sie den Standard-Lernratenplaner aus [`Trainer`]:
 
 ```py
->>> from transformers import get_scheduler
+>>> from transformers_4573 import get_scheduler
 
 >>> num_epochs = 3
 >>> num_training_steps = num_epochs * len(train_dataloader)

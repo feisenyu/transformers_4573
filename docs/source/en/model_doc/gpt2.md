@@ -41,7 +41,7 @@ The example below demonstrates how to generate text with [`Pipeline`] or the [`A
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="openai-community/gpt2", dtype=torch.float16, device=0)
 pipeline("Hello, I'm a language model")
@@ -52,7 +52,7 @@ pipeline("Hello, I'm a language model")
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("openai-community/gpt2", dtype=torch.float16, device_map="auto", attn_implementation="sdpa")
 tokenizer = AutoTokenizer.from_pretrained("openai-community/gpt2")
@@ -85,7 +85,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, pipeline
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, pipeline
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,

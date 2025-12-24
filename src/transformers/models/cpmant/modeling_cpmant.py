@@ -398,7 +398,7 @@ class CpmAntEncoder(nn.Module):
         return hidden_states, all_hidden_states, all_self_attns
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate with Bert->CPMAnt
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate with Bert->CPMAnt
 class CpmAntIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -506,7 +506,7 @@ class CpmAntSegmentPositionEmbedding(nn.Module):
         return relative_buckets
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput with Bert->CPMAnt
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput with Bert->CPMAnt
 class CpmAntOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -732,7 +732,7 @@ class CpmAntForCausalLM(CpmAntPreTrainedModel, GenerationMixin):
 
         Text Generation with CpmAntForCausalLM.
         ```python
-        >>> from transformers import CPMAntTokenizer, CpmAntForCausalLM
+        >>> from transformers_4573 import CPMAntTokenizer, CpmAntForCausalLM
 
         >>> texts = "今天天气不错，"
         >>> model = CpmAntForCausalLM.from_pretrained("openbmb/cpm-ant-10b")

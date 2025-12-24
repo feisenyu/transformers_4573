@@ -97,7 +97,7 @@ class PixioConfig(Dinov2Config):
     Example:
 
     ```python
-    >>> from transformers import PixioConfig, PixioModel
+    >>> from transformers_4573 import PixioConfig, PixioModel
 
     >>> # Initializing a Pixio pixio-huge style configuration
     >>> configuration = PixioConfig()
@@ -355,7 +355,7 @@ class PixioBackbone(Dinov2Backbone):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoBackbone
+        >>> from transformers_4573 import AutoImageProcessor, AutoBackbone
         >>> import torch
         >>> from PIL import Image
         >>> import requests

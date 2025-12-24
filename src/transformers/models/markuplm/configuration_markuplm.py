@@ -81,7 +81,7 @@ class MarkupLMConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import MarkupLMModel, MarkupLMConfig
+    >>> from transformers_4573 import MarkupLMModel, MarkupLMConfig
 
     >>> # Initializing a MarkupLM microsoft/markuplm-base style configuration
     >>> configuration = MarkupLMConfig()

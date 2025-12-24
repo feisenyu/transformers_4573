@@ -29,7 +29,7 @@ import pytest
 from packaging import version
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoProcessor,
     AutoTokenizer,
@@ -38,7 +38,7 @@ from transformers import (
     logging,
     pipeline,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     CaptureLogger,
     require_accelerate,
     require_flash_attn,
@@ -55,14 +55,14 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_ipex_available, is_torchdynamo_exporting
+from transformers_4573.utils import is_ipex_available, is_torchdynamo_exporting
 
 
 if is_torch_available():
     import torch
     import torch.nn.functional as F
 
-    from transformers import (
+    from transformers_4573 import (
         AutoModelForCausalLM,
         AutoModelForImageTextToText,
         AutoModelForSeq2SeqLM,
@@ -75,14 +75,14 @@ if is_torch_available():
         ImageGPTForCausalImageModeling,
         SpeechEncoderDecoderModel,
     )
-    from transformers.cache_utils import (
+    from transformers_4573.cache_utils import (
         Cache,
         DynamicCache,
         EncoderDecoderCache,
         QuantoQuantizedLayer,
         StaticCache,
     )
-    from transformers.generation import (
+    from transformers_4573.generation import (
         CompileConfig,
         GenerateBeamDecoderOnlyOutput,
         GenerateBeamEncoderDecoderOutput,
@@ -100,15 +100,15 @@ if is_torch_available():
         WatermarkDetector,
         WatermarkingConfig,
     )
-    from transformers.generation.candidate_generator import (
+    from transformers_4573.generation.candidate_generator import (
         AssistedCandidateGenerator,
         AssistedCandidateGeneratorDifferentTokenizers,
     )
-    from transformers.generation.utils import _speculative_sampling
+    from transformers_4573.generation.utils import _speculative_sampling
 
 from unittest.mock import patch
 
-from transformers.utils import is_sklearn_available
+from transformers_4573.utils import is_sklearn_available
 
 
 class GenerationTesterMixin:

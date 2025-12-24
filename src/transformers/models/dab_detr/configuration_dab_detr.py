@@ -123,7 +123,7 @@ class DabDetrConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import DabDetrConfig, DabDetrModel
+    >>> from transformers_4573 import DabDetrConfig, DabDetrModel
 
     >>> # Initializing a DAB-DETR IDEA-Research/dab_detr-base style configuration
     >>> configuration = DabDetrConfig()

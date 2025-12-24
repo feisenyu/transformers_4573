@@ -81,7 +81,7 @@ pip install transformers datasets evaluate sacrebleu
 الخطوة التالية هي تحميل مُجزئ T5 لمعالجة أزواج اللغة الإنجليزية-الفرنسية:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> checkpoint = "google-t5/t5-small"
 >>> tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -115,7 +115,7 @@ pip install transformers datasets evaluate sacrebleu
 
 
 ```py
->>> from transformers import DataCollatorForSeq2Seq
+>>> from transformers_4573 import DataCollatorForSeq2Seq
 
 >>> data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=checkpoint)
 ```
@@ -175,7 +175,7 @@ pip install transformers datasets evaluate sacrebleu
 أنت جاهز لبدء تدريب نموذجك الآن! حمّل T5 باستخدام [`AutoModelForSeq2SeqLM`]:
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 ```
@@ -240,7 +240,7 @@ pip install transformers datasets evaluate sacrebleu
 أبسط طريقة لتجربة نموذجك المضبوط للاستدلال هي استخدامه في [`pipeline`]. قم بإنشاء مثيل لـ `pipeline` للترجمة باستخدام نموذجك، ومرر النص الخاص بك إليه:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # تغيير `xx` إلى لغة الإدخال و `yy` إلى لغة المخرجات المطلوبة.
 # أمثلة: "en" للغة الإنجليزية، "fr" للغة الفرنسية، "de" للغة الألمانية، "es" للغة الإسبانية، "zh" للغة الصينية، إلخ؛ translation_en_to_fr تترجم من الإنجليزية إلى الفرنسية
@@ -255,7 +255,7 @@ pip install transformers datasets evaluate sacrebleu
 قم بتحويل النص إلى رموز وإرجاع `input_ids` كموترات PyTorch:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_opus_books_model")
 >>> inputs = tokenizer(text, return_tensors="pt").input_ids
@@ -264,7 +264,7 @@ pip install transformers datasets evaluate sacrebleu
 استخدم الدالة [`~generation.GenerationMixin.generate`] لإنشاء الترجمة. لمزيد من التفاصيل حول استراتيجيات توليد النصوص المختلفة والمعلمات للتحكم في التوليد، تحقق من واجهة برمجة تطبيقات [توليد النصوص](../main_classes/text_generation).
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM
+>>> from transformers_4573 import AutoModelForSeq2SeqLM
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("username/my_awesome_opus_books_model")
 >>> outputs = model.generate(inputs, max_new_tokens=40, do_sample=True, top_k=30, top_p=0.95)

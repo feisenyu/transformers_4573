@@ -61,7 +61,7 @@ is_fast_path_available = all(
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.llama.modeling_llama.LlamaRMSNorm with Llama->Zamba
+# Copied from transformers_4573.models.llama.modeling_llama.LlamaRMSNorm with Llama->Zamba
 class ZambaRMSNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
         """
@@ -82,7 +82,7 @@ class ZambaRMSNorm(nn.Module):
         return f"{tuple(self.weight.shape)}, eps={self.variance_epsilon}"
 
 
-# Copied from transformers.models.llama.modeling_llama.repeat_kv
+# Copied from transformers_4573.models.llama.modeling_llama.repeat_kv
 def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     """
     This is the equivalent of torch.repeat_interleave(x, dim=1, repeats=n_rep). The hidden states go from (batch,
@@ -146,7 +146,7 @@ class ZambaHybridDynamicCache:
     def __len__(self):
         return len(self.key_cache)
 
-    # Copied from transformers.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache.update
+    # Copied from transformers_4573.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache.update
     def update(
         self,
         key_states: torch.Tensor,
@@ -164,7 +164,7 @@ class ZambaHybridDynamicCache:
 
         return self.key_cache[layer_idx], self.value_cache[layer_idx]
 
-    # Copied from transformers.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache.reorder_cache
+    # Copied from transformers_4573.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache.reorder_cache
     def reorder_cache(self, beam_idx: torch.LongTensor):
         """Reorders the cache for beam search, given the selected beam indices."""
         if self.get_seq_length() > 0:
@@ -179,7 +179,7 @@ class ZambaHybridDynamicCache:
                 device = self.ssm_states[layer_idx].device
                 self.ssm_states[layer_idx] = self.ssm_states[layer_idx].index_select(0, beam_idx.to(device))
 
-    # Copied from transformers.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache.get_seq_length
+    # Copied from transformers_4573.models.jamba.modeling_jamba.HybridMambaAttentionDynamicCache.get_seq_length
     def get_seq_length(self, layer_idx: Optional[int] = 0) -> int:
         """Returns the sequence length of the cached states. A layer index can be optionally passed."""
         # take any layer that contains cache and not empty tensor
@@ -220,7 +220,7 @@ class ZambaAttention(nn.Module):
     Multi-headed attention from 'Attention Is All You Need' paper. Modified to use sliding window attention: Longformer
     and "Generating Long Sequences with Sparse Transformers".
 
-    Adapted from transformers.models.mistral.modeling_mistral.MistralAttention:
+    Adapted from transformers_4573.models.mistral.modeling_mistral.MistralAttention:
     The input dimension here is attention_hidden_size = 2 * hidden_size, and head_dim = attention_hidden_size // num_heads.
     The extra factor of 2 comes from the input being the concatenation of original_hidden_states with the output of the previous (mamba) layer
     (see fig. 2 in https://huggingface.co/papers/2405.16712).
@@ -561,7 +561,7 @@ class ZambaMambaMixer(nn.Module):
         return self.slow_forward(hidden_states, cache_params, attention_mask=attention_mask)
 
 
-# Copied from transformers.models.mistral.modeling_mistral.MistralMLP with Mistral->Zamba
+# Copied from transformers_4573.models.mistral.modeling_mistral.MistralMLP with Mistral->Zamba
 class ZambaMLP(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -995,7 +995,7 @@ class ZambaModel(ZambaPreTrainedModel):
         return causal_mask
 
 
-# Adapted from transformers.models.jamba.modeling_jamba.JambaForCausalLM with Jamba->Zamba, JAMBA->ZAMBA
+# Adapted from transformers_4573.models.jamba.modeling_jamba.JambaForCausalLM with Jamba->Zamba, JAMBA->ZAMBA
 class ZambaForCausalLM(ZambaPreTrainedModel, GenerationMixin):
     _tied_weights_keys = {"lm_head.weight": "model.embed_tokens.weight"}
 
@@ -1034,7 +1034,7 @@ class ZambaForCausalLM(ZambaPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, ZambaForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, ZambaForCausalLM
 
         >>> model = ZambaForCausalLM.from_pretrained("Zyphra/Zamba-7B-v1")
         >>> tokenizer = AutoTokenizer.from_pretrained("Zyphra/Zamba-7B-v1")

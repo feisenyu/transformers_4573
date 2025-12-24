@@ -38,7 +38,7 @@ LFM2 was designed to maximize quality under strict speed and memory constraints.
 The following example shows how to generate an answer using the `AutoModelForCausalLM` class.
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 # Load model and tokenizer
 model_id = "LiquidAI/LFM2-1.2B"

@@ -20,9 +20,9 @@ from pathlib import Path
 
 import httpx
 
-from transformers import AutoImageProcessor, ViTImageProcessor, ViTImageProcessorFast
-from transformers.image_processing_utils import get_size_dict
-from transformers.testing_utils import TOKEN, TemporaryHubRepo, get_tests_dir, is_staging_test
+from transformers_4573 import AutoImageProcessor, ViTImageProcessor, ViTImageProcessorFast
+from transformers_4573.image_processing_utils import get_size_dict
+from transformers_4573.testing_utils import TOKEN, TemporaryHubRepo, get_tests_dir, is_staging_test
 
 
 sys.path.append(str(Path(__file__).parent.parent.parent / "utils"))

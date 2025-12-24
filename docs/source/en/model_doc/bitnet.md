@@ -78,7 +78,7 @@ pip install transformers
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_id = "microsoft/bitnet-b1.58-2B-4T"
 

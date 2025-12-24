@@ -63,7 +63,7 @@ El campo `text` es el input y el campo `summary` es el objetivo.
 Carga el tokenizador T5 para procesar `text` y `summary`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
 ```
@@ -97,7 +97,7 @@ Usa la función [`~datasets.Dataset.map`] de 🤗 Datasets para aplicar la funci
 Usa [`DataCollatorForSeq2Seq`] para crear un lote de ejemplos. Esto también *rellenará dinámicamente* tu texto y etiquetas a la dimensión del elemento más largo del lote para que tengan un largo uniforme. Si bien es posible rellenar tu texto en la función `tokenizer` mediante el argumento `padding=True`, el rellenado dinámico es más eficiente.
 
 ```py
->>> from transformers import DataCollatorForSeq2Seq
+>>> from transformers_4573 import DataCollatorForSeq2Seq
 
 >>> data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=model)
 ```
@@ -107,7 +107,7 @@ Usa [`DataCollatorForSeq2Seq`] para crear un lote de ejemplos. Esto también *re
 Carga T5 con [`AutoModelForSeq2SeqLM`]:
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("google-t5/t5-small")
 ```

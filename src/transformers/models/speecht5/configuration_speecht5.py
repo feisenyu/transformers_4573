@@ -173,7 +173,7 @@ class SpeechT5Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SpeechT5Model, SpeechT5Config
+    >>> from transformers_4573 import SpeechT5Model, SpeechT5Config
 
     >>> # Initializing a "microsoft/speecht5_asr" style configuration
     >>> configuration = SpeechT5Config()
@@ -378,7 +378,7 @@ class SpeechT5HifiGanConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SpeechT5HifiGan, SpeechT5HifiGanConfig
+    >>> from transformers_4573 import SpeechT5HifiGan, SpeechT5HifiGanConfig
 
     >>> # Initializing a "microsoft/speecht5_hifigan" style configuration
     >>> configuration = SpeechT5HifiGanConfig()

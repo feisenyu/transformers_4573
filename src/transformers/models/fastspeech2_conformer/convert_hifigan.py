@@ -20,7 +20,7 @@ from pathlib import Path
 import torch
 import yaml
 
-from transformers import FastSpeech2ConformerHifiGan, FastSpeech2ConformerHifiGanConfig, logging
+from transformers_4573 import FastSpeech2ConformerHifiGan, FastSpeech2ConformerHifiGanConfig, logging
 
 
 logging.set_verbosity_info()

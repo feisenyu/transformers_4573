@@ -13,8 +13,8 @@
 # limitations under the License.
 import unittest
 
-from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, GenerationConfig, QuarkConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoConfig, AutoModelForCausalLM, AutoTokenizer, GenerationConfig, QuarkConfig
+from transformers_4573.testing_utils import (
     cleanup,
     is_torch_available,
     require_accelerate,
@@ -24,7 +24,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils.import_utils import is_quark_available
+from transformers_4573.utils.import_utils import is_quark_available
 
 
 if is_torch_available():

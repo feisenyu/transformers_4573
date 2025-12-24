@@ -21,8 +21,8 @@ import os
 import torch
 import torch.nn as nn
 
-from transformers import GPTNeoConfig, GPTNeoForCausalLM
-from transformers.utils import logging
+from transformers_4573 import GPTNeoConfig, GPTNeoForCausalLM
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

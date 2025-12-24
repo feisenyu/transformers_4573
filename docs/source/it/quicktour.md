@@ -74,7 +74,7 @@ pip install torch
 Importa [`pipeline`] e specifica il compito che vuoi completare:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classificatore = pipeline("sentiment-analysis", model="MilaNLProc/feel-it-italian-sentiment")
 ```
@@ -108,7 +108,7 @@ Crea una [`pipeline`] con il compito che vuoi risolvere e con il modello che vuo
 
 ```py
 >>> import torch
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> riconoscitore_vocale = pipeline(
 ...     "automatic-speech-recognition", model="radiogroup-crits/wav2vec2-xls-r-1b-italian-doc4lm-5gram"
@@ -151,7 +151,7 @@ La [`pipeline`] può ospitare qualsiasi modello del [Model Hub](https://huggingf
 Usa [`AutoModelForSequenceClassification`] e [`AutoTokenizer`] per caricare il modello pre-allenato e il suo tokenizer associato (maggiori informazioni su una `AutoClass` in seguito):
 
 ```py
->>> from transformers import AutoTokenizer, AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoTokenizer, AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained(model_name)
 >>> tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -182,7 +182,7 @@ Un tokenizer è responsabile dell'elaborazione del testo in modo da trasformarlo
 Carica un tokenizer con [`AutoTokenizer`]:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> nome_del_modello = "nlptown/bert-base-multilingual-uncased-sentiment"
 >>> tokenizer = AutoTokenizer.from_pretrained(nome_del_modello)
@@ -224,7 +224,7 @@ Leggi il tutorial sul [preprocessing](./preprocessing) per maggiori dettagli sul
 🤗 Transformers fornisce un metodo semplice e unificato per caricare istanze pre-allenate. Questo significa che puoi caricare un [`AutoModel`] come caricheresti un [`AutoTokenizer`]. L'unica differenza è selezionare l'[`AutoModel`] corretto per il compito di interesse. Dato che stai facendo classificazione di testi, o sequenze, carica [`AutoModelForSequenceClassification`]:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model_name = "nlptown/bert-base-multilingual-uncased-sentiment"
 >>> pt_model = AutoModelForSequenceClassification.from_pretrained(model_name)
@@ -289,7 +289,7 @@ Una caratteristica particolarmente interessante di 🤗 Transformers è la sua a
 
 
 ```py
->>> from transformers import AutoModel
+>>> from transformers_4573 import AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained(pt_save_directory)
 >>> pt_model = AutoModelForSequenceClassification.from_pretrained(pt_save_directory, from_pt=True)

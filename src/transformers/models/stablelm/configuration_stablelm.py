@@ -94,7 +94,7 @@ class StableLmConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import StableLmModel, StableLmConfig
+    >>> from transformers_4573 import StableLmModel, StableLmConfig
 
     >>> # Initializing a StableLM stablelm-3b style configuration
     >>> configuration = StableLmConfig()

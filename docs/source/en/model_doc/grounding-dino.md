@@ -50,7 +50,7 @@ Here's how to use the model for zero-shot object detection:
 
 >>> import torch
 >>> from PIL import Image
->>> from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
+>>> from transformers_4573 import AutoProcessor, AutoModelForZeroShotObjectDetection
 from accelerate import Accelerator
 
 >>> model_id = "IDEA-Research/grounding-dino-tiny"

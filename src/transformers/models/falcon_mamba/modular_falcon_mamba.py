@@ -118,7 +118,7 @@ class FalconMambaConfig(MambaConfig):
     Example:
 
     ```python
-    >>> from transformers import FalconMambaConfig, FalconMambaModel
+    >>> from transformers_4573 import FalconMambaConfig, FalconMambaModel
 
     >>> # Initializing a FalconMamba configuration
     >>> configuration = FalconMambaConfig()
@@ -214,7 +214,7 @@ class FalconMambaCache(MambaCache):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, FalconMambaForCausalLM, FalconMambaCache
+        >>> from transformers_4573 import AutoTokenizer, FalconMambaForCausalLM, FalconMambaCache
 
         >>> model = FalconMambaForCausalLM.from_pretrained("tiiuae/falcon-mamba-7b")
         >>> tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-mamba-7b")

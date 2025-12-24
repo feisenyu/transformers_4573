@@ -22,12 +22,12 @@ import fairseq
 import torch
 from datasets import load_dataset
 
-from transformers import Wav2Vec2Processor, logging
-from transformers.models.data2vec.configuration_data2vec_audio import Data2VecAudioConfig
+from transformers_4573 import Wav2Vec2Processor, logging
+from transformers_4573.models.data2vec.configuration_data2vec_audio import Data2VecAudioConfig
 
 # Copied from https://github.com/pytorch/fairseq/blob/main/examples/data2vec/models/data2vec_audio.py
-from transformers.models.data2vec.data2vec_audio import Data2VecAudioModel as Dummy  # noqa: F401
-from transformers.models.data2vec.modeling_data2vec_audio import Data2VecAudioForCTC, Data2VecAudioModel
+from transformers_4573.models.data2vec.data2vec_audio import Data2VecAudioModel as Dummy  # noqa: F401
+from transformers_4573.models.data2vec.modeling_data2vec_audio import Data2VecAudioForCTC, Data2VecAudioModel
 
 
 logging.set_verbosity_info()

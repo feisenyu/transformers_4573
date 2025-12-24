@@ -471,7 +471,7 @@ class ApertusForCausalLM(ApertusPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, ApertusForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, ApertusForCausalLM
 
         >>> model = ApertusForCausalLM.from_pretrained("swiss-ai/Apertus-8B")
         >>> tokenizer = AutoTokenizer.from_pretrained("swiss-ai/Apertus-8B")

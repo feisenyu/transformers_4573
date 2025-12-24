@@ -44,7 +44,7 @@ The example below demonstrates how to reconstruct the missing pixels with the [`
 import torch
 import requests
 from PIL import Image
-from transformers import ViTImageProcessor, ViTMAEForPreTraining
+from transformers_4573 import ViTImageProcessor, ViTMAEForPreTraining
 from accelerate import Accelerator
 
 device = Accelerator().device

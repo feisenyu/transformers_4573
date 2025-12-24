@@ -22,7 +22,7 @@ import torch
 from torch import nn
 from torch.nn import CrossEntropyLoss
 
-from transformers.generation import GenerationConfig
+from transformers_4573.generation import GenerationConfig
 
 from ... import initialization as init
 from ...activations import ACT2FN
@@ -59,7 +59,7 @@ except Exception:
     logger.warning("Discovered apex but it failed to load, falling back to Pop2PianoLayerNorm")
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerNorm with T5->Pop2Piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerNorm with T5->Pop2Piano
 class Pop2PianoLayerNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
         """
@@ -89,7 +89,7 @@ if not _load_pop2piano_layer_norm:
     Pop2PianoLayerNorm = FusedRMSNorm
 
 
-# Copied from transformers.models.t5.modeling_t5.T5DenseActDense with T5->Pop2Piano,t5->pop2piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5DenseActDense with T5->Pop2Piano,t5->pop2piano
 class Pop2PianoDenseActDense(nn.Module):
     def __init__(self, config: Pop2PianoConfig):
         super().__init__()
@@ -112,7 +112,7 @@ class Pop2PianoDenseActDense(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5DenseGatedActDense with T5->Pop2Piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5DenseGatedActDense with T5->Pop2Piano
 class Pop2PianoDenseGatedActDense(nn.Module):
     def __init__(self, config: Pop2PianoConfig):
         super().__init__()
@@ -142,7 +142,7 @@ class Pop2PianoDenseGatedActDense(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerFF with T5->Pop2Piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerFF with T5->Pop2Piano
 class Pop2PianoLayerFF(nn.Module):
     def __init__(self, config: Pop2PianoConfig):
         super().__init__()
@@ -161,7 +161,7 @@ class Pop2PianoLayerFF(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5Attention with T5->Pop2Piano,t5->pop2piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5Attention with T5->Pop2Piano,t5->pop2piano
 class Pop2PianoAttention(nn.Module):
     def __init__(
         self,
@@ -366,7 +366,7 @@ class Pop2PianoAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerSelfAttention with T5->Pop2Piano,t5->pop2piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerSelfAttention with T5->Pop2Piano,t5->pop2piano
 class Pop2PianoLayerSelfAttention(nn.Module):
     def __init__(self, config, has_relative_attention_bias=False, layer_idx: Optional[int] = None):
         super().__init__()
@@ -401,7 +401,7 @@ class Pop2PianoLayerSelfAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerCrossAttention with T5->Pop2Piano,t5->pop2piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerCrossAttention with T5->Pop2Piano,t5->pop2piano
 class Pop2PianoLayerCrossAttention(nn.Module):
     def __init__(self, config, layer_idx: Optional[int] = None):
         super().__init__()
@@ -438,7 +438,7 @@ class Pop2PianoLayerCrossAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.t5.modeling_t5.T5Block with T5->Pop2Piano,t5->pop2piano
+# Copied from transformers_4573.models.t5.modeling_t5.T5Block with T5->Pop2Piano,t5->pop2piano
 class Pop2PianoBlock(GradientCheckpointingLayer):
     def __init__(self, config, has_relative_attention_bias=False, layer_idx: Optional[int] = None):
         super().__init__()
@@ -607,7 +607,7 @@ class Pop2PianoPreTrainedModel(PreTrainedModel):
 
 
 class Pop2PianoStack(Pop2PianoPreTrainedModel):
-    # Copied from transformers.models.t5.modeling_t5.T5Stack.__init__ with T5->Pop2Piano,t5->pop2piano
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Stack.__init__ with T5->Pop2Piano,t5->pop2piano
     def __init__(self, config):
         super().__init__(config)
 
@@ -627,7 +627,7 @@ class Pop2PianoStack(Pop2PianoPreTrainedModel):
         self.post_init()
         self.gradient_checkpointing = False
 
-    # Copied from transformers.models.t5.modeling_t5.T5Stack.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Stack.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.embed_tokens = new_embeddings
 
@@ -801,7 +801,7 @@ class Pop2PianoStack(Pop2PianoPreTrainedModel):
             cross_attentions=all_cross_attentions,
         )
 
-    # Copied from transformers.models.gptj.modeling_gptj.GPTJModel._update_causal_mask
+    # Copied from transformers_4573.models.gptj.modeling_gptj.GPTJModel._update_causal_mask
     def _update_causal_mask(
         self,
         attention_mask: Union[torch.Tensor, "BlockMask"],
@@ -871,7 +871,7 @@ class Pop2PianoStack(Pop2PianoPreTrainedModel):
         return causal_mask
 
     @staticmethod
-    # Copied from transformers.models.gptj.modeling_gptj.GPTJModel._prepare_4d_causal_attention_mask_with_cache_position
+    # Copied from transformers_4573.models.gptj.modeling_gptj.GPTJModel._prepare_4d_causal_attention_mask_with_cache_position
     def _prepare_4d_causal_attention_mask_with_cache_position(
         attention_mask: torch.Tensor,
         sequence_length: int,

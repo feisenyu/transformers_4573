@@ -792,7 +792,7 @@ class Data2VecTextForCausalLM(Data2VecTextPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Data2VecTextForCausalLM, Data2VecTextConfig
+        >>> from transformers_4573 import AutoTokenizer, Data2VecTextForCausalLM, Data2VecTextConfig
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/data2vec-text-base")

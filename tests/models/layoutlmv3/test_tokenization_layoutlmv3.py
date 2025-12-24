@@ -21,20 +21,20 @@ import unittest
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     LayoutLMv3TokenizerFast,
     is_mlx_available,
     is_torch_available,
     logging,
 )
-from transformers.models.layoutlmv3.tokenization_layoutlmv3 import VOCAB_FILES_NAMES, LayoutLMv3Tokenizer
-from transformers.testing_utils import (
+from transformers_4573.models.layoutlmv3.tokenization_layoutlmv3 import VOCAB_FILES_NAMES, LayoutLMv3Tokenizer
+from transformers_4573.testing_utils import (
     require_pandas,
     require_tokenizers,
     slow,
 )
-from transformers.tokenization_utils_base import PreTrainedTokenizerBase
+from transformers_4573.tokenization_utils_base import PreTrainedTokenizerBase
 
 from ...test_tokenization_common import (
     SMALL_TRAINING_CORPUS,

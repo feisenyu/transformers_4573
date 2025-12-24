@@ -48,7 +48,7 @@ from .configuration_speech_to_text import Speech2TextConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.bart.modeling_bart.shift_tokens_right
+# Copied from transformers_4573.models.bart.modeling_bart.shift_tokens_right
 def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start_token_id: int):
     """
     Shift input ids one token to the right.
@@ -169,7 +169,7 @@ class Speech2TextSinusoidalPositionalEmbedding(nn.Module):
         return incremental_indices.long() + padding_idx
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -199,7 +199,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.musicgen.modeling_musicgen.MusicgenAttention with Musicgen->Speech2Text
+# Copied from transformers_4573.models.musicgen.modeling_musicgen.MusicgenAttention with Musicgen->Speech2Text
 class Speech2TextAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
@@ -317,7 +317,7 @@ class Speech2TextAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->Speech2Text, MBART->SPEECH_TO_TEXT
+# Copied from transformers_4573.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->Speech2Text, MBART->SPEECH_TO_TEXT
 class Speech2TextEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: Speech2TextConfig):
         super().__init__()
@@ -377,7 +377,7 @@ class Speech2TextEncoderLayer(GradientCheckpointingLayer):
         return hidden_states, attn_weights
 
 
-# copied from transformers.models.mbart.modeling_mbart.MBartDecoderLayer with MBart->Speech2Text, MBART->SPEECH_TO_TEXT
+# copied from transformers_4573.models.mbart.modeling_mbart.MBartDecoderLayer with MBart->Speech2Text, MBART->SPEECH_TO_TEXT
 # TODO: change copy when applying cache class
 class Speech2TextDecoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: Speech2TextConfig, layer_idx=None):
@@ -411,7 +411,7 @@ class Speech2TextDecoderLayer(GradientCheckpointingLayer):
         self.fc2 = nn.Linear(config.decoder_ffn_dim, self.embed_dim)
         self.final_layer_norm = nn.LayerNorm(self.embed_dim)
 
-    # Copied from transformers.models.musicgen.modeling_musicgen.MusicgenDecoderLayer.forward
+    # Copied from transformers_4573.models.musicgen.modeling_musicgen.MusicgenDecoderLayer.forward
     def forward(
         self,
         hidden_states: torch.Tensor,
@@ -937,7 +937,7 @@ class Speech2TextModel(Speech2TextPreTrainedModel):
 
          ```python
          >>> import torch
-         >>> from transformers import Speech2TextModel, AutoFeatureExtractor
+         >>> from transformers_4573 import Speech2TextModel, AutoFeatureExtractor
          >>> from datasets import load_dataset
 
          >>> model = Speech2TextModel.from_pretrained("facebook/s2t-small-librispeech-asr")
@@ -1078,7 +1078,7 @@ class Speech2TextForConditionalGeneration(Speech2TextPreTrainedModel, Generation
 
         ```python
         >>> import torch
-        >>> from transformers import Speech2TextProcessor, Speech2TextForConditionalGeneration
+        >>> from transformers_4573 import Speech2TextProcessor, Speech2TextForConditionalGeneration
         >>> from datasets import load_dataset
 
         >>> model = Speech2TextForConditionalGeneration.from_pretrained("facebook/s2t-small-librispeech-asr")

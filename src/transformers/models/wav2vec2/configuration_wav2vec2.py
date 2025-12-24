@@ -187,7 +187,7 @@ class Wav2Vec2Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Wav2Vec2Config, Wav2Vec2Model
+    >>> from transformers_4573 import Wav2Vec2Config, Wav2Vec2Model
 
     >>> # Initializing a Wav2Vec2 facebook/wav2vec2-base-960h style configuration
     >>> configuration = Wav2Vec2Config()

@@ -18,11 +18,11 @@ import unittest
 import numpy as np
 from huggingface_hub import hf_hub_download
 
-from transformers import is_torch_available, is_vision_available
-from transformers.image_processing_utils import get_size_dict
-from transformers.image_utils import SizeDict
-from transformers.processing_utils import VideosKwargs
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available, is_vision_available
+from transformers_4573.image_processing_utils import get_size_dict
+from transformers_4573.image_utils import SizeDict
+from transformers_4573.processing_utils import VideosKwargs
+from transformers_4573.testing_utils import (
     require_av,
     require_cv2,
     require_decord,
@@ -31,7 +31,7 @@ from transformers.testing_utils import (
     require_torchvision,
     require_vision,
 )
-from transformers.video_utils import group_videos_by_shape, make_batched_videos, reorder_videos
+from transformers_4573.video_utils import group_videos_by_shape, make_batched_videos, reorder_videos
 
 
 if is_torch_available():
@@ -40,8 +40,8 @@ if is_torch_available():
 if is_vision_available():
     import PIL
 
-    from transformers import BaseVideoProcessor
-    from transformers.video_utils import VideoMetadata, load_video
+    from transformers_4573 import BaseVideoProcessor
+    from transformers_4573.video_utils import VideoMetadata, load_video
 
 
 def get_random_video(height, width, num_frames=8, return_torch=False):

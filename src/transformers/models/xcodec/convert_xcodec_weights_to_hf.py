@@ -19,7 +19,7 @@ import re
 import torch
 import yaml
 
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     DacFeatureExtractor,
     XcodecConfig,

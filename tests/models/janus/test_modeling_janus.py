@@ -23,7 +23,7 @@ import numpy as np
 import pytest
 import requests
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     JanusConfig,
     JanusForConditionalGeneration,
@@ -33,9 +33,9 @@ from transformers import (
     is_torch_available,
     is_vision_available,
 )
-from transformers.models.auto import get_values
-from transformers.models.auto.modeling_auto import MODEL_FOR_BACKBONE_MAPPING_NAMES, MODEL_MAPPING_NAMES
-from transformers.testing_utils import (
+from transformers_4573.models.auto import get_values
+from transformers_4573.models.auto.modeling_auto import MODEL_FOR_BACKBONE_MAPPING_NAMES, MODEL_MAPPING_NAMES
+from transformers_4573.testing_utils import (
     Expectations,
     require_torch,
     slow,

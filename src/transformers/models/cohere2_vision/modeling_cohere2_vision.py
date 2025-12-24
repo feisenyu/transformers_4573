@@ -308,7 +308,7 @@ class Cohere2VisionForConditionalGeneration(Cohere2VisionPreTrainedModel, Genera
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, Cohere2VisionForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Cohere2VisionForConditionalGeneration
         >>> import torch
 
         >>> processor = AutoProcessor.from_pretrained("CohereLabs/command-a-vision-07-2025", use_fast=True)

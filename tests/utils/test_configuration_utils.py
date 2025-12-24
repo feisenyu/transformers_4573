@@ -23,9 +23,9 @@ from pathlib import Path
 
 import httpx
 
-from transformers import AutoConfig, BertConfig, Florence2Config, GPT2Config
-from transformers.configuration_utils import PreTrainedConfig
-from transformers.testing_utils import TOKEN, TemporaryHubRepo, is_staging_test, require_torch
+from transformers_4573 import AutoConfig, BertConfig, Florence2Config, GPT2Config
+from transformers_4573.configuration_utils import PreTrainedConfig
+from transformers_4573.testing_utils import TOKEN, TemporaryHubRepo, is_staging_test, require_torch
 
 
 sys.path.append(str(Path(__file__).parent.parent.parent / "utils"))

@@ -22,7 +22,7 @@ from typing import Any, Optional, Union
 
 import numpy as np
 
-from transformers.image_transforms import get_size_with_aspect_ratio
+from transformers_4573.image_transforms import get_size_with_aspect_ratio
 
 from ...feature_extraction_utils import BatchFeature
 from ...image_processing_utils import BaseImageProcessor, ImagesKwargs, get_size_dict
@@ -79,7 +79,7 @@ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
 SUPPORTED_ANNOTATION_FORMATS = (AnnotationFormat.COCO_DETECTION, AnnotationFormat.COCO_PANOPTIC)
 
 
-# Copied from transformers.models.detr.image_processing_detr.get_resize_output_image_size
+# Copied from transformers_4573.models.detr.image_processing_detr.get_resize_output_image_size
 def get_resize_output_image_size(
     input_image: np.ndarray,
     size: Union[int, tuple[int, int], list[int]],
@@ -108,7 +108,7 @@ def get_resize_output_image_size(
     return get_size_with_aspect_ratio(image_size, size, max_size)
 
 
-# Copied from transformers.models.detr.image_processing_detr.get_image_size_for_max_height_width
+# Copied from transformers_4573.models.detr.image_processing_detr.get_image_size_for_max_height_width
 def get_image_size_for_max_height_width(
     input_image: np.ndarray,
     max_height: int,
@@ -144,7 +144,7 @@ def get_image_size_for_max_height_width(
     return new_height, new_width
 
 
-# Copied from transformers.models.detr.image_processing_detr.safe_squeeze
+# Copied from transformers_4573.models.detr.image_processing_detr.safe_squeeze
 def safe_squeeze(arr: np.ndarray, axis: Optional[int] = None) -> np.ndarray:
     """
     Squeezes an array, but only if the axis specified has dim 1.
@@ -158,7 +158,7 @@ def safe_squeeze(arr: np.ndarray, axis: Optional[int] = None) -> np.ndarray:
         return arr
 
 
-# Copied from transformers.models.detr.image_processing_detr.normalize_annotation
+# Copied from transformers_4573.models.detr.image_processing_detr.normalize_annotation
 def normalize_annotation(annotation: dict, image_size: tuple[int, int]) -> dict:
     image_height, image_width = image_size
     norm_annotation = {}
@@ -173,7 +173,7 @@ def normalize_annotation(annotation: dict, image_size: tuple[int, int]) -> dict:
     return norm_annotation
 
 
-# Copied from transformers.models.detr.image_processing_detr.max_across_indices
+# Copied from transformers_4573.models.detr.image_processing_detr.max_across_indices
 def max_across_indices(values: Iterable[Any]) -> list[Any]:
     """
     Return the maximum value across all indices of an iterable of values.
@@ -181,7 +181,7 @@ def max_across_indices(values: Iterable[Any]) -> list[Any]:
     return [max(values_i) for values_i in zip(*values)]
 
 
-# Copied from transformers.models.detr.image_processing_detr.get_max_height_width
+# Copied from transformers_4573.models.detr.image_processing_detr.get_max_height_width
 def get_max_height_width(
     images: list[np.ndarray], input_data_format: Optional[Union[str, ChannelDimension]] = None
 ) -> list[int]:
@@ -200,7 +200,7 @@ def get_max_height_width(
     return (max_height, max_width)
 
 
-# Copied from transformers.models.detr.image_processing_detr.make_pixel_mask
+# Copied from transformers_4573.models.detr.image_processing_detr.make_pixel_mask
 def make_pixel_mask(
     image: np.ndarray, output_size: tuple[int, int], input_data_format: Optional[Union[str, ChannelDimension]] = None
 ) -> np.ndarray:
@@ -219,7 +219,7 @@ def make_pixel_mask(
     return mask
 
 
-# Copied from transformers.models.detr.image_processing_detr.convert_coco_poly_to_mask
+# Copied from transformers_4573.models.detr.image_processing_detr.convert_coco_poly_to_mask
 def convert_coco_poly_to_mask(segmentations, height: int, width: int) -> np.ndarray:
     """
     Convert a COCO polygon annotation to a mask.
@@ -254,7 +254,7 @@ def convert_coco_poly_to_mask(segmentations, height: int, width: int) -> np.ndar
     return masks
 
 
-# Copied from transformers.models.detr.image_processing_detr.prepare_coco_detection_annotation with DETR->ConditionalDetr
+# Copied from transformers_4573.models.detr.image_processing_detr.prepare_coco_detection_annotation with DETR->ConditionalDetr
 def prepare_coco_detection_annotation(
     image,
     target,
@@ -315,7 +315,7 @@ def prepare_coco_detection_annotation(
     return new_target
 
 
-# Copied from transformers.models.detr.image_processing_detr.masks_to_boxes
+# Copied from transformers_4573.models.detr.image_processing_detr.masks_to_boxes
 def masks_to_boxes(masks: np.ndarray) -> np.ndarray:
     """
     Compute the bounding boxes around the provided panoptic segmentation masks.
@@ -350,7 +350,7 @@ def masks_to_boxes(masks: np.ndarray) -> np.ndarray:
     return np.stack([x_min, y_min, x_max, y_max], 1)
 
 
-# Copied from transformers.models.detr.image_processing_detr.prepare_coco_panoptic_annotation with DETR->ConditionalDetr
+# Copied from transformers_4573.models.detr.image_processing_detr.prepare_coco_panoptic_annotation with DETR->ConditionalDetr
 def prepare_coco_panoptic_annotation(
     image: np.ndarray,
     target: dict,
@@ -392,7 +392,7 @@ def prepare_coco_panoptic_annotation(
     return new_target
 
 
-# Copied from transformers.models.detr.image_processing_detr.get_segmentation_image
+# Copied from transformers_4573.models.detr.image_processing_detr.get_segmentation_image
 def get_segmentation_image(
     masks: np.ndarray, input_size: tuple, target_size: tuple, stuff_equiv_classes, deduplicate=False
 ):
@@ -418,7 +418,7 @@ def get_segmentation_image(
     return seg_img
 
 
-# Copied from transformers.models.detr.image_processing_detr.get_mask_area
+# Copied from transformers_4573.models.detr.image_processing_detr.get_mask_area
 def get_mask_area(seg_img: np.ndarray, target_size: tuple[int, int], n_classes: int) -> np.ndarray:
     final_h, final_w = target_size
     np_seg_img = seg_img.astype(np.uint8)
@@ -428,7 +428,7 @@ def get_mask_area(seg_img: np.ndarray, target_size: tuple[int, int], n_classes: 
     return area
 
 
-# Copied from transformers.models.detr.image_processing_detr.score_labels_from_class_probabilities
+# Copied from transformers_4573.models.detr.image_processing_detr.score_labels_from_class_probabilities
 def score_labels_from_class_probabilities(logits: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     probs = scipy.special.softmax(logits, axis=-1)
     labels = probs.argmax(-1, keepdims=True)
@@ -437,7 +437,7 @@ def score_labels_from_class_probabilities(logits: np.ndarray) -> tuple[np.ndarra
     return scores, labels
 
 
-# Copied from transformers.models.detr.image_processing_detr.post_process_panoptic_sample with DetrForSegmentation->ConditionalDetrForSegmentation
+# Copied from transformers_4573.models.detr.image_processing_detr.post_process_panoptic_sample with DetrForSegmentation->ConditionalDetrForSegmentation
 def post_process_panoptic_sample(
     out_logits: np.ndarray,
     masks: np.ndarray,
@@ -523,7 +523,7 @@ def post_process_panoptic_sample(
     return predictions
 
 
-# Copied from transformers.models.detr.image_processing_detr.resize_annotation
+# Copied from transformers_4573.models.detr.image_processing_detr.resize_annotation
 def resize_annotation(
     annotation: dict[str, Any],
     orig_size: tuple[int, int],
@@ -575,7 +575,7 @@ def resize_annotation(
     return new_annotation
 
 
-# Copied from transformers.models.detr.image_processing_detr.binary_mask_to_rle
+# Copied from transformers_4573.models.detr.image_processing_detr.binary_mask_to_rle
 def binary_mask_to_rle(mask):
     """
     Converts given binary mask of shape `(height, width)` to the run-length encoding (RLE) format.
@@ -598,7 +598,7 @@ def binary_mask_to_rle(mask):
     return list(runs)
 
 
-# Copied from transformers.models.detr.image_processing_detr.convert_segmentation_to_rle
+# Copied from transformers_4573.models.detr.image_processing_detr.convert_segmentation_to_rle
 def convert_segmentation_to_rle(segmentation):
     """
     Converts given segmentation map of shape `(height, width)` to the run-length encoding (RLE) format.
@@ -620,7 +620,7 @@ def convert_segmentation_to_rle(segmentation):
     return run_length_encodings
 
 
-# Copied from transformers.models.detr.image_processing_detr.remove_low_and_no_objects
+# Copied from transformers_4573.models.detr.image_processing_detr.remove_low_and_no_objects
 def remove_low_and_no_objects(masks, scores, labels, object_mask_threshold, num_labels):
     """
     Binarize the given masks using `object_mask_threshold`, it returns the associated values of `masks`, `scores` and
@@ -649,7 +649,7 @@ def remove_low_and_no_objects(masks, scores, labels, object_mask_threshold, num_
     return masks[to_keep], scores[to_keep], labels[to_keep]
 
 
-# Copied from transformers.models.detr.image_processing_detr.check_segment_validity
+# Copied from transformers_4573.models.detr.image_processing_detr.check_segment_validity
 def check_segment_validity(mask_labels, mask_probs, k, mask_threshold=0.5, overlap_mask_area_threshold=0.8):
     # Get the mask associated with the k class
     mask_k = mask_labels == k
@@ -668,7 +668,7 @@ def check_segment_validity(mask_labels, mask_probs, k, mask_threshold=0.5, overl
     return mask_exists, mask_k
 
 
-# Copied from transformers.models.detr.image_processing_detr.compute_segments
+# Copied from transformers_4573.models.detr.image_processing_detr.compute_segments
 def compute_segments(
     mask_probs,
     pred_scores,
@@ -809,7 +809,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
     model_input_names = ["pixel_values", "pixel_mask"]
     valid_kwargs = ConditionalDetrImageProcessorKwargs
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.__init__
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.__init__
     def __init__(
         self,
         format: Union[str, AnnotationFormat] = AnnotationFormat.COCO_DETECTION,
@@ -869,7 +869,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
             "input_data_format",
         ]
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.prepare_annotation with DETR->ConditionalDetr
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.prepare_annotation with DETR->ConditionalDetr
     def prepare_annotation(
         self,
         image: np.ndarray,
@@ -902,7 +902,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
             raise ValueError(f"Format {format} is not supported.")
         return target
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.resize
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.resize
     def resize(
         self,
         image: np.ndarray,
@@ -963,7 +963,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
         )
         return image
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.resize_annotation
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.resize_annotation
     def resize_annotation(
         self,
         annotation,
@@ -977,7 +977,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
         """
         return resize_annotation(annotation, orig_size=orig_size, target_size=size, resample=resample)
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.rescale
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.rescale
     def rescale(
         self,
         image: np.ndarray,
@@ -1006,7 +1006,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
         """
         return rescale(image, rescale_factor, data_format=data_format, input_data_format=input_data_format)
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.normalize_annotation
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.normalize_annotation
     def normalize_annotation(self, annotation: dict, image_size: tuple[int, int]) -> dict:
         """
         Normalize the boxes in the annotation from `[top_left_x, top_left_y, bottom_right_x, bottom_right_y]` to
@@ -1014,7 +1014,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
         """
         return normalize_annotation(annotation, image_size=image_size)
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor._update_annotation_for_padded_image
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor._update_annotation_for_padded_image
     def _update_annotation_for_padded_image(
         self,
         annotation: dict,
@@ -1058,7 +1058,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
                 new_annotation[key] = value
         return new_annotation
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor._pad_image
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor._pad_image
     def _pad_image(
         self,
         image: np.ndarray,
@@ -1092,7 +1092,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
             )
         return padded_image, annotation
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.pad
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.pad
     def pad(
         self,
         images: list[np.ndarray],
@@ -1176,7 +1176,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
 
         return encoded_inputs
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.preprocess
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.preprocess
     def preprocess(
         self,
         images: ImageInput,
@@ -1425,7 +1425,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
 
         return encoded_inputs
 
-    # Copied from transformers.models.deformable_detr.image_processing_deformable_detr.DeformableDetrImageProcessor.post_process_object_detection with DeformableDetr->ConditionalDetr
+    # Copied from transformers_4573.models.deformable_detr.image_processing_deformable_detr.DeformableDetrImageProcessor.post_process_object_detection with DeformableDetr->ConditionalDetr
     def post_process_object_detection(
         self, outputs, threshold: float = 0.5, target_sizes: Union[TensorType, list[tuple]] = None, top_k: int = 100
     ):
@@ -1485,7 +1485,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
 
         return results
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.post_process_semantic_segmentation with Detr->ConditionalDetr
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.post_process_semantic_segmentation with Detr->ConditionalDetr
     def post_process_semantic_segmentation(self, outputs, target_sizes: Optional[list[tuple[int, int]]] = None):
         """
         Converts the output of [`ConditionalDetrForSegmentation`] into semantic segmentation maps. Only supports PyTorch.
@@ -1533,7 +1533,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
 
         return semantic_segmentation
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.post_process_instance_segmentation with Detr->ConditionalDetr
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.post_process_instance_segmentation with Detr->ConditionalDetr
     def post_process_instance_segmentation(
         self,
         outputs,
@@ -1617,7 +1617,7 @@ class ConditionalDetrImageProcessor(BaseImageProcessor):
             results.append({"segmentation": segmentation, "segments_info": segments})
         return results
 
-    # Copied from transformers.models.detr.image_processing_detr.DetrImageProcessor.post_process_panoptic_segmentation with Detr->ConditionalDetr
+    # Copied from transformers_4573.models.detr.image_processing_detr.DetrImageProcessor.post_process_panoptic_segmentation with Detr->ConditionalDetr
     def post_process_panoptic_segmentation(
         self,
         outputs,

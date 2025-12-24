@@ -78,7 +78,7 @@ pip install transformers[flax]
 Por último, verifique se o 🤗 Transformers foi instalado com sucesso usando o seguinte comando para baixar um modelo pré-treinado:
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
 ```
 
 Em seguida, imprima um rótulo e sua pontuação:
@@ -105,7 +105,7 @@ mesmo possa ser corrigido o mais rápido possível.
 Verifique que o 🤗 Transformers está instalado corretamente usando o seguinte comando:
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
 ```
 
 ## Instalação editável
@@ -202,7 +202,7 @@ Outra opção para usar o 🤗 Transformers offline é baixar os arquivos antes 
     1. Baixa os arquivos previamente com [`PreTrainedModel.from_pretrained`]:
 
     ```py
-    >>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+    >>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
     >>> tokenizer = AutoTokenizer.from_pretrained("bigscience/T0_3B")
     >>> model = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0_3B")
@@ -242,7 +242,7 @@ Outra opção para usar o 🤗 Transformers offline é baixar os arquivos antes 
 Depois que o arquivo for baixado e armazenado no cachê local, especifique seu caminho local para carregá-lo e usá-lo:
 
 ```py
->>> from transformers import AutoConfig
+>>> from transformers_4573 import AutoConfig
 
 >>> config = AutoConfig.from_pretrained("./your/path/bigscience_t0/config.json")
 ```

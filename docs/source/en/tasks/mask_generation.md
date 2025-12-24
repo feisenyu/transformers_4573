@@ -52,7 +52,7 @@ pip install -q transformers
 The easiest way to infer mask generation models is to use the `mask-generation` pipeline.
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> checkpoint = "facebook/sam2-hiera-base-plus"
 >>> mask_generator = pipeline(model=checkpoint, task="mask-generation")
@@ -117,7 +117,7 @@ You can also use the model without the pipeline. To do so, initialize the model 
 the processor.
 
 ```python
-from transformers import SamModel, SamProcessor
+from transformers_4573 import SamModel, SamProcessor
 from accelerate import Accelerator
 import torch
 device = Accelerator().device
@@ -345,7 +345,7 @@ class SAMDataset(Dataset):
 We can initialize the processor and the dataset with it.
 
 ```python
-from transformers import Sam2Processor
+from transformers_4573 import Sam2Processor
 
 processor = Sam2Processor.from_pretrained("facebook/sam2.1-hiera-small")
 train_dataset = SAMDataset(dataset=train_ds, processor=processor)
@@ -404,7 +404,7 @@ for k,v in batch.items():
 We will now load the model and freeze the vision and the prompt encoder to only train the mask decoder.
 
 ```python
-from transformers import Sam2Model
+from transformers_4573 import Sam2Model
 
 model = Sam2Model.from_pretrained("facebook/sam2.1-hiera-small")
 

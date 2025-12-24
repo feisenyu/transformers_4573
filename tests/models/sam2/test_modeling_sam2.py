@@ -20,7 +20,7 @@ import unittest
 
 import requests
 
-from transformers import (
+from transformers_4573 import (
     Sam2Config,
     Sam2HieraDetConfig,
     Sam2MaskDecoderConfig,
@@ -29,14 +29,14 @@ from transformers import (
     Sam2VisionConfig,
     pipeline,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_torch,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
-from transformers.video_utils import load_video
+from transformers_4573.utils import is_torch_available, is_vision_available
+from transformers_4573.video_utils import load_video
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor
@@ -47,7 +47,7 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import Sam2Model, Sam2Processor, Sam2VisionModel
+    from transformers_4573 import Sam2Model, Sam2Processor, Sam2VisionModel
 
 
 if is_vision_available():

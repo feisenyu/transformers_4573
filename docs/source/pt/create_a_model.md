@@ -31,7 +31,7 @@ A [configuration](main_classes/configuration) refere-se a atributos específicos
 Dê uma olhada a mais em [DistilBERT](model_doc/distilbert) acessando [`DistilBertConfig`] para observar esses atributos:
 
 ```py
->>> from transformers import DistilBertConfig
+>>> from transformers_4573 import DistilBertConfig
 
 >>> config = DistilBertConfig()
 >>> print(config)
@@ -114,7 +114,7 @@ O próximo passo é criar um [model](main_classes/models). O modelo - também va
 Carregar seus atributos de configuração customizados em um modelo:
 
 ```py
->>> from transformers import DistilBertModel
+>>> from transformers_4573 import DistilBertModel
 
 >>> my_config = DistilBertConfig.from_pretrained("./your_model_save_path/my_config.json")
 >>> model = DistilBertModel(my_config)
@@ -141,7 +141,7 @@ Neste ponto, você tem um modelo básico do DistilBERT que gera os *estados ocul
 Por exemplo, [`DistilBertForSequenceClassification`] é um modelo DistilBERT base com uma head de classificação de sequência. A head de calssificação de sequência é uma camada linear no topo das saídas agrupadas.
 
 ```py
->>> from transformers import DistilBertForSequenceClassification
+>>> from transformers_4573 import DistilBertForSequenceClassification
 
 >>> model = DistilBertForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -149,7 +149,7 @@ Por exemplo, [`DistilBertForSequenceClassification`] é um modelo DistilBERT bas
 Reutilize facilmente esse ponto de parada para outra tarefe mudando para uma head de modelo diferente. Para uma tarefe de responder questões, você usaria a head do modelo [`DistilBertForQuestionAnswering`]. A head de responder questões é similar com a de classificação de sequências exceto o fato de que ela é uma camada no topo dos estados das saídas ocultas.
 
 ```py
->>> from transformers import DistilBertForQuestionAnswering
+>>> from transformers_4573 import DistilBertForQuestionAnswering
 
 >>> model = DistilBertForQuestionAnswering.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -172,7 +172,7 @@ Nem todo modelo suporta um 'fast tokenizer'. De uma olhada aqui [table](index#su
 Se você treinou seu prórpio tokenizer, você pode criar um a partir do seu arquivo *vocabulary*:
 
 ```py
->>> from transformers import DistilBertTokenizer
+>>> from transformers_4573 import DistilBertTokenizer
 
 >>> my_tokenizer = DistilBertTokenizer(vocab_file="my_vocab_file.txt", do_lower_case=False, padding_side="left")
 ```
@@ -180,7 +180,7 @@ Se você treinou seu prórpio tokenizer, você pode criar um a partir do seu arq
 É importante lembrar que o vocabulário de um tokenizer customizado será diferente de um vocabulário gerado pelo tokenizer de um modelo pré treinado. Você precisa usar o vocabulário de um modelo pré treinado se você estiver usando um modelo pré treinado, caso contrário as entradas não farão sentido. Criando um tokenizer com um vocabulário de um modelo pré treinado com a classe [`DistilBertTokenizer`]:
 
 ```py
->>> from transformers import DistilBertTokenizer
+>>> from transformers_4573 import DistilBertTokenizer
 
 >>> slow_tokenizer = DistilBertTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -188,7 +188,7 @@ Se você treinou seu prórpio tokenizer, você pode criar um a partir do seu arq
 Criando um 'fast tokenizer' com a classe [`DistilBertTokenizerFast`]:
 
 ```py
->>> from transformers import DistilBertTokenizerFast
+>>> from transformers_4573 import DistilBertTokenizerFast
 
 >>> fast_tokenizer = DistilBertTokenizerFast.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -206,7 +206,7 @@ Um extrator de features processa entradas de imagem ou áudio. Ele herda da clas
 Dependendo do que você está trabalhando em um audio ou uma tarefa de visão, crie um estrator de features associado com o modelo que você está usando. Por exemplo, crie um [`ViTFeatureExtractor`] padrão se você estiver usando [ViT](model_doc/vit) para classificação de imagens:
 
 ```py
->>> from transformers import ViTFeatureExtractor
+>>> from transformers_4573 import ViTFeatureExtractor
 
 >>> vit_extractor = ViTFeatureExtractor()
 >>> print(vit_extractor)
@@ -238,7 +238,7 @@ Se você não estiver procurando por nenhuma customização, apenas use o métod
 Modifique qualquer parâmetro dentre os [`ViTFeatureExtractor`] para criar seu extrator de features customizado.
 
 ```py
->>> from transformers import ViTFeatureExtractor
+>>> from transformers_4573 import ViTFeatureExtractor
 
 >>> my_vit_extractor = ViTFeatureExtractor(resample="PIL.Image.BOX", do_normalize=False, image_mean=[0.3, 0.3, 0.3])
 >>> print(my_vit_extractor)
@@ -264,7 +264,7 @@ ViTFeatureExtractor {
 Para entradas de áutio, você pode criar um [`Wav2Vec2FeatureExtractor`] e customizar os parâmetros de uma forma similar:
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> w2v2_extractor = Wav2Vec2FeatureExtractor()
 >>> print(w2v2_extractor)
@@ -286,7 +286,7 @@ Para modelos que suportam tarefas multimodais, 🤗 Transformers oferece uma cla
 Crie um extrator de features para lidar com as entradas de áudio.
 
 ```py
->>> from transformers import Wav2Vec2FeatureExtractor
+>>> from transformers_4573 import Wav2Vec2FeatureExtractor
 
 >>> feature_extractor = Wav2Vec2FeatureExtractor(padding_value=1.0, do_normalize=True)
 ```
@@ -294,7 +294,7 @@ Crie um extrator de features para lidar com as entradas de áudio.
 Crie um tokenizer para lidar com a entrada de textos:
 
 ```py
->>> from transformers import Wav2Vec2CTCTokenizer
+>>> from transformers_4573 import Wav2Vec2CTCTokenizer
 
 >>> tokenizer = Wav2Vec2CTCTokenizer(vocab_file="my_vocab_file.txt")
 ```
@@ -302,7 +302,7 @@ Crie um tokenizer para lidar com a entrada de textos:
 Combine o extrator de features e o tokenizer no [`Wav2Vec2Processor`]:
 
 ```py
->>> from transformers import Wav2Vec2Processor
+>>> from transformers_4573 import Wav2Vec2Processor
 
 >>> processor = Wav2Vec2Processor(feature_extractor=feature_extractor, tokenizer=tokenizer)
 ```

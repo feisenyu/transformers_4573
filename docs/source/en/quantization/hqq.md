@@ -35,7 +35,7 @@ Quantize a model by creating a [`HqqConfig`] and specifying the `nbits` and `gro
 
 ``` py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, HqqConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, HqqConfig
 
 quant_config = HqqConfig(nbits=8, group_size=64)
 model = AutoModelForCausalLM.from_pretrained(

@@ -589,7 +589,7 @@ class Sam3Processor(ProcessorMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoModel, AutoProcessor
+        >>> from transformers_4573 import AutoModel, AutoProcessor
         >>> from PIL import Image
         >>> import requests
 
@@ -643,7 +643,7 @@ class Sam3Processor(ProcessorMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoModel, AutoProcessor
+        >>> from transformers_4573 import AutoModel, AutoProcessor
         >>> from PIL import Image
         >>> import requests
 

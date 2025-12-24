@@ -41,7 +41,7 @@ Here's how to use the model for one-shot semantic segmentation:
 ```python
 import torch
 from datasets import load_dataset
-from transformers import SegGptImageProcessor, SegGptForImageSegmentation
+from transformers_4573 import SegGptImageProcessor, SegGptForImageSegmentation
 
 checkpoint = "BAAI/seggpt-vit-large"
 image_processor = SegGptImageProcessor.from_pretrained(checkpoint)

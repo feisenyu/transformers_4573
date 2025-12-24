@@ -367,7 +367,7 @@ class HGNetV2Backbone(HGNetV2PreTrainedModel, BackboneMixin):
         Examples:
 
         ```python
-        >>> from transformers import HGNetV2Config, HGNetV2Backbone
+        >>> from transformers_4573 import HGNetV2Config, HGNetV2Backbone
         >>> import torch
 
         >>> config = HGNetV2Config()
@@ -452,7 +452,7 @@ class HGNetV2ForImageClassification(HGNetV2PreTrainedModel):
         ```python
         >>> import torch
         >>> import requests
-        >>> from transformers import HGNetV2ForImageClassification, AutoImageProcessor
+        >>> from transformers_4573 import HGNetV2ForImageClassification, AutoImageProcessor
         >>> from PIL import Image
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"

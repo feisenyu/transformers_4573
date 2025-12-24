@@ -504,7 +504,7 @@ class AudioFlamingo3ForConditionalGeneration(AudioFlamingo3PreTrainedModel, Gene
         Example:
 
         ```python
-        >>> from transformers import AudioFlamingo3ForConditionalGeneration, AutoProcessor
+        >>> from transformers_4573 import AudioFlamingo3ForConditionalGeneration, AutoProcessor
 
         >>> model_id = "nvidia/audio-flamingo-3-hf"
         >>> processor = AutoProcessor.from_pretrained(model_id)

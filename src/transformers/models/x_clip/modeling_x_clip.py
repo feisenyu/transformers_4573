@@ -48,7 +48,7 @@ def contrastive_loss(logits: torch.Tensor) -> torch.Tensor:
     return nn.functional.cross_entropy(logits, torch.arange(len(logits), device=logits.device))
 
 
-# Copied from transformers.models.clip.modeling_clip.clip_loss with clip->x_clip
+# Copied from transformers_4573.models.clip.modeling_clip.clip_loss with clip->x_clip
 def x_clip_loss(similarity: torch.Tensor) -> torch.Tensor:
     caption_loss = contrastive_loss(similarity)
     image_loss = contrastive_loss(similarity.t())
@@ -98,7 +98,7 @@ class XCLIPOutput(ModelOutput):
         )
 
 
-# Copied from transformers.models.clip.modeling_clip.CLIPVisionEmbeddings with CLIP->XCLIP
+# Copied from transformers_4573.models.clip.modeling_clip.CLIPVisionEmbeddings with CLIP->XCLIP
 class XCLIPVisionEmbeddings(nn.Module):
     def __init__(self, config: XCLIPVisionConfig):
         super().__init__()
@@ -182,7 +182,7 @@ class XCLIPVisionEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.clip.modeling_clip.CLIPTextEmbeddings with CLIP->XCLIP
+# Copied from transformers_4573.models.clip.modeling_clip.CLIPTextEmbeddings with CLIP->XCLIP
 class XCLIPTextEmbeddings(nn.Module):
     def __init__(self, config: XCLIPTextConfig):
         super().__init__()
@@ -223,7 +223,7 @@ class XCLIPTextEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.siglip.modeling_siglip.eager_attention_forward
+# Copied from transformers_4573.models.siglip.modeling_siglip.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -336,7 +336,7 @@ class XCLIPMLP(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.altclip.modeling_altclip.AltCLIPEncoderLayer with AltCLIP->XCLIP
+# Copied from transformers_4573.models.altclip.modeling_altclip.AltCLIPEncoderLayer with AltCLIP->XCLIP
 class XCLIPEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: XCLIPConfig):
         super().__init__()
@@ -387,7 +387,7 @@ class XCLIPEncoderLayer(GradientCheckpointingLayer):
         return outputs
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -403,7 +403,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.beit.modeling_beit.BeitDropPath with Beit->XCLIP
+# Copied from transformers_4573.models.beit.modeling_beit.BeitDropPath with Beit->XCLIP
 class XCLIPDropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -556,7 +556,7 @@ class XCLIPPreTrainedModel(PreTrainedModel):
                 init.zeros_(module.bias)
 
 
-# Copied from transformers.models.altclip.modeling_altclip.AltCLIPEncoder with AltCLIP->XCLIP
+# Copied from transformers_4573.models.altclip.modeling_altclip.AltCLIPEncoder with AltCLIP->XCLIP
 class XCLIPEncoder(nn.Module):
     """
     Transformer encoder consisting of `config.num_hidden_layers` self attention layers. Each layer is a
@@ -745,7 +745,7 @@ class XCLIPTextModel(XCLIPPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, XCLIPTextModel
+        >>> from transformers_4573 import AutoTokenizer, XCLIPTextModel
 
         >>> model = XCLIPTextModel.from_pretrained("microsoft/xclip-base-patch32")
         >>> tokenizer = AutoTokenizer.from_pretrained("microsoft/xclip-base-patch32")
@@ -940,7 +940,7 @@ class XCLIPVisionModel(XCLIPPreTrainedModel):
         >>> import torch
         >>> import numpy as np
 
-        >>> from transformers import AutoProcessor, XCLIPVisionModel
+        >>> from transformers_4573 import AutoProcessor, XCLIPVisionModel
         >>> from huggingface_hub import hf_hub_download
 
         >>> np.random.seed(0)
@@ -1219,7 +1219,7 @@ class XCLIPModel(XCLIPPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, AutoModel
+        >>> from transformers_4573 import AutoTokenizer, AutoModel
 
         >>> tokenizer = AutoTokenizer.from_pretrained("microsoft/xclip-base-patch32")
         >>> model = AutoModel.from_pretrained("microsoft/xclip-base-patch32")
@@ -1255,7 +1255,7 @@ class XCLIPModel(XCLIPPreTrainedModel):
         >>> import torch
         >>> import numpy as np
 
-        >>> from transformers import AutoProcessor, AutoModel
+        >>> from transformers_4573 import AutoProcessor, AutoModel
         >>> from huggingface_hub import hf_hub_download
 
         >>> np.random.seed(0)
@@ -1357,7 +1357,7 @@ class XCLIPModel(XCLIPPreTrainedModel):
         >>> import torch
         >>> import numpy as np
 
-        >>> from transformers import AutoProcessor, AutoModel
+        >>> from transformers_4573 import AutoProcessor, AutoModel
         >>> from huggingface_hub import hf_hub_download
 
         >>> np.random.seed(0)

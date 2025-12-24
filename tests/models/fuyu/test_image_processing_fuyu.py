@@ -6,8 +6,8 @@ import numpy as np
 import pytest
 from packaging import version
 
-from transformers.image_utils import SizeDict
-from transformers.testing_utils import (
+from transformers_4573.image_utils import SizeDict
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     require_torchvision,
@@ -15,7 +15,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin
 
@@ -23,7 +23,7 @@ from ...test_image_processing_common import ImageProcessingTestMixin
 if is_torch_available() and is_vision_available():
     import torch
 
-    from transformers import FuyuImageProcessor, FuyuImageProcessorFast
+    from transformers_4573 import FuyuImageProcessor, FuyuImageProcessorFast
 
 if is_vision_available():
     from PIL import Image
@@ -386,7 +386,7 @@ class FuyuImageProcessorTest(ImageProcessingTestMixin, unittest.TestCase):
         if not self.test_fast_image_processor or self.fast_image_processing_class is None:
             self.skipTest(reason="Fast processor not available")
 
-        from transformers.image_utils import SizeDict
+        from transformers_4573.image_utils import SizeDict
 
         image_processor_fast = self.fast_image_processing_class(**self.image_processor_dict)
 

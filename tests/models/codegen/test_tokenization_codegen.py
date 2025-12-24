@@ -1,8 +1,8 @@
 import unittest
 
 from tests.test_tokenization_common import TokenizerTesterMixin
-from transformers.models.codegen.tokenization_codegen import CodeGenTokenizer
-from transformers.testing_utils import (
+from transformers_4573.models.codegen.tokenization_codegen import CodeGenTokenizer
+from transformers_4573.testing_utils import (
     require_tokenizers,
 )
 

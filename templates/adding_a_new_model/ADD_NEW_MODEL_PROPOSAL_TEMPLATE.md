@@ -672,7 +672,7 @@ implementation of *[camelcase name of model]*, *i.e.* the following command
 should work:
 
 ```python
-from transformers import [camelcase name of model]Model, [camelcase name of model]Config
+from transformers_4573 import [camelcase name of model]Model, [camelcase name of model]Config
 model = [camelcase name of model]Model([camelcase name of model]Config())
 ```
 
@@ -1012,7 +1012,7 @@ the original repository, an analogous script for 🤗 Transformers should
 be created. It should look similar to this:
 
 ```python
-from transformers import [camelcase name of model]Tokenizer
+from transformers_4573 import [camelcase name of model]Tokenizer
 input_str = "This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words."
 
 tokenizer = [camelcase name of model]Tokenizer.from_pretrained("/path/to/tokenizer/folder/")

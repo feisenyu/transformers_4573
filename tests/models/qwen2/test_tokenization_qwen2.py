@@ -16,8 +16,8 @@
 import unittest
 
 from tests.test_tokenization_common import TokenizerTesterMixin
-from transformers.models.qwen2.tokenization_qwen2 import Qwen2Tokenizer
-from transformers.testing_utils import (
+from transformers_4573.models.qwen2.tokenization_qwen2 import Qwen2Tokenizer
+from transformers_4573.testing_utils import (
     require_tokenizers,
 )
 

@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import LongformerConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import LongformerConfig, is_torch_available
+from transformers_4573.testing_utils import (
     is_flaky,
     require_sentencepiece,
     require_tokenizers,
@@ -33,7 +33,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         LongformerForMaskedLM,
         LongformerForMultipleChoice,
         LongformerForQuestionAnswering,
@@ -41,7 +41,7 @@ if is_torch_available():
         LongformerForTokenClassification,
         LongformerModel,
     )
-    from transformers.models.longformer.modeling_longformer import LongformerSelfAttention
+    from transformers_4573.models.longformer.modeling_longformer import LongformerSelfAttention
 
 
 class LongformerModelTester:

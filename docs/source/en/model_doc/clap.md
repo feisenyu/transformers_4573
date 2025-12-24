@@ -41,7 +41,7 @@ The example below demonstrates how to extract text embeddings with the [`AutoMod
 
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModel
+from transformers_4573 import AutoTokenizer, AutoModel
 
 model = AutoModel.from_pretrained("laion/clap-htsat-unfused", dtype=torch.float16, device_map="auto")
 tokenizer = AutoTokenizer.from_pretrained("laion/clap-htsat-unfused")

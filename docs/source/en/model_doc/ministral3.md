@@ -41,7 +41,7 @@ Key features:
 
 ```py
 import torch
-from transformers import Mistral3ForConditionalGeneration, MistralCommonBackend
+from transformers_4573 import Mistral3ForConditionalGeneration, MistralCommonBackend
 
 
 model_id = "mistralai/Ministral-3-3B-Instruct-2512"

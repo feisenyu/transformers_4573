@@ -73,7 +73,7 @@ class RoFormerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import RoFormerModel, RoFormerConfig
+    >>> from transformers_4573 import RoFormerModel, RoFormerConfig
 
     >>> # Initializing a RoFormer junnyu/roformer_chinese_base style configuration
     >>> configuration = RoFormerConfig()

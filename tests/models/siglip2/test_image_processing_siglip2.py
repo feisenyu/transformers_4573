@@ -15,9 +15,9 @@
 
 import unittest
 
-from transformers.image_utils import load_image
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torchvision_available, is_vision_available
+from transformers_4573.image_utils import load_image
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 from ...test_processing_common import url_to_local_path
@@ -26,11 +26,11 @@ from ...test_processing_common import url_to_local_path
 if is_vision_available():
     from PIL import Image
 
-    from transformers import Siglip2ImageProcessor
+    from transformers_4573 import Siglip2ImageProcessor
 
 
 if is_torchvision_available():
-    from transformers import Siglip2ImageProcessorFast
+    from transformers_4573 import Siglip2ImageProcessorFast
 
 
 class Siglip2ImageProcessingTester:

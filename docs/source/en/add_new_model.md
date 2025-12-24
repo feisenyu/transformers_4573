@@ -301,10 +301,10 @@ The automatically generated code in the `modeling.py` file has the same architec
 
 ### Model initialization
 
-At this point, your code doesn't have to be clean or even fully correct, It is more efficient to quickly create a first draft and then iteratively improve on it. The most important thing is that your model can be instantiated from Transformers. The command below creates a model from the configuration with random weights, verifying that the `__init__` method works.
+At this point, your code doesn't have to be clean or even fully correct, It is more efficient to quickly create a first draft and then iteratively improve on it. The most important thing is that your model can be instantiated from transformers_4573. The command below creates a model from the configuration with random weights, verifying that the `__init__` method works.
 
 ```py
-from transformers import BrandNewLlama, BrandNewLlamaConfig
+from transformers_4573 import BrandNewLlama, BrandNewLlamaConfig
 model = BrandNewLlama(BrandNewLlamaConfig())
 ```
 
@@ -532,7 +532,7 @@ input_ids = model.tokenize(input_str)
 You may need to search the original repository to find the correct tokenizer function or modify the existing tokenizer in your clone of the original repository to only return the `input_ids`. The script for your tokenizer should look similar to the following.
 
 ```py
-from transformers import BrandNewLlamaTokenizer
+from transformers_4573 import BrandNewLlamaTokenizer
 
 input_str = "This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words."
 tokenizer = BrandNewLlamaTokenizer.from_pretrained("/path/to/tokenizer/folder/")

@@ -52,7 +52,7 @@ python src/transformers/models/llama/convert_llama_weights_to_hf.py \
 - 변환 후 모델과 토크나이저는 다음과 같이 로드할 수 있습니다:
 
 ```python
-from transformers import LlamaForCausalLM, LlamaTokenizer
+from transformers_4573 import LlamaForCausalLM, LlamaTokenizer
 
 tokenizer = LlamaTokenizer.from_pretrained("/output/path")
 model = LlamaForCausalLM.from_pretrained("/output/path")

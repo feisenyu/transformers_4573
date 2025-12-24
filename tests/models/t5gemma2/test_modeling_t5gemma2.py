@@ -18,14 +18,14 @@ import unittest
 
 import pytest
 
-from transformers import (
+from transformers_4573 import (
     T5Gemma2Config,
     T5Gemma2DecoderConfig,
     T5Gemma2EncoderConfig,
     T5Gemma2TextConfig,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_torch,
     torch_device,
 )
@@ -39,7 +39,7 @@ if is_torch_available():
     import torch
     import torch.nn.functional as F
 
-    from transformers import (
+    from transformers_4573 import (
         T5Gemma2ForConditionalGeneration,
         T5Gemma2ForSequenceClassification,
         T5Gemma2ForTokenClassification,

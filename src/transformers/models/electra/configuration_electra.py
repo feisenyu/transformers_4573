@@ -94,7 +94,7 @@ class ElectraConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import ElectraConfig, ElectraModel
+    >>> from transformers_4573 import ElectraConfig, ElectraModel
 
     >>> # Initializing a ELECTRA electra-base-uncased style configuration
     >>> configuration = ElectraConfig()

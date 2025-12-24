@@ -15,8 +15,8 @@
 import copy
 import unittest
 
-from transformers import UMT5Config, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import UMT5Config, is_torch_available
+from transformers_4573.testing_utils import (
     require_sentencepiece,
     require_tokenizers,
     require_torch,
@@ -34,7 +34,7 @@ if is_torch_available():
     import torch
     import torch.nn.functional as F
 
-    from transformers import (
+    from transformers_4573 import (
         AutoTokenizer,
         UMT5EncoderModel,
         UMT5ForConditionalGeneration,

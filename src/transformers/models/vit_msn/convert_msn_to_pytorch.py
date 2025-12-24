@@ -22,8 +22,8 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-from transformers import ViTImageProcessor, ViTMSNConfig, ViTMSNModel
-from transformers.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from transformers_4573 import ViTImageProcessor, ViTMSNConfig, ViTMSNModel
+from transformers_4573.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 
 
 torch.set_grad_enabled(False)

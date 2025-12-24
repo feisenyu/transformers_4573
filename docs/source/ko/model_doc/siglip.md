@@ -54,7 +54,7 @@ SigLIP을 사용하는 방법에는 두 가지 주요 방법이 있습니다: �
 파이프라인을 사용하면 몇 줄의 코드로 모델을 사용할 수 있습니다:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 >>> from PIL import Image
 >>> import requests
 
@@ -80,7 +80,7 @@ SigLIP을 사용하는 방법에는 두 가지 주요 방법이 있습니다: �
 ```python
 >>> from PIL import Image
 >>> import requests
->>> from transformers import AutoProcessor, AutoModel
+>>> from transformers_4573 import AutoProcessor, AutoModel
 >>> import torch
 
 >>> model = AutoModel.from_pretrained("google/siglip-base-patch16-224")
@@ -130,7 +130,7 @@ Flash Attention 2를 사용하여 모델을 로드하고 실행하려면 아래 
 >>> import torch
 >>> import requests
 >>> from PIL import Image
->>> from transformers import SiglipProcessor, SiglipModel
+>>> from transformers_4573 import SiglipProcessor, SiglipModel
 >>> device = "cuda" # 모델을 로드할 장치
 
 >>> model = SiglipModel.from_pretrained(
@@ -172,7 +172,7 @@ PyTorch는 `torch.nn.functional`의 일부로 스케일된 점곱 어텐션(SDPA
 `from_pretrained()`에서 `attn_implementation="sdpa"`를 설정하여 SDPA를 명시적으로 요청할 수 있습니다. `torch>=2.1.1`이 설치되어 있는지 확인하세요.
 
 ```python
->>> from transformers import SiglipModel
+>>> from transformers_4573 import SiglipModel
 
 >>> model = SiglipModel.from_pretrained(
 ...     "google/siglip-so400m-patch14-384",

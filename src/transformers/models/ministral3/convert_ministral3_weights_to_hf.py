@@ -19,7 +19,7 @@ import re
 import torch
 from safetensors.torch import load_file
 
-from transformers import (
+from transformers_4573 import (
     GenerationConfig,
     Ministral3Config,
     Ministral3ForCausalLM,
@@ -29,9 +29,9 @@ from transformers import (
     PixtralProcessor,
     PixtralVisionConfig,
 )
-from transformers.integrations.finegrained_fp8 import replace_with_fp8_linear
-from transformers.integrations.mistral import convert_tekken_tokenizer
-from transformers.quantizers.auto import AutoQuantizationConfig
+from transformers_4573.integrations.finegrained_fp8 import replace_with_fp8_linear
+from transformers_4573.integrations.mistral import convert_tekken_tokenizer
+from transformers_4573.quantizers.auto import AutoQuantizationConfig
 
 
 # fmt: off

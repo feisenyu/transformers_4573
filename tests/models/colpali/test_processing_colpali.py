@@ -17,15 +17,15 @@ import unittest
 
 import torch
 
-from transformers.models.colpali.processing_colpali import ColPaliProcessor
-from transformers.testing_utils import get_tests_dir, require_torch, require_vision
-from transformers.utils import is_vision_available
+from transformers_4573.models.colpali.processing_colpali import ColPaliProcessor
+from transformers_4573.testing_utils import get_tests_dir, require_torch, require_vision
+from transformers_4573.utils import is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_vision_available():
-    from transformers import ColPaliProcessor, GemmaTokenizer
+    from transformers_4573 import ColPaliProcessor, GemmaTokenizer
 
 SAMPLE_VOCAB = get_tests_dir("fixtures/test_sentencepiece.model")
 

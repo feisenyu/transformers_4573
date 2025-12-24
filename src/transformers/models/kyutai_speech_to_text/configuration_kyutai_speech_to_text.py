@@ -104,7 +104,7 @@ class KyutaiSpeechToTextConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import KyutaiSpeechToTextConfig, KyutaiSpeechToTextForConditionalGeneration
+    >>> from transformers_4573 import KyutaiSpeechToTextConfig, KyutaiSpeechToTextForConditionalGeneration
 
     >>> # Initializing a KyutaiSpeechToTextConfig
     >>> configuration = KyutaiSpeechToTextConfig()

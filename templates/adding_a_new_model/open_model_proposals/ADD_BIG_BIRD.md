@@ -682,7 +682,7 @@ implementation of *BigBird*, *i.e.* the following command
 should work:
 
 ```python
-from transformers import BigBirdModel, BigBirdConfig
+from transformers_4573 import BigBirdModel, BigBirdConfig
 model = BigBirdModel(BigBirdConfig())
 ```
 
@@ -1001,7 +1001,7 @@ For BigBird, the tokenizer (sentencepiece) files can be found [here](https://git
 as easily as:
 
 ```python
-from transformers import BertGenerationTokenizer
+from transformers_4573 import BertGenerationTokenizer
 tokenizer = BertGenerationTokenizer("/path/to/gpt2.model/file")
 ```
 
@@ -1023,7 +1023,7 @@ the original repository, an analogous script for 🤗 Transformers should
 be created. It should look similar to this:
 
 ```python
-from transformers import BertGenerationTokenizer
+from transformers_4573 import BertGenerationTokenizer
 input_str = "This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words."
 
 tokenizer = BertGenerationTokenizer.from_pretrained("/path/big/bird/folder")

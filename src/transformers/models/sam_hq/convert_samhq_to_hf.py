@@ -28,7 +28,7 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-from transformers import SamHQConfig, SamHQModel, SamHQProcessor, SamHQVisionConfig, SamImageProcessor
+from transformers_4573 import SamHQConfig, SamHQModel, SamHQProcessor, SamHQVisionConfig, SamImageProcessor
 
 
 def get_config(model_name):

@@ -48,7 +48,7 @@ Here is a quick example of how to encode and decode an audio using this model:
 
 ```python
 >>> from datasets import load_dataset, Audio
->>> from transformers import DacModel, AutoProcessor
+>>> from transformers_4573 import DacModel, AutoProcessor
 >>> librispeech_dummy = load_dataset("hf-internal-testing/librispeech_asr_dummy", "clean", split="validation")
 
 >>> model = DacModel.from_pretrained("descript/dac_16khz")

@@ -28,7 +28,7 @@ object for which you are lacking a dependency will error-out when calling any me
 This object is still importable:
 
 ```python
->>> from transformers import DetrImageProcessorFast
+>>> from transformers_4573 import DetrImageProcessorFast
 >>> print(DetrImageProcessorFast)
 <class 'DetrImageProcessorFast'>
 ```

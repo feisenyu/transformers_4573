@@ -32,7 +32,7 @@ rendered properly in your Markdown viewer.
 `generate()` 메서드를 사용하면 GPT NeoX Japanese 모델을 통해 텍스트를 생성할 수 있습니다.
 
 ```python
->>> from transformers import GPTNeoXJapaneseForCausalLM, GPTNeoXJapaneseTokenizer
+>>> from transformers_4573 import GPTNeoXJapaneseForCausalLM, GPTNeoXJapaneseTokenizer
 
 >>> model = GPTNeoXJapaneseForCausalLM.from_pretrained("abeja/gpt-neox-japanese-2.7b")
 >>> tokenizer = GPTNeoXJapaneseTokenizer.from_pretrained("abeja/gpt-neox-japanese-2.7b")

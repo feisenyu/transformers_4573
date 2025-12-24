@@ -73,7 +73,7 @@ class BloomConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BloomConfig, BloomModel
+    >>> from transformers_4573 import BloomConfig, BloomModel
 
     >>> # Initializing a Bloom configuration
     >>> configuration = BloomConfig()

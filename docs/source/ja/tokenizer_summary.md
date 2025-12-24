@@ -74,7 +74,7 @@ rendered properly in your Markdown viewer.
 
 
 ```py
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> tokenizer.tokenize("I have a new GPU!")
@@ -86,7 +86,7 @@ rendered properly in your Markdown viewer.
 別の例として、[`~transformers.XLNetTokenizer`]は以下のように以前のサンプルテキストをトークン化します：
 
 ```py
->>> from transformers import XLNetTokenizer
+>>> from transformers_4573 import XLNetTokenizer
 
 >>> tokenizer = XLNetTokenizer.from_pretrained("xlnet/xlnet-base-cased")
 >>> tokenizer.tokenize("Don't you love 🤗 Transformers? We sure do.")

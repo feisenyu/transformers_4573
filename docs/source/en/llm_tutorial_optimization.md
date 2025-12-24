@@ -68,7 +68,7 @@ If you have access to an 8 x 80GB A100 node, you could load BLOOM as follows
 ```
 
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("bigscience/bloom", device_map="auto", pad_token_id=0)
 ```
@@ -82,7 +82,7 @@ Since the model is loaded in bfloat16 precision, using our rule of thumb above, 
 We first load the model and tokenizer and then pass both to Transformers' [pipeline](https://huggingface.co/docs/transformers/main_classes/pipelines) object.
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, pipeline
 import torch
 
 model = AutoModelForCausalLM.from_pretrained("bigcode/octocoder", dtype=torch.bfloat16, device_map="auto", pad_token_id=0)

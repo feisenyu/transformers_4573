@@ -23,8 +23,8 @@ import re
 import torch
 from huggingface_hub import hf_hub_download, split_torch_state_dict_into_shards
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, PreTrainedTokenizerFast, RwkvConfig
-from transformers.modeling_utils import WEIGHTS_INDEX_NAME
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, PreTrainedTokenizerFast, RwkvConfig
+from transformers_4573.modeling_utils import WEIGHTS_INDEX_NAME
 
 
 NUM_HIDDEN_LAYERS_MAPPING = {

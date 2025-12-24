@@ -51,7 +51,7 @@ import torch
 from datasets import load_dataset
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     MODEL_FOR_CAUSAL_LM_MAPPING,
     AutoConfig,
@@ -64,10 +64,10 @@ from transformers import (
     is_torch_xla_available,
     set_seed,
 )
-from transformers.integrations import is_deepspeed_zero3_enabled
-from transformers.testing_utils import CaptureLogger
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.integrations import is_deepspeed_zero3_enabled
+from transformers_4573.testing_utils import CaptureLogger
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

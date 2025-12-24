@@ -38,7 +38,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="text-generation",
@@ -54,7 +54,7 @@ pipe("Explain quantum computing in simple terms ", max_new_tokens=50)
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("ibm-granite/granite-3.3-2b-base")
 model = AutoModelForCausalLM.from_pretrained(
@@ -85,7 +85,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_4bit=True)
 tokenizer = AutoTokenizer.from_pretrained("ibm-granite/granite-3.3-8b-base")

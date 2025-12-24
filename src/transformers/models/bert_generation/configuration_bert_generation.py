@@ -67,7 +67,7 @@ class BertGenerationConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import BertGenerationConfig, BertGenerationEncoder
+    >>> from transformers_4573 import BertGenerationConfig, BertGenerationEncoder
 
     >>> # Initializing a BertGeneration config
     >>> configuration = BertGenerationConfig()

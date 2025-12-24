@@ -37,8 +37,8 @@ from huggingface_hub import (
     ZeroShotImageClassificationInput,
 )
 
-from transformers.models.auto.processing_auto import PROCESSOR_MAPPING_NAMES
-from transformers.pipelines import (
+from transformers_4573.models.auto.processing_auto import PROCESSOR_MAPPING_NAMES
+from transformers_4573.pipelines import (
     AudioClassificationPipeline,
     AutomaticSpeechRecognitionPipeline,
     DepthEstimationPipeline,
@@ -50,7 +50,7 @@ from transformers.pipelines import (
     VideoClassificationPipeline,
     ZeroShotImageClassificationPipeline,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     is_pipeline_test,
     require_av,
     require_pytesseract,
@@ -58,7 +58,7 @@ from transformers.testing_utils import (
     require_torch,
     require_vision,
 )
-from transformers.utils import direct_transformers_import, logging
+from transformers_4573.utils import direct_transformers_import, logging
 
 from .pipelines.test_pipelines_any_to_any import AnyToAnyPipelineTests
 from .pipelines.test_pipelines_audio_classification import AudioClassificationPipelineTests

@@ -119,7 +119,7 @@ En tareas multimodales:
 Para usar inmediatamente un modelo en una entrada determinada (texto, imagen, audio, ...), proporcionamos la API de `pipeline`. Los pipelines agrupan un modelo previamente entrenado con el preprocesamiento que se usó durante el entrenamiento de ese modelo. Aquí se explica cómo usar rápidamente un pipeline para clasificar textos positivos frente a negativos:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Allocate a pipeline for sentiment-analysis
 >>> classifier = pipeline('sentiment-analysis')
@@ -134,7 +134,7 @@ Muchas tareas tienen un `pipeline` preentrenado listo para funcionar, en NLP per
 ``` python
 >>> import requests
 >>> from PIL import Image
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Download an image with cute cats
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png"
@@ -172,7 +172,7 @@ Puedes obtener más información sobre las tareas admitidas por la API de `pipel
 
 Además de `pipeline`, para descargar y usar cualquiera de los modelos previamente entrenados en su tarea dada, todo lo que necesita son tres líneas de código. Aquí está la versión de PyTorch:
 ```python
->>> from transformers import AutoTokenizer, AutoModel
+>>> from transformers_4573 import AutoTokenizer, AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
@@ -183,7 +183,7 @@ Además de `pipeline`, para descargar y usar cualquiera de los modelos previamen
 
 Y aquí está el código equivalente para TensorFlow:
 ```python
->>> from transformers import AutoTokenizer, TFAutoModel
+>>> from transformers_4573 import AutoTokenizer, TFAutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = TFAutoModel.from_pretrained("google-bert/bert-base-uncased")

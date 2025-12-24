@@ -51,7 +51,7 @@ class ImageToTextPipeline(Pipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> captioner = pipeline(model="ydshieh/vit-gpt2-coco-en")
     >>> captioner("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")

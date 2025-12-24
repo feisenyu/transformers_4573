@@ -21,14 +21,14 @@ from huggingface_hub import hf_hub_download
 from PIL import Image
 from torchvision import transforms as T
 
-from transformers import (
+from transformers_4573 import (
     LayoutLMv3ImageProcessor,
     UdopConfig,
     UdopForConditionalGeneration,
     UdopProcessor,
     UdopTokenizer,
 )
-from transformers.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
+from transformers_4573.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 
 
 def original_transform(image, image_size=224):

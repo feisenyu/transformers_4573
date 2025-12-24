@@ -19,13 +19,13 @@ import os
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     XLNetConfig,
     XLNetForQuestionAnswering,
     XLNetForSequenceClassification,
     XLNetLMHeadModel,
 )
-from transformers.utils import CONFIG_NAME, WEIGHTS_NAME, logging
+from transformers_4573.utils import CONFIG_NAME, WEIGHTS_NAME, logging
 
 
 GLUE_TASKS_NUM_LABELS = {

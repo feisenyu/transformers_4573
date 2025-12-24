@@ -92,7 +92,7 @@ GPU memory occupied: 1343 MB.
 
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-large-uncased").to("cuda")
@@ -155,7 +155,7 @@ default_args = {
 
 
 ```py
->>> from transformers import TrainingArguments, Trainer, logging
+>>> from transformers_4573 import TrainingArguments, Trainer, logging
 
 >>> logging.set_verbosity_error()
 

@@ -20,18 +20,18 @@ import pytest
 import torch
 from parameterized import parameterized
 
-from transformers import AutoTokenizer, GPT2TokenizerFast
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, GPT2TokenizerFast
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     require_torchaudio,
     torch_device,
 )
-from transformers.utils import is_torchaudio_available
+from transformers_4573.utils import is_torchaudio_available
 
 
 if is_torchaudio_available():
-    from transformers import GraniteSpeechFeatureExtractor, GraniteSpeechProcessor
+    from transformers_4573 import GraniteSpeechFeatureExtractor, GraniteSpeechProcessor
 
 
 @require_torch

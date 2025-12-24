@@ -15,8 +15,8 @@ from typing import Optional, Union
 import torch
 import torch.nn as nn
 
-from transformers.models.depth_anything.configuration_depth_anything import DepthAnythingConfig
-from transformers.models.depth_anything.modeling_depth_anything import (
+from transformers_4573.models.depth_anything.configuration_depth_anything import DepthAnythingConfig
+from transformers_4573.models.depth_anything.modeling_depth_anything import (
     DepthAnythingDepthEstimationHead,
     DepthAnythingFeatureFusionLayer,
     DepthAnythingFeatureFusionStage,
@@ -24,7 +24,7 @@ from transformers.models.depth_anything.modeling_depth_anything import (
     DepthAnythingNeck,
     DepthAnythingReassembleStage,
 )
-from transformers.utils.generic import torch_int
+from transformers_4573.utils.generic import torch_int
 
 from ...modeling_outputs import DepthEstimatorOutput
 from ...modeling_utils import PreTrainedModel
@@ -249,7 +249,7 @@ class PromptDepthAnythingForDepthEstimation(DepthAnythingForDepthEstimation):
         Example:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModelForDepthEstimation
+        >>> from transformers_4573 import AutoImageProcessor, AutoModelForDepthEstimation
         >>> import torch
         >>> import numpy as np
         >>> from PIL import Image

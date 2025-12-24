@@ -17,9 +17,9 @@ import json
 import os
 import unittest
 
-from transformers.models.mgp_str.tokenization_mgp_str import VOCAB_FILES_NAMES
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.models.mgp_str.tokenization_mgp_str import VOCAB_FILES_NAMES
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
@@ -29,7 +29,7 @@ if is_torch_available():
 
 
 if is_vision_available():
-    from transformers import MgpstrProcessor
+    from transformers_4573 import MgpstrProcessor
 
 
 @require_torch

@@ -23,8 +23,8 @@ from huggingface_hub import hf_hub_download
 from PIL import Image
 from torchvision import transforms
 
-from transformers import BitImageProcessor, FocalNetConfig, FocalNetForImageClassification
-from transformers.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling
+from transformers_4573 import BitImageProcessor, FocalNetConfig, FocalNetForImageClassification
+from transformers_4573.image_utils import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD, PILImageResampling
 
 
 def get_focalnet_config(model_name):

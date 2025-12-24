@@ -53,7 +53,7 @@ rendered properly in your Markdown viewer.
 データセット全体に前処理関数を適用します：
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -87,7 +87,7 @@ rendered properly in your Markdown viewer.
 まず、モデルをロードし、予想されるラベルの数を指定します。Yelp Review [dataset card](https://huggingface.co/datasets/Yelp/yelp_review_full#data-fields)から、5つのラベルがあることがわかります：
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -107,7 +107,7 @@ BERTモデルの事前学習済みのヘッドは破棄され、ランダムに�
 トレーニングのチェックポイントを保存する場所を指定します：
 
 ```python
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(output_dir="test_trainer")
 ```
@@ -136,7 +136,7 @@ BERTモデルの事前学習済みのヘッドは破棄され、ランダムに�
 評価メトリクスをファインチューニング中に監視したい場合、トレーニング引数で `eval_strategy` パラメータを指定して、各エポックの終了時に評価メトリクスを報告します：
 
 ```python
->>> from transformers import TrainingArguments, Trainer
+>>> from transformers_4573 import TrainingArguments, Trainer
 
 >>> training_args = TrainingArguments(output_dir="test_trainer", eval_strategy="epoch")
 ```
@@ -218,7 +218,7 @@ torch.cuda.empty_cache()
 ロードするモデルと期待されるラベルの数を指定してください：
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -237,7 +237,7 @@ PyTorchから[`AdamW`](https://pytorch.org/docs/stable/generated/torch.optim.Ada
 デフォルトの学習率スケジューラを[`Trainer`]から作成する：
 
 ```py
->>> from transformers import get_scheduler
+>>> from transformers_4573 import get_scheduler
 
 >>> num_epochs = 3
 >>> num_training_steps = num_epochs * len(train_dataloader)

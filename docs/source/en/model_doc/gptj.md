@@ -38,7 +38,7 @@ This model was contributed by [Stella Biderman](https://huggingface.co/stellaath
   which could be used to further minimize the RAM usage:
 
 ```python
->>> from transformers import GPTJForCausalLM
+>>> from transformers_4573 import GPTJForCausalLM
 from accelerate import Accelerator
 >>> import torch
 
@@ -69,7 +69,7 @@ The [`~generation.GenerationMixin.generate`] method can be used to generate text
 model.
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
 >>> tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
@@ -94,7 +94,7 @@ model.
 ...or in float16 precision:
 
 ```python
->>> from transformers import GPTJForCausalLM, AutoTokenizer
+>>> from transformers_4573 import GPTJForCausalLM, AutoTokenizer
 from accelerate import Accelerator
 >>> import torch
 

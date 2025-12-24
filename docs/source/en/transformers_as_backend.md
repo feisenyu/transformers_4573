@@ -101,7 +101,7 @@ To ensure a model is compatible as a backend to any inference server, make sure 
 
 ```python
 
-from transformers import PreTrainedModel
+from transformers_4573 import PreTrainedModel
 from torch import nn
 
 class MyAttention(nn.Module):
@@ -135,7 +135,7 @@ class MyModel(PreTrainedModel):
 
 ```python
 
-from transformers import PreTrainedConfig
+from transformers_4573 import PreTrainedConfig
 
 class MyConfig(PreTrainedConfig):
     base_model_tp_plan = {

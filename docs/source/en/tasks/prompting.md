@@ -23,7 +23,7 @@ Prompt engineering or prompting, uses natural language to improve large language
 Try prompting a LLM to classify some text. When you create a prompt, it's important to provide very specific instructions about the task and what the result should look like.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(task="text-generation", model="mistralai/Mistal-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -83,7 +83,7 @@ This section covers a few prompting techniques.
 Few-shot prompting improves accuracy and performance by including specific examples of what a model should generate given an input. The explicit examples give the model a better understanding of the task and the output format you're looking for. Try experimenting with different numbers of examples (2, 4, 8, etc.) to see how it affects performance. The example below provides the model with 1 example (1-shot) of the output format (a date in MM/DD/YYYY format) it should return.
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(model="mistralai/Mistral-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -108,7 +108,7 @@ To improve few-shot prompting for modern instruction-tuned LLMs, use a model's s
 Structure your prompt as a turn-based conversation and use the [`apply_chat_template`] method to tokenize and format it.
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(model="mistralai/Mistral-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -141,7 +141,7 @@ Chain-of-thought (CoT) is effective at generating more coherent and well-reasone
 The example below provides the model with several prompts to work through intermediate reasoning steps.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(model="mistralai/Mistral-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -189,7 +189,7 @@ The examples below demonstrate prompting a LLM for different tasks.
 <hfoption id="named entity recognition">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(model="mistralai/Mistral-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -208,7 +208,7 @@ Result:  [Clément Delangue, Julien Chaumond, Thomas Wolf, company, New York Cit
 <hfoption id="translation">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(model="mistralai/Mistral-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -227,7 +227,7 @@ Result: À l'occasion, j'ai croyu plus de six choses impossibles
 <hfoption id="summarization">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(model="mistralai/Mistral-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")
@@ -246,7 +246,7 @@ Result: Permaculture is the design process that involves mimicking natural ecosy
 <hfoption id="question answering">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(model="mistralai/Mistral-7B-Instruct-v0.1", dtype=torch.bfloat16, device_map="auto")

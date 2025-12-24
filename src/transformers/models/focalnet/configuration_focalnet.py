@@ -91,7 +91,7 @@ class FocalNetConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FocalNetConfig, FocalNetModel
+    >>> from transformers_4573 import FocalNetConfig, FocalNetModel
 
     >>> # Initializing a FocalNet microsoft/focalnet-tiny style configuration
     >>> configuration = FocalNetConfig()

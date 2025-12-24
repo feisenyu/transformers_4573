@@ -48,7 +48,7 @@ The model can accept text, images, audio and videos as input. Here's an example 
 
 ```python
 import soundfile as sf
-from transformers import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcessor
+from transformers_4573 import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcessor
 
 model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2.5-Omni-7B",
@@ -104,7 +104,7 @@ print(text)
 To generate only text output and save compute by not loading the audio generation model, we can use `Qwen2_5OmniThinkerForConditionalGeneration` model.  
 
 ```python
-from transformers import Qwen2_5OmniThinkerForConditionalGeneration, Qwen2_5OmniProcessor
+from transformers_4573 import Qwen2_5OmniThinkerForConditionalGeneration, Qwen2_5OmniProcessor
 
 model = Qwen2_5OmniThinkerForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2.5-Omni-7B",
@@ -161,7 +161,7 @@ The model can batch inputs composed of mixed samples of various types such as te
 
 ```python
 import soundfile as sf
-from transformers import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcessor
+from transformers_4573 import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcessor
 
 model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2.5-Omni-7B",
@@ -332,7 +332,7 @@ Also, you should have hardware that is compatible with FlashAttention 2. Read mo
 To load and run a model using FlashAttention-2, add `attn_implementation="flash_attention_2"` when loading the model:
 
 ```python
-from transformers import Qwen2_5OmniForConditionalGeneration
+from transformers_4573 import Qwen2_5OmniForConditionalGeneration
 
 model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2.5-Omni-7B",

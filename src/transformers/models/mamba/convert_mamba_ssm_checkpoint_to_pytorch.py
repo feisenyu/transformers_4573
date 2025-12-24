@@ -20,9 +20,9 @@ import math
 
 import torch
 
-from transformers import AutoTokenizer, MambaConfig, MambaForCausalLM
-from transformers.utils import logging
-from transformers.utils.import_utils import is_mamba_ssm_available
+from transformers_4573 import AutoTokenizer, MambaConfig, MambaForCausalLM
+from transformers_4573.utils import logging
+from transformers_4573.utils.import_utils import is_mamba_ssm_available
 
 
 if is_mamba_ssm_available():
@@ -30,7 +30,7 @@ if is_mamba_ssm_available():
     from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
 
     def convert_ssm_config_to_hf_config(config_ssm: MambaConfigSSM) -> MambaConfig:
-        """Convert a MambaConfig from mamba_ssm to a MambaConfig from transformers."""
+        """Convert a MambaConfig from mamba_ssm to a MambaConfig from transformers_4573."""
         hf_config = MambaConfig()
         # Set config hidden size, num hidden layers, and vocab size directly from the original config
         hf_config.hidden_size = config_ssm.d_model

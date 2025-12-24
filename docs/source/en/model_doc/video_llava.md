@@ -74,7 +74,7 @@ The model can accept both images and videos as input. Here's an example code for
 import av
 import torch
 import numpy as np
-from transformers import VideoLlavaForConditionalGeneration, VideoLlavaProcessor
+from transformers_4573 import VideoLlavaForConditionalGeneration, VideoLlavaProcessor
 
 def read_video_pyav(container, indices):
     '''
@@ -162,7 +162,7 @@ We value your feedback to help identify bugs before the full release! Check out 
 Load the quantized model by simply adding [`BitsAndBytesConfig`](../main_classes/quantization#transformers.BitsAndBytesConfig) as shown below:
 
 ```python
-from transformers import VideoLlavaForConditionalGeneration, BitsAndBytesConfig
+from transformers_4573 import VideoLlavaForConditionalGeneration, BitsAndBytesConfig
 
 # specify how to quantize the model
 quantization_config = BitsAndBytesConfig(
@@ -189,7 +189,7 @@ Also, you should have a hardware that is compatible with Flash-Attention 2. Read
 To load and run a model using Flash Attention-2, simply add `attn_implementation="flash_attention_2"` when loading the model as follows:
 
 ```python
-from transformers import VideoLlavaForConditionalGeneration
+from transformers_4573 import VideoLlavaForConditionalGeneration
 
 model = VideoLlavaForConditionalGeneration.from_pretrained(
     "LanguageBind/Video-LLaVA-7B-hf", 

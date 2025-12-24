@@ -23,12 +23,12 @@ from collections.abc import Sequence
 import numpy as np
 from parameterized import parameterized
 
-from transformers.models.gemma3n import Gemma3nAudioFeatureExtractor
-from transformers.testing_utils import (
+from transformers_4573.models.gemma3n import Gemma3nAudioFeatureExtractor
+from transformers_4573.testing_utils import (
     check_json_file_has_correct_format,
     require_torch,
 )
-from transformers.utils.import_utils import is_torch_available
+from transformers_4573.utils.import_utils import is_torch_available
 
 from ...test_sequence_feature_extraction_common import SequenceFeatureExtractionTestMixin
 

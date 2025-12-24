@@ -1,7 +1,7 @@
 import unittest
 
-from transformers.models.blenderbot.tokenization_blenderbot import BlenderbotTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573.models.blenderbot.tokenization_blenderbot import BlenderbotTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

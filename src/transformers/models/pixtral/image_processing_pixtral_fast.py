@@ -99,7 +99,7 @@ class PixtralImageProcessorFast(BaseImageProcessorFast):
         output_size = get_resize_output_image_size(image, size=size, patch_size=patch_size)
         return F.resize(image, size=output_size, interpolation=interpolation, **kwargs)
 
-    # Adapted from transformers.models.pixtral.image_processing_pixtral.PixtralImageProcessor._pad_for_batching
+    # Adapted from transformers_4573.models.pixtral.image_processing_pixtral.PixtralImageProcessor._pad_for_batching
     def _pad_for_batching(
         self,
         pixel_values: list[torch.Tensor],

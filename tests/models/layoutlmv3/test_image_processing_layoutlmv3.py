@@ -15,17 +15,17 @@
 
 import unittest
 
-from transformers.testing_utils import require_pytesseract, require_torch
-from transformers.utils import is_pytesseract_available, is_torchvision_available
+from transformers_4573.testing_utils import require_pytesseract, require_torch
+from transformers_4573.utils import is_pytesseract_available, is_torchvision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
 
 if is_pytesseract_available():
-    from transformers import LayoutLMv3ImageProcessor
+    from transformers_4573 import LayoutLMv3ImageProcessor
 
     if is_torchvision_available():
-        from transformers import LayoutLMv3ImageProcessorFast
+        from transformers_4573 import LayoutLMv3ImageProcessorFast
 
 
 class LayoutLMv3ImageProcessingTester:

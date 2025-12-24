@@ -90,7 +90,7 @@ class BigBirdPegasusConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BigBirdPegasusConfig, BigBirdPegasusModel
+    >>> from transformers_4573 import BigBirdPegasusConfig, BigBirdPegasusModel
 
     >>> # Initializing a BigBirdPegasus bigbird-pegasus-base style configuration
     >>> configuration = BigBirdPegasusConfig()

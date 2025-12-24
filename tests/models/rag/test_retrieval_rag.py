@@ -21,14 +21,14 @@ from unittest.mock import patch
 import numpy as np
 from datasets import Dataset
 
-from transformers import is_faiss_available
-from transformers.models.bart.configuration_bart import BartConfig
-from transformers.models.dpr.configuration_dpr import DPRConfig
-from transformers.models.dpr.tokenization_dpr import DPRContextEncoderTokenizer, DPRQuestionEncoderTokenizer
-from transformers.models.rag.configuration_rag import RagConfig
-from transformers.models.rag.retrieval_rag import CustomHFIndex, RagRetriever
-from transformers.models.roberta.tokenization_roberta import RobertaTokenizer as BartTokenizer
-from transformers.testing_utils import require_faiss, require_sentencepiece, require_tokenizers, require_torch
+from transformers_4573 import is_faiss_available
+from transformers_4573.models.bart.configuration_bart import BartConfig
+from transformers_4573.models.dpr.configuration_dpr import DPRConfig
+from transformers_4573.models.dpr.tokenization_dpr import DPRContextEncoderTokenizer, DPRQuestionEncoderTokenizer
+from transformers_4573.models.rag.configuration_rag import RagConfig
+from transformers_4573.models.rag.retrieval_rag import CustomHFIndex, RagRetriever
+from transformers_4573.models.roberta.tokenization_roberta import RobertaTokenizer as BartTokenizer
+from transformers_4573.testing_utils import require_faiss, require_sentencepiece, require_tokenizers, require_torch
 
 
 if is_faiss_available():

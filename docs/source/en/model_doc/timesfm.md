@@ -37,7 +37,7 @@ To use the model:
 ```python
 import numpy as np
 import torch
-from transformers import TimesFmModelForPrediction
+from transformers_4573 import TimesFmModelForPrediction
 
 
 model = TimesFmModelForPrediction.from_pretrained(

@@ -17,11 +17,11 @@ import warnings
 
 import torch
 
-from transformers import GemmaTokenizer, RecurrentGemmaConfig, RecurrentGemmaForCausalLM
+from transformers_4573 import GemmaTokenizer, RecurrentGemmaConfig, RecurrentGemmaForCausalLM
 
 
 try:
-    from transformers import GemmaTokenizerFast
+    from transformers_4573 import GemmaTokenizerFast
 except ImportError as e:
     warnings.warn(e)
     warnings.warn(
@@ -43,7 +43,7 @@ python src/transformers/models/gemma/convert_gemma_weights_to_hf.py \
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import GemmaForCausalLM, GemmaTokenizerFast
+from transformers_4573 import GemmaForCausalLM, GemmaTokenizerFast
 
 model = GemmaForCausalLM.from_pretrained("/output/path")
 tokenizer = GemmaTokenizerFast.from_pretrained("/output/path")

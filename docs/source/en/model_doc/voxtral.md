@@ -47,7 +47,7 @@ The model supports audio-text instructions, including multi-turn and multi-audio
 
 ```python
 import torch
-from transformers import VoxtralForConditionalGeneration, AutoProcessor
+from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -85,7 +85,7 @@ print("=" * 80)
 
 ```python
 import torch
-from transformers import VoxtralForConditionalGeneration, AutoProcessor
+from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -127,7 +127,7 @@ print("=" * 80)
 
 ```python
 import torch
-from transformers import VoxtralForConditionalGeneration, AutoProcessor
+from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -183,7 +183,7 @@ print("=" * 80)
 
 ```python
 import torch
-from transformers import VoxtralForConditionalGeneration, AutoProcessor
+from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -220,7 +220,7 @@ print("=" * 80)
 
 ```python
 import torch
-from transformers import VoxtralForConditionalGeneration, AutoProcessor
+from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -257,7 +257,7 @@ print("=" * 80)
 
 ```python
 import torch
-from transformers import VoxtralForConditionalGeneration, AutoProcessor
+from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -320,7 +320,7 @@ It also support automatic language detection.
 
 ```python
 import torch
-from transformers import VoxtralForConditionalGeneration, AutoProcessor
+from transformers_4573 import VoxtralForConditionalGeneration, AutoProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device

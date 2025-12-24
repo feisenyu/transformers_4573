@@ -121,7 +121,7 @@ class XLMConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import XLMConfig, XLMModel
+    >>> from transformers_4573 import XLMConfig, XLMModel
 
     >>> # Initializing a XLM configuration
     >>> configuration = XLMConfig()

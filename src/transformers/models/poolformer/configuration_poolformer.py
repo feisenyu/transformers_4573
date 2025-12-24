@@ -69,7 +69,7 @@ class PoolFormerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PoolFormerConfig, PoolFormerModel
+    >>> from transformers_4573 import PoolFormerConfig, PoolFormerModel
 
     >>> # Initializing a PoolFormer sail/poolformer_s12 style configuration
     >>> configuration = PoolFormerConfig()

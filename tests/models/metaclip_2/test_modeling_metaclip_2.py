@@ -21,14 +21,14 @@ import numpy as np
 import requests
 from parameterized import parameterized
 
-from transformers import MetaClip2Config, MetaClip2TextConfig, MetaClip2VisionConfig
-from transformers.testing_utils import (
+from transformers_4573 import MetaClip2Config, MetaClip2TextConfig, MetaClip2VisionConfig
+from transformers_4573.testing_utils import (
     require_torch,
     require_vision,
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_torch_available,
     is_vision_available,
 )
@@ -49,7 +49,7 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import (
+    from transformers_4573 import (
         MetaClip2ForImageClassification,
         MetaClip2Model,
         MetaClip2TextModel,
@@ -61,7 +61,7 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import CLIPProcessor
+    from transformers_4573 import CLIPProcessor
 
 
 class MetaClip2VisionModelTester:

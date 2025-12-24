@@ -538,7 +538,7 @@ class GraniteForCausalLM(GranitePreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, GraniteForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, GraniteForCausalLM
 
         >>> model = GraniteForCausalLM.from_pretrained("meta-granite/Granite-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-granite/Granite-2-7b-hf")

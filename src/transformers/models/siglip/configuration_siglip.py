@@ -65,7 +65,7 @@ class SiglipTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SiglipTextConfig, SiglipTextModel
+    >>> from transformers_4573 import SiglipTextConfig, SiglipTextModel
 
     >>> # Initializing a SiglipTextConfig with google/siglip-base-patch16-224 style configuration
     >>> configuration = SiglipTextConfig()
@@ -149,7 +149,7 @@ class SiglipVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SiglipVisionConfig, SiglipVisionModel
+    >>> from transformers_4573 import SiglipVisionConfig, SiglipVisionModel
 
     >>> # Initializing a SiglipVisionConfig with google/siglip-base-patch16-224 style configuration
     >>> configuration = SiglipVisionConfig()
@@ -213,7 +213,7 @@ class SiglipConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SiglipConfig, SiglipModel
+    >>> from transformers_4573 import SiglipConfig, SiglipModel
 
     >>> # Initializing a SiglipConfig with google/siglip-base-patch16-224 style configuration
     >>> configuration = SiglipConfig()
@@ -225,7 +225,7 @@ class SiglipConfig(PreTrainedConfig):
     >>> configuration = model.config
 
     >>> # We can also initialize a SiglipConfig from a SiglipTextConfig and a SiglipVisionConfig
-    >>> from transformers import SiglipTextConfig, SiglipVisionConfig
+    >>> from transformers_4573 import SiglipTextConfig, SiglipVisionConfig
 
     >>> # Initializing a SiglipText and SiglipVision configuration
     >>> config_text = SiglipTextConfig()

@@ -124,7 +124,7 @@ Ahora puedes convertir el identificador de la etiqueta a un nombre de etiqueta:
 Seguidamente carga el feature extractor (función de extracción de características) de Wav2Vec para procesar la señal de audio:
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base")
 ```
@@ -196,7 +196,7 @@ Ahora tu función `compute_metrics` (computar métricas) está lista y podrás u
 ¡Ya puedes empezar a entrenar tu modelo! Carga Wav2Vec2 con [`AutoModelForAudioClassification`] junto con el especifica el número de etiquetas, y pasa al modelo los *mappings* entre el número entero de etiqueta y la clase de etiqueta.
 
 ```py
->>> from transformers import AutoModelForAudioClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForAudioClassification, TrainingArguments, Trainer
 
 >>> num_labels = len(id2label)
 >>> model = AutoModelForAudioClassification.from_pretrained(
@@ -269,7 +269,7 @@ Carga el archivo de audio para hacer inferencia. Recuerda volver a muestrear la 
 La manera más simple de probar tu modelo para hacer inferencia es usarlo en un [`pipeline`]. Puedes instanciar un `pipeline` para clasificación de audio con tu modelo y pasarle tu archivo de audio:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("audio-classification", model="stevhliu/my_awesome_minds_model")
 >>> classifier(audio_file)
@@ -287,7 +287,7 @@ También puedes replicar de forma manual los resultados del `pipeline` si lo des
 Carga el feature extractor para preprocesar el archivo de audio y devuelve el `input` como un tensor de PyTorch:
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained("stevhliu/my_awesome_minds_model")
 >>> inputs = feature_extractor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -296,7 +296,7 @@ Carga el feature extractor para preprocesar el archivo de audio y devuelve el `i
 Pásale tus entradas al modelo y devuelve los logits:
 
 ```py
->>> from transformers import AutoModelForAudioClassification
+>>> from transformers_4573 import AutoModelForAudioClassification
 
 >>> model = AutoModelForAudioClassification.from_pretrained("stevhliu/my_awesome_minds_model")
 >>> with torch.no_grad():

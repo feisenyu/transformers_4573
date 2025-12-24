@@ -492,7 +492,7 @@ zu diesem Zeitpunkt funktionieren muss, ist, dass Sie die 🤗 Transformers-Impl
 folgende Befehl sollte funktionieren:
 
 ```python
-from transformers import BrandNewBertModel, BrandNewBertConfig
+from transformers_4573 import BrandNewBertModel, BrandNewBertConfig
 
 model = BrandNewBertModel(BrandNewBertConfig())
 ```
@@ -786,7 +786,7 @@ ein funktionierendes Tokenisierungsskript geschrieben, das das ursprüngliche Re
 erstellt werden. Es sollte ähnlich wie dieses aussehen:
 
 ```python
-from transformers import BrandNewBertTokenizer
+from transformers_4573 import BrandNewBertTokenizer
 
 input_str = "This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words."
 

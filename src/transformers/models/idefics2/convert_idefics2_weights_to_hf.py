@@ -17,7 +17,7 @@ import copy
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoModelForCausalLM,
     AutoTokenizer,

@@ -25,7 +25,7 @@ import numpy as np
 from datasets import load_dataset, load_metric
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoModelForSequenceClassification,
     AutoTokenizer,
@@ -36,9 +36,9 @@ from transformers import (
     default_data_collator,
     set_seed,
 )
-from transformers.trainer import Trainer
-from transformers.training_args import TrainingArguments
-from transformers.utils import check_min_version
+from transformers_4573.trainer import Trainer
+from transformers_4573.training_args import TrainingArguments
+from transformers_4573.utils import check_min_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

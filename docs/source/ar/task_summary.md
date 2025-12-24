@@ -20,7 +20,7 @@
 * تصنيف الموسيقى: وضع علامة على الموسيقى بتسمية النوع ("ميتال"، "هيب هوب"، "كانتري")
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline(task="audio-classification", model="superb/hubert-base-superb-er")
 >>> preds = classifier("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
@@ -38,7 +38,7 @@
 ولكن أحد التحديات الرئيسية التي ساعدت نماذج المحولات (Transformer) في التغلب عليها هو التعامل مع اللغات منخفضة الموارد. فمن خلال التدريب المسبق على كميات كبيرة من بيانات الصوتية، يُمكن ضبط النموذج بدقة (Fine-tuning) باستخدام ساعة واحدة فقط من بيانات الكلام المُوسم في لغة منخفضة الموارد إلى نتائج عالية الجودة مقارنة بأنظمة ASR السابقة التي تم تدريبها على بيانات موسومة أكثر بـ 100 مرة.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> transcriber = pipeline(task="automatic-speech-recognition", model="openai/whisper-small")
 >>> transcriber("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
@@ -64,7 +64,7 @@
 * علم البيئة: تصنيف صور الأنواع الحيوانية أو النباتية لرصد أعداد  الكائنات الحية أو تتبع الأنواع المهددة بالانقراض
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline(task="image-classification")
 >>> preds = classifier(
@@ -88,7 +88,7 @@
 * اكتشاف العيوب: اكتشاف الشقوق أو الأضرار الهيكلية في المباني، وعيوب التصنيع
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> detector = pipeline(task="object-detection")
 >>> preds = detector(
@@ -111,7 +111,7 @@
 تُعد مهام تجزئة الصور مفيدة في المركبات ذاتية القيادة على إنشاء خريطة على مستوى البكسل للعالم من حولها حتى تتمكن من التنقل بأمان حول المشاة والمركبات الأخرى. كما أنها مفيدة للتصوير الطبي، حيث يمكن للدقة العالية لهذ المهمة أن تساعد في تحديد الخلايا غير الطبيعية أو خصائص الأعضاء. يمكن أيضًا استخدام تجزئة الصور في التجارة الإلكترونية لتجربة الملابس افتراضيًا أو إنشاء تجارب الواقع المُعزز من خلال تراكب الأجسام في العالم الحقيقي من خلال الكاميرا الهاتف الخاصة بك.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> segmenter = pipeline(task="image-segmentation")
 >>> preds = segmenter(
@@ -134,7 +134,7 @@
 * التصوير الأحادي (Monocular): يتم تقدير العمق من صورة واحدة.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> depth_estimator = pipeline(task="depth-estimation")
 >>> preds = depth_estimator(
@@ -154,7 +154,7 @@
 * تصنيف المحتوى (Content Classification): تصنيف النص وفقًا لبعض الموضوعات للمساعدة في تنظيم وتصفية المعلومات في الأخبار وموجزات الوسائط الاجتماعية (`الطقس`، `الرياضة`، `التمويل`، إلخ).
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline(task="sentiment-analysis")
 >>> preds = classifier("Hugging Face is the best thing since sliced bread!")
@@ -173,7 +173,7 @@
 * ترميز الأجزاء اللغوية (POS): تصنيف الرموز وفقًا للدورها النحوي مثل الاسم أو الفعل أو الصفة. POS مفيد لمساعدة أنظمة الترجمة على فهم كيفية اختلاف كلمتين متطابقتين نحويًا  (مثل كلمة "عَلَمَ" كاسم و "عَلِمَ" كفعل).
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline(task="ner")
 >>> preds = classifier("Hugging Face is a French company based in New York City.")
@@ -208,7 +208,7 @@
 
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> question_answerer = pipeline(task="question-answering")
 >>> preds = question_answerer(
@@ -231,7 +231,7 @@ score: 0.9327, start: 30, end: 54, answer: huggingface/transformers
 * التجريدي (Abstractive): إنشاء ملخص مستهدف (الذي قد يتضمن كلمات جديدة غير موجودة في النص الأصلي) انطلاقًا من النص الأصلي؛ يستخدم نهج التلخيص التجريدي [`SummarizationPipeline`]
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> summarizer = pipeline(task="summarization")
 >>> summarizer(
@@ -247,7 +247,7 @@ score: 0.9327, start: 30, end: 54, answer: huggingface/transformers
 في الأيام الأولى، كانت نماذج الترجمة في الغالب أحادية اللغة، ولكن مؤخرًا، كان هناك اهتمام متزايد بالنماذج متعددة اللغات التي يمكنها الترجمة بين العديد من أزواج اللغات.
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> text = "translate English to French: Hugging Face is a community-based open-source platform for machine learning."
 >>> translator = pipeline(task="translation", model="google-t5/t5-small")
@@ -264,7 +264,7 @@ score: 0.9327, start: 30, end: 54, answer: huggingface/transformers
 * السببية(Causal): هدف النموذج هو التنبؤ بالرمز (Token)  التالي في التسلسل، ويتم إخفاء الرموز المستقبلية (Masking).
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> prompt = "Hugging Face is a community-based open-source platform for machine learning."
 >>> generator = pipeline(task="text-generation")
@@ -304,7 +304,7 @@ score: 0.9327, start: 30, end: 54, answer: huggingface/transformers
 الإجابة على أسئلة المستندات  (Document Question Answering) هي مهمة تقوم بالإجابة على أسئلة اللغة الطبيعية من مستند مُعطى. على عكس مهمة الإجابة على الأسئلة على مستوى الرموز (Token-Level) التي تأخذ نصًا كمدخل، فإن الإجابة على أسئلة المستندات تأخذ صورة لمستند كمدخل بالإضافة إلى سؤال هذا حول المستند وتعيد الإجابة. يمكن استخدام الإجابة على أسئلة المستندات لتفسير المستندات المُنسّقة واستخراج المعلومات الرئيسية منها. في المثال أدناه، يمكن استخراج المبلغ الإجمالي والمبلغ المُسترد من إيصال الدفع..
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 >>> from PIL import Image
 >>> import requests
 

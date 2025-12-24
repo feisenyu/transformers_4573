@@ -582,7 +582,7 @@ class DeepseekV2ForCausalLM(DeepseekV2PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, DeepseekV2ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, DeepseekV2ForCausalLM
 
         >>> model = DeepseekV2ForCausalLM.from_pretrained("meta-deepseek_v2/DeepseekV2-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-deepseek_v2/DeepseekV2-2-7b-hf")

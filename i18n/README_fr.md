@@ -133,7 +133,7 @@ Si vous possédez ou utilisez un projet que vous pensez devoir figurer dans la l
 Pour utiliser immédiatement un modèle sur une entrée donnée (texte, image, audio,...), nous fournissons l'API `pipeline`. Les pipelines regroupent un modèle pré-entraîné avec la préparation des données qui a été utilisée lors de l'entraînement de ce modèle. Voici comment utiliser rapidement un pipeline pour classer des textes en positif ou négatif :
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Allouer un pipeline pour l'analyse de sentiment
 >>> classifieur = pipeline('sentiment-analysis')
@@ -148,7 +148,7 @@ De nombreuses tâches ont une pipeline pré-entraîné prêt à l'emploi, en NLP
 ```python
 >>> import requests
 >>> from PIL import Image
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Télécharger une image avec de jolis chats
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png"
@@ -187,7 +187,7 @@ Vous pouvez en savoir plus sur les tâches supportées par l'API pipeline dans [
 En plus de `pipeline`, pour télécharger et utiliser n'importe lequel des modèles pré-entraînés sur votre tâche donnée, il suffit de trois lignes de code. Voici la version PyTorch :
 
 ```python
->>> from transformers import AutoTokenizer, AutoModel
+>>> from transformers_4573 import AutoTokenizer, AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
@@ -199,7 +199,7 @@ outputs = model(**inputs)
 Et voici le code équivalent pour TensorFlow :
 
 ```python
-from transformers import AutoTokenizer, TFAutoModel
+from transformers_4573 import AutoTokenizer, TFAutoModel
 
 tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 model = TFAutoModel.from_pretrained("google-bert/bert-base-uncased")

@@ -59,7 +59,7 @@ class Kosmos2_5ImageProcessorKwargs(ImagesKwargs, total=False):
     max_patches: int
 
 
-# Copied from transformers.models.pix2struct.image_processing_pix2struct.torch_extract_patches
+# Copied from transformers_4573.models.pix2struct.image_processing_pix2struct.torch_extract_patches
 def torch_extract_patches(image_tensor, patch_height, patch_width):
     """
     Utility function to extract patches from a given image tensor. Returns a tensor of shape
@@ -213,7 +213,7 @@ class Kosmos2_5ImageProcessor(BaseImageProcessor):
 
         return result, resized_width, resized_height, rows, columns
 
-    # Copied from transformers.models.pix2struct.image_processing_pix2struct.Pix2StructImageProcessor.normalize
+    # Copied from transformers_4573.models.pix2struct.image_processing_pix2struct.Pix2StructImageProcessor.normalize
     def normalize(
         self,
         image: np.ndarray,

@@ -101,7 +101,7 @@ tasks is you don't need labels (also known as an unsupervised task) because the 
 The next step is to load a DistilGPT2 tokenizer to process the `text` subfield:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilgpt2")
 ```
@@ -192,7 +192,7 @@ sentences to the longest length in a batch during collation, instead of padding 
 Use the end-of-sequence token as the padding token and set `mlm=False`. This will use the inputs as labels shifted to the right by one element:
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -209,7 +209,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You're ready to start training your model now! Load DistilGPT2 with [`AutoModelForCausalLM`]:
 
 ```py
->>> from transformers import AutoModelForCausalLM, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForCausalLM, TrainingArguments, Trainer
 
 >>> model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
 ```
@@ -277,7 +277,7 @@ Come up with a prompt you'd like to generate text from:
 The simplest way to try out your finetuned model for inference is to use it in a [`pipeline`]. Instantiate a `pipeline` for text generation with your model, and pass your text to it:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline("text-generation", model="username/my_awesome_eli5_clm-model")
 >>> generator(prompt)
@@ -287,7 +287,7 @@ The simplest way to try out your finetuned model for inference is to use it in a
 Tokenize the text and return the `input_ids` as PyTorch tensors:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_eli5_clm-model")
 >>> inputs = tokenizer(prompt, return_tensors="pt").input_ids
@@ -297,7 +297,7 @@ Use the [`~generation.GenerationMixin.generate`] method to generate text.
 For more details about the different text generation strategies and parameters for controlling generation, check out the [Text generation strategies](../generation_strategies) page.
 
 ```py
->>> from transformers import AutoModelForCausalLM
+>>> from transformers_4573 import AutoModelForCausalLM
 
 >>> model = AutoModelForCausalLM.from_pretrained("username/my_awesome_eli5_clm-model")
 >>> outputs = model.generate(inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)

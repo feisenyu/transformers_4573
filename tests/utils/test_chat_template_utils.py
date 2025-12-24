@@ -15,7 +15,7 @@
 import unittest
 from typing import Literal
 
-from transformers.utils import DocstringParsingException, TypeHintParsingException, get_json_schema
+from transformers_4573.utils import DocstringParsingException, TypeHintParsingException, get_json_schema
 
 
 class JsonSchemaGeneratorTest(unittest.TestCase):

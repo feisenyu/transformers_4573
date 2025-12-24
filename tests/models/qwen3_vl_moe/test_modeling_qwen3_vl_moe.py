@@ -18,14 +18,14 @@ import unittest
 
 import pytest
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     Qwen3VLMoeConfig,
     Qwen3VLMoeForConditionalGeneration,
     Qwen3VLMoeModel,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_flash_attn,

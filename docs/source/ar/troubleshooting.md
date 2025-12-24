@@ -50,7 +50,7 @@ CUDA out of memory. Tried to allocate 256.00 MiB (GPU 0; 11.17 GiB total capacit
 - احفظ أوزان النموذج كملف `h5` باستخدام [`model.save_weights`](https://www.tensorflow.org/tutorials/keras/save_and_load#save_the_entire_model) ثم أعد تحميل النموذج باستخدام [`~TFPreTrainedModel.from_pretrained`]:
 
 ```python
->>> from transformers import TFPreTrainedModel
+>>> from transformers_4573 import TFPreTrainedModel
 >>> from tensorflow import keras
 
 >>> model.save_weights("some_folder/tf_model.h5")
@@ -60,7 +60,7 @@ CUDA out of memory. Tried to allocate 256.00 MiB (GPU 0; 11.17 GiB total capacit
 - احفظ النموذج باستخدام [`~TFPretrainedModel.save_pretrained`] وقم بتحميله مرة أخرى باستخدام [`~TFPreTrainedModel.from_pretrained`]:
 
 ```python
->>> from transformers import TFPreTrainedModel
+>>> from transformers_4573 import TFPreTrainedModel
 
 >>> model.save_pretrained("path_to/model")
 >>> model = TFPreTrainedModel.from_pretrained("path_to/model")
@@ -109,7 +109,7 @@ RuntimeError: CUDA error: device-side assert triggered
 في بعض الحالات، قد يكون `hidden_state` غير صحيحة إذا تضمنت `input_ids` رموز حشو. ولإثبات ذلك، قم بتحميل نموذج ومجزىء لغوى. يمكنك الوصول إلى `pad_token_id` للنموذج لمعرفة قيمته. قد تكون `pad_token_id` `None` لبعض النماذج، ولكن يمكنك دائمًا تعيينها يدويًا.
 
 ```python
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 >>> import torch
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-uncased")
@@ -162,7 +162,7 @@ tensor([[ 0.0082, -0.2307],
 على سبيل المثال، سترى هذا الخطأ في المثال التالي لأنه لا يوجد GPT2 للإجابة على الأسئلة:
 
 ```py
->>> from transformers import AutoProcessor, AutoModelForQuestionAnswering
+>>> from transformers_4573 import AutoProcessor, AutoModelForQuestionAnswering
 
 >>> processor = AutoProcessor.from_pretrained("openai-community/gpt2-medium")
 >>> model = AutoModelForQuestionAnswering.from_pretrained("openai-community/gpt2-medium")

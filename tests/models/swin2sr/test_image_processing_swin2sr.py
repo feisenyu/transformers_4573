@@ -17,8 +17,8 @@ import unittest
 
 import numpy as np
 
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -29,11 +29,11 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import Swin2SRImageProcessor
+    from transformers_4573 import Swin2SRImageProcessor
 
     if is_torchvision_available():
-        from transformers import Swin2SRImageProcessorFast
-    from transformers.image_transforms import get_image_size
+        from transformers_4573 import Swin2SRImageProcessorFast
+    from transformers_4573.image_transforms import get_image_size
 
 
 class Swin2SRImageProcessingTester:

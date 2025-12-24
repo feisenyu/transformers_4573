@@ -115,7 +115,7 @@ To follow the example of the following image, `"Hello, I'm Moshi"` could be tran
 ```python
 >>> from datasets import load_dataset, Audio
 >>> import torch, math
->>> from transformers import MoshiForConditionalGeneration, AutoFeatureExtractor, AutoTokenizer
+>>> from transformers_4573 import MoshiForConditionalGeneration, AutoFeatureExtractor, AutoTokenizer
 from accelerate import Accelerator
 
 

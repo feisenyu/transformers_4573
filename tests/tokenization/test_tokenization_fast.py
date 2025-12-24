@@ -22,8 +22,8 @@ import unittest
 from tokenizers import Tokenizer, decoders, pre_tokenizers, trainers
 from tokenizers.models import BPE, WordLevel
 
-from transformers import AutoTokenizer, PreTrainedTokenizerFast
-from transformers.testing_utils import require_tokenizers
+from transformers_4573 import AutoTokenizer, PreTrainedTokenizerFast
+from transformers_4573.testing_utils import require_tokenizers
 
 
 @require_tokenizers

@@ -107,7 +107,7 @@ class AfmoeConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import AfmoeModel, AfmoeConfig
+    >>> from transformers_4573 import AfmoeModel, AfmoeConfig
 
     >>> # Initializing an AFMoE configuration
     >>> configuration = AfmoeConfig()

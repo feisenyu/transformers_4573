@@ -48,7 +48,7 @@ Semantic segmentation assigns a label or class to every single pixel in an image
 We can use transformers' image segmentation pipeline to quickly infer a semantic segmentation model. Let's take a look at the example image.
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 from PIL import Image
 import requests
 
@@ -318,7 +318,7 @@ As an example, take a look at this [example dataset](https://huggingface.co/data
 The next step is to load a SegFormer image processor to prepare the images and annotations for the model. Some datasets, like this one, use the zero-index as the background class. However, the background class isn't actually included in the 150 classes, so you'll need to set `do_reduce_labels=True` to subtract one from all the labels. The zero-index is replaced by `255` so it's ignored by SegFormer's loss function:
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> checkpoint = "nvidia/mit-b0"
 >>> image_processor = AutoImageProcessor.from_pretrained(checkpoint, do_reduce_labels=True)
@@ -412,7 +412,7 @@ If you aren't familiar with finetuning a model with the [`Trainer`], take a look
 You're ready to start training your model now! Load SegFormer with [`AutoModelForSemanticSegmentation`], and pass the model the mapping between label ids and label classes:
 
 ```py
->>> from transformers import AutoModelForSemanticSegmentation, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForSemanticSegmentation, TrainingArguments, Trainer
 
 >>> model = AutoModelForSemanticSegmentation.from_pretrained(checkpoint, id2label=id2label, label2id=label2id)
 ```

@@ -46,7 +46,7 @@ rendered properly in your Markdown viewer.
 텍스트를 처리하고 서로 다른 길이의 시퀀스 패딩 및 잘라내기 전략을 포함하려면 토크나이저가 필요합니다. 데이터셋을 한 번에 처리하려면 🤗 Dataset [`map`](https://huggingface.co/docs/datasets/process#map) 메서드를 사용하여 전체 데이터셋에 전처리 함수를 적용하세요:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -80,7 +80,7 @@ rendered properly in your Markdown viewer.
 먼저 모델을 가져오고 예상되는 레이블 수를 지정합니다. Yelp 리뷰 [데이터셋 카드](https://huggingface.co/datasets/Yelp/yelp_review_full#data-fields)에서 5개의 레이블이 있음을 알 수 있습니다:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -101,7 +101,7 @@ rendered properly in your Markdown viewer.
 훈련에서 체크포인트(checkpoints)를 저장할 위치를 지정합니다:
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(output_dir="test_trainer")
 ```
@@ -130,7 +130,7 @@ rendered properly in your Markdown viewer.
 미세 튜닝 중에 평가 지표를 모니터링하려면 훈련 인수에 `eval_strategy` 파라미터를 지정하여 각 에폭이 끝날 때 평가 지표를 확인할 수 있습니다:
 
 ```py
->>> from transformers import TrainingArguments, Trainer
+>>> from transformers_4573 import TrainingArguments, Trainer
 
 >>> training_args = TrainingArguments(output_dir="test_trainer", eval_strategy="epoch")
 ```
@@ -212,7 +212,7 @@ torch.cuda.empty_cache()
 예측을 위한 레이블 개수를 사용하여 모델을 로드합니다:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -230,7 +230,7 @@ torch.cuda.empty_cache()
 [`Trainer`]에서 기본 학습 속도 스케줄러를 생성합니다:
 
 ```py
->>> from transformers import get_scheduler
+>>> from transformers_4573 import get_scheduler
 
 >>> num_epochs = 3
 >>> num_training_steps = num_epochs * len(train_dataloader)

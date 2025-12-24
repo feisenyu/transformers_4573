@@ -39,7 +39,7 @@ generateメソッドへの入力は、モデルのモダリティに依存しま
 モデルを明示的に読み込む場合、それに付属する生成設定を `model.generation_config` を介して確認できます。
 
 ```python
->>> from transformers import AutoModelForCausalLM
+>>> from transformers_4573 import AutoModelForCausalLM
 
 >>> model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
 >>> model.generation_config
@@ -77,7 +77,7 @@ GenerationConfig {
 * `push_to_hub` を `True` に設定して、構成をモデルのリポジトリにアップロードします
 
 ```python
->>> from transformers import AutoModelForCausalLM, GenerationConfig
+>>> from transformers_4573 import AutoModelForCausalLM, GenerationConfig
 
 >>> model = AutoModelForCausalLM.from_pretrained("my_account/my_model")  # doctest: +SKIP
 >>> generation_config = GenerationConfig(
@@ -92,7 +92,7 @@ GenerationConfig {
 
 
 ```python
->>> from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, GenerationConfig
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer, GenerationConfig
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-t5/t5-small")
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("google-t5/t5-small")
@@ -130,7 +130,7 @@ GenerationConfig {
 
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TextStreamer
 
 >>> tok = AutoTokenizer.from_pretrained("openai-community/gpt2")
 >>> model = AutoModelForCausalLM.from_pretrained("openai-community/gpt2")
@@ -154,7 +154,7 @@ An increasing sequence: one, two, three, four, five, six, seven, eight, nine, te
 
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> prompt = "I look forward to"
 >>> checkpoint = "distilbert/distilgpt2"
@@ -175,7 +175,7 @@ An increasing sequence: one, two, three, four, five, six, seven, eight, nine, te
 多項分布サンプリングを有効にするには、`do_sample=True` および `num_beams=1` を設定します。
 
 ```python
->>> from transformers import AutoTokenizer, AutoModelForCausalLM, set_seed
+>>> from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, set_seed
 >>> set_seed(0)  # For reproducibility
 
 >>> checkpoint = "openai-community/gpt2-large"
@@ -204,7 +204,7 @@ that\'s a terrible feeling."']
 このデコーディング戦略を有効にするには、`num_beams`（追跡する仮説の数）を1よりも大きな値に指定します。
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> prompt = "It is astonishing how one can"
 >>> checkpoint = "openai-community/gpt2-medium"
@@ -225,7 +225,7 @@ time."\n\nHe added: "I am very proud of the work I have been able to do in the l
 その名前からもわかるように、このデコーディング戦略はビームサーチと多項サンプリングを組み合わせています。このデコーディング戦略を使用するには、`num_beams` を1より大きな値に設定し、`do_sample=True` を設定する必要があります。
 
 ```python
->>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, set_seed
+>>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM, set_seed
 >>> set_seed(0)  # For reproducibility
 
 >>> prompt = "translate English to German: The house is wonderful."
@@ -251,7 +251,7 @@ time."\n\nHe added: "I am very proud of the work I have been able to do in the l
 
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> prompt = "Alice and Bob"
 >>> checkpoint = "EleutherAI/pythia-1.4b-deduped"
@@ -271,7 +271,7 @@ time."\n\nHe added: "I am very proud of the work I have been able to do in the l
 
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer, set_seed
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, set_seed
 >>> set_seed(42)  # For reproducibility
 
 >>> prompt = "Alice and Bob"

@@ -97,7 +97,7 @@ class DepthProImageProcessorFast(BaseImageProcessorFast):
 
         return BatchFeature(data={"pixel_values": processed_images}, tensor_type=return_tensors)
 
-    # Copied from transformers.models.depth_pro.image_processing_depth_pro.DepthProImageProcessor.post_process_depth_estimation
+    # Copied from transformers_4573.models.depth_pro.image_processing_depth_pro.DepthProImageProcessor.post_process_depth_estimation
     def post_process_depth_estimation(
         self,
         outputs: "DepthProDepthEstimatorOutput",

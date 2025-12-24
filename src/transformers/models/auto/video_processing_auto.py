@@ -175,7 +175,7 @@ def get_video_processor_config(
     video_processor_config = get_video_processor_config("FacebookAI/xlm-roberta-base")
 
     # Save a pretrained video processor locally and you can reload its config
-    from transformers import AutoVideoProcessor
+    from transformers_4573 import AutoVideoProcessor
 
     video_processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf")
     video_processor.save_pretrained("video-processor-test")
@@ -313,7 +313,7 @@ class AutoVideoProcessor:
         Examples:
 
         ```python
-        >>> from transformers import AutoVideoProcessor
+        >>> from transformers_4573 import AutoVideoProcessor
 
         >>> # Download video processor from huggingface.co and cache.
         >>> video_processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf")

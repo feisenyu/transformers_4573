@@ -93,7 +93,7 @@ pip install transformers datasets evaluate
 マスクされた言語モデリングの場合、次のステップは、`text`サブフィールドを処理するために DistilRoBERTa トークナイザーをロードすることです。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -177,7 +177,7 @@ pip install transformers datasets evaluate
 シーケンス終了トークンをパディング トークンとして使用し、データを反復するたびにランダムにトークンをマスクするために `mlm_probability` を指定します。
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
@@ -194,7 +194,7 @@ pip install transformers datasets evaluate
 これでモデルのトレーニングを開始する準備が整いました。 [`AutoModelForMaskedLM`] を使用して DistilRoBERTa をロードします。
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -265,7 +265,7 @@ Perplexity: 8.76
 推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`] で使用することです。モデルを使用してフィルマスクの`pipeline`をインスタンス化し、テキストをそれに渡します。必要に応じて、`top_k`パラメータを使用して、返す予測の数を指定できます。
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> mask_filler = pipeline("fill-mask", "stevhliu/my_awesome_eli5_mlm_model")
 >>> mask_filler(text, top_k=3)
@@ -287,7 +287,7 @@ Perplexity: 8.76
 テキストをトークン化し、`input_ids`を PyTorch テンソルとして返します。 `<mask>` トークンの位置も指定する必要があります。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("stevhliu/my_awesome_eli5_mlm_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -297,7 +297,7 @@ Perplexity: 8.76
 入力をモデルに渡し、マスクされたトークンの`logits`を返します。
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("stevhliu/my_awesome_eli5_mlm_model")
 >>> logits = model(**inputs).logits

@@ -18,15 +18,15 @@ from functools import cached_property
 
 import pytest
 
-from transformers import Data2VecVisionConfig
-from transformers.testing_utils import (
+from transformers_4573 import Data2VecVisionConfig
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_multi_gpu,
     require_vision,
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_torch_available,
     is_vision_available,
 )
@@ -40,18 +40,18 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import (
+    from transformers_4573 import (
         Data2VecVisionForImageClassification,
         Data2VecVisionForSemanticSegmentation,
         Data2VecVisionModel,
     )
-    from transformers.models.auto.modeling_auto import MODEL_MAPPING_NAMES
+    from transformers_4573.models.auto.modeling_auto import MODEL_MAPPING_NAMES
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import BeitImageProcessor
+    from transformers_4573 import BeitImageProcessor
 
 
 class Data2VecVisionModelTester:

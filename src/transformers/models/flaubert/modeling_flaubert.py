@@ -45,7 +45,7 @@ from .configuration_flaubert import FlaubertConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.xlm.modeling_xlm.create_sinusoidal_embeddings
+# Copied from transformers_4573.models.xlm.modeling_xlm.create_sinusoidal_embeddings
 def create_sinusoidal_embeddings(n_pos, dim, out):
     position_enc = np.array([[pos / np.power(10000, 2 * (j // 2) / dim) for j in range(dim)] for pos in range(n_pos)])
     out.requires_grad = False
@@ -55,7 +55,7 @@ def create_sinusoidal_embeddings(n_pos, dim, out):
     return out
 
 
-# Copied from transformers.models.xlm.modeling_xlm.get_masks
+# Copied from transformers_4573.models.xlm.modeling_xlm.get_masks
 def get_masks(slen, lengths, causal, padding_mask=None):
     """
     Generate hidden states mask, and optionally an attention mask.
@@ -81,7 +81,7 @@ def get_masks(slen, lengths, causal, padding_mask=None):
     return mask, attn_mask
 
 
-# Copied from transformers.models.xlm.modeling_xlm.MultiHeadAttention
+# Copied from transformers_4573.models.xlm.modeling_xlm.MultiHeadAttention
 class MultiHeadAttention(nn.Module):
     def __init__(self, n_heads, dim, config, layer_idx: int = 0):
         super().__init__()
@@ -163,7 +163,7 @@ class MultiHeadAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.xlm.modeling_xlm.TransformerFFN
+# Copied from transformers_4573.models.xlm.modeling_xlm.TransformerFFN
 class TransformerFFN(nn.Module):
     def __init__(self, in_dim, dim_hidden, out_dim, config):
         super().__init__()
@@ -190,7 +190,7 @@ class TransformerFFN(nn.Module):
     The bare Flaubert Model transformer outputting raw hidden-states without any specific head on top.
     """
 )
-# Copied from transformers.models.xlm.modeling_xlm.XLMPredLayer with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPredLayer with XLM->Flaubert
 class FlaubertPredLayer(nn.Module):
     """
     Prediction layer (cross_entropy or adaptive_softmax).
@@ -239,7 +239,7 @@ class FlaubertPredLayer(nn.Module):
     Base class for outputs of question answering models using a [`~modeling_utils.FlaubertSQuADHead`].
     """
 )
-# Copied from transformers.models.xlm.modeling_xlm.XLMSquadHeadOutput with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSquadHeadOutput with XLM->Flaubert
 class FlaubertSquadHeadOutput(ModelOutput):
     r"""
     loss (`torch.FloatTensor` of shape `(1,)`, *optional*, returned if both `start_positions` and `end_positions` are provided):
@@ -266,7 +266,7 @@ class FlaubertSquadHeadOutput(ModelOutput):
     cls_logits: Optional[torch.FloatTensor] = None
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMPoolerStartLogits with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPoolerStartLogits with XLM->Flaubert
 class FlaubertPoolerStartLogits(nn.Module):
     """
     Compute SQuAD start logits from sequence hidden states.
@@ -305,7 +305,7 @@ class FlaubertPoolerStartLogits(nn.Module):
         return x
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMPoolerEndLogits with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPoolerEndLogits with XLM->Flaubert
 class FlaubertPoolerEndLogits(nn.Module):
     """
     Compute SQuAD end logits from sequence hidden states.
@@ -375,7 +375,7 @@ class FlaubertPoolerEndLogits(nn.Module):
         return x
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMPoolerAnswerClass with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPoolerAnswerClass with XLM->Flaubert
 class FlaubertPoolerAnswerClass(nn.Module):
     """
     Compute SQuAD 2.0 answer class from classification and start tokens hidden states.
@@ -441,7 +441,7 @@ class FlaubertPoolerAnswerClass(nn.Module):
         return x
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMSQuADHead with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSQuADHead with XLM->Flaubert
 class FlaubertSQuADHead(nn.Module):
     r"""
     A SQuAD head inspired by XLNet.
@@ -554,7 +554,7 @@ class FlaubertSQuADHead(nn.Module):
                 )
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->Flaubert
 class FlaubertSequenceSummary(nn.Module):
     r"""
     Compute a single vector summary of a sequence hidden states.
@@ -655,7 +655,7 @@ class FlaubertSequenceSummary(nn.Module):
 
 
 @auto_docstring
-# Copied from transformers.models.xlm.modeling_xlm.XLMPreTrainedModel with XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPreTrainedModel with XLM->Flaubert
 class FlaubertPreTrainedModel(PreTrainedModel):
     config: FlaubertConfig
     base_model_prefix = "transformer"
@@ -768,11 +768,11 @@ class FlaubertModel(FlaubertPreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.xlm.modeling_xlm.XLMModel.get_input_embeddings
+    # Copied from transformers_4573.models.xlm.modeling_xlm.XLMModel.get_input_embeddings
     def get_input_embeddings(self):
         return self.embeddings
 
-    # Copied from transformers.models.xlm.modeling_xlm.XLMModel.set_input_embeddings
+    # Copied from transformers_4573.models.xlm.modeling_xlm.XLMModel.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.embeddings = new_embeddings
 
@@ -1063,7 +1063,7 @@ class FlaubertWithLMHeadModel(FlaubertPreTrainedModel, GenerationMixin):
     e.g. for GLUE tasks.
     """
 )
-# Copied from transformers.models.xlm.modeling_xlm.XLMForSequenceClassification with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMForSequenceClassification with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
 class FlaubertForSequenceClassification(FlaubertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1169,7 +1169,7 @@ class FlaubertForSequenceClassification(FlaubertPreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.xlm.modeling_xlm.XLMForTokenClassification with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMForTokenClassification with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
 class FlaubertForTokenClassification(FlaubertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1262,7 +1262,7 @@ class FlaubertForTokenClassification(FlaubertPreTrainedModel):
     layers on top of the hidden-states output to compute `span start logits` and `span end logits`).
     """
 )
-# Copied from transformers.models.xlm.modeling_xlm.XLMForQuestionAnsweringSimple with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMForQuestionAnsweringSimple with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
 class FlaubertForQuestionAnsweringSimple(FlaubertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1397,7 +1397,7 @@ class FlaubertForQuestionAnsweringOutput(ModelOutput):
 
 
 @auto_docstring
-# Copied from transformers.models.xlm.modeling_xlm.XLMForQuestionAnswering with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMForQuestionAnswering with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
 class FlaubertForQuestionAnswering(FlaubertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1457,7 +1457,7 @@ class FlaubertForQuestionAnswering(FlaubertPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, FlaubertForQuestionAnswering
+        >>> from transformers_4573 import AutoTokenizer, FlaubertForQuestionAnswering
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("FacebookAI/xlm-mlm-en-2048")
@@ -1516,7 +1516,7 @@ class FlaubertForQuestionAnswering(FlaubertPreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.xlm.modeling_xlm.XLMForMultipleChoice with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMForMultipleChoice with XLM_INPUTS->FLAUBERT_INPUTS,XLM->Flaubert
 class FlaubertForMultipleChoice(FlaubertPreTrainedModel):
     def __init__(self, config, *inputs, **kwargs):
         super().__init__(config, *inputs, **kwargs)

@@ -520,7 +520,7 @@ class KyutaiSpeechToTextAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# NO LONGER EXIST Copied from transformers.models.gemma.modeling_gemma.GemmaFlashAttention2 with Gemma->KyutaiSpeechToText
+# NO LONGER EXIST Copied from transformers_4573.models.gemma.modeling_gemma.GemmaFlashAttention2 with Gemma->KyutaiSpeechToText
 # TODO cyril: modular
 class KyutaiSpeechToTextFlashAttention2(KyutaiSpeechToTextAttention):
     """
@@ -1124,7 +1124,7 @@ class KyutaiSpeechToTextForConditionalGeneration(KyutaiSpeechToTextPreTrainedMod
         ```python
         >>> import torch
         >>> from datasets import load_dataset, Audio
-        >>> from transformers import KyutaiSpeechToTextProcessor, KyutaiSpeechToTextForConditionalGeneration
+        >>> from transformers_4573 import KyutaiSpeechToTextProcessor, KyutaiSpeechToTextForConditionalGeneration
 
         >>> torch_device = "cuda" if torch.cuda.is_available() else "cpu"
         >>> model_id = "kyutai/stt-2.6b-en-trfs"

@@ -38,7 +38,7 @@ The example below demonstrates how to predict the `<mask>` token with [`Pipeline
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="fill-mask",
@@ -54,7 +54,7 @@ pipeline("Bonjour, je suis un modèle <mask>.")
 <hfoption id="AutoModel">
 
 ```python
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 import torch
 
 tokenizer = AutoTokenizer.from_pretrained(
@@ -97,7 +97,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) the quantive
 
 ```python
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,

@@ -33,7 +33,7 @@ from datasets import load_dataset
 from torchvision.transforms import Compose, Lambda, Normalize, RandomHorizontalFlip, RandomResizedCrop, ToTensor
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     IMAGE_PROCESSOR_MAPPING,
     MODEL_FOR_MASKED_IMAGE_MODELING_MAPPING,
@@ -44,8 +44,8 @@ from transformers import (
     Trainer,
     TrainingArguments,
 )
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 """ Pre-training a 🤗 Transformers model for simple masked image modeling (SimMIM).

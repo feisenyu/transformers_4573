@@ -769,7 +769,7 @@ class DogeForCausalLM(DogePreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, DogeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, DogeForCausalLM
 
         >>> model = DogeForCausalLM.from_pretrained("SmallDoge/Doge-320M")
         >>> tokenizer = AutoTokenizer.from_pretrained("SmallDoge/Doge-320M")

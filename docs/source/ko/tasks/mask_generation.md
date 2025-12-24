@@ -47,7 +47,7 @@ pip install -q transformers
 마스크 생성 모델로 추론하는 가장 쉬운 방법은 `mask-generation` 파이프라인을 사용하는 것입니다.
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> checkpoint = "facebook/sam-vit-base"
 >>> mask_generator = pipeline(model=checkpoint, task="mask-generation")
@@ -119,7 +119,7 @@ plt.show()
 파이프라인 없이도 모델을 사용할 수 있습니다. 이를 위해 모델과 프로세서를 초기화해야 합니다.
 
 ```python
-from transformers import SamModel, SamProcessor
+from transformers_4573 import SamModel, SamProcessor
 import torch
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

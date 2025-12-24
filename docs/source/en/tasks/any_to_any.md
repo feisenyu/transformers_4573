@@ -31,7 +31,7 @@ pip install -q transformers accelerate flash_attn
 Let's initialize the model and the processor.
 
 ```python
-from transformers import AutoProcessor, AutoModelForMultimodalLM, infer_device
+from transformers_4573 import AutoProcessor, AutoModelForMultimodalLM, infer_device
 import torch
 
 device = torch.device(infer_device())
@@ -86,7 +86,7 @@ print(generated_texts)
 The fastest way to get started is to use the [`Pipeline`] API. Specify the `"any-to-any"` task and the model you want to use.
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 pipe = pipeline("any-to-any", model="mistralai/Voxtral-Mini-3B-2507")
 ```
 

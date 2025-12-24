@@ -18,11 +18,11 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import OlmoConfig, is_torch_available
-from transformers.generation.configuration_utils import GenerationConfig
-from transformers.models.auto.tokenization_auto import AutoTokenizer
-from transformers.models.gpt_neox.tokenization_gpt_neox import GPTNeoXTokenizer as GPTNeoXTokenizerFast
-from transformers.testing_utils import (
+from transformers_4573 import OlmoConfig, is_torch_available
+from transformers_4573.generation.configuration_utils import GenerationConfig
+from transformers_4573.models.auto.tokenization_auto import AutoTokenizer
+from transformers_4573.models.gpt_neox.tokenization_gpt_neox import GPTNeoXTokenizer as GPTNeoXTokenizerFast
+from transformers_4573.testing_utils import (
     require_tokenizers,
     require_torch,
     slow,
@@ -38,7 +38,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         OlmoForCausalLM,
         OlmoModel,
     )
@@ -290,7 +290,7 @@ class OlmoIntegrationTest(unittest.TestCase):
         if version.parse(torch.__version__) < version.parse("2.4.0"):
             self.skipTest(reason="This test requires torch >= 2.4 to run.")
 
-        from transformers.integrations.executorch import (
+        from transformers_4573.integrations.executorch import (
             TorchExportableModuleWithStaticCache,
         )
 
@@ -339,7 +339,7 @@ class OlmoIntegrationTest(unittest.TestCase):
         self.assertEqual(EXPECTED_TEXT_COMPLETION, eager_generated_text)
 
         # Static Cache + export
-        from transformers.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
+        from transformers_4573.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
 
         exportable_module = TorchExportableModuleForDecoderOnlyLM(model)
         exported_program = exportable_module.export(

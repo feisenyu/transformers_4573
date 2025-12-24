@@ -118,7 +118,7 @@ class MiniMaxConfig(PreTrainedConfig):
             Weight for hidden state value in residual connection after MLP.
 
     ```python
-    >>> from transformers import MiniMaxModel, MiniMaxConfig
+    >>> from transformers_4573 import MiniMaxModel, MiniMaxConfig
 
     >>> # Initializing a MiniMax style configuration
     >>> configuration = MiniMaxConfig()

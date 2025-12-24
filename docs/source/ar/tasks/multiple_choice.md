@@ -77,7 +77,7 @@ pip install transformers datasets evaluate
 الخطوة التالية هي استدعاء مُجزئ BERT لمعالجة بدايات الجمل والنهايات الأربع المحتملة:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -119,7 +119,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 
 ```py
 >>> from dataclasses import dataclass
->>> from transformers.tokenization_utils_base import PreTrainedTokenizerBase, PaddingStrategy
+>>> from transformers_4573.tokenization_utils_base import PreTrainedTokenizerBase, PaddingStrategy
 >>> from typing import Optional, Union
 >>> import torch
 
@@ -192,7 +192,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 أنت جاهز لبدء تدريب نموذجك الآن! قم بتحميل BERT باستخدام [`AutoModelForMultipleChoice`]:
 
 ```py
->>> from transformers import AutoModelForMultipleChoice, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForMultipleChoice, TrainingArguments, Trainer
 
 >>> model = AutoModelForMultipleChoice.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -258,7 +258,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 قم بتحليل كل مطالبة وزوج إجابة مرشح وأعد تنسورات PyTorch. يجب عليك أيضًا إنشاء بعض `العلامات`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_swag_model")
 >>> inputs = tokenizer([[prompt, candidate1], [prompt, candidate2]], return_tensors="pt", padding=True)
@@ -268,7 +268,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 مرر مدخلاتك والعلامات إلى النموذج وأرجع`logits`:
 
 ```py
->>> from transformers import AutoModelForMultipleChoice
+>>> from transformers_4573 import AutoModelForMultipleChoice
 
 >>> model = AutoModelForMultipleChoice.from_pretrained("username/my_awesome_swag_model")
 >>> outputs = model(**{k: v.unsqueeze(0) for k, v in inputs.items()}, labels=labels)

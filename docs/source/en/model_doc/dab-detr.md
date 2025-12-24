@@ -56,7 +56,7 @@ import torch
 import requests
 
 from PIL import Image
-from transformers import AutoModelForObjectDetection, AutoImageProcessor
+from transformers_4573 import AutoModelForObjectDetection, AutoImageProcessor
 
 url = 'http://images.cocodataset.org/val2017/000000039769.jpg' 
 image = Image.open(requests.get(url, stream=True).raw)
@@ -93,7 +93,7 @@ There are three other ways to instantiate a DAB-DETR model (depending on what yo
 Option 1: Instantiate DAB-DETR with pre-trained weights for entire model
 
 ```py
->>> from transformers import DabDetrForObjectDetection
+>>> from transformers_4573 import DabDetrForObjectDetection
 
 >>> model = DabDetrForObjectDetection.from_pretrained("IDEA-Research/dab-detr-resnet-50")
 ```
@@ -101,7 +101,7 @@ Option 1: Instantiate DAB-DETR with pre-trained weights for entire model
 Option 2: Instantiate DAB-DETR with randomly initialized weights for Transformer, but pre-trained weights for backbone
 
 ```py
->>> from transformers import DabDetrConfig, DabDetrForObjectDetection
+>>> from transformers_4573 import DabDetrConfig, DabDetrForObjectDetection
 
 >>> config = DabDetrConfig()
 >>> model = DabDetrForObjectDetection(config)

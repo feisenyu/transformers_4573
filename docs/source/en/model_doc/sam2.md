@@ -52,7 +52,7 @@ The original code can be found [here](https://github.com/facebookresearch/sam2/t
 SAM2 can be used for automatic mask generation to segment all objects in an image using the `mask-generation` pipeline:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline("mask-generation", model="facebook/sam2.1-hiera-large", device=0)
 >>> image_url = "https://huggingface.co/datasets/hf-internal-testing/sam2-fixtures/resolve/main/truck.jpg"
@@ -69,7 +69,7 @@ SAM2 can be used for automatic mask generation to segment all objects in an imag
 You can segment objects by providing a single point click on the object you want to segment:
 
 ```python
->>> from transformers import Sam2Processor, Sam2Model
+>>> from transformers_4573 import Sam2Processor, Sam2Model
 from accelerate import Accelerator
 >>> import torch
 >>> from PIL import Image
@@ -158,7 +158,7 @@ Generated masks for 2 objects
 Process multiple images simultaneously for improved efficiency:
 
 ```python
->>> from transformers import Sam2Processor, Sam2Model
+>>> from transformers_4573 import Sam2Processor, Sam2Model
 from accelerate import Accelerator
 >>> import torch
 >>> from PIL import Image

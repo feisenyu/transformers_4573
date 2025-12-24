@@ -18,14 +18,14 @@ import unittest
 
 import torch
 
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_vision_available():
-    from transformers import (
+    from transformers_4573 import (
         LlavaOnevisionProcessor,
     )
 
@@ -39,7 +39,7 @@ class LlavaOnevisionProcessorTest(ProcessorTesterMixin, unittest.TestCase):
     def setUpClass(cls):
         # Ensure local assets are used instead of remote URLs to avoid network access in tests
         from tests.test_processing_common import MODALITY_INPUT_DATA
-        from transformers import video_processing_utils, video_utils
+        from transformers_4573 import video_processing_utils, video_utils
 
         repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
         local_image = os.path.join(repo_root, "coco_sample.png")

@@ -40,7 +40,7 @@ The examples below demonstrates how to generate text with [`AutoModel`].
 
 ```py
 import torch
-from transformers import RagTokenizer, RagRetriever, RagSequenceForGeneration
+from transformers_4573 import RagTokenizer, RagRetriever, RagSequenceForGeneration
 
 tokenizer = RagTokenizer.from_pretrained("facebook/rag-sequence-nq")
 retriever = RagRetriever.from_pretrained(
@@ -66,7 +66,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to quantize 
 
 ```py
 import torch
-from transformers import BitsAndBytesConfig, RagTokenizer, RagRetriever, RagSequenceForGeneration
+from transformers_4573 import BitsAndBytesConfig, RagTokenizer, RagRetriever, RagSequenceForGeneration
 
 bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
 

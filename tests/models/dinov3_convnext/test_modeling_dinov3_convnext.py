@@ -16,9 +16,9 @@
 import unittest
 from functools import cached_property
 
-from transformers import DINOv3ConvNextConfig
-from transformers.testing_utils import require_torch, require_vision, slow, torch_device
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573 import DINOv3ConvNextConfig
+from transformers_4573.testing_utils import require_torch, require_vision, slow, torch_device
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_backbone_common import BackboneTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -29,13 +29,13 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import DINOv3ConvNextBackbone, DINOv3ConvNextModel
+    from transformers_4573 import DINOv3ConvNextBackbone, DINOv3ConvNextModel
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import AutoImageProcessor
+    from transformers_4573 import AutoImageProcessor
 
 
 class DINOv3ConvNextModelTester:

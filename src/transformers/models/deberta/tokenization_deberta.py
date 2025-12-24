@@ -37,7 +37,7 @@ class DebertaTokenizer(TokenizersBackend):
     be encoded differently whether it is at the beginning of the sentence (without space) or not:
 
     ```python
-    >>> from transformers import DebertaTokenizer
+    >>> from transformers_4573 import DebertaTokenizer
 
     >>> tokenizer = DebertaTokenizer.from_pretrained("microsoft/deberta-base")
     >>> tokenizer("Hello world")["input_ids"]

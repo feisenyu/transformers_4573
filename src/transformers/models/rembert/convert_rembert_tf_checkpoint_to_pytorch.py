@@ -19,8 +19,8 @@ import os
 
 import torch
 
-from transformers import RemBertConfig, RemBertModel
-from transformers.utils import logging
+from transformers_4573 import RemBertConfig, RemBertModel
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

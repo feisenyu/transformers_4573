@@ -34,7 +34,7 @@ from .configuration_speech_encoder_decoder import SpeechEncoderDecoderConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.encoder_decoder.modeling_encoder_decoder.shift_tokens_right
+# Copied from transformers_4573.models.encoder_decoder.modeling_encoder_decoder.shift_tokens_right
 def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start_token_id: int):
     """
     Shift input ids one token to the right.
@@ -210,7 +210,7 @@ class SpeechEncoderDecoderModel(PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import SpeechEncoderDecoderModel
+        >>> from transformers_4573 import SpeechEncoderDecoderModel
 
         >>> # initialize a wav2vec2bert from a pretrained Wav2Vec2 and a pretrained BERT model. Note that the cross-attention layers will be randomly initialized
         >>> model = SpeechEncoderDecoderModel.from_encoder_decoder_pretrained(
@@ -367,7 +367,7 @@ class SpeechEncoderDecoderModel(PreTrainedModel, GenerationMixin):
         Examples:
 
         ```python
-        >>> from transformers import SpeechEncoderDecoderModel, AutoProcessor
+        >>> from transformers_4573 import SpeechEncoderDecoderModel, AutoProcessor
         >>> from datasets import load_dataset
         >>> import torch
 

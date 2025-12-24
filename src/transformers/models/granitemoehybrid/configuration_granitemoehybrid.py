@@ -116,7 +116,7 @@ class GraniteMoeHybridConfig(PreTrainedConfig):
             Flag indicating whether or not to use bias in the input and output projections (["in_proj", "out_proj"])
             of the mamba mixer block.
     ```python
-    >>> from transformers import GraniteMoeHybridModel, GraniteMoeHybridConfig
+    >>> from transformers_4573 import GraniteMoeHybridModel, GraniteMoeHybridConfig
 
     >>> # Initializing a GraniteMoeHybrid config
     >>> configuration = GraniteMoeHybridConfig()

@@ -56,7 +56,7 @@ Los campos `sent1` y `sent2` muestran cómo comienza una oración, y cada campo 
 Carga el tokenizer de BERT para procesar el comienzo de cada oración y los cuatro finales posibles:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -96,7 +96,7 @@ Para crear un lote de ejemplos para selección múltiple, este también le *aña
 
 El [`DataCollatorForMultipleChoice`] aplanará todas las entradas del modelo, les aplicará relleno y luego des-aplanará los resultados.
 ```py
->>> from transformers import DataCollatorForMultipleChoice
+>>> from transformers_4573 import DataCollatorForMultipleChoice
 >>> collator = DataCollatorForMultipleChoice(tokenizer=tokenizer)
 ```
 
@@ -105,7 +105,7 @@ El [`DataCollatorForMultipleChoice`] aplanará todas las entradas del modelo, le
 Carga el modelo BERT con [`AutoModelForMultipleChoice`]:
 
 ```py
->>> from transformers import AutoModelForMultipleChoice, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForMultipleChoice, TrainingArguments, Trainer
 
 >>> model = AutoModelForMultipleChoice.from_pretrained("google-bert/bert-base-uncased")
 ```

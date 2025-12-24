@@ -15,8 +15,8 @@
 import unittest
 from functools import cached_property
 
-from transformers import SPIECE_UNDERLINE, AddedToken, BatchEncoding, SiglipTokenizer
-from transformers.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers, slow
+from transformers_4573 import SPIECE_UNDERLINE, AddedToken, BatchEncoding, SiglipTokenizer
+from transformers_4573.testing_utils import get_tests_dir, require_sentencepiece, require_tokenizers, slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

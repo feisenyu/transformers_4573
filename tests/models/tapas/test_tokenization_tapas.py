@@ -21,8 +21,8 @@ import numpy as np
 import pandas as pd
 from parameterized import parameterized
 
-from transformers import AddedToken, is_mlx_available, is_torch_available
-from transformers.models.tapas.tokenization_tapas import (
+from transformers_4573 import AddedToken, is_mlx_available, is_torch_available
+from transformers_4573.models.tapas.tokenization_tapas import (
     VOCAB_FILES_NAMES,
     BasicTokenizer,
     TapasTokenizer,
@@ -31,7 +31,7 @@ from transformers.models.tapas.tokenization_tapas import (
     _is_punctuation,
     _is_whitespace,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_pandas,
     require_tokenizers,
     slow,

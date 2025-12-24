@@ -23,7 +23,7 @@ This integration accompanies the pre-print of the [**Bridging the Gap Between Pr
 Currently, only QAT is only supported with `pseudoquantization=True`. Models can either be quantized on the fly with `quantization_config=FPQuantConfig()`:
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, FPQuantConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, FPQuantConfig
 import torch
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -51,7 +51,7 @@ FP-Quant is fully compatible with [torch.compile](https://pytorch.org/tutorials/
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, FPQuantConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, FPQuantConfig
 
 model = AutoModelForCausalLM.from_pretrained(
     "qwen/Qwen3-8B",

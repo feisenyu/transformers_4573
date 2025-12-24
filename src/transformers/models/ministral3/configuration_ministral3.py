@@ -85,7 +85,7 @@ class Ministral3Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Ministral3Config, Ministral3ForCausalLM, Mistral3Config, Mistral3ForConditionalGeneration, PixtralVisionConfig
+    >>> from transformers_4573 import Ministral3Config, Ministral3ForCausalLM, Mistral3Config, Mistral3ForConditionalGeneration, PixtralVisionConfig
 
     >>> # Initializing a Pixtral-vision config
     >>> vision_config = PixtralVisionConfig()

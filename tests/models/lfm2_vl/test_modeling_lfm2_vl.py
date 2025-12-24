@@ -20,9 +20,9 @@ from io import BytesIO
 import pytest
 import requests
 
-from transformers import AutoProcessor, is_torch_available
-from transformers.models.lfm2_vl.modeling_lfm2_vl import Lfm2VlForConditionalGeneration
-from transformers.testing_utils import (
+from transformers_4573 import AutoProcessor, is_torch_available
+from transformers_4573.models.lfm2_vl.modeling_lfm2_vl import Lfm2VlForConditionalGeneration
+from transformers_4573.testing_utils import (
     cleanup,
     require_read_token,
     require_torch,
@@ -30,7 +30,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils.import_utils import is_vision_available
+from transformers_4573.utils.import_utils import is_vision_available
 
 from ...causal_lm_tester import CausalLMModelTester
 from ...generation.test_utils import GenerationTesterMixin
@@ -44,8 +44,8 @@ if is_vision_available():
 if is_torch_available():
     import torch
 
-    from transformers import Lfm2VlConfig, Lfm2VlForConditionalGeneration, Lfm2VlModel
-    from transformers.models.lfm2.modeling_lfm2 import Lfm2HybridConvCache
+    from transformers_4573 import Lfm2VlConfig, Lfm2VlForConditionalGeneration, Lfm2VlModel
+    from transformers_4573.models.lfm2.modeling_lfm2 import Lfm2HybridConvCache
 
 
 class Lfm2VlModelTester(CausalLMModelTester):

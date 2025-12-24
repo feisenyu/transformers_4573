@@ -18,8 +18,8 @@ import unittest
 
 import pytest
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_flash_attn,
@@ -35,7 +35,7 @@ from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Glm4Model,
     )
 

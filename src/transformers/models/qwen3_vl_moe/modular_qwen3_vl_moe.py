@@ -114,7 +114,7 @@ class Qwen3VLMoeTextConfig(PreTrainedConfig):
             The dimension of the head. If not specified, will default to `hidden_size // num_attention_heads`.
 
     ```python
-    >>> from transformers import Qwen3VLMoeForConditionalGeneration, Qwen3VLMoeConfig
+    >>> from transformers_4573 import Qwen3VLMoeForConditionalGeneration, Qwen3VLMoeConfig
 
     >>> # Initializing a Qwen3VLMoe style configuration
     >>> configuration = Qwen3VLMoeConfig()
@@ -238,7 +238,7 @@ class Qwen3VLMoeConfig(Qwen3VLConfig):
             Whether to tie the word embeddings.
 
     ```python
-    >>> from transformers import Qwen3VLMoeForConditionalGeneration, Qwen3VLMoeConfig
+    >>> from transformers_4573 import Qwen3VLMoeForConditionalGeneration, Qwen3VLMoeConfig
 
     >>> # Initializing a Qwen3-VL-MOE style configuration
     >>> configuration = Qwen3VLMoeConfig()
@@ -426,7 +426,7 @@ class Qwen3VLMoeForConditionalGeneration(Qwen3VLForConditionalGeneration):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Qwen3VLMoeForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Qwen3VLMoeForConditionalGeneration
 
         >>> model = Qwen3VLMoeForConditionalGeneration.from_pretrained("Qwen/Qwen3-VL-30B-A3B-Instruct", dtype="auto", device_map="auto")
         >>> processor = AutoProcessor.from_pretrained("Qwen/Qwen3-VL-30B-A3B-Instruct")

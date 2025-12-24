@@ -19,8 +19,8 @@ import pytest
 import torch
 from packaging import version
 
-from transformers import is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available
+from transformers_4573.testing_utils import (
     cleanup,
     require_read_token,
     require_torch,
@@ -33,7 +33,7 @@ from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 
 
 if is_torch_available():
-    from transformers import AutoTokenizer, Glm4MoeForCausalLM, Glm4MoeModel
+    from transformers_4573 import AutoTokenizer, Glm4MoeForCausalLM, Glm4MoeModel
 
 
 class Glm4MoeModelTester(CausalLMModelTester):

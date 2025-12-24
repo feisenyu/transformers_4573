@@ -50,7 +50,7 @@ from .configuration_mt5 import MT5Config
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerNorm with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerNorm with T5->MT5
 class MT5LayerNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
         """
@@ -76,7 +76,7 @@ class MT5LayerNorm(nn.Module):
         return self.weight * hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5DenseActDense with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5DenseActDense with T5->MT5
 class MT5DenseActDense(nn.Module):
     def __init__(self, config: MT5Config):
         super().__init__()
@@ -99,7 +99,7 @@ class MT5DenseActDense(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5DenseGatedActDense with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5DenseGatedActDense with T5->MT5
 class MT5DenseGatedActDense(nn.Module):
     def __init__(self, config: MT5Config):
         super().__init__()
@@ -129,7 +129,7 @@ class MT5DenseGatedActDense(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerFF with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerFF with T5->MT5
 class MT5LayerFF(nn.Module):
     def __init__(self, config: MT5Config):
         super().__init__()
@@ -148,7 +148,7 @@ class MT5LayerFF(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.t5.modeling_t5.T5Attention with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5Attention with T5->MT5
 class MT5Attention(nn.Module):
     def __init__(
         self,
@@ -353,7 +353,7 @@ class MT5Attention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerSelfAttention with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerSelfAttention with T5->MT5
 class MT5LayerSelfAttention(nn.Module):
     def __init__(self, config, has_relative_attention_bias=False, layer_idx: Optional[int] = None):
         super().__init__()
@@ -388,7 +388,7 @@ class MT5LayerSelfAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.t5.modeling_t5.T5LayerCrossAttention with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5LayerCrossAttention with T5->MT5
 class MT5LayerCrossAttention(nn.Module):
     def __init__(self, config, layer_idx: Optional[int] = None):
         super().__init__()
@@ -425,7 +425,7 @@ class MT5LayerCrossAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.t5.modeling_t5.T5Block with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5Block with T5->MT5
 class MT5Block(GradientCheckpointingLayer):
     def __init__(self, config, has_relative_attention_bias=False, layer_idx: Optional[int] = None):
         super().__init__()
@@ -519,7 +519,7 @@ class MT5Block(GradientCheckpointingLayer):
         )  # hidden-states, (self-attention position bias), (self-attention weights), (cross-attention position bias), (cross-attention weights)
 
 
-# Copied from transformers.models.t5.modeling_t5.T5ClassificationHead with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5ClassificationHead with T5->MT5
 class MT5ClassificationHead(nn.Module):
     """Head for sentence-level classification tasks."""
 
@@ -539,7 +539,7 @@ class MT5ClassificationHead(nn.Module):
 
 
 @auto_docstring
-# Copied from transformers.models.t5.modeling_t5.T5PreTrainedModel with T5->MT5, t5->mt5
+# Copied from transformers_4573.models.t5.modeling_t5.T5PreTrainedModel with T5->MT5, t5->mt5
 class MT5PreTrainedModel(PreTrainedModel):
     config: MT5Config
     base_model_prefix = "transformer"
@@ -637,7 +637,7 @@ class MT5PreTrainedModel(PreTrainedModel):
         return shifted_input_ids
 
 
-# Copied from transformers.models.t5.modeling_t5.T5Stack with T5->MT5
+# Copied from transformers_4573.models.t5.modeling_t5.T5Stack with T5->MT5
 class MT5Stack(MT5PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -831,7 +831,7 @@ class MT5Model(MT5PreTrainedModel):
     Examples:
 
     ```python
-    >>> from transformers import MT5Model, AutoTokenizer
+    >>> from transformers_4573 import MT5Model, AutoTokenizer
 
     >>> model = MT5Model.from_pretrained("google/mt5-small")
     >>> tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
@@ -852,7 +852,7 @@ class MT5Model(MT5PreTrainedModel):
         "decoder.embed_tokens.weight": "shared.weight",
     }
 
-    # Copied from transformers.models.t5.modeling_t5.T5Model.__init__ with T5->MT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Model.__init__ with T5->MT5
     def __init__(self, config: MT5Config):
         super().__init__(config)
         self.shared = nn.Embedding(config.vocab_size, config.d_model)
@@ -870,18 +870,18 @@ class MT5Model(MT5PreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.t5.modeling_t5.T5Model.get_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Model.get_input_embeddings
     def get_input_embeddings(self):
         return self.shared
 
-    # Copied from transformers.models.t5.modeling_t5.T5Model.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Model.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.shared = new_embeddings
         self.encoder.set_input_embeddings(new_embeddings)
         self.decoder.set_input_embeddings(new_embeddings)
 
     @auto_docstring
-    # Copied from transformers.models.t5.modeling_t5.T5Model.forward with google-t5/->google/, T5->MT5, t5->mt5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5Model.forward with google-t5/->google/, T5->MT5, t5->mt5
     def forward(
         self,
         input_ids: Optional[torch.LongTensor] = None,
@@ -930,7 +930,7 @@ class MT5Model(MT5PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, MT5Model
+        >>> from transformers_4573 import AutoTokenizer, MT5Model
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
         >>> model = MT5Model.from_pretrained("google/mt5-small")
@@ -1010,7 +1010,7 @@ class MT5ForConditionalGeneration(MT5PreTrainedModel, GenerationMixin):
     Examples:
 
     ```python
-    >>> from transformers import MT5ForConditionalGeneration, AutoTokenizer
+    >>> from transformers_4573 import MT5ForConditionalGeneration, AutoTokenizer
 
     >>> model = MT5ForConditionalGeneration.from_pretrained("google/mt5-small")
     >>> tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
@@ -1031,7 +1031,7 @@ class MT5ForConditionalGeneration(MT5PreTrainedModel, GenerationMixin):
         "lm_head.weight": "shared.weight",
     }
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForConditionalGeneration.__init__ with T5->MT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForConditionalGeneration.__init__ with T5->MT5
     def __init__(self, config: MT5Config):
         super().__init__(config)
         self.model_dim = config.d_model
@@ -1115,7 +1115,7 @@ class MT5ForConditionalGeneration(MT5PreTrainedModel, GenerationMixin):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, MT5ForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, MT5ForConditionalGeneration
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
         >>> model = MT5ForConditionalGeneration.from_pretrained("google/mt5-small")
@@ -1204,7 +1204,7 @@ class MT5ForConditionalGeneration(MT5PreTrainedModel, GenerationMixin):
             encoder_attentions=encoder_outputs.attentions,
         )
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForConditionalGeneration.prepare_decoder_input_ids_from_labels
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForConditionalGeneration.prepare_decoder_input_ids_from_labels
     def prepare_decoder_input_ids_from_labels(self, labels: torch.Tensor):
         return self._shift_right(labels)
 
@@ -1215,7 +1215,7 @@ class MT5EncoderModel(MT5PreTrainedModel):
     Examples:
 
     ```python
-    >>> from transformers import MT5EncoderModel, AutoTokenizer
+    >>> from transformers_4573 import MT5EncoderModel, AutoTokenizer
 
     >>> model = MT5EncoderModel.from_pretrained("google/mt5-small")
     >>> tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
@@ -1231,7 +1231,7 @@ class MT5EncoderModel(MT5PreTrainedModel):
         "encoder.embed_tokens.weight": "shared.weight",
     }
 
-    # Copied from transformers.models.t5.modeling_t5.T5EncoderModel.__init__ with T5->MT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5EncoderModel.__init__ with T5->MT5
     def __init__(self, config: MT5Config):
         super().__init__(config)
         self.shared = nn.Embedding(config.vocab_size, config.d_model)
@@ -1244,17 +1244,17 @@ class MT5EncoderModel(MT5PreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.t5.modeling_t5.T5EncoderModel.get_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5EncoderModel.get_input_embeddings
     def get_input_embeddings(self):
         return self.shared
 
-    # Copied from transformers.models.t5.modeling_t5.T5EncoderModel.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5EncoderModel.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.shared = new_embeddings
         self.encoder.set_input_embeddings(new_embeddings)
 
     @auto_docstring
-    # Copied from transformers.models.t5.modeling_t5.T5EncoderModel.forward with google-t5/->google/, T5->MT5, t5->mt5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5EncoderModel.forward with google-t5/->google/, T5->MT5, t5->mt5
     def forward(
         self,
         input_ids: Optional[torch.LongTensor] = None,
@@ -1278,7 +1278,7 @@ class MT5EncoderModel(MT5PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, MT5EncoderModel
+        >>> from transformers_4573 import AutoTokenizer, MT5EncoderModel
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
         >>> model = MT5EncoderModel.from_pretrained("google/mt5-small")
@@ -1311,7 +1311,7 @@ class MT5EncoderModel(MT5PreTrainedModel):
 class MT5ForSequenceClassification(MT5PreTrainedModel):
     _keys_to_ignore_on_load_unexpected = ["decoder.block.0.layer.1.EncDecAttention.relative_attention_bias.weight"]
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForSequenceClassification.__init__ with T5->MT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForSequenceClassification.__init__ with T5->MT5
     def __init__(self, config: MT5Config):
         super().__init__(config)
         self.transformer = MT5Model(config)
@@ -1321,7 +1321,7 @@ class MT5ForSequenceClassification(MT5PreTrainedModel):
         self.post_init()
 
     @auto_docstring
-    # Copied from transformers.models.t5.modeling_t5.T5ForSequenceClassification.forward with T5->MT5, t5->mt5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForSequenceClassification.forward with T5->MT5, t5->mt5
     def forward(
         self,
         input_ids: Optional[torch.LongTensor] = None,
@@ -1454,7 +1454,7 @@ class MT5ForSequenceClassification(MT5PreTrainedModel):
 
 @auto_docstring
 class MT5ForTokenClassification(MT5PreTrainedModel):
-    # Copied from transformers.models.t5.modeling_t5.T5ForTokenClassification.__init__ with T5->MT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForTokenClassification.__init__ with T5->MT5
     def __init__(self, config: MT5Config):
         super().__init__(config)
         self.num_labels = config.num_labels
@@ -1467,7 +1467,7 @@ class MT5ForTokenClassification(MT5PreTrainedModel):
         self.post_init()
 
     @auto_docstring
-    # Copied from transformers.models.t5.modeling_t5.T5ForTokenClassification.forward with T5->MT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForTokenClassification.forward with T5->MT5
     def forward(
         self,
         input_ids: Optional[torch.Tensor] = None,
@@ -1533,7 +1533,7 @@ class MT5ForQuestionAnswering(MT5PreTrainedModel):
         "decoder.embed_tokens.weight": "shared.weight",
     }
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForQuestionAnswering.__init__ with T5->MT5
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForQuestionAnswering.__init__ with T5->MT5
     def __init__(self, config: MT5Config):
         super().__init__(config)
         self.model_dim = config.d_model
@@ -1556,18 +1556,18 @@ class MT5ForQuestionAnswering(MT5PreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForQuestionAnswering.get_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForQuestionAnswering.get_input_embeddings
     def get_input_embeddings(self):
         return self.shared
 
-    # Copied from transformers.models.t5.modeling_t5.T5ForQuestionAnswering.set_input_embeddings
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForQuestionAnswering.set_input_embeddings
     def set_input_embeddings(self, new_embeddings):
         self.shared = new_embeddings
         self.encoder.set_input_embeddings(new_embeddings)
         self.decoder.set_input_embeddings(new_embeddings)
 
     @auto_docstring
-    # Copied from transformers.models.t5.modeling_t5.T5ForQuestionAnswering.forward
+    # Copied from transformers_4573.models.t5.modeling_t5.T5ForQuestionAnswering.forward
     def forward(
         self,
         input_ids: Optional[torch.LongTensor] = None,

@@ -356,7 +356,7 @@ class XLNetLayer(nn.Module):
         return output_x
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMPoolerStartLogits with XLM->XLNet
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPoolerStartLogits with XLM->XLNet
 class XLNetPoolerStartLogits(nn.Module):
     """
     Compute SQuAD start logits from sequence hidden states.
@@ -395,7 +395,7 @@ class XLNetPoolerStartLogits(nn.Module):
         return x
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMPoolerEndLogits with XLM->XLNet
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPoolerEndLogits with XLM->XLNet
 class XLNetPoolerEndLogits(nn.Module):
     """
     Compute SQuAD end logits from sequence hidden states.
@@ -465,7 +465,7 @@ class XLNetPoolerEndLogits(nn.Module):
         return x
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMPoolerAnswerClass with XLM->XLNet
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMPoolerAnswerClass with XLM->XLNet
 class XLNetPoolerAnswerClass(nn.Module):
     """
     Compute SQuAD 2.0 answer class from classification and start tokens hidden states.
@@ -531,7 +531,7 @@ class XLNetPoolerAnswerClass(nn.Module):
         return x
 
 
-# Copied from transformers.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->XLNet
+# Copied from transformers_4573.models.xlm.modeling_xlm.XLMSequenceSummary with XLM->XLNet
 class XLNetSequenceSummary(nn.Module):
     r"""
     Compute a single vector summary of a sequence hidden states.
@@ -1365,7 +1365,7 @@ class XLNetLMHeadModel(XLNetPreTrainedModel, GenerationMixin):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, XLNetLMHeadModel
+        >>> from transformers_4573 import AutoTokenizer, XLNetLMHeadModel
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("xlnet/xlnet-large-cased")
@@ -2055,7 +2055,7 @@ class XLNetForQuestionAnswering(XLNetPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, XLNetForQuestionAnswering
+        >>> from transformers_4573 import AutoTokenizer, XLNetForQuestionAnswering
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("xlnet/xlnet-base-cased")

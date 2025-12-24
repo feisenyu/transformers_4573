@@ -133,7 +133,7 @@ class GroundingDinoConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import GroundingDinoConfig, GroundingDinoModel
+    >>> from transformers_4573 import GroundingDinoConfig, GroundingDinoModel
 
     >>> # Initializing a Grounding DINO IDEA-Research/grounding-dino-tiny style configuration
     >>> configuration = GroundingDinoConfig()

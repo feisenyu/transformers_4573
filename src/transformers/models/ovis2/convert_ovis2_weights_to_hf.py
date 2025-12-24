@@ -21,18 +21,18 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     AutoModelForCausalLM,
     AutoModelForImageTextToText,
     AutoProcessor,
     AutoTokenizer,
 )
-from transformers.models.auto.configuration_auto import CONFIG_MAPPING_NAMES
-from transformers.models.ovis2.configuration_ovis2 import Ovis2Config, Ovis2VisionConfig
-from transformers.models.ovis2.image_processing_ovis2 import Ovis2ImageProcessor
-from transformers.models.ovis2.modeling_ovis2 import Ovis2ForConditionalGeneration
-from transformers.models.ovis2.processing_ovis2 import Ovis2Processor
-from transformers.models.qwen2.configuration_qwen2 import Qwen2Config
+from transformers_4573.models.auto.configuration_auto import CONFIG_MAPPING_NAMES
+from transformers_4573.models.ovis2.configuration_ovis2 import Ovis2Config, Ovis2VisionConfig
+from transformers_4573.models.ovis2.image_processing_ovis2 import Ovis2ImageProcessor
+from transformers_4573.models.ovis2.modeling_ovis2 import Ovis2ForConditionalGeneration
+from transformers_4573.models.ovis2.processing_ovis2 import Ovis2Processor
+from transformers_4573.models.qwen2.configuration_qwen2 import Qwen2Config
 
 
 # Constants

@@ -73,7 +73,7 @@ class TrOCRConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import TrOCRConfig, TrOCRForCausalLM
+    >>> from transformers_4573 import TrOCRConfig, TrOCRForCausalLM
 
     >>> # Initializing a TrOCR-base style configuration
     >>> configuration = TrOCRConfig()

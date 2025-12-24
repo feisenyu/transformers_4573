@@ -56,12 +56,12 @@ class PaliGemmaProcessorKwargs(ProcessingKwargs, total=False):
     }
 
 
-# Copied from transformers.models.idefics2.processing_idefics2.is_url
+# Copied from transformers_4573.models.idefics2.processing_idefics2.is_url
 def is_url(val) -> bool:
     return isinstance(val, str) and val.startswith("http")
 
 
-# Copied from transformers.models.idefics2.processing_idefics2.is_image_or_image_url
+# Copied from transformers_4573.models.idefics2.processing_idefics2.is_image_or_image_url
 def is_image_or_image_url(elem):
     return is_url(elem) or is_valid_image(elem)
 

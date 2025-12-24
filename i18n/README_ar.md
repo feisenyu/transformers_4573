@@ -137,7 +137,7 @@ limitations under the License.
 لاستخدام نموذج على الفور على إدخال معين (نص أو صورة أو صوت، ...)، نوفر واجهة برمجة التطبيقات (API) الخاصة بـ `pipeline`. تجمع خطوط الأنابيب بين نموذج مُدرب مسبقًا ومعالجة ما قبل التدريب التي تم استخدامها أثناء تدريب هذا النموذج. فيما يلي كيفية استخدام خط أنابيب بسرعة لتصنيف النصوص الإيجابية مقابل السلبية:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # خصص خط أنابيب للتحليل الشعوري
 >>> classifier = pipeline('sentiment-analysis')
@@ -152,7 +152,7 @@ limitations under the License.
 ``` python
 >>> import requests
 >>> from PIL import Image
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # قم بتنزيل صورة بها قطط لطيفة
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png"
@@ -190,7 +190,7 @@ limitations under the License.
 
 بالإضافة إلى `pipeline`، لاستخدام أي من النماذج المُدربة مسبقًا على مهمتك، كل ما عليك هو ثلاثة أسطر من التعليمات البرمجية. فيما يلي إصدار PyTorch:
 ```python
->>> from transformers import AutoTokenizer، AutoModel
+>>> from transformers_4573 import AutoTokenizer، AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
@@ -201,7 +201,7 @@ limitations under the License.
 
 وهنا رمز مماثل لـ TensorFlow:
 ```python
->>> from transformers import AutoTokenizer، TFAutoModel
+>>> from transformers_4573 import AutoTokenizer، TFAutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = TFAutoModel.from_pretrained("google-bert/bert-base-uncased")

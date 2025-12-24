@@ -19,9 +19,9 @@ import pytest
 from packaging import version
 from parameterized import parameterized
 
-from transformers import set_seed
-from transformers.generation.configuration_utils import ALL_CACHE_IMPLEMENTATIONS
-from transformers.testing_utils import (
+from transformers_4573 import set_seed
+from transformers_4573.generation.configuration_utils import ALL_CACHE_IMPLEMENTATIONS
+from transformers_4573.testing_utils import (
     CaptureStderr,
     backend_device_count,
     backend_torch_accelerator_module,
@@ -37,13 +37,13 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_hqq_available, is_optimum_quanto_available, is_torch_greater_or_equal
+from transformers_4573.utils import is_hqq_available, is_optimum_quanto_available, is_torch_greater_or_equal
 
 
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoModelForCausalLM,
         AutoTokenizer,
         Cache,
@@ -56,7 +56,7 @@ if is_torch_available():
         convert_and_export_with_cache,
         pipeline,
     )
-    from transformers.integrations.executorch import export_with_dynamic_cache
+    from transformers_4573.integrations.executorch import export_with_dynamic_cache
 
 
 # FIXME: offloaded cache is skipped becase it needs `offload_only_non_sliding=False`
@@ -752,7 +752,7 @@ class CacheExportIntegrationTest(unittest.TestCase):
             strict=strict,
         )
 
-        from transformers.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
+        from transformers_4573.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
 
         exportable_module = TorchExportableModuleForDecoderOnlyLM(model)
         exported_program = exportable_module.export(
@@ -770,7 +770,7 @@ class CacheExportIntegrationTest(unittest.TestCase):
         if not is_torch_greater_or_equal("2.6"):
             self.skipTest(reason="This test requires torch >= 2.6 to run.")
 
-        from transformers.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
+        from transformers_4573.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
 
         set_seed(0)
         model_id = "hf-internal-testing/tiny-random-Gemma3ForCausalLM"
@@ -783,7 +783,7 @@ class CacheExportIntegrationTest(unittest.TestCase):
         max_batch_size = 1
         max_cache_len = 23
         # Set generation config on the model for the hybrid cache model
-        from transformers.generation.configuration_utils import GenerationConfig
+        from transformers_4573.generation.configuration_utils import GenerationConfig
 
         model.generation_config = GenerationConfig(
             use_cache=True,

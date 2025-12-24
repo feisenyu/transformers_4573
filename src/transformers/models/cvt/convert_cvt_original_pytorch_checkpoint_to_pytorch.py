@@ -24,7 +24,7 @@ from pathlib import Path
 import torch
 from huggingface_hub import hf_hub_download
 
-from transformers import AutoImageProcessor, CvtConfig, CvtForImageClassification
+from transformers_4573 import AutoImageProcessor, CvtConfig, CvtForImageClassification
 
 
 def embeddings(idx):

@@ -15,13 +15,13 @@
 import unittest
 from unittest.mock import patch
 
-from transformers import (
+from transformers_4573 import (
     MODEL_FOR_CAUSAL_LM_MAPPING,
     TextGenerationPipeline,
     logging,
     pipeline,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     CaptureLogger,
     is_pipeline_test,
     require_accelerate,
@@ -180,7 +180,7 @@ class TextGenerationPipelineTests(unittest.TestCase):
     def test_small_chat_model_with_dataset_pt(self):
         from torch.utils.data import Dataset
 
-        from transformers.pipelines.pt_utils import KeyDataset
+        from transformers_4573.pipelines.pt_utils import KeyDataset
 
         class MyDataset(Dataset):
             data = [

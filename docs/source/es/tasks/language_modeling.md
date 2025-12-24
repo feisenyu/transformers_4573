@@ -77,7 +77,7 @@ Observa que `text` es un subcampo anidado dentro del diccionario `answers`. Cuan
 Para modelados de lenguaje causales carga el tokenizador DistilGPT2 para procesar el subcampo `text`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilgpt2")
 ```
@@ -87,7 +87,7 @@ Para modelados de lenguaje causales carga el tokenizador DistilGPT2 para procesa
 Para modelados de lenguaje por enmascaramiento carga el tokenizador DistilRoBERTa, en lugar de DistilGPT2:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -163,7 +163,7 @@ Para modelados de lenguaje causales, usa [`DataCollatorForLanguageModeling`] par
 Puedes usar el token de final de secuencia como el token de relleno y asignar `mlm=False`. Esto usará los inputs como etiquetas movidas un elemento hacia la derecha:
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -172,7 +172,7 @@ Puedes usar el token de final de secuencia como el token de relleno y asignar `m
 Para modelados de lenguaje por enmascaramiento usa el mismo [`DataCollatorForLanguageModeling`] excepto que deberás especificar `mlm_probability` para enmascarar tokens aleatoriamente cada vez que iteras sobre los datos.
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
@@ -187,7 +187,7 @@ El modelado de lenguaje causal es frecuentemente utilizado para generación de t
 Carga DistilGPT2 con [`AutoModelForCausalLM`]:
 
 ```py
->>> from transformers import AutoModelForCausalLM, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForCausalLM, TrainingArguments, Trainer
 
 >>> model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
 ```
@@ -232,7 +232,7 @@ El modelado de lenguaje por enmascaramiento es también conocido como una tarea 
 Carga DistilRoBERTa con [`AutoModelForMaskedlM`]:
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("distilbert/distilroberta-base")
 ```

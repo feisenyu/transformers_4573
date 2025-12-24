@@ -98,7 +98,7 @@ class GraniteMoeConfig(PreTrainedConfig):
         router_aux_loss_coef (`float`, *optional*, defaults to 0.001): router auxiliary loss coefficient
 
     ```python
-    >>> from transformers import GraniteMoeModel, GraniteMoeConfig
+    >>> from transformers_4573 import GraniteMoeModel, GraniteMoeConfig
 
     >>> # Initializing a GraniteMoe granitemoe-3b style configuration
     >>> configuration = GraniteMoeConfig()

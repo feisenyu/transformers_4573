@@ -28,7 +28,7 @@ from huggingface_hub import HfApi, hf_hub_download
 from PIL import Image
 from torchvision import transforms
 
-from transformers import DINOv3ConvNextConfig, DINOv3ConvNextModel, DINOv3ViTImageProcessorFast
+from transformers_4573 import DINOv3ConvNextConfig, DINOv3ConvNextModel, DINOv3ViTImageProcessorFast
 
 
 HUB_MODELS = {

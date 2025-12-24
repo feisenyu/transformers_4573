@@ -473,7 +473,7 @@ class BitNetForCausalLM(BitNetPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, BitNetForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, BitNetForCausalLM
 
         >>> model = BitNetForCausalLM.from_pretrained("microsoft/bitnet-b1.58-2B-4T")
         >>> tokenizer = AutoTokenizer.from_pretrained("microsoft/bitnet-b1.58-2B-4T")

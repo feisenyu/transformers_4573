@@ -422,7 +422,7 @@ class FlavaImageProcessor(BaseImageProcessor):
             mask_group_max_aspect_ratio=mask_group_max_aspect_ratio,
         )
 
-    # Copied from transformers.models.vit.image_processing_vit.ViTImageProcessor.resize with PILImageResampling.BILINEAR->PILImageResampling.BICUBIC
+    # Copied from transformers_4573.models.vit.image_processing_vit.ViTImageProcessor.resize with PILImageResampling.BILINEAR->PILImageResampling.BICUBIC
     def resize(
         self,
         image: np.ndarray,

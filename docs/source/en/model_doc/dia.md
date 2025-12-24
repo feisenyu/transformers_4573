@@ -42,7 +42,7 @@ tokens and decodes them back into audio.
 ### Generation with Text
 
 ```python
-from transformers import AutoProcessor, DiaForConditionalGeneration
+from transformers_4573 import AutoProcessor, DiaForConditionalGeneration
 from accelerate import Accelerator
 
 torch_device = Accelerator().device
@@ -65,7 +65,7 @@ processor.save_audio(outputs, "example.wav")
 
 ```python
 from datasets import load_dataset, Audio
-from transformers import AutoProcessor, DiaForConditionalGeneration
+from transformers_4573 import AutoProcessor, DiaForConditionalGeneration
 from accelerate import Accelerator
 
 torch_device = Accelerator().device
@@ -93,7 +93,7 @@ processor.save_audio(outputs, "example_with_audio.wav")
 
 ```python
 from datasets import load_dataset, Audio
-from transformers import AutoProcessor, DiaForConditionalGeneration
+from transformers_4573 import AutoProcessor, DiaForConditionalGeneration
 from accelerate import Accelerator
 
 torch_device = Accelerator().device

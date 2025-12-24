@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import re
 
-from transformers.utils import is_jmespath_available
+from transformers_4573.utils import is_jmespath_available
 
 
 if is_jmespath_available():

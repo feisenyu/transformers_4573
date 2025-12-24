@@ -48,7 +48,7 @@ from .configuration_m2m_100 import M2M100Config
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.bart.modeling_bart.shift_tokens_right
+# Copied from transformers_4573.models.bart.modeling_bart.shift_tokens_right
 def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start_token_id: int):
     """
     Shift input ids one token to the right.
@@ -65,7 +65,7 @@ def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start
     return shifted_input_ids
 
 
-# Copied from transformers.models.bart.modeling_bart.BartScaledWordEmbedding with Bart->M2M100
+# Copied from transformers_4573.models.bart.modeling_bart.BartScaledWordEmbedding with Bart->M2M100
 class M2M100ScaledWordEmbedding(nn.Embedding):
     """
     This module overrides nn.Embeddings' forward by multiplying with embeddings scale.
@@ -164,7 +164,7 @@ class M2M100SinusoidalPositionalEmbedding(nn.Module):
         return position_ids.unsqueeze(0).expand(input_shape).contiguous() + past_key_values_length
 
     @staticmethod
-    # Copied from transformers.models.roberta.modeling_roberta.RobertaEmbeddings.create_position_ids_from_input_ids
+    # Copied from transformers_4573.models.roberta.modeling_roberta.RobertaEmbeddings.create_position_ids_from_input_ids
     def create_position_ids_from_input_ids(input_ids, padding_idx, past_key_values_length=0):
         """
         Replace non-padding symbols with their position numbers. Position numbers begin at padding_idx+1. Padding symbols
@@ -181,7 +181,7 @@ class M2M100SinusoidalPositionalEmbedding(nn.Module):
         return incremental_indices.long() + padding_idx
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -211,7 +211,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.bart.modeling_bart.BartAttention with Bart->M2M100
+# Copied from transformers_4573.models.bart.modeling_bart.BartAttention with Bart->M2M100
 class M2M100Attention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
@@ -337,7 +337,7 @@ class M2M100Attention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->M2M100, MBART->M2M100
+# Copied from transformers_4573.models.mbart.modeling_mbart.MBartEncoderLayer with MBart->M2M100, MBART->M2M100
 class M2M100EncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: M2M100Config):
         super().__init__()
@@ -397,7 +397,7 @@ class M2M100EncoderLayer(GradientCheckpointingLayer):
         return hidden_states, attn_weights
 
 
-# Copied from transformers.models.mbart.modeling_mbart.MBartDecoderLayer with MBart->M2M100, MBART->M2M100
+# Copied from transformers_4573.models.mbart.modeling_mbart.MBartDecoderLayer with MBart->M2M100, MBART->M2M100
 class M2M100DecoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: M2M100Config, layer_idx: Optional[int] = None):
         super().__init__()
@@ -1084,7 +1084,7 @@ class M2M100ForConditionalGeneration(M2M100PreTrainedModel, GenerationMixin):
         Example Translation:
 
         ```python
-        >>> from transformers import AutoTokenizer, M2M100ForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, M2M100ForConditionalGeneration
 
         >>> model = M2M100ForConditionalGeneration.from_pretrained("facebook/m2m100_418M")
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/m2m100_418M")

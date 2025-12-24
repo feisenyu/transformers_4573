@@ -23,7 +23,7 @@ import torch
 from PIL import Image
 from torchvision import transforms as T
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     GroundingDinoConfig,
     GroundingDinoForObjectDetection,

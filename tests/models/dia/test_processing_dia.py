@@ -19,9 +19,9 @@ import unittest
 import numpy as np
 from parameterized import parameterized
 
-from transformers import DacModel, DiaFeatureExtractor, DiaProcessor, DiaTokenizer
-from transformers.testing_utils import require_torch
-from transformers.utils import is_torch_available
+from transformers_4573 import DacModel, DiaFeatureExtractor, DiaProcessor, DiaTokenizer
+from transformers_4573.testing_utils import require_torch
+from transformers_4573.utils import is_torch_available
 
 
 if is_torch_available:

@@ -49,17 +49,17 @@ from torchmetrics.detection.mean_ap import MeanAveragePrecision
 from tqdm.auto import tqdm
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoImageProcessor,
     AutoModelForObjectDetection,
     SchedulerType,
     get_scheduler,
 )
-from transformers.image_processing_utils import BatchFeature
-from transformers.image_transforms import center_to_corners_format
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.image_processing_utils import BatchFeature
+from transformers_4573.image_transforms import center_to_corners_format
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

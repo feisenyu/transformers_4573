@@ -18,12 +18,12 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
-from transformers import TrainingArguments, is_torch_available
-from transformers.testing_utils import require_torch
+from transformers_4573 import TrainingArguments, is_torch_available
+from transformers_4573.testing_utils import require_torch
 
 
 if is_torch_available():
-    from transformers.trainer_jit_checkpoint import CheckpointManager, JITCheckpointCallback
+    from transformers_4573.trainer_jit_checkpoint import CheckpointManager, JITCheckpointCallback
 
     from .test_trainer import RegressionDataset, RegressionModelConfig, RegressionPreTrainedModel
 
@@ -40,7 +40,7 @@ class JITCheckpointTest(unittest.TestCase):
 
     def get_trainer(self, enable_jit=True):
         """Helper method to create a trainer with JIT checkpointing enabled."""
-        from transformers import Trainer
+        from transformers_4573 import Trainer
 
         model_config = RegressionModelConfig(a=1.5, b=2.5)
         model = RegressionPreTrainedModel(model_config)
@@ -147,7 +147,7 @@ class JITCheckpointTest(unittest.TestCase):
 
     def test_execute_jit_checkpoint(self):
         """Test the checkpoint execution logic with sentinel file."""
-        from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
+        from transformers_4573.trainer_utils import PREFIX_CHECKPOINT_DIR
 
         trainer = self.get_trainer()
         manager = CheckpointManager(trainer)
@@ -175,7 +175,7 @@ class JITCheckpointTest(unittest.TestCase):
 
     def test_execute_jit_checkpoint_sentinel_file_cleanup(self):
         """Test that sentinel file is cleaned up after successful checkpoint."""
-        from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
+        from transformers_4573.trainer_utils import PREFIX_CHECKPOINT_DIR
 
         trainer = self.get_trainer()
         manager = CheckpointManager(trainer)

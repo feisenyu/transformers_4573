@@ -19,9 +19,9 @@ import shutil
 import tempfile
 import unittest
 
-from transformers import VitsTokenizer
-from transformers.models.vits.tokenization_vits import VOCAB_FILES_NAMES
-from transformers.testing_utils import slow
+from transformers_4573 import VitsTokenizer
+from transformers_4573.models.vits.tokenization_vits import VOCAB_FILES_NAMES
+from transformers_4573.testing_utils import slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

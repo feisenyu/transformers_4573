@@ -38,7 +38,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import ColPaliForRetrieval, ColPaliProcessor
+from transformers_4573 import ColPaliForRetrieval, ColPaliProcessor
 
 
 # Load the model and the processor
@@ -103,7 +103,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import BitsAndBytesConfig, ColPaliForRetrieval, ColPaliProcessor
+from transformers_4573 import BitsAndBytesConfig, ColPaliForRetrieval, ColPaliProcessor
 
 
 model_name = "vidore/colpali-v1.3-hf"

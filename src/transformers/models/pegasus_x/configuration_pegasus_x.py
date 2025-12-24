@@ -86,7 +86,7 @@ class PegasusXConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PegasusXConfig, PegasusXModel
+    >>> from transformers_4573 import PegasusXConfig, PegasusXModel
 
     >>> # Initializing a PEGASUS google/pegasus-x-large style configuration
     >>> configuration = PegasusXConfig()

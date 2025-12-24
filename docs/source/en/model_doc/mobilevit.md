@@ -41,7 +41,7 @@ The example below demonstrates how to do [Image Classification] with [`Pipeline`
 ```python
 
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 classifier = pipeline(
    task="image-classification",
@@ -62,7 +62,7 @@ print(f"Prediction: {preds}\n")
 import torch
 import requests
 from PIL import Image
-from transformers import AutoImageProcessor, MobileViTForImageClassification
+from transformers_4573 import AutoImageProcessor, MobileViTForImageClassification
 
 image_processor = AutoImageProcessor.from_pretrained(
    "apple/mobilevit-small",

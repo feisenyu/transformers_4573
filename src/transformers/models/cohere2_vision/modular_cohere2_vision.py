@@ -21,14 +21,14 @@ import numpy as np
 import torch
 from torch import nn
 
-from transformers.models.aya_vision.modeling_aya_vision import (
+from transformers_4573.models.aya_vision.modeling_aya_vision import (
     AyaVisionCausalLMOutputWithPast,
     AyaVisionForConditionalGeneration,
     AyaVisionModel,
     AyaVisionModelOutputWithPast,
     AyaVisionPreTrainedModel,
 )
-from transformers.models.got_ocr2.image_processing_got_ocr2_fast import GotOcr2ImageProcessorFast
+from transformers_4573.models.got_ocr2.image_processing_got_ocr2_fast import GotOcr2ImageProcessorFast
 
 from ...cache_utils import Cache
 from ...image_processing_utils import BatchFeature
@@ -193,7 +193,7 @@ class Cohere2VisionForConditionalGeneration(AyaVisionForConditionalGeneration):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, Cohere2VisionForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Cohere2VisionForConditionalGeneration
         >>> import torch
 
         >>> processor = AutoProcessor.from_pretrained("CohereLabs/command-a-vision-07-2025", use_fast=True)

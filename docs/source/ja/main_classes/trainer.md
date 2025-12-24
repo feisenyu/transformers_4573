@@ -55,7 +55,7 @@ rendered properly in your Markdown viewer.
 
 ```python
 from torch import nn
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 
 class CustomTrainer(Trainer):

@@ -16,7 +16,7 @@
 import inspect
 import re
 
-from transformers.utils import direct_transformers_import
+from transformers_4573.utils import direct_transformers_import
 
 
 # All paths are set with the intent you should run this script from the root of the repo with the command

@@ -24,7 +24,7 @@ Call [`~PreTrainedModel.from_pretrained`] to download and load a model's weights
 > The [`~PreTrainedModel.from_pretrained`] method loads weights stored in the [safetensors](https://hf.co/docs/safetensors/index) file format if they're available. Traditionally, PyTorch model weights are serialized with the [pickle](https://docs.python.org/3/library/pickle.html) utility which is known to be unsecure. Safetensor files are more secure and faster to load.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf", dtype="auto", device_map="auto")
 ```
@@ -63,7 +63,7 @@ Easily switch between models or tasks, as long as the architecture is supported 
 For example, the same model can be used for separate tasks.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoModelForSequenceClassification, AutoModelForQuestionAnswering
+from transformers_4573 import AutoModelForCausalLM, AutoModelForSequenceClassification, AutoModelForQuestionAnswering
 
 # use the same API for 3 different tasks
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
@@ -74,7 +74,7 @@ model = AutoModelForQuestionAnswering.from_pretrained("meta-llama/Llama-2-7b-hf"
 In other cases, you may want to quickly try out several different models for a task.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 # use the same API to load 3 different models
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
@@ -90,7 +90,7 @@ The [AutoModel](./model_doc/auto) class builds on top of model-specific classes.
 If you already know which model class you want to use, then you could use its model-specific class directly.
 
 ```py
-from transformers import LlamaModel, LlamaForCausalLM
+from transformers_4573 import LlamaModel, LlamaForCausalLM
 
 model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
 ```
@@ -174,7 +174,7 @@ Both features combined reduces memory usage and loading times for big pretrained
 Set [device_map](https://github.com/huggingface/transformers/blob/026a173a64372e9602a16523b8fae9de4b0ff428/src/transformers/modeling_utils.py#L3061) to `"auto"` to enable Big Model Inference.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("google/gemma-7b", device_map="auto")
 ```
@@ -196,7 +196,7 @@ Override the default by passing a specific data type.
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 # default
 model = AutoModelForCausalLM.from_pretrained("google/gemma-3-1b-it", dtype="auto")
@@ -209,7 +209,7 @@ model = AutoModelForCausalLM.from_pretrained("google/gemma-3-1b-it", dtype=torch
 
 ```py
 import torch
-from transformers import AutoConfig, AutoModel
+from transformers_4573 import AutoConfig, AutoModel
 
 my_config = AutoConfig.from_pretrained("google/gemma-2b", dtype=torch.float16)
 model = AutoModel.from_config(my_config)
@@ -217,14 +217,14 @@ model = AutoModel.from_config(my_config)
 
 ## Custom models
 
-Custom models builds on Transformers' configuration and modeling classes, supports the [AutoClass](#autoclass) API, and are loaded with [`~PreTrainedModel.from_pretrained`]. The difference is that the modeling code is *not* from Transformers.
+Custom models builds on Transformers' configuration and modeling classes, supports the [AutoClass](#autoclass) API, and are loaded with [`~PreTrainedModel.from_pretrained`]. The difference is that the modeling code is *not* from transformers_4573.
 
 Take extra precaution when loading a custom model. While the Hub includes [malware scanning](https://hf.co/docs/hub/security-malware#malware-scanning) for every repository, you should still be careful to avoid inadvertently executing malicious code.
 
 Set `trust_remote_code=True` in [`~PreTrainedModel.from_pretrained`] to load a custom model.
 
 ```py
-from transformers import AutoModelForImageClassification
+from transformers_4573 import AutoModelForImageClassification
 
 model = AutoModelForImageClassification.from_pretrained("sgugger/custom-resnet50d", trust_remote_code=True)
 ```

@@ -261,7 +261,7 @@ class MimiConv1d(nn.Module):
     def remove_weight_norm(self):
         nn.utils.remove_weight_norm(self.conv)
 
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecConv1d._get_extra_padding_for_conv1d
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecConv1d._get_extra_padding_for_conv1d
     def _get_extra_padding_for_conv1d(
         self,
         hidden_states: torch.Tensor,
@@ -275,7 +275,7 @@ class MimiConv1d(nn.Module):
         return ideal_length - length
 
     @staticmethod
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecConv1d._pad1d
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecConv1d._pad1d
     def _pad1d(hidden_states: torch.Tensor, paddings: tuple[int, int], mode: str = "zero", value: float = 0.0):
         """Tiny wrapper around torch.nn.functional.pad, just to allow for reflect padding on small input.
         If this is the case, we insert extra 0 padding to the right before the reflection happens.
@@ -503,7 +503,7 @@ class MimiLayerScale(nn.Module):
         return self.scale * x
 
 
-# Copied from transformers.models.llama.modeling_llama.LlamaRotaryEmbedding with Llama->Mimi
+# Copied from transformers_4573.models.llama.modeling_llama.LlamaRotaryEmbedding with Llama->Mimi
 class MimiRotaryEmbedding(nn.Module):
     inv_freq: torch.Tensor  # fix linting for `register_buffer`
 
@@ -569,7 +569,7 @@ class MimiRotaryEmbedding(nn.Module):
         return cos.to(dtype=x.dtype), sin.to(dtype=x.dtype)
 
 
-# Copied from transformers.models.llama.modeling_llama.rotate_half
+# Copied from transformers_4573.models.llama.modeling_llama.rotate_half
 def rotate_half(x):
     """Rotates half the hidden dims of the input."""
     x1 = x[..., : x.shape[-1] // 2]
@@ -577,7 +577,7 @@ def rotate_half(x):
     return torch.cat((-x2, x1), dim=-1)
 
 
-# Copied from transformers.models.llama.modeling_llama.apply_rotary_pos_emb
+# Copied from transformers_4573.models.llama.modeling_llama.apply_rotary_pos_emb
 def apply_rotary_pos_emb(q, k, cos, sin, position_ids=None, unsqueeze_dim=1):
     """Applies Rotary Position Embedding to the query and key tensors.
 
@@ -613,7 +613,7 @@ class MimiMLP(nn.Module):
         self.fc1 = nn.Linear(config.hidden_size, config.intermediate_size, bias=False)
         self.fc2 = nn.Linear(config.intermediate_size, config.hidden_size, bias=False)
 
-    # Copied from transformers.models.clip.modeling_clip.CLIPMLP.forward
+    # Copied from transformers_4573.models.clip.modeling_clip.CLIPMLP.forward
     def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
         hidden_states = self.fc1(hidden_states)
         hidden_states = self.activation_fn(hidden_states)
@@ -621,7 +621,7 @@ class MimiMLP(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.llama.modeling_llama.repeat_kv
+# Copied from transformers_4573.models.llama.modeling_llama.repeat_kv
 def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     """
     This is the equivalent of torch.repeat_interleave(x, dim=1, repeats=n_rep). The hidden states go from (batch,
@@ -634,7 +634,7 @@ def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
 
 
-# copied from transformers.models.gemma.modeling_gemma.GemmaAttention with Gemma->Mimi
+# copied from transformers_4573.models.gemma.modeling_gemma.GemmaAttention with Gemma->Mimi
 # no longer copied after attention refactors
 class MimiAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
@@ -733,7 +733,7 @@ class MimiAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# NO LONGER EXIST Copied from transformers.models.gemma.modeling_gemma.GemmaFlashAttention2 with Gemma->Mimi
+# NO LONGER EXIST Copied from transformers_4573.models.gemma.modeling_gemma.GemmaFlashAttention2 with Gemma->Mimi
 # TODO cyril: modular
 class MimiFlashAttention2(MimiAttention):
     """
@@ -851,7 +851,7 @@ class MimiFlashAttention2(MimiAttention):
         return attn_output, attn_weights
 
 
-# NO LONGER EXIST Copied from transformers.models.gemma.modeling_gemma.GemmaSdpaAttention with Gemma->Mimi
+# NO LONGER EXIST Copied from transformers_4573.models.gemma.modeling_gemma.GemmaSdpaAttention with Gemma->Mimi
 # TODO cyril: modular
 class MimiSdpaAttention(MimiAttention):
     """
@@ -1190,7 +1190,7 @@ class MimiDecoder(nn.Module):
         model += [MimiConv1d(config, config.num_filters, config.audio_channels, config.last_kernel_size)]
         self.layers = nn.ModuleList(model)
 
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecDecoder.forward
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecDecoder.forward
     def forward(self, hidden_states):
         for layer in self.layers:
             hidden_states = layer(hidden_states)
@@ -1225,7 +1225,7 @@ class MimiEuclideanCodebook(nn.Module):
         embed_ind = dists.argmin(dim=-1)
         return embed_ind
 
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecEuclideanCodebook.encode
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecEuclideanCodebook.encode
     def encode(self, hidden_states):
         shape = hidden_states.shape
         # pre-process
@@ -1236,13 +1236,13 @@ class MimiEuclideanCodebook(nn.Module):
         embed_ind = embed_ind.view(*shape[:-1])
         return embed_ind
 
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecEuclideanCodebook.decode
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecEuclideanCodebook.decode
     def decode(self, embed_ind):
         quantize = nn.functional.embedding(embed_ind, self.embed)
         return quantize
 
 
-# Copied from transformers.models.encodec.modeling_encodec.EncodecVectorQuantization with Encodec->Mimi
+# Copied from transformers_4573.models.encodec.modeling_encodec.EncodecVectorQuantization with Encodec->Mimi
 class MimiVectorQuantization(nn.Module):
     """
     Vector quantization implementation. Currently supports only euclidean distance.
@@ -1740,7 +1740,7 @@ class MimiModel(MimiPreTrainedModel):
 
         ```python
         >>> from datasets import load_dataset
-        >>> from transformers import AutoFeatureExtractor, MimiModel
+        >>> from transformers_4573 import AutoFeatureExtractor, MimiModel
 
         >>> dataset = load_dataset("hf-internal-testing/ashraq-esc50-1-dog-example")
         >>> audio_sample = dataset["train"]["audio"][0]["array"]

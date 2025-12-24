@@ -20,8 +20,8 @@ import unittest
 import numpy as np
 from datasets import load_dataset
 
-from transformers import Wav2Vec2ConformerConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import Wav2Vec2ConformerConfig, is_torch_available
+from transformers_4573.testing_utils import (
     is_flaky,
     require_torch,
     require_torch_accelerator,
@@ -43,7 +43,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Wav2Vec2ConformerForAudioFrameClassification,
         Wav2Vec2ConformerForCTC,
         Wav2Vec2ConformerForPreTraining,
@@ -53,8 +53,8 @@ if is_torch_available():
         Wav2Vec2FeatureExtractor,
         Wav2Vec2Processor,
     )
-    from transformers.models.wav2vec2.modeling_wav2vec2 import _sample_negative_indices
-    from transformers.models.wav2vec2_conformer.modeling_wav2vec2_conformer import (
+    from transformers_4573.models.wav2vec2.modeling_wav2vec2 import _sample_negative_indices
+    from transformers_4573.models.wav2vec2_conformer.modeling_wav2vec2_conformer import (
         Wav2Vec2ConformerGumbelVectorQuantizer,
         _compute_mask_indices,
     )

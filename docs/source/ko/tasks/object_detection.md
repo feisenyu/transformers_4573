@@ -169,7 +169,7 @@ DatasetDict({
 사전 훈련된 모델과 동일한 체크포인트에서 이미지 프로세서를 인스턴스화합니다.
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> checkpoint = "facebook/detr-resnet-50"
 >>> image_processor = AutoImageProcessor.from_pretrained(checkpoint)
@@ -317,7 +317,7 @@ DatasetDict({
 또한, `ignore_mismatched_sizes=True`를 지정하여 기존 분류 헤드(모델에서 분류에 사용되는 마지막 레이어)를 새 분류 헤드로 대체합니다.
 
 ```py
->>> from transformers import AutoModelForObjectDetection
+>>> from transformers_4573 import AutoModelForObjectDetection
 
 >>> model = AutoModelForObjectDetection.from_pretrained(
 ...     checkpoint,
@@ -334,7 +334,7 @@ DatasetDict({
 
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(
 ...     output_dir="detr-resnet-50_finetuned_cppe5",
@@ -354,7 +354,7 @@ DatasetDict({
 마지막으로 `model`, `training_args`, `collate_fn`, `image_processor`와 데이터 세트(`cppe5`)를 모두 가져온 후, [`~transformers.Trainer.train`]를 호출합니다.
 
 ```py
->>> from transformers import Trainer
+>>> from transformers_4573 import Trainer
 
 >>> trainer = Trainer(
 ...     model=model,
@@ -533,7 +533,7 @@ DETR 모델을 미세 조정 및 평가하고, 허깅페이스 허브에 업로�
 모델과 함께 객체 탐지를 위한 파이프라인을 인스턴스화하고, 이미지를 전달하세요:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 >>> import requests
 
 >>> url = "https://i.imgur.com/2lnWoly.jpg"

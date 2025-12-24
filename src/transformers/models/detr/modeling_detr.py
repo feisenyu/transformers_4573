@@ -1098,7 +1098,7 @@ class DetrModel(DetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, DetrModel
+        >>> from transformers_4573 import AutoImageProcessor, DetrModel
         >>> from PIL import Image
         >>> import requests
 
@@ -1284,7 +1284,7 @@ class DetrForObjectDetection(DetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, DetrForObjectDetection
+        >>> from transformers_4573 import AutoImageProcessor, DetrForObjectDetection
         >>> import torch
         >>> from PIL import Image
         >>> import requests
@@ -1439,8 +1439,8 @@ class DetrForSegmentation(DetrPreTrainedModel):
         >>> import torch
         >>> import numpy
 
-        >>> from transformers import AutoImageProcessor, DetrForSegmentation
-        >>> from transformers.image_transforms import rgb_to_id
+        >>> from transformers_4573 import AutoImageProcessor, DetrForSegmentation
+        >>> from transformers_4573.image_transforms import rgb_to_id
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = Image.open(requests.get(url, stream=True).raw)

@@ -64,7 +64,7 @@ class IJepaConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import IJepaConfig, IJepaModel
+    >>> from transformers_4573 import IJepaConfig, IJepaModel
 
     >>> # Initializing a IJEPA ijepa-base-patch16-224 style configuration
     >>> configuration = IJepaConfig()

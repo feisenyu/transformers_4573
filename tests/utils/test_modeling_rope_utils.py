@@ -16,15 +16,15 @@
 import math
 import unittest
 
-from transformers import LlamaConfig
-from transformers.testing_utils import is_torch_available, require_torch, torch_device
+from transformers_4573 import LlamaConfig
+from transformers_4573.testing_utils import is_torch_available, require_torch, torch_device
 
 
 if is_torch_available():
     import torch
 
-    from transformers import ROPE_INIT_FUNCTIONS
-    from transformers.models.llama.modeling_llama import LlamaRotaryEmbedding
+    from transformers_4573 import ROPE_INIT_FUNCTIONS
+    from transformers_4573.models.llama.modeling_llama import LlamaRotaryEmbedding
 
 
 @require_torch

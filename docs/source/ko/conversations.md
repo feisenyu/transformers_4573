@@ -63,7 +63,7 @@ chat = [
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("text-generation", "meta-llama/Meta-Llama-3-8B-Instruct", dtype=torch.bfloat16, device_map="auto")
 response = pipe(chat, max_new_tokens=512)
@@ -178,7 +178,7 @@ LMSys 리더보드에는 독점 모델도 포함되어 있으니,
 코드 샘플로 시작한 후 이를 분석해 보겠습니다:
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 # 입력값을 사전에 준비해 놓습니다
@@ -244,7 +244,7 @@ Hugging Face 클래스는 모델을 `float32` 정밀도(Precision)로 로드합�
 이제 `bitsandbytes`를 사용하여 이를 실제로 확인해 보겠습니다:
 
 ```python
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_8bit=True)  # You can also try load_in_4bit
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct", device_map="auto", quantization_config=quantization_config)
@@ -253,7 +253,7 @@ model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruc
 위의 작업은 `pipeline` API에도 적용 가능합니다:
 
 ```python
-from transformers import pipeline, BitsAndBytesConfig
+from transformers_4573 import pipeline, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_8bit=True)  # You can also try load_in_4bit
 pipe = pipeline("text-generation", "meta-llama/Meta-Llama-3-8B-Instruct", device_map="auto", model_kwargs={"quantization_config": quantization_config})

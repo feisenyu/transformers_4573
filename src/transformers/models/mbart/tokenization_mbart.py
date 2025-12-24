@@ -46,7 +46,7 @@ class MBartTokenizer(TokenizersBackend):
     Examples:
 
     ```python
-    >>> from transformers import MBartTokenizer
+    >>> from transformers_4573 import MBartTokenizer
 
     >>> tokenizer = MBartTokenizer.from_pretrained(
     ...     "facebook/mbart-large-en-ro", src_lang="en_XX", tgt_lang="ro_RO"

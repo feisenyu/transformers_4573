@@ -55,7 +55,7 @@ class FastVlmConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FastVlmForConditionalGeneration, FastVlmConfig
+    >>> from transformers_4573 import FastVlmForConditionalGeneration, FastVlmConfig
 
     >>> # Initializing a FastVLM-7B style configuration
     >>> configuration = FastVlmConfig()

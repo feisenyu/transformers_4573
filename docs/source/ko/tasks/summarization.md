@@ -88,7 +88,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 다음으로 `text`와 `summary`를 처리하기 위한 T5 토크나이저를 가져옵니다:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> checkpoint = "google-t5/t5-small"
 >>> tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -125,7 +125,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 전체 데이터셋을 최대 길이로 패딩하는 것보다 배치마다 가장 긴 문장 길이에 맞춰 *동적 패딩*하는 것이 더 효율적입니다.
 
 ```py
->>> from transformers import DataCollatorForSeq2Seq
+>>> from transformers_4573 import DataCollatorForSeq2Seq
 
 >>> data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=checkpoint)
 ```
@@ -176,7 +176,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 이제 모델 학습을 시작할 준비가 되었습니다! [`AutoModelForSeq2SeqLM`]로 T5를 가져오세요:
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 ```
@@ -245,7 +245,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 모델을 사용하여 요약을 수행할 [`pipeline`]을 인스턴스화하고 텍스트를 전달하세요:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> summarizer = pipeline("summarization", model="stevhliu/my_awesome_billsum_model")
 >>> summarizer(text)
@@ -258,7 +258,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 텍스트를 토크나이즈하고 `input_ids`를 PyTorch 텐서로 반환합니다:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("stevhliu/my_awesome_billsum_model")
 >>> inputs = tokenizer(text, return_tensors="pt").input_ids
@@ -268,7 +268,7 @@ Hugging Face 계정에 로그인하면 모델을 업로드하고 커뮤니티에
 텍스트 생성에 대한 다양한 전략과 생성을 제어하기 위한 매개변수에 대한 자세한 내용은 [텍스트 생성](../main_classes/text_generation) API를 참조하세요.
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM
+>>> from transformers_4573 import AutoModelForSeq2SeqLM
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("stevhliu/my_awesome_billsum_model")
 >>> outputs = model.generate(inputs, max_new_tokens=100, do_sample=False)

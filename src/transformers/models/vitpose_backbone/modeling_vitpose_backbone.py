@@ -97,7 +97,7 @@ class VitPoseBackboneEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -127,7 +127,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfAttention with ViT->VitPoseBackbone
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfAttention with ViT->VitPoseBackbone
 class VitPoseBackboneSelfAttention(nn.Module):
     def __init__(self, config: VitPoseBackboneConfig):
         super().__init__()
@@ -178,7 +178,7 @@ class VitPoseBackboneSelfAttention(nn.Module):
         return context_layer, attention_probs
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTSelfOutput with ViT->VitPoseBackbone
+# Copied from transformers_4573.models.vit.modeling_vit.ViTSelfOutput with ViT->VitPoseBackbone
 class VitPoseBackboneSelfOutput(nn.Module):
     """
     The residual connection is defined in VitPoseBackboneLayer instead of here (as is the case with other models), due to the
@@ -196,7 +196,7 @@ class VitPoseBackboneSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTAttention with ViT->VitPoseBackbone
+# Copied from transformers_4573.models.vit.modeling_vit.ViTAttention with ViT->VitPoseBackbone
 class VitPoseBackboneAttention(nn.Module):
     def __init__(self, config: VitPoseBackboneConfig):
         super().__init__()
@@ -317,7 +317,7 @@ class VitPoseBackboneLayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.vit.modeling_vit.ViTEncoder with ViT->VitPoseBackbone
+# Copied from transformers_4573.models.vit.modeling_vit.ViTEncoder with ViT->VitPoseBackbone
 class VitPoseBackboneEncoder(nn.Module):
     def __init__(self, config: VitPoseBackboneConfig):
         super().__init__()
@@ -409,7 +409,7 @@ class VitPoseBackbone(VitPoseBackbonePreTrainedModel, BackboneMixin):
         Examples:
 
         ```python
-        >>> from transformers import VitPoseBackboneConfig, VitPoseBackbone
+        >>> from transformers_4573 import VitPoseBackboneConfig, VitPoseBackbone
         >>> import torch
 
         >>> config = VitPoseBackboneConfig(out_indices=[-1])

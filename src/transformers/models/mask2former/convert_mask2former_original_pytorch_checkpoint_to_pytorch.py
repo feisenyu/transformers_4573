@@ -31,18 +31,18 @@ from huggingface_hub import hf_hub_download
 from PIL import Image
 from torch import Tensor, nn
 
-from transformers import (
+from transformers_4573 import (
     Mask2FormerConfig,
     Mask2FormerForUniversalSegmentation,
     Mask2FormerImageProcessor,
     Mask2FormerModel,
     SwinConfig,
 )
-from transformers.models.mask2former.modeling_mask2former import (
+from transformers_4573.models.mask2former.modeling_mask2former import (
     Mask2FormerForUniversalSegmentationOutput,
     Mask2FormerModelOutput,
 )
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 
 StateDict = dict[str, Tensor]

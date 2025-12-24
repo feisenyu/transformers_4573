@@ -58,7 +58,7 @@ python src/transformers/models/llama/convert_llama_weights_to_hf.py \
 変換後、モデルとトークナイザーは次の方法でロードできます。
 
 ```python
->>> from transformers import LlamaForCausalLM, CodeLlamaTokenizer
+>>> from transformers_4573 import LlamaForCausalLM, CodeLlamaTokenizer
 
 >>> tokenizer = CodeLlamaTokenizer.from_pretrained("meta-llama/CodeLlama-7b-hf")
 >>> model = LlamaForCausalLM.from_pretrained("meta-llama/CodeLlama-7b-hf")
@@ -90,7 +90,7 @@ def remove_non_ascii(s: str) -> str:
 塗りつぶされた部分だけが必要な場合:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 >>> import torch
 
 >>> generator = pipeline("text-generation",model="meta-llama/CodeLlama-7b-hf",dtype=torch.float16, device_map="auto")

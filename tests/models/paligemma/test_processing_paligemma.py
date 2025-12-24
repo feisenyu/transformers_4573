@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import PaliGemmaProcessor
-from transformers.testing_utils import get_tests_dir, require_torch, require_vision
+from transformers_4573 import PaliGemmaProcessor
+from transformers_4573.testing_utils import get_tests_dir, require_torch, require_vision
 
 from ...test_processing_common import ProcessorTesterMixin
 

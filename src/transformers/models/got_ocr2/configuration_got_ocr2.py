@@ -142,7 +142,7 @@ class GotOcr2Config(PreTrainedConfig):
             Padding token id.
 
     ```python
-    >>> from transformers import GotOcr2ForConditionalGeneration, GotOcr2Config
+    >>> from transformers_4573 import GotOcr2ForConditionalGeneration, GotOcr2Config
 
     >>> # Initializing a GotOcr2 style configuration
     >>> configuration = GotOcr2Config()

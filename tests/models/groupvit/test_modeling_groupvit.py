@@ -21,9 +21,9 @@ import unittest
 import numpy as np
 import requests
 
-from transformers import GroupViTConfig, GroupViTTextConfig, GroupViTVisionConfig
-from transformers.testing_utils import is_flaky, require_torch, require_vision, slow, torch_device
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573 import GroupViTConfig, GroupViTTextConfig, GroupViTVisionConfig
+from transformers_4573.testing_utils import is_flaky, require_torch, require_vision, slow, torch_device
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import (
@@ -39,13 +39,13 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import GroupViTModel, GroupViTTextModel, GroupViTVisionModel
+    from transformers_4573 import GroupViTModel, GroupViTTextModel, GroupViTVisionModel
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import CLIPProcessor
+    from transformers_4573 import CLIPProcessor
 
 
 class GroupViTVisionModelTester:

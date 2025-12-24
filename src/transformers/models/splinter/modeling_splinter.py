@@ -89,7 +89,7 @@ class SplinterEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.align.modeling_align.eager_attention_forward
+# Copied from transformers_4573.models.align.modeling_align.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -113,7 +113,7 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextSelfAttention with AlignText->Splinter
+# Copied from transformers_4573.models.align.modeling_align.AlignTextSelfAttention with AlignText->Splinter
 class SplinterSelfAttention(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -170,7 +170,7 @@ class SplinterSelfAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput with Bert->Splinter
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput with Bert->Splinter
 class SplinterSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -185,7 +185,7 @@ class SplinterSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextAttention with AlignText->Splinter
+# Copied from transformers_4573.models.align.modeling_align.AlignTextAttention with AlignText->Splinter
 class SplinterAttention(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -210,7 +210,7 @@ class SplinterAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate with Bert->Splinter
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate with Bert->Splinter
 class SplinterIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -226,7 +226,7 @@ class SplinterIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput with Bert->Splinter
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput with Bert->Splinter
 class SplinterOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -241,7 +241,7 @@ class SplinterOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextLayer with AlignText->Splinter
+# Copied from transformers_4573.models.align.modeling_align.AlignTextLayer with AlignText->Splinter
 class SplinterLayer(GradientCheckpointingLayer):
     def __init__(self, config):
         super().__init__()
@@ -280,7 +280,7 @@ class SplinterLayer(GradientCheckpointingLayer):
         return layer_output
 
 
-# Copied from transformers.models.align.modeling_align.AlignTextEncoder with AlignText->Splinter
+# Copied from transformers_4573.models.align.modeling_align.AlignTextEncoder with AlignText->Splinter
 class SplinterEncoder(nn.Module):
     def __init__(self, config):
         super().__init__()

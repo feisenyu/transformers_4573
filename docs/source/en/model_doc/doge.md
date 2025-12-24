@@ -33,7 +33,7 @@ Checkout all Doge model checkpoints [here](https://huggingface.co/collections/Sm
 <summary>Using Doge-Base for text generation</summary>
 
 ```python
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("SmallDoge/Doge-20M")
 model = AutoModelForCausalLM.from_pretrained("SmallDoge/Doge-20M")
@@ -49,7 +49,7 @@ print(tokenizer.batch_decode(outputs))
 <summary>Using Doge-Instruct for question answering</summary>
 
 ```python
-from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig, TextStreamer
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, GenerationConfig, TextStreamer
 
 tokenizer = AutoTokenizer.from_pretrained("SmallDoge/Doge-20M-Instruct")
 model = AutoModelForCausalLM.from_pretrained("SmallDoge/Doge-20M-Instruct")

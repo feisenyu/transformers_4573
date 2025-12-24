@@ -34,7 +34,7 @@ Chinese-CLIP モデルは、[OFA-Sys](https://huggingface.co/OFA-Sys) によっ�
 ```python
 >>> from PIL import Image
 >>> import requests
->>> from transformers import ChineseCLIPProcessor, ChineseCLIPModel
+>>> from transformers_4573 import ChineseCLIPProcessor, ChineseCLIPModel
 
 >>> model = ChineseCLIPModel.from_pretrained("OFA-Sys/chinese-clip-vit-base-patch16")
 >>> processor = ChineseCLIPProcessor.from_pretrained("OFA-Sys/chinese-clip-vit-base-patch16")

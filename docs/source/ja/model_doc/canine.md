@@ -65,7 +65,7 @@ TyDi QA の 2.8 F1 は、モデル パラメータが 28% 少ないにもかか�
 CANINE は生の文字で動作するため、**トークナイザーなし**で使用できます。
 
 ```python
->>> from transformers import CanineModel
+>>> from transformers_4573 import CanineModel
 >>> import torch
 
 >>> model = CanineModel.from_pretrained("google/canine-c")  # model pre-trained with autoregressive character loss
@@ -83,7 +83,7 @@ CANINE は生の文字で動作するため、**トークナイザーなし**で
 シーケンスを同じ長さにします):
 
 ```python
->>> from transformers import CanineTokenizer, CanineModel
+>>> from transformers_4573 import CanineTokenizer, CanineModel
 
 >>> model = CanineModel.from_pretrained("google/canine-c")
 >>> tokenizer = CanineTokenizer.from_pretrained("google/canine-c")

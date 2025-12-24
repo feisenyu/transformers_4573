@@ -14,14 +14,14 @@
 
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     MODEL_FOR_TABLE_QUESTION_ANSWERING_MAPPING,
     AutoModelForTableQuestionAnswering,
     AutoTokenizer,
     TableQuestionAnsweringPipeline,
     pipeline,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     is_pipeline_test,
     require_torch,
     slow,

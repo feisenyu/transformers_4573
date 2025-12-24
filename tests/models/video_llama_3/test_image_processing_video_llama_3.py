@@ -19,10 +19,10 @@ import unittest
 import numpy as np
 import requests
 
-from transformers.image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD
-from transformers.models.video_llama_3.image_processing_video_llama_3 import smart_resize
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD
+from transformers_4573.models.video_llama_3.image_processing_video_llama_3 import smart_resize
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs, prepare_video_inputs
 
@@ -33,10 +33,10 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import VideoLlama3ImageProcessor
+    from transformers_4573 import VideoLlama3ImageProcessor
 
     if is_torchvision_available():
-        from transformers import VideoLlama3ImageProcessorFast
+        from transformers_4573 import VideoLlama3ImageProcessorFast
 
 
 class VideoLlama3ImageProcessingTester:

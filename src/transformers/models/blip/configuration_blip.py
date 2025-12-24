@@ -80,7 +80,7 @@ class BlipTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BlipTextConfig, BlipTextModel
+    >>> from transformers_4573 import BlipTextConfig, BlipTextModel
 
     >>> # Initializing a BlipTextConfig with Salesforce/blip-vqa-base style configuration
     >>> configuration = BlipTextConfig()
@@ -182,7 +182,7 @@ class BlipVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BlipVisionConfig, BlipVisionModel
+    >>> from transformers_4573 import BlipVisionConfig, BlipVisionModel
 
     >>> # Initializing a BlipVisionConfig with Salesforce/blip-vqa-base style configuration
     >>> configuration = BlipVisionConfig()
@@ -258,7 +258,7 @@ class BlipConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BlipConfig, BlipModel
+    >>> from transformers_4573 import BlipConfig, BlipModel
 
     >>> # Initializing a BlipConfig with Salesforce/blip-vqa-base style configuration
     >>> configuration = BlipConfig()

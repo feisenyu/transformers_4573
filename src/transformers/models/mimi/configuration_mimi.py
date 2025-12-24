@@ -130,7 +130,7 @@ class MimiConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import MimiModel, MimiConfig
+    >>> from transformers_4573 import MimiModel, MimiConfig
 
     >>> # Initializing a "kyutai/mimi" style configuration
     >>> configuration = MimiConfig()

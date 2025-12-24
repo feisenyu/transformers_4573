@@ -68,7 +68,7 @@ GPU memory occupied: 1343 MB.
 أولاً، نقوم بتحميل نموذج `google-bert/bert-large-uncased`. نقوم بتحميل أوزان النموذج مباشرة إلى وحدة GPU حتى نتمكن من التحقق من مقدار المساحة التي تستخدمها الأوزان فقط.
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-large-uncased").to("cuda")
 >>> print_gpu_utilization()
@@ -127,7 +127,7 @@ default_args = {
 دعونا نستخدم [`Trainer`] وقم بتدريب النموذج دون استخدام أي تقنيات تحسين أداء GPU وحجم دفعة يبلغ 4:
 
 ```py
->>> from transformers import TrainingArguments، Trainer، logging
+>>> from transformers_4573 import TrainingArguments، Trainer، logging
 
 >>> logging.set_verbosity_error()
 

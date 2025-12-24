@@ -19,8 +19,8 @@ import argparse
 import bros  # original repo
 import torch
 
-from transformers import BrosConfig, BrosModel, BrosProcessor
-from transformers.utils import logging
+from transformers_4573 import BrosConfig, BrosModel, BrosProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

@@ -50,7 +50,7 @@ from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     MODEL_MAPPING,
     AutoConfig,
@@ -61,7 +61,7 @@ from transformers import (
     default_data_collator,
     get_scheduler,
 )
-from transformers.utils import check_min_version
+from transformers_4573.utils import check_min_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

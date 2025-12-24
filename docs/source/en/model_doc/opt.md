@@ -41,7 +41,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="facebook/opt-125m", dtype=torch.float16, device=0)
 pipeline("Once upon a time, in a land far, far away,", max_length=50, num_return_sequences=1)
@@ -52,7 +52,7 @@ pipeline("Once upon a time, in a land far, far away,", max_length=50, num_return
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("facebook/opt-350m", dtype=torch.float16, device_map="auto", attn_implementation="sdpa")
 tokenizer = AutoTokenizer.from_pretrained("facebook/opt-350m")
@@ -81,7 +81,7 @@ The example below uses [bitsandbytes](..quantization/bitsandbytes) to quantize t
 
 ```py
 import torch
-from transformers import BitsAndBytesConfig, AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import BitsAndBytesConfig, AutoTokenizer, AutoModelForCausalLM
 from accelerate import Accelerator
 
 device = Accelerator().device

@@ -69,7 +69,7 @@ class SplinterConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SplinterModel, SplinterConfig
+    >>> from transformers_4573 import SplinterModel, SplinterConfig
 
     >>> # Initializing a Splinter tau/splinter-base style configuration
     >>> configuration = SplinterConfig()

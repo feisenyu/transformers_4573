@@ -3,7 +3,7 @@ import json
 import datasets
 
 from tests.trainer.test_trainer import StoreLossCallback
-from transformers import (
+from transformers_4573 import (
     AutoModelForCausalLM,
     AutoTokenizer,
     DataCollatorForLanguageModeling,
@@ -13,7 +13,7 @@ from transformers import (
     is_torch_available,
     set_seed,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     TestCasePlus,
     backend_device_count,
     execute_subprocess_async,

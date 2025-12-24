@@ -86,7 +86,7 @@ def compute_embeddings(inv_freq: torch.Tensor, embed_height: int, embed_width: i
     return emb
 
 
-# Copied from transformers.models.llama.modeling_llama.LlamaRotaryEmbedding with Llama->EfficientLoFTR
+# Copied from transformers_4573.models.llama.modeling_llama.LlamaRotaryEmbedding with Llama->EfficientLoFTR
 class EfficientLoFTRRotaryEmbedding(nn.Module):
     inv_freq: torch.Tensor  # fix linting for `register_buffer`
 
@@ -161,7 +161,7 @@ class EfficientLoFTRRotaryEmbedding(nn.Module):
         return cos, sin
 
 
-# Copied from transformers.models.rt_detr_v2.modeling_rt_detr_v2.RTDetrV2ConvNormLayer with RTDetrV2->EfficientLoFTR
+# Copied from transformers_4573.models.rt_detr_v2.modeling_rt_detr_v2.RTDetrV2ConvNormLayer with RTDetrV2->EfficientLoFTR
 class EfficientLoFTRConvNormLayer(nn.Module):
     def __init__(self, config, in_channels, out_channels, kernel_size, stride, padding=None, activation=None):
         super().__init__()
@@ -291,7 +291,7 @@ class EfficientLoFTRAggregationLayer(nn.Module):
         return hidden_states, encoder_hidden_states
 
 
-# Copied from transformers.models.cohere.modeling_cohere.rotate_half
+# Copied from transformers_4573.models.cohere.modeling_cohere.rotate_half
 def rotate_half(x):
     # Split and rotate. Note that this function is different from e.g. Llama.
     x1 = x[..., ::2]
@@ -300,7 +300,7 @@ def rotate_half(x):
     return rot_x
 
 
-# Copied from transformers.models.cohere.modeling_cohere.apply_rotary_pos_emb
+# Copied from transformers_4573.models.cohere.modeling_cohere.apply_rotary_pos_emb
 def apply_rotary_pos_emb(q, k, cos, sin, position_ids=None, unsqueeze_dim=1):
     """Applies Rotary Position Embedding to the query and key tensors.
 
@@ -331,7 +331,7 @@ def apply_rotary_pos_emb(q, k, cos, sin, position_ids=None, unsqueeze_dim=1):
     return q_embed.to(dtype=dtype), k_embed.to(dtype=dtype)
 
 
-# Copied from transformers.models.cohere.modeling_cohere.repeat_kv
+# Copied from transformers_4573.models.cohere.modeling_cohere.repeat_kv
 def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     """
     This is the equivalent of torch.repeat_interleave(x, dim=1, repeats=n_rep). The hidden states go from (batch,
@@ -344,7 +344,7 @@ def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
 
 
-# Copied from transformers.models.llama.modeling_llama.eager_attention_forward
+# Copied from transformers_4573.models.llama.modeling_llama.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -701,7 +701,7 @@ class EfficientLoFTRPreTrainedModel(PreTrainedModel):
             init.copy_(module.inv_freq, buffer_value)
             init.copy_(module.original_inv_freq, buffer_value)
 
-    # Copied from transformers.models.superpoint.modeling_superpoint.SuperPointPreTrainedModel.extract_one_channel_pixel_values with SuperPoint->EfficientLoFTR
+    # Copied from transformers_4573.models.superpoint.modeling_superpoint.SuperPointPreTrainedModel.extract_one_channel_pixel_values with SuperPoint->EfficientLoFTR
     def extract_one_channel_pixel_values(self, pixel_values: torch.FloatTensor) -> torch.FloatTensor:
         """
         Assuming pixel_values has shape (batch_size, 3, height, width), and that all channels values are the same,
@@ -747,7 +747,7 @@ class EfficientLoFTRModel(EfficientLoFTRPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModel
+        >>> from transformers_4573 import AutoImageProcessor, AutoModel
         >>> import torch
         >>> from PIL import Image
         >>> import requests
@@ -1314,7 +1314,7 @@ class EfficientLoFTRForKeypointMatching(EfficientLoFTRPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModel
+        >>> from transformers_4573 import AutoImageProcessor, AutoModel
         >>> import torch
         >>> from PIL import Image
         >>> import requests

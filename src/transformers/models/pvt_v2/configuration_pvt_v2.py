@@ -88,7 +88,7 @@ class PvtV2Config(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PvtV2Model, PvtV2Config
+    >>> from transformers_4573 import PvtV2Model, PvtV2Config
 
     >>> # Initializing a pvt_v2_b0 style configuration
     >>> configuration = PvtV2Config()

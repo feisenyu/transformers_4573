@@ -16,8 +16,8 @@ import gc
 import tempfile
 import unittest
 
-from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, AwqConfig, OPTForCausalLM
-from transformers.testing_utils import (
+from transformers_4573 import AutoConfig, AutoModelForCausalLM, AutoTokenizer, AwqConfig, OPTForCausalLM
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_accelerate,
     require_gptqmodel,
@@ -27,8 +27,8 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available
-from transformers.utils.quantization_config import AwqBackend
+from transformers_4573.utils import is_torch_available
+from transformers_4573.utils.quantization_config import AwqBackend
 
 
 if is_torch_available():
@@ -145,7 +145,7 @@ class AwqTest(unittest.TestCase):
         from gptqmodel.nn_modules.qlinear.gemm_awq import AwqGEMMQuantLinear
         from gptqmodel.nn_modules.qlinear.gemv_awq import AwqGEMVQuantLinear
 
-        from transformers.integrations.awq import replace_with_awq_linear
+        from transformers_4573.integrations.awq import replace_with_awq_linear
 
         model_id = "facebook/opt-350m"
         config = AutoConfig.from_pretrained(model_id, revision="cb32f77e905cccbca1d970436fb0f5e6b58ee3c5")

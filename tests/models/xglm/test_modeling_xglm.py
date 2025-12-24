@@ -15,8 +15,8 @@
 import math
 import unittest
 
-from transformers import XGLMConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import XGLMConfig, is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     is_torch_greater_or_equal,
@@ -36,7 +36,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import XGLMForCausalLM, XGLMModel, XGLMTokenizer
+    from transformers_4573 import XGLMForCausalLM, XGLMModel, XGLMTokenizer
 
 
 class XGLMModelTester:

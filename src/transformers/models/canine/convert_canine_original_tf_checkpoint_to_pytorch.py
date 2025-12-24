@@ -19,8 +19,8 @@ import os
 
 import torch
 
-from transformers import CanineConfig, CanineModel, CanineTokenizer
-from transformers.utils import logging
+from transformers_4573 import CanineConfig, CanineModel, CanineTokenizer
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)

@@ -85,7 +85,7 @@ pip install transformers datasets evaluate rouge_score
 次のステップでは、T5 トークナイザーをロードして「text」と`summary`を処理します。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> checkpoint = "google-t5/t5-small"
 >>> tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -121,7 +121,7 @@ pip install transformers datasets evaluate rouge_score
 
 
 ```py
->>> from transformers import DataCollatorForSeq2Seq
+>>> from transformers_4573 import DataCollatorForSeq2Seq
 
 >>> data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=checkpoint)
 ```
@@ -171,7 +171,7 @@ pip install transformers datasets evaluate rouge_score
 
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, Seq2SeqTrainingArguments, Seq2SeqTrainer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 ```
@@ -237,7 +237,7 @@ pip install transformers datasets evaluate rouge_score
 推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`] で使用することです。モデルを使用して要約用の `pipeline` をインスタンス化し、テキストをそれに渡します。
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> summarizer = pipeline("summarization", model="stevhliu/my_awesome_billsum_model")
 >>> summarizer(text)
@@ -249,7 +249,7 @@ pip install transformers datasets evaluate rouge_score
 Tokenize the text and return the `input_ids` as PyTorch tensors:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("stevhliu/my_awesome_billsum_model")
 >>> inputs = tokenizer(text, return_tensors="pt").input_ids
@@ -258,7 +258,7 @@ Tokenize the text and return the `input_ids` as PyTorch tensors:
 [`~generation.GenerationMixin.generate`] メソッドを使用して要約を作成します。さまざまなテキスト生成戦略と生成を制御するためのパラメーターの詳細については、[Text Generation](../main_classes/text_generation) API を確認してください。
 
 ```py
->>> from transformers import AutoModelForSeq2SeqLM
+>>> from transformers_4573 import AutoModelForSeq2SeqLM
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("stevhliu/my_awesome_billsum_model")
 >>> outputs = model.generate(inputs, max_new_tokens=100, do_sample=False)

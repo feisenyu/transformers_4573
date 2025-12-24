@@ -70,7 +70,7 @@ class ViTConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import ViTConfig, ViTModel
+    >>> from transformers_4573 import ViTConfig, ViTModel
 
     >>> # Initializing a ViT vit-base-patch16-224 style configuration
     >>> configuration = ViTConfig()

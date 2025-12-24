@@ -54,7 +54,7 @@ The conversion script is also different because the model was saved in t5x's lat
 # Sample usage
 
 ```python
->>> from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("google/umt5-small")
 >>> tokenizer = AutoTokenizer.from_pretrained("google/umt5-small")

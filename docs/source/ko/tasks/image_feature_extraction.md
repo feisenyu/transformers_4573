@@ -45,7 +45,7 @@ image_gen = Image.open(requests.get(img_urls[1], stream=True).raw).convert("RGB"
 
 ```python
 import torch
-from transformers import pipeline, infer_device
+from transformers_4573 import pipeline, infer_device
 
 DEVICE = infer_device()
 pipe = pipeline(task="image-feature-extraction", model_name="google/vit-base-patch16-384", device=DEVICE, pool=True)
@@ -102,7 +102,7 @@ print(np.array(outputs).shape)
 transformers의 `AutoModel` 클래스를 사용하여 특징을 얻을 수도 있습니다. `AutoModel`은 작업 특화 헤드 없이 모든 transformers 모델을 로드할 수 있으며, 이를 통해 특징을 추출할 수 있습니다.
 
 ```python
-from transformers import AutoImageProcessor, AutoModel
+from transformers_4573 import AutoImageProcessor, AutoModel
 
 processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
 model = AutoModel.from_pretrained("google/vit-base-patch16-224").to(DEVICE)

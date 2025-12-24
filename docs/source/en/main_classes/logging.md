@@ -47,7 +47,7 @@ TRANSFORMERS_NO_ADVISORY_WARNINGS=1 ./myprogram.py
 Here is an example of how to use the same logger as the library in your own module or script:
 
 ```python
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 logging.set_verbosity_info()
 logger = logging.get_logger("transformers")

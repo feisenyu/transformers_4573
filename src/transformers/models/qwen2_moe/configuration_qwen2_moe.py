@@ -105,7 +105,7 @@ class Qwen2MoeConfig(PreTrainedConfig):
         layer_types (`dict[int, str]`, *optional*): a dictionarry that explicitly maps layer index with
             the attention type. The attention type is one of `sliding_attention`, `full_attention`.
     ```python
-    >>> from transformers import Qwen2MoeModel, Qwen2MoeConfig
+    >>> from transformers_4573 import Qwen2MoeModel, Qwen2MoeConfig
 
     >>> # Initializing a Qwen2MoE style configuration
     >>> configuration = Qwen2MoeConfig()

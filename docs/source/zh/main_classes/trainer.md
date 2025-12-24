@@ -57,7 +57,7 @@ rendered properly in your Markdown viewer.
 
 ```python
 from torch import nn
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 
 class CustomTrainer(Trainer):
@@ -651,7 +651,7 @@ NEFTune 是一种提升聊天模型性能的技术，由 Jain 等人在论文“
 要在 `Trainer` 中使用它，只需在创建 `TrainingArguments` 实例时传递 `neftune_noise_alpha`。请注意，为了避免任何意外行为，NEFTune在训练后被禁止，以此恢复原始的embedding层。
 
 ```python
-from transformers import Trainer, TrainingArguments
+from transformers_4573 import Trainer, TrainingArguments
 
 args = TrainingArguments(..., neftune_noise_alpha=0.1)
 trainer = Trainer(..., args=args)

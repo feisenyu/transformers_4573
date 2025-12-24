@@ -19,7 +19,7 @@ import unittest
 import torch
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -27,20 +27,20 @@ from transformers import (
     GenerationConfig,
     LogitsProcessorList,
 )
-from transformers.generation.continuous_batching.cache import (
+from transformers_4573.generation.continuous_batching.cache import (
     FullAttentionCacheAllocator,
     SlidingAttentionCacheAllocator,
     group_layers_by_attn_type,
 )
-from transformers.generation.continuous_batching.continuous_api import build_attention_mask
-from transformers.testing_utils import (
+from transformers_4573.generation.continuous_batching.continuous_api import build_attention_mask
+from transformers_4573.testing_utils import (
     Expectations,
     require_deterministic_for_xpu,
     require_torch_accelerator,
     slow,
     torch_device,
 )
-from transformers.utils import is_flash_attn_2_available, is_kernels_available
+from transformers_4573.utils import is_flash_attn_2_available, is_kernels_available
 
 
 def flush_memory(flush_compile: bool = True) -> None:

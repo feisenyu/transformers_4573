@@ -14,9 +14,9 @@
 
 import unittest
 
-from transformers import Cohere2VisionProcessor
-from transformers.testing_utils import require_read_token, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available
+from transformers_4573 import Cohere2VisionProcessor
+from transformers_4573.testing_utils import require_read_token, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available
 
 from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 

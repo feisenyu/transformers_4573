@@ -18,7 +18,7 @@ import tempfile
 import unittest
 from functools import cached_property
 
-from transformers import BatchEncoding, ByT5Tokenizer
+from transformers_4573 import BatchEncoding, ByT5Tokenizer
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

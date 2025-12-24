@@ -24,7 +24,7 @@ import torch.nn.functional as F
 from torch import Tensor
 from tqdm.auto import tqdm
 
-from transformers.models.sam3.modeling_sam3 import Sam3VisionNeck
+from transformers_4573.models.sam3.modeling_sam3 import Sam3VisionNeck
 
 from ...modeling_utils import PreTrainedModel
 from ...utils import ModelOutput, auto_docstring, is_kernels_available, logging

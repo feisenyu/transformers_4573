@@ -97,7 +97,7 @@ class Qwen2_5OmniVisionEncoderConfig(Qwen2_5_VLVisionConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen2_5OmniVisionEncoderConfig, Qwen2_5OmniVisionEncoder
+    >>> from transformers_4573 import Qwen2_5OmniVisionEncoderConfig, Qwen2_5OmniVisionEncoder
 
     >>> # Initializing a Qwen2_5OmniVisionEncoderConfig
     >>> configuration = Qwen2_5OmniVisionEncoderConfig()
@@ -194,7 +194,7 @@ class Qwen2_5OmniAudioEncoderConfig(Qwen2AudioEncoderConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniAudioEncoder
+    >>> from transformers_4573 import Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniAudioEncoder
 
     >>> # Initializing a Qwen2_5OmniAudioEncoderConfig
     >>> configuration = Qwen2_5OmniAudioEncoderConfig()
@@ -306,7 +306,7 @@ class Qwen2_5OmniTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen2_5OmniThinkerForConditionalGeneration, Qwen2_5OmniThinkerConfig, Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniVisionEncoderConfig
+    >>> from transformers_4573 import Qwen2_5OmniThinkerForConditionalGeneration, Qwen2_5OmniThinkerConfig, Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniVisionEncoderConfig
 
     >>> # Initializing a Qwen2_5OmniAudioEncoder config
     >>> audio_config = Qwen2_5OmniAudioEncoderConfig()
@@ -445,7 +445,7 @@ class Qwen2_5OmniThinkerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen2_5OmniThinkerForConditionalGeneration, Qwen2_5OmniThinkerConfig, Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniVisionEncoderConfig
+    >>> from transformers_4573 import Qwen2_5OmniThinkerForConditionalGeneration, Qwen2_5OmniThinkerConfig, Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniVisionEncoderConfig
 
     >>> # Initializing a Qwen2_5OmniAudioEncoder config
     >>> audio_config = Qwen2_5OmniAudioEncoderConfig()
@@ -625,7 +625,7 @@ class Qwen2_5OmniTalkerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen2_5OmniTalkerForConditionalGeneration, Qwen2_5OmniThinkerConfig, Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniVisionEncoderConfig
+    >>> from transformers_4573 import Qwen2_5OmniTalkerForConditionalGeneration, Qwen2_5OmniThinkerConfig, Qwen2_5OmniAudioEncoderConfig, Qwen2_5OmniVisionEncoderConfig
 
     >>> # Initializing a Qwen2_5OmniAudioEncoder config
     >>> audio_config = Qwen2_5OmniAudioEncoderConfig()
@@ -911,7 +911,7 @@ class Qwen2_5OmniToken2WavConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen2_5OmniToken2WavModel, DiT_Args, BigVGAN_Args
+    >>> from transformers_4573 import Qwen2_5OmniToken2WavModel, DiT_Args, BigVGAN_Args
 
     >>> # Initialize DiT configuration
     >>> dit_config = DiT_Args(
@@ -974,7 +974,7 @@ class Qwen2_5OmniConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     Qwen2_5OmniThinkerConfig,
     ...     Qwen2_5OmniTalkerConfig,
     ...     Qwen2_5OmniToken2WavConfig,
@@ -2264,7 +2264,7 @@ class Qwen2_5OmniThinkerForConditionalGeneration(Qwen2_5OmniPreTrainedModelForCo
         >>> from urllib.request import urlopen
         >>> import librosa
         >>> from qwen_vl_utils import process_vision_info
-        >>> from transformers import Qwen2_5OmniProcessor, Qwen2_5OmniThinkerForConditionalGeneration
+        >>> from transformers_4573 import Qwen2_5OmniProcessor, Qwen2_5OmniThinkerForConditionalGeneration
 
         >>> thinker = Qwen2_5OmniThinkerForConditionalGeneration.from_pretrained("Qwen/Qwen2.5-Omni-7B")
         >>> processor = Qwen2_5OmniProcessor.from_pretrained("Qwen/Qwen2.5-Omni-7B")
@@ -2570,7 +2570,7 @@ class Qwen2_5OmniTalkerForConditionalGeneration(Qwen2_5OmniPreTrainedModelForCon
         >>> from io import BytesIO
         >>> from urllib.request import urlopen
         >>> import librosa
-        >>> from transformers import AutoProcessor, Qwen2_5OmniTalkerForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Qwen2_5OmniTalkerForConditionalGeneration
 
         >>> model = Qwen2_5OmniTalkerForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B")
         >>> processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B")

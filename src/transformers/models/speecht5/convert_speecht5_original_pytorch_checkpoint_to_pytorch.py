@@ -18,7 +18,7 @@ import argparse
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     SpeechT5Config,
     SpeechT5FeatureExtractor,
     SpeechT5ForSpeechToSpeech,
@@ -28,7 +28,7 @@ from transformers import (
     SpeechT5Tokenizer,
     logging,
 )
-from transformers.tokenization_python import AddedToken
+from transformers_4573.tokenization_python import AddedToken
 
 
 logging.set_verbosity_info()

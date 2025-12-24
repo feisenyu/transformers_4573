@@ -107,7 +107,7 @@ class ModernBertDecoderConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import ModernBertDecoderModel, ModernBertDecoderConfig
+    >>> from transformers_4573 import ModernBertDecoderModel, ModernBertDecoderConfig
 
     >>> # Initializing a ModernBert decoder style configuration
     >>> configuration = ModernBertDecoderConfig()

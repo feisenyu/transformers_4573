@@ -39,7 +39,7 @@ This model was contributed by [dqnguyen](https://huggingface.co/dqnguyen). The o
 
 ```python
 >>> import torch
->>> from transformers import AutoModel, AutoTokenizer
+>>> from transformers_4573 import AutoModel, AutoTokenizer
 
 >>> phobert = AutoModel.from_pretrained("vinai/phobert-base")
 >>> tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")

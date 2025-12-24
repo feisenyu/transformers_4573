@@ -37,7 +37,7 @@ The example below demonstrates how to generate code with [`Pipeline`], or the [`
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     "text-generation",
@@ -60,7 +60,7 @@ print(infill_result[0]['generated_text'])
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/CodeLlama-7b-hf")
 model = AutoModelForCausalLM.from_pretrained(
@@ -107,7 +107,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 ```py
 # pip install bitsandbytes
 import torch
-from transformers import AutoModelForCausalLM, CodeLlamaTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, CodeLlamaTokenizer, BitsAndBytesConfig
 
 bnb_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True)
 tokenizer = CodeLlamaTokenizer.from_pretrained("meta-llama/CodeLlama-34b-hf")
@@ -128,7 +128,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 Use the [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139) to better understand what tokens the model can and cannot attend to.
 
 ```py
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("meta-llama/CodeLlama-7b-hf")
 visualizer("""def func(a, b):
@@ -145,7 +145,7 @@ visualizer("""def func(a, b):
 - Use the `<FILL_ME>` token where you want your input to be filled. The tokenizer splits this token to create a formatted input string that follows the [original training pattern](https://github.com/facebookresearch/codellama/blob/cb51c14ec761370ba2e2bc351374a79265d0465e/llama/generation.py#L402). This is more robust than preparing the pattern yourself.
 
     ```py
-    from transformers import LlamaForCausalLM, CodeLlamaTokenizer
+    from transformers_4573 import LlamaForCausalLM, CodeLlamaTokenizer
 
     tokenizer = CodeLlamaTokenizer.from_pretrained("meta-llama/CodeLlama-7b-hf")
     model = LlamaForCausalLM.from_pretrained("meta-llama/CodeLlama-7b-hf")

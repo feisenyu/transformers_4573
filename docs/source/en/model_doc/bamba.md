@@ -41,7 +41,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -58,7 +58,7 @@ pipeline("Plants create energy through a process known as")
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("ibm-ai-platform/Bamba-9B-v2")
 model = AutoModelForCausalLM.from_pretrained("ibm-ai-platform/Bamba-9B-v2", dtype=torch.bfloat16, device_map="auto", attn_implementation="sdpa")
@@ -83,7 +83,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 tokenizer = AutoTokenizer.from_pretrained("ibm-ai-platform/Bamba-9B-v2")
@@ -116,7 +116,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
   The `attention_mask` inputs should not be provided. The [`DataCollatorWithFlattening`] programmatically generates the set of additional arguments above using `return_seq_idx=True` and `return_flash_attn_kwargs=True`. See the [Improving Hugging Face Training Efficiency Through Packing with Flash Attention](https://huggingface.co/blog/packing-with-FA2) blog post for additional information.
 
   ```python
-  from transformers import DataCollatorWithFlattening
+  from transformers_4573 import DataCollatorWithFlattening
 
   # Example of using padding-free training
   data_collator = DataCollatorWithFlattening(

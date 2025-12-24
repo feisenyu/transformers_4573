@@ -16,8 +16,8 @@
 import unittest
 from functools import cached_property
 
-from transformers import MarkupLMConfig, is_torch_available
-from transformers.testing_utils import require_torch, slow, torch_device
+from transformers_4573 import MarkupLMConfig, is_torch_available
+from transformers_4573.testing_utils import require_torch, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, ids_tensor
@@ -27,7 +27,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MarkupLMForQuestionAnswering,
         MarkupLMForSequenceClassification,
         MarkupLMForTokenClassification,
@@ -35,7 +35,7 @@ if is_torch_available():
     )
 
 # TODO check dependencies
-from transformers import MarkupLMFeatureExtractor, MarkupLMProcessor, MarkupLMTokenizer
+from transformers_4573 import MarkupLMFeatureExtractor, MarkupLMProcessor, MarkupLMTokenizer
 
 
 class MarkupLMModelTester:

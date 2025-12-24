@@ -153,7 +153,7 @@ class FastSpeech2ConformerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FastSpeech2ConformerModel, FastSpeech2ConformerConfig
+    >>> from transformers_4573 import FastSpeech2ConformerModel, FastSpeech2ConformerConfig
 
     >>> # Initializing a FastSpeech2Conformer style configuration
     >>> configuration = FastSpeech2ConformerConfig()
@@ -369,7 +369,7 @@ class FastSpeech2ConformerHifiGanConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import FastSpeech2ConformerHifiGan, FastSpeech2ConformerHifiGanConfig
+    >>> from transformers_4573 import FastSpeech2ConformerHifiGan, FastSpeech2ConformerHifiGanConfig
 
     >>> # Initializing a FastSpeech2ConformerHifiGan configuration
     >>> configuration = FastSpeech2ConformerHifiGanConfig()
@@ -436,7 +436,7 @@ class FastSpeech2ConformerWithHifiGanConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     FastSpeech2ConformerConfig,
     ...     FastSpeech2ConformerHifiGanConfig,
     ...     FastSpeech2ConformerWithHifiGanConfig,

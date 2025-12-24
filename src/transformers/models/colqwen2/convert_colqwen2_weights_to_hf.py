@@ -42,10 +42,10 @@ from huggingface_hub import snapshot_download
 from peft import PeftModel
 from safetensors import safe_open
 
-from transformers import AutoConfig, AutoModel
-from transformers.models.colqwen2 import ColQwen2ForRetrieval
-from transformers.models.colqwen2.configuration_colqwen2 import ColQwen2Config
-from transformers.utils import logging
+from transformers_4573 import AutoConfig, AutoModel
+from transformers_4573.models.colqwen2 import ColQwen2ForRetrieval
+from transformers_4573.models.colqwen2.configuration_colqwen2 import ColQwen2Config
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

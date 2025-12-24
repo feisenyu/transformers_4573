@@ -17,9 +17,9 @@ import unittest
 
 import pytest
 
-from transformers import DepthProConfig
-from transformers.file_utils import is_torch_available, is_vision_available
-from transformers.testing_utils import require_torch, require_vision, slow, torch_device
+from transformers_4573 import DepthProConfig
+from transformers_4573.file_utils import is_torch_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor
@@ -30,14 +30,14 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import DepthProForDepthEstimation, DepthProModel
-    from transformers.models.auto.modeling_auto import MODEL_MAPPING_NAMES
+    from transformers_4573 import DepthProForDepthEstimation, DepthProModel
+    from transformers_4573.models.auto.modeling_auto import MODEL_MAPPING_NAMES
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import DepthProImageProcessor
+    from transformers_4573 import DepthProImageProcessor
 
 
 class DepthProModelTester:

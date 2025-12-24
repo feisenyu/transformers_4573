@@ -20,8 +20,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from transformers import is_torch_available
-from transformers.model_debugging_utils import model_addition_debugger_context
+from transformers_4573 import is_torch_available
+from transformers_4573.model_debugging_utils import model_addition_debugger_context
 
 
 if is_torch_available():

@@ -30,8 +30,8 @@ from create_dummy_models import COMPOSITE_MODELS, create_tiny_models
 from huggingface_hub import HfApi
 
 import transformers
-from transformers import AutoFeatureExtractor, AutoImageProcessor, AutoTokenizer
-from transformers.image_processing_utils import BaseImageProcessor
+from transformers_4573 import AutoFeatureExtractor, AutoImageProcessor, AutoTokenizer
+from transformers_4573.image_processing_utils import BaseImageProcessor
 
 
 def get_all_model_names():

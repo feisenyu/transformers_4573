@@ -51,7 +51,7 @@ Transformers enables tensor parallelism when a model has a `tp_plan`. Choose fro
 ```py
 import os
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 # model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct" # better to visualize all the possible strategies
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct" , dtype=torch.bfloat16, tp_plan="auto")
@@ -79,7 +79,7 @@ Define a tensor parallel plan for each layer in `tp_plan`. Pass it to [`~PreTrai
 Manual partitioning requires a deep understanding of model architecture and strategy interactions. Poor partitioning choices create slow models that fail or produce incorrect results. The [Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=tensor_parallelism) explains partitioning strategies in detail.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 tp_plan = {
     "model.layers.*.self_attn.q_proj": "colwise",
@@ -232,7 +232,7 @@ The example below shows how to implement `ColwiseParallel` with this workflow.
 3. Register the strategy to [`ParallelInterface`] to enable it for use with `tp_plan`.
 
     ```python
-    from transformers.integrations.tensor_parallel import ParallelInterface
+    from transformers_4573.integrations.tensor_parallel import ParallelInterface
 
     ParallelInterface.register_strategy("colwise_custom", ColwiseParallel)
     tp_plan = {

@@ -21,7 +21,7 @@ import torch
 from torch import nn
 from torchvision.transforms.v2 import functional as F
 
-from transformers.image_transforms import get_size_with_aspect_ratio
+from transformers_4573.image_transforms import get_size_with_aspect_ratio
 
 from ...image_processing_utils import BatchFeature, get_size_dict
 from ...image_processing_utils_fast import (
@@ -402,7 +402,7 @@ class MaskFormerImageProcessorFast(BaseImageProcessorFast):
 
         return encoded_inputs
 
-    # Copied from transformers.models.maskformer.image_processing_maskformer.MaskFormerImageProcessor.post_process_semantic_segmentation
+    # Copied from transformers_4573.models.maskformer.image_processing_maskformer.MaskFormerImageProcessor.post_process_semantic_segmentation
     def post_process_semantic_segmentation(
         self, outputs, target_sizes: Optional[list[tuple[int, int]]] = None
     ) -> "torch.Tensor":
@@ -453,7 +453,7 @@ class MaskFormerImageProcessorFast(BaseImageProcessorFast):
 
         return semantic_segmentation
 
-    # Copied from transformers.models.maskformer.image_processing_maskformer.MaskFormerImageProcessor.post_process_instance_segmentation
+    # Copied from transformers_4573.models.maskformer.image_processing_maskformer.MaskFormerImageProcessor.post_process_instance_segmentation
     def post_process_instance_segmentation(
         self,
         outputs,
@@ -570,7 +570,7 @@ class MaskFormerImageProcessorFast(BaseImageProcessorFast):
             results.append({"segmentation": segmentation, "segments_info": segments})
         return results
 
-    # Copied from transformers.models.maskformer.image_processing_maskformer.MaskFormerImageProcessor.post_process_panoptic_segmentation
+    # Copied from transformers_4573.models.maskformer.image_processing_maskformer.MaskFormerImageProcessor.post_process_panoptic_segmentation
     def post_process_panoptic_segmentation(
         self,
         outputs,

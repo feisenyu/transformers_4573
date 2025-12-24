@@ -43,7 +43,7 @@ Transformers 4.20.0では、[`~PreTrainedModel.from_pretrained`] メソッドが
 
 
 ```py
-from transformers import AutoModelForSeq2SeqLM
+from transformers_4573 import AutoModelForSeq2SeqLM
 
 t0pp = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0pp", device_map="auto")
 ```

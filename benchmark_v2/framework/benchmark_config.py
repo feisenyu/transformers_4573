@@ -5,8 +5,8 @@ import logging
 from functools import lru_cache
 from typing import Any
 
-from transformers.generation.configuration_utils import CompileConfig
-from transformers.utils.import_utils import is_flash_attn_2_available, is_kernels_available
+from transformers_4573.generation.configuration_utils import CompileConfig
+from transformers_4573.utils.import_utils import is_flash_attn_2_available, is_kernels_available
 
 
 KERNELIZATION_AVAILABLE = False

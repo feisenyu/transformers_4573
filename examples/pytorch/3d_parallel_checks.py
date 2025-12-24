@@ -53,7 +53,7 @@ from torch.nn.attention import SDPBackend, sdpa_kernel
 from torch.utils.data import DataLoader, default_collate
 from torch.utils.data.distributed import DistributedSampler
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 
 ignore_sanity_checks = int(os.environ.get("IGNORE_SANITY", "0")) == 1

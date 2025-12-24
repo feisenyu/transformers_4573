@@ -29,7 +29,7 @@ rendered properly in your Markdown viewer.
 [launch](https://www.gradio.app/main/docs/gradio/blocks#blocks-launch)를 추가하여 웹 서버를 생성하고 앱을 시작하세요.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 import gradio as gr
 
 pipeline = pipeline("image-classification", model="google/vit-base-patch16-224")

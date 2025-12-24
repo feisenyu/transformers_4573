@@ -48,7 +48,7 @@ class CodeLlamaTokenizer(TokenizersBackend):
     This uses notably ByteFallback and no normalization.
 
     ```python
-    >>> from transformers import CodeLlamaTokenizer
+    >>> from transformers_4573 import CodeLlamaTokenizer
 
     >>> tokenizer = CodeLlamaTokenizer.from_pretrained("hf-internal-testing/llama-tokenizer")
     >>> tokenizer.encode("Hello this is a test")

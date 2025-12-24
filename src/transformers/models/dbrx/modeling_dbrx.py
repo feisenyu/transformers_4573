@@ -713,7 +713,7 @@ class DbrxForCausalLM(DbrxPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >> from transformers import AutoTokenizer, DbrxForCausalLM
+        >> from transformers_4573 import AutoTokenizer, DbrxForCausalLM
 
         >> model = DbrxForCausalLM.from_pretrained("databricks/dbrx-instruct")
         >> tokenizer = AutoTokenizer.from_pretrained("databricks/dbrx-instruct")

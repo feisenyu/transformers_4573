@@ -32,7 +32,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 此外，如果内存不足以放下加载整个模型（目前仅适用于推理），您可以直接将模型放置在不同的设备上。使用 `device_map="auto"`，Accelerate 将确定将每一层放置在哪个设备上，以最大化使用最快的设备（GPU），并将其余部分卸载到 CPU，甚至硬盘上（如果您没有足够的 GPU 内存 或 CPU 内存）。即使模型分布在几个设备上，它也将像您通常期望的那样运行。
 
 ```python
-from transformers import AutoModelForSeq2SeqLM
+from transformers_4573 import AutoModelForSeq2SeqLM
 
 t0pp = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0pp", device_map="auto")
 ```

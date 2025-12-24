@@ -16,8 +16,8 @@ import copy
 import inspect
 import tempfile
 
-from transformers.testing_utils import require_torch, torch_device
-from transformers.utils.backbone_utils import BackboneType
+from transformers_4573.testing_utils import require_torch, torch_device
+from transformers_4573.utils.backbone_utils import BackboneType
 
 
 @require_torch

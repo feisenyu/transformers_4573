@@ -74,7 +74,7 @@ class DacEncoderOutput(ModelOutput):
 
 @dataclass
 @auto_docstring
-# Copied from transformers.models.encodec.modeling_encodec.EncodecDecoderOutput with Encodec->Dac, segment_length->input_length
+# Copied from transformers_4573.models.encodec.modeling_encodec.EncodecDecoderOutput with Encodec->Dac, segment_length->input_length
 class DacDecoderOutput(ModelOutput):
     r"""
     audio_values (`torch.FloatTensor`  of shape `(batch_size, input_length)`, *optional*):
@@ -654,7 +654,7 @@ class DacModel(DacPreTrainedModel):
 
         ```python
         >>> from datasets import load_dataset, Audio
-        >>> from transformers import DacModel, AutoProcessor
+        >>> from transformers_4573 import DacModel, AutoProcessor
         >>> librispeech_dummy = load_dataset("hf-internal-testing/librispeech_asr_dummy", "clean", split="validation")
 
         >>> model = DacModel.from_pretrained("descript/dac_16khz")

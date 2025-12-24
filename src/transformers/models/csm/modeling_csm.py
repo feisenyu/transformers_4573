@@ -26,7 +26,7 @@ from typing import Optional, Union
 import torch
 import torch.nn as nn
 
-from transformers.utils.generic import check_model_inputs
+from transformers_4573.utils.generic import check_model_inputs
 
 from ... import initialization as init
 from ...activations import ACT2FN
@@ -998,7 +998,7 @@ class CsmForConditionalGeneration(CsmPreTrainedModel, CsmGenerationMixin):
 
         ```python
         >>> import torch
-        >>> from transformers import CsmForConditionalGeneration, AutoProcessor
+        >>> from transformers_4573 import CsmForConditionalGeneration, AutoProcessor
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = "sesame/csm-1b"

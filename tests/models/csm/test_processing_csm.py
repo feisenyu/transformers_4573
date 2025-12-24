@@ -18,9 +18,9 @@ import unittest
 import jinja2
 import numpy as np
 
-from transformers import CsmProcessor
-from transformers.testing_utils import require_torch
-from transformers.utils import is_torch_available
+from transformers_4573 import CsmProcessor
+from transformers_4573.testing_utils import require_torch
+from transformers_4573.utils import is_torch_available
 
 from ...test_processing_common import ProcessorTesterMixin
 

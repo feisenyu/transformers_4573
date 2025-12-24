@@ -382,7 +382,7 @@ class Sam2Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     Sam2VisionConfig,
     ...     Sam2PromptEncoderConfig,
     ...     Sam2MaskDecoderConfig,

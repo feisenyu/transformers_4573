@@ -59,7 +59,7 @@ class DacConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import DacModel, DacConfig
+    >>> from transformers_4573 import DacModel, DacConfig
 
     >>> # Initializing a "descript/dac_16khz" style configuration
     >>> configuration = DacConfig()

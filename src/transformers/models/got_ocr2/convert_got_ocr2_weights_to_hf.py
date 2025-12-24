@@ -23,7 +23,7 @@ import torch
 from huggingface_hub import snapshot_download
 from safetensors import safe_open
 
-from transformers import (
+from transformers_4573 import (
     GotOcr2Config,
     GotOcr2ForConditionalGeneration,
     GotOcr2ImageProcessor,
@@ -31,12 +31,12 @@ from transformers import (
     PreTrainedTokenizerFast,
     is_vision_available,
 )
-from transformers.convert_slow_tokenizer import TikTokenConverter
-from transformers.tokenization_python import AddedToken
+from transformers_4573.convert_slow_tokenizer import TikTokenConverter
+from transformers_4573.tokenization_python import AddedToken
 
 
 if is_vision_available():
-    from transformers.image_utils import load_image
+    from transformers_4573.image_utils import load_image
 
 
 # fmt: off

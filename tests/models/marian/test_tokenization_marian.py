@@ -17,13 +17,13 @@ import unittest
 from pathlib import Path
 from shutil import copyfile
 
-from transformers import BatchEncoding, MarianTokenizer
-from transformers.testing_utils import get_tests_dir, require_sentencepiece, slow
-from transformers.utils import is_sentencepiece_available
+from transformers_4573 import BatchEncoding, MarianTokenizer
+from transformers_4573.testing_utils import get_tests_dir, require_sentencepiece, slow
+from transformers_4573.utils import is_sentencepiece_available
 
 
 if is_sentencepiece_available():
-    from transformers.models.marian.tokenization_marian import VOCAB_FILES_NAMES, save_json
+    from transformers_4573.models.marian.tokenization_marian import VOCAB_FILES_NAMES, save_json
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

@@ -111,7 +111,7 @@ class NllbMoeConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import NllbMoeModel, NllbMoeConfig
+    >>> from transformers_4573 import NllbMoeModel, NllbMoeConfig
 
     >>> # Initializing a NllbMoe facebook/nllb-moe-54b style configuration
     >>> configuration = NllbMoeConfig()

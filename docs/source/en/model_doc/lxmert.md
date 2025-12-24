@@ -23,7 +23,7 @@ rendered properly in your Markdown viewer.
 
 ## Overview
 
-The LXMERT model was proposed in [LXMERT: Learning Cross-Modality Encoder Representations from Transformers](https://huggingface.co/papers/1908.07490) by Hao Tan & Mohit Bansal. It is a series of bidirectional transformer encoders
+The LXMERT model was proposed in [LXMERT: Learning Cross-Modality Encoder Representations from transformers_4573](https://huggingface.co/papers/1908.07490) by Hao Tan & Mohit Bansal. It is a series of bidirectional transformer encoders
 (one for the vision modality, one for the language modality, and then one to fuse both modalities) pretrained using a
 combination of masked language modeling, visual-language text alignment, ROI-feature regression, masked
 visual-attribute modeling, masked visual-object modeling, and visual-question answering objectives. The pretraining
@@ -33,7 +33,7 @@ The abstract from the paper is the following:
 
 *Vision-and-language reasoning requires an understanding of visual concepts, language semantics, and, most importantly,
 the alignment and relationships between these two modalities. We thus propose the LXMERT (Learning Cross-Modality
-Encoder Representations from Transformers) framework to learn these vision-and-language connections. In LXMERT, we
+Encoder Representations from transformers_4573) framework to learn these vision-and-language connections. In LXMERT, we
 build a large-scale Transformer model that consists of three encoders: an object relationship encoder, a language
 encoder, and a cross-modality encoder. Next, to endow our model with the capability of connecting vision and language
 semantics, we pre-train the model with large amounts of image-and-sentence pairs, via five diverse representative

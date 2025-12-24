@@ -37,7 +37,7 @@ The example below demonstrates how to classify an image with [`Pipeline`] or the
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="image-classification",
@@ -55,7 +55,7 @@ pipeline("https://huggingface.co/datasets/huggingface/documentation-images/resol
 import torch
 import requests
 from PIL import Image
-from transformers import AutoModelForImageClassification, AutoImageProcessor
+from transformers_4573 import AutoModelForImageClassification, AutoImageProcessor
 
 image_processor = AutoImageProcessor.from_pretrained(
     "google/mobilenet_v1_1.0_224",
@@ -91,7 +91,7 @@ print(f"The predicted class label is: {predicted_class_label}")
 - The original TensorFlow checkpoints determines the padding amount at inference because it depends on the input image size. To use the native PyTorch padding behavior, set `tf_padding=False` in [`MobileNetV1Config`].
 
     ```python
-    from transformers import MobileNetV1Config
+    from transformers_4573 import MobileNetV1Config
 
     config = MobileNetV1Config.from_pretrained("google/mobilenet_v1_1.0_224", tf_padding=True)
     ```

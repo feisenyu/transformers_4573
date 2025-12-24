@@ -20,7 +20,7 @@ import collections
 import torch
 from numpy import load
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     GemmaTokenizer,
     GemmaTokenizerFast,
@@ -29,8 +29,8 @@ from transformers import (
     PaliGemmaProcessor,
     SiglipImageProcessor,
 )
-from transformers.tokenization_utils_base import AddedToken
-from transformers.utils import logging
+from transformers_4573.tokenization_utils_base import AddedToken
+from transformers_4573.utils import logging
 
 
 device = "cuda"  # "cpu"

@@ -26,7 +26,7 @@ import torch
 from unilm.wavlm.WavLM import WavLM as WavLMOrig
 from unilm.wavlm.WavLM import WavLMConfig as WavLMConfigOrig
 
-from transformers import WavLMConfig, WavLMModel, logging
+from transformers_4573 import WavLMConfig, WavLMModel, logging
 
 
 logging.set_verbosity_info()

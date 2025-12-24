@@ -40,7 +40,7 @@ DBRX Instruct와 DBRX Base에 대한 더 자세한 정보는 이 [기술 블로�
 `generate()` 메소드는 DBRX를 사용하여 텍스트를 생성하는 데 사용될 수 있습니다. 표준 어텐션 구현, 플래시 어텐션, PyTorch의 스케일된 내적 어텐션(Scaled Dot-Product Attention)을 사용하여 생성할 수 있습니다. 후자의 두 어텐션 구현 방식은 처리 속도를 크게 높여줍니다.
 
 ```python
-from transformers import DbrxForCausalLM, AutoTokenizer
+from transformers_4573 import DbrxForCausalLM, AutoTokenizer
 import torch
 
 tokenizer = AutoTokenizer.from_pretrained("databricks/dbrx-instruct", token="YOUR_HF_TOKEN")
@@ -63,7 +63,7 @@ print(tokenizer.decode(outputs[0]))
 
 
 ```python
-from transformers import DbrxForCausalLM, AutoTokenizer
+from transformers_4573 import DbrxForCausalLM, AutoTokenizer
 import torch
 
 tokenizer = AutoTokenizer.from_pretrained("databricks/dbrx-instruct", token="YOUR_HF_TOKEN")
@@ -87,7 +87,7 @@ PyTorch의 스케일된 내적 어텐션을 사용하여도 더 빠른 생성이
 
 
 ```python
-from transformers import DbrxForCausalLM, AutoTokenizer
+from transformers_4573 import DbrxForCausalLM, AutoTokenizer
 import torch
 
 tokenizer = AutoTokenizer.from_pretrained("databricks/dbrx-instruct", token="YOUR_HF_TOKEN")

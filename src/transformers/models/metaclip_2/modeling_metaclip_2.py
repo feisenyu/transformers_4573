@@ -489,7 +489,7 @@ class MetaClip2TextModel(MetaClip2PreTrainedModel):
     Examples:
 
     ```python
-    >>> from transformers import AutoTokenizer, MetaClip2TextModel
+    >>> from transformers_4573 import AutoTokenizer, MetaClip2TextModel
 
     >>> model = MetaClip2TextModel.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
     >>> tokenizer = AutoTokenizer.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -531,7 +531,7 @@ class MetaClip2TextModel(MetaClip2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, MetaClip2TextModel
+        >>> from transformers_4573 import AutoTokenizer, MetaClip2TextModel
 
         >>> model = MetaClip2TextModel.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -590,7 +590,7 @@ class MetaClip2TextModelWithProjection(MetaClip2PreTrainedModel):
     Examples:
 
     ```python
-    >>> from transformers import AutoTokenizer, MetaClip2TextModelWithProjection
+    >>> from transformers_4573 import AutoTokenizer, MetaClip2TextModelWithProjection
 
     >>> model = MetaClip2TextModelWithProjection.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
     >>> tokenizer = AutoTokenizer.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -636,7 +636,7 @@ class MetaClip2TextModelWithProjection(MetaClip2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, MetaClip2TextModelWithProjection
+        >>> from transformers_4573 import AutoTokenizer, MetaClip2TextModelWithProjection
 
         >>> model = MetaClip2TextModelWithProjection.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -743,7 +743,7 @@ class MetaClip2Model(MetaClip2PreTrainedModel):
     ```python
     >>> from PIL import Image
     >>> import requests
-    >>> from transformers import AutoProcessor, MetaClip2Model
+    >>> from transformers_4573 import AutoProcessor, MetaClip2Model
 
     >>> model = MetaClip2Model.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
     >>> processor = AutoProcessor.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -814,7 +814,7 @@ class MetaClip2Model(MetaClip2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, MetaClip2Model
+        >>> from transformers_4573 import AutoTokenizer, MetaClip2Model
 
         >>> model = MetaClip2Model.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
         >>> tokenizer = AutoTokenizer.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -849,7 +849,7 @@ class MetaClip2Model(MetaClip2PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, MetaClip2Model
+        >>> from transformers_4573 import AutoProcessor, MetaClip2Model
 
         >>> model = MetaClip2Model.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
         >>> processor = AutoProcessor.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -891,7 +891,7 @@ class MetaClip2Model(MetaClip2PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, MetaClip2Model
+        >>> from transformers_4573 import AutoProcessor, MetaClip2Model
 
         >>> model = MetaClip2Model.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
         >>> processor = AutoProcessor.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -1017,7 +1017,7 @@ class MetaClip2VisionModel(MetaClip2PreTrainedModel):
     ```python
     >>> from PIL import Image
     >>> import requests
-    >>> from transformers import AutoProcessor, MetaClip2VisionModel
+    >>> from transformers_4573 import AutoProcessor, MetaClip2VisionModel
 
     >>> model = MetaClip2VisionModel.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
     >>> processor = AutoProcessor.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -1060,7 +1060,7 @@ class MetaClip2VisionModel(MetaClip2PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, MetaClip2VisionModel
+        >>> from transformers_4573 import AutoProcessor, MetaClip2VisionModel
 
         >>> model = MetaClip2VisionModel.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
         >>> processor = AutoProcessor.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -1123,7 +1123,7 @@ class MetaClip2VisionModelWithProjection(MetaClip2PreTrainedModel):
     ```python
     >>> from PIL import Image
     >>> import requests
-    >>> from transformers import AutoProcessor, MetaClip2VisionModelWithProjection
+    >>> from transformers_4573 import AutoProcessor, MetaClip2VisionModelWithProjection
 
     >>> model = MetaClip2VisionModelWithProjection.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
     >>> processor = AutoProcessor.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
@@ -1169,7 +1169,7 @@ class MetaClip2VisionModelWithProjection(MetaClip2PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, MetaClip2VisionModelWithProjection
+        >>> from transformers_4573 import AutoProcessor, MetaClip2VisionModelWithProjection
 
         >>> model = MetaClip2VisionModelWithProjection.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")
         >>> processor = AutoProcessor.from_pretrained("facebook/metaclip-2-worldwide-huge-quickgelu")

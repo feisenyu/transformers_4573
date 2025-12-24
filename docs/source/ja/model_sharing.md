@@ -149,7 +149,7 @@ Pass your training arguments as usual to [`Trainer`]:
 ユーザーは、`from_pretrained` 関数を使用してモデルをロードできます：
 
 ```py
->>> from transformers import AutoModel
+>>> from transformers_4573 import AutoModel
 
 >>> model = AutoModel.from_pretrained("your_username/my-awesome-model")
 ```

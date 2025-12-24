@@ -56,7 +56,7 @@ Blender チャットボット モデルは、[Recipes for building an open-domai
 モデルの使用例を次に示します。
 
 ```python
->>> from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
+>>> from transformers_4573 import BlenderbotTokenizer, BlenderbotForConditionalGeneration
 
 >>> mname = "facebook/blenderbot-400M-distill"
 >>> model = BlenderbotForConditionalGeneration.from_pretrained(mname)

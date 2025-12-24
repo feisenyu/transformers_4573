@@ -92,7 +92,7 @@ class CohereConfig(PreTrainedConfig):
             Whether to use query-key normalization in the attention
 
     ```python
-    >>> from transformers import CohereModel, CohereConfig
+    >>> from transformers_4573 import CohereModel, CohereConfig
 
     >>> # Initializing a Cohere model configuration
     >>> configuration = CohereConfig()

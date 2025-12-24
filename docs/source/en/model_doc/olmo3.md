@@ -39,7 +39,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="text-generation",
@@ -57,7 +57,7 @@ print(result)
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "allenai/TBA"
@@ -93,7 +93,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 
 #pip install torchao
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
 
 torchao_config = TorchAoConfig(
     "int4_weight_only",
@@ -123,7 +123,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 - Load specific intermediate checkpoints by adding the `revision` parameter to [`~PreTrainedModel.from_pretrained`].
 
     ```py
-    from transformers import AutoModelForCausalLM
+    from transformers_4573 import AutoModelForCausalLM
 
     model = AutoModelForCausalLM.from_pretrained("allenai/TBA", revision="stage1-step140000-tokens294B")
     ```

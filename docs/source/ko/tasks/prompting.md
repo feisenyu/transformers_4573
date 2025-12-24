@@ -55,7 +55,7 @@ Falcon, LLaMA 등의 대규모 언어 모델은 사전 훈련된 트랜스포머
 디코더 전용 모델로 추론을 실행하려면 `text-generation` 파이프라인을 사용하세요:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 >>> import torch
 
 >>> torch.manual_seed(0) # doctest: +IGNORE_RESULT
@@ -96,7 +96,7 @@ pip install -q transformers accelerate
 다음으로, 적절한 파이프라인("text-generation")을 사용하여 모델을 로드하겠습니다:
 
 ```python
->>> from transformers import pipeline, AutoTokenizer
+>>> from transformers_4573 import pipeline, AutoTokenizer
 >>> import torch
 
 >>> torch.manual_seed(0) # doctest: +IGNORE_RESULT

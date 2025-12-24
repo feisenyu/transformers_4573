@@ -17,8 +17,8 @@ import inspect
 import tempfile
 import unittest
 
-from transformers import RobertaPreLayerNormConfig, is_torch_available
-from transformers.testing_utils import TestCasePlus, require_torch, slow, torch_device
+from transformers_4573 import RobertaPreLayerNormConfig, is_torch_available
+from transformers_4573.testing_utils import TestCasePlus, require_torch, slow, torch_device
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -29,7 +29,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         DataCollatorWithFlattening,
         RobertaPreLayerNormForCausalLM,
         RobertaPreLayerNormForMaskedLM,
@@ -39,7 +39,7 @@ if is_torch_available():
         RobertaPreLayerNormForTokenClassification,
         RobertaPreLayerNormModel,
     )
-    from transformers.models.roberta_prelayernorm.modeling_roberta_prelayernorm import RobertaPreLayerNormEmbeddings
+    from transformers_4573.models.roberta_prelayernorm.modeling_roberta_prelayernorm import RobertaPreLayerNormEmbeddings
 
 
 # Copied from tests.models.roberta.test_modeling_roberta.RobertaModelTester with Roberta->RobertaPreLayerNorm

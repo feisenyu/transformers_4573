@@ -3,9 +3,9 @@ from collections import Counter
 import datasets
 
 import transformers
-from transformers.convert_slow_tokenizer import SLOW_TO_FAST_CONVERTERS
-from transformers.tokenization_utils_base import PreTrainedTokenizerBase
-from transformers.utils import logging
+from transformers_4573.convert_slow_tokenizer import SLOW_TO_FAST_CONVERTERS
+from transformers_4573.tokenization_utils_base import PreTrainedTokenizerBase
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

@@ -81,7 +81,7 @@ class MarianConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import MarianModel, MarianConfig
+    >>> from transformers_4573 import MarianModel, MarianConfig
 
     >>> # Initializing a Marian Helsinki-NLP/opus-mt-en-de style configuration
     >>> configuration = MarianConfig()

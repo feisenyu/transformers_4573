@@ -38,7 +38,7 @@ The example below demonstrates how to classify an image with [`Pipeline`] or the
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="image-classification",
@@ -56,7 +56,7 @@ pipeline("https://huggingface.co/datasets/huggingface/documentation-images/resol
 import torch
 import requests
 from PIL import Image
-from transformers import AutoModelForImageClassification, AutoImageProcessor
+from transformers_4573 import AutoModelForImageClassification, AutoImageProcessor
 
 image_processor = AutoImageProcessor.from_pretrained(
     "microsoft/dit-base-finetuned-rvlcdip",
@@ -87,7 +87,7 @@ print(f"The predicted class label is: {predicted_class_label}")
 - The pretrained DiT weights can be loaded in a [BEiT] model with a modeling head to predict visual tokens.
 
    ```py
-   from transformers import BeitForMaskedImageModeling
+   from transformers_4573 import BeitForMaskedImageModeling
 
    model = BeitForMaskedImageModeling.from_pretraining("microsoft/dit-base")
    ```

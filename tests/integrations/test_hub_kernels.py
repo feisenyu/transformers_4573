@@ -2,7 +2,7 @@ import os
 import unittest
 from unittest.mock import patch
 
-from transformers.testing_utils import require_kernels
+from transformers_4573.testing_utils import require_kernels
 
 
 @require_kernels
@@ -15,7 +15,7 @@ class HubKernelsTests(unittest.TestCase):
             # Re-import to ensure the environment variable takes effect
             import importlib
 
-            from transformers.integrations import hub_kernels
+            from transformers_4573.integrations import hub_kernels
 
             importlib.reload(hub_kernels)
 
@@ -32,7 +32,7 @@ class HubKernelsTests(unittest.TestCase):
             # Re-import to ensure the environment variable change takes effect
             import importlib
 
-            from transformers.integrations import hub_kernels
+            from transformers_4573.integrations import hub_kernels
 
             importlib.reload(hub_kernels)
 
@@ -47,7 +47,7 @@ class HubKernelsTests(unittest.TestCase):
             # Re-import to ensure the environment variable takes effect
             import importlib
 
-            from transformers.integrations import hub_kernels
+            from transformers_4573.integrations import hub_kernels
 
             importlib.reload(hub_kernels)
 
@@ -64,7 +64,7 @@ class HubKernelsTests(unittest.TestCase):
             # Re-import to ensure the environment variable takes effect
             import importlib
 
-            from transformers.integrations import hub_kernels
+            from transformers_4573.integrations import hub_kernels
 
             importlib.reload(hub_kernels)
 
@@ -92,7 +92,7 @@ class HubKernelsTests(unittest.TestCase):
             # Re-import to ensure the environment variable change takes effect
             import importlib
 
-            from transformers.integrations import hub_kernels
+            from transformers_4573.integrations import hub_kernels
 
             importlib.reload(hub_kernels)
 
@@ -111,7 +111,7 @@ class HubKernelsTests(unittest.TestCase):
             # Re-import to ensure the environment variable change takes effect
             import importlib
 
-            from transformers.integrations import hub_kernels
+            from transformers_4573.integrations import hub_kernels
 
             importlib.reload(hub_kernels)
 

@@ -20,7 +20,7 @@ from typing import Literal, Optional
 import torch
 from einops import rearrange
 
-from transformers import (
+from transformers_4573 import (
     AutoModel,
     AutoTokenizer,
     GenerationConfig,

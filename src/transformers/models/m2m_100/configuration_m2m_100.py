@@ -78,7 +78,7 @@ class M2M100Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import M2M100Config, M2M100Model
+    >>> from transformers_4573 import M2M100Config, M2M100Model
 
     >>> # Initializing a M2M100 facebook/m2m100_418M style configuration
     >>> configuration = M2M100Config()

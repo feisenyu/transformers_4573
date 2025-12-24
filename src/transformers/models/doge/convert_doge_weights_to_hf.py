@@ -6,7 +6,7 @@ import re
 import torch
 from safetensors.torch import load_file
 
-from transformers import DogeConfig, DogeForCausalLM
+from transformers_4573 import DogeConfig, DogeForCausalLM
 
 
 # fmt: off

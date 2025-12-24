@@ -41,7 +41,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 generator = pipeline(task="text-generation", model="openai-community/openai-gpt", device=0)
 output = generator("The future of AI is", max_length=50, do_sample=True)
@@ -52,7 +52,7 @@ print(output[0]["generated_text"])
 <hfoption id="AutoModel">
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("openai-community/openai-gpt")
 model = AutoModelForCausalLM.from_pretrained("openai-community/openai-gpt")

@@ -16,7 +16,7 @@
 
 from typing import Optional
 
-from transformers.utils import auto_docstring, logging
+from transformers_4573.utils import auto_docstring, logging
 
 from ...modeling_rope_utils import RopeParameters
 from ..llama.configuration_llama import LlamaConfig
@@ -98,7 +98,7 @@ class ArceeConfig(LlamaConfig):
             The attention head dimension. If None, it will default to hidden_size // num_attention_heads
 
     ```python
-    >>> from transformers import ArceeModel, ArceeConfig
+    >>> from transformers_4573 import ArceeModel, ArceeConfig
 
     >>> # Initializing an Arcee AFM-4.5B-Base style configuration
     >>> configuration = ArceeConfig()

@@ -78,7 +78,7 @@ class GlmConfig(PreTrainedConfig):
         attention_bias (`bool`, defaults to `False`, *optional*, defaults to `True`):
             Whether to use a bias in the query, key, value and output projection layers during self-attention.
     ```python
-    >>> from transformers import GlmModel, GlmConfig
+    >>> from transformers_4573 import GlmModel, GlmConfig
     >>> # Initializing a Glm glm-4-9b-chat style configuration
     >>> configuration = GlmConfig()
     >>> # Initializing a model from the glm-4-9b-chat style configuration

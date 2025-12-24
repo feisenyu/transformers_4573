@@ -18,9 +18,9 @@ import unittest
 
 import pytest
 
-from transformers import StaticCache, is_torch_available
-from transformers.models.auto.configuration_auto import AutoConfig
-from transformers.testing_utils import (
+from transformers_4573 import StaticCache, is_torch_available
+from transformers_4573.models.auto.configuration_auto import AutoConfig
+from transformers_4573.testing_utils import (
     Expectations,
     require_torch,
     slow,
@@ -33,7 +33,7 @@ from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoTokenizer,
         Phi3ForCausalLM,
         Phi3Model,
@@ -321,13 +321,13 @@ class Phi3IntegrationTest(unittest.TestCase):
     @pytest.mark.torch_export_test
     @slow
     def test_export_static_cache(self):
-        from transformers.pytorch_utils import is_torch_greater_or_equal_than_2_4
+        from transformers_4573.pytorch_utils import is_torch_greater_or_equal_than_2_4
 
         if not is_torch_greater_or_equal_than_2_4:
             self.skipTest(reason="This test requires torch >= 2.4 to run.")
 
-        from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig
-        from transformers.integrations.executorch import (
+        from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, GenerationConfig
+        from transformers_4573.integrations.executorch import (
             TorchExportableModuleWithStaticCache,
         )
 
@@ -386,7 +386,7 @@ class Phi3IntegrationTest(unittest.TestCase):
         max_new_tokens = max_generation_length - prompt_token_ids.shape[-1]
 
         # Static Cache + export
-        from transformers.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
+        from transformers_4573.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
 
         exportable_module = TorchExportableModuleForDecoderOnlyLM(model)
         exported_program = exportable_module.export(

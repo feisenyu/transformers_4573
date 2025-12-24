@@ -43,7 +43,7 @@ The example below demonstrates how to generate text with [`Pipeline`] or the [`A
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -60,7 +60,7 @@ pipeline("LLMs generate text through a process known as", max_new_tokens=50)
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
 model = AutoModelForCausalLM.from_pretrained(
@@ -94,7 +94,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 ```py
 #!pip install bitsandbytes
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -122,7 +122,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 Use the [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139) to better understand what tokens the model can and cannot attend to.
 
 ```py
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("google/gemma-2b")
 visualizer("LLMs generate text through a process known as")
@@ -138,7 +138,7 @@ visualizer("LLMs generate text through a process known as")
 
    ```py
    import torch
-   from transformers import AutoTokenizer, AutoModelForCausalLM, DynamicCache
+   from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, DynamicCache
 
    tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
    model = AutoModelForCausalLM.from_pretrained(

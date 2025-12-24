@@ -1338,7 +1338,7 @@ class Qwen3VLForConditionalGeneration(Qwen3VLPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, Qwen3VLForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Qwen3VLForConditionalGeneration
 
         >>> model = Qwen3VLForConditionalGeneration.from_pretrained("Qwen/Qwen3-VL-8B-Instruct")
         >>> processor = AutoProcessor.from_pretrained("Qwen/Qwen3-VL-8B-Instruct")

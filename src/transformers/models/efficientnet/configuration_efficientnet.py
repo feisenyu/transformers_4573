@@ -79,7 +79,7 @@ class EfficientNetConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import EfficientNetConfig, EfficientNetModel
+    >>> from transformers_4573 import EfficientNetConfig, EfficientNetModel
 
     >>> # Initializing a EfficientNet efficientnet-b7 style configuration
     >>> configuration = EfficientNetConfig()

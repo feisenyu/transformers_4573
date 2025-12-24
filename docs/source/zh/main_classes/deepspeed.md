@@ -1501,7 +1501,7 @@ bf16具有与fp32相同的动态范围，因此不需要损失缩放。
 如果您至少保存了一个检查点，并且想要使用最新的一个，可以按照以下步骤操作：
 
 ```python
-from transformers.trainer_utils import get_last_checkpoint
+from transformers_4573.trainer_utils import get_last_checkpoint
 from deepspeed.utils.zero_to_fp32 import load_state_dict_from_zero_checkpoint
 
 checkpoint_dir = get_last_checkpoint(trainer.args.output_dir)
@@ -1590,7 +1590,7 @@ ZeRO-Infinity进一步扩展了ZeRO-3，以支持NVMe内存和其他速度和可
 DeepSpeed/ZeRO-3可以处理参数量达到数万亿的模型，这些模型可能无法适应现有的内存。在这种情况下，如果您还是希望初始化更快地发生，可以使用*deepspeed.zero.Init()*上下文管理器（也是一个函数装饰器）来初始化模型，如下所示：
 
 ```python
-from transformers import T5ForConditionalGeneration, T5Config
+from transformers_4573 import T5ForConditionalGeneration, T5Config
 import deepspeed
 
 with deepspeed.zero.Init():
@@ -1603,7 +1603,7 @@ with deepspeed.zero.Init():
 如果您想使用预训练模型，`model_class.from_pretrained`将在`is_deepspeed_zero3_enabled()`返回`True`的情况下激活此功能，目前这是通过传递的DeepSpeed配置文件中的ZeRO-3配置部分设置的。因此，在调用`from_pretrained`之前，您必须创建**TrainingArguments**对象。以下是可能的顺序示例：
 
 ```python
-from transformers import AutoModel, Trainer, TrainingArguments
+from transformers_4573 import AutoModel, Trainer, TrainingArguments
 
 training_args = TrainingArguments(..., deepspeed=ds_config)
 model = AutoModel.from_pretrained("google-t5/t5-small")
@@ -1677,7 +1677,7 @@ deepspeed examples/pytorch/translation/run_translation.py \
 让我们估计在单个GPU上微调"bigscience/T0_3B"所需的内存：
 
 ```bash
-$ python -c 'from transformers import AutoModel; \
+$ python -c 'from transformers_4573 import AutoModel; \
 from deepspeed.runtime.zero.stage3 import estimate_zero3_model_states_mem_needs_all_live; \
 model = AutoModel.from_pretrained("bigscience/T0_3B"); \
 estimate_zero3_model_states_mem_needs_all_live(model, num_gpus_per_node=1, num_nodes=1)'
@@ -1703,7 +1703,7 @@ SW: Model with 2783M total params, 65M largest layer params.
 例如，让我们重复相同的操作，使用2个GPU：
 
 ```bash
-$ python -c 'from transformers import AutoModel; \
+$ python -c 'from transformers_4573 import AutoModel; \
 from deepspeed.runtime.zero.stage3 import estimate_zero3_model_states_mem_needs_all_live; \
 model = AutoModel.from_pretrained("bigscience/T0_3B"); \
 estimate_zero3_model_states_mem_needs_all_live(model, num_gpus_per_node=2, num_nodes=1)'
@@ -1829,8 +1829,8 @@ SW: Model with 2783M total params, 65M largest layer params.
 以预训练模型为例:
 
 ```python
-from transformers.integrations import HfDeepSpeedConfig
-from transformers import AutoModel
+from transformers_4573.integrations import HfDeepSpeedConfig
+from transformers_4573 import AutoModel
 import deepspeed
 
 ds_config = {...}  # deepspeed config object or path to the file
@@ -1843,8 +1843,8 @@ engine = deepspeed.initialize(model=model, config_params=ds_config, ...)
 或者以非预训练模型为例：
 
 ```python
-from transformers.integrations import HfDeepSpeedConfig
-from transformers import AutoModel, AutoConfig
+from transformers_4573.integrations import HfDeepSpeedConfig
+from transformers_4573 import AutoModel, AutoConfig
 import deepspeed
 
 ds_config = {...}  # deepspeed config object or path to the file
@@ -1912,8 +1912,8 @@ engine = deepspeed.initialize(model=model, config_params=ds_config, ...)
 # python -m torch.distributed.run --nproc_per_node=2 t0.py
 
 
-from transformers import AutoTokenizer, AutoConfig, AutoModelForSeq2SeqLM
-from transformers.integrations import HfDeepSpeedConfig
+from transformers_4573 import AutoTokenizer, AutoConfig, AutoModelForSeq2SeqLM
+from transformers_4573.integrations import HfDeepSpeedConfig
 import deepspeed
 import os
 import torch

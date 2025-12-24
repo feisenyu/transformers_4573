@@ -70,7 +70,7 @@ class SwiftFormerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SwiftFormerConfig, SwiftFormerModel
+    >>> from transformers_4573 import SwiftFormerConfig, SwiftFormerModel
 
     >>> # Initializing a SwiftFormer swiftformer-base-patch16-224 style configuration
     >>> configuration = SwiftFormerConfig()

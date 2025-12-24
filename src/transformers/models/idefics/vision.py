@@ -66,7 +66,7 @@ class IdeficsVisionModelOutput(ModelOutput):
     attentions: Optional[tuple[torch.FloatTensor, ...]] = None
 
 
-# Adapted from transformers.models.clip.modeling_clip.CLIPVisionEmbeddings
+# Adapted from transformers_4573.models.clip.modeling_clip.CLIPVisionEmbeddings
 class IdeficsVisionEmbeddings(nn.Module):
     def __init__(self, config: IdeficsVisionConfig):
         super().__init__()
@@ -166,7 +166,7 @@ class IdeficsVisionEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.siglip.modeling_siglip.eager_attention_forward
+# Copied from transformers_4573.models.siglip.modeling_siglip.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -263,7 +263,7 @@ class IdeficsVisionAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.clip.modeling_clip.CLIPMLP with CLIP->IdeficsVision
+# Copied from transformers_4573.models.clip.modeling_clip.CLIPMLP with CLIP->IdeficsVision
 class IdeficsVisionMLP(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -279,7 +279,7 @@ class IdeficsVisionMLP(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.altclip.modeling_altclip.AltCLIPEncoderLayer with AltCLIP->IdeficsVision
+# Copied from transformers_4573.models.altclip.modeling_altclip.AltCLIPEncoderLayer with AltCLIP->IdeficsVision
 class IdeficsVisionEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: IdeficsVisionConfig):
         super().__init__()
@@ -330,7 +330,7 @@ class IdeficsVisionEncoderLayer(GradientCheckpointingLayer):
         return outputs
 
 
-# Copied from transformers.models.altclip.modeling_altclip.AltCLIPEncoder with AltCLIP->IdeficsVision
+# Copied from transformers_4573.models.altclip.modeling_altclip.AltCLIPEncoder with AltCLIP->IdeficsVision
 class IdeficsVisionEncoder(nn.Module):
     """
     Transformer encoder consisting of `config.num_hidden_layers` self attention layers. Each layer is a
@@ -418,7 +418,7 @@ class IdeficsVisionEncoder(nn.Module):
         )
 
 
-# Adapted from transformers.models.clip.modeling_clip.CLIPVisionTransformer
+# Adapted from transformers_4573.models.clip.modeling_clip.CLIPVisionTransformer
 class IdeficsVisionTransformer(nn.Module):
     def __init__(self, config: IdeficsVisionConfig):
         super().__init__()
@@ -430,7 +430,7 @@ class IdeficsVisionTransformer(nn.Module):
         self.encoder = IdeficsVisionEncoder(config)
         self.post_layernorm = nn.LayerNorm(embed_dim, eps=config.layer_norm_eps)
 
-    # Adapted from transformers.models.clip.modeling_clip.CLIPVisionTransformer.forward
+    # Adapted from transformers_4573.models.clip.modeling_clip.CLIPVisionTransformer.forward
     def forward(
         self,
         pixel_values: Optional[torch.FloatTensor] = None,

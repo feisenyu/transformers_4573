@@ -16,13 +16,13 @@
 import copy
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     Qwen3VLConfig,
     Qwen3VLForConditionalGeneration,
     Qwen3VLModel,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_torch,
     torch_device,
 )

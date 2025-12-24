@@ -82,7 +82,7 @@ class BartConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BartConfig, BartModel
+    >>> from transformers_4573 import BartConfig, BartModel
 
     >>> # Initializing a BART facebook/bart-large style configuration
     >>> configuration = BartConfig()

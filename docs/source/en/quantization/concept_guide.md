@@ -145,7 +145,7 @@ The example below demonstrates loading a 8B parameter model and quantizing it to
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 model_id = "meta-llama/Llama-3.1-8B-Instruct"
 

@@ -43,7 +43,7 @@ This is a machine translation model that supports many low-resource languages, a
 One can directly use MADLAD-400 weights without finetuning the model:
 
 ```python
->>> from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 >>> model = AutoModelForSeq2SeqLM.from_pretrained("google/madlad400-3b-mt")
 >>> tokenizer = AutoTokenizer.from_pretrained("google/madlad400-3b-mt")

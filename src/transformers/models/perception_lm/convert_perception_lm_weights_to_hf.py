@@ -22,34 +22,34 @@ import torch
 from timm.models.eva import checkpoint_filter_fn
 from tokenizers import AddedToken, processors
 
-from transformers import (
+from transformers_4573 import (
     GenerationConfig,
     LlamaConfig,
     LlamaTokenizer,
     PreTrainedTokenizerFast,
 )
-from transformers.convert_slow_tokenizer import TikTokenConverter
-from transformers.models.auto.modeling_auto import AutoModel
-from transformers.models.perception_lm.configuration_perception_lm import (
+from transformers_4573.convert_slow_tokenizer import TikTokenConverter
+from transformers_4573.models.auto.modeling_auto import AutoModel
+from transformers_4573.models.perception_lm.configuration_perception_lm import (
     PerceptionLMConfig,
 )
-from transformers.models.perception_lm.image_processing_perception_lm_fast import (
+from transformers_4573.models.perception_lm.image_processing_perception_lm_fast import (
     PerceptionLMImageProcessorFast,
 )
-from transformers.models.perception_lm.modeling_perception_lm import (
+from transformers_4573.models.perception_lm.modeling_perception_lm import (
     PerceptionLMForConditionalGeneration,
 )
-from transformers.models.perception_lm.processing_perception_lm import (
+from transformers_4573.models.perception_lm.processing_perception_lm import (
     PerceptionLMProcessor,
 )
-from transformers.models.perception_lm.video_processing_perception_lm import (
+from transformers_4573.models.perception_lm.video_processing_perception_lm import (
     PerceptionLMVideoProcessor,
 )
-from transformers.models.timm_wrapper.configuration_timm_wrapper import TimmWrapperConfig
+from transformers_4573.models.timm_wrapper.configuration_timm_wrapper import TimmWrapperConfig
 
 
 try:
-    from transformers import LlamaTokenizerFast
+    from transformers_4573 import LlamaTokenizerFast
 except ImportError as e:
     warnings.warn(e)
     warnings.warn(
@@ -68,7 +68,7 @@ python src/transformers/models/perception_lm/convert_perception_lm_weights_to_hf
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import LlamaForCausalLM, LlamaTokenizer
+from transformers_4573 import LlamaForCausalLM, LlamaTokenizer
 
 model = LlamaForCausalLM.from_pretrained("/output/path")
 tokenizer = LlamaTokenizer.from_pretrained("/output/path")

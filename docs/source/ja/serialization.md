@@ -89,7 +89,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> from optimum.onnxruntime import ORTModelForQuestionAnswering
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert_base_uncased_squad_onnx")
@@ -111,12 +111,12 @@ CLIの代わりに、🤗 TransformersモデルをONNXにプログラム的に�
 
 ```python
 >>> from optimum.onnxruntime import ORTModelForSequenceClassification
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> model_checkpoint = "distilbert_base_uncased_squad"
 >>> save_directory = "onnx/"
 
->>> # Load a model from transformers and export it to ONNX
+>>> # Load a model from transformers_4573 and export it to ONNX
 >>> ort_model = ORTModelForSequenceClassification.from_pretrained(model_checkpoint, export=True)
 >>> tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 

@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import ChameleonProcessor
-from transformers.testing_utils import get_tests_dir
+from transformers_4573 import ChameleonProcessor
+from transformers_4573.testing_utils import get_tests_dir
 
 from ...test_processing_common import ProcessorTesterMixin
 

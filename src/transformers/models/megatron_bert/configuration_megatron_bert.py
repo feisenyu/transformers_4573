@@ -69,7 +69,7 @@ class MegatronBertConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import MegatronBertConfig, MegatronBertModel
+    >>> from transformers_4573 import MegatronBertConfig, MegatronBertModel
 
     >>> # Initializing a MEGATRON_BERT google-bert/bert-base-uncased style configuration
     >>> configuration = MegatronBertConfig()

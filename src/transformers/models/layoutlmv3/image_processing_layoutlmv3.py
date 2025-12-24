@@ -198,7 +198,7 @@ class LayoutLMv3ImageProcessor(BaseImageProcessor):
         self.ocr_lang = ocr_lang
         self.tesseract_config = tesseract_config
 
-    # Copied from transformers.models.vit.image_processing_vit.ViTImageProcessor.resize
+    # Copied from transformers_4573.models.vit.image_processing_vit.ViTImageProcessor.resize
     def resize(
         self,
         image: np.ndarray,

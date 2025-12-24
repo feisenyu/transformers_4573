@@ -36,8 +36,8 @@ import torch
 from flax import traverse_util
 from t5x import checkpoints
 
-from transformers import MT5Config, UMT5EncoderModel, UMT5ForConditionalGeneration
-from transformers.utils import logging
+from transformers_4573 import MT5Config, UMT5EncoderModel, UMT5ForConditionalGeneration
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

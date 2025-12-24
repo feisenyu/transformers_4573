@@ -45,7 +45,7 @@ command line.
 <hfoption id="Pipeline">
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="text-generation",
@@ -65,7 +65,7 @@ print(response)
 
 ```python
 # pip install accelerate
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 model_id = "google/vaultgemma-1b"
 tokenizer = AutoTokenizer.from_pretrained(model_id)

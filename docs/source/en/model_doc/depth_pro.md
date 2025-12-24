@@ -46,7 +46,7 @@ The DepthPro model processes an input image by first downsampling it at multiple
 >>> import requests
 >>> from PIL import Image
 >>> import torch
->>> from transformers import DepthProImageProcessorFast, DepthProForDepthEstimation
+>>> from transformers_4573 import DepthProImageProcessorFast, DepthProForDepthEstimation
 from accelerate import Accelerator
 
 >>> device = Accelerator().device
@@ -106,14 +106,14 @@ The `use_fov_model` parameter in `DepthProConfig` controls whether **FOV predict
 The pretrained model at checkpoint `apple/DepthPro-hf` uses the FOV encoder. To use the pretrained-model without FOV encoder, set `use_fov_model=False` when loading the model, which saves computation.
 
 ```py
->>> from transformers import DepthProForDepthEstimation
+>>> from transformers_4573 import DepthProForDepthEstimation
 >>> model = DepthProForDepthEstimation.from_pretrained("apple/DepthPro-hf", use_fov_model=False)
 ```
 
 To instantiate a new model with FOV encoder, set `use_fov_model=True` in the config.
 
 ```py
->>> from transformers import DepthProConfig, DepthProForDepthEstimation
+>>> from transformers_4573 import DepthProConfig, DepthProForDepthEstimation
 >>> config = DepthProConfig(use_fov_model=True)
 >>> model = DepthProForDepthEstimation(config)
 ```
@@ -121,7 +121,7 @@ To instantiate a new model with FOV encoder, set `use_fov_model=True` in the con
 Or set `use_fov_model=True` when initializing the model, which overrides the value in config.
 
 ```py
->>> from transformers import DepthProConfig, DepthProForDepthEstimation
+>>> from transformers_4573 import DepthProConfig, DepthProForDepthEstimation
 >>> config = DepthProConfig()
 >>> model = DepthProForDepthEstimation(config, use_fov_model=True)
 ```
@@ -138,7 +138,7 @@ SDPA is used by default for `torch>=2.1.1` when an implementation is available, 
 `attn_implementation="sdpa"` in `from_pretrained()` to explicitly request SDPA to be used.
 
 ```py
-from transformers import DepthProForDepthEstimation
+from transformers_4573 import DepthProForDepthEstimation
 model = DepthProForDepthEstimation.from_pretrained("apple/DepthPro-hf", attn_implementation="sdpa", dtype=torch.float16)
 ```
 

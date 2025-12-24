@@ -33,7 +33,7 @@ Model usage
 
 ```py
 import torch
-from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
+from transformers_4573 import Qwen3VLForConditionalGeneration, AutoProcessor
 
 model = Qwen3VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen3-VL",

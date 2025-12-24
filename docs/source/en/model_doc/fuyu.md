@@ -63,7 +63,7 @@ tar -xvf 8b_base_model_release.tar
 Then, model can be loaded via:
 
 ```py
-from transformers import FuyuConfig, FuyuForCausalLM
+from transformers_4573 import FuyuConfig, FuyuForCausalLM
 model_config = FuyuConfig()
 model = FuyuForCausalLM(model_config).from_pretrained('/output/path')
 ```
@@ -73,9 +73,9 @@ A processor requires an image_processor and a tokenizer. Hence, inputs can be lo
 
 ```py
 from PIL import Image
-from transformers import AutoTokenizer
-from transformers.models.fuyu.processing_fuyu import FuyuProcessor
-from transformers.models.fuyu.image_processing_fuyu_fast import FuyuImageProcessorFast
+from transformers_4573 import AutoTokenizer
+from transformers_4573.models.fuyu.processing_fuyu import FuyuProcessor
+from transformers_4573.models.fuyu.image_processing_fuyu_fast import FuyuImageProcessorFast
 
 
 tokenizer = AutoTokenizer.from_pretrained('adept-hf-collab/fuyu-8b')

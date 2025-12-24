@@ -32,12 +32,12 @@ going forward and will greatly reduce the maintenance cost of models. We are wor
 the Jax ecosystem still (such as MaxText) in order to see how we can remain compatible with their 
 tool while keeping `torch` as the only backend for now.
 
-Linked PR: https://github.com/huggingface/transformers/pull/40760
+Linked PR: https://github.com/huggingface/transformers_4573/pull/40760
 
 ### Dynamic weight loading
 
-We introduce a new weight loading API in `transformers`, which significantly improves on the previous API. This
-weight loading API is designed to apply operations to the checkpoints loaded by transformers.
+We introduce a new weight loading API in `transformers_4573`, which significantly improves on the previous API. This
+weight loading API is designed to apply operations to the checkpoints loaded by transformers_4573.
 
 Instead of loading the checkpoint exactly as it is serialized within the model, these operations can reshape, merge,
 and split the layers according to how they're defined in this new API. These operations are often a necessity when
@@ -79,7 +79,7 @@ This results in several improvements:
 
 While this is being implemented, expect varying levels of support across different release candidates.
 
-Linked PR: https://github.com/huggingface/transformers/pull/41580
+Linked PR: https://github.com/huggingface/transformers_4573/pull/41580
 
 ## Tokenization
 
@@ -88,7 +88,7 @@ Just as we moved towards a single backend library for model definition, we want 
 Defining a new tokenizer object should be as simple as this:
 
 ```python
-from transformers import TokenizersBackend, generate_merges
+from transformers_4573 import TokenizersBackend, generate_merges
 from tokenizers import pre_tokenizers, Tokenizer
 from tokenizers.model import BPE
 
@@ -129,7 +129,7 @@ The above is the main motivation towards refactoring tokenization: we want token
 
 ### Backend Architecture Changes: moving away from the slow/fast tokenizer separation
 
-Up to now, transformers maintained two parallel implementations for many tokenizers:
+Up to now, transformers_4573 maintained two parallel implementations for many tokenizers:
 - "Slow" tokenizers (`tokenization_<model>.py`) - Python-based implementations, often using [SentencePiece](https://github.com/google/sentencepiece) as the backend.
 - "Fast" tokenizers (`tokenization_<model>_fast.py`) - Rust-based implementations using the 🤗 [tokenizers](https://github.com/huggingface/tokenizers) library.
 
@@ -146,7 +146,7 @@ In v5, we consolidate to a single tokenizer file per model: `tokenization_<model
 3. **PythonBackend**: a Python implementations of the features provided by `tokenizers`. Basically allows adding tokens.
 4. **MistralCommonBackend**: relies on `MistralCommon`'s tokenization library. (Previously known as the `MistralCommonTokenizer`)
 
-The `AutoTokenizer` automatically selects the appropriate backend based on available files and dependencies. This is transparent, you continue to use `AutoTokenizer.from_pretrained()` as before. This allows transformers to be future-proof and modular to easily support future backends.
+The `AutoTokenizer` automatically selects the appropriate backend based on available files and dependencies. This is transparent, you continue to use `AutoTokenizer.from_pretrained()` as before. This allows transformers_4573 to be future-proof and modular to easily support future backends.
 
 ### Defining a tokenizers outside of the existing backends
 
@@ -175,7 +175,7 @@ This is useful if the model requires specific token ordering or special split re
 Starting with v5, we now enable initializing blank, untrained `tokenizers`-backed tokenizers:
 
 ```py
-from transformers import LlamaTokenizer
+from transformers_4573 import LlamaTokenizer
 
 tokenizer = LlamaTokenizer()
 ```
@@ -185,7 +185,7 @@ This tokenizer will therefore follow the definition of the `LlamaTokenizer` as d
 These tokenizers can also be initialized from vocab and merges (if necessary), like the previous "slow" tokenizers:
 
 ```py
-from transformers import LlamaTokenizer
+from transformers_4573 import LlamaTokenizer
 
 vocab = {"<unk>": 0, "<s>": 1, "</s>": 2, "hello": 3, "world": 4}
 merges = [("h", "e"), ("l", "l"), ("o", " ")]
@@ -204,7 +204,7 @@ Note: Loading from file paths with `vocab="<path_to_a_file>"`'s primary goal is 
 The `batch_decode` and `decode` methods have been unified to reflect behavior of the `encode` method. Both single and batch decoding now use the same `decode` method. See an example of the new behavior below:
 
 ```python
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 tokenizer = AutoTokenizer.from_pretrained("t5-small") 
 inputs = ["hey how are you?", "fine"]
 tokenizer.decode(tokenizer.encode(inputs))
@@ -332,7 +332,7 @@ labels = tokenizer(text_target=tgt_texts, ...)
 
 ### PEFT + MoE:
 
-Because we are switching from the naive MOE (`nn.ModuleList` for experts) we currently have an issue with MoEs that have adapters. For more details see https://github.com/huggingface/transformers/issues/42491#issuecomment-3591485649. 
+Because we are switching from the naive MOE (`nn.ModuleList` for experts) we currently have an issue with MoEs that have adapters. For more details see https://github.com/huggingface/transformers_4573/issues/42491#issuecomment-3591485649. 
 
 _We aim for this to be fixed and released in a following release candidate in the week that follows RC0._
 
@@ -345,13 +345,13 @@ _We aim for this to be fixed and released in a following release candidate in th
 
 ### Remote code incompatibility
 
-A lot of paths were removed and reworked; paths like `transformers.tokenization_utils` and `transformers.tokenization_utils_fast`, which no longer exist.
-These now redirect to `transformers.tokenization_utils_sentencepiece` and `transformers.tokenization_utils_tokenizers` respectively; please update imports accordingly.
+A lot of paths were removed and reworked; paths like `transformers_4573.tokenization_utils` and `transformers_4573.tokenization_utils_fast`, which no longer exist.
+These now redirect to `transformers_4573.tokenization_utils_sentencepiece` and `transformers_4573.tokenization_utils_tokenizers` respectively; please update imports accordingly.
 
 _We aim for this to be fixed and released in a following release candidate in the week that follows RC0._
 
 ### Custom pretrained models:
-For anyone inheriting from a `transformers` `PreTrainedModel`, the weights are automatically initialized with the common scheme: 
+For anyone inheriting from a `transformers_4573` `PreTrainedModel`, the weights are automatically initialized with the common scheme: 
 ```python
 
     @torch.no_grad()
@@ -413,49 +413,49 @@ class CustomModel(Qwen3VLForConditionalGeneration):
         pass 
 
 ```
-There is a tracker for that here: https://github.com/huggingface/transformers/issues/42418.
+There is a tracker for that here: https://github.com/huggingface/transformers_4573/issues/42418.
 
 ## Library-wide changes with lesser impact
 
 ### Drop support for `safe_serialization=False`
 
-Safetensors is a simple format for storing tensors safely (as opposed to pickle) and that is still fast (zero-copy). It is the preferred file format to store transformers's weights. Prior to transformers `v5`, it was still possible to pass `safe_serialization=False` to fall back to torch's default (and unsafe) file format. This is no longer possible in `v5`. The `safe_serialization` parameter has been removed from all `save_pretrained` and `push_to_hub` methods.
+Safetensors is a simple format for storing tensors safely (as opposed to pickle) and that is still fast (zero-copy). It is the preferred file format to store transformers_4573's weights. Prior to transformers_4573 `v5`, it was still possible to pass `safe_serialization=False` to fall back to torch's default (and unsafe) file format. This is no longer possible in `v5`. The `safe_serialization` parameter has been removed from all `save_pretrained` and `push_to_hub` methods.
 
 If you really want to export weights to another file format, you must save the `model.state_dict()` by yourself.
 
-Linked PR: https://github.com/huggingface/transformers/issues/42556
+Linked PR: https://github.com/huggingface/transformers_4573/issues/42556
 
 ### 50GB default shard size
 
 The default shard size went up from `5GB` to `50GB`. Main benefit will be to avoid having tens or hundreds of weight files for large models. This change was made possible thanks to the Xet backend allowing us to efficiently serve very large files. Increasing default shard size was a decision that was only taken after *very careful considerations* around optimizations and load speed. Check out the linked PR for benchmark details.
 
-Linked PR: https://github.com/huggingface/transformers/issues/42556
+Linked PR: https://github.com/huggingface/transformers_4573/issues/42556
 
 ### `use_auth_token`
 
 The `use_auth_token` argument/parameter is deprecated in favor of `token` everywhere.
 You should be able to search and replace `use_auth_token` with `token` and get the same logic.
 
-Linked PR: https://github.com/huggingface/transformers/pull/41666
+Linked PR: https://github.com/huggingface/transformers_4573/pull/41666
 
 ### Attention-related features
 
 We decided to remove some features for the upcoming v5 as they are currently only supported in a few old models and no longer integrated in current model additions. It's recommended to stick to v4.x in case you need them. Following features are affected:
-- No more head masking, see [#41076](https://github.com/huggingface/transformers/pull/41076). This feature allowed to turn off certain heads during the attention calculation and only worked for eager.
-- No more relative positional biases in Bert-like models, see [#41170](https://github.com/huggingface/transformers/pull/41170). This feature was introduced to allow relative position scores within attention calculations (similar to T5). However, this feature is barely used in official models and a lot of complexity instead. It also only worked with eager.
-- No more head pruning, see [#41417](https://github.com/huggingface/transformers/pull/41417) by @gante. As the name suggests, it allowed to prune heads within your attention layers.
+- No more head masking, see [#41076](https://github.com/huggingface/transformers_4573/pull/41076). This feature allowed to turn off certain heads during the attention calculation and only worked for eager.
+- No more relative positional biases in Bert-like models, see [#41170](https://github.com/huggingface/transformers_4573/pull/41170). This feature was introduced to allow relative position scores within attention calculations (similar to T5). However, this feature is barely used in official models and a lot of complexity instead. It also only worked with eager.
+- No more head pruning, see [#41417](https://github.com/huggingface/transformers_4573/pull/41417) by @gante. As the name suggests, it allowed to prune heads within your attention layers.
 
 ### Updates to supported torch APIs
 
 We dropped support for two torch APIs:
-- `torchscript` in https://github.com/huggingface/transformers/pull/41688
-- `torch.fx` in https://github.com/huggingface/transformers/pull/41683
+- `torchscript` in https://github.com/huggingface/transformers_4573/pull/41688
+- `torch.fx` in https://github.com/huggingface/transformers_4573/pull/41683
 
 Those APIs were deprecated by the PyTorch team, and we're instead focusing on the supported APIs `dynamo` and `export`.
 
 ## Quantization changes
 
-We clean up the quantization API in transformers, and significantly refactor the weight loading as highlighted
+We clean up the quantization API in transformers_4573, and significantly refactor the weight loading as highlighted
 above.
 
 We drop support for two quantization arguments that have been deprecated for some time:
@@ -466,7 +466,7 @@ We remove them in favor of the `quantization_config` argument which is much more
 you would load a 4-bit bitsandbytes model using this argument:
 
 ```python
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_4bit=True)
 
@@ -480,9 +480,9 @@ model_4bit = AutoModelForCausalLM.from_pretrained(
 
 ## Configuration
 
-- Methods to init a nested config such as `from_xxx_config` are deleted. Configs can be init from the `__init__` method in the same way. See [#41314](https://github.com/huggingface/transformers/pull/41314).
-- It is no longer possible to load a config class from a URL file. Configs must be loaded from either a local path or a repo on the Hub. See [#42383](https://github.com/huggingface/transformers/pull/42383).
-- All parameters for configuring model's rotary embedding are now stored under `mode.rope_parameters`, including the `rope_theta` and `rope_type`. Model's `config.rope_parameters` is a simple dictionaty in most cases, and can also be a nested dict in special cases (i.e. Gemma3 and ModernBert) with different rope parameterization for each layer type. Trying to get `config.rope_theta` will throw an attribute error from now on. See [#39847](https://github.com/huggingface/transformers/pull/39847) and [#42255](https://github.com/huggingface/transformers/pull/42255)
+- Methods to init a nested config such as `from_xxx_config` are deleted. Configs can be init from the `__init__` method in the same way. See [#41314](https://github.com/huggingface/transformers_4573/pull/41314).
+- It is no longer possible to load a config class from a URL file. Configs must be loaded from either a local path or a repo on the Hub. See [#42383](https://github.com/huggingface/transformers_4573/pull/42383).
+- All parameters for configuring model's rotary embedding are now stored under `mode.rope_parameters`, including the `rope_theta` and `rope_type`. Model's `config.rope_parameters` is a simple dictionaty in most cases, and can also be a nested dict in special cases (i.e. Gemma3 and ModernBert) with different rope parameterization for each layer type. Trying to get `config.rope_theta` will throw an attribute error from now on. See [#39847](https://github.com/huggingface/transformers_4573/pull/39847) and [#42255](https://github.com/huggingface/transformers_4573/pull/42255)
 - Qwen-VL family configuration is in a nested format and trying to access keys directly will throw an error (e.g. `config.vocab_size`). Users are expected to access keys from their respective sub-configs (`config.text_config.vocab_size`).
 - Configurations of non-generative models (any model that doesn't call `model.generate()`) will no longer have a `generation_config` and `model.config.generation_config` will throw an attribute error.
 
@@ -502,28 +502,28 @@ This was inconvenient - it should return a `BatchEncoding` dict like `tokenizer.
 it for backward compatibility. The method now returns a `BatchEncoding`.
 
 Linked PRs: 
-- https://github.com/huggingface/transformers/issues/40938
-- https://github.com/huggingface/transformers/pull/40936
-- https://github.com/huggingface/transformers/pull/41626
+- https://github.com/huggingface/transformers_4573/issues/40938
+- https://github.com/huggingface/transformers_4573/pull/40936
+- https://github.com/huggingface/transformers_4573/pull/41626
 
 ### Processing classes
 
-- In processing classes each attribute will be serialized under `processor_config.json` as a nested dict, instead of serializing attributes in their own config files. Loading will be supported for all old format processors (https://github.com/huggingface/transformers/pull/41474)
-- `XXXFeatureExtractors` classes are completely removed in favor of `XXXImageProcessor` class for all vision models (https://github.com/huggingface/transformers/pull/41174)
-- Minor change: `XXXFastImageProcessorKwargs` is removed in favor of `XXXImageProcessorKwargs` which will be shared between fast and slow processors (https://github.com/huggingface/transformers/pull/40931)
+- In processing classes each attribute will be serialized under `processor_config.json` as a nested dict, instead of serializing attributes in their own config files. Loading will be supported for all old format processors (https://github.com/huggingface/transformers_4573/pull/41474)
+- `XXXFeatureExtractors` classes are completely removed in favor of `XXXImageProcessor` class for all vision models (https://github.com/huggingface/transformers_4573/pull/41174)
+- Minor change: `XXXFastImageProcessorKwargs` is removed in favor of `XXXImageProcessorKwargs` which will be shared between fast and slow processors (https://github.com/huggingface/transformers_4573/pull/40931)
 
 
 ## Modeling
 
 - Some `RotaryEmbeddings` layers will start returning a dict of tuples, in case the model uses several RoPE configurations (Gemma2, ModernBert). Each value will be a tuple of "cos, sin" per RoPE type.
-- Config attribute for `RotaryEmbeddings` layer will be unified and accessed via `config.rope_parameters`. Config attr for `rope_theta` might not be accessible anymore for some models, and instead will be in `config.rope_parameters['rope_theta']`. BC will be supported for a while as much as possible, and in the near future we'll gradually move to the new RoPE format  (https://github.com/huggingface/transformers/pull/39847)
-- Vision Language models will not have a shortcut access to its language and vision component from the generative model via `model.language_model`. It is recommended to either access the module with `model.model.language_model` or `model.get_decoder()`. See [#42156](https://github.com/huggingface/transformers/pull/42156/)
+- Config attribute for `RotaryEmbeddings` layer will be unified and accessed via `config.rope_parameters`. Config attr for `rope_theta` might not be accessible anymore for some models, and instead will be in `config.rope_parameters['rope_theta']`. BC will be supported for a while as much as possible, and in the near future we'll gradually move to the new RoPE format  (https://github.com/huggingface/transformers_4573/pull/39847)
+- Vision Language models will not have a shortcut access to its language and vision component from the generative model via `model.language_model`. It is recommended to either access the module with `model.model.language_model` or `model.get_decoder()`. See [#42156](https://github.com/huggingface/transformers_4573/pull/42156/)
 
 ### Generate
 
-- Old, deprecated output type aliases were removed (e.g. `GreedySearchEncoderDecoderOutput`). We now only have 4 output classes built from the following matrix: decoder-only vs encoder-decoder, uses beams vs doesn't use beams (https://github.com/huggingface/transformers/pull/40998)
-- Removed deprecated classes regarding decoding methods that were moved to the Hub due to low usage (constraints and beam scores) (https://github.com/huggingface/transformers/pull/41223)
-- If `generate` doesn't receive any KV Cache argument, the default cache class used is now defined by the model (as opposed to always being `DynamicCache`) (https://github.com/huggingface/transformers/pull/41505)
+- Old, deprecated output type aliases were removed (e.g. `GreedySearchEncoderDecoderOutput`). We now only have 4 output classes built from the following matrix: decoder-only vs encoder-decoder, uses beams vs doesn't use beams (https://github.com/huggingface/transformers_4573/pull/40998)
+- Removed deprecated classes regarding decoding methods that were moved to the Hub due to low usage (constraints and beam scores) (https://github.com/huggingface/transformers_4573/pull/41223)
+- If `generate` doesn't receive any KV Cache argument, the default cache class used is now defined by the model (as opposed to always being `DynamicCache`) (https://github.com/huggingface/transformers_4573/pull/41505)
 - Generation parameters are no longer accessible via model's config. If generation paramaters are serialized in `config.json` for any old model, it will be loaded back into model's generation config. Users are expected to access or modify generation parameters only with `model.generation_config.do_sample = True`. 
 
 ## Trainer
@@ -536,7 +536,7 @@ Linked PRs:
 - `logging_dir` -> only used for tensorboard, set `TENSORBOARD_LOGGING_DIR` env var instead
 - `jit_mode_eval` -> use `use_torch_compile` instead as torchscript is not recommended anymore
 - `tpu_num_cores`-> It is actually better to remove it as it is not recommended to set the number of cores. By default, all tpu cores are used . Set `TPU_NUM_CORES` env var instead
-- `past_index` -> it was only used for a very small number of models that have special architecture like transformersxl + it was not documented at all how to train those model
+- `past_index` -> it was only used for a very small number of models that have special architecture like transformers_4573xl + it was not documented at all how to train those model
 - `ray_scope` -> only for a minor arg for ray integration. Set `RAY_SCOPE` var env instead 
 - `warmup_ratio` -> use `warmup_step` instead. We combined both args together by allowing passing float values in `warmup_step`. 
 
@@ -572,7 +572,7 @@ Linked PRs:
 
 ## Pipeline
 
-- Image text to text pipelines will no longer accept images as a separate argument along with conversation chats. Image data has to be embedded in the chat's "content" field. See [#42359](https://github.com/huggingface/transformers/pull/42359)
+- Image text to text pipelines will no longer accept images as a separate argument along with conversation chats. Image data has to be embedded in the chat's "content" field. See [#42359](https://github.com/huggingface/transformers_4573/pull/42359)
 
 ## PushToHubMixin
 
@@ -582,64 +582,64 @@ Linked PRs:
 - arguments of `push_to_hub` are now keyword-only to avoid confusion. Only `repo_id` can be positional since it's the main arg.
 - removed `use_temp_dir` argument from `push_to_hub`. We now use a tmp dir in all cases.
 
-Linked PR: https://github.com/huggingface/transformers/pull/42391.
+Linked PR: https://github.com/huggingface/transformers_4573/pull/42391.
 
 ## CLI
 
-The deprecated `transformers-cli ...` command was deprecated, `transformers ...` is now the only CLI entry point.
+The deprecated `transformers_4573-cli ...` command was deprecated, `transformers_4573 ...` is now the only CLI entry point.
 
-`transformers` CLI has been migrated to `Typer`, making it easier to maintain + adding some nice features out of 
+`transformers_4573` CLI has been migrated to `Typer`, making it easier to maintain + adding some nice features out of 
 the box (improved `--help` section, autocompletion).
 
-Biggest breaking change is in `transformers chat`. This command starts a terminal UI to interact with a chat model. 
-It used to also be able to start a Chat Completion server powered by `transformers` and chat with it. In this revamped 
-version, this feature has been removed in favor of `transformers serve`. The goal of splitting `transformers chat` 
-and `transformers serve` is to define clear boundaries between client and server code. It helps with maintenance 
-but also makes the commands less bloated. The new signature of `transformers chat` is:
+Biggest breaking change is in `transformers_4573 chat`. This command starts a terminal UI to interact with a chat model. 
+It used to also be able to start a Chat Completion server powered by `transformers_4573` and chat with it. In this revamped 
+version, this feature has been removed in favor of `transformers_4573 serve`. The goal of splitting `transformers_4573 chat` 
+and `transformers_4573 serve` is to define clear boundaries between client and server code. It helps with maintenance 
+but also makes the commands less bloated. The new signature of `transformers_4573 chat` is:
 
 ```
-Usage: transformers chat [OPTIONS] BASE_URL MODEL_ID [GENERATE_FLAGS]...
+Usage: transformers_4573 chat [OPTIONS] BASE_URL MODEL_ID [GENERATE_FLAGS]...
 
 Chat with a model from the command line.
 ```
 
-It works hand in hand with `transformers serve`, which means that if `transformers serve` is running on its default endpoint, `transformers chat` can be launched as follows:
+It works hand in hand with `transformers_4573 serve`, which means that if `transformers_4573 serve` is running on its default endpoint, `transformers_4573 chat` can be launched as follows:
 
 ```sh
-transformers chat HuggingFaceTB/SmolLM3-3B
+transformers_4573 chat HuggingFaceTB/SmolLM3-3B
 ```
 
 It can however use any OpenAI API compatible HTTP endpoint:
 
 ```sh
-transformers chat HuggingFaceTB/SmolLM3-3B https://router.huggingface.co/v1
+transformers_4573 chat HuggingFaceTB/SmolLM3-3B https://router.huggingface.co/v1
 ```
 
 Linked PRs: 
-- https://github.com/huggingface/transformers/pull/40997
-- https://github.com/huggingface/transformers/pull/41487
+- https://github.com/huggingface/transformers_4573/pull/40997
+- https://github.com/huggingface/transformers_4573/pull/41487
 
 
 ### Removal of the `run` method
 
-The `transformers run` (previously `transformers-cli run`) is an artefact of the past, was not documented nor tested,
+The `transformers_4573 run` (previously `transformers_4573-cli run`) is an artefact of the past, was not documented nor tested,
 and isn't part of any public documentation. We're removing it for now and ask you to please let us know in case
 this is a method you are using; in which case we should bring it back with better support.
 
-Linked PR: https://github.com/huggingface/transformers/pull/42447
+Linked PR: https://github.com/huggingface/transformers_4573/pull/42447
 
 ## Environment variables
 
-- Legacy environment variables like `TRANSFORMERS_CACHE`, `PYTORCH_TRANSFORMERS_CACHE`, and `PYTORCH_PRETRAINED_BERT_CACHE` have been removed. Please use `HF_HOME` instead.
+- Legacy environment variables like `transformers_4573_CACHE`, `PYTORCH_transformers_4573_CACHE`, and `PYTORCH_PRETRAINED_BERT_CACHE` have been removed. Please use `HF_HOME` instead.
 - Constants `HUGGINGFACE_CO_EXAMPLES_TELEMETRY`, `HUGGINGFACE_CO_EXAMPLES_TELEMETRY`, `HUGGINGFACE_CO_PREFIX`, and `HUGGINGFACE_CO_RESOLVE_ENDPOINT` have been removed. Please use `huggingface_hub.constants.ENDPOINT` instead.
 
-Linked PR: https://github.com/huggingface/transformers/pull/42391.
+Linked PR: https://github.com/huggingface/transformers_4573/pull/42391.
 
 ## Requirements update
 
-`transformers` v5 pins the `huggingface_hub` version to `>=1.0.0`. See this [migration guide](https://huggingface.co/docs/huggingface_hub/concepts/migration) to learn more about this major release. Here are to main aspects to know about:
+`transformers_4573` v5 pins the `huggingface_hub` version to `>=1.0.0`. See this [migration guide](https://huggingface.co/docs/huggingface_hub/concepts/migration) to learn more about this major release. Here are to main aspects to know about:
 - switched the HTTP backend from `requests` to `httpx`. This change was made to improve performance and to support both synchronous and asynchronous requests the same way. If you are currently catching `requests.HTTPError` errors in your codebase, you'll need to switch to `httpx.HTTPError`.
 - related to 1., it is not possible to set proxies from your script. To handle proxies, you must set the `HTTP_PROXY` / `HTTPS_PROXY` environment variables
 - `hf_transfer` and therefore `HF_HUB_ENABLE_HF_TRANSFER` have been completed dropped in favor of `hf_xet`. This should be transparent for most users. Please let us know if you notice any downside!
 
-`typer-slim` has been added as required dependency, used to implement both `hf` and `transformers` CLIs.
+`typer-slim` has been added as required dependency, used to implement both `hf` and `transformers_4573` CLIs.

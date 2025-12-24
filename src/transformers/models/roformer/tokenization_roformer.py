@@ -39,7 +39,7 @@ class RoFormerTokenizer(PreTrainedTokenizerFast):
     Example:
 
     ```python
-    >>> from transformers import RoFormerTokenizer
+    >>> from transformers_4573 import RoFormerTokenizer
 
     >>> tokenizer = RoFormerTokenizer.from_pretrained("junnyu/roformer_chinese_base")
     >>> tokenizer.tokenize("今天天气非常好。")

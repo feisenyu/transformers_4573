@@ -23,7 +23,7 @@ AltCLIP은 멀티모달 비전 및 언어 모델입니다. 이미지와 텍스�
 >>> from PIL import Image
 >>> import requests
 
->>> from transformers import AltCLIPModel, AltCLIPProcessor
+>>> from transformers_4573 import AltCLIPModel, AltCLIPProcessor
 
 >>> model = AltCLIPModel.from_pretrained("BAAI/AltCLIP")
 >>> processor = AltCLIPProcessor.from_pretrained("BAAI/AltCLIP")

@@ -38,7 +38,7 @@ The example below demonstrates question answering with the [`AutoModel`] class.
 ```py
 import torch
 from datasets import load_dataset
-from transformers import AutoTokenizer, LayoutLMForQuestionAnswering
+from transformers_4573 import AutoTokenizer, LayoutLMForQuestionAnswering
 
 tokenizer = AutoTokenizer.from_pretrained("impira/layoutlm-document-qa", add_prefix_space=True)
 model = LayoutLMForQuestionAnswering.from_pretrained("impira/layoutlm-document-qa", dtype=torch.float16)

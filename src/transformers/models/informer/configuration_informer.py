@@ -115,7 +115,7 @@ class InformerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import InformerConfig, InformerModel
+    >>> from transformers_4573 import InformerConfig, InformerModel
 
     >>> # Initializing an Informer configuration with 12 time steps for prediction
     >>> configuration = InformerConfig(prediction_length=12)

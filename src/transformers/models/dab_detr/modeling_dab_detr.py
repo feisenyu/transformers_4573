@@ -48,7 +48,7 @@ logger = logging.get_logger(__name__)
     decoding losses.
     """
 )
-# Copied from transformers.models.conditional_detr.modeling_conditional_detr.ConditionalDetrDecoderOutput with ConditionalDetr->DabDetr,Conditional DETR->DAB-DETR,2 (anchor points)->4 (anchor points)
+# Copied from transformers_4573.models.conditional_detr.modeling_conditional_detr.ConditionalDetrDecoderOutput with ConditionalDetr->DabDetr,Conditional DETR->DAB-DETR,2 (anchor points)->4 (anchor points)
 class DabDetrDecoderOutput(BaseModelOutputWithCrossAttentions):
     r"""
     cross_attentions (`tuple(torch.FloatTensor)`, *optional*, returned when `output_attentions=True` and `config.add_cross_attention=True` is passed or when `config.output_attentions=True`):
@@ -75,7 +75,7 @@ class DabDetrDecoderOutput(BaseModelOutputWithCrossAttentions):
     losses.
     """
 )
-# Copied from transformers.models.conditional_detr.modeling_conditional_detr.ConditionalDetrModelOutput with ConditionalDetr->DabDetr,Conditional DETR->DAB-DETR,2 (anchor points)->4 (anchor points)
+# Copied from transformers_4573.models.conditional_detr.modeling_conditional_detr.ConditionalDetrModelOutput with ConditionalDetr->DabDetr,Conditional DETR->DAB-DETR,2 (anchor points)->4 (anchor points)
 class DabDetrModelOutput(Seq2SeqModelOutput):
     r"""
     last_hidden_state (`torch.FloatTensor` of shape `(batch_size, sequence_length, hidden_size)`):
@@ -97,7 +97,7 @@ class DabDetrModelOutput(Seq2SeqModelOutput):
     Output type of [`DabDetrForObjectDetection`].
     """
 )
-# Copied from transformers.models.detr.modeling_detr.DetrObjectDetectionOutput with Detr->DabDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrObjectDetectionOutput with Detr->DabDetr
 class DabDetrObjectDetectionOutput(ModelOutput):
     r"""
     loss (`torch.FloatTensor` of shape `(1,)`, *optional*, returned when `labels` are provided)):
@@ -135,7 +135,7 @@ class DabDetrObjectDetectionOutput(ModelOutput):
     encoder_attentions: Optional[tuple[torch.FloatTensor]] = None
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->DabDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->DabDetr
 class DabDetrFrozenBatchNorm2d(nn.Module):
     """
     BatchNorm2d where the batch statistics and the affine parameters are fixed.
@@ -175,7 +175,7 @@ class DabDetrFrozenBatchNorm2d(nn.Module):
         return x * scale + bias
 
 
-# Copied from transformers.models.detr.modeling_detr.replace_batch_norm with Detr->DabDetr
+# Copied from transformers_4573.models.detr.modeling_detr.replace_batch_norm with Detr->DabDetr
 def replace_batch_norm(model):
     r"""
     Recursively replace all `torch.nn.BatchNorm2d` with `DabDetrFrozenBatchNorm2d`.
@@ -200,7 +200,7 @@ def replace_batch_norm(model):
             replace_batch_norm(module)
 
 
-# Modified from transformers.models.detr.modeling_detr.DetrConvEncoder with Detr->DabDetr
+# Modified from transformers_4573.models.detr.modeling_detr.DetrConvEncoder with Detr->DabDetr
 class DabDetrConvEncoder(nn.Module):
     """
     Convolutional backbone, using either the AutoBackbone API or one from the timm library.
@@ -233,7 +233,7 @@ class DabDetrConvEncoder(nn.Module):
         return out
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrConvModel with Detr->DabDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrConvModel with Detr->DabDetr
 class DabDetrConvModel(nn.Module):
     """
     This module adds 2D position embeddings to all intermediate feature maps of the convolutional encoder.
@@ -255,7 +255,7 @@ class DabDetrConvModel(nn.Module):
         return out, pos
 
 
-# Modified from transformers.models.conditional_detr.modeling_conditional_detr.ConditionalDetrSinePositionEmbedding with ConditionalDetr->DabDetr
+# Modified from transformers_4573.models.conditional_detr.modeling_conditional_detr.ConditionalDetrSinePositionEmbedding with ConditionalDetr->DabDetr
 class DabDetrSinePositionEmbedding(nn.Module):
     """
     This is a more standard version of the position embedding, very similar to the one used by the Attention is all you
@@ -349,7 +349,7 @@ def inverse_sigmoid(x, eps=1e-5):
     return torch.log(x1 / x2)
 
 
-# Modified from transformers.models.detr.modeling_detr.DetrAttention
+# Modified from transformers_4573.models.detr.modeling_detr.DetrAttention
 class DetrAttention(nn.Module):
     """
     Multi-headed attention from 'Attention Is All You Need' paper.
@@ -427,7 +427,7 @@ class DetrAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Modified from transformers.models.conditional_detr.modeling_conditional_detr.ConditionalDetrAttention with ConditionalDetr->DABDETR,Conditional DETR->DabDetr
+# Modified from transformers_4573.models.conditional_detr.modeling_conditional_detr.ConditionalDetrAttention with ConditionalDetr->DABDETR,Conditional DETR->DabDetr
 class DabDetrAttention(nn.Module):
     """
     Cross-Attention used in DAB-DETR 'DAB-DETR for Fast Training Convergence' paper.
@@ -655,7 +655,7 @@ class DabDetrDecoderLayerFFN(nn.Module):
         return hidden_states
 
 
-# Modified from transformers.models.detr.modeling_detr.DetrEncoderLayer with DetrEncoderLayer->DabDetrEncoderLayer,DetrConfig->DabDetrConfig
+# Modified from transformers_4573.models.detr.modeling_detr.DetrEncoderLayer with DetrEncoderLayer->DabDetrEncoderLayer,DetrConfig->DabDetrConfig
 class DabDetrEncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: DabDetrConfig):
         super().__init__()
@@ -717,7 +717,7 @@ class DabDetrEncoderLayer(GradientCheckpointingLayer):
         return outputs
 
 
-# Modified from transformers.models.conditional_detr.modeling_conditional_detr.ConditionalDetrDecoderLayer with ConditionalDetr->DabDetr
+# Modified from transformers_4573.models.conditional_detr.modeling_conditional_detr.ConditionalDetrDecoderLayer with ConditionalDetr->DabDetr
 class DabDetrDecoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: DabDetrConfig, is_first: bool = False):
         super().__init__()
@@ -785,7 +785,7 @@ class DabDetrDecoderLayer(GradientCheckpointingLayer):
         return outputs
 
 
-# Modified from transformers.models.detr.modeling_detr.DetrMLPPredictionHead with DetrMLPPredictionHead->DabDetrMLP
+# Modified from transformers_4573.models.detr.modeling_detr.DetrMLPPredictionHead with DetrMLPPredictionHead->DabDetrMLP
 class DabDetrMLP(nn.Module):
     """
     Very simple multi-layer perceptron (MLP, also called FFN), used to predict the normalized center coordinates,
@@ -807,7 +807,7 @@ class DabDetrMLP(nn.Module):
         return input_tensor
 
 
-# Modified from transformers.models.detr.modeling_detr.DetrPreTrainedModel with Detr->DabDetr
+# Modified from transformers_4573.models.detr.modeling_detr.DetrPreTrainedModel with Detr->DabDetr
 @auto_docstring
 class DabDetrPreTrainedModel(PreTrainedModel):
     config: DabDetrConfig
@@ -850,7 +850,7 @@ class DabDetrPreTrainedModel(PreTrainedModel):
             module.reset_parameters()
 
 
-# Modified from transformers.models.detr.modeling_detr.DetrEncoder with Detr->DabDetr,DETR->ConditionalDETR
+# Modified from transformers_4573.models.detr.modeling_detr.DetrEncoder with Detr->DabDetr,DETR->ConditionalDETR
 class DabDetrEncoder(DabDetrPreTrainedModel):
     """
     Transformer encoder consisting of *config.encoder_layers* self attention layers. Each layer is a
@@ -962,7 +962,7 @@ class DabDetrEncoder(DabDetrPreTrainedModel):
         )
 
 
-# Modified from transformers.models.conditional_detr.modeling_conditional_detr.ConditionalDetrDecoder with ConditionalDetr->DabDetr,Conditional DETR->DAB-DETR
+# Modified from transformers_4573.models.conditional_detr.modeling_conditional_detr.ConditionalDetrDecoder with ConditionalDetr->DabDetr,Conditional DETR->DAB-DETR
 class DabDetrDecoder(DabDetrPreTrainedModel):
     """
     Transformer decoder consisting of *config.decoder_layers* layers. Each layer is a [`DabDetrDecoderLayer`].
@@ -1239,7 +1239,7 @@ class DabDetrModel(DabDetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModel
+        >>> from transformers_4573 import AutoImageProcessor, AutoModel
         >>> from PIL import Image
         >>> import requests
 
@@ -1395,7 +1395,7 @@ class DabDetrModel(DabDetrPreTrainedModel):
         )
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrMHAttentionMap with Detr->DabDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrMHAttentionMap with Detr->DabDetr
 class DabDetrMHAttentionMap(nn.Module):
     """This is a 2D attention module, which only returns the attention softmax (no multiplication by value)"""
 
@@ -1492,7 +1492,7 @@ class DabDetrForObjectDetection(DabDetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModelForObjectDetection
+        >>> from transformers_4573 import AutoImageProcessor, AutoModelForObjectDetection
         >>> from PIL import Image
         >>> import requests
 

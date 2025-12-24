@@ -18,7 +18,7 @@ import argparse
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     UniSpeechSatConfig,
     UniSpeechSatForAudioFrameClassification,
     UniSpeechSatForSequenceClassification,

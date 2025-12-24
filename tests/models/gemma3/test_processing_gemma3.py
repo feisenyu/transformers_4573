@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import Gemma3Processor
-from transformers.testing_utils import get_tests_dir, require_vision
+from transformers_4573 import Gemma3Processor
+from transformers_4573.testing_utils import get_tests_dir, require_vision
 
 from ...test_processing_common import ProcessorTesterMixin
 

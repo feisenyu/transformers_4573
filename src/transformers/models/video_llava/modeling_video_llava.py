@@ -99,7 +99,7 @@ class VideoLlavaCausalLMOutputWithPast(ModelOutput):
     video_hidden_states: Optional[torch.FloatTensor] = None
 
 
-# Copied from transformers.models.llava.modeling_llava.LlavaMultiModalProjector with Llava->VideoLlava
+# Copied from transformers_4573.models.llava.modeling_llava.LlavaMultiModalProjector with Llava->VideoLlava
 class VideoLlavaMultiModalProjector(nn.Module):
     def __init__(self, config: VideoLlavaConfig):
         super().__init__()
@@ -478,7 +478,7 @@ class VideoLlavaForConditionalGeneration(VideoLlavaPreTrainedModel, GenerationMi
         >>> import numpy as np
         >>> import av
         >>> from huggingface_hub import hf_hub_download
-        >>> from transformers import VideoLlavaProcessor, VideoLlavaForConditionalGeneration
+        >>> from transformers_4573 import VideoLlavaProcessor, VideoLlavaForConditionalGeneration
 
 
         >>> def read_video_pyav(container, indices):
@@ -626,7 +626,7 @@ class VideoLlavaForConditionalGeneration(VideoLlavaPreTrainedModel, GenerationMi
         return model_inputs
 
     @staticmethod
-    # Copied from transformers.models.gptj.modeling_gptj.GPTJModel._prepare_4d_causal_attention_mask_with_cache_position
+    # Copied from transformers_4573.models.gptj.modeling_gptj.GPTJModel._prepare_4d_causal_attention_mask_with_cache_position
     def _prepare_4d_causal_attention_mask_with_cache_position(
         attention_mask: torch.Tensor,
         sequence_length: int,

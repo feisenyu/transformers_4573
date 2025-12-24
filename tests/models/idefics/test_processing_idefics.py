@@ -16,11 +16,11 @@ import unittest
 
 import numpy as np
 
-from transformers import (
+from transformers_4573 import (
     IdeficsProcessor,
 )
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 

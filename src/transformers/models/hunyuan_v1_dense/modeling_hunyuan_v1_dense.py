@@ -25,7 +25,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.cache_utils import Cache
+from transformers_4573.cache_utils import Cache
 
 from ...activations import ACT2FN
 from ...cache_utils import DynamicCache
@@ -482,7 +482,7 @@ class HunYuanDenseV1ForCausalLM(HunYuanDenseV1PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, HunYuanDenseV1ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, HunYuanDenseV1ForCausalLM
 
         >>> model = HunYuanDenseV1ForCausalLM.from_pretrained("meta-hunyuan_v1_dense/HunYuanDenseV1-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-hunyuan_v1_dense/HunYuanDenseV1-2-7b-hf")

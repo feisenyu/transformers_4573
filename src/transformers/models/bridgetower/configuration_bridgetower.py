@@ -55,7 +55,7 @@ class BridgeTowerVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BridgeTowerVisionConfig
+    >>> from transformers_4573 import BridgeTowerVisionConfig
 
     >>> # Initializing a BridgeTower BridgeTower/bridgetower-base style configuration for the vision model
     >>> configuration = BridgeTowerVisionConfig()
@@ -142,7 +142,7 @@ class BridgeTowerTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BridgeTowerTextConfig
+    >>> from transformers_4573 import BridgeTowerTextConfig
 
     >>> # Initializing a BridgeTower BridgeTower/bridgetower-base style configuration for the text model
     >>> configuration = BridgeTowerTextConfig()
@@ -235,7 +235,7 @@ class BridgeTowerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BridgeTowerModel, BridgeTowerConfig
+    >>> from transformers_4573 import BridgeTowerModel, BridgeTowerConfig
 
     >>> # Initializing a BridgeTower BridgeTower/bridgetower-base style configuration
     >>> configuration = BridgeTowerConfig()

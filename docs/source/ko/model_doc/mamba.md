@@ -42,7 +42,7 @@ rendered properly in your Markdown viewer.
 ### 간단한 생성 예제
  
 ```python 
-from transformers import MambaConfig, MambaForCausalLM, AutoTokenizer
+from transformers_4573 import MambaConfig, MambaForCausalLM, AutoTokenizer
 import torch
 
 tokenizer = AutoTokenizer.from_pretrained("state-spaces/mamba-130m-hf")

@@ -76,7 +76,7 @@ pip install transformers[flax]
 마지막으로 🤗 Transformers가 제대로 설치되었는지 확인할 차례입니다. 사전훈련된 모델을 다운로드하는 코드입니다.
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
 ```
 
 라벨과 점수가 출력되면 잘 설치된 것입니다.
@@ -98,7 +98,7 @@ pip install git+https://github.com/huggingface/transformers
 전과 마찬가지로 🤗 Transformers가 제대로 설치되었는지 확인할 차례입니다.
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
 ```
 
 ## 수정 가능한 설치[[editable-install]]
@@ -188,7 +188,7 @@ Another option for using 🤗 Transformers offline is to download the files ahea
     1. 미리 [`PreTrainedModel.from_pretrained`]로 파일을 다운로드해두세요.
 
     ```py
-    >>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+    >>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
     >>> tokenizer = AutoTokenizer.from_pretrained("bigscience/T0_3B")
     >>> model = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0_3B")
@@ -227,7 +227,7 @@ Another option for using 🤗 Transformers offline is to download the files ahea
 파일을 다운로드하고 로컬에 캐시 해놓고 나면, 나중에 불러와 사용할 수 있도록 로컬 경로를 지정해두세요.
 
 ```py
->>> from transformers import AutoConfig
+>>> from transformers_4573 import AutoConfig
 
 >>> config = AutoConfig.from_pretrained("./your/path/bigscience_t0/config.json")
 ```

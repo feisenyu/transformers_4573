@@ -70,7 +70,7 @@ class UnivNetConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import UnivNetModel, UnivNetConfig
+    >>> from transformers_4573 import UnivNetModel, UnivNetConfig
 
     >>> # Initializing a Tortoise TTS style configuration
     >>> configuration = UnivNetConfig()

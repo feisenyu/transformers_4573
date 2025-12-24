@@ -37,7 +37,7 @@ import numpy as np
 from datasets import DatasetDict, load_dataset
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoFeatureExtractor,
     AutoModelForAudioClassification,
@@ -46,8 +46,8 @@ from transformers import (
     TrainingArguments,
     set_seed,
 )
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 logger = logging.getLogger(__name__)

@@ -47,7 +47,7 @@ pip install transformers>=4.48.0
 
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("Zyphra/Zamba2-7B")
 model = AutoModelForCausalLM.from_pretrained("Zyphra/Zamba2-7B", device_map="auto", dtype=torch.bfloat16)

@@ -16,9 +16,9 @@ import unittest
 
 import numpy as np
 
-from transformers import AriaProcessor
-from transformers.image_utils import load_image
-from transformers.testing_utils import require_torch, require_vision
+from transformers_4573 import AriaProcessor
+from transformers_4573.image_utils import load_image
+from transformers_4573.testing_utils import require_torch, require_vision
 
 from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 

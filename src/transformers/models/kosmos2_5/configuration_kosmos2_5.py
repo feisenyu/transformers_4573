@@ -160,7 +160,7 @@ class Kosmos2_5VisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Kosmos2_5VisionConfig, Kosmos2_5VisionModel
+    >>> from transformers_4573 import Kosmos2_5VisionConfig, Kosmos2_5VisionModel
 
     >>> # Initializing a Kosmos2_5VisionConfig with microsoft/kosmos-2.5 style configuration
     >>> configuration = Kosmos2_5VisionConfig()

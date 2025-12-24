@@ -142,7 +142,7 @@ class MobileBertEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -718,7 +718,7 @@ class MobileBertForPreTraining(MobileBertPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, MobileBertForPreTraining
+        >>> from transformers_4573 import AutoTokenizer, MobileBertForPreTraining
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/mobilebert-uncased")
@@ -881,7 +881,7 @@ class MobileBertForNextSentencePrediction(MobileBertPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, MobileBertForNextSentencePrediction
+        >>> from transformers_4573 import AutoTokenizer, MobileBertForNextSentencePrediction
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/mobilebert-uncased")
@@ -936,7 +936,7 @@ class MobileBertForNextSentencePrediction(MobileBertPreTrainedModel):
     pooled output) e.g. for GLUE tasks.
     """
 )
-# Copied from transformers.models.bert.modeling_bert.BertForSequenceClassification with Bert->MobileBert all-casing
+# Copied from transformers_4573.models.bert.modeling_bert.BertForSequenceClassification with Bert->MobileBert all-casing
 class MobileBertForSequenceClassification(MobileBertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1018,7 +1018,7 @@ class MobileBertForSequenceClassification(MobileBertPreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.bert.modeling_bert.BertForQuestionAnswering with Bert->MobileBert all-casing
+# Copied from transformers_4573.models.bert.modeling_bert.BertForQuestionAnswering with Bert->MobileBert all-casing
 class MobileBertForQuestionAnswering(MobileBertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1087,7 +1087,7 @@ class MobileBertForQuestionAnswering(MobileBertPreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.bert.modeling_bert.BertForMultipleChoice with Bert->MobileBert all-casing
+# Copied from transformers_4573.models.bert.modeling_bert.BertForMultipleChoice with Bert->MobileBert all-casing
 class MobileBertForMultipleChoice(MobileBertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -1186,7 +1186,7 @@ class MobileBertForMultipleChoice(MobileBertPreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.bert.modeling_bert.BertForTokenClassification with Bert->MobileBert all-casing
+# Copied from transformers_4573.models.bert.modeling_bert.BertForTokenClassification with Bert->MobileBert all-casing
 class MobileBertForTokenClassification(MobileBertPreTrainedModel):
     def __init__(self, config):
         super().__init__(config)

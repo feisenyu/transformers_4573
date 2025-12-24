@@ -112,7 +112,7 @@ class Glm4MoeConfig(PreTrainedConfig):
         use_qk_norm (`bool`, *optional*, defaults to `False`):
             Whether to use query-key normalization in the attention
     ```python
-    >>> from transformers import Glm4MoeModel, Glm4MoeConfig
+    >>> from transformers_4573 import Glm4MoeModel, Glm4MoeConfig
 
     >>> # Initializing a Glm4Moe style configuration
     >>> configuration = Glm4MoeConfig()

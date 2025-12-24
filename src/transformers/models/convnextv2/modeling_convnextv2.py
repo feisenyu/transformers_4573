@@ -37,7 +37,7 @@ from .configuration_convnextv2 import ConvNextV2Config
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -53,7 +53,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.beit.modeling_beit.BeitDropPath with Beit->ConvNextV2
+# Copied from transformers_4573.models.beit.modeling_beit.BeitDropPath with Beit->ConvNextV2
 class ConvNextV2DropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -85,7 +85,7 @@ class ConvNextV2GRN(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextLayerNorm with ConvNext->ConvNextV2
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextLayerNorm with ConvNext->ConvNextV2
 class ConvNextV2LayerNorm(nn.LayerNorm):
     r"""LayerNorm that supports two data formats: channels_last (default) or channels_first.
     The ordering of the dimensions in the inputs. channels_last corresponds to inputs with shape (batch_size, height,
@@ -112,7 +112,7 @@ class ConvNextV2LayerNorm(nn.LayerNorm):
         return features
 
 
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextEmbeddings with ConvNext->ConvNextV2
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextEmbeddings with ConvNext->ConvNextV2
 class ConvNextV2Embeddings(nn.Module):
     """This class is comparable to (and inspired by) the SwinEmbeddings class
     found in src/transformers/models/swin/modeling_swin.py.
@@ -180,7 +180,7 @@ class ConvNextV2Layer(nn.Module):
         return features
 
 
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextStage with ConvNeXT->ConvNeXTV2, ConvNext->ConvNextV2
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextStage with ConvNeXT->ConvNeXTV2, ConvNext->ConvNextV2
 class ConvNextV2Stage(nn.Module):
     """ConvNeXTV2 stage, consisting of an optional downsampling layer + multiple residual blocks.
 
@@ -217,7 +217,7 @@ class ConvNextV2Stage(nn.Module):
         return features
 
 
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextEncoder with ConvNext->ConvNextV2
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextEncoder with ConvNext->ConvNextV2
 class ConvNextV2Encoder(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -271,7 +271,7 @@ class ConvNextV2PreTrainedModel(PreTrainedModel):
 
 
 @auto_docstring
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextModel with CONVNEXT->CONVNEXTV2, ConvNext->ConvNextV2
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextModel with CONVNEXT->CONVNEXTV2, ConvNext->ConvNextV2
 class ConvNextV2Model(ConvNextV2PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
@@ -319,7 +319,7 @@ class ConvNextV2Model(ConvNextV2PreTrainedModel):
     ImageNet.
     """
 )
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextForImageClassification with CONVNEXT->CONVNEXTV2,ConvNext->ConvNextV2,convnext->convnextv2
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextForImageClassification with CONVNEXT->CONVNEXTV2,ConvNext->ConvNextV2,convnext->convnextv2
 class ConvNextV2ForImageClassification(ConvNextV2PreTrainedModel):
     accepts_loss_kwargs = False
 
@@ -369,7 +369,7 @@ class ConvNextV2ForImageClassification(ConvNextV2PreTrainedModel):
     ConvNeXT V2 backbone, to be used with frameworks like DETR and MaskFormer.
     """
 )
-# Copied from transformers.models.convnext.modeling_convnext.ConvNextBackbone with CONVNEXT->CONVNEXTV2,ConvNext->ConvNextV2,facebook/convnext-tiny-224->facebook/convnextv2-tiny-1k-224
+# Copied from transformers_4573.models.convnext.modeling_convnext.ConvNextBackbone with CONVNEXT->CONVNEXTV2,ConvNext->ConvNextV2,facebook/convnext-tiny-224->facebook/convnextv2-tiny-1k-224
 class ConvNextV2Backbone(ConvNextV2PreTrainedModel, BackboneMixin):
     has_attentions = False
 
@@ -399,7 +399,7 @@ class ConvNextV2Backbone(ConvNextV2PreTrainedModel, BackboneMixin):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoBackbone
+        >>> from transformers_4573 import AutoImageProcessor, AutoBackbone
         >>> import torch
         >>> from PIL import Image
         >>> import requests

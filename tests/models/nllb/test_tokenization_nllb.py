@@ -16,21 +16,21 @@ import os
 import tempfile
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     BatchEncoding,
     NllbTokenizer,
     is_torch_available,
 )
-from transformers.models.nllb.tokenization_nllb import FAIRSEQ_LANGUAGE_CODES
-from transformers.testing_utils import (
+from transformers_4573.models.nllb.tokenization_nllb import FAIRSEQ_LANGUAGE_CODES
+from transformers_4573.testing_utils import (
     get_tests_dir,
     nested_simplify,
     require_sentencepiece,
     require_tokenizers,
     require_torch,
 )
-from transformers.tokenization_utils_sentencepiece import SentencePieceExtractor
+from transformers_4573.tokenization_utils_sentencepiece import SentencePieceExtractor
 
 from ...test_tokenization_common import TokenizerTesterMixin
 
@@ -39,7 +39,7 @@ SAMPLE_VOCAB = get_tests_dir("fixtures/test_sentencepiece.model")
 
 
 if is_torch_available():
-    from transformers.models.m2m_100.modeling_m2m_100 import shift_tokens_right
+    from transformers_4573.models.m2m_100.modeling_m2m_100 import shift_tokens_right
 
 EN_CODE = 256047
 RO_CODE = 256145

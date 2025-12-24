@@ -50,7 +50,7 @@ pip install accelerate
 
 ```diff
 + from accelerate import Accelerator
-  from transformers import AdamW, AutoModelForSequenceClassification, get_scheduler
+  from transformers_4573 import AdamW, AutoModelForSequenceClassification, get_scheduler
 
 + accelerator = Accelerator()
 

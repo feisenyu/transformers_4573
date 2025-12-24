@@ -35,8 +35,8 @@ import torch
 from flax import traverse_util
 from t5x import checkpoints
 
-from transformers import T5Config, T5EncoderModel, T5ForConditionalGeneration
-from transformers.utils import logging
+from transformers_4573 import T5Config, T5EncoderModel, T5ForConditionalGeneration
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

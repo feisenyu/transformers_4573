@@ -18,8 +18,8 @@ import unittest
 
 import pytest
 
-from transformers import BitsAndBytesConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import BitsAndBytesConfig, is_torch_available
+from transformers_4573.testing_utils import (
     cleanup,
     is_flaky,
     require_bitsandbytes,
@@ -35,7 +35,7 @@ from transformers.testing_utils import (
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoTokenizer,
         Ernie4_5_MoeForCausalLM,
         Ernie4_5_MoeModel,

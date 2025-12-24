@@ -842,7 +842,7 @@ class PhimoeForCausalLM(PhimoePreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, PhimoeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, PhimoeForCausalLM
 
         >>> model = PhimoeForCausalLM.from_pretrained("mistralai/Phimoe-8x7B-v0.1")
         >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Phimoe-8x7B-v0.1")
@@ -903,7 +903,7 @@ class PhimoeForCausalLM(PhimoePreTrainedModel, GenerationMixin):
             router_logits=outputs.router_logits,
         )
 
-    # Copied from transformers.models.phi3.modeling_phi3.Phi3ForCausalLM.prepare_inputs_for_generation
+    # Copied from transformers_4573.models.phi3.modeling_phi3.Phi3ForCausalLM.prepare_inputs_for_generation
     def prepare_inputs_for_generation(
         self,
         input_ids,

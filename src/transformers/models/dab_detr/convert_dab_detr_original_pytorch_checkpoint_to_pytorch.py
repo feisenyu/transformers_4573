@@ -24,8 +24,8 @@ from typing import Optional
 import torch
 from huggingface_hub import hf_hub_download
 
-from transformers import ConditionalDetrImageProcessor, DabDetrConfig, DabDetrForObjectDetection
-from transformers.utils import logging
+from transformers_4573 import ConditionalDetrImageProcessor, DabDetrConfig, DabDetrForObjectDetection
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()
@@ -87,7 +87,7 @@ ORIGINAL_TO_CONVERTED_KEY_MAPPING = {
 }
 
 
-# Copied from transformers.models.mllama.convert_mllama_weights_to_hf.convert_old_keys_to_new_keys
+# Copied from transformers_4573.models.mllama.convert_mllama_weights_to_hf.convert_old_keys_to_new_keys
 def convert_old_keys_to_new_keys(state_dict_keys: Optional[dict] = None):
     """
     This function should be applied only once, on the concatenated keys to efficiently rename using

@@ -1,5 +1,5 @@
 [tool.coverage.run]
-source = ["transformers"]
+source = ["transformers_4573"]
 omit = [
     "*/convert_*",
     "*/__main__.py"
@@ -38,13 +38,13 @@ extend-safe-fixes = ["UP006"]
 # Ignore import violations in all `__init__.py` files.
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["E402", "F401", "F403", "F811"]
-"src/transformers/file_utils.py" = ["F401"]
-"src/transformers/utils/dummy_*.py" = ["F401"]
+"src/transformers_4573/file_utils.py" = ["F401"]
+"src/transformers_4573/utils/dummy_*.py" = ["F401"]
 "examples/legacy/**/*.py" = ["UP"]
 
 [tool.ruff.lint.isort]
 lines-after-imports = 2
-known-first-party = ["transformers"]
+known-first-party = ["transformers_4573"]
 
 [tool.ruff.format]
 # Like Black, use double quotes for strings.

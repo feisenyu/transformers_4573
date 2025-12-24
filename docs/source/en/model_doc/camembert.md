@@ -45,7 +45,7 @@ The examples below demonstrate how to predict the `<mask>` token with [`Pipeline
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline("fill-mask", model="camembert-base", dtype=torch.float16, device=0)
 pipeline("Le camembert est un délicieux fromage <mask>.")
@@ -57,7 +57,7 @@ pipeline("Le camembert est un délicieux fromage <mask>.")
 
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModelForMaskedLM
+from transformers_4573 import AutoTokenizer, AutoModelForMaskedLM
 
 tokenizer = AutoTokenizer.from_pretrained("camembert-base")
 model = AutoModelForMaskedLM.from_pretrained("camembert-base", dtype="auto", device_map="auto", attn_implementation="sdpa")
@@ -91,7 +91,7 @@ Quantization reduces the memory burden of large models by representing weights i
 The example below uses [bitsandbytes](../quantization/bitsandbytes) quantization to quantize the weights to 8-bits.
 
 ```python
-from transformers import AutoTokenizer, AutoModelForMaskedLM, BitsAndBytesConfig
+from transformers_4573 import AutoTokenizer, AutoModelForMaskedLM, BitsAndBytesConfig
 import torch
 
 quant_config = BitsAndBytesConfig(load_in_8bit=True)

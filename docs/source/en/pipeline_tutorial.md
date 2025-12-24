@@ -29,7 +29,7 @@ Each task is configured to use a default pretrained model and preprocessor, but 
 For example, to use the [`TextGenerationPipeline`] with [Gemma 2](./model_doc/gemma2), set `task="text-generation"` and `model="google/gemma-2-2b"`.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="google/gemma-2-2b")
 pipeline("the secret to baking a really good cake is ")
@@ -39,7 +39,7 @@ pipeline("the secret to baking a really good cake is ")
 When you have more than one input, pass them as a list.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -62,7 +62,7 @@ Here are some examples of how to use [`Pipeline`] for different tasks and modali
 <hfoption id="summarization">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="summarization", model="google/pegasus-billsum")
 pipeline("Section was formerly set out as section 44 of this title. As originally enacted, this section contained two further provisions that 'nothing in this act shall be construed as in any wise affecting the grant of lands made to the State of California by virtue of the act entitled 'An act authorizing a grant to the State of California of the Yosemite Valley, and of the land' embracing the Mariposa Big-Tree Grove, approved June thirtieth, eighteen hundred and sixty-four; or as affecting any bona-fide entry of land made within the limits above described under any law of the United States prior to the approval of this act.' The first quoted provision was omitted from the Code because the land, granted to the state of California pursuant to the Act cite, was receded to the United States. Resolution June 11, 1906, No. 27, accepted the recession.")
@@ -73,7 +73,7 @@ pipeline("Section was formerly set out as section 44 of this title. As originall
 <hfoption id="automatic speech recognition">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
 pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
@@ -84,7 +84,7 @@ pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac
 <hfoption id="image classification">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="image-classification", model="google/vit-base-patch16-224")
 pipeline(images="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg")
@@ -101,7 +101,7 @@ pipeline(images="https://huggingface.co/datasets/huggingface/documentation-image
 <hfoption id="visual question answering">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="visual-question-answering", model="Salesforce/blip-vqa-base")
 pipeline(
@@ -130,7 +130,7 @@ This section introduces you to some of the more important parameters.
 To run [`Pipeline`] on a GPU, set `device` to the associated CUDA device id. For example, `device=0` runs on the first GPU.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="google/gemma-2-2b", device=0)
 pipeline("the secret to baking a really good cake is ")
@@ -146,7 +146,7 @@ You could also let [Accelerate](https://hf.co/docs/accelerate/index), a library 
 > ```
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="google/gemma-2-2b", device_map="auto")
 pipeline("the secret to baking a really good cake is ")
@@ -158,7 +158,7 @@ pipeline("the secret to baking a really good cake is ")
 To run [`Pipeline`] on Apple silicon, set `device="mps"`.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="google/gemma-2-2b", device="mps")
 pipeline("the secret to baking a really good cake is ")
@@ -174,7 +174,7 @@ pipeline("the secret to baking a really good cake is ")
 In the example below, when there are 4 inputs and `batch_size` is set to 2, [`Pipeline`] passes a batch of 2 inputs to the model at a time.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -190,9 +190,9 @@ pipeline(["the secret to baking a really good cake is", "a baguette is", "paris 
 Another good use case for batch inference is for streaming data in [`Pipeline`].
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
-from transformers.pipelines.pt_utils import KeyDataset
+from transformers_4573.pipelines.pt_utils import KeyDataset
 import datasets
 
 device = Accelerator().device
@@ -225,7 +225,7 @@ The examples below demonstrate some of the task-specific parameters available.
 Pass the `return_timestamps="word"` parameter to [`Pipeline`] to return when each word was spoken.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
 pipeline(audio="https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac", return_timestamp="word")
@@ -261,7 +261,7 @@ Pass `return_full_text=False` to [`Pipeline`] to only return the generated text 
 [`~TextGenerationPipeline.__call__`] also supports additional keyword arguments from the [`~GenerationMixin.generate`] method. To return more than one generated sequence, set `num_return_sequences` to a value greater than 1.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="openai-community/gpt2")
 pipeline("the secret to baking a good cake is", num_return_sequences=4, return_full_text=False)
@@ -304,8 +304,8 @@ outputs = pipeline.postprocess(model_outputs)
 For inference with large datasets, you can iterate directly over the dataset itself. This avoids immediately allocating memory for the entire dataset, and you don't need to worry about creating batches yourself. Try [Batch inference](#batch-inference) with the `batch_size` parameter to see if it improves performance.
 
 ```py
-from transformers.pipelines.pt_utils import KeyDataset
-from transformers import pipeline
+from transformers_4573.pipelines.pt_utils import KeyDataset
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 from datasets import load_dataset
 
@@ -349,7 +349,7 @@ Lastly, [`Pipeline`] also accepts quantized models to reduce memory usage even f
 
 ```py
 import torch
-from transformers import pipeline, BitsAndBytesConfig
+from transformers_4573 import pipeline, BitsAndBytesConfig
 
 pipeline = pipeline(model="google/gemma-7b", dtype=torch.bfloat16, device_map="auto", model_kwargs={"quantization_config": BitsAndBytesConfig(load_in_8bit=True)})
 pipeline("the secret to baking a good cake is ")

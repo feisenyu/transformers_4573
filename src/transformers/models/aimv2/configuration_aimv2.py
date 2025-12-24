@@ -73,7 +73,7 @@ class Aimv2VisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SiglipVisionConfig, SiglipVisionModel
+    >>> from transformers_4573 import SiglipVisionConfig, SiglipVisionModel
 
     >>> # Initializing a Aimv2VisionConfig with apple/aimv2-large-patch14-224 style configuration
     >>> configuration = Aimv2VisionConfig()
@@ -237,7 +237,7 @@ class Aimv2Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Aimv2Config, Aimv2Model
+    >>> from transformers_4573 import Aimv2Config, Aimv2Model
 
     >>> # Initializing a Aimv2Config with apple/aimv2-large-patch14-224-lit style configuration
     >>> configuration = Aimv2Config()
@@ -249,7 +249,7 @@ class Aimv2Config(PreTrainedConfig):
     >>> configuration = model.config
 
     >>> # We can also initialize a Aimv2Config from a Aimv2TextConfig and a Aimv2VisionConfig
-    >>> from transformers import Aimv2TextConfig, Aimv2VisionConfig
+    >>> from transformers_4573 import Aimv2TextConfig, Aimv2VisionConfig
 
     >>> # Initializing a AIMv2Text and AIMv2Vision configuration
     >>> config_text = Aimv2TextConfig()

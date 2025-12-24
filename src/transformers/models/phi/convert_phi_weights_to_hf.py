@@ -30,7 +30,7 @@ import safetensors
 import torch
 from huggingface_hub import hf_hub_download
 
-from transformers import PhiConfig, PhiForCausalLM
+from transformers_4573 import PhiConfig, PhiForCausalLM
 
 
 _MODELS = {

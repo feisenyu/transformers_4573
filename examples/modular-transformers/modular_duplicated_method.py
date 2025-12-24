@@ -1,4 +1,4 @@
-from transformers.models.llama.configuration_llama import LlamaConfig
+from transformers_4573.models.llama.configuration_llama import LlamaConfig
 
 
 class DuplicatedMethodConfig(LlamaConfig):

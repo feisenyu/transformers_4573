@@ -50,7 +50,7 @@ class PaliGemmaConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PaliGemmaForConditionalGeneration, PaliGemmaConfig, SiglipVisionConfig, GemmaConfig
+    >>> from transformers_4573 import PaliGemmaForConditionalGeneration, PaliGemmaConfig, SiglipVisionConfig, GemmaConfig
 
     >>> # Initializing a Siglip-like vision config
     >>> vision_config = SiglipVisionConfig()

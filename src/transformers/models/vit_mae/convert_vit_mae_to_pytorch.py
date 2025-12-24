@@ -20,7 +20,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import ViTMAEConfig, ViTMAEForPreTraining, ViTMAEImageProcessor
+from transformers_4573 import ViTMAEConfig, ViTMAEForPreTraining, ViTMAEImageProcessor
 
 
 def rename_key(name):

@@ -19,8 +19,8 @@ import unittest
 
 from tokenizers import AddedToken
 
-from transformers import CodeLlamaTokenizer
-from transformers.testing_utils import (
+from transformers_4573 import CodeLlamaTokenizer
+from transformers_4573.testing_utils import (
     get_tests_dir,
     nested_simplify,
     require_sentencepiece,

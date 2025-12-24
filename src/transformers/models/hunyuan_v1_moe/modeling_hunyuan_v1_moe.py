@@ -575,7 +575,7 @@ class HunYuanMoEV1ForCausalLM(HunYuanMoEV1PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, HunYuanMoEV1ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, HunYuanMoEV1ForCausalLM
 
         >>> model = HunYuanMoEV1ForCausalLM.from_pretrained("meta-hunyuan_v1_moe/HunYuanMoEV1-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-hunyuan_v1_moe/HunYuanMoEV1-2-7b-hf")

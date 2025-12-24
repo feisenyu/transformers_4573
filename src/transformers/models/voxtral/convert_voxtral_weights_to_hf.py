@@ -22,15 +22,15 @@ import re
 import torch
 from safetensors.torch import load_file
 
-from transformers import (
+from transformers_4573 import (
     MistralCommonBackend,
     VoxtralConfig,
     VoxtralForConditionalGeneration,
     VoxtralProcessor,
     WhisperFeatureExtractor,
 )
-from transformers.models.whisper.modeling_whisper import sinusoids
-from transformers.utils.hub import cached_file
+from transformers_4573.models.whisper.modeling_whisper import sinusoids
+from transformers_4573.utils.hub import cached_file
 
 
 # fmt: off

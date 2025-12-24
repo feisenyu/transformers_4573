@@ -17,9 +17,9 @@ import copy
 import unittest
 from functools import cached_property
 
-from transformers.models.auto import get_values
-from transformers.testing_utils import require_torch, slow, torch_device
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.models.auto import get_values
+from transformers_4573.testing_utils import require_torch, slow, torch_device
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor, random_attention_mask
@@ -29,7 +29,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MODEL_FOR_MULTIPLE_CHOICE_MAPPING,
         MODEL_FOR_QUESTION_ANSWERING_MAPPING,
         MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING,
@@ -44,7 +44,7 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import LayoutLMv3ImageProcessor
+    from transformers_4573 import LayoutLMv3ImageProcessor
 
 
 class LayoutLMv3ModelTester:

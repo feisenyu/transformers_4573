@@ -39,7 +39,7 @@ pip install --upgrade accelerate torch
 Create a [`FineGrainedFP8Config`] class and pass it to [`~PreTrainedModel.from_pretrained`] to quantize it. The weights are loaded in full precision (`torch.float32`) by default regardless of the actual data type the weights are stored in. Set `dtype="auto"` to load the weights in the data type defined in a models `config.json` file to automatically load the most memory-optiomal data type.
 
 ```py
-from transformers import FineGrainedFP8Config, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import FineGrainedFP8Config, AutoModelForCausalLM, AutoTokenizer
 
 model_name = "meta-llama/Meta-Llama-3-8B"
 quantization_config = FineGrainedFP8Config()

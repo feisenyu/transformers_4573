@@ -90,7 +90,7 @@ class EomtConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import EomtConfig, EomtForUniversalSegmentation
+    >>> from transformers_4573 import EomtConfig, EomtForUniversalSegmentation
 
     >>> # Initialize configuration
     >>> config = EomtConfig()

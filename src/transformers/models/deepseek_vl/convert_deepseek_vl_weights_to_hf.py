@@ -24,14 +24,14 @@ from huggingface_hub import snapshot_download
 from huggingface_hub.errors import HFValidationError
 from safetensors.torch import load_file
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     DeepseekVLConfig,
     DeepseekVLForConditionalGeneration,
     DeepseekVLImageProcessor,
     DeepseekVLProcessor,
 )
-from transformers.image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD
+from transformers_4573.image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD
 
 
 # fmt: off

@@ -247,7 +247,7 @@ class VitMatteForImageMatting(VitMattePreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import VitMatteImageProcessor, VitMatteForImageMatting
+        >>> from transformers_4573 import VitMatteImageProcessor, VitMatteForImageMatting
         >>> import torch
         >>> from PIL import Image
         >>> from huggingface_hub import hf_hub_download

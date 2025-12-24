@@ -91,7 +91,7 @@ class EncodecConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import EncodecModel, EncodecConfig
+    >>> from transformers_4573 import EncodecModel, EncodecConfig
 
     >>> # Initializing a "facebook/encodec_24khz" style configuration
     >>> configuration = EncodecConfig()

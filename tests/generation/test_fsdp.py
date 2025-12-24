@@ -17,8 +17,8 @@ import textwrap
 from collections.abc import Callable
 from typing import Any
 
-from transformers import is_torch_available, is_torch_xpu_available
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available, is_torch_xpu_available
+from transformers_4573.testing_utils import (
     TestCasePlus,
     backend_device_count,
     backend_torch_accelerator_module,
@@ -28,7 +28,7 @@ from transformers.testing_utils import (
     torch_device,
     torchrun,
 )
-from transformers.utils import is_ccl_available, is_ipex_available
+from transformers_4573.utils import is_ccl_available, is_ipex_available
 
 
 if is_torch_available():
@@ -47,8 +47,8 @@ if is_torch_available():
     from torch.distributed.fsdp import FullyShardedDataParallel
     from torch.distributed.fsdp.wrap import transformer_auto_wrap_policy
 
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-    from transformers.models.gpt2.modeling_gpt2 import GPT2Block
+    from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
+    from transformers_4573.models.gpt2.modeling_gpt2 import GPT2Block
 
     data = 4 * [
         "Hello world!",
@@ -152,7 +152,7 @@ class TestFSDPGenericTaskModel(TestCasePlus):
             """
             import torch
             from torch.distributed.fsdp import fully_shard
-            from transformers import AutoModelForTokenClassification
+            from transformers_4573 import AutoModelForTokenClassification
 
             torch.distributed.init_process_group(
                 backend="nccl" if torch.cuda.is_available() else "gloo", init_method="env://"

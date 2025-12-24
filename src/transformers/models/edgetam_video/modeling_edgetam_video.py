@@ -32,7 +32,7 @@ import torch.nn.functional as F
 from torch import Tensor
 from tqdm import tqdm
 
-from transformers.utils.generic import OutputRecorder
+from transformers_4573.utils.generic import OutputRecorder
 
 from ... import initialization as init
 from ...activations import ACT2FN

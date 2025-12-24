@@ -89,7 +89,7 @@ class PhiConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PhiModel, PhiConfig
+    >>> from transformers_4573 import PhiModel, PhiConfig
 
     >>> # Initializing a Phi-1 style configuration
     >>> configuration = PhiConfig.from_pretrained("microsoft/phi-1")

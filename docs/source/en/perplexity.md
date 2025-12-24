@@ -72,7 +72,7 @@ predictions at each step.
 Let's demonstrate this process with GPT-2.
 
 ```python
-from transformers import GPT2LMHeadModel, GPT2TokenizerFast
+from transformers_4573 import GPT2LMHeadModel, GPT2TokenizerFast
 from accelerate import Accelerator
 
 device = Accelerator().device

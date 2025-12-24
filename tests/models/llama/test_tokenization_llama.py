@@ -1,8 +1,8 @@
 import unittest
 
 from tests.test_tokenization_common import TokenizerTesterMixin
-from transformers.models.llama.tokenization_llama import LlamaTokenizer
-from transformers.testing_utils import (
+from transformers_4573.models.llama.tokenization_llama import LlamaTokenizer
+from transformers_4573.testing_utils import (
     require_tokenizers,
 )
 

@@ -38,7 +38,7 @@ The example below demonstrates how to estimate depth with [`Pipeline`] or the [`
 ```py
 import requests
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 from PIL import Image
 
 url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
@@ -60,7 +60,7 @@ results["depth"]
 import torch
 import requests
 from PIL import Image
-from transformers import AutoModelForDepthEstimation, AutoImageProcessor
+from transformers_4573 import AutoModelForDepthEstimation, AutoImageProcessor
 
 image_processor = AutoImageProcessor.from_pretrained(
     "Intel/zoedepth-nyu-kitti"

@@ -24,7 +24,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from transformers.cache_utils import EncoderDecoderCache
+from transformers_4573.cache_utils import EncoderDecoderCache
 
 from ...generation import GenerationConfig, GenerationMixin
 from ...generation.logits_process import (
@@ -573,7 +573,7 @@ class WhisperGenerationMixin(GenerationMixin):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, WhisperForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, WhisperForConditionalGeneration
         >>> from datasets import load_dataset, Audio
 
         >>> processor = AutoProcessor.from_pretrained("openai/whisper-tiny.en")
@@ -630,7 +630,7 @@ class WhisperGenerationMixin(GenerationMixin):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, WhisperForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, WhisperForConditionalGeneration
         >>> from datasets import load_dataset
 
         >>> processor = AutoProcessor.from_pretrained("openai/whisper-tiny.en")

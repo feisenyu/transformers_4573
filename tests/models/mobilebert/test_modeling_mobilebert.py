@@ -18,9 +18,9 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import AutoTokenizer, MobileBertConfig, MobileBertForMaskedLM, is_torch_available
-from transformers.models.auto import get_values
-from transformers.testing_utils import require_sentencepiece, require_tokenizers, require_torch, slow, torch_device
+from transformers_4573 import AutoTokenizer, MobileBertConfig, MobileBertForMaskedLM, is_torch_available
+from transformers_4573.models.auto import get_values
+from transformers_4573.testing_utils import require_sentencepiece, require_tokenizers, require_torch, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, ids_tensor, random_attention_mask
@@ -30,7 +30,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MODEL_FOR_PRETRAINING_MAPPING,
         MobileBertForMaskedLM,
         MobileBertForMultipleChoice,

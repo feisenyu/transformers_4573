@@ -76,7 +76,7 @@ pip install transformers[flax]
 最後に、以下のコマンドを実行することで🤗 Transformersが正しくインストールされているかを確認します。学習済みモデルがダウンロードされます:
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
 ```
 
 その後、ラベルとスコアが出力されます:
@@ -98,7 +98,7 @@ pip install git+https://github.com/huggingface/transformers
 以下のコマンドを実行して、🤗 Transformersが正しくインストールされているかどうかを確認します:
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
 ```
 
 ## 編集可能なインストール
@@ -187,7 +187,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
     1. [`PreTrainedModel.from_pretrained`]で前もってファイルをダウンロードします:
 
     ```py
-    >>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+    >>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
     >>> tokenizer = AutoTokenizer.from_pretrained("bigscience/T0_3B")
     >>> model = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0_3B")
@@ -226,7 +226,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 ファイルがダウンロードされ、ローカルにキャッシュされたら、そのローカルパスを指定してファイルをロードして使用します:
 
 ```py
->>> from transformers import AutoConfig
+>>> from transformers_4573 import AutoConfig
 
 >>> config = AutoConfig.from_pretrained("./your/path/bigscience_t0/config.json")
 ```

@@ -22,8 +22,8 @@ import numpy as np
 import torch
 from torch import nn
 
-from transformers import ReformerConfig, ReformerModelWithLMHead
-from transformers.utils import logging
+from transformers_4573 import ReformerConfig, ReformerModelWithLMHead
+from transformers_4573.utils import logging
 
 from ...utils import strtobool
 

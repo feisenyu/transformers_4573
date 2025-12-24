@@ -90,7 +90,7 @@ class CsmDepthDecoderConfig(PreTrainedConfig):
             The attention head dimension. If None, it will default to hidden_size // num_attention_heads
 
     ```python
-    >>> from transformers import CsmDepthDecoder, CsmDepthDecoderConfig
+    >>> from transformers_4573 import CsmDepthDecoder, CsmDepthDecoderConfig
 
     >>> # Initializing a CsmDepthDecoder
     >>> configuration = CsmDepthDecoderConfig()
@@ -244,7 +244,7 @@ class CsmConfig(PreTrainedConfig):
             Configuration for the codec.
 
     ```python
-    >>> from transformers import CsmForConditionalGeneration, CsmConfig
+    >>> from transformers_4573 import CsmForConditionalGeneration, CsmConfig
 
     >>> # Initializing a CsmConfig
     >>> configuration = CsmConfig()

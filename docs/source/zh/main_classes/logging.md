@@ -43,7 +43,7 @@ TRANSFORMERS_NO_ADVISORY_WARNINGS=1 ./myprogram.py
 以下是如何在您自己的模块或脚本中使用与库相同的logger的示例：
 
 ```python
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 logging.set_verbosity_info()
 logger = logging.get_logger("transformers")

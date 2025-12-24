@@ -772,7 +772,7 @@ class RobertaForCausalLM(RobertaPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, RobertaForCausalLM, AutoConfig
+        >>> from transformers_4573 import AutoTokenizer, RobertaForCausalLM, AutoConfig
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("FacebookAI/roberta-base")

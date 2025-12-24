@@ -94,7 +94,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티와
 마스킹된 언어 모델링을 위해, 다음 단계로 DistilRoBERTa 토크나이저를 가져와서 `text` 하위 필드를 처리합니다:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -183,7 +183,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티와
 시퀀스 끝 토큰을 패딩 토큰으로 사용하고 데이터를 반복할 때마다 토큰을 무작위로 마스킹하도록 `mlm_-probability`를 지정합니다:
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
@@ -199,7 +199,7 @@ Hugging Face 계정에 로그인하여 모델을 업로드하고 커뮤니티와
 이제 모델 훈련을 시작할 준비가 되었습니다! [`AutoModelForMaskedLM`]를 사용해 DistilRoBERTa 모델을 가져옵니다:
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -269,7 +269,7 @@ Perplexity: 8.76
 `top_k` 매개변수를 사용하여 반환하는 예측의 수를 지정할 수 있습니다:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> mask_filler = pipeline("fill-mask", "stevhliu/my_awesome_eli5_mlm_model")
 >>> mask_filler(text, top_k=3)
@@ -290,7 +290,7 @@ Perplexity: 8.76
 텍스트를 토큰화하고 `input_ids`를 PyTorch 텐서 형태로 반환합니다.
 또한, `<mask>` 토큰의 위치를 지정해야 합니다:
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("my_awesome_eli5_mlm_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -300,7 +300,7 @@ Perplexity: 8.76
 모델에 `inputs`를 입력하고, 마스킹된 토큰의 `logits`를 반환합니다:
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("stevhliu/my_awesome_eli5_mlm_model")
 >>> logits = model(**inputs).logits

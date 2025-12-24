@@ -21,7 +21,7 @@ from ...utils import logging
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.owlvit.configuration_owlvit.OwlViTTextConfig with OwlViT->Owlv2, owlvit-base-patch32->owlv2-base-patch16, owlvit->owlv2, OWL-ViT->OWLv2
+# Copied from transformers_4573.models.owlvit.configuration_owlvit.OwlViTTextConfig with OwlViT->Owlv2, owlvit-base-patch32->owlv2-base-patch16, owlvit->owlv2, OWL-ViT->OWLv2
 class Owlv2TextConfig(PreTrainedConfig):
     r"""
     This is the configuration class to store the configuration of an [`Owlv2TextModel`]. It is used to instantiate an
@@ -70,7 +70,7 @@ class Owlv2TextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Owlv2TextConfig, Owlv2TextModel
+    >>> from transformers_4573 import Owlv2TextConfig, Owlv2TextModel
 
     >>> # Initializing a Owlv2TextModel with google/owlv2-base-patch16 style configuration
     >>> configuration = Owlv2TextConfig()
@@ -118,7 +118,7 @@ class Owlv2TextConfig(PreTrainedConfig):
         self.initializer_factor = initializer_factor
 
 
-# Copied from transformers.models.owlvit.configuration_owlvit.OwlViTVisionConfig with OwlViT->Owlv2, owlvit-base-patch32->owlv2-base-patch16, owlvit->owlv2, OWL-ViT->OWLv2, 32->16
+# Copied from transformers_4573.models.owlvit.configuration_owlvit.OwlViTVisionConfig with OwlViT->Owlv2, owlvit-base-patch32->owlv2-base-patch16, owlvit->owlv2, OWL-ViT->OWLv2, 32->16
 class Owlv2VisionConfig(PreTrainedConfig):
     r"""
     This is the configuration class to store the configuration of an [`Owlv2VisionModel`]. It is used to instantiate
@@ -160,7 +160,7 @@ class Owlv2VisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Owlv2VisionConfig, Owlv2VisionModel
+    >>> from transformers_4573 import Owlv2VisionConfig, Owlv2VisionModel
 
     >>> # Initializing a Owlv2VisionModel with google/owlv2-base-patch16 style configuration
     >>> configuration = Owlv2VisionConfig()
@@ -207,7 +207,7 @@ class Owlv2VisionConfig(PreTrainedConfig):
         self.initializer_factor = initializer_factor
 
 
-# Copied from transformers.models.owlvit.configuration_owlvit.OwlViTConfig with OwlViT->Owlv2, owlvit-base-patch32->owlv2-base-patch16, owlvit->owlv2, OWL-ViT->OWLv2
+# Copied from transformers_4573.models.owlvit.configuration_owlvit.OwlViTConfig with OwlViT->Owlv2, owlvit-base-patch32->owlv2-base-patch16, owlvit->owlv2, OWL-ViT->OWLv2
 class Owlv2Config(PreTrainedConfig):
     r"""
     [`Owlv2Config`] is the configuration class to store the configuration of an [`Owlv2Model`]. It is used to

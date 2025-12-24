@@ -42,7 +42,7 @@ rendered properly in your Markdown viewer.
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 # 텍스트 생성을 위한 파이프라인 생성
 pipeline = pipeline(task="text-generation", model="openai-community/gpt2", dtype=torch.float16, device=0)
@@ -53,7 +53,7 @@ pipeline("Hello, I'm a language model")
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 # 사전 학습된 모델과 토크나이저 로드
 model = AutoModelForCausalLM.from_pretrained("openai-community/gpt2", dtype=torch.float16, device_map="auto", attn_implementation="sdpa")
@@ -89,7 +89,7 @@ vllm serve openai-community/gpt2 --model-imp transformers
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, pipeline
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, pipeline
 
 # 양자화 설정 구성
 quantization_config = BitsAndBytesConfig(

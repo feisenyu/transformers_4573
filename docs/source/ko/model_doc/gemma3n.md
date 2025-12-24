@@ -44,7 +44,7 @@ Gemma 3n의 원본 체크포인트는 [Gemma 3n][gemma3n-collection] 출시 페�
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="image-text-to-text",
@@ -63,7 +63,7 @@ pipeline(
 
 ```py
 import torch
-from transformers import AutoProcessor, Gemma3nForConditionalGeneration
+from transformers_4573 import AutoProcessor, Gemma3nForConditionalGeneration
 
 model = Gemma3nForConditionalGeneration.from_pretrained(
     "google/gemma-3n-e4b-it",

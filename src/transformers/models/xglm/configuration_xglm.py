@@ -69,7 +69,7 @@ class XGLMConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import XGLMModel, XGLMConfig
+    >>> from transformers_4573 import XGLMModel, XGLMConfig
 
     >>> # Initializing a XGLM facebook/xglm-564M style configuration
     >>> configuration = XGLMConfig()

@@ -23,13 +23,13 @@ modified_only_fixup:
 		fi; \
 	fi
 
-# Update src/transformers/dependency_versions_table.py
+# Update src/transformers_4573/dependency_versions_table.py
 
 deps_table_update:
 	@python setup.py deps_table_update
 
 deps_table_check_updated:
-	@md5sum src/transformers/dependency_versions_table.py > md5sum.saved
+	@md5sum src/transformers_4573/dependency_versions_table.py > md5sum.saved
 	@python setup.py deps_table_update
 	@md5sum -c --quiet md5sum.saved || (printf "\nError: the version dependency table is outdated.\nPlease run 'make fixup' or 'make style' and commit the changes.\n\n" && exit 1)
 	@rm md5sum.saved
@@ -58,7 +58,7 @@ repo-consistency:
 # this target runs checks on all files
 
 quality:
-	@python -c "from transformers import *" || (echo '🚨 import failed, this means you introduced unprotected imports! 🚨'; exit 1)
+	@python -c "from transformers_4573 import *" || (echo '🚨 import failed, this means you introduced unprotected imports! 🚨'; exit 1)
 	ruff check $(check_dirs) setup.py conftest.py
 	ruff format --check $(check_dirs) setup.py conftest.py
 	python utils/sort_auto_mappings.py --check_only

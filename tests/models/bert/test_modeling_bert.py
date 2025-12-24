@@ -18,9 +18,9 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import AutoTokenizer, BertConfig, is_torch_available
-from transformers.models.auto import get_values
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, BertConfig, is_torch_available
+from transformers_4573.models.auto import get_values
+from transformers_4573.testing_utils import (
     require_torch,
     slow,
     torch_device,
@@ -35,7 +35,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MODEL_FOR_PRETRAINING_MAPPING,
         BertForMaskedLM,
         BertForMultipleChoice,

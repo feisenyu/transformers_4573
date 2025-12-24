@@ -39,7 +39,7 @@ from .configuration_mobilevitv2 import MobileViTV2Config
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.mobilevit.modeling_mobilevit.make_divisible
+# Copied from transformers_4573.models.mobilevit.modeling_mobilevit.make_divisible
 def make_divisible(value: int, divisor: int = 8, min_value: Optional[int] = None) -> int:
     """
     Ensure that all layers have a channel count that is divisible by `divisor`.
@@ -57,7 +57,7 @@ def clip(value: float, min_val: float = float("-inf"), max_val: float = float("i
     return max(min_val, min(max_val, value))
 
 
-# Copied from transformers.models.mobilevit.modeling_mobilevit.MobileViTConvLayer with MobileViT->MobileViTV2
+# Copied from transformers_4573.models.mobilevit.modeling_mobilevit.MobileViTConvLayer with MobileViT->MobileViTV2
 class MobileViTV2ConvLayer(nn.Module):
     def __init__(
         self,
@@ -122,7 +122,7 @@ class MobileViTV2ConvLayer(nn.Module):
         return features
 
 
-# Copied from transformers.models.mobilevit.modeling_mobilevit.MobileViTInvertedResidual with MobileViT->MobileViTV2
+# Copied from transformers_4573.models.mobilevit.modeling_mobilevit.MobileViTInvertedResidual with MobileViT->MobileViTV2
 class MobileViTV2InvertedResidual(nn.Module):
     """
     Inverted residual block (MobileNetv2): https://huggingface.co/papers/1801.04381
@@ -171,7 +171,7 @@ class MobileViTV2InvertedResidual(nn.Module):
         return residual + features if self.use_residual else features
 
 
-# Copied from transformers.models.mobilevit.modeling_mobilevit.MobileViTMobileNetLayer with MobileViT->MobileViTV2
+# Copied from transformers_4573.models.mobilevit.modeling_mobilevit.MobileViTMobileNetLayer with MobileViT->MobileViTV2
 class MobileViTV2MobileNetLayer(nn.Module):
     def __init__(
         self, config: MobileViTV2Config, in_channels: int, out_channels: int, stride: int = 1, num_stages: int = 1
@@ -727,7 +727,7 @@ class MobileViTV2ForImageClassification(MobileViTV2PreTrainedModel):
         )
 
 
-# Copied from transformers.models.mobilevit.modeling_mobilevit.MobileViTASPPPooling with MobileViT->MobileViTV2
+# Copied from transformers_4573.models.mobilevit.modeling_mobilevit.MobileViTASPPPooling with MobileViT->MobileViTV2
 class MobileViTV2ASPPPooling(nn.Module):
     def __init__(self, config: MobileViTV2Config, in_channels: int, out_channels: int) -> None:
         super().__init__()
@@ -812,7 +812,7 @@ class MobileViTV2ASPP(nn.Module):
         return pooled_features
 
 
-# Copied from transformers.models.mobilevit.modeling_mobilevit.MobileViTDeepLabV3 with MobileViT->MobileViTV2
+# Copied from transformers_4573.models.mobilevit.modeling_mobilevit.MobileViTDeepLabV3 with MobileViT->MobileViTV2
 class MobileViTV2DeepLabV3(nn.Module):
     """
     DeepLabv3 architecture: https://huggingface.co/papers/1706.05587
@@ -877,7 +877,7 @@ class MobileViTV2ForSemanticSegmentation(MobileViTV2PreTrainedModel):
         >>> import requests
         >>> import torch
         >>> from PIL import Image
-        >>> from transformers import AutoImageProcessor, MobileViTV2ForSemanticSegmentation
+        >>> from transformers_4573 import AutoImageProcessor, MobileViTV2ForSemanticSegmentation
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = Image.open(requests.get(url, stream=True).raw)

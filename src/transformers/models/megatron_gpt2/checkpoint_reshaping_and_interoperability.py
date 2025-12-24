@@ -24,9 +24,9 @@ import torch
 from huggingface_hub import split_torch_state_dict_into_shards
 from packaging import version
 
-from transformers import AutoTokenizer, GPT2Config
-from transformers.modeling_utils import WEIGHTS_INDEX_NAME, WEIGHTS_NAME
-from transformers.utils import check_torch_load_is_safe
+from transformers_4573 import AutoTokenizer, GPT2Config
+from transformers_4573.modeling_utils import WEIGHTS_INDEX_NAME, WEIGHTS_NAME
+from transformers_4573.utils import check_torch_load_is_safe
 
 
 def add_checkpointing_args(parser):
@@ -267,7 +267,7 @@ def transformers_to_megatron_fix_query_key_value_ordering(
 
 def merge_transformers_sharded_states(path, num_checkpoints):
     """
-    Merge sharded checkpoints from transformers into a single checkpoint.
+    Merge sharded checkpoints from transformers_4573 into a single checkpoint.
 
     Args:
         path (str): the path to the sharded checkpoints

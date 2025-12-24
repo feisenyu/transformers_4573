@@ -88,7 +88,7 @@ class MistralConfig(PreTrainedConfig):
             The dropout ratio for the attention probabilities.
 
     ```python
-    >>> from transformers import MistralModel, MistralConfig
+    >>> from transformers_4573 import MistralModel, MistralConfig
 
     >>> # Initializing a Mistral 7B style configuration
     >>> configuration = MistralConfig()

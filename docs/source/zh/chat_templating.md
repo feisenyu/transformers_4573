@@ -29,7 +29,7 @@ LLM 的一个常见应用场景是聊天。在聊天上下文中，不再是连�
 BlenderBot有一个非常简单的默认模板，主要是在对话轮之间添加空格：
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("facebook/blenderbot-400M-distill")
 
 >>> chat = [
@@ -46,7 +46,7 @@ BlenderBot有一个非常简单的默认模板，主要是在对话轮之间添�
 不过，为了看到更复杂的模板实际运行，让我们使用`mistralai/Mistral-7B-Instruct-v0.1`模型。
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
 
 >>> chat = [
@@ -71,7 +71,7 @@ Mistral-instruct是有使用这些token进行训练的，但BlenderBot没有。
 这是一个准备`model.generate()`的示例，使用`Zephyr`模型：
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 checkpoint = "HuggingFaceH4/zephyr-7b-beta"
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -120,7 +120,7 @@ Matey, I'm afraid I must inform ye that humans cannot eat helicopters. Helicopte
 有的，[`TextGenerationPipeline`]。这个`pipeline`的设计是为了方便使用聊天模型。让我们再试一次 Zephyr 的例子，但这次使用`pipeline`：
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("text-generation", "HuggingFaceH4/zephyr-7b-beta")
 messages = [
@@ -192,7 +192,7 @@ Can I ask a question?<|im_end|>
 让我们看一个例子：
 
 ```python
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 from datasets import Dataset
 
 tokenizer = AutoTokenizer.from_pretrained("HuggingFaceH4/zephyr-7b-beta")
@@ -225,7 +225,7 @@ The sun.</s>
 让我们来看看`BlenderBot`的模板：
 ```python
 
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> tokenizer = AutoTokenizer.from_pretrained("facebook/blenderbot-400M-distill")
 
 >>> tokenizer.chat_template

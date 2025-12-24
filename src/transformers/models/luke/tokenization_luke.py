@@ -138,7 +138,7 @@ class LukeTokenizer(TokenizersBackend):
     be encoded differently whether it is at the beginning of the sentence (without space) or not:
 
     ```python
-    >>> from transformers import LukeTokenizer
+    >>> from transformers_4573 import LukeTokenizer
 
     >>> tokenizer = LukeTokenizer.from_pretrained("studio-ousia/luke-base")
     >>> tokenizer("Hello world")["input_ids"]

@@ -45,7 +45,7 @@ pip install quanto accelerate transformers
 허깅페이스의 transformers 라이브러리는 개발자 편의를 위해 quanto의 인터페이스를 일부 통합하여 지원하고 있으며, 이 방식으로는 가중치 양자화만 지원합니다. 활성화 양자화, 캘리브레이션, QAT 같은 더 복잡한 기능을 수행하기 위해서는 [quanto](https://github.com/huggingface/optimum-quanto) 라이브러리의 해당 함수를 직접 호출해야 합니다.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer, QuantoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, QuantoConfig
 
 model_id = "facebook/opt-125m"
 tokenizer = AutoTokenizer.from_pretrained(model_id)

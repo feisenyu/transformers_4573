@@ -19,9 +19,9 @@ import os
 
 import torch
 
-from transformers import FunnelBaseModel, FunnelConfig, FunnelModel
-from transformers.models.funnel.modeling_funnel import FunnelPositionwiseFFN, FunnelRelMultiheadAttention
-from transformers.utils import logging
+from transformers_4573 import FunnelBaseModel, FunnelConfig, FunnelModel
+from transformers_4573.models.funnel.modeling_funnel import FunnelPositionwiseFFN, FunnelRelMultiheadAttention
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)

@@ -26,7 +26,7 @@ import torch.nn.functional as F
 import torchvision
 from torch import Tensor
 
-from transformers import CLIPTextModelWithProjection
+from transformers_4573 import CLIPTextModelWithProjection
 
 from ... import initialization as init
 from ...activations import ACT2FN
@@ -2164,7 +2164,7 @@ class Sam3Model(Sam3PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import Sam3Model, Sam3Processor
+        >>> from transformers_4573 import Sam3Model, Sam3Processor
         >>> from PIL import Image
         >>> import requests
 
@@ -2202,7 +2202,7 @@ class Sam3Model(Sam3PreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import Sam3Model, Sam3Processor
+        >>> from transformers_4573 import Sam3Model, Sam3Processor
         >>> from PIL import Image
         >>> import requests
 
@@ -2253,7 +2253,7 @@ class Sam3Model(Sam3PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoModel, AutoProcessor
+        >>> from transformers_4573 import AutoModel, AutoProcessor
 
         >>> model = AutoModel.from_pretrained("facebook/sam3")
         >>> processor = AutoProcessor.from_pretrained("facebook/sam3")

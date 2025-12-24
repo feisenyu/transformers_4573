@@ -19,19 +19,19 @@ import unittest
 
 import requests
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
-from transformers.video_utils import load_video
+from transformers_4573.utils import is_torch_available, is_vision_available
+from transformers_4573.video_utils import load_video
 
 
 if is_torch_available():
     import torch
 
-    from transformers import EdgeTamVideoModel, Sam2VideoProcessor
+    from transformers_4573 import EdgeTamVideoModel, Sam2VideoProcessor
 
 
 if is_vision_available():

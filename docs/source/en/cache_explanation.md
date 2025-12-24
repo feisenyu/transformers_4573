@@ -98,7 +98,7 @@ The example below demonstrates how to create a generation loop with [`DynamicCac
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, DynamicCache
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, DynamicCache
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -144,7 +144,7 @@ The generation loop usually takes care of the cache position, but if you're writ
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, DynamicCache
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, DynamicCache
 from accelerate import Accelerator
 
 device = Accelerator().device

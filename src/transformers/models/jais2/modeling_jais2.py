@@ -441,7 +441,7 @@ class Jais2ForCausalLM(Jais2PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Jais2ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Jais2ForCausalLM
 
         >>> model = Jais2ForCausalLM.from_pretrained("inceptionai/Jais-2-8B-Chat")
         >>> tokenizer = AutoTokenizer.from_pretrained("inceptionai/Jais-2-8B-Chat")

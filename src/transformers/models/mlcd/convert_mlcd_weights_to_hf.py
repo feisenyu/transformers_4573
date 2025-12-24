@@ -27,7 +27,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import CLIPImageProcessor
+from transformers_4573 import CLIPImageProcessor
 
 from ...utils import logging
 from .configuration_mlcd import MLCDVisionConfig

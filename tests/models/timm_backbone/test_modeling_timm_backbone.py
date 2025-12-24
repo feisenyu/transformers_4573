@@ -16,9 +16,9 @@ import copy
 import inspect
 import unittest
 
-from transformers import AutoBackbone
-from transformers.testing_utils import require_timm, require_torch, torch_device
-from transformers.utils.import_utils import is_torch_available
+from transformers_4573 import AutoBackbone
+from transformers_4573.testing_utils import require_timm, require_torch, torch_device
+from transformers_4573.utils.import_utils import is_torch_available
 
 from ...test_backbone_common import BackboneTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -26,7 +26,7 @@ from ...test_modeling_common import ModelTesterMixin, floats_tensor
 
 
 if is_torch_available():
-    from transformers import TimmBackbone, TimmBackboneConfig
+    from transformers_4573 import TimmBackbone, TimmBackboneConfig
 
 from ...test_pipeline_mixin import PipelineTesterMixin
 

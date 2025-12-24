@@ -18,15 +18,15 @@ import unittest
 
 import pytest
 
-from transformers.models.clip.tokenization_clip import VOCAB_FILES_NAMES
-from transformers.testing_utils import require_vision
-from transformers.utils import is_vision_available
+from transformers_4573.models.clip.tokenization_clip import VOCAB_FILES_NAMES
+from transformers_4573.testing_utils import require_vision
+from transformers_4573.utils import is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_vision_available():
-    from transformers import CLIPSegProcessor
+    from transformers_4573 import CLIPSegProcessor
 
 
 @require_vision

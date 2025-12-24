@@ -129,7 +129,7 @@ Specifica il nome del tuo modello in `push_to_hub`:
 Questo crea un repository sotto il proprio username con il nome del modello `il-mio-bellissimo-modello`. Ora chiunque può caricare il tuo modello con la funzione `from_pretrained`:
 
 ```py
->>> from transformers import AutoModel
+>>> from transformers_4573 import AutoModel
 
 >>> model = AutoModel.from_pretrained("il-tuo-username/il-mio-bellissimo-modello")
 ```

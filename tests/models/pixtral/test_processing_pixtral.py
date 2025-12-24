@@ -17,14 +17,14 @@ import numpy as np
 import torch
 from parameterized import parameterized
 
-from transformers.testing_utils import require_vision
-from transformers.utils import is_vision_available
+from transformers_4573.testing_utils import require_vision
+from transformers_4573.utils import is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 
 
 if is_vision_available():
-    from transformers import PixtralProcessor
+    from transformers_4573 import PixtralProcessor
 
 
 @require_vision

@@ -832,7 +832,7 @@ class ErnieForPreTraining(ErniePreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, ErnieForPreTraining
+        >>> from transformers_4573 import AutoTokenizer, ErnieForPreTraining
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("nghuyong/ernie-1.0-base-zh")
@@ -1145,7 +1145,7 @@ class ErnieForNextSentencePrediction(ErniePreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, ErnieForNextSentencePrediction
+        >>> from transformers_4573 import AutoTokenizer, ErnieForNextSentencePrediction
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("nghuyong/ernie-1.0-base-zh")

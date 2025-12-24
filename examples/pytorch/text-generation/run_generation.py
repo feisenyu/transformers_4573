@@ -34,7 +34,7 @@ import torch
 from accelerate import PartialState
 from accelerate.utils import set_seed
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     BloomForCausalLM,
     CTRLLMHeadModel,
@@ -52,7 +52,7 @@ from transformers import (
     XLNetLMHeadModel,
     XLNetTokenizer,
 )
-from transformers.modeling_outputs import CausalLMOutputWithPast
+from transformers_4573.modeling_outputs import CausalLMOutputWithPast
 
 
 logging.basicConfig(

@@ -19,11 +19,11 @@ import warnings
 import flatdict
 import torch
 
-from transformers import FuyuConfig, FuyuForCausalLM, LlamaTokenizer
+from transformers_4573 import FuyuConfig, FuyuForCausalLM, LlamaTokenizer
 
 
 try:
-    from transformers import LlamaTokenizerFast
+    from transformers_4573 import LlamaTokenizerFast
 
     tokenizer_class = LlamaTokenizerFast
 except ImportError as e:
@@ -37,7 +37,7 @@ except ImportError as e:
 
 If you have the original models, they can be loaded with:
 ```py
-from transformers import FuyuForCausalLM, FuyuTokenizer
+from transformers_4573 import FuyuForCausalLM, FuyuTokenizer
 
 model = FuyuForCausalLM.from_pretrained("/path/to/models/")
 tokenizer = FuyuTokenizer.from_pretrained("/path/to/models")

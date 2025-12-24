@@ -2,18 +2,18 @@ import unittest
 
 import pytest
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_sentencepiece,
     require_tokenizers,
     require_vision,
 )
-from transformers.utils import is_vision_available
+from transformers_4573.utils import is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_vision_available():
-    from transformers import TrOCRProcessor
+    from transformers_4573 import TrOCRProcessor
 
 
 @require_sentencepiece

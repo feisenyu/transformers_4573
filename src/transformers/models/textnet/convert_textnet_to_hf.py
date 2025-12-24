@@ -24,7 +24,7 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-from transformers import TextNetBackbone, TextNetConfig, TextNetImageProcessor
+from transformers_4573 import TextNetBackbone, TextNetConfig, TextNetImageProcessor
 
 
 tiny_config_url = "https://raw.githubusercontent.com/czczup/FAST/main/config/fast/nas-configs/fast_tiny.config"

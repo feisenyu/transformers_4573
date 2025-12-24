@@ -19,14 +19,14 @@ import unittest
 import numpy as np
 import pytest
 
-from transformers import WhisperTokenizer, WhisperTokenizerFast, is_speech_available
-from transformers.testing_utils import require_sentencepiece, require_torch, require_torchaudio
+from transformers_4573 import WhisperTokenizer, WhisperTokenizerFast, is_speech_available
+from transformers_4573.testing_utils import require_sentencepiece, require_torch, require_torchaudio
 
 from .test_feature_extraction_whisper import floats_list
 
 
 if is_speech_available():
-    from transformers import WhisperFeatureExtractor, WhisperProcessor
+    from transformers_4573 import WhisperFeatureExtractor, WhisperProcessor
 
 
 TRANSCRIBE = 50358

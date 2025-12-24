@@ -43,7 +43,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 # install optimized Mamba implementations
 # !pip install mamba-ssm causal-conv1d>=1.2.0
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -59,7 +59,7 @@ pipeline("Plants create energy through a process known as")
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "ai21labs/AI21-Jamba-Large-1.6",
@@ -92,7 +92,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_8bit=True,
                                          llm_int8_skip_modules=["mamba"])
@@ -132,7 +132,7 @@ print(assistant_response)
 
     ```py
     import torch
-    from transformers import AutoModelForCausalLM
+    from transformers_4573 import AutoModelForCausalLM
     model = AutoModelForCausalLM.from_pretrained("ai21labs/AI21-Jamba-1.5-Large",
                                                  use_mamba_kernels=False)
     ```

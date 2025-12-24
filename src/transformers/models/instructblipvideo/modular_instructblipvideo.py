@@ -17,11 +17,11 @@ from typing import Optional, Union
 
 import torch
 
-from transformers.models.instructblip.configuration_instructblip import (
+from transformers_4573.models.instructblip.configuration_instructblip import (
     InstructBlipQFormerConfig,
     InstructBlipVisionConfig,
 )
-from transformers.models.instructblip.modeling_instructblip import (
+from transformers_4573.models.instructblip.modeling_instructblip import (
     InstructBlipForConditionalGeneration,
     InstructBlipForConditionalGenerationModelOutput,
     InstructBlipModel,
@@ -79,7 +79,7 @@ class InstructBlipVideoConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     InstructBlipVideoVisionConfig,
     ...     InstructBlipVideoQFormerConfig,
     ...     OPTConfig,
@@ -397,7 +397,7 @@ class InstructBlipVideoForConditionalGeneration(InstructBlipForConditionalGenera
         Examples:
 
         ```python
-        >>> from transformers import InstructBlipVideoProcessor, InstructBlipVideoForConditionalGeneration
+        >>> from transformers_4573 import InstructBlipVideoProcessor, InstructBlipVideoForConditionalGeneration
         >>> import torch
         >>> from huggingface_hub import hf_hub_download
         >>> import av

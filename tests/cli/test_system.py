@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from transformers import __version__
+from transformers_4573 import __version__
 
 
 def test_cli_env(cli):

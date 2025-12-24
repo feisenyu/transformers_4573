@@ -69,7 +69,7 @@ class LiltConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import LiltConfig, LiltModel
+    >>> from transformers_4573 import LiltConfig, LiltModel
 
     >>> # Initializing a LiLT SCUT-DLVCLab/lilt-roberta-en-base style configuration
     >>> configuration = LiltConfig()

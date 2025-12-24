@@ -46,7 +46,7 @@ rendered properly in your Markdown viewer.
 正如您现在所知，您需要一个`tokenizer`来处理文本，包括填充和截断操作以处理可变的序列长度。如果要一次性处理您的数据集，可以使用 🤗 Datasets 的 [`map`](https://huggingface.co/docs/datasets/process#map) 方法，将预处理函数应用于整个数据集：
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -81,7 +81,7 @@ rendered properly in your Markdown viewer.
 
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -99,7 +99,7 @@ rendered properly in your Markdown viewer.
 指定保存训练检查点的位置：
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(output_dir="test_trainer")
 ```
@@ -126,7 +126,7 @@ rendered properly in your Markdown viewer.
 如果您希望在微调过程中监视评估指标，请在您的训练参数中指定 `eval_strategy` 参数，以在每个`epoch`结束时展示评估指标：
 
 ```py
->>> from transformers import TrainingArguments, Trainer
+>>> from transformers_4573 import TrainingArguments, Trainer
 
 >>> training_args = TrainingArguments(output_dir="test_trainer", eval_strategy="epoch")
 ```
@@ -208,7 +208,7 @@ torch.cuda.empty_cache()
 加载您的模型，并指定期望的标签数量：
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -227,7 +227,7 @@ torch.cuda.empty_cache()
 
 
 ```py
->>> from transformers import get_scheduler
+>>> from transformers_4573 import get_scheduler
 
 >>> num_epochs = 3
 >>> num_training_steps = num_epochs * len(train_dataloader)

@@ -43,7 +43,7 @@ import torch
 from scipy.io.wavfile import write
 from datasets import Audio, load_dataset
 
-from transformers import UnivNetFeatureExtractor, UnivNetModel
+from transformers_4573 import UnivNetFeatureExtractor, UnivNetModel
 
 model_id_or_path = "dg845/univnet-dev"
 model = UnivNetModel.from_pretrained(model_id_or_path)

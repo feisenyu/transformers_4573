@@ -46,7 +46,7 @@ ALBERT는 BERT와 마찬가지로 절대 위치 임베딩(absolute position embe
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="fill-mask",
@@ -62,7 +62,7 @@ pipeline("식물은 광합성이라고 알려진 과정을 통해 [MASK]를 생�
 
 ```py
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("albert/albert-base-v2")
 model = AutoModelForMaskedLM.from_pretrained(

@@ -15,7 +15,7 @@ import json
 import os
 import tempfile
 
-from transformers.cli.chat import new_chat_history, parse_generate_flags, save_chat
+from transformers_4573.cli.chat import new_chat_history, parse_generate_flags, save_chat
 
 
 def test_help(cli):

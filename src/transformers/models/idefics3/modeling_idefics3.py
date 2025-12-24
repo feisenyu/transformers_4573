@@ -101,7 +101,7 @@ class Idefics3CausalLMOutputWithPast(ModelOutput):
     image_hidden_states: Optional[tuple[torch.FloatTensor]] = None
 
 
-# Copied from transformers.models.idefics2.modeling_idefics2.Idefics2VisionEmbeddings with Idefics2->Idefics3
+# Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2VisionEmbeddings with Idefics2->Idefics3
 class Idefics3VisionEmbeddings(nn.Module):
     """
     This is a modified version of `siglip.modelign_siglip.SiglipVisionEmbeddings` to enable images of variable
@@ -174,7 +174,7 @@ class Idefics3VisionEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.siglip.modeling_siglip.eager_attention_forward
+# Copied from transformers_4573.models.siglip.modeling_siglip.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -198,11 +198,11 @@ def eager_attention_forward(
     return attn_output, attn_weights
 
 
-# Copied from transformers.models.siglip.modeling_siglip.SiglipAttention with Siglip->Idefics3Vision
+# Copied from transformers_4573.models.siglip.modeling_siglip.SiglipAttention with Siglip->Idefics3Vision
 class Idefics3VisionAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
 
-    # Copied from transformers.models.clip.modeling_clip.CLIPAttention.__init__
+    # Copied from transformers_4573.models.clip.modeling_clip.CLIPAttention.__init__
     def __init__(self, config):
         super().__init__()
         self.config = config
@@ -264,7 +264,7 @@ class Idefics3VisionAttention(nn.Module):
         return attn_output, attn_weights
 
 
-# Copied from transformers.models.siglip.modeling_siglip.SiglipMLP with Siglip->Idefics3Vision
+# Copied from transformers_4573.models.siglip.modeling_siglip.SiglipMLP with Siglip->Idefics3Vision
 class Idefics3VisionMLP(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -291,7 +291,7 @@ class Idefics3SimpleMLP(nn.Module):
         return self.proj(x)
 
 
-# Copied from transformers.models.idefics2.modeling_idefics2.Idefics2EncoderLayer with Idefics2->Idefics3
+# Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2EncoderLayer with Idefics2->Idefics3
 class Idefics3EncoderLayer(GradientCheckpointingLayer):
     def __init__(self, config: Idefics3VisionConfig):
         super().__init__()
@@ -302,7 +302,7 @@ class Idefics3EncoderLayer(GradientCheckpointingLayer):
         self.layer_norm2 = nn.LayerNorm(self.embed_dim, eps=config.layer_norm_eps)
 
     @auto_docstring
-    # Copied from transformers.models.siglip.modeling_siglip.SiglipEncoderLayer.forward
+    # Copied from transformers_4573.models.siglip.modeling_siglip.SiglipEncoderLayer.forward
     def forward(
         self,
         hidden_states: torch.Tensor,
@@ -327,7 +327,7 @@ class Idefics3EncoderLayer(GradientCheckpointingLayer):
         return hidden_states
 
 
-# Copied from transformers.models.siglip.modeling_siglip.SiglipEncoder with Siglip->Idefics3
+# Copied from transformers_4573.models.siglip.modeling_siglip.SiglipEncoder with Siglip->Idefics3
 class Idefics3Encoder(nn.Module):
     """
     Transformer encoder consisting of `config.num_hidden_layers` self attention layers. Each layer is a
@@ -362,7 +362,7 @@ class Idefics3Encoder(nn.Module):
         return BaseModelOutput(last_hidden_state=hidden_states)
 
 
-# Copied from transformers.models.llama.modeling_llama.repeat_kv
+# Copied from transformers_4573.models.llama.modeling_llama.repeat_kv
 def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     """
     This is the equivalent of torch.repeat_interleave(x, dim=1, repeats=n_rep). The hidden states go from (batch,
@@ -375,7 +375,7 @@ def repeat_kv(hidden_states: torch.Tensor, n_rep: int) -> torch.Tensor:
     return hidden_states.reshape(batch, num_key_value_heads * n_rep, slen, head_dim)
 
 
-# Copied from transformers.models.llama.modeling_llama.LlamaRMSNorm with Llama->Idefics3
+# Copied from transformers_4573.models.llama.modeling_llama.LlamaRMSNorm with Llama->Idefics3
 class Idefics3RMSNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
         """
@@ -460,11 +460,11 @@ class Idefics3VisionTransformer(Idefics3PreTrainedModel):
 
         self.post_init()
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2VisionTransformer.get_input_embeddings
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2VisionTransformer.get_input_embeddings
     def get_input_embeddings(self):
         return self.embeddings
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2VisionTransformer.set_input_embeddings
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2VisionTransformer.set_input_embeddings
     def set_input_embeddings(self, value):
         self.embeddings = value
 
@@ -532,11 +532,11 @@ class Idefics3Model(Idefics3PreTrainedModel):
 
         self.post_init()
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2Model.get_input_embeddings
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2Model.get_input_embeddings
     def get_input_embeddings(self):
         return self.text_model.get_input_embeddings()
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2Model.set_input_embeddings
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2Model.set_input_embeddings
     def set_input_embeddings(self, value):
         self.text_model.set_input_embeddings(value)
 
@@ -723,7 +723,7 @@ class Idefics3Model(Idefics3PreTrainedModel):
 class Idefics3ForConditionalGeneration(Idefics3PreTrainedModel, GenerationMixin):
     _tied_weights_keys = {"lm_head.weight": "model.text_model.embed_tokens.weight"}
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.__init__ with Idefics2->Idefics3
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.__init__ with Idefics2->Idefics3
     def __init__(self, config):
         super().__init__(config)
         self.model = Idefics3Model(config)
@@ -735,11 +735,11 @@ class Idefics3ForConditionalGeneration(Idefics3PreTrainedModel, GenerationMixin)
         # Initialize weights and apply final processing
         self.post_init()
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.get_input_embeddings
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.get_input_embeddings
     def get_input_embeddings(self):
         return self.model.text_model.get_input_embeddings()
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.set_input_embeddings
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.set_input_embeddings
     def set_input_embeddings(self, value):
         self.model.text_model.set_input_embeddings(value)
 
@@ -788,8 +788,8 @@ class Idefics3ForConditionalGeneration(Idefics3PreTrainedModel, GenerationMixin)
         >>> from PIL import Image
         >>> from io import BytesIO
 
-        >>> from transformers import AutoProcessor, AutoModelForImageTextToText
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
+        >>> from transformers_4573.image_utils import load_image
 
         >>> # Note that passing the image urls (instead of the actual pil images) to the processor is also possible
         >>> image1 = load_image("https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg")
@@ -877,7 +877,7 @@ class Idefics3ForConditionalGeneration(Idefics3PreTrainedModel, GenerationMixin)
             image_hidden_states=outputs.image_hidden_states,
         )
 
-    # Copied from transformers.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.prepare_inputs_for_generation
+    # Copied from transformers_4573.models.idefics2.modeling_idefics2.Idefics2ForConditionalGeneration.prepare_inputs_for_generation
     def prepare_inputs_for_generation(
         self,
         input_ids,

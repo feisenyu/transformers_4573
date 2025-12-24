@@ -81,7 +81,7 @@ class MaskFormerSwinConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import MaskFormerSwinConfig, MaskFormerSwinModel
+    >>> from transformers_4573 import MaskFormerSwinConfig, MaskFormerSwinModel
 
     >>> # Initializing a microsoft/swin-tiny-patch4-window7-224 style configuration
     >>> configuration = MaskFormerSwinConfig()

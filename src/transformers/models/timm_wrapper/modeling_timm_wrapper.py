@@ -183,7 +183,7 @@ class TimmWrapperModel(TimmWrapperPreTrainedModel):
         >>> import torch
         >>> from PIL import Image
         >>> from urllib.request import urlopen
-        >>> from transformers import AutoModel, AutoImageProcessor
+        >>> from transformers_4573 import AutoModel, AutoImageProcessor
 
         >>> # Load image
         >>> image = Image.open(urlopen(
@@ -313,7 +313,7 @@ class TimmWrapperForImageClassification(TimmWrapperPreTrainedModel):
         >>> import torch
         >>> from PIL import Image
         >>> from urllib.request import urlopen
-        >>> from transformers import AutoModelForImageClassification, AutoImageProcessor
+        >>> from transformers_4573 import AutoModelForImageClassification, AutoImageProcessor
 
         >>> # Load image
         >>> image = Image.open(urlopen(

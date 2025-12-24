@@ -123,7 +123,7 @@ DETR モデルをインスタンス化するには 3 つの方法があります
 オプション 1: モデル全体の事前トレーニングされた重みを使用して DETR をインスタンス化する
 
 ```py
->>> from transformers import DetrForObjectDetection
+>>> from transformers_4573 import DetrForObjectDetection
 
 >>> model = DetrForObjectDetection.from_pretrained("facebook/detr-resnet-50")
 ```
@@ -131,7 +131,7 @@ DETR モデルをインスタンス化するには 3 つの方法があります
 オプション 2: Transformer についてはランダムに初期化された重みを使用して DETR をインスタンス化しますが、バックボーンについては事前にトレーニングされた重みを使用します
 
 ```py
->>> from transformers import DetrConfig, DetrForObjectDetection
+>>> from transformers_4573 import DetrConfig, DetrForObjectDetection
 
 >>> config = DetrConfig()
 >>> model = DetrForObjectDetection(config)

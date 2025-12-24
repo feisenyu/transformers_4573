@@ -91,7 +91,7 @@ class Sam3VideoConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import Sam3VideoConfig, Sam3VideoModel
+    >>> from transformers_4573 import Sam3VideoConfig, Sam3VideoModel
 
     >>> # Initializing a SAM3 Video configuration with default detector and tracker
     >>> configuration = Sam3VideoConfig()

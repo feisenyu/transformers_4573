@@ -34,7 +34,7 @@ Refer to this [PR](https://github.com/huggingface/nanotron/pull/180) to pretrain
 Load a BitNet quantized model with [`~PreTrainedModel.from_pretrained`].
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 path = "/path/to/model"
 model = AutoModelForCausalLM.from_pretrained(path, device_map="auto")
 ```

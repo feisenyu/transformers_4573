@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import XLMRobertaTokenizer
-from transformers.testing_utils import require_sentencepiece, require_tokenizers
+from transformers_4573 import XLMRobertaTokenizer
+from transformers_4573.testing_utils import require_sentencepiece, require_tokenizers
 
 # import cached_property
 from ...test_tokenization_common import TokenizerTesterMixin

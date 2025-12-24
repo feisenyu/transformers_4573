@@ -40,7 +40,7 @@ The example below demonstrates how to generate text with [`Pipeline`] or the [`A
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -56,7 +56,7 @@ pipeline("Plants create energy through a process known as")
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "swiss-ai/Apertus-8B",

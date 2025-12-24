@@ -27,7 +27,7 @@ class GPTSw3Tokenizer(SentencePieceBackend):
 
     Example usage:
     ```python
-    >>> from transformers import GPTSw3Tokenizer
+    >>> from transformers_4573 import GPTSw3Tokenizer
 
     >>> tokenizer = GPTSw3Tokenizer.from_pretrained("AI-Sweden-Models/gpt-sw3-126m")
     >>> tokenizer("Svenska är kul!")["input_ids"]

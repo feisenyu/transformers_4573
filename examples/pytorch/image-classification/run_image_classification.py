@@ -47,7 +47,7 @@ from torchvision.transforms import (
 )
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     MODEL_FOR_IMAGE_CLASSIFICATION_MAPPING,
     AutoConfig,
     AutoImageProcessor,
@@ -58,8 +58,8 @@ from transformers import (
     TrainingArguments,
     set_seed,
 )
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 """ Fine-tuning a 🤗 Transformers model for image classification"""

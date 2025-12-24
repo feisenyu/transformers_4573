@@ -162,7 +162,7 @@ class LasrEncoderConfig(ParakeetEncoderConfig):
 
     Example:
         ```python
-        >>> from transformers import LasrEncoderModel, LasrEncoderConfig
+        >>> from transformers_4573 import LasrEncoderModel, LasrEncoderConfig
 
         >>> # Initializing a `LasrEncoder` configuration
         >>> configuration = LasrEncoderConfig()
@@ -261,7 +261,7 @@ class LasrCTCConfig(ParakeetCTCConfig):
                 Padding token id. Also used as blank token id.
     Example:
         ```python
-        >>> from transformers import LasrForCTC, LasrCTCConfig
+        >>> from transformers_4573 import LasrForCTC, LasrCTCConfig
         >>> # Initializing a Lasr configuration
         >>> configuration = LasrCTCConfig()
         >>> # Initializing a model from the configuration
@@ -483,7 +483,7 @@ class LasrEncoder(LasrPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, LasrEncoder
+        >>> from transformers_4573 import AutoProcessor, LasrEncoder
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = TODO
@@ -545,7 +545,7 @@ class LasrForCTC(ParakeetForCTC):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, LasrForCTC
+        >>> from transformers_4573 import AutoProcessor, LasrForCTC
         >>> from datasets import load_dataset, Audio
 
         >>> model_id = TODO

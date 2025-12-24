@@ -81,7 +81,7 @@ class SqueezeBertConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import SqueezeBertConfig, SqueezeBertModel
+    >>> from transformers_4573 import SqueezeBertConfig, SqueezeBertModel
 
     >>> # Initializing a SqueezeBERT configuration
     >>> configuration = SqueezeBertConfig()

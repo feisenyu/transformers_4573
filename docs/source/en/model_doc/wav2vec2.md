@@ -67,7 +67,7 @@ pip install -U flash-attn --no-build-isolation
 To load a model using Flash Attention 2, we can pass the argument `attn_implementation="flash_attention_2"` to [`.from_pretrained`](https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.PreTrainedModel.from_pretrained). We'll also load the model in half-precision (e.g. `torch.float16`), since it results in almost no degradation to audio quality but significantly lower memory usage and faster inference:
 
 ```python
->>> from transformers import Wav2Vec2Model
+>>> from transformers_4573 import Wav2Vec2Model
 
 model = Wav2Vec2Model.from_pretrained("facebook/wav2vec2-large-960h-lv60-self", dtype=torch.float16, attn_implementation="flash_attention_2").to(device)
 ...
@@ -150,7 +150,7 @@ Otherwise, [`~Wav2Vec2ProcessorWithLM.batch_decode`] performance will be slower 
 ```python
 >>> # Let's see how to use a user-managed pool for batch decoding multiple audios
 >>> from multiprocessing import get_context
->>> from transformers import AutoTokenizer, AutoProcessor, AutoModelForCTC
+>>> from transformers_4573 import AutoTokenizer, AutoProcessor, AutoModelForCTC
 from accelerate import Accelerator
 >>> from datasets import load_dataset
 >>> import datasets

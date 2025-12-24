@@ -51,7 +51,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="image-text-to-text",
@@ -70,7 +70,7 @@ pipeline(
 
 ```py
 import torch
-from transformers import AutoProcessor, Gemma3nForConditionalGeneration
+from transformers_4573 import AutoProcessor, Gemma3nForConditionalGeneration
 
 model = Gemma3nForConditionalGeneration.from_pretrained(
     "google/gemma-3n-e4b-it",

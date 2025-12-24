@@ -121,8 +121,8 @@ class Idefics2Processor(ProcessorMixin):
 
         ```python
         >>> import requests
-        >>> from transformers import Idefics2Processor
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import Idefics2Processor
+        >>> from transformers_4573.image_utils import load_image
 
         >>> processor = Idefics2Processor.from_pretrained("HuggingFaceM4/idefics2-8b", image_seq_len=2)
         >>> processor.image_processor.do_image_splitting = False  # Force as False to simplify the example

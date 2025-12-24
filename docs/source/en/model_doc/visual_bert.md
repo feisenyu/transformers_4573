@@ -41,7 +41,7 @@ import torch
 import torchvision
 from PIL import Image
 import numpy as np
-from transformers import AutoTokenizer, VisualBertForQuestionAnswering
+from transformers_4573 import AutoTokenizer, VisualBertForQuestionAnswering
 import requests
 from io import BytesIO
 

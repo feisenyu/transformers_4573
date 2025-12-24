@@ -31,7 +31,7 @@ rendered properly in your Markdown viewer.
 [`EncoderDecoderModel`]은 인코더와 디코더 설정(config)을 기반으로 무작위 초기화를 할 수 있습니다. 아래 예시는 [`BertModel`] 설정을 인코더로, 기본 [`BertForCausalLM`] 설정을 디코더로 사용하는 방법을 보여줍니다.
 
 ```python
->>> from transformers import BertConfig, EncoderDecoderConfig, EncoderDecoderModel
+>>> from transformers_4573 import BertConfig, EncoderDecoderConfig, EncoderDecoderModel
 
 >>> config_encoder = BertConfig()
 >>> config_decoder = BertConfig()
@@ -46,7 +46,7 @@ rendered properly in your Markdown viewer.
 
 
 ```python
->>> from transformers import EncoderDecoderModel, BertTokenizer
+>>> from transformers_4573 import EncoderDecoderModel, BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = EncoderDecoderModel.from_encoder_decoder_pretrained("google-bert/bert-base-uncased", "google-bert/bert-base-uncased")
@@ -59,7 +59,7 @@ rendered properly in your Markdown viewer.
 추론을 수행하려면 [`generate`] 메서드를 활용하여 텍스트를 자동 회귀(autoregressive) 방식으로 생성할 수 있습니다. 이 메서드는 탐욕 디코딩(greedy decoding), 빔 서치(beam search), 다항 샘플링(multinomial sampling) 등 다양한 디코딩 방식을 지원합니다.
 
 ```python
->>> from transformers import AutoTokenizer, EncoderDecoderModel
+>>> from transformers_4573 import AutoTokenizer, EncoderDecoderModel
 
 >>> # 미세 조정된 seq2seq 모델과 대응하는 토크나이저 가져오기
 >>> model = EncoderDecoderModel.from_pretrained("patrickvonplaten/bert2bert_cnn_daily_mail")
@@ -86,7 +86,7 @@ nearly 800 thousand customers were affected by the shutoffs. the aim is to reduc
 
 ```python
 >>> # 파이토치 체크포인트에서 로드하는 해결 방법
->>> from transformers import EncoderDecoderModel, TFEncoderDecoderModel
+>>> from transformers_4573 import EncoderDecoderModel, TFEncoderDecoderModel
 
 >>> _model = EncoderDecoderModel.from_pretrained("patrickvonplaten/bert2bert-cnn_dailymail-fp16")
 
@@ -106,7 +106,7 @@ nearly 800 thousand customers were affected by the shutoffs. the aim is to reduc
 보시다시피, 손실(loss)을 계산하려면 단 2개의 입력만 필요합니다: `input_ids`(입력 시퀀스를 인코딩한 `input_ids`)와 `labels`(목표 시퀀스를 인코딩한 `input_ids`).
 
 ```python
->>> from transformers import BertTokenizer, EncoderDecoderModel
+>>> from transformers_4573 import BertTokenizer, EncoderDecoderModel
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = EncoderDecoderModel.from_encoder_decoder_pretrained("google-bert/bert-base-uncased", "google-bert/bert-base-uncased")

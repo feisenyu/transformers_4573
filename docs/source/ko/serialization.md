@@ -85,7 +85,7 @@ optimum-cli export onnx --model local_path --task question-answering distilbert_
 그 결과로 생성된 `model.onnx` 파일은 ONNX 표준을 지원하는 많은 [가속기](https://onnx.ai/supported-tools.html#deployModel) 중 하나에서 실행할 수 있습니다. 예를 들어, [ONNX Runtime](https://onnxruntime.ai/)을 사용하여 모델을 로드하고 실행할 수 있습니다:
 
 ```python
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 >>> from optimum.onnxruntime import ORTModelForQuestionAnswering
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert_base_uncased_squad_onnx")
@@ -106,12 +106,12 @@ CLI 대신에 `optimum.onnxruntime`을 사용하여 프로그래밍 방식으로
 
 ```python
 >>> from optimum.onnxruntime import ORTModelForSequenceClassification
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> model_checkpoint = "distilbert_base_uncased_squad"
 >>> save_directory = "onnx/"
 
->>> # Load a model from transformers and export it to ONNX
+>>> # Load a model from transformers_4573 and export it to ONNX
 >>> ort_model = ORTModelForSequenceClassification.from_pretrained(model_checkpoint, export=True)
 >>> tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
 

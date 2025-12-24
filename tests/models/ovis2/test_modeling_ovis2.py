@@ -17,7 +17,7 @@ import unittest
 
 import requests
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     Ovis2Config,
     Ovis2ForConditionalGeneration,
@@ -25,7 +25,7 @@ from transformers import (
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     cleanup,
     require_torch,
     slow,

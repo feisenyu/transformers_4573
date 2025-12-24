@@ -19,8 +19,8 @@ import argparse
 import torch
 from flax.training.checkpoints import restore_checkpoint
 
-from transformers import FNetConfig, FNetForPreTraining
-from transformers.utils import logging
+from transformers_4573 import FNetConfig, FNetForPreTraining
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

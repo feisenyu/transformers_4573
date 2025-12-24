@@ -39,7 +39,7 @@ The example below demonstrates how to generate biomedical text with [`Pipeline`]
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 generator = pipeline(
     task="text-generation",
@@ -56,7 +56,7 @@ print(result)
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("microsoft/biogpt")
 model = AutoModelForCausalLM.from_pretrained(
@@ -92,7 +92,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -123,7 +123,7 @@ print(output)
 - BioGPT can reuse previously computed key-value attention pairs. Access this feature with the [past_key_values](https://huggingface.co/docs/transformers/main/en/model_doc/biogpt#transformers.BioGptModel.forward.past_key_values) parameter in [`BioGPTModel.forward`].
 
    ```py
-   from transformers import AutoModelForCausalLM
+   from transformers_4573 import AutoModelForCausalLM
 
    model = AutoModelForCausalLM.from_pretrained(
       "microsoft/biogpt",

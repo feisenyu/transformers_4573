@@ -49,7 +49,7 @@ additional tokens to whitespace characters, making the model more suitable for c
 The `generate()` method can be used to generate text using GPT Neo model.
 
 ```python
->>> from transformers import GPTNeoXForCausalLM, GPTNeoXTokenizerFast
+>>> from transformers_4573 import GPTNeoXForCausalLM, GPTNeoXTokenizerFast
 
 >>> model = GPTNeoXForCausalLM.from_pretrained("EleutherAI/gpt-neox-20b")
 >>> tokenizer = GPTNeoXTokenizerFast.from_pretrained("EleutherAI/gpt-neox-20b")
@@ -86,7 +86,7 @@ pip install -U flash-attn --no-build-isolation
 To load a model using Flash Attention 2, we can pass the argument `attn_implementation="flash_attention_2"` to [`.from_pretrained`](https://huggingface.co/docs/transformers/main/en/main_classes/model#transformers.PreTrainedModel.from_pretrained). We'll also load the model in half-precision (e.g. `torch.float16`), since it results in almost no degradation to audio quality but significantly lower memory usage and faster inference:
 
 ```python
->>> from transformers import GPTNeoXForCausalLM, GPTNeoXTokenizerFast
+>>> from transformers_4573 import GPTNeoXForCausalLM, GPTNeoXTokenizerFast
 
 model = GPTNeoXForCausalLM.from_pretrained("EleutherAI/gpt-neox-20b", dtype=torch.float16, attn_implementation="flash_attention_2").to(device)
 ...
@@ -112,7 +112,7 @@ SDPA is used by default for `torch>=2.1.1` when an implementation is available, 
 `attn_implementation="sdpa"` in `from_pretrained()` to explicitly request SDPA to be used.
 
 ```python
-from transformers import GPTNeoXForCausalLM
+from transformers_4573 import GPTNeoXForCausalLM
 model = GPTNeoXForCausalLM.from_pretrained("EleutherAI/gpt-neox-20b", dtype=torch.float16, attn_implementation="sdpa")
 ...
 ```

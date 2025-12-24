@@ -39,7 +39,7 @@ The encoder processes images at their native resolution up to 512×512 pixels, e
 The following example shows how to generate an answer using the `AutoModelForImageTextToText` class.
 
 ```python
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 \
 # Load model and processor
 model_id = "LiquidAI/LFM2-VL-1.6B"

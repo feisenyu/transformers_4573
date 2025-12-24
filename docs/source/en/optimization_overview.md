@@ -43,7 +43,7 @@ Pass a [fixed size cache](./kv_cache#fixed-size-cache) to [`~GenerationMixin.gen
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-0.6B")
 model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen3-0.6B", dtype=torch.float16, device_map="auto")
@@ -63,7 +63,7 @@ Alternative [attention backends](./attention_interface) lower memory traffic. Fo
 Set `attn_implementation` in [`~PreTrainedModel.from_pretrained`] to load an optimized attention backend.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen3-0.6B", attn_implementation="flash_attention_2")
 ```
@@ -76,7 +76,7 @@ The example below loads an optimized FlashAttention-2 kernel without installing 
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen3-0.6B", attn_implementation="kernels-community/flash-attn2"
@@ -91,7 +91,7 @@ Pass a quantization config to the `quantization_config` argument in [`~PreTraine
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 bnb_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
 
@@ -109,7 +109,7 @@ Use the `cache_implementation` argument in [`~GenerationMixin.generate`] to set 
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen3-0.6B")
 model = AutoModelForCausalLM.from_pretrained(
@@ -127,7 +127,7 @@ outputs = model.generate(**inputs, do_sample=False, max_new_tokens=50, cache_imp
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct", tp_plan="auto")
 print(model._tp_plan)
@@ -141,8 +141,8 @@ Use [`~ContinuousMixin.generate_batch`] to enable continuous batching.
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.generation import GenerationConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573.generation import GenerationConfig
 
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen3-0.6B",

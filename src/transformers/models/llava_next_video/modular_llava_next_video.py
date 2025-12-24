@@ -19,7 +19,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.models.llava_next.modeling_llava_next import (
+from transformers_4573.models.llava_next.modeling_llava_next import (
     LlavaNextCausalLMOutputWithPast,
     LlavaNextForConditionalGeneration,
     LlavaNextModel,
@@ -86,7 +86,7 @@ class LlavaNextVideoConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import LlavaNextVideoForConditionalGeneration, LlavaNextVideoConfig, CLIPVisionConfig, LlamaConfig
+    >>> from transformers_4573 import LlavaNextVideoForConditionalGeneration, LlavaNextVideoConfig, CLIPVisionConfig, LlamaConfig
 
     >>> # Initializing a CLIP-vision config
     >>> vision_config = CLIPVisionConfig()
@@ -577,7 +577,7 @@ class LlavaNextVideoForConditionalGeneration(LlavaNextForConditionalGeneration):
         >>> from PIL import Image
         >>> import requests
         >>> import av
-        >>> from transformers import AutoProcessor, LlavaNextVideoForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, LlavaNextVideoForConditionalGeneration
 
         >>> def read_video_pyav(container, indices):
         ...     '''

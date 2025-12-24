@@ -14,7 +14,7 @@
 # limitations under the License.
 """SAM3 model configuration"""
 
-from transformers import CLIPTextConfig
+from transformers_4573 import CLIPTextConfig
 
 from ...configuration_utils import PreTrainedConfig
 from ..auto import CONFIG_MAPPING, AutoConfig
@@ -421,7 +421,7 @@ class Sam3Config(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import Sam3Config, Sam3Model
+    >>> from transformers_4573 import Sam3Config, Sam3Model
 
     >>> # Initializing a SAM3 configuration
     >>> configuration = Sam3Config()

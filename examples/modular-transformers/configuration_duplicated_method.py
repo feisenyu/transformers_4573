@@ -81,7 +81,7 @@ class DuplicatedMethodConfig(PreTrainedConfig):
             The attention head dimension. If None, it will default to hidden_size // num_attention_heads
 
     ```python
-    >>> from transformers import DuplicatedMethodModel, DuplicatedMethodConfig
+    >>> from transformers_4573 import DuplicatedMethodModel, DuplicatedMethodConfig
 
     >>> # Initializing a DuplicatedMethod duplicated_method-7b style configuration
     >>> configuration = DuplicatedMethodConfig()

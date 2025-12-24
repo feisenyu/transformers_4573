@@ -59,7 +59,7 @@ class GraniteSpeechEncoderConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import GraniteSpeechEncoderConfig, GraniteSpeechCTCEncoder
+    >>> from transformers_4573 import GraniteSpeechEncoderConfig, GraniteSpeechCTCEncoder
 
     >>> # Initializing a GraniteSpeechEncoderConfig
     >>> configuration = GraniteSpeechEncoderConfig()
@@ -134,7 +134,7 @@ class GraniteSpeechConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import GraniteSpeechConfig, GraniteSpeechForConditionalGeneration
+    >>> from transformers_4573 import GraniteSpeechConfig, GraniteSpeechForConditionalGeneration
 
     >>> # Initializing a GraniteSpeechConfig
     >>> configuration = GraniteSpeechConfig()

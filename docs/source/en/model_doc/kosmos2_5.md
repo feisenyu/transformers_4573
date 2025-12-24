@@ -45,7 +45,7 @@ import re
 import torch
 import requests
 from PIL import Image, ImageDraw
-from transformers import AutoProcessor, Kosmos2_5ForConditionalGeneration
+from transformers_4573 import AutoProcessor, Kosmos2_5ForConditionalGeneration
 from accelerate import Accelerator
 
 repo = "microsoft/kosmos-2.5"
@@ -85,7 +85,7 @@ import re
 import torch
 import requests
 from PIL import Image, ImageDraw
-from transformers import AutoProcessor, Kosmos2_5ForConditionalGeneration
+from transformers_4573 import AutoProcessor, Kosmos2_5ForConditionalGeneration
 from accelerate import Accelerator
 
 repo = "microsoft/kosmos-2.5"
@@ -169,7 +169,7 @@ import re
 import torch
 import requests
 from PIL import Image, ImageDraw
-from transformers import AutoProcessor, Kosmos2_5ForConditionalGeneration
+from transformers_4573 import AutoProcessor, Kosmos2_5ForConditionalGeneration
 
 repo = "microsoft/kosmos-2.5-chat"
 device = "cuda:0"

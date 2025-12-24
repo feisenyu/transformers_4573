@@ -137,7 +137,7 @@ Nếu bạn sở hữu hoặc sử dụng một dự án mà bạn tin rằng n�
 Để ngay lập tức sử dụng một mô hình trên một đầu vào cụ thể (văn bản, hình ảnh, âm thanh, ...), chúng tôi cung cấp API `pipeline`. Pipelines nhóm một mô hình được huấn luyện trước với quá trình tiền xử lý đã được sử dụng trong quá trình huấn luyện của mô hình đó. Dưới đây là cách sử dụng nhanh một pipeline để phân loại văn bản tích cực so với tiêu cực:
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Cấp phát một pipeline cho phân tích cảm xúc
 >>> classifier = pipeline('sentiment-analysis')
@@ -152,7 +152,7 @@ Nhiều nhiệm vụ có sẵn một `pipeline` được huấn luyện trước
 ``` python
 >>> import requests
 >>> from PIL import Image
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 # Tải xuống một hình ảnh với những con mèo dễ thương
 >>> url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/coco_sample.png"
@@ -190,7 +190,7 @@ Bạn có thể tìm hiểu thêm về các nhiệm vụ được hỗ trợ b�
 
 Ngoài `pipeline`, để tải xuống và sử dụng bất kỳ mô hình được huấn luyện trước nào cho nhiệm vụ cụ thể của bạn, chỉ cần ba dòng code. Đây là phiên bản PyTorch:
 ```python
->>> from transformers import AutoTokenizer, AutoModel
+>>> from transformers_4573 import AutoTokenizer, AutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
@@ -201,7 +201,7 @@ Ngoài `pipeline`, để tải xuống và sử dụng bất kỳ mô hình đư
 
 Và đây là mã tương đương cho TensorFlow:
 ```python
->>> from transformers import AutoTokenizer, TFAutoModel
+>>> from transformers_4573 import AutoTokenizer, TFAutoModel
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> model = TFAutoModel.from_pretrained("google-bert/bert-base-uncased")

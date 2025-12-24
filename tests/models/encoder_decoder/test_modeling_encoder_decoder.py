@@ -16,8 +16,8 @@
 import tempfile
 import unittest
 
-from transformers import is_torch_available, logging
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available, logging
+from transformers_4573.testing_utils import (
     CaptureLogger,
     Expectations,
     require_deterministic_for_xpu,
@@ -39,7 +39,7 @@ if is_torch_available():
     import numpy as np
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoConfig,
         AutoTokenizer,
         BartForCausalLM,
@@ -55,7 +55,7 @@ if is_torch_available():
         RobertaForCausalLM,
         RobertaModel,
     )
-    from transformers.modeling_outputs import BaseModelOutput
+    from transformers_4573.modeling_outputs import BaseModelOutput
 
 
 @require_torch

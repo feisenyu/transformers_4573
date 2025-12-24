@@ -103,7 +103,7 @@ pip install transformers datasets evaluate
 次のステップは、`text`サブフィールドを処理するために DistilGPT2 トークナイザーをロードすることです。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilgpt2")
 ```
@@ -189,7 +189,7 @@ Apply the `group_texts` function over the entire dataset:
 シーケンス終了トークンをパディング トークンとして使用し、`mlm=False` を設定します。これは、入力を 1 要素分右にシフトしたラベルとして使用します。
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -209,7 +209,7 @@ Apply the `group_texts` function over the entire dataset:
 
 
 ```py
->>> from transformers import AutoModelForCausalLM, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForCausalLM, TrainingArguments, Trainer
 
 >>> model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
 ```
@@ -278,7 +278,7 @@ Perplexity: 49.61
 
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline("text-generation", model="my_awesome_eli5_clm-model")
 >>> generator(prompt)
@@ -290,7 +290,7 @@ Perplexity: 49.61
 テキストをトークン化し、「input_ids」を PyTorch テンソルとして返します。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("my_awesome_eli5_clm-model")
 >>> inputs = tokenizer(prompt, return_tensors="pt").input_ids
@@ -300,7 +300,7 @@ Perplexity: 49.61
 さまざまなテキスト生成戦略と生成を制御するためのパラメーターの詳細については、[テキスト生成戦略](../generation_strategies) ページを参照してください。
 
 ```py
->>> from transformers import AutoModelForCausalLM
+>>> from transformers_4573 import AutoModelForCausalLM
 
 >>> model = AutoModelForCausalLM.from_pretrained("my_awesome_eli5_clm-model")
 >>> outputs = model.generate(inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)

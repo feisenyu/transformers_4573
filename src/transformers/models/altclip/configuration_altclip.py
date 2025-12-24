@@ -76,7 +76,7 @@ class AltCLIPTextConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import AltCLIPTextModel, AltCLIPTextConfig
+    >>> from transformers_4573 import AltCLIPTextModel, AltCLIPTextConfig
 
     >>> # Initializing a AltCLIPTextConfig with BAAI/AltCLIP style configuration
     >>> configuration = AltCLIPTextConfig()
@@ -175,7 +175,7 @@ class AltCLIPVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import AltCLIPVisionConfig, AltCLIPVisionModel
+    >>> from transformers_4573 import AltCLIPVisionConfig, AltCLIPVisionModel
 
     >>> # Initializing a AltCLIPVisionConfig with BAAI/AltCLIP style configuration
     >>> configuration = AltCLIPVisionConfig()
@@ -249,7 +249,7 @@ class AltCLIPConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import AltCLIPConfig, AltCLIPModel
+    >>> from transformers_4573 import AltCLIPConfig, AltCLIPModel
 
     >>> # Initializing a AltCLIPConfig with BAAI/AltCLIP style configuration
     >>> configuration = AltCLIPConfig()

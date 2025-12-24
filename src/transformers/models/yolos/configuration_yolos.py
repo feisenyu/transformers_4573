@@ -81,7 +81,7 @@ class YolosConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import YolosConfig, YolosModel
+    >>> from transformers_4573 import YolosConfig, YolosModel
 
     >>> # Initializing a YOLOS hustvl/yolos-base style configuration
     >>> configuration = YolosConfig()

@@ -40,7 +40,7 @@ pip install flash-attn --no-build-isolation
 Let's initialize the model and the processor.
 
 ```python
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 from accelerate import Accelerator
 import torch
 
@@ -131,7 +131,7 @@ print(generated_texts)
 The fastest way to get started is to use the [`Pipeline`] API. Specify the `"image-text-to-text"` task and the model you want to use.
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 pipe = pipeline("image-text-to-text", model="llava-hf/llava-interleave-qwen-0.5b-hf")
 ```
 
@@ -215,7 +215,7 @@ Assume we have an application that keeps chat history and takes in the new user 
 
 ```python
 import time
-from transformers import TextIteratorStreamer
+from transformers_4573 import TextIteratorStreamer
 from threading import Thread
 
 def model_inference(
@@ -301,7 +301,7 @@ pip install -U optimum-quanto bitsandbytes
 To quantize a model during loading, we need to first create [`QuantoConfig`]. Then load the model as usual, but pass `quantization_config` during model initialization.
 
 ```python
-from transformers import AutoModelForImageTextToText, QuantoConfig
+from transformers_4573 import AutoModelForImageTextToText, QuantoConfig
 
 model_id = "Qwen/Qwen3-VL-4B-Instruct"
 quantization_config = QuantoConfig(weights="int8")

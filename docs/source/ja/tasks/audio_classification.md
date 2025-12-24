@@ -123,7 +123,7 @@ DatasetDict({
 次のステップでは、Wav2Vec2 特徴抽出プログラムをロードしてオーディオ信号を処理します。
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base")
 ```
@@ -195,7 +195,7 @@ MInDS-14 データセットのサンプリング レートは 8khz です (こ�
 これでモデルのトレーニングを開始する準備が整いました。 [`AutoModelForAudioClassification`] を使用して、予期されるラベルの数とラベル マッピングを使用して Wav2Vec2 を読み込みます。
 
 ```py
->>> from transformers import AutoModelForAudioClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForAudioClassification, TrainingArguments, Trainer
 
 >>> num_labels = len(id2label)
 >>> model = AutoModelForAudioClassification.from_pretrained(
@@ -268,7 +268,7 @@ MInDS-14 データセットのサンプリング レートは 8khz です (こ�
 推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`] で使用することです。モデルを使用して音声分類用の`pipeline`をインスタンス化し、それに音声ファイルを渡します。
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("audio-classification", model="stevhliu/my_awesome_minds_model")
 >>> classifier(audio_file)
@@ -287,7 +287,7 @@ MInDS-14 データセットのサンプリング レートは 8khz です (こ�
 特徴抽出器をロードしてオーディオ ファイルを前処理し、`input`を PyTorch テンソルとして返します。
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained("stevhliu/my_awesome_minds_model")
 >>> inputs = feature_extractor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
@@ -296,7 +296,7 @@ MInDS-14 データセットのサンプリング レートは 8khz です (こ�
 入力をモデルに渡し、ロジットを返します。
 
 ```py
->>> from transformers import AutoModelForAudioClassification
+>>> from transformers_4573 import AutoModelForAudioClassification
 
 >>> model = AutoModelForAudioClassification.from_pretrained("stevhliu/my_awesome_minds_model")
 >>> with torch.no_grad():

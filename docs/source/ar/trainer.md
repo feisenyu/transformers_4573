@@ -37,7 +37,7 @@ pip install accelerate --upgrade
 إذا كنت تُريد تحديد أي خيارات تدريب أو معلمات فائقة، فيمكنك العثور عليها في فئة [`TrainingArguments`]. على سبيل المثال، دعنا نحدد أين يتم حفظ النموذج في `output_dir` ورفع النموذج إلى Hub بعد التدريب باستخدام `push_to_hub=True`.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 training_args = TrainingArguments(
     output_dir="your-model"،
@@ -57,7 +57,7 @@ training_args = TrainingArguments(
 أخيرًا، استدعِ [`~Trainer.train`] لبدء التدريب!
 
 ```py
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 trainer = Trainer(
     model=model,
@@ -111,7 +111,7 @@ trainer.train(resume_from_checkpoint="your-model/checkpoint-1000")
 
 ```py
 from torch import nn
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 class CustomTrainer(Trainer):
     def compute_loss(self, model, inputs, return_outputs=False):
@@ -132,7 +132,7 @@ class CustomTrainer(Trainer):
 على سبيل المثال، إذا كنت تريد إضافة دالة استدعاء إيقاف مبكر إلى حلقة التدريب بعد 10 خطوات.
 
 ```py
-from transformers import TrainerCallback
+from transformers_4573 import TrainerCallback
 
 class EarlyStoppingCallback(TrainerCallback):
     def __init__(self, num_steps=10):
@@ -148,7 +148,7 @@ class EarlyStoppingCallback(TrainerCallback):
 ثم مرره إلى معامل `callback` في [`Trainer`].
 
 ```py
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 trainer = Trainer(
     model=model,
@@ -229,7 +229,7 @@ my_app.py ... --log_level error --log_level_replica error --log_on_each_node 0
 [NEFTune](https://hf.co/papers/2310.05914) هي تقنية يمكن أن تحسن الأداء عن طريق إضافة ضوضاء إلى مُتجهات التعلم أثناء التدريب. لتمكينه في [`Trainer`], قم بتعيين معامل `neftune_noise_alpha` في [`TrainingArguments`] للتحكم في مقدار الضوضاء المُضافة.
 
 ```py
-from transformers import TrainingArguments, Trainer
+from transformers_4573 import TrainingArguments, Trainer
 
 training_args = TrainingArguments(..., neftune_noise_alpha=0.1)
 trainer = Trainer(..., args=training_args)
@@ -248,7 +248,7 @@ pip install liger-kernel
 يجب عليك تمرير `use_liger_kernel=True` لتطبيق نواة `liger` على نموذجك، على سبيل المثال:
 
 ```python
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 training_args = TrainingArguments(
     output_dir="your-model",
@@ -270,7 +270,7 @@ training_args = TrainingArguments(
 ## المُحسِّنات
 يمكنك اختيار مُحسِّن مدمج للتدريب باستخدام:
 ```python
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 training_args = TrainingArguments(..., optim="adamw_torch")
 ```
 اطلع على [`OptimizerNames`](https://github.com/huggingface/transformers/blob/main/src/transformers/training_args.py) للاطلاع على القائمة الكاملة للخيارات. نُدرج أمثلة مُتقدمة في الأقسام أدناه.
@@ -286,7 +286,7 @@ optimizer_kwargs = {
     "weight_decay": 0.05,
 }
 
-from transformers import Trainer
+from transformers_4573 import Trainer
 trainer = Trainer(..., optimizer_cls_and_kwargs=(optimizer_cls, optimizer_kwargs))
 ```
 
@@ -419,7 +419,7 @@ trainer.train()
 ```python
 import torch
 import datasets
-from transformers import TrainingArguments, AutoTokenizer, AutoModelForCausalLM, Trainer
+from transformers_4573 import TrainingArguments, AutoTokenizer, AutoModelForCausalLM, Trainer
 
 # تحميل مجموعة البيانات IMDB
 train_dataset = datasets.load_dataset('imdb', split='train')

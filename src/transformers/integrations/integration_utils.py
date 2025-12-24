@@ -35,7 +35,7 @@ from typing import TYPE_CHECKING, Any, Literal
 import numpy as np
 import packaging.version
 
-from transformers.utils.import_utils import _is_package_available
+from transformers_4573.utils.import_utils import _is_package_available
 
 
 if os.getenv("WANDB_MODE") == "offline":
@@ -307,7 +307,7 @@ def run_hp_search_ray(trainer, n_trials: int, direction: str, **kwargs) -> BestR
 
     def _objective(trial: dict, local_trainer):
         try:
-            from transformers.utils.notebook import NotebookProgressCallback
+            from transformers_4573.utils.notebook import NotebookProgressCallback
 
             if local_trainer.pop_callback(NotebookProgressCallback):
                 local_trainer.add_callback(ProgressCallback)
@@ -2207,7 +2207,7 @@ class DVCLiveCallback(TrainerCallback):
 
     def on_train_end(self, args, state, control, **kwargs):
         if self._initialized and state.is_world_process_zero:
-            from transformers.trainer import Trainer
+            from transformers_4573.trainer import Trainer
 
             if self._log_model is True:
                 fake_trainer = Trainer(

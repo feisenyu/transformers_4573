@@ -94,7 +94,7 @@ class GraniteConfig(PreTrainedConfig):
         attention_multiplier (`float`, *optional*, defaults to 1.0): attention multiplier
 
     ```python
-    >>> from transformers import GraniteModel, GraniteConfig
+    >>> from transformers_4573 import GraniteModel, GraniteConfig
 
     >>> # Initializing a Granite granite-3b style configuration
     >>> configuration = GraniteConfig()

@@ -40,13 +40,13 @@ Ciò introduce due modifiche sostanziali:
 
 Nella versione `v3.x`:
 ```py
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 ```
 per ottenere lo stesso nella versione `v4.x`:
 ```py
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased", use_fast=False)
 ```
@@ -93,11 +93,11 @@ Per ottenere lo stesso comportamento della versione `v3.x`, devi aggiornare il p
 
 Nella versione `v3.x`:
 ```bash
-from transformers.modeling_bert import BertLayer
+from transformers_4573.modeling_bert import BertLayer
 ```
 per ottenere lo stesso nella versione `v4.x`:
 ```bash
-from transformers.models.bert.modeling_bert import BertLayer
+from transformers_4573.models.bert.modeling_bert import BertLayer
 ```
 
 #### 4. Impostare l'argomento `return_dict` su `True` per impostazione predefinita

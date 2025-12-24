@@ -226,7 +226,7 @@ class LlavaImageProcessor(BaseImageProcessor):
         )
         return image
 
-    # Copied from transformers.models.clip.image_processing_clip.CLIPImageProcessor.resize
+    # Copied from transformers_4573.models.clip.image_processing_clip.CLIPImageProcessor.resize
     def resize(
         self,
         image: np.ndarray,

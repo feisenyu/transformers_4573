@@ -46,7 +46,7 @@ Comienza cargando el dataset de [Yelp Reviews](https://huggingface.co/datasets/Y
 Como ya sabes, necesitas un tokenizador para procesar el texto e incluir una estrategia para el padding y el truncamiento para manejar cualquier longitud de secuencia variable. Para procesar tu dataset en un solo paso, utiliza el método de 🤗 Datasets map para aplicar una función de preprocesamiento sobre todo el dataset:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -76,7 +76,7 @@ Si lo deseas, puedes crear un subconjunto más pequeño del dataset completo par
 Comienza cargando tu modelo y especifica el número de labels previstas. A partir del [Card Dataset](https://huggingface.co/datasets/Yelp/yelp_review_full#data-fields) de Yelp Review, que como ya sabemos tiene 5 labels:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -95,7 +95,7 @@ A continuación, crea una clase [`TrainingArguments`] que contenga todos los hip
 Especifica dónde vas a guardar los checkpoints de tu entrenamiento:
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(output_dir="test_trainer")
 ```
@@ -123,7 +123,7 @@ Define la función `compute` en `metric` para calcular el accuracy de tus predic
 Si quieres controlar tus métricas de evaluación durante el fine-tuning, especifica el parámetro `eval_strategy` en tus argumentos de entrenamiento para que el modelo tenga en cuenta la métrica de evaluación al final de cada época:
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(output_dir="test_trainer", eval_strategy="epoch")
 ```
@@ -161,7 +161,7 @@ Los modelos de 🤗 Transformers también permiten realizar el entrenamiento en 
 El [`DefaultDataCollator`] junta los tensores en un batch para que el modelo se entrene en él. Asegúrate de especificar `return_tensors` para devolver los tensores de TensorFlow:
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers_4573 import DefaultDataCollator
 
 >>> data_collator = DefaultDataCollator(return_tensors="tf")
 ```
@@ -198,7 +198,7 @@ Carguemos un modelo TensorFlow con el número esperado de labels:
 
 ```py
 >>> import tensorflow as tf
->>> from transformers import TFAutoModelForSequenceClassification
+>>> from transformers_4573 import TFAutoModelForSequenceClassification
 
 >>> model = TFAutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -273,7 +273,7 @@ Crea un `DataLoader` para tus datasets de entrenamiento y de prueba para poder i
 Carga tu modelo con el número de labels previstas:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -291,7 +291,7 @@ Crea un optimizador y el learning rate para aplicar fine-tuning al modelo. Vamos
 Crea el learning rate desde el [`Trainer`]:
 
 ```py
->>> from transformers import get_scheduler
+>>> from transformers_4573 import get_scheduler
 
 >>> num_epochs = 3
 >>> num_training_steps = num_epochs * len(train_dataloader)

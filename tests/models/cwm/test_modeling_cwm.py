@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_deterministic_for_xpu,
@@ -32,7 +32,7 @@ from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 if is_torch_available():
     import torch
 
-    from transformers.models.cwm import (
+    from transformers_4573.models.cwm import (
         CwmConfig,
         CwmForCausalLM,
         CwmModel,
@@ -99,7 +99,7 @@ class CwmIntegrationTest(unittest.TestCase):
     @slow
     @require_deterministic_for_xpu
     def test_cwm_integration(self):
-        from transformers import AutoTokenizer
+        from transformers_4573 import AutoTokenizer
 
         tokenizer = AutoTokenizer.from_pretrained("facebook/cwm")
         model = CwmForCausalLM.from_pretrained("facebook/cwm", device_map="auto", dtype=torch.bfloat16)
@@ -145,7 +145,7 @@ class CwmIntegrationTest(unittest.TestCase):
     @slow
     @require_deterministic_for_xpu
     def test_cwm_sliding_window_long_sequence(self):
-        from transformers import AutoTokenizer
+        from transformers_4573 import AutoTokenizer
 
         tokenizer = AutoTokenizer.from_pretrained("facebook/cwm")
         # original `sliding_window` is `8192`, but it causes GPU OOM on A10
@@ -196,7 +196,7 @@ class CwmIntegrationTest(unittest.TestCase):
 
     @slow
     def test_cwm_generation_20_tokens(self):
-        from transformers import AutoTokenizer
+        from transformers_4573 import AutoTokenizer
 
         tokenizer = AutoTokenizer.from_pretrained("facebook/cwm")
         model = CwmForCausalLM.from_pretrained("facebook/cwm", device_map="auto", dtype=torch.bfloat16)

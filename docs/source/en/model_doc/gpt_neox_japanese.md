@@ -43,7 +43,7 @@ The example below demonstrates how to generate text with [`Pipeline`] or the [`A
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 pipeline = pipeline(task="text-generation", 
                     model="abeja/gpt-neox-japanese-2.7b", dtype=torch.float16, device=0)
 pipeline("人とAIが協調するためには、")
@@ -54,7 +54,7 @@ pipeline("人とAIが協調するためには、")
 
 ```python
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("abeja/gpt-neox-japanese-2.7b", dtype=torch.float16, device_map="auto")
 tokenizer = AutoTokenizer.from_pretrained("abeja/gpt-neox-japanese-2.7b")
@@ -78,7 +78,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -101,7 +101,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 Use the [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139) to better understand what tokens the model can and cannot attend to.
 
 ```py
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("abeja/gpt-neox-japanese-2.7b")
 visualizer("<img>What is shown in this image?")

@@ -46,7 +46,7 @@ Tips:
 ## FalconH1ForCausalLM
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("tiiuae/Falcon-H1-7B-Instruct")
 tokenizer = AutoTokenizer.from_pretrained("tiiuae/Falcon-H1-7B-Instruct")

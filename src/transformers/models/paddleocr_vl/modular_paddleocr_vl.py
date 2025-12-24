@@ -597,7 +597,7 @@ class PaddleOCRVisionConfig(SiglipVisionConfig):
     Example:
 
     ```python
-    >>> from transformers import PaddleOCRVisionConfig, PaddleOCRVisionModel
+    >>> from transformers_4573 import PaddleOCRVisionConfig, PaddleOCRVisionModel
 
     >>> # Initializing a PaddleOCRVisionConfig with PaddlePaddle/PaddleOCR-VL style configuration
     >>> configuration = PaddleOCRVisionConfig()
@@ -662,7 +662,7 @@ class PaddleOCRVLConfig(Qwen2VLConfig):
             The token index to denote end of vision input.
 
     ```python
-    >>> from transformers import PaddleOCRVLForConditionalGeneration, PaddleOCRVLConfig
+    >>> from transformers_4573 import PaddleOCRVLForConditionalGeneration, PaddleOCRVLConfig
 
     >>> # Initializing a PaddleOCRVL style configuration
     >>> configuration = PaddleOCRVLConfig()
@@ -1276,7 +1276,7 @@ class PaddleOCRVLForConditionalGeneration(Qwen2VLForConditionalGeneration):
         Example:
 
         ```python
-        >>> from transformers import AutoProcessor, PaddleOCRVLForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, PaddleOCRVLForConditionalGeneration
 
         >>> model = PaddleOCRVLForConditionalGeneration.from_pretrained("PaddlePaddle/PaddleOCR-VL", dtype="bfloat16")
         >>> processor = AutoProcessor.from_pretrained("PaddlePaddle/PaddleOCR-VL")

@@ -99,7 +99,7 @@ cache.layers[idx].values = torch.cat([cache.layers[idx].values, value_states], d
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, DynamicCache, infer_device
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, DynamicCache, infer_device
 
 device = f"{infer_device()}:0"
 
@@ -145,7 +145,7 @@ print(tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0])
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, DynamicCache, infer_device
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, DynamicCache, infer_device
 
 device = f"{infer_device()}:0"
 

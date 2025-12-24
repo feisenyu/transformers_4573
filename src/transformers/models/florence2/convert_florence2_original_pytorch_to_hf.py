@@ -17,7 +17,7 @@ from collections import OrderedDict
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     AddedToken,
     AutoConfig,
     AutoModelForCausalLM,

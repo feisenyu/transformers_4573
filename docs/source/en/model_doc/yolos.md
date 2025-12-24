@@ -43,7 +43,7 @@ The example below demonstrates how to detect objects with [`Pipeline`] or the [`
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 detector = pipeline(
     task="object-detection",
@@ -61,7 +61,7 @@ detector("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.pn
 import torch
 from PIL import Image
 import requests
-from transformers import AutoImageProcessor, AutoModelForObjectDetection
+from transformers_4573 import AutoImageProcessor, AutoModelForObjectDetection
 from accelerate import Accelerator
 
 device = Accelerator().device

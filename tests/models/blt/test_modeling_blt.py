@@ -18,8 +18,8 @@ import unittest
 import pytest
 from parameterized import parameterized
 
-from transformers import AutoTokenizer, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, is_torch_available
+from transformers_4573.testing_utils import (
     cleanup,
     require_read_token,
     require_torch,
@@ -39,7 +39,7 @@ from ...test_modeling_common import (
 if is_torch_available():
     import torch
 
-    from transformers import BltConfig, BltForCausalLM, BltModel
+    from transformers_4573 import BltConfig, BltForCausalLM, BltModel
 
 
 class BltModelTester(CausalLMModelTester):

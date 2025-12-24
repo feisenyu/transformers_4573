@@ -53,7 +53,7 @@ The attributes can be obtained from model config, as `model.config.vision_config
 - For better results, we recommend users to use the processor's `apply_chat_template()` method to format your prompt correctly. For that you need to construct a conversation history, passing in a plain string will not format your prompt. Each message in the conversation history for chat templates is a dictionary with keys "role" and "content". The "content" should be a list of dictionaries, for "text" and "image" modalities, as follows:
 
 ```python
-from transformers import AutoProcessor
+from transformers_4573 import AutoProcessor
 
 processor = AutoProcessor.from_pretrained("llava-hf/vip-llava-7b-hf")
 

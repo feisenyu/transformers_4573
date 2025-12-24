@@ -18,10 +18,10 @@ import warnings
 import numpy as np
 import pytest
 
-from transformers.configuration_utils import PreTrainedConfig
-from transformers.modeling_outputs import BaseModelOutput, CausalLMOutputWithPast
-from transformers.testing_utils import require_torch
-from transformers.utils import (
+from transformers_4573.configuration_utils import PreTrainedConfig
+from transformers_4573.modeling_outputs import BaseModelOutput, CausalLMOutputWithPast
+from transformers_4573.testing_utils import require_torch
+from transformers_4573.utils import (
     can_return_tuple,
     expand_dims,
     filter_out_non_signature_kwargs,

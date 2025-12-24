@@ -262,7 +262,7 @@ class VitDetAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -278,7 +278,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.beit.modeling_beit.BeitDropPath
+# Copied from transformers_4573.models.beit.modeling_beit.BeitDropPath
 class VitDetDropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -636,7 +636,7 @@ class VitDetModel(VitDetPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import VitDetConfig, VitDetModel
+        >>> from transformers_4573 import VitDetConfig, VitDetModel
         >>> import torch
 
         >>> config = VitDetConfig()
@@ -713,7 +713,7 @@ class VitDetBackbone(VitDetPreTrainedModel, BackboneMixin):
         Examples:
 
         ```python
-        >>> from transformers import VitDetConfig, VitDetBackbone
+        >>> from transformers_4573 import VitDetConfig, VitDetBackbone
         >>> import torch
 
         >>> config = VitDetConfig()

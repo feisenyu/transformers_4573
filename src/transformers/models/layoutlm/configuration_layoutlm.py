@@ -72,7 +72,7 @@ class LayoutLMConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import LayoutLMConfig, LayoutLMModel
+    >>> from transformers_4573 import LayoutLMConfig, LayoutLMModel
 
     >>> # Initializing a LayoutLM configuration
     >>> configuration = LayoutLMConfig()

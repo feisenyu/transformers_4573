@@ -18,9 +18,9 @@ import unittest
 import pytest
 from huggingface_hub import hf_hub_download
 
-from transformers import GitConfig, GitProcessor, GitVisionConfig, is_torch_available, is_vision_available
-from transformers.models.auto import get_values
-from transformers.testing_utils import require_torch, require_vision, slow, torch_device
+from transformers_4573 import GitConfig, GitProcessor, GitVisionConfig, is_torch_available, is_vision_available
+from transformers_4573.models.auto import get_values
+from transformers_4573.testing_utils import require_torch, require_vision, slow, torch_device
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -32,7 +32,7 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import MODEL_FOR_CAUSAL_LM_MAPPING, GitForCausalLM, GitModel, GitVisionModel
+    from transformers_4573 import MODEL_FOR_CAUSAL_LM_MAPPING, GitForCausalLM, GitModel, GitVisionModel
 
 
 if is_vision_available():

@@ -16,8 +16,8 @@ import gc
 import tempfile
 import unittest
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, FPQuantConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, FPQuantConfig
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_accelerate,
     require_fp_quant,

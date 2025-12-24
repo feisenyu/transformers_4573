@@ -30,7 +30,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.utils.generic import check_model_inputs
+from transformers_4573.utils.generic import check_model_inputs
 
 from ...activations import ACT2FN
 from ...cache_utils import Cache, DynamicCache
@@ -456,7 +456,7 @@ class Starcoder2ForCausalLM(Starcoder2PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Starcoder2ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Starcoder2ForCausalLM
 
         >>> model = Starcoder2ForCausalLM.from_pretrained("meta-starcoder2/Starcoder2-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-starcoder2/Starcoder2-2-7b-hf")

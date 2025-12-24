@@ -56,7 +56,7 @@ Transformers는 `tp_plan`매개변수를 활용할 수 있는 모델에 대해 �
 ```py
 import os
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 # model_id = "meta-llama/Llama-4-Scout-17B-16E-Instruct" # 모든 가능한 전략을 시각화하기에 더 좋음
 model_id = "meta-llama/Meta-Llama-3-8B-Instruct"  # 적은 수의 GPU에 더 좋음
@@ -87,7 +87,7 @@ torchrun --nproc-per-node 4 demo.py
 > 사용자 지정 분할 계획을 수동으로 지정하려면 모델 아키텍처와 분할 전략이 함께 상호 작용하는 방식에 대한 충분한 이해가 필요합니다. 분할 전략을 잘못 설정하면 모델이 매우 느려지거나, 오류가 발생하거나, 부정확한 결과를 낼 수 있습니다. 자세히 알아보려면 [Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook?section=tensor_parallelism)을 참고하세요.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 tp_plan = {
     "model.layers.*.self_attn.q_proj": "colwise",
@@ -240,7 +240,7 @@ Readd this when I get the exact error message
 3. `tp_plan`과 함께 사용할 수 있도록 전략을 [`ParallelInterface`]에 등록합니다.
 
     ```python
-    from transformers.integrations.tensor_parallel import ParallelInterface
+    from transformers_4573.integrations.tensor_parallel import ParallelInterface
 
     ParallelInterface.register_strategy("colwise_custom", ColwiseParallel)
     tp_plan = {

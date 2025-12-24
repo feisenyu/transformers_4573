@@ -1423,7 +1423,7 @@ class PreTrainedModel(nn.Module, EmbeddingAccessMixin, ModuleUtilsMixin, PushToH
         Examples:
 
         ```python
-        from transformers import AutoModel
+        from transformers_4573 import AutoModel
 
         model = AutoModel.from_pretrained("google-bert/bert-base-cased")
 
@@ -3742,7 +3742,7 @@ class PreTrainedModel(nn.Module, EmbeddingAccessMixin, ModuleUtilsMixin, PushToH
         Examples:
 
         ```python
-        >>> from transformers import BertConfig, BertModel
+        >>> from transformers_4573 import BertConfig, BertModel
 
         >>> # Download model and configuration from huggingface.co and cache.
         >>> model = BertModel.from_pretrained("google-bert/bert-base-uncased")

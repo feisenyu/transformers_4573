@@ -45,7 +45,7 @@ This model was contributed by [nielsr](https://huggingface.co/nielsr). The origi
 One can directly plug in the weights of LayoutXLM into a LayoutLMv2 model, like so:
 
 ```python
-from transformers import LayoutLMv2Model
+from transformers_4573 import LayoutLMv2Model
 
 model = LayoutLMv2Model.from_pretrained("microsoft/layoutxlm-base")
 ```
@@ -55,7 +55,7 @@ Note that LayoutXLM has its own tokenizer, based on
 follows:
 
 ```python
-from transformers import LayoutXLMTokenizer
+from transformers_4573 import LayoutXLMTokenizer
 
 tokenizer = LayoutXLMTokenizer.from_pretrained("microsoft/layoutxlm-base")
 ```

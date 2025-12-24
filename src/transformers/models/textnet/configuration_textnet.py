@@ -14,9 +14,9 @@
 # limitations under the License.
 """TextNet model configuration"""
 
-from transformers import PreTrainedConfig
-from transformers.utils import logging
-from transformers.utils.backbone_utils import BackboneConfigMixin, get_aligned_output_features_output_indices
+from transformers_4573 import PreTrainedConfig
+from transformers_4573.utils import logging
+from transformers_4573.utils.backbone_utils import BackboneConfigMixin, get_aligned_output_features_output_indices
 
 
 logger = logging.get_logger(__name__)
@@ -68,7 +68,7 @@ class TextNetConfig(BackboneConfigMixin, PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import TextNetConfig, TextNetBackbone
+    >>> from transformers_4573 import TextNetConfig, TextNetBackbone
 
     >>> # Initializing a TextNetConfig
     >>> configuration = TextNetConfig()

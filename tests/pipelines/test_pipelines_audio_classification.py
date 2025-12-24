@@ -18,12 +18,12 @@ import datasets
 import numpy as np
 from huggingface_hub import AudioClassificationOutputElement
 
-from transformers import (
+from transformers_4573 import (
     MODEL_FOR_AUDIO_CLASSIFICATION_MAPPING,
     is_torch_available,
 )
-from transformers.pipelines import AudioClassificationPipeline, pipeline
-from transformers.testing_utils import (
+from transformers_4573.pipelines import AudioClassificationPipeline, pipeline
+from transformers_4573.testing_utils import (
     compare_pipeline_output_to_hub_spec,
     is_pipeline_test,
     nested_simplify,

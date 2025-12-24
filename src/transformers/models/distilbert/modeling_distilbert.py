@@ -121,7 +121,7 @@ class Embeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -871,7 +871,7 @@ class DistilBertForMultipleChoice(DistilBertPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, DistilBertForMultipleChoice
+        >>> from transformers_4573 import AutoTokenizer, DistilBertForMultipleChoice
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("distilbert-base-cased")

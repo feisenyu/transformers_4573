@@ -41,7 +41,7 @@ class BlenderbotTokenizer(TokenizersBackend):
     be encoded differently whether it is at the beginning of the sentence (without space) or not:
 
     ```python
-    >>> from transformers import BlenderbotTokenizerFast
+    >>> from transformers_4573 import BlenderbotTokenizerFast
 
     >>> tokenizer = BlenderbotTokenizerFast.from_pretrained("facebook/blenderbot-3B")
     >>> tokenizer("Hello world")["input_ids"]

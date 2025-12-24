@@ -18,9 +18,9 @@ import unittest
 from pathlib import Path
 from shutil import copyfile
 
-from transformers import Speech2TextFeatureExtractor, Speech2TextProcessor, Speech2TextTokenizer
-from transformers.models.speech_to_text.tokenization_speech_to_text import VOCAB_FILES_NAMES, save_json
-from transformers.testing_utils import get_tests_dir, require_sentencepiece, require_torch, require_torchaudio
+from transformers_4573 import Speech2TextFeatureExtractor, Speech2TextProcessor, Speech2TextTokenizer
+from transformers_4573.models.speech_to_text.tokenization_speech_to_text import VOCAB_FILES_NAMES, save_json
+from transformers_4573.testing_utils import get_tests_dir, require_sentencepiece, require_torch, require_torchaudio
 
 from .test_feature_extraction_speech_to_text import floats_list
 

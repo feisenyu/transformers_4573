@@ -18,7 +18,7 @@ Processor class for UDOP.
 
 from typing import Optional, Union
 
-from transformers import logging
+from transformers_4573 import logging
 
 from ...image_processing_utils import BatchFeature
 from ...image_utils import ImageInput
@@ -161,7 +161,7 @@ class UdopProcessor(ProcessorMixin):
 
             return features
 
-    # Copied from transformers.models.layoutlmv3.processing_layoutlmv3.LayoutLMv3Processor.get_overflowing_images
+    # Copied from transformers_4573.models.layoutlmv3.processing_layoutlmv3.LayoutLMv3Processor.get_overflowing_images
     def get_overflowing_images(self, images, overflow_to_sample_mapping):
         # in case there's an overflow, ensure each `input_ids` sample is mapped to its corresponding image
         images_with_overflow = []

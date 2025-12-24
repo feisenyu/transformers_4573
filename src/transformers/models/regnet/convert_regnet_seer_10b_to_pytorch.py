@@ -34,9 +34,9 @@ from huggingface_hub import hf_hub_download
 from torch import Tensor
 from vissl.models.model_helpers import get_trunk_forward_outputs
 
-from transformers import AutoImageProcessor, RegNetConfig, RegNetForImageClassification, RegNetModel
-from transformers.modeling_utils import _load_state_dict_into_meta_model, load_state_dict
-from transformers.utils import logging
+from transformers_4573 import AutoImageProcessor, RegNetConfig, RegNetForImageClassification, RegNetModel
+from transformers_4573.modeling_utils import _load_state_dict_into_meta_model, load_state_dict
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

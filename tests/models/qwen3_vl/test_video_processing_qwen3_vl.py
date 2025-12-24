@@ -17,9 +17,9 @@ import unittest
 
 import numpy as np
 
-from transformers.image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.image_utils import IMAGENET_STANDARD_MEAN, IMAGENET_STANDARD_STD
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_video_processing_common import VideoProcessingTestMixin, prepare_video_inputs
 
@@ -28,8 +28,8 @@ if is_torch_available():
     from PIL import Image
 
 if is_vision_available() and is_torchvision_available():
-    from transformers import Qwen3VLVideoProcessor
-    from transformers.models.qwen3_vl.video_processing_qwen3_vl import smart_resize
+    from transformers_4573 import Qwen3VLVideoProcessor
+    from transformers_4573.models.qwen3_vl.video_processing_qwen3_vl import smart_resize
 
 
 class Qwen3VLVideoProcessingTester:

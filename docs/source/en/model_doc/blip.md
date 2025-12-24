@@ -39,7 +39,7 @@ The example below demonstrates how to visual question answering with [`Pipeline`
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="visual-question-answering",
@@ -58,7 +58,7 @@ pipeline(question="What is the weather in this image?", image=url)
 import requests
 import torch
 from PIL import Image
-from transformers import AutoProcessor, AutoModelForVisualQuestionAnswering
+from transformers_4573 import AutoProcessor, AutoModelForVisualQuestionAnswering
 
 processor = AutoProcessor.from_pretrained("Salesforce/blip-vqa-base")
 model = AutoModelForVisualQuestionAnswering.from_pretrained(

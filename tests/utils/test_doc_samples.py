@@ -18,7 +18,7 @@ import unittest
 from pathlib import Path
 
 import transformers
-from transformers.testing_utils import require_torch, slow
+from transformers_4573.testing_utils import require_torch, slow
 
 
 logger = logging.getLogger()

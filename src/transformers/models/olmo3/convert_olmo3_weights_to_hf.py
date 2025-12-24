@@ -37,7 +37,7 @@ from torch.distributed.checkpoint.planner import (
 )
 from torch.futures import Future
 
-from transformers import AutoTokenizer, Olmo3Config, Olmo3ForCausalLM
+from transformers_4573 import AutoTokenizer, Olmo3Config, Olmo3ForCausalLM
 
 from ...utils import strtobool
 
@@ -53,7 +53,7 @@ python src/transformers/models/olmo3/convert_olmo3_weights_to_hf.py \
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import Olmo3ForCausalLM, AutoTokenizer
+from transformers_4573 import Olmo3ForCausalLM, AutoTokenizer
 
 model = Olmo3ForCausalLM.from_pretrained("/output/path")
 tokenizer = AutoTokenizer.from_pretrained("/output/path")

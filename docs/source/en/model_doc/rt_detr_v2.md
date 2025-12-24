@@ -49,7 +49,7 @@ The model is meant to be used on images resized to a size 640x640 with the corre
 >>> import requests
 
 >>> from PIL import Image
->>> from transformers import RTDetrV2ForObjectDetection, RTDetrImageProcessor
+>>> from transformers_4573 import RTDetrV2ForObjectDetection, RTDetrImageProcessor
 
 >>> url = 'http://images.cocodataset.org/val2017/000000039769.jpg'
 >>> image = Image.open(requests.get(url, stream=True).raw)

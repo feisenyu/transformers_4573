@@ -52,7 +52,7 @@ import urllib3
 from huggingface_hub import create_repo, delete_repo
 from packaging import version
 
-from transformers import logging as transformers_logging
+from transformers_4573 import logging as transformers_logging
 
 
 if TYPE_CHECKING:
@@ -1752,8 +1752,8 @@ class CaptureLogger:
     Example:
 
     ```python
-    >>> from transformers import logging
-    >>> from transformers.testing_utils import CaptureLogger
+    >>> from transformers_4573 import logging
+    >>> from transformers_4573.testing_utils import CaptureLogger
 
     >>> msg = "Testing 1, 2, 3"
     >>> logging.set_verbosity_info()
@@ -2110,7 +2110,7 @@ class TestCasePlus(unittest.TestCase):
         Example:
 
         ```
-        one_liner_str = 'from transformers import AutoModel; AutoModel.from_pretrained("google-t5/t5-large")'
+        one_liner_str = 'from transformers_4573 import AutoModel; AutoModel.from_pretrained("google-t5/t5-large")'
         max_rss = self.python_one_liner_max_rss(one_liner_str)
         ```
         """

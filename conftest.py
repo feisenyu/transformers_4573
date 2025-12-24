@@ -24,14 +24,14 @@ from os.path import abspath, dirname, join
 import _pytest
 import pytest
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     HfDoctestModule,
     HfDocTestParser,
     is_torch_available,
     patch_testing_methods_to_collect_info,
     patch_torch_compile_force_graph,
 )
-from transformers.utils import enable_tf32
+from transformers_4573.utils import enable_tf32
 
 
 NOT_DEVICE_TESTS = {
@@ -102,13 +102,13 @@ def pytest_collection_modifyitems(items):
 
 
 def pytest_addoption(parser):
-    from transformers.testing_utils import pytest_addoption_shared
+    from transformers_4573.testing_utils import pytest_addoption_shared
 
     pytest_addoption_shared(parser)
 
 
 def pytest_terminal_summary(terminalreporter):
-    from transformers.testing_utils import pytest_terminal_summary_main
+    from transformers_4573.testing_utils import pytest_terminal_summary_main
 
     make_reports = terminalreporter.config.getoption("--make-reports")
     if make_reports:

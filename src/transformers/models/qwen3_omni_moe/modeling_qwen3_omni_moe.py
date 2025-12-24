@@ -2094,7 +2094,7 @@ class Qwen3OmniMoeThinkerForConditionalGeneration(
         >>> from urllib.request import urlopen
         >>> import librosa
         >>> from qwen_vl_utils import process_vision_info
-        >>> from transformers import Qwen3OmniMoeProcessor, Qwen3OmniMoeThinkerForConditionalGeneration
+        >>> from transformers_4573 import Qwen3OmniMoeProcessor, Qwen3OmniMoeThinkerForConditionalGeneration
 
         >>> thinker = Qwen3OmniMoeThinkerForConditionalGeneration.from_pretrained("Qwen/Qwen2.5-Omni-7B")
         >>> processor = Qwen3OmniMoeProcessor.from_pretrained("Qwen/Qwen2.5-Omni-7B")

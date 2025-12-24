@@ -19,17 +19,17 @@ import copy
 import types
 from unittest.mock import MagicMock, patch
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, KernelConfig
-from transformers.integrations.hub_kernels import (
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, KernelConfig
+from transformers_4573.integrations.hub_kernels import (
     _HUB_KERNEL_MAPPING,
     _KERNEL_MODULE_MAPPING,
     is_kernel,
     lazy_load_kernel,
     load_and_register_attn_kernel,
 )
-from transformers.masking_utils import ALL_MASK_ATTENTION_FUNCTIONS
-from transformers.modeling_utils import ALL_ATTENTION_FUNCTIONS
-from transformers.testing_utils import (
+from transformers_4573.masking_utils import ALL_MASK_ATTENTION_FUNCTIONS
+from transformers_4573.modeling_utils import ALL_ATTENTION_FUNCTIONS
+from transformers_4573.testing_utils import (
     TestCasePlus,
     cleanup,
     require_kernels,
@@ -37,7 +37,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils.import_utils import is_kernels_available
+from transformers_4573.utils.import_utils import is_kernels_available
 
 
 if is_kernels_available():

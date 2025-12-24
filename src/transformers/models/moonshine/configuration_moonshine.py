@@ -101,7 +101,7 @@ class MoonshineConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import MoonshineModel, MoonshineConfig
+    >>> from transformers_4573 import MoonshineModel, MoonshineConfig
 
     >>> # Initializing a Moonshine style configuration
     >>> configuration = MoonshineConfig().from_pretrained("UsefulSensors/moonshine-tiny")

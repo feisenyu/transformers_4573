@@ -38,7 +38,7 @@ The examples below demonstrates how to calculate similarity scores between an im
 import torch
 import requests
 from PIL import Image
-from transformers import AltCLIPModel, AltCLIPProcessor
+from transformers_4573 import AltCLIPModel, AltCLIPProcessor
 
 model = AltCLIPModel.from_pretrained("BAAI/AltCLIP", dtype=torch.bfloat16)
 processor = AltCLIPProcessor.from_pretrained("BAAI/AltCLIP")
@@ -69,7 +69,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 import torch
 import requests
 from PIL import Image
-from transformers import AltCLIPModel, AltCLIPProcessor, TorchAoConfig
+from transformers_4573 import AltCLIPModel, AltCLIPProcessor, TorchAoConfig
 
 model = AltCLIPModel.from_pretrained(
     "BAAI/AltCLIP",

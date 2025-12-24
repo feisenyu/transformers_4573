@@ -20,8 +20,8 @@ from typing import Optional
 import torch
 from torch import nn
 
-from transformers.cache_utils import Cache
-from transformers.utils import (
+from transformers_4573.cache_utils import Cache
+from transformers_4573.utils import (
     logging,
 )
 

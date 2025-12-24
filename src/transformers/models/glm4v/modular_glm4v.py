@@ -102,7 +102,7 @@ class Glm4vVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Glm4vVisionConfig, Glm4vVisionModel
+    >>> from transformers_4573 import Glm4vVisionConfig, Glm4vVisionModel
 
     >>> # Initializing a Glm4vVisionConfig GLM-4.1V-9B style configuration
     >>> configuration = Glm4vVisionConfig()
@@ -205,7 +205,7 @@ class Glm4vTextConfig(PreTrainedConfig):
             with longer `max_position_embeddings`.
 
     ```python
-    >>> from transformers import Glm4vTextModel, Glm4vConfig
+    >>> from transformers_4573 import Glm4vTextModel, Glm4vConfig
 
     >>> # Initializing a GLM-4.1V style configuration
     >>> configuration = Glm4vConfig()
@@ -307,7 +307,7 @@ class Glm4vConfig(PreTrainedConfig):
             The video end token index to encode the end of video.
 
     ```python
-    >>> from transformers import Glm4vForConditionalGeneration, Glm4vConfig
+    >>> from transformers_4573 import Glm4vForConditionalGeneration, Glm4vConfig
 
     >>> # Initializing a GLM-4.1V style configuration
     >>> configuration = Glm4vConfig()
@@ -1349,7 +1349,7 @@ class Glm4vForConditionalGeneration(Qwen2_5_VLForConditionalGeneration):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Glm4vForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Glm4vForConditionalGeneration
 
         >>> model = Glm4vForConditionalGeneration.from_pretrained("THUDM/GLM-4.1V-9B-Thinking")
         >>> processor = AutoProcessor.from_pretrained("THUDM/GLM-4.1V-9B-Thinking")

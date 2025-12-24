@@ -104,7 +104,7 @@ Datasets、🤗 データセット ライブラリから Food-101 データセ�
 次のステップでは、ViT 画像プロセッサをロードして画像をテンソルに処理します。
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> checkpoint = "google/vit-base-patch16-224-in21k"
 >>> image_processor = AutoImageProcessor.from_pretrained(checkpoint)
@@ -147,7 +147,7 @@ Datasets、🤗 データセット ライブラリから Food-101 データセ�
 次に、[`DefaultDataCollat​​or`] を使用してサンプルのバッチを作成します。 🤗 Transformers の他のデータ照合器とは異なり、`DefaultDataCollat​​or` はパディングなどの追加の前処理を適用しません。
 
 ```py
->>> from transformers import DefaultDataCollator
+>>> from transformers_4573 import DefaultDataCollator
 
 >>> data_collator = DefaultDataCollator()
 ```
@@ -189,7 +189,7 @@ Datasets、🤗 データセット ライブラリから Food-101 データセ�
 これでモデルのトレーニングを開始する準備が整いました。 [`AutoModelForImageClassification`] を使用して ViT をロードします。ラベルの数と予想されるラベルの数、およびラベル マッピングを指定します。
 
 ```py
->>> from transformers import AutoModelForImageClassification, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForImageClassification, TrainingArguments, Trainer
 
 >>> model = AutoModelForImageClassification.from_pretrained(
 ...     checkpoint,
@@ -266,7 +266,7 @@ Datasets、🤗 データセット ライブラリから Food-101 データセ�
 推論用に微調整されたモデルを試す最も簡単な方法は、それを [`pipeline`] で使用することです。モデルを使用して画像分類用の`pipeline`をインスタンス化し、それに画像を渡します。
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> classifier = pipeline("image-classification", model="my_awesome_food_model")
 >>> classifier(image)
@@ -283,7 +283,7 @@ Datasets、🤗 データセット ライブラリから Food-101 データセ�
 画像プロセッサをロードして画像を前処理し、`input`を PyTorch テンソルとして返します。
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 >>> import torch
 
 >>> image_processor = AutoImageProcessor.from_pretrained("my_awesome_food_model")
@@ -293,7 +293,7 @@ Datasets、🤗 データセット ライブラリから Food-101 データセ�
 入力をモデルに渡し、ロジットを返します。
 
 ```py
->>> from transformers import AutoModelForImageClassification
+>>> from transformers_4573 import AutoModelForImageClassification
 
 >>> model = AutoModelForImageClassification.from_pretrained("my_awesome_food_model")
 >>> with torch.no_grad():

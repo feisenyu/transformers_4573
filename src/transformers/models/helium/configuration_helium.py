@@ -82,7 +82,7 @@ class HeliumConfig(PreTrainedConfig):
             Whether to use a bias in up_proj, down_proj and gate_proj layers in the MLP layers.
 
     ```python
-    >>> from transformers import HeliumModel, HeliumConfig
+    >>> from transformers_4573 import HeliumModel, HeliumConfig
     >>> # Initializing a Helium 2b style configuration
     >>> configuration = HeliumConfig()
     >>> # Initializing a model from the Helium 2b style configuration

@@ -39,9 +39,9 @@ The example below demonstrates how to generate text based on an image with the [
 
 ```py
 import torch
-from transformers import AutoModelForZeroShotObjectDetection, AutoProcessor
+from transformers_4573 import AutoModelForZeroShotObjectDetection, AutoProcessor
 from accelerate import Accelerator
-from transformers.image_utils import load_image
+from transformers_4573.image_utils import load_image
 
 
 # Prepare processor and model

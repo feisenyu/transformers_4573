@@ -374,7 +374,7 @@ class Llama4Config(PreTrainedConfig):
             Whether the model's input and output word embeddings should be tied.
 
     ```python
-    >>> from transformers import Llama4Model, Llama4Config
+    >>> from transformers_4573 import Llama4Model, Llama4Config
 
     >>> # Initializing a Llama4 7B style configuration
     >>> configuration = Llama4Config()

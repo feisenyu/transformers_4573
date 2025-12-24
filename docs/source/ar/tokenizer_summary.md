@@ -67,7 +67,7 @@
 يسمح تقسيم subword للنموذج بأن يكون له حجم مفردات معقول مع القدرة على تعلم تمثيلات مستقلة عن السياق ذات معنى. بالإضافة إلى ذلك، يمكّن تقسيم subword النموذج من معالجة الكلمات التي لم يسبق له رؤيتها من قبل، عن طريق تحليلها إلى رموز فرعية معروفة. على سبيل المثال، يقوم المحلل [`~transformers.BertTokenizer`] بتحليل"I have a new GPU!" كما يلي:
 
 ```py
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> tokenizer.tokenize("I have a new GPU!")
@@ -79,7 +79,7 @@
 كمثال آخر، يقوم المحلل [`~transformers.XLNetTokenizer`] بتقسيم نّص مثالنا السابق كما يلي:
 
 ```py
->>> from transformers import XLNetTokenizer
+>>> from transformers_4573 import XLNetTokenizer
 
 >>> tokenizer = XLNetTokenizer.from_pretrained("xlnet/xlnet-base-cased")
 >>> tokenizer.tokenize("Don't you love 🤗 Transformers? We sure do.")

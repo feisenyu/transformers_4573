@@ -92,7 +92,7 @@ pip install transformers datasets evaluate
 بالنسبة لنمذجة اللغة المقنعة، فإن الخطوة التالية هي تحميل معالج DistilRoBERTa لمعالجة حقل `text` الفرعي:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -180,7 +180,7 @@ pip install transformers datasets evaluate
 استخدم رمز نهاية التسلسل كرمز الحشو وحدد `mlm_probability` لحجب الرموز عشوائياً كل مرة تكرر فيها البيانات:
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm_probability=0.15)
@@ -198,7 +198,7 @@ pip install transformers datasets evaluate
 أنت مستعد الآن لبدء تدريب نموذجك! قم بتحميل DistilRoBERTa باستخدام [`AutoModelForMaskedLM`]:
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("distilbert/distilroberta-base")
 ```
@@ -269,7 +269,7 @@ Perplexity: 8.76
 أبسط طريقة لتجربة نموذجك المعدل للاستدلال هي استخدامه في [`pipeline`]. قم بإنشاء كائن  `pipeline` لملء الفراغ مع نموذجك، ومرر نصك إليه. إذا أردت، يمكنك استخدام معلمة `top_k` لتحديد عدد التنبؤات التي تريد إرجاعها:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> mask_filler = pipeline("fill-mask", "username/my_awesome_eli5_mlm_model")
 >>> mask_filler(text, top_k=3)
@@ -290,7 +290,7 @@ Perplexity: 8.76
 قم بتجزئة النص وإرجاع `input_ids` كمتجهات PyTorch. ستحتاج أيضًا إلى تحديد موضع رمز `<mask>`:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_eli5_mlm_model")
 >>> inputs = tokenizer(text, return_tensors="pt")
@@ -300,7 +300,7 @@ Perplexity: 8.76
 قم بتمرير المدخلات إلى النموذج وإرجاع `logits` للرمز المقنع:
 
 ```py
->>> from transformers import AutoModelForMaskedLM
+>>> from transformers_4573 import AutoModelForMaskedLM
 
 >>> model = AutoModelForMaskedLM.from_pretrained("username/my_awesome_eli5_mlm_model")
 >>> logits = model(**inputs).logits

@@ -22,10 +22,10 @@ import httpx
 from huggingface_hub import ChatCompletionStreamOutput, InferenceClient, hf_hub_download
 from parameterized import parameterized
 
-from transformers import GenerationConfig
-from transformers.cli.serve import Modality, Serve
-from transformers.testing_utils import require_openai, slow
-from transformers.utils.import_utils import is_openai_available
+from transformers_4573 import GenerationConfig
+from transformers_4573.cli.serve import Modality, Serve
+from transformers_4573.testing_utils import require_openai, slow
+from transformers_4573.utils.import_utils import is_openai_available
 
 
 if is_openai_available():

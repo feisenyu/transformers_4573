@@ -20,8 +20,8 @@ from torch.distributed.tensor.experimental import context_parallel
 from torch.nn.attention import SDPBackend, sdpa_kernel
 from torch.nn.parallel import DistributedDataParallel as DDP
 
-from transformers import AutoModelForCausalLM
-from transformers.loss.loss_utils import ForCausalLMLoss
+from transformers_4573 import AutoModelForCausalLM
+from transformers_4573.loss.loss_utils import ForCausalLMLoss
 
 
 world_size = int(os.environ.get("WORLD_SIZE", "1"))

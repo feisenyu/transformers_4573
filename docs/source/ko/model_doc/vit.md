@@ -62,7 +62,7 @@ PyTorch는 `torch.nn.functional`의 일부로서 native scaled dot-product atten
 SDPA는 `torch>=2.1.1`에서 구현이 가능한 경우 기본적으로 사용되지만, `from_pretrained()`에서 `attn_implementation="sdpa"`로 설정하여 SDPA를 명시적으로 요청할 수도 있습니다.
 
 ```
-from transformers import ViTForImageClassification
+from transformers_4573 import ViTForImageClassification
 model = ViTForImageClassification.from_pretrained("google/vit-base-patch16-224", attn_implementation="sdpa", dtype=torch.float16)
 ...
 ```

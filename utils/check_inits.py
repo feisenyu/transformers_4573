@@ -321,7 +321,7 @@ def check_submodules():
     Check all submodules of Transformers are properly registered in the main init. Error otherwise.
     """
     # This is to make sure the transformers module imported is the one in the repo.
-    from transformers.utils import direct_transformers_import
+    from transformers_4573.utils import direct_transformers_import
 
     transformers = direct_transformers_import(PATH_TO_TRANSFORMERS)
 

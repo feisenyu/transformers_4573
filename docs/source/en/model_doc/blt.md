@@ -61,7 +61,7 @@ The model can be loaded via:
 
 ```python
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("itazap/blt-1b-hf")
 model = AutoModelForCausalLM.from_pretrained(

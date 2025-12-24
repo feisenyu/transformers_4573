@@ -203,7 +203,7 @@ to replicate when doing inference or finetuning a pre-trained image model.
 Instantiate the image processor from the same checkpoint as the model you want to finetune.
 
 ```py
->>> from transformers import AutoImageProcessor
+>>> from transformers_4573 import AutoImageProcessor
 
 >>> MAX_SIZE = IMAGE_SIZE
 
@@ -390,7 +390,7 @@ Object detection models are commonly evaluated with a set of <a href="https://co
 Intermediate format of boxes used for training is `YOLO` (normalized) but we will compute metrics for boxes in `Pascal VOC` (absolute) format in order to correctly handle box areas. Let's define a function that converts bounding boxes to `Pascal VOC` format:
 
 ```py
->>> from transformers.image_transforms import center_to_corners_format
+>>> from transformers_4573.image_transforms import center_to_corners_format
 
 >>> def convert_bbox_yolo_to_pascal(boxes, image_size):
 ...     """
@@ -517,7 +517,7 @@ When loading the model from the same checkpoint that you used for the preprocess
 and `id2label` maps that you created earlier from the dataset's metadata. Additionally, we specify `ignore_mismatched_sizes=True` to replace the existing classification head with a new one.
 
 ```py
->>> from transformers import AutoModelForObjectDetection
+>>> from transformers_4573 import AutoModelForObjectDetection
 
 >>> model = AutoModelForObjectDetection.from_pretrained(
 ...     MODEL_NAME,
@@ -539,7 +539,7 @@ If you wish to share your model by pushing to the Hub, set `push_to_hub` to `Tru
 Face to upload your model).
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(
 ...     output_dir="detr_finetuned_cppe5",
@@ -566,7 +566,7 @@ Face to upload your model).
 Finally, bring everything together, and call [`~transformers.Trainer.train`]:
 
 ```py
->>> from transformers import Trainer
+>>> from transformers_4573 import Trainer
 
 >>> trainer = Trainer(
 ...     model=model,
@@ -1485,7 +1485,7 @@ Now that you have finetuned a model, evaluated it, and uploaded it to the Huggin
 >>> import requests
 
 >>> from PIL import Image, ImageDraw
->>> from transformers import AutoImageProcessor, AutoModelForObjectDetection
+>>> from transformers_4573 import AutoImageProcessor, AutoModelForObjectDetection
 
 >>> url = "https://images.pexels.com/photos/8413299/pexels-photo-8413299.jpeg?auto=compress&cs=tinysrgb&w=630&h=375&dpr=2"
 >>> image = Image.open(requests.get(url, stream=True).raw)

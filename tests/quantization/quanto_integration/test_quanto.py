@@ -15,8 +15,8 @@
 import tempfile
 import unittest
 
-from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, QuantoConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoConfig, AutoModelForCausalLM, AutoTokenizer, QuantoConfig
+from transformers_4573.testing_utils import (
     require_accelerate,
     require_optimum_quanto,
     require_read_token,
@@ -24,7 +24,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_optimum_quanto_available, is_torch_available
+from transformers_4573.utils import is_optimum_quanto_available, is_torch_available
 
 
 if is_torch_available():
@@ -34,7 +34,7 @@ if is_torch_available():
 if is_optimum_quanto_available():
     from optimum.quanto import QLayerNorm, QLinear
 
-    from transformers.integrations.quanto import replace_with_quanto_layers
+    from transformers_4573.integrations.quanto import replace_with_quanto_layers
 
 
 @require_optimum_quanto
@@ -242,9 +242,9 @@ class QuantoQuantizationTest(unittest.TestCase):
         Also test if we get the right values for `total_byte_count` in `caching_allocator_warmup`.
         Note that `compute_module_sizes` is being used in `get_total_byte_count`
         """
-        from transformers.integrations.accelerate import compute_module_sizes
-        from transformers.modeling_utils import expand_device_map, get_total_byte_count
-        from transformers.quantizers import AutoHfQuantizer
+        from transformers_4573.integrations.accelerate import compute_module_sizes
+        from transformers_4573.modeling_utils import expand_device_map, get_total_byte_count
+        from transformers_4573.quantizers import AutoHfQuantizer
 
         # we need to preprocess the model like that because device_map calculation happens before we load the weights inside the model.
         # For normal wieghts, it's fine but for quantized weights, the tensors dtype might change during loading.

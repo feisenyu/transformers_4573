@@ -25,8 +25,8 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-from transformers import ConvNextConfig, ConvNextForImageClassification, ConvNextImageProcessor
-from transformers.utils import logging
+from transformers_4573 import ConvNextConfig, ConvNextForImageClassification, ConvNextImageProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

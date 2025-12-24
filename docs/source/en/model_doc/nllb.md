@@ -42,7 +42,7 @@ The example below demonstrates how to translate text with [`Pipeline`] or the [`
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="translation", model="facebook/nllb-200-distilled-600M", src_lang="eng_Latn", tgt_lang="fra_Latn", dtype=torch.float16, device=0)
 pipeline("UN Chief says there is no military solution in Syria")
@@ -52,7 +52,7 @@ pipeline("UN Chief says there is no military solution in Syria")
 <hfoption id="AutoModel">
 
 ```python
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
 model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M", dtype="auto", attn_implementation="sdpa")
@@ -81,7 +81,7 @@ Quantization reduces the memory burden of large models by representing the weigh
 The example below uses [bitsandbytes](../quantization/bitsandbytes) to quantize the weights to 8-bits.
 
 ```python
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer, BitsAndBytesConfig
 
 bnb_config = BitsAndBytesConfig(load_in_8bit=True)
 model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-1.3B", quantization_config=bnb_config)
@@ -98,7 +98,7 @@ print(tokenizer.batch_decode(translated_tokens, skip_special_tokens=True)[0])
 Use the [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/main/src/transformers/utils/attention_visualizer.py#L139) to better understand what tokens the model can and cannot attend to.
 
 ```python
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("facebook/nllb-200-distilled-600M")
 visualizer("UN Chief says there is no military solution in Syria")
@@ -113,7 +113,7 @@ visualizer("UN Chief says there is no military solution in Syria")
 - The tokenizer was updated in April 2023 to prefix the source sequence with the source language rather than the target language. This prioritizes zero-shot performance at a minor cost to supervised performance.
 
    ```python
-   >>> from transformers import NllbTokenizer
+   >>> from transformers_4573 import NllbTokenizer
 
    >>> tokenizer = NllbTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
    >>> tokenizer("How was your day?").input_ids
@@ -123,7 +123,7 @@ visualizer("UN Chief says there is no military solution in Syria")
    To revert to the legacy behavior, use the code example below.
 
    ```python
-   >>> from transformers import NllbTokenizer
+   >>> from transformers_4573 import NllbTokenizer
 
    >>> tokenizer = NllbTokenizer.from_pretrained("facebook/nllb-200-distilled-600M", legacy_behaviour=True)
    ```
@@ -133,7 +133,7 @@ visualizer("UN Chief says there is no military solution in Syria")
 - See example below for a translation from Romanian to German.
 
     ```python
-    >>> from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+    >>> from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
     >>> tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
     >>> model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")

@@ -1291,7 +1291,7 @@ class AutoConfig:
         Examples:
 
         ```python
-        >>> from transformers import AutoConfig
+        >>> from transformers_4573 import AutoConfig
 
         >>> # Download configuration from huggingface.co and cache.
         >>> config = AutoConfig.from_pretrained("google-bert/bert-base-uncased")

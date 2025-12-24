@@ -43,7 +43,7 @@ logger = logging.get_logger(__name__)
 
 
 @use_kernel_forward_from_hub("MultiScaleDeformableAttention")
-# Copied from transformers.models.deformable_detr.modeling_deformable_detr.MultiScaleDeformableAttention
+# Copied from transformers_4573.models.deformable_detr.modeling_deformable_detr.MultiScaleDeformableAttention
 class MultiScaleDeformableAttention(nn.Module):
     def forward(
         self,
@@ -298,7 +298,7 @@ class GroundingDinoObjectDetectionOutput(ModelOutput):
     input_ids: Optional[torch.LongTensor] = None
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->GroundingDino
+# Copied from transformers_4573.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->GroundingDino
 class GroundingDinoFrozenBatchNorm2d(nn.Module):
     """
     BatchNorm2d where the batch statistics and the affine parameters are fixed.
@@ -338,7 +338,7 @@ class GroundingDinoFrozenBatchNorm2d(nn.Module):
         return x * scale + bias
 
 
-# Copied from transformers.models.detr.modeling_detr.replace_batch_norm with Detr->GroundingDino
+# Copied from transformers_4573.models.detr.modeling_detr.replace_batch_norm with Detr->GroundingDino
 def replace_batch_norm(model):
     r"""
     Recursively replace all `torch.nn.BatchNorm2d` with `GroundingDinoFrozenBatchNorm2d`.
@@ -412,7 +412,7 @@ class GroundingDinoConvEncoder(nn.Module):
                     if "stage.1" not in name and "stage.2" not in name and "stage.3" not in name:
                         parameter.requires_grad_(False)
 
-    # Copied from transformers.models.detr.modeling_detr.DetrConvEncoder.forward with Detr->GroundingDino
+    # Copied from transformers_4573.models.detr.modeling_detr.DetrConvEncoder.forward with Detr->GroundingDino
     def forward(self, pixel_values: torch.Tensor, pixel_mask: torch.Tensor):
         # send pixel_values through the model to get list of feature maps
         features = self.model(pixel_values) if self.config.use_timm_backbone else self.model(pixel_values).feature_maps
@@ -425,7 +425,7 @@ class GroundingDinoConvEncoder(nn.Module):
         return out
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrConvModel with Detr->GroundingDino
+# Copied from transformers_4573.models.detr.modeling_detr.DetrConvModel with Detr->GroundingDino
 class GroundingDinoConvModel(nn.Module):
     """
     This module adds 2D position embeddings to all intermediate feature maps of the convolutional encoder.
@@ -513,7 +513,7 @@ def build_position_encoding(config):
     return position_embedding
 
 
-# Copied from transformers.models.deformable_detr.modeling_deformable_detr.DeformableDetrMultiscaleDeformableAttention with DeformableDetr->GroundingDino, Deformable DETR->Grounding DINO
+# Copied from transformers_4573.models.deformable_detr.modeling_deformable_detr.DeformableDetrMultiscaleDeformableAttention with DeformableDetr->GroundingDino, Deformable DETR->Grounding DINO
 class GroundingDinoMultiscaleDeformableAttention(nn.Module):
     """
     Multiscale deformable attention as proposed in Deformable DETR.
@@ -857,7 +857,7 @@ class GroundingDinoBiMultiHeadAttention(nn.Module):
         return (vision_attn_output, vision_attn_weights), (text_attn_output, text_attn_weights)
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -873,7 +873,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.beit.modeling_beit.BeitDropPath with Beit->GroundingDino
+# Copied from transformers_4573.models.beit.modeling_beit.BeitDropPath with Beit->GroundingDino
 class GroundingDinoDropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -2075,7 +2075,7 @@ class GroundingDinoModel(GroundingDinoPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoProcessor, AutoModel
+        >>> from transformers_4573 import AutoProcessor, AutoModel
         >>> from PIL import Image
         >>> import requests
 
@@ -2320,7 +2320,7 @@ class GroundingDinoModel(GroundingDinoPreTrainedModel):
         )
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrMLPPredictionHead
+# Copied from transformers_4573.models.detr.modeling_detr.DetrMLPPredictionHead
 class GroundingDinoMLPPredictionHead(nn.Module):
     """
     Very simple multi-layer perceptron (MLP, also called FFN), used to predict the normalized center coordinates,
@@ -2489,7 +2489,7 @@ class GroundingDinoForObjectDetection(GroundingDinoPreTrainedModel):
 
         >>> import torch
         >>> from PIL import Image
-        >>> from transformers import AutoProcessor, AutoModelForZeroShotObjectDetection
+        >>> from transformers_4573 import AutoProcessor, AutoModelForZeroShotObjectDetection
 
         >>> model_id = "IDEA-Research/grounding-dino-tiny"
         >>> device = "cuda"

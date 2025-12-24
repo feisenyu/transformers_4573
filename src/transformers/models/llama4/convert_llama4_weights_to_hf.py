@@ -10,7 +10,7 @@ import torch
 from tokenizers import AddedToken, processors
 from tqdm import tqdm
 
-from transformers import (
+from transformers_4573 import (
     GenerationConfig,
     Llama4Config,
     Llama4ForConditionalGeneration,
@@ -20,7 +20,7 @@ from transformers import (
     Llama4VisionConfig,
     PreTrainedTokenizerFast,
 )
-from transformers.integrations.tiktoken import TikTokenConverter
+from transformers_4573.integrations.tiktoken import TikTokenConverter
 
 
 _OFFLINE_QUANT_COMPATIBLE = os.environ.get("OFFLINE_QUANT_COMPATIBLE", "0") == "1"
@@ -533,7 +533,7 @@ def write_model(
         model.generation_config.temperature = 0.6
         print("Model reloaded successfully.")
 
-        from transformers import AutoTokenizer
+        from transformers_4573 import AutoTokenizer
 
         tokenizer = AutoTokenizer.from_pretrained(model_path)
         inputs = tokenizer(["Roses are red,"], return_tensors="pt").to(model.device)

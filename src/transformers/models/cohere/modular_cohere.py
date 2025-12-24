@@ -295,7 +295,7 @@ class CohereForCausalLM(LlamaForCausalLM):
         Example:
 
         ```python
-        >> from transformers import AutoTokenizer, CohereForCausalLM
+        >> from transformers_4573 import AutoTokenizer, CohereForCausalLM
 
         >> model = CohereForCausalLM.from_pretrained("CohereForAI/c4ai-command-r-v01")
         >> tokenizer = AutoTokenizer.from_pretrained("CohereForAI/c4ai-command-r-v01")

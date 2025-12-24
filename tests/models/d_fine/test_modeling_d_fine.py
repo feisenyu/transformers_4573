@@ -22,13 +22,13 @@ from functools import cached_property
 
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     DFineConfig,
     HGNetV2Config,
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     require_vision,
@@ -40,12 +40,12 @@ from transformers.testing_utils import (
 if is_torch_available():
     import torch
 
-    from transformers import DFineForObjectDetection, DFineModel
+    from transformers_4573 import DFineForObjectDetection, DFineModel
 
 if is_vision_available():
     from PIL import Image
 
-from transformers import RTDetrImageProcessor
+from transformers_4573 import RTDetrImageProcessor
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor

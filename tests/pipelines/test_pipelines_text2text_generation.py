@@ -14,13 +14,13 @@
 
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     MODEL_FOR_SEQ_TO_SEQ_CAUSAL_LM_MAPPING,
     Text2TextGenerationPipeline,
     pipeline,
 )
-from transformers.testing_utils import is_pipeline_test, require_torch
-from transformers.utils import is_torch_available
+from transformers_4573.testing_utils import is_pipeline_test, require_torch
+from transformers_4573.utils import is_torch_available
 
 from .test_pipelines_common import ANY
 

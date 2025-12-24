@@ -248,7 +248,7 @@ class CTRLModel(CTRLPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, CTRLModel
+        >>> from transformers_4573 import AutoTokenizer, CTRLModel
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("Salesforce/ctrl")
@@ -417,7 +417,7 @@ class CTRLLMHeadModel(CTRLPreTrainedModel, GenerationMixin):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, CTRLLMHeadModel
+        >>> from transformers_4573 import AutoTokenizer, CTRLLMHeadModel
 
         >>> tokenizer = AutoTokenizer.from_pretrained("Salesforce/ctrl")
         >>> model = CTRLLMHeadModel.from_pretrained("Salesforce/ctrl")
@@ -558,7 +558,7 @@ class CTRLForSequenceClassification(CTRLPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, CTRLForSequenceClassification
+        >>> from transformers_4573 import AutoTokenizer, CTRLForSequenceClassification
 
         >>> tokenizer = AutoTokenizer.from_pretrained("Salesforce/ctrl")
         >>> model = CTRLForSequenceClassification.from_pretrained("Salesforce/ctrl")
@@ -593,7 +593,7 @@ class CTRLForSequenceClassification(CTRLPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, CTRLForSequenceClassification
+        >>> from transformers_4573 import AutoTokenizer, CTRLForSequenceClassification
 
         >>> tokenizer = AutoTokenizer.from_pretrained("Salesforce/ctrl")
         >>> model = CTRLForSequenceClassification.from_pretrained(

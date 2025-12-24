@@ -1961,7 +1961,7 @@ class Qwen2_5OmniThinkerForConditionalGeneration(Qwen2_5OmniPreTrainedModelForCo
         >>> from urllib.request import urlopen
         >>> import librosa
         >>> from qwen_vl_utils import process_vision_info
-        >>> from transformers import Qwen2_5OmniProcessor, Qwen2_5OmniThinkerForConditionalGeneration
+        >>> from transformers_4573 import Qwen2_5OmniProcessor, Qwen2_5OmniThinkerForConditionalGeneration
 
         >>> thinker = Qwen2_5OmniThinkerForConditionalGeneration.from_pretrained("Qwen/Qwen2.5-Omni-7B")
         >>> processor = Qwen2_5OmniProcessor.from_pretrained("Qwen/Qwen2.5-Omni-7B")
@@ -2414,7 +2414,7 @@ class Qwen2_5OmniTalkerForConditionalGeneration(Qwen2_5OmniPreTrainedModelForCon
         >>> from io import BytesIO
         >>> from urllib.request import urlopen
         >>> import librosa
-        >>> from transformers import AutoProcessor, Qwen2_5OmniTalkerForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Qwen2_5OmniTalkerForConditionalGeneration
 
         >>> model = Qwen2_5OmniTalkerForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B")
         >>> processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B")

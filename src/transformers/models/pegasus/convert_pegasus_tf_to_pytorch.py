@@ -21,8 +21,8 @@ import tensorflow as tf
 import torch
 from tqdm import tqdm
 
-from transformers import PegasusConfig, PegasusForConditionalGeneration, PegasusTokenizer
-from transformers.models.pegasus.configuration_pegasus import DEFAULTS, task_specific_params
+from transformers_4573 import PegasusConfig, PegasusForConditionalGeneration, PegasusTokenizer
+from transformers_4573.models.pegasus.configuration_pegasus import DEFAULTS, task_specific_params
 
 
 PATTERNS = [

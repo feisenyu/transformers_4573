@@ -73,7 +73,7 @@ class DepthAnythingConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import DepthAnythingConfig, DepthAnythingForDepthEstimation
+    >>> from transformers_4573 import DepthAnythingConfig, DepthAnythingForDepthEstimation
 
     >>> # Initializing a DepthAnything small style configuration
     >>> configuration = DepthAnythingConfig()

@@ -23,13 +23,13 @@ from datasets import load_dataset
 
 from tests.test_configuration_common import ConfigTester
 from tests.test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor
-from transformers import (
+from transformers_4573 import (
     is_torch_available,
 )
-from transformers.models.colpali.configuration_colpali import ColPaliConfig
-from transformers.models.colpali.modeling_colpali import ColPaliForRetrieval, ColPaliForRetrievalOutput
-from transformers.models.colpali.processing_colpali import ColPaliProcessor
-from transformers.testing_utils import (
+from transformers_4573.models.colpali.configuration_colpali import ColPaliConfig
+from transformers_4573.models.colpali.modeling_colpali import ColPaliForRetrieval, ColPaliForRetrievalOutput
+from transformers_4573.models.colpali.processing_colpali import ColPaliProcessor
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_torch,
     require_vision,

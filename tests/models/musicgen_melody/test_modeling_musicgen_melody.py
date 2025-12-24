@@ -24,14 +24,14 @@ import numpy as np
 import pytest
 from pytest import mark
 
-from transformers import (
+from transformers_4573 import (
     EncodecConfig,
     MusicgenMelodyConfig,
     MusicgenMelodyDecoderConfig,
     PreTrainedConfig,
     T5Config,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     get_device_properties,
@@ -55,7 +55,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MusicgenMelodyForCausalLM,
         MusicgenMelodyForConditionalGeneration,
         MusicgenMelodyModel,
@@ -63,7 +63,7 @@ if is_torch_available():
     )
 
 if is_torchaudio_available():
-    from transformers import MusicgenMelodyProcessor
+    from transformers_4573 import MusicgenMelodyProcessor
 
 
 def _config_zero_init(config):

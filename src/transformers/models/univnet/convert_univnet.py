@@ -16,7 +16,7 @@ import argparse
 
 import torch
 
-from transformers import UnivNetConfig, UnivNetModel, logging
+from transformers_4573 import UnivNetConfig, UnivNetModel, logging
 
 
 logging.set_verbosity_info()

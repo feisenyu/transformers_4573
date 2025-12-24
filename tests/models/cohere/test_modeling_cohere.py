@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import CohereConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import CohereConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_bitsandbytes,
     require_torch,
     require_torch_multi_accelerator,
@@ -33,10 +33,10 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import AutoTokenizer, CohereForCausalLM, CohereModel
+    from transformers_4573 import AutoTokenizer, CohereForCausalLM, CohereModel
 
 
-# Copied from transformers.tests.models.llama.LlamaModelTester with Llama->Cohere
+# Copied from transformers_4573.tests.models.llama.LlamaModelTester with Llama->Cohere
 class CohereModelTester:
     config_class = CohereConfig
     if is_torch_available():

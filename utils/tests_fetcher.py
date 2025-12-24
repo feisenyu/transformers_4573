@@ -294,7 +294,7 @@ def get_impacted_files_from_tiny_model_summary(diff_with_last_commit: bool = Fal
                 impacted_model_classes.extend(new_content[key]["model_classes"])
 
         # Add imports via `define_import_structure` after the #35167 as we remove explicit import in `__init__.py`
-        from transformers.utils.import_utils import define_import_structure
+        from transformers_4573.utils.import_utils import define_import_structure
 
         reversed_structure = {}
         new_imported_modules_from_import_structure = define_import_structure("src/transformers/__init__.py")
@@ -539,13 +539,13 @@ _re_single_line_relative_imports = re.compile(r"(?:^|\n)\s*from\s+(\.+\S+)\s+imp
 # yyy will take multiple lines otherwise there wouldn't be parenthesis.
 _re_multi_line_relative_imports = re.compile(r"(?:^|\n)\s*from\s+(\.+\S+)\s+import\s+\(([^\)]+)\)")
 # (:?^|\n) -> Non-catching group for the beginning of the doc or a new line.
-# \s*from\s+transformers(\S*)\s+import\s+([^\n]+) -> Line only contains from transformers.xxx import yyy and we catch
+# \s*from\s+transformers(\S*)\s+import\s+([^\n]+) -> Line only contains from transformers_4573.xxx import yyy and we catch
 #           .xxx and yyy
 # (?=\n) -> Look-ahead to a new line. We can't just put \n here or using find_all on this re will only catch every
 #           other import.
 _re_single_line_direct_imports = re.compile(r"(?:^|\n)\s*from\s+transformers(\S*)\s+import\s+([^\n]+)(?=\n)")
 # (:?^|\n) -> Non-catching group for the beginning of the doc or a new line.
-# \s*from\s+transformers(\S*)\s+import\s+\(([^\)]+)\) -> Line continues with from transformers.xxx import (yyy) and we
+# \s*from\s+transformers(\S*)\s+import\s+\(([^\)]+)\) -> Line continues with from transformers_4573.xxx import (yyy) and we
 # catch .xxx and yyy. yyy will take multiple lines otherwise there wouldn't be parenthesis.
 _re_multi_line_direct_imports = re.compile(r"(?:^|\n)\s*from\s+transformers(\S*)\s+import\s+\(([^\)]+)\)")
 
@@ -668,7 +668,7 @@ def get_module_dependencies(module_fname: str, cache: dict[str, list[str]] | Non
                 new_imported_modules = dict(extract_imports(module, cache=cache))
 
                 # Add imports via `define_import_structure` after the #35167 as we remove explicit import in `__init__.py`
-                from transformers.utils.import_utils import define_import_structure
+                from transformers_4573.utils.import_utils import define_import_structure
 
                 new_imported_modules_from_import_structure = define_import_structure(PATH_TO_REPO / module)
 

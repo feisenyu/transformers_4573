@@ -39,7 +39,7 @@ The example below demonstrates how to use BertGeneration with [`EncoderDecoderMo
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text2text-generation",
@@ -55,7 +55,7 @@ pipeline("Plants create energy through ")
 
 ```python
 import torch
-from transformers import EncoderDecoderModel, AutoTokenizer
+from transformers_4573 import EncoderDecoderModel, AutoTokenizer
 
 model = EncoderDecoderModel.from_pretrained("google/roberta2roberta_L-24_discofuse", dtype="auto")
 tokenizer = AutoTokenizer.from_pretrained("google/roberta2roberta_L-24_discofuse")
@@ -84,7 +84,7 @@ The example below uses [BitsAndBytesConfig](../quantizationbitsandbytes) to quan
 
 ```python
 import torch
-from transformers import EncoderDecoderModel, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import EncoderDecoderModel, AutoTokenizer, BitsAndBytesConfig
 
 # Configure 4-bit quantization
 quantization_config = BitsAndBytesConfig(
@@ -112,7 +112,7 @@ print(tokenizer.decode(outputs[0]))
 - [`BertGenerationEncoder`] and [`BertGenerationDecoder`] should be used in combination with [`EncoderDecoderModel`] for sequence-to-sequence tasks.
 
    ```python
-   from transformers import BertGenerationEncoder, BertGenerationDecoder, BertTokenizer, EncoderDecoderModel
+   from transformers_4573 import BertGenerationEncoder, BertGenerationDecoder, BertTokenizer, EncoderDecoderModel
    
    # leverage checkpoints for Bert2Bert model
    # use BERT's cls token as BOS token and sep token as EOS token

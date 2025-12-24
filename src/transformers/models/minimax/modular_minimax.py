@@ -144,7 +144,7 @@ class MiniMaxConfig(PreTrainedConfig):
             Weight for hidden state value in residual connection after MLP.
 
     ```python
-    >>> from transformers import MiniMaxModel, MiniMaxConfig
+    >>> from transformers_4573 import MiniMaxModel, MiniMaxConfig
 
     >>> # Initializing a MiniMax style configuration
     >>> configuration = MiniMaxConfig()
@@ -623,7 +623,7 @@ class MiniMaxForCausalLM(MixtralForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, MiniMaxForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, MiniMaxForCausalLM
 
         >>> model = MiniMaxForCausalLM.from_pretrained("MiniMaxAI/MiniMax-Text-01-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("MiniMaxAI/MiniMax-Text-01-hf")

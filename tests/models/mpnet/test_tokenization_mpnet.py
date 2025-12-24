@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers.models.mpnet.tokenization_mpnet import MPNetTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573.models.mpnet.tokenization_mpnet import MPNetTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

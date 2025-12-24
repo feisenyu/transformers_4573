@@ -20,8 +20,8 @@ from operator import attrgetter
 
 import torch
 
-from transformers import ConvBertConfig, ConvBertModel
-from transformers.utils import logging
+from transformers_4573 import ConvBertConfig, ConvBertModel
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)

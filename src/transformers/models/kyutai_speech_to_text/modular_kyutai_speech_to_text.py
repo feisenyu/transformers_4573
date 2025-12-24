@@ -284,7 +284,7 @@ class KyutaiSpeechToTextForConditionalGeneration(LlamaForCausalLM, GenerationMix
         ```python
         >>> import torch
         >>> from datasets import load_dataset, Audio
-        >>> from transformers import KyutaiSpeechToTextProcessor, KyutaiSpeechToTextForConditionalGeneration
+        >>> from transformers_4573 import KyutaiSpeechToTextProcessor, KyutaiSpeechToTextForConditionalGeneration
 
         >>> torch_device = "cuda" if torch.cuda.is_available() else "cpu"
         >>> model_id = "kyutai/stt-2.6b-en-trfs"

@@ -129,7 +129,7 @@ class PatchTSMixerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PatchTSMixerConfig, PatchTSMixerModel
+    >>> from transformers_4573 import PatchTSMixerConfig, PatchTSMixerModel
 
     >>> # Initializing a default PatchTSMixer configuration
     >>> configuration = PatchTSMixerConfig()

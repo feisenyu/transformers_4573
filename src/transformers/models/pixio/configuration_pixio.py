@@ -85,7 +85,7 @@ class PixioConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PixioConfig, PixioModel
+    >>> from transformers_4573 import PixioConfig, PixioModel
 
     >>> # Initializing a Pixio pixio-huge style configuration
     >>> configuration = PixioConfig()

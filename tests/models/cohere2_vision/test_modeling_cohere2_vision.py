@@ -15,12 +15,12 @@
 
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     Cohere2VisionConfig,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     get_device_properties,
@@ -41,7 +41,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Cohere2VisionForConditionalGeneration,
         Cohere2VisionModel,
     )

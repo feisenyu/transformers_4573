@@ -17,11 +17,11 @@ import unittest
 
 import pytest
 
-from transformers import DepthAnythingConfig, Dinov2Config
-from transformers.file_utils import is_torch_available, is_vision_available
-from transformers.pytorch_utils import is_torch_greater_or_equal_than_2_4
-from transformers.testing_utils import require_torch, require_vision, slow, torch_device
-from transformers.utils.import_utils import get_torch_major_and_minor_version
+from transformers_4573 import DepthAnythingConfig, Dinov2Config
+from transformers_4573.file_utils import is_torch_available, is_vision_available
+from transformers_4573.pytorch_utils import is_torch_greater_or_equal_than_2_4
+from transformers_4573.testing_utils import require_torch, require_vision, slow, torch_device
+from transformers_4573.utils.import_utils import get_torch_major_and_minor_version
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor
@@ -31,13 +31,13 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import DepthAnythingForDepthEstimation
+    from transformers_4573 import DepthAnythingForDepthEstimation
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import DPTImageProcessor
+    from transformers_4573 import DPTImageProcessor
 
 
 class DepthAnythingModelTester:

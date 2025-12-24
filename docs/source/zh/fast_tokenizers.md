@@ -41,7 +41,7 @@ rendered properly in your Markdown viewer.
 让我们看看如何利用 🤗 Transformers 库中的这个分词器对象。[`PreTrainedTokenizerFast`] 类允许通过接受已实例化的 *tokenizer* 对象作为参数，进行轻松实例化：
 
 ```python
->>> from transformers import PreTrainedTokenizerFast
+>>> from transformers_4573 import PreTrainedTokenizerFast
 
 >>> fast_tokenizer = PreTrainedTokenizerFast(tokenizer_object=tokenizer)
 ```
@@ -59,7 +59,7 @@ rendered properly in your Markdown viewer.
 我们保存此文件的路径可以通过 `tokenizer_file` 参数传递给 [`PreTrainedTokenizerFast`] 初始化方法：
 
 ```python
->>> from transformers import PreTrainedTokenizerFast
+>>> from transformers_4573 import PreTrainedTokenizerFast
 
 >>> fast_tokenizer = PreTrainedTokenizerFast(tokenizer_file="tokenizer.json")
 ```

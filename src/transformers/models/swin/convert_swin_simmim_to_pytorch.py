@@ -22,7 +22,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import SwinConfig, SwinForMaskedImageModeling, ViTImageProcessor
+from transformers_4573 import SwinConfig, SwinForMaskedImageModeling, ViTImageProcessor
 
 
 def get_swin_config(model_name):

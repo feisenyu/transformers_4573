@@ -44,7 +44,7 @@ import datasets
 from datasets import load_dataset
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoTokenizer,
     DataCollatorForPermutationLanguageModeling,
@@ -55,8 +55,8 @@ from transformers import (
     XLNetLMHeadModel,
     set_seed,
 )
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

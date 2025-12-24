@@ -40,7 +40,7 @@ The example below demonstrates how to summarize text with [`Pipeline`], [`AutoMo
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="summarization",
@@ -59,7 +59,7 @@ This energy reserve allows them to grow, develop leaves, produce flowers, bear f
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
 tokenizer = AutoTokenizer.from_pretrained(
     "google/pegasus-x-large"
@@ -96,7 +96,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import BitsAndBytesConfig, AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import BitsAndBytesConfig, AutoModelForSeq2SeqLM, AutoTokenizer
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,

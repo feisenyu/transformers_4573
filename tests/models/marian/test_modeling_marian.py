@@ -17,8 +17,8 @@ import tempfile
 import unittest
 from functools import cached_property
 
-from transformers import MarianConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import MarianConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_sentencepiece,
     require_tokenizers,
     require_torch,
@@ -36,7 +36,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoConfig,
         AutoModelWithLMHead,
         AutoTokenizer,
@@ -44,7 +44,7 @@ if is_torch_available():
         MarianMTModel,
         TranslationPipeline,
     )
-    from transformers.models.marian.modeling_marian import (
+    from transformers_4573.models.marian.modeling_marian import (
         MarianDecoder,
         MarianEncoder,
         MarianForCausalLM,

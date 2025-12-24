@@ -20,8 +20,8 @@ import os
 
 import torch
 
-from transformers import BigBirdConfig, BigBirdForPreTraining, BigBirdForQuestionAnswering
-from transformers.utils import logging
+from transformers_4573 import BigBirdConfig, BigBirdForPreTraining, BigBirdForQuestionAnswering
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)

@@ -27,8 +27,8 @@ import typer
 import yaml
 from huggingface_hub import AsyncInferenceClient, ChatCompletionStreamOutput
 
-from transformers import GenerationConfig
-from transformers.utils import is_rich_available
+from transformers_4573 import GenerationConfig
+from transformers_4573.utils import is_rich_available
 
 
 try:

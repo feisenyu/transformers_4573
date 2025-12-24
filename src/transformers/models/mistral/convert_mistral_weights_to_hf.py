@@ -19,8 +19,8 @@ import re
 import torch
 from safetensors.torch import load_file
 
-from transformers import AutoTokenizer, LlamaTokenizerFast, MistralConfig, MistralForCausalLM
-from transformers.integrations.mistral import convert_tekken_tokenizer
+from transformers_4573 import AutoTokenizer, LlamaTokenizerFast, MistralConfig, MistralForCausalLM
+from transformers_4573.integrations.mistral import convert_tekken_tokenizer
 
 
 # fmt: off

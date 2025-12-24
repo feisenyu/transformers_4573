@@ -80,7 +80,7 @@ class VJEPA2Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import VJEPA2Config, VJEPA2Model
+    >>> from transformers_4573 import VJEPA2Config, VJEPA2Model
 
     >>> # Initializing a VJEPA2 vjepa2-vitl-fpc64-256 style configuration
     >>> configuration = VJEPA2Config()

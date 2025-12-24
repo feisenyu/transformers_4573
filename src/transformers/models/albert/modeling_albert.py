@@ -111,7 +111,7 @@ class AlbertEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -481,7 +481,7 @@ class AlbertForPreTraining(AlbertPreTrainedModel):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, AlbertForPreTraining
+        >>> from transformers_4573 import AutoTokenizer, AlbertForPreTraining
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("albert/albert-base-v2")
@@ -607,7 +607,7 @@ class AlbertForMaskedLM(AlbertPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, AlbertForMaskedLM
+        >>> from transformers_4573 import AutoTokenizer, AlbertForMaskedLM
 
         >>> tokenizer = AutoTokenizer.from_pretrained("albert/albert-base-v2")
         >>> model = AlbertForMaskedLM.from_pretrained("albert/albert-base-v2")

@@ -54,7 +54,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 pipe = pipeline(
     task="image-text-to-text",
     model="THUDM/GLM-4.1V-9B-Thinking",
@@ -81,7 +81,7 @@ pipe(text=messages,max_new_tokens=20, return_full_text=False)
 
 ```py
 import torch
-from transformers import Glm4vForConditionalGeneration, AutoProcessor
+from transformers_4573 import Glm4vForConditionalGeneration, AutoProcessor
 
 model = Glm4vForConditionalGeneration.from_pretrained(
     "THUDM/GLM-4.1V-9B-Thinking",
@@ -132,7 +132,7 @@ Using GLM-4.1V with video input is similar to using it with image input.
 The model can process video data and generate text based on the content of the video.
 
 ```python
-from transformers import AutoProcessor, Glm4vForConditionalGeneration
+from transformers_4573 import AutoProcessor, Glm4vForConditionalGeneration
 from accelerate import Accelerator
 import torch
 

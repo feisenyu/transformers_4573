@@ -120,7 +120,7 @@ class ZoeDepthConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import ZoeDepthConfig, ZoeDepthForDepthEstimation
+    >>> from transformers_4573 import ZoeDepthConfig, ZoeDepthForDepthEstimation
 
     >>> # Initializing a ZoeDepth zoedepth-large style configuration
     >>> configuration = ZoeDepthConfig()

@@ -89,7 +89,7 @@ class OlmoConfig(PreTrainedConfig):
             absolute value does not exceed this value.
 
     ```python
-    >>> from transformers import OlmoModel, OlmoConfig
+    >>> from transformers_4573 import OlmoModel, OlmoConfig
 
     >>> # Initializing a OLMo 7B style configuration
     >>> configuration = OlmoConfig()

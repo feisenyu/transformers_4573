@@ -61,7 +61,7 @@ class VitPoseConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import VitPoseConfig, VitPoseForPoseEstimation
+    >>> from transformers_4573 import VitPoseConfig, VitPoseForPoseEstimation
 
     >>> # Initializing a VitPose configuration
     >>> configuration = VitPoseConfig()

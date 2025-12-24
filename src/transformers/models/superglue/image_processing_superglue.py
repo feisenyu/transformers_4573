@@ -53,7 +53,7 @@ if is_vision_available():
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.superpoint.image_processing_superpoint.is_grayscale
+# Copied from transformers_4573.models.superpoint.image_processing_superpoint.is_grayscale
 def is_grayscale(
     image: np.ndarray,
     input_data_format: Optional[Union[str, ChannelDimension]] = None,
@@ -68,7 +68,7 @@ def is_grayscale(
         return np.all(image[..., 0] == image[..., 1]) and np.all(image[..., 1] == image[..., 2])
 
 
-# Copied from transformers.models.superpoint.image_processing_superpoint.convert_to_grayscale
+# Copied from transformers_4573.models.superpoint.image_processing_superpoint.convert_to_grayscale
 def convert_to_grayscale(
     image: ImageInput,
     input_data_format: Optional[Union[str, ChannelDimension]] = None,
@@ -190,7 +190,7 @@ class SuperGlueImageProcessor(BaseImageProcessor):
         self.rescale_factor = rescale_factor
         self.do_grayscale = do_grayscale
 
-    # Copied from transformers.models.superpoint.image_processing_superpoint.SuperPointImageProcessor.resize
+    # Copied from transformers_4573.models.superpoint.image_processing_superpoint.SuperPointImageProcessor.resize
     def resize(
         self,
         image: np.ndarray,
@@ -411,7 +411,7 @@ class SuperGlueImageProcessor(BaseImageProcessor):
 
         return results
 
-    # Copied from transformers.models.efficientloftr.image_processing_efficientloftr.EfficientLoFTRImageProcessor.visualize_keypoint_matching with EfficientLoFTR->SuperGlue
+    # Copied from transformers_4573.models.efficientloftr.image_processing_efficientloftr.EfficientLoFTRImageProcessor.visualize_keypoint_matching with EfficientLoFTR->SuperGlue
     def visualize_keypoint_matching(
         self,
         images: ImageInput,
@@ -466,7 +466,7 @@ class SuperGlueImageProcessor(BaseImageProcessor):
             results.append(plot_image_pil)
         return results
 
-    # Copied from transformers.models.efficientloftr.image_processing_efficientloftr.EfficientLoFTRImageProcessor._get_color
+    # Copied from transformers_4573.models.efficientloftr.image_processing_efficientloftr.EfficientLoFTRImageProcessor._get_color
     def _get_color(self, score):
         """Maps a score to a color."""
         r = int(255 * (1 - score))

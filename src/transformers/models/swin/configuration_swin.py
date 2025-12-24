@@ -83,7 +83,7 @@ class SwinConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import SwinConfig, SwinModel
+    >>> from transformers_4573 import SwinConfig, SwinModel
 
     >>> # Initializing a Swin microsoft/swin-tiny-patch4-window7-224 style configuration
     >>> configuration = SwinConfig()

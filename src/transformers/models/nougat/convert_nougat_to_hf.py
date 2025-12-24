@@ -24,7 +24,7 @@ from nougat.dataset.rasterize import rasterize_paper
 from nougat.utils.checkpoint import get_checkpoint
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     DonutSwinConfig,
     DonutSwinModel,
     MBartConfig,
@@ -64,7 +64,7 @@ def get_configs(model):
     return encoder_config, decoder_config
 
 
-# Copied from transformers.models.donut.convert_donut_to_pytorch.rename_key
+# Copied from transformers_4573.models.donut.convert_donut_to_pytorch.rename_key
 def rename_key(name):
     if "encoder.model" in name:
         name = name.replace("encoder.model", "encoder")
@@ -98,7 +98,7 @@ def rename_key(name):
     return name
 
 
-# Copied from transformers.models.donut.convert_donut_to_pytorch.convert_state_dict
+# Copied from transformers_4573.models.donut.convert_donut_to_pytorch.convert_state_dict
 def convert_state_dict(orig_state_dict, model):
     for key in orig_state_dict.copy():
         val = orig_state_dict.pop(key)

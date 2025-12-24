@@ -23,7 +23,7 @@ from shutil import copyfile
 from huggingface_hub import snapshot_download, upload_folder
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     FEATURE_EXTRACTOR_MAPPING,
     MODEL_FOR_AUDIO_TOKENIZATION_MAPPING,
@@ -48,12 +48,12 @@ from transformers import (
     Wav2Vec2FeatureExtractor,
     Wav2Vec2Processor,
 )
-from transformers.models.auto.feature_extraction_auto import get_feature_extractor_config
-from transformers.models.auto.image_processing_auto import get_image_processor_config
-from transformers.models.auto.video_processing_auto import get_video_processor_config
-from transformers.testing_utils import TOKEN, TemporaryHubRepo, get_tests_dir, is_staging_test
-from transformers.tokenization_python import TOKENIZER_CONFIG_FILE
-from transformers.utils import (
+from transformers_4573.models.auto.feature_extraction_auto import get_feature_extractor_config
+from transformers_4573.models.auto.image_processing_auto import get_image_processor_config
+from transformers_4573.models.auto.video_processing_auto import get_video_processor_config
+from transformers_4573.testing_utils import TOKEN, TemporaryHubRepo, get_tests_dir, is_staging_test
+from transformers_4573.tokenization_python import TOKENIZER_CONFIG_FILE
+from transformers_4573.utils import (
     FEATURE_EXTRACTOR_NAME,
     PROCESSOR_NAME,
 )

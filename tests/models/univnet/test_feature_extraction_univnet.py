@@ -21,9 +21,9 @@ import unittest
 import numpy as np
 from datasets import Audio, load_dataset
 
-from transformers import UnivNetFeatureExtractor
-from transformers.testing_utils import check_json_file_has_correct_format, require_torch, slow
-from transformers.utils.import_utils import is_torch_available
+from transformers_4573 import UnivNetFeatureExtractor
+from transformers_4573.testing_utils import check_json_file_has_correct_format, require_torch, slow
+from transformers_4573.utils.import_utils import is_torch_available
 
 from ...test_sequence_feature_extraction_common import SequenceFeatureExtractionTestMixin
 

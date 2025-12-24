@@ -20,9 +20,9 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import AutoTokenizer, ModernBertConfig, PreTrainedModel, is_torch_available
-from transformers.models.auto import get_values
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, ModernBertConfig, PreTrainedModel, is_torch_available
+from transformers_4573.models.auto import get_values
+from transformers_4573.testing_utils import (
     CaptureLogger,
     require_flash_attn,
     require_torch,
@@ -39,7 +39,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MODEL_FOR_PRETRAINING_MAPPING,
         ModernBertForMaskedLM,
         ModernBertForMultipleChoice,

@@ -83,7 +83,7 @@ class PLBartConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import PLBartConfig, PLBartModel
+    >>> from transformers_4573 import PLBartConfig, PLBartModel
 
     >>> # Initializing a PLBART uclanlp/plbart-base style configuration
     >>> configuration = PLBartConfig()

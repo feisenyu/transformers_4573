@@ -72,7 +72,7 @@ class ConvBertConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import ConvBertConfig, ConvBertModel
+    >>> from transformers_4573 import ConvBertConfig, ConvBertModel
 
     >>> # Initializing a ConvBERT convbert-base-uncased style configuration
     >>> configuration = ConvBertConfig()

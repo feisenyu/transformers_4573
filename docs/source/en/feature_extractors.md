@@ -23,7 +23,7 @@ Call [`~AutoFeatureExtractor.from_pretrained`] to load a feature extractor and i
 Pass the audio signal, typically stored in `array`, to the feature extractor and set the `sampling_rate` parameter to the pretrained audio models sampling rate. It is important the sampling rate of the audio data matches the sampling rate of the data a pretrained audio model was trained on.
 
 ```py
-from transformers import AutoFeatureExtractor
+from transformers_4573 import AutoFeatureExtractor
 
 feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base")
 dataset = load_dataset("PolyAI/minds14", name="en-US", split="train")
@@ -54,7 +54,7 @@ The [AutoClass](./model_doc/auto) API automatically loads the correct feature ex
 Use [`~AutoFeatureExtractor.from_pretrained`] to load a feature extractor.
 
 ```py
-from transformers import AutoFeatureExtractor
+from transformers_4573 import AutoFeatureExtractor
 
 feature_extractor = AutoFeatureExtractor.from_pretrained("openai/whisper-tiny")
 ```
@@ -67,7 +67,7 @@ Every pretrained audio model has a specific associated feature extractor for cor
 A feature extractor can be loaded directly from its model-specific class.
 
 ```py
-from transformers import WhisperFeatureExtractor
+from transformers_4573 import WhisperFeatureExtractor
 
 feature_extractor = WhisperFeatureExtractor.from_pretrained("openai/whisper-tiny")
 ```
@@ -89,7 +89,7 @@ Load a dataset and feature extractor with [`~FeatureExtractionMixin.from_pretrai
 
 ```py
 from datasets import load_dataset, Audio
-from transformers import AutoFeatureExtractor
+from transformers_4573 import AutoFeatureExtractor
 
 dataset = load_dataset("PolyAI/minds14", name="en-US", split="train")
 feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base")

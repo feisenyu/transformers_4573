@@ -4,7 +4,7 @@ from argparse import Namespace
 import torch
 from torch import nn
 
-from transformers import XGLMConfig, XGLMForCausalLM
+from transformers_4573 import XGLMConfig, XGLMForCausalLM
 
 
 def remove_ignore_keys_(state_dict):

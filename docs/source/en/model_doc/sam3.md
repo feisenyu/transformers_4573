@@ -42,7 +42,7 @@ This model was contributed by [yonigozlan](https://huggingface.co/yonigozlan) an
 ### Text-Only Prompts
 
 ```python
->>> from transformers import Sam3Processor, Sam3Model
+>>> from transformers_4573 import Sam3Processor, Sam3Model
 >>> import torch
 >>> from PIL import Image
 >>> import requests
@@ -261,7 +261,7 @@ SAM3 also provides semantic segmentation alongside instance masks:
 When running multiple text prompts on the same image, pre-compute vision embeddings to avoid redundant computation:
 
 ```python
->>> from transformers import Sam3Processor, Sam3Model
+>>> from transformers_4573 import Sam3Processor, Sam3Model
 >>> import torch
 >>> from PIL import Image
 >>> import requests
@@ -306,7 +306,7 @@ When running multiple text prompts on the same image, pre-compute vision embeddi
 When running the same text prompt on multiple images, pre-compute text embeddings to avoid redundant computation:
 
 ```python
->>> from transformers import Sam3Processor, Sam3Model
+>>> from transformers_4573 import Sam3Processor, Sam3Model
 >>> import torch
 >>> from PIL import Image
 >>> import requests

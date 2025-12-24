@@ -74,7 +74,7 @@ import torch
 import numpy as np
 
 from torchcodec.decoders import VideoDecoder
-from transformers import AutoVideoProcessor, AutoModelForVideoClassification
+from transformers_4573 import AutoVideoProcessor, AutoModelForVideoClassification
 from accelerate import Accelerator
 
 device = Accelerator().device

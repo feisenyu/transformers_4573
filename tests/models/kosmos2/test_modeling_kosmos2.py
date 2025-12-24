@@ -23,9 +23,9 @@ import pytest
 import requests
 from parameterized import parameterized
 
-from transformers import AutoModelForImageTextToText, AutoProcessor, Kosmos2Config
-from transformers.models.kosmos2.configuration_kosmos2 import Kosmos2TextConfig, Kosmos2VisionConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoModelForImageTextToText, AutoProcessor, Kosmos2Config
+from transformers_4573.models.kosmos2.configuration_kosmos2 import Kosmos2TextConfig, Kosmos2VisionConfig
+from transformers_4573.testing_utils import (
     IS_ROCM_SYSTEM,
     IS_XPU_SYSTEM,
     require_torch,
@@ -33,7 +33,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_torch_available,
     is_vision_available,
 )
@@ -53,7 +53,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import Kosmos2ForConditionalGeneration, Kosmos2Model
+    from transformers_4573 import Kosmos2ForConditionalGeneration, Kosmos2Model
 
 
 if is_vision_available():

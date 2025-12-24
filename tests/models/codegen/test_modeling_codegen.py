@@ -16,8 +16,8 @@
 import unittest
 from functools import cached_property
 
-from transformers import CodeGenConfig, is_torch_available
-from transformers.testing_utils import backend_manual_seed, require_torch, slow, torch_device
+from transformers_4573 import CodeGenConfig, is_torch_available
+from transformers_4573.testing_utils import backend_manual_seed, require_torch, slow, torch_device
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -28,7 +28,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import AutoTokenizer, CodeGenForCausalLM, CodeGenModel
+    from transformers_4573 import AutoTokenizer, CodeGenForCausalLM, CodeGenModel
 
 
 class CodeGenModelTester:

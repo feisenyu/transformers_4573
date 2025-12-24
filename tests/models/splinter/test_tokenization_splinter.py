@@ -14,7 +14,7 @@
 import unittest
 
 from tests.test_tokenization_common import TokenizerTesterMixin
-from transformers.models.splinter.tokenization_splinter import SplinterTokenizer
+from transformers_4573.models.splinter.tokenization_splinter import SplinterTokenizer
 
 
 class SplinterTokenizationTest(TokenizerTesterMixin, unittest.TestCase):

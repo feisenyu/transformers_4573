@@ -15,15 +15,15 @@
 import os
 import unittest
 
-from transformers.models.bert.tokenization_bert import VOCAB_FILES_NAMES, BertTokenizer
-from transformers.testing_utils import require_tokenizers, require_vision
-from transformers.utils import is_vision_available
+from transformers_4573.models.bert.tokenization_bert import VOCAB_FILES_NAMES, BertTokenizer
+from transformers_4573.testing_utils import require_tokenizers, require_vision
+from transformers_4573.utils import is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_vision_available():
-    from transformers import VisionTextDualEncoderProcessor, ViTImageProcessorFast
+    from transformers_4573 import VisionTextDualEncoderProcessor, ViTImageProcessorFast
 
 
 @require_tokenizers

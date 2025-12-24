@@ -19,7 +19,7 @@ import os
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     TapasConfig,
     TapasForMaskedLM,
     TapasForQuestionAnswering,
@@ -27,7 +27,7 @@ from transformers import (
     TapasModel,
     TapasTokenizer,
 )
-from transformers.utils import logging
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)

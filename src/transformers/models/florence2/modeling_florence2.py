@@ -868,7 +868,7 @@ class Florence2ForConditionalGeneration(Florence2PreTrainedModel, GenerationMixi
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Florence2ForConditionalGeneration
+        >>> from transformers_4573 import AutoProcessor, Florence2ForConditionalGeneration
 
         >>> model = Florence2ForConditionalGeneration.from_pretrained("florence-community/Florence-2-large")
         >>> processor = AutoProcessor.from_pretrained("florence-community/Florence-2-large")

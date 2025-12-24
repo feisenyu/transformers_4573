@@ -22,8 +22,8 @@ import torch
 from fairseq.models.xmod import XMODModel as FairseqXmodModel
 from packaging import version
 
-from transformers import XmodConfig, XmodForMaskedLM, XmodForSequenceClassification
-from transformers.utils import logging
+from transformers_4573 import XmodConfig, XmodForMaskedLM, XmodForSequenceClassification
+from transformers_4573.utils import logging
 
 
 if version.parse(fairseq.__version__) < version.parse("0.12.2"):

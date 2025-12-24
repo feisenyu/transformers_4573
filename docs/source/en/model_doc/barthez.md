@@ -38,7 +38,7 @@ The example below demonstrates how to predict the `<mask>` token with [`Pipeline
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="fill-mask",
@@ -54,7 +54,7 @@ pipeline("Les plantes produisent <mask> grâce à un processus appelé photosynt
 
 ```py
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "moussaKam/barthez",

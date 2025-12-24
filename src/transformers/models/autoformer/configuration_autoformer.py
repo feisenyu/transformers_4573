@@ -116,7 +116,7 @@ class AutoformerConfig(PreTrainedConfig):
         Example:
 
     ```python
-    >>> from transformers import AutoformerConfig, AutoformerModel
+    >>> from transformers_4573 import AutoformerConfig, AutoformerModel
 
     >>> # Initializing a default Autoformer configuration
     >>> configuration = AutoformerConfig()

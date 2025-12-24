@@ -104,7 +104,7 @@ class Dinov2WithRegistersConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Dinov2WithRegistersConfig, Dinov2WithRegistersModel
+    >>> from transformers_4573 import Dinov2WithRegistersConfig, Dinov2WithRegistersModel
 
     >>> # Initializing a Dinov2WithRegisters base style configuration
     >>> configuration = Dinov2WithRegistersConfig()
@@ -365,7 +365,7 @@ class Dinov2WithRegistersBackbone(Dinov2Backbone):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoBackbone
+        >>> from transformers_4573 import AutoImageProcessor, AutoBackbone
         >>> import torch
         >>> from PIL import Image
         >>> import requests

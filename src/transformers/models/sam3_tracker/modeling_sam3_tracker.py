@@ -30,7 +30,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import Tensor
 
-from transformers.utils.generic import OutputRecorder
+from transformers_4573.utils.generic import OutputRecorder
 
 from ... import initialization as init
 from ...activations import ACT2FN
@@ -951,7 +951,7 @@ class Sam3TrackerModel(Sam3TrackerPreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoModel, AutoProcessor
+        >>> from transformers_4573 import AutoModel, AutoProcessor
 
         >>> model = AutoModel.from_pretrained("danelcsb/sam3_tracker.1_hiera_tiny")
         >>> processor = AutoProcessor.from_pretrained("danelcsb/sam3_tracker.1_hiera_tiny")

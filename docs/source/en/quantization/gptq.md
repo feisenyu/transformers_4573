@@ -35,7 +35,7 @@ pip install gptqmodel --no-build-isolation
 Create a [`GPTQConfig`] class and set the number of bits to quantize to, a dataset to calbrate the weights for quantization, and a tokenizer to prepare the dataset.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer, GPTQConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, GPTQConfig
 
 tokenizer = AutoTokenizer.from_pretrained("facebook/opt-125m")
 gptq_config = GPTQConfig(bits=4, dataset="c4", tokenizer=tokenizer)
@@ -89,7 +89,7 @@ quantized_model.save_pretrained("opt-125m-gptq")
 Reload a quantized model with [`~PreTrainedModel.from_pretrained`], and set `device_map="auto"` to automatically distribute the model on all available GPUs to load the model faster without using more memory than needed.
 
 ```py
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained("{your_username}/opt-125m-gptq", device_map="auto")
 ```
@@ -102,7 +102,7 @@ Marlin inference can be activated with the `backend` parameter in [`GPTQConfig`]
 
 ```py
 
-from transformers import AutoModelForCausalLM, GPTQConfig
+from transformers_4573 import AutoModelForCausalLM, GPTQConfig
 
 model = AutoModelForCausalLM.from_pretrained("{your_username}/opt-125m-gptq", device_map="auto", quantization_config=GPTQConfig(bits=4, backend="marlin"))
 ```

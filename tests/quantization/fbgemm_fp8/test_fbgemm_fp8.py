@@ -17,8 +17,8 @@ import tempfile
 import unittest
 from typing import Any
 
-from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer, FbgemmFp8Config, OPTForCausalLM
-from transformers.testing_utils import (
+from transformers_4573 import AutoConfig, AutoModelForCausalLM, AutoTokenizer, FbgemmFp8Config, OPTForCausalLM
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_accelerate,
     require_deterministic_for_xpu,
@@ -28,7 +28,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_accelerate_available,
     is_fbgemm_gpu_available,
     is_torch_available,
@@ -147,7 +147,7 @@ class FbgemmFp8Test(unittest.TestCase):
         Simple test that checks if the quantized model has been converted properly
         """
 
-        from transformers.integrations import FbgemmFp8Linear, replace_with_fbgemm_fp8_linear
+        from transformers_4573.integrations import FbgemmFp8Linear, replace_with_fbgemm_fp8_linear
 
         model_id = "facebook/opt-350m"
         config = AutoConfig.from_pretrained(model_id, revision="cb32f77e905cccbca1d970436fb0f5e6b58ee3c5")
@@ -297,7 +297,7 @@ class FbgemmFp8LinearTest(unittest.TestCase):
         """
         Test that FbgemmFp8Linear preserves shape when in_features == out_features.
         """
-        from transformers.integrations import FbgemmFp8Linear
+        from transformers_4573.integrations import FbgemmFp8Linear
 
         with init_empty_weights(include_buffers=True):
             linear = FbgemmFp8Linear(1024, 1024, True)
@@ -310,7 +310,7 @@ class FbgemmFp8LinearTest(unittest.TestCase):
         """
         Test that FbgemmFp8Linear generates the correct shape when in_features != out_features.
         """
-        from transformers.integrations import FbgemmFp8Linear
+        from transformers_4573.integrations import FbgemmFp8Linear
 
         with init_empty_weights(include_buffers=True):
             linear = FbgemmFp8Linear(1024, 2048, True)

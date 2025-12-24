@@ -20,8 +20,8 @@ import torch
 from torch import nn
 from torchvision.transforms.v2 import functional as F
 
-from transformers.models.llava_next.image_processing_llava_next_fast import LlavaNextImageProcessorFast
-from transformers.models.llava_next_video.modeling_llava_next_video import (
+from transformers_4573.models.llava_next.image_processing_llava_next_fast import LlavaNextImageProcessorFast
+from transformers_4573.models.llava_next_video.modeling_llava_next_video import (
     LlavaNextVideoCausalLMOutputWithPast,
     LlavaNextVideoForConditionalGeneration,
     LlavaNextVideoModel,
@@ -75,7 +75,7 @@ class LlavaOnevisionImageProcessorFast(LlavaNextImageProcessorFast):
     image_grid_pinpoints = [[384, 384], [384, 768], [384, 1152], [384, 1536], [384, 1920], [384, 2304], [768, 384], [768, 768], [768, 1152], [768, 1536], [768, 1920], [768, 2304], [1152, 384], [1152, 768], [1152, 1152], [1152, 1536], [1152, 1920], [1152, 2304], [1536, 384], [1536, 768], [1536, 1152], [1536, 1536], [1536, 1920], [1536, 2304], [1920, 384], [1920, 768], [1920, 1152], [1920, 1536], [1920, 1920], [1920, 2304], [2304, 384], [2304, 768], [2304, 1152], [2304, 1536], [2304, 1920], [2304, 2304]]  # fmt: skip
     model_input_names = ["pixel_values", "image_sizes", "batch_num_images"]
 
-    # Copied from transformers.models.llava.image_processing_llava_fast.LlavaImageProcessorFast.pad_to_square
+    # Copied from transformers_4573.models.llava.image_processing_llava_fast.LlavaImageProcessorFast.pad_to_square
     def pad_to_square(
         self,
         images: "torch.Tensor",
@@ -600,7 +600,7 @@ class LlavaOnevisionForConditionalGeneration(LlavaNextVideoForConditionalGenerat
         >>> from PIL import Image
         >>> import requests
         >>> import torch
-        >>> from transformers import LlavaOnevisionProcessor, LlavaOnevisionForConditionalGeneration
+        >>> from transformers_4573 import LlavaOnevisionProcessor, LlavaOnevisionForConditionalGeneration
 
         >>> model = LlavaOnevisionForConditionalGeneration.from_pretrained("llava-hf/llava-onevision-qwen2-7b-ov-hf", dtype="float16", device_map="cuda:0")
         >>> processor = LlavaOnevisionProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-7b-ov-hf")

@@ -1300,7 +1300,7 @@ class Emu3ForCausalLM(Emu3PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import Emu3Processor, Emu3ForConditionalGeneration
+        >>> from transformers_4573 import Emu3Processor, Emu3ForConditionalGeneration
         >>> import torch
         >>> import requests
         >>> from PIL import Image
@@ -1547,7 +1547,7 @@ class Emu3ForConditionalGeneration(Emu3PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import Emu3Processor, Emu3ForConditionalGeneration
+        >>> from transformers_4573 import Emu3Processor, Emu3ForConditionalGeneration
         >>> import torch
         >>> import requests
         >>> from PIL import Image

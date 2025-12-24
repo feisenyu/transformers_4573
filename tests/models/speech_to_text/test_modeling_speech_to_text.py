@@ -20,8 +20,8 @@ import unittest
 
 from datasets import load_dataset
 
-from transformers import Speech2TextConfig
-from transformers.testing_utils import (
+from transformers_4573 import Speech2TextConfig
+from transformers_4573.testing_utils import (
     is_torch_available,
     require_sentencepiece,
     require_tokenizers,
@@ -41,8 +41,8 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import Speech2TextForConditionalGeneration, Speech2TextModel, Speech2TextProcessor
-    from transformers.models.speech_to_text.modeling_speech_to_text import Speech2TextDecoder, Speech2TextEncoder
+    from transformers_4573 import Speech2TextForConditionalGeneration, Speech2TextModel, Speech2TextProcessor
+    from transformers_4573.models.speech_to_text.modeling_speech_to_text import Speech2TextDecoder, Speech2TextEncoder
 
 
 def prepare_speech_to_text_inputs_dict(

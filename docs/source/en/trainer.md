@@ -43,7 +43,7 @@ Configure your training with hyperparameters and options from [`TrainingArgument
 The example below demonstrates an example of [`TrainingArguments`] that evaluates and saves the model at the end of each epoch. It also loads the best model found during training and pushes it to the Hub.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 training_args = TrainingArguments(
     output_dir="your-model",
@@ -65,7 +65,7 @@ Pass your model, dataset, preprocessor, and [`TrainingArguments`] to [`Trainer`]
 > Refer to the [Fine-tuning](./training) guide for a more complete overview of the training process.
 
 ```py
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 trainer = Trainer(
     model=model,
@@ -184,7 +184,7 @@ For example, to use weighted loss, rewrite [`~Trainer.compute_loss`] inside [`Tr
 
 ```py
 from torch import nn
-from transformers import Trainer
+from transformers_4573 import Trainer
 
 class CustomTrainer(Trainer):
     def compute_loss(self, model: nn.Module, inputs: dict[str, Union[torch.Tensor, Any]], return_outputs: bool = False, num_items_in_batch: Optional[torch.Tensor] = None):
@@ -208,7 +208,7 @@ class CustomTrainer(Trainer):
 To use a callback, create a class that inherits from [`TrainerCallback`] and implements the functionality you want. Then pass the callback to the `callback` parameter in [`Trainer`]. The example below implements an early stopping callback that stops training after 10 steps.
 
 ```py
-from transformers import TrainerCallback, Trainer
+from transformers_4573 import TrainerCallback, Trainer
 
 class EarlyStoppingCallback(TrainerCallback):
     def __init__(self, num_steps=10):
@@ -376,7 +376,7 @@ accelerate launch \
 [torch.compile](./perf_torch_compile) can significantly speed up training and reduce computational overhead. Configure your torch.compile settings in [`TrainingArguments`]. Set `torch_compile` to `True`, and select a backend and compile mode.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 training_args = TrainingArguments(
     torch_compile=True,
@@ -474,7 +474,7 @@ Enable Liger Kernel for training by setting `use_liger_kernel=True` in [`Trainin
 > Liger Kernel supports Llama, Gemma, Mistral, and Mixtral models. Refer to the [patching](https://github.com/linkedin/Liger-Kernel#patching) list for the latest list of supported models.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 training_args = TrainingArguments(
     output_dir="your-model",
@@ -494,7 +494,7 @@ training_args = TrainingArguments(
 You can also configure which specific kernels to apply using the `liger_kernel_config` parameter. This dict is passed as keyword arguments to the `_apply_liger_kernel_to_instance` function, allowing fine-grained control over kernel usage. Available options vary by model but typically include: `rope`, `swiglu`, `cross_entropy`, `fused_linear_cross_entropy`, `rms_norm`, etc.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 # Apply only specific kernels
 training_args = TrainingArguments(
@@ -523,7 +523,7 @@ training_args = TrainingArguments(
 [NEFTune](https://hf.co/papers/2310.05914) adds noise to the embedding vectors during training to improve model performance. Enable it in [`Trainer`] with the `neftune_noise_alpha` parameter in [`TrainingArguments`] to control how much noise is added.
 
 ```py
-from transformers import TrainingArguments, Trainer
+from transformers_4573 import TrainingArguments, Trainer
 
 training_args = TrainingArguments(..., neftune_noise_alpha=0.1)
 trainer = Trainer(..., args=training_args)

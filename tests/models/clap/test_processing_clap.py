@@ -16,9 +16,9 @@ import shutil
 import tempfile
 import unittest
 
-from transformers import ClapFeatureExtractor, ClapProcessor, RobertaTokenizer
-from transformers.testing_utils import require_sentencepiece, require_torchaudio
-from transformers.tokenization_utils_tokenizers import TokenizersBackend
+from transformers_4573 import ClapFeatureExtractor, ClapProcessor, RobertaTokenizer
+from transformers_4573.testing_utils import require_sentencepiece, require_torchaudio
+from transformers_4573.tokenization_utils_tokenizers import TokenizersBackend
 
 from .test_feature_extraction_clap import floats_list
 

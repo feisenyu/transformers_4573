@@ -26,7 +26,7 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from transformers.activations import ACT2FN
+from transformers_4573.activations import ACT2FN
 
 from ... import initialization as init
 from ...cache_utils import Cache
@@ -364,7 +364,7 @@ def apply_mask_to_padding_states(hidden_states, attention_mask):
     return hidden_states
 
 
-# Adapted from transformers.models.mamba2.modeling_mamba2.Mamba2Mixer
+# Adapted from transformers_4573.models.mamba2.modeling_mamba2.Mamba2Mixer
 class GraniteMoeHybridMambaLayer(nn.Module):
     """
     Compute ∆, A, B, C, and D the state space parameters and compute the `contextualized_states`.
@@ -1481,7 +1481,7 @@ class GraniteMoeHybridForCausalLM(GraniteMoeHybridPreTrainedModel, GenerationMix
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, GraniteMoeHybridForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, GraniteMoeHybridForCausalLM
 
         >>> model = GraniteMoeHybridForCausalLM.from_pretrained("ibm/PowerMoE-3b")
         >>> tokenizer = AutoTokenizer.from_pretrained("ibm/PowerMoE-3b")

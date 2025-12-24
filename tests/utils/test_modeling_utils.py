@@ -34,7 +34,7 @@ from huggingface_hub import HfApi, snapshot_download, split_torch_state_dict_int
 from parameterized import parameterized
 from pytest import mark
 
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoModel,
     AutoModelForImageClassification,
@@ -59,9 +59,9 @@ from transformers import (
     is_torch_available,
     logging,
 )
-from transformers.modeling_flash_attention_utils import is_flash_attn_available
-from transformers.models.mistral.modeling_mistral import MistralModel
-from transformers.testing_utils import (
+from transformers_4573.modeling_flash_attention_utils import is_flash_attn_available
+from transformers_4573.models.mistral.modeling_mistral import MistralModel
+from transformers_4573.testing_utils import (
     TOKEN,
     CaptureLogger,
     LoggingLevel,
@@ -79,13 +79,13 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     SAFE_WEIGHTS_INDEX_NAME,
     SAFE_WEIGHTS_NAME,
     WEIGHTS_INDEX_NAME,
     WEIGHTS_NAME,
 )
-from transformers.utils.import_utils import (
+from transformers_4573.utils.import_utils import (
     is_flash_attn_2_available,
     is_flash_attn_3_available,
     is_kernels_available,
@@ -107,7 +107,7 @@ if is_torch_available():
     from test_module.custom_modeling import CustomModel
     from torch import nn
 
-    from transformers import (
+    from transformers_4573 import (
         AutoModelForCausalLM,
         AutoTokenizer,
         BertConfig,
@@ -122,20 +122,20 @@ if is_torch_available():
         T5Config,
         T5ForConditionalGeneration,
     )
-    from transformers.conversion_mapping import MergeModulelist, WeightConverter, get_model_conversion_mapping
-    from transformers.modeling_attn_mask_utils import (
+    from transformers_4573.conversion_mapping import MergeModulelist, WeightConverter, get_model_conversion_mapping
+    from transformers_4573.modeling_attn_mask_utils import (
         AttentionMaskConverter,
         _create_4d_causal_attention_mask,
         _prepare_4d_attention_mask,
         _prepare_4d_causal_attention_mask,
     )
-    from transformers.modeling_utils import (
+    from transformers_4573.modeling_utils import (
         FLASH_ATTN_KERNEL_FALLBACK,
         _find_disjoint,
         _find_identical,
         get_total_byte_count,
     )
-    from transformers.pytorch_utils import isin_mps_friendly
+    from transformers_4573.pytorch_utils import isin_mps_friendly
 
     # Fake pretrained models for tests
     class BaseModel(PreTrainedModel):
@@ -1966,8 +1966,8 @@ class ModelUtilsTest(TestCasePlus):
             import torch
             import time
             import argparse
-            from transformers import AutoModelForCausalLM
-            from transformers.utils import is_torch_accelerator_available
+            from transformers_4573 import AutoModelForCausalLM
+            from transformers_4573.utils import is_torch_accelerator_available
 
             parser = argparse.ArgumentParser()
             parser.add_argument("model_id", type=str)

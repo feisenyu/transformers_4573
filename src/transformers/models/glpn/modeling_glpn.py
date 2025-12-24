@@ -30,7 +30,7 @@ from .configuration_glpn import GLPNConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.beit.modeling_beit.drop_path
+# Copied from transformers_4573.models.beit.modeling_beit.drop_path
 def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = False) -> torch.Tensor:
     """
     Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
@@ -46,7 +46,7 @@ def drop_path(input: torch.Tensor, drop_prob: float = 0.0, training: bool = Fals
     return output
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerDropPath
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerDropPath
 class GLPNDropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks)."""
 
@@ -61,7 +61,7 @@ class GLPNDropPath(nn.Module):
         return f"p={self.drop_prob}"
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerOverlapPatchEmbeddings
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerOverlapPatchEmbeddings
 class GLPNOverlapPatchEmbeddings(nn.Module):
     """Construct the overlapping patch embeddings."""
 
@@ -87,7 +87,7 @@ class GLPNOverlapPatchEmbeddings(nn.Module):
         return embeddings, height, width
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerEfficientSelfAttention
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerEfficientSelfAttention
 class GLPNEfficientSelfAttention(nn.Module):
     """SegFormer's efficient self-attention mechanism. Employs the sequence reduction process introduced in the [PvT
     paper](https://huggingface.co/papers/2102.12122)."""
@@ -177,7 +177,7 @@ class GLPNEfficientSelfAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerSelfOutput
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerSelfOutput
 class GLPNSelfOutput(nn.Module):
     def __init__(self, config, hidden_size):
         super().__init__()
@@ -190,7 +190,7 @@ class GLPNSelfOutput(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerAttention with Segformer->GLPN
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerAttention with Segformer->GLPN
 class GLPNAttention(nn.Module):
     def __init__(self, config, hidden_size, num_attention_heads, sequence_reduction_ratio):
         super().__init__()
@@ -210,7 +210,7 @@ class GLPNAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerDWConv
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerDWConv
 class GLPNDWConv(nn.Module):
     def __init__(self, dim=768):
         super().__init__()
@@ -225,7 +225,7 @@ class GLPNDWConv(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerMixFFN with Segformer->GLPN
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerMixFFN with Segformer->GLPN
 class GLPNMixFFN(nn.Module):
     def __init__(self, config, in_features, hidden_features=None, out_features=None):
         super().__init__()
@@ -249,7 +249,7 @@ class GLPNMixFFN(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.segformer.modeling_segformer.SegformerLayer with Segformer->GLPN
+# Copied from transformers_4573.models.segformer.modeling_segformer.SegformerLayer with Segformer->GLPN
 class GLPNLayer(nn.Module):
     """This corresponds to the Block class in the original implementation."""
 
@@ -392,7 +392,7 @@ class GLPNPreTrainedModel(PreTrainedModel):
 
 @auto_docstring
 class GLPNModel(GLPNPreTrainedModel):
-    # Copied from transformers.models.segformer.modeling_segformer.SegformerModel.__init__ with Segformer->GLPN
+    # Copied from transformers_4573.models.segformer.modeling_segformer.SegformerModel.__init__ with Segformer->GLPN
     def __init__(self, config):
         super().__init__(config)
         self.config = config
@@ -404,7 +404,7 @@ class GLPNModel(GLPNPreTrainedModel):
         self.post_init()
 
     @auto_docstring
-    # Copied from transformers.models.segformer.modeling_segformer.SegformerModel.forward
+    # Copied from transformers_4573.models.segformer.modeling_segformer.SegformerModel.forward
     def forward(
         self,
         pixel_values: torch.FloatTensor,
@@ -607,7 +607,7 @@ class GLPNForDepthEstimation(GLPNPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, GLPNForDepthEstimation
+        >>> from transformers_4573 import AutoImageProcessor, GLPNForDepthEstimation
         >>> import torch
         >>> import numpy as np
         >>> from PIL import Image

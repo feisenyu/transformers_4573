@@ -38,7 +38,7 @@ The example below demonstrates how to summarize text with [`Pipeline`] or the [`
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
    task="summarization",
@@ -60,7 +60,7 @@ pipeline(text)
 
 ```python
 import torch
-from transformers import BartForConditionalGeneration, AutoTokenizer
+from transformers_4573 import BartForConditionalGeneration, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "vinai/bartpho-word",

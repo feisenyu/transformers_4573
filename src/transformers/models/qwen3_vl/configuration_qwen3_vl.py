@@ -116,7 +116,7 @@ class Qwen3VLTextConfig(PreTrainedConfig):
             The dropout ratio for the attention probabilities.
 
     ```python
-    >>> from transformers import Qwen3VLTextModel, Qwen3VLTextConfig
+    >>> from transformers_4573 import Qwen3VLTextModel, Qwen3VLTextConfig
 
     >>> # Initializing a Qwen3VL style configuration
     >>> configuration = Qwen3VLTextConfig()
@@ -208,7 +208,7 @@ class Qwen3VLConfig(PreTrainedConfig):
             Whether to tie the word embeddings.
 
     ```python
-    >>> from transformers import Qwen3VLForConditionalGeneration, Qwen3VLConfig
+    >>> from transformers_4573 import Qwen3VLForConditionalGeneration, Qwen3VLConfig
 
     >>> # Initializing a Qwen3-VL style configuration
     >>> configuration = Qwen3VLConfig()

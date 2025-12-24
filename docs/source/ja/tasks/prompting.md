@@ -71,7 +71,7 @@ Falcon、LLaMA などの大規模言語モデルは、事前にトレーニン�
 `text-generation`パイプラインを使用してデコーダのみのモデルで推論を実行します。
 
 ```python
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 >>> import torch
 
 >>> torch.manual_seed(0) # doctest: +IGNORE_RESULT
@@ -117,7 +117,7 @@ pip install -q transformers accelerate
 次に、適切なパイプライン (`text_generation`) を使用してモデルをロードしましょう。
 
 ```python
->>> from transformers import pipeline, AutoTokenizer
+>>> from transformers_4573 import pipeline, AutoTokenizer
 >>> import torch
 
 >>> torch.manual_seed(0) # doctest: +IGNORE_RESULT

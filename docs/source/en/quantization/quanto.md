@@ -32,7 +32,7 @@ Quantize a model by creating a [`QuantoConfig`] and specifying the `weights` par
 > The Transformers integration only supports weight quantization. Use the Quanto library directly if you need activation quantization, calibration, or QAT.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer, QuantoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, QuantoConfig
 
 quant_config = QuantoConfig(weights="int8")
 model = transformers.AutoModelForCausalLM.from_pretrained(
@@ -49,7 +49,7 @@ Wrap a Quanto model with [torch.compile](https://pytorch.org/tutorials/intermedi
 
 ```py
 import torch
-from transformers import AutoModelForSpeechSeq2Seq, QuantoConfig
+from transformers_4573 import AutoModelForSpeechSeq2Seq, QuantoConfig
 
 quant_config = QuantoConfig(weights="int8")
 model = AutoModelForSpeechSeq2Seq.from_pretrained(

@@ -70,7 +70,7 @@ class UperNetConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import UperNetConfig, UperNetForSemanticSegmentation
+    >>> from transformers_4573 import UperNetConfig, UperNetForSemanticSegmentation
 
     >>> # Initializing a configuration
     >>> configuration = UperNetConfig()

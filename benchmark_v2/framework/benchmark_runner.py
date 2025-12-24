@@ -15,13 +15,13 @@ from datasets import Dataset
 from huggingface_hub import HfApi
 from tqdm import trange
 
-from transformers import (
+from transformers_4573 import (
     AutoModelForCausalLM,
     AutoTokenizer,
     GenerationConfig,
     GenerationMixin,
 )
-from transformers.generation.streamers import BaseStreamer
+from transformers_4573.generation.streamers import BaseStreamer
 
 from .benchmark_config import BenchmarkConfig
 from .data_classes import BenchmarkMetadata, BenchmarkResult, GPURawMetrics, pretty_print_dict

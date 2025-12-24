@@ -19,8 +19,8 @@ import unittest
 import pytest
 from datasets import load_dataset
 
-from transformers import WavLMConfig, is_torch_available
-from transformers.testing_utils import require_torch, require_torchaudio, slow, torch_device
+from transformers_4573 import WavLMConfig, is_torch_available
+from transformers_4573.testing_utils import require_torch, require_torchaudio, slow, torch_device
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import (
@@ -35,7 +35,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Wav2Vec2FeatureExtractor,
         WavLMForAudioFrameClassification,
         WavLMForCTC,

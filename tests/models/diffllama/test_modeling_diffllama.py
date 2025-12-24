@@ -20,8 +20,8 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import AutoTokenizer, BitsAndBytesConfig, DiffLlamaConfig, StaticCache, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, BitsAndBytesConfig, DiffLlamaConfig, StaticCache, is_torch_available
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     cleanup,
     require_bitsandbytes,
@@ -42,7 +42,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         DiffLlamaForCausalLM,
         DiffLlamaForQuestionAnswering,
         DiffLlamaForSequenceClassification,

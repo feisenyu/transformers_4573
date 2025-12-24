@@ -45,7 +45,7 @@ from datasets import DatasetDict, load_dataset
 from safetensors.torch import save_file as safe_save_file
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoFeatureExtractor,
     AutoModelForCTC,
@@ -57,10 +57,10 @@ from transformers import (
     Wav2Vec2Processor,
     set_seed,
 )
-from transformers.models.wav2vec2.modeling_wav2vec2 import WAV2VEC2_ADAPTER_SAFE_FILE
-from transformers.trainer_utils import is_main_process
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.models.wav2vec2.modeling_wav2vec2 import WAV2VEC2_ADAPTER_SAFE_FILE
+from transformers_4573.trainer_utils import is_main_process
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

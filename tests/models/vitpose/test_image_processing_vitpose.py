@@ -17,8 +17,8 @@ import unittest
 import httpx
 import numpy as np
 
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -30,10 +30,10 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers import VitPoseImageProcessor
+    from transformers_4573 import VitPoseImageProcessor
 
     if is_torchvision_available():
-        from transformers import VitPoseImageProcessorFast
+        from transformers_4573 import VitPoseImageProcessorFast
 
 
 class VitPoseImageProcessingTester:
@@ -277,7 +277,7 @@ class VitPoseImageProcessingTest(ImageProcessingTestMixin, unittest.TestCase):
     def test_can_compile_fast_image_processor(self):
         from packaging import version
 
-        from transformers.testing_utils import torch_device
+        from transformers_4573.testing_utils import torch_device
 
         if self.fast_image_processing_class is None:
             self.skipTest("Skipping compilation test as fast image processor is not defined")

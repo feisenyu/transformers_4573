@@ -20,7 +20,7 @@ import torch
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from safetensors.torch import load_file as safe_load_file
 
-from transformers import (
+from transformers_4573 import (
     LlavaConfig,
     LlavaForConditionalGeneration,
     MistralConfig,
@@ -85,7 +85,7 @@ OLD_KEY_TO_NEW_KEY_MAPPING = {
 
 
 def convert_mistral_tokenizer(model_file):
-    from transformers import LlamaTokenizer
+    from transformers_4573 import LlamaTokenizer
 
     mistral_tokenizer = MistralTokenizer.from_file(model_file)
     vocab = mistral_tokenizer.instruct_tokenizer.tokenizer.vocab()

@@ -61,7 +61,7 @@ class LlavaNextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import LlavaNextForConditionalGeneration, LlavaNextConfig, CLIPVisionConfig, LlamaConfig
+    >>> from transformers_4573 import LlavaNextForConditionalGeneration, LlavaNextConfig, CLIPVisionConfig, LlamaConfig
 
     >>> # Initializing a CLIP-vision config
     >>> vision_config = CLIPVisionConfig()

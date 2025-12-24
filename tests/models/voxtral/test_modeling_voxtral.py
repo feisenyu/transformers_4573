@@ -16,13 +16,13 @@
 import tempfile
 import unittest
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     VoxtralConfig,
     VoxtralForConditionalGeneration,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_torch,

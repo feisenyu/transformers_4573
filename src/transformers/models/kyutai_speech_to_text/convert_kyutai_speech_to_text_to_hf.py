@@ -22,15 +22,15 @@ import safetensors.torch
 import sentencepiece
 import torch
 
-from transformers import (
+from transformers_4573 import (
     KyutaiSpeechToTextConfig,
     KyutaiSpeechToTextFeatureExtractor,
     KyutaiSpeechToTextForConditionalGeneration,
     KyutaiSpeechToTextProcessor,
     PreTrainedTokenizerFast,
 )
-from transformers.convert_slow_tokenizer import MoshiConverter
-from transformers.utils.hub import cached_file
+from transformers_4573.convert_slow_tokenizer import MoshiConverter
+from transformers_4573.utils.hub import cached_file
 
 
 # fmt: off

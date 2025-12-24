@@ -36,7 +36,7 @@ pip install transformers
 We can now initialize the pipeline with a [Swin2SR model](https://huggingface.co/caidas/swin2SR-lightweight-x2-64). We can then infer with the pipeline by calling it with an image. As of now, only [Swin2SR models](https://huggingface.co/models?sort=trending&search=swin2sr) are supported in this pipeline.
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 from accelerate import Accelerator
 import torch
 # automatically detects the underlying device type (CUDA, CPU, XPU, MPS, etc.)
@@ -78,7 +78,7 @@ print(upscaled.size)
 If you wish to do inference yourself with no pipeline, you can use the `Swin2SRForImageSuperResolution` and `Swin2SRImageProcessor` classes of transformers. We will use the same model checkpoint for this. Let's initialize the model and the processor.
 
 ```python
-from transformers import Swin2SRForImageSuperResolution, Swin2SRImageProcessor 
+from transformers_4573 import Swin2SRForImageSuperResolution, Swin2SRImageProcessor 
 
 model = Swin2SRForImageSuperResolution.from_pretrained("caidas/swin2SR-lightweight-x2-64").to(device)
 processor = Swin2SRImageProcessor("caidas/swin2SR-lightweight-x2-64")

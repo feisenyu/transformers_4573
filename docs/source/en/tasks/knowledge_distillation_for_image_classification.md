@@ -40,7 +40,7 @@ dataset = load_dataset("beans")
 We can use an image processor from either of the models, as in this case they return the same output with same resolution. We will use the `map()` method of `dataset` to apply the preprocessing to every split of the dataset.
 
 ```python
-from transformers import AutoImageProcessor
+from transformers_4573 import AutoImageProcessor
 teacher_processor = AutoImageProcessor.from_pretrained("merve/beans-vit-224")
 
 def process(examples):
@@ -53,7 +53,7 @@ processed_datasets = dataset.map(process, batched=True)
 Essentially, we want the student model (a randomly initialized MobileNet) to mimic the teacher model (fine-tuned vision transformer). To achieve this, we first get the logits output from the teacher and the student. Then, we divide each of them by the parameter `temperature` which controls the importance of each soft target. A parameter called `lambda` weighs the importance of the distillation loss. In this example, we will use `temperature=5` and `lambda=0.5`. We will use the Kullback-Leibler Divergence loss to compute the divergence between the student and teacher. Given two data P and Q, KL Divergence explains how much extra information we need to represent P using Q. If two are identical, their KL divergence is zero, as there's no other information needed to explain P from Q. Thus, in the context of knowledge distillation, KL divergence is useful.
 
 ```python
-from transformers import TrainingArguments, Trainer
+from transformers_4573 import TrainingArguments, Trainer
 from accelerate import Accelerator
 import torch
 import torch.nn as nn
@@ -103,7 +103,7 @@ notebook_login()
 Let's set the `TrainingArguments`, the teacher model and the student model.
 
 ```python
-from transformers import AutoModelForImageClassification, MobileNetV2Config, MobileNetV2ForImageClassification
+from transformers_4573 import AutoModelForImageClassification, MobileNetV2Config, MobileNetV2ForImageClassification
 
 training_args = TrainingArguments(
     output_dir="my-awesome-model",
@@ -152,7 +152,7 @@ def compute_metrics(eval_pred):
 Let's initialize the `Trainer` with the training arguments we defined. We will also initialize our data collator.
 
 ```python
-from transformers import DefaultDataCollator
+from transformers_4573 import DefaultDataCollator
 
 data_collator = DefaultDataCollator()
 trainer = ImageDistilTrainer(

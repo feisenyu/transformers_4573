@@ -18,7 +18,7 @@ import argparse
 
 import torch
 
-from transformers import MraConfig, MraForMaskedLM
+from transformers_4573 import MraConfig, MraForMaskedLM
 
 
 def rename_key(orig_key):

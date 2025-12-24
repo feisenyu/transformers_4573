@@ -77,7 +77,7 @@ class BioGptConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import BioGptModel, BioGptConfig
+    >>> from transformers_4573 import BioGptModel, BioGptConfig
 
     >>> # Initializing a BioGPT microsoft/biogpt style configuration
     >>> configuration = BioGptConfig()

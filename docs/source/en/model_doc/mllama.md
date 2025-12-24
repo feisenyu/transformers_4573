@@ -58,7 +58,7 @@ model.set_output_embeddings(resized_embeddings)
 
 ```python
 import torch
-from transformers import MllamaForConditionalGeneration, AutoProcessor
+from transformers_4573 import MllamaForConditionalGeneration, AutoProcessor
 
 model_id = "meta-llama/Llama-3.2-11B-Vision-Instruct"
 model = MllamaForConditionalGeneration.from_pretrained(model_id, device_map="auto", dtype=torch.bfloat16)
@@ -86,7 +86,7 @@ print(processor.decode(output[0]))
 import requests
 import torch
 from PIL import Image
-from transformers import MllamaForConditionalGeneration, AutoProcessor
+from transformers_4573 import MllamaForConditionalGeneration, AutoProcessor
 
 model_id = "meta-llama/Llama-3.2-11B-Vision"
 model = MllamaForConditionalGeneration.from_pretrained(model_id, device_map="auto", dtype=torch.bfloat16)

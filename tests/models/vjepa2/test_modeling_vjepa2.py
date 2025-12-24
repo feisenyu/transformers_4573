@@ -19,14 +19,14 @@ from functools import cached_property
 
 import numpy as np
 
-from transformers import VJEPA2Config
-from transformers.testing_utils import (
+from transformers_4573 import VJEPA2Config
+from transformers_4573.testing_utils import (
     require_torch,
     require_vision,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor
@@ -40,13 +40,13 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import VJEPA2ForVideoClassification, VJEPA2Model
+    from transformers_4573 import VJEPA2ForVideoClassification, VJEPA2Model
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import AutoVideoProcessor
+    from transformers_4573 import AutoVideoProcessor
 
 VJEPA_HF_MODEL = "facebook/vjepa2-vitl-fpc64-256"
 

@@ -68,7 +68,7 @@ class InstructBlipVideoVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import InstructBlipVideoVisionConfig, InstructBlipVideoVisionModel
+    >>> from transformers_4573 import InstructBlipVideoVisionConfig, InstructBlipVideoVisionModel
 
     >>> # Initializing a InstructBlipVideoVisionConfig with Salesforce/instruct-blip-flan-t5 style configuration
     >>> configuration = InstructBlipVideoVisionConfig()
@@ -160,7 +160,7 @@ class InstructBlipVideoQFormerConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import InstructBlipVideoQFormerConfig, InstructBlipVideoQFormerModel
+    >>> from transformers_4573 import InstructBlipVideoQFormerConfig, InstructBlipVideoQFormerModel
 
     >>> # Initializing a InstructBlipVideo Salesforce/instruct-blip-flan-t5 style configuration
     >>> configuration = InstructBlipVideoQFormerConfig()
@@ -238,7 +238,7 @@ class InstructBlipVideoConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     InstructBlipVideoVisionConfig,
     ...     InstructBlipVideoQFormerConfig,
     ...     OPTConfig,

@@ -89,7 +89,7 @@ class FuyuConfig(PreTrainedConfig):
             Dictionary of configuration options used to initialize the `language``[`Aut`].
 
     ```python
-    >>> from transformers import FuyuConfig
+    >>> from transformers_4573 import FuyuConfig
 
     >>> # Initializing a Fuyu fuyu-7b style configuration
     >>> configuration = FuyuConfig()

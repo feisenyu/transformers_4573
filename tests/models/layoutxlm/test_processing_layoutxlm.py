@@ -15,21 +15,21 @@
 import unittest
 from functools import cached_property
 
-from transformers.models.layoutxlm import LayoutXLMProcessor, LayoutXLMTokenizer, LayoutXLMTokenizerFast
-from transformers.testing_utils import (
+from transformers_4573.models.layoutxlm import LayoutXLMProcessor, LayoutXLMTokenizer, LayoutXLMTokenizerFast
+from transformers_4573.testing_utils import (
     require_pytesseract,
     require_sentencepiece,
     require_tokenizers,
     require_torch,
     slow,
 )
-from transformers.utils import is_pytesseract_available
+from transformers_4573.utils import is_pytesseract_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_pytesseract_available():
-    from transformers import LayoutLMv2ImageProcessor
+    from transformers_4573 import LayoutLMv2ImageProcessor
 
 
 @require_pytesseract

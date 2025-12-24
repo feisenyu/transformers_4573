@@ -19,10 +19,10 @@ from functools import cached_property
 
 import requests
 
-from transformers import VitPoseBackboneConfig, VitPoseConfig
-from transformers.testing_utils import require_torch, require_vision, slow, torch_device
-from transformers.utils import is_torch_available, is_vision_available
-from transformers.utils.import_utils import get_torch_major_and_minor_version
+from transformers_4573 import VitPoseBackboneConfig, VitPoseConfig
+from transformers_4573.testing_utils import require_torch, require_vision, slow, torch_device
+from transformers_4573.utils import is_torch_available, is_vision_available
+from transformers_4573.utils.import_utils import get_torch_major_and_minor_version
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor
@@ -31,13 +31,13 @@ from ...test_modeling_common import ModelTesterMixin, floats_tensor, ids_tensor
 if is_torch_available():
     import torch
 
-    from transformers import VitPoseForPoseEstimation
+    from transformers_4573 import VitPoseForPoseEstimation
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import VitPoseImageProcessor
+    from transformers_4573 import VitPoseImageProcessor
 
 
 class VitPoseModelTester:

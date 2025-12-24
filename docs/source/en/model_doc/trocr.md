@@ -41,7 +41,7 @@ The example below demonstrates how to perform optical character recognition (OCR
 <hfoption id="AutoModel">
 
 ```python
-from transformers import TrOCRProcessor, VisionEncoderDecoderModel
+from transformers_4573 import TrOCRProcessor, VisionEncoderDecoderModel
 import requests
 from PIL import Image
 
@@ -70,7 +70,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to quantize 
 
 ```python
 # pip install bitsandbytes accelerate
-from transformers import TrOCRProcessor, VisionEncoderDecoderModel, BitsandBytesConfig
+from transformers_4573 import TrOCRProcessor, VisionEncoderDecoderModel, BitsandBytesConfig
 import requests
 from PIL import Image
 

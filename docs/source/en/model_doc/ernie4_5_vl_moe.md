@@ -53,7 +53,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 <hfoption id="Pipeline">
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="image-text-to-text",
@@ -80,7 +80,7 @@ print(pipe(text=message, max_new_tokens=20, return_full_text=False))
 <hfoption id="AutoModel">
 
 ```py
-from transformers import AutoModelForImageTextToText, AutoProcessor
+from transformers_4573 import AutoModelForImageTextToText, AutoProcessor
 
 model = AutoModelForImageTextToText.from_pretrained(
     "baidu/ERNIE-4.5-VL-28B-A3B-PT",
@@ -131,7 +131,7 @@ Using Ernie 4.5 VL MoE with video input is similar to using it with image input.
 The model can process video data and generate text based on the content of the video.
 
 ```python
-from transformers import AutoModelForImageTextToText, AutoProcessor
+from transformers_4573 import AutoModelForImageTextToText, AutoProcessor
 
 model = AutoModelForImageTextToText.from_pretrained(
     "baidu/ERNIE-4.5-VL-28B-A3B-PT",

@@ -18,7 +18,7 @@ import pytest
 import requests
 from packaging import version
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_pytesseract,
     require_torch,
     require_torch_accelerator,
@@ -26,7 +26,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_pytesseract_available,
     is_torch_available,
     is_torchvision_available,
@@ -41,10 +41,10 @@ if is_torch_available():
 if is_pytesseract_available():
     from PIL import Image
 
-    from transformers import LayoutLMv2ImageProcessor
+    from transformers_4573 import LayoutLMv2ImageProcessor
 
     if is_torchvision_available():
-        from transformers import LayoutLMv2ImageProcessorFast
+        from transformers_4573 import LayoutLMv2ImageProcessorFast
 
 
 class LayoutLMv2ImageProcessingTester:

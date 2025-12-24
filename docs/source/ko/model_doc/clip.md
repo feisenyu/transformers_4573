@@ -43,7 +43,7 @@ CLIP은 멀티모달 비전 밒 언어 모델입니다. 이미지-텍스트 유�
 >>> from PIL import Image
 >>> import requests
 
->>> from transformers import CLIPProcessor, CLIPModel
+>>> from transformers_4573 import CLIPProcessor, CLIPModel
 
 >>> model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 >>> processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
@@ -82,7 +82,7 @@ pip install -U flash-attn --no-build-isolation
 >>> import requests
 >>> from PIL import Image
 
->>> from transformers import CLIPProcessor, CLIPModel
+>>> from transformers_4573 import CLIPProcessor, CLIPModel
 
 >>> device = "cuda"
 >>> dtype = torch.float16
@@ -119,7 +119,7 @@ tensor([[0.9946, 0.0052]], device='cuda:0', dtype=torch.float16)
 `torch>=2.1.1`에서는 구현이 가능할 때 SDPA가 기본적으로 사용되지만, `from_pretrained()` 함수에서 `attn_implementation="sdpa"`를 설정하여 SDPA를 명시적으로 사용하도록 요청할 수도 있습니다.
 
 ```python
-from transformers import CLIPModel
+from transformers_4573 import CLIPModel
 
 model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32", dtype=torch.float16, attn_implementation="sdpa")
 ```

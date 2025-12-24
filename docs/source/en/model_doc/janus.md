@@ -49,7 +49,7 @@ import torch
 from PIL import Image
 import requests
 
-from transformers import JanusForConditionalGeneration, JanusProcessor
+from transformers_4573 import JanusForConditionalGeneration, JanusProcessor
 
 model_id = "deepseek-community/Janus-Pro-1B"
 # Prepare Input for generation.
@@ -92,7 +92,7 @@ import torch
 from PIL import Image
 import requests
 
-from transformers import JanusForConditionalGeneration, JanusProcessor
+from transformers_4573 import JanusForConditionalGeneration, JanusProcessor
 
 model_id = "deepseek-community/Janus-Pro-1B"
 
@@ -153,7 +153,7 @@ Janus can also generate images given a prompt.
 
 ```python
 import torch
-from transformers import JanusForConditionalGeneration, JanusProcessor
+from transformers_4573 import JanusForConditionalGeneration, JanusProcessor
 
 # Set generation mode to `image` to prepare inputs for image generation..
 

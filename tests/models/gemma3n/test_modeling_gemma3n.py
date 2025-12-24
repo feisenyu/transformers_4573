@@ -24,7 +24,7 @@ import pytest
 from datasets import load_dataset
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     AutoModelForCausalLM,
     AutoProcessor,
     AutoTokenizer,
@@ -34,7 +34,7 @@ from transformers import (
     StaticCache,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_deterministic_for_xpu,
@@ -46,7 +46,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_flash_attn_2_available
+from transformers_4573.utils import is_flash_attn_2_available
 
 from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 from ...generation.test_utils import GenerationTesterMixin, has_similar_generate_outputs
@@ -63,7 +63,7 @@ from ...test_modeling_common import (
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Gemma3nAudioEncoder,
         Gemma3nForCausalLM,
         Gemma3nForConditionalGeneration,

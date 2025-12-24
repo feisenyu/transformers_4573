@@ -55,7 +55,7 @@ class VoxtralEncoderConfig(PreTrainedConfig):
             The dropout ratio for the attention probabilities.
 
     ```python
-    >>> from transformers import VoxtralEncoderConfig, VoxtralEncoder
+    >>> from transformers_4573 import VoxtralEncoderConfig, VoxtralEncoder
 
     >>> # Initializing a VoxtralEncoderConfig
     >>> configuration = VoxtralEncoderConfig()
@@ -138,7 +138,7 @@ class VoxtralConfig(PreTrainedConfig):
             The activation function (function or string) in the multi-modal projector.
 
     ```python
-    >>> from transformers import VoxtralForConditionalGeneration, VoxtralConfig
+    >>> from transformers_4573 import VoxtralForConditionalGeneration, VoxtralConfig
 
     >>> # Initializing a Voxtral configuration
     >>> configuration = VoxtralConfig(audio_token_id=24, projector_hidden_act="gelu")

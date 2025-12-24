@@ -42,7 +42,7 @@ Jamba의 아키텍처는 블록과 레이어 기반 구조를 사용하여 Trans
 # 최적화된 Mamba 구현 설치
 # !pip install mamba-ssm causal-conv1d>=1.2.0
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-generation",
@@ -58,7 +58,7 @@ pipeline("Plants create energy through a process known as")
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "ai21labs/AI21-Jamba-Large-1.6",
@@ -90,7 +90,7 @@ echo -e "Plants create energy through a process known as" | transformers run --t
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_8bit=True,
                                          llm_int8_skip_modules=["mamba"])
@@ -130,7 +130,7 @@ print(assistant_response)
 
   ```py
   import torch
-  from transformers import AutoModelForCausalLM
+  from transformers_4573 import AutoModelForCausalLM
   model = AutoModelForCausalLM.from_pretrained("ai21labs/AI21-Jamba-1.5-Large",
                                                use_mamba_kernels=False)
   ```

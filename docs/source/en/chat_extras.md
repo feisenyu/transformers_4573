@@ -63,7 +63,7 @@ Load a model and tokenizer that supports tool-use like [NousResearch/Hermes-2-Pr
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 checkpoint = "NousResearch/Hermes-2-Pro-Llama-3-8B"
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
@@ -138,7 +138,7 @@ for chat template authors who need to access the JSON schema to render the tool 
 The  [`~PreTrainedTokenizerBase.apply_chat_template`] method uses the [get_json_schema](https://github.com/huggingface/transformers/blob/14561209291255e51c55260306c7d00c159381a5/src/transformers/utils/chat_template_utils.py#L205) function to convert Python functions to a JSON schema.
 
 ```py
-from transformers.utils import get_json_schema
+from transformers_4573.utils import get_json_schema
 
 def multiply(a: float, b: float):
     """

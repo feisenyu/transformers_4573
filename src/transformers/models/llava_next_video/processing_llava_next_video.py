@@ -213,7 +213,7 @@ class LlavaNextVideoProcessor(ProcessorMixin):
 
         return BatchFeature(data={**text_inputs, **image_inputs, **videos_inputs}, tensor_type=return_tensors)
 
-    # Copied from transformers.models.llava_next.processing_llava_next.LlavaNextProcessor._get_number_of_features
+    # Copied from transformers_4573.models.llava_next.processing_llava_next.LlavaNextProcessor._get_number_of_features
     def _get_number_of_features(self, orig_height: int, orig_width: int, height: int, width: int) -> int:
         image_grid_pinpoints = self.image_processor.image_grid_pinpoints
 
@@ -232,7 +232,7 @@ class LlavaNextVideoProcessor(ProcessorMixin):
         num_image_tokens = unpadded_features + newline_features + base_features
         return num_image_tokens
 
-    # Copied from transformers.models.llava_next.processing_llava_next.LlavaNextProcessor._get_unpadded_features
+    # Copied from transformers_4573.models.llava_next.processing_llava_next.LlavaNextProcessor._get_unpadded_features
     def _get_unpadded_features(self, height, width, patches_height, patches_width, scale_height, scale_width):
         """
         Get number of features for a given image with height/width. LLaVA-NeXT is different from LLaVA

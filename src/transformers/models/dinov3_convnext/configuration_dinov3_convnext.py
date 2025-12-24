@@ -67,7 +67,7 @@ class DINOv3ConvNextConfig(BackboneConfigMixin, PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import DINOv3ConvNextConfig, DINOv3ConvNextModel
+    >>> from transformers_4573 import DINOv3ConvNextConfig, DINOv3ConvNextModel
 
     >>> # Initializing a DINOv3ConvNext (tiny variant) style configuration
     >>> config = DINOv3ConvNextConfig()

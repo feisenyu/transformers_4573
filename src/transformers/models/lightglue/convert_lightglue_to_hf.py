@@ -19,12 +19,12 @@ import re
 import torch
 from datasets import load_dataset
 
-from transformers import (
+from transformers_4573 import (
     AutoModelForKeypointDetection,
     LightGlueForKeypointMatching,
     LightGlueImageProcessor,
 )
-from transformers.models.lightglue.configuration_lightglue import LightGlueConfig
+from transformers_4573.models.lightglue.configuration_lightglue import LightGlueConfig
 
 
 DEFAULT_CHECKPOINT_URL = "https://github.com/cvg/LightGlue/releases/download/v0.1_arxiv/superpoint_lightglue.pth"

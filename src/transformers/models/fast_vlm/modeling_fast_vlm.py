@@ -349,7 +349,7 @@ class FastVlmForConditionalGeneration(FastVlmPreTrainedModel, GenerationMixin):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, AutoModelForImageTextToText
+        >>> from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
         >>> import torch
 
         >>> device = "cuda" if torch.cuda.is_available() else "cpu"

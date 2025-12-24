@@ -39,7 +39,7 @@ The example below demonstrates how to predict the `[MASK]` token with [`Pipeline
 # uncomment to install rjieba which is needed for the tokenizer
 # !pip install rjieba
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="fill-mask",
@@ -58,7 +58,7 @@ print(output)
 # uncomment to install rjieba which is needed for the tokenizer
 # !pip install rjieba
 import torch
-from transformers import AutoModelForMaskedLM, AutoTokenizer
+from transformers_4573 import AutoModelForMaskedLM, AutoTokenizer
 
 model = AutoModelForMaskedLM.from_pretrained(
     "junnyu/roformer_chinese_base", dtype=torch.float16

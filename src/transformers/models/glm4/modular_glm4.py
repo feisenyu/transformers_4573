@@ -104,7 +104,7 @@ class Glm4ForCausalLM(GlmForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, Glm4ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, Glm4ForCausalLM
 
         >>> model = Glm4ForCausalLM.from_pretrained("THUDM/GLM-4-9B-0414")
         >>> tokenizer = AutoTokenizer.from_pretrained("THUDM/GLM-4-9B-0414")

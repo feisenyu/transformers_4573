@@ -18,7 +18,7 @@ Processor class for Nougat.
 
 from typing import Optional, Union
 
-from transformers.tokenization_utils_base import PreTokenizedInput, TextInput, TruncationStrategy
+from transformers_4573.tokenization_utils_base import PreTokenizedInput, TextInput, TruncationStrategy
 
 from ...processing_utils import ProcessorMixin
 from ...utils import PaddingStrategy, TensorType

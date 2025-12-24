@@ -87,7 +87,7 @@ class XmodConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import XmodConfig, XmodModel
+    >>> from transformers_4573 import XmodConfig, XmodModel
 
     >>> # Initializing an X-MOD facebook/xmod-base style configuration
     >>> configuration = XmodConfig()

@@ -41,7 +41,7 @@ import numpy as np
 from datasets import load_dataset
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoModelForMultipleChoice,
     AutoTokenizer,
@@ -52,7 +52,7 @@ from transformers import (
     default_data_collator,
     set_seed,
 )
-from transformers.utils import check_min_version
+from transformers_4573.utils import check_min_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

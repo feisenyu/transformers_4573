@@ -87,7 +87,7 @@ Vemos que los kernels solos ocupan 1,3GB de memoria de la GPU. Ahora, veamos cu�
 Primero, cargamos el modelo `google-bert/bert-large-uncased`. Los pesos del modelo son cargados directamente en la GPU para que podamos verificar cuánto espacio ocupan solo los pesos.
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-large-uncased").to("cuda")
@@ -147,7 +147,7 @@ Si planeas ejecutar varias pruebas, reinicie el kernel de Python entre cada prue
 Vamos a utilizar el [`Trainer`](https://huggingface.co/docs/transformers/en/main_classes/trainer#transformers.Trainer) y entrenar el modelo sin utilizar ninguna técnica de optimización del rendimiento de la GPU y un tamaño de lote de 4:
 
 ```py
->>> from transformers import TrainingArguments, Trainer, logging
+>>> from transformers_4573 import TrainingArguments, Trainer, logging
 
 >>> logging.set_verbosity_error()
 

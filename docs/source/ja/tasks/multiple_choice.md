@@ -77,7 +77,7 @@ pip install transformers datasets evaluate
 次のステップでは、BERT トークナイザーをロードして、文の始まりと 4 つの可能な終わりを処理します。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -115,7 +115,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 
 [`DataCollatorForMultipleChoice`] は、すべてのモデル入力を平坦化し、パディングを適用して、結果を非平坦化します。
 ```py
->>> from transformers import DataCollatorForMultipleChoice
+>>> from transformers_4573 import DataCollatorForMultipleChoice
 >>> collator = DataCollatorForMultipleChoice(tokenizer=tokenizer)
 ```
 
@@ -154,7 +154,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 これでモデルのトレーニングを開始する準備が整いました。 [`AutoModelForMultipleChoice`] を使用して BERT をロードします。
 
 ```py
->>> from transformers import AutoModelForMultipleChoice, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForMultipleChoice, TrainingArguments, Trainer
 
 >>> model = AutoModelForMultipleChoice.from_pretrained("google-bert/bert-base-uncased")
 ```
@@ -224,7 +224,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 各プロンプトと回答候補のペアをトークン化し、PyTorch テンソルを返します。いくつかの`lables`も作成する必要があります。
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("my_awesome_swag_model")
 >>> inputs = tokenizer([[prompt, candidate1], [prompt, candidate2]], return_tensors="pt", padding=True)
@@ -234,7 +234,7 @@ tokenized_swag = swag.map(preprocess_function, batched=True)
 入力とラベルをモデルに渡し、`logits`を返します。
 
 ```py
->>> from transformers import AutoModelForMultipleChoice
+>>> from transformers_4573 import AutoModelForMultipleChoice
 
 >>> model = AutoModelForMultipleChoice.from_pretrained("my_awesome_swag_model")
 >>> outputs = model(**{k: v.unsqueeze(0) for k, v in inputs.items()}, labels=labels)

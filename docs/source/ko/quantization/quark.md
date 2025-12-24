@@ -59,7 +59,7 @@ Quark는 [`quant_method="fp8"`을 이용하는 모델](https://huggingface.co/mo
 다음은 Transformers에서 Quark 모델을 불러오는 방법의 예시입니다:
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_id = "EmbeddedLLM/Llama-3.1-8B-Instruct-w_fp8_per_channel_sym"
 model = AutoModelForCausalLM.from_pretrained(model_id)

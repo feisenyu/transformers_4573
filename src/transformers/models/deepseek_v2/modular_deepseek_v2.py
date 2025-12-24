@@ -131,7 +131,7 @@ class DeepseekV2Config(LlamaConfig):
             Dimension of the MoE (Mixture of Experts) representations.
 
     ```python
-    >>> from transformers import DeepseekV2Model, DeepseekV2Config
+    >>> from transformers_4573 import DeepseekV2Model, DeepseekV2Config
     >>> # Initializing a DeepSeek-V2 style configuration
     >>> configuration = DeepseekV2Config()
     >>> # Accessing the model configuration

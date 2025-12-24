@@ -39,7 +39,7 @@ class GPT2Tokenizer(TokenizersBackend):
     be encoded differently whether it is at the beginning of the sentence (without space) or not:
 
     ```python
-    >>> from transformers import GPT2Tokenizer
+    >>> from transformers_4573 import GPT2Tokenizer
 
     >>> tokenizer = GPT2Tokenizer.from_pretrained("openai-community/gpt2")
     >>> tokenizer("Hello world")["input_ids"]

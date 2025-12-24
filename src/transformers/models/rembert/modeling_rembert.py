@@ -97,7 +97,7 @@ class RemBertEmbeddings(nn.Module):
         return embeddings
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPooler with Bert->RemBert
+# Copied from transformers_4573.models.bert.modeling_bert.BertPooler with Bert->RemBert
 class RemBertPooler(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -215,7 +215,7 @@ class RemBertSelfAttention(nn.Module):
         return context_layer, attention_probs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput with Bert->RemBert
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput with Bert->RemBert
 class RemBertSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -236,7 +236,7 @@ class RemBertAttention(nn.Module):
         self.self = RemBertSelfAttention(config, layer_idx=layer_idx)
         self.output = RemBertSelfOutput(config)
 
-    # copied from transformers.models.bert.modeling_bert.BertAttention.forward
+    # copied from transformers_4573.models.bert.modeling_bert.BertAttention.forward
     def forward(
         self,
         hidden_states: torch.Tensor,
@@ -259,7 +259,7 @@ class RemBertAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate with Bert->RemBert
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate with Bert->RemBert
 class RemBertIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -275,7 +275,7 @@ class RemBertIntermediate(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOutput with Bert->RemBert
+# Copied from transformers_4573.models.bert.modeling_bert.BertOutput with Bert->RemBert
 class RemBertOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -305,7 +305,7 @@ class RemBertLayer(GradientCheckpointingLayer):
         self.intermediate = RemBertIntermediate(config)
         self.output = RemBertOutput(config)
 
-    # copied from transformers.models.bert.modeling_bert.BertLayer.forward
+    # copied from transformers_4573.models.bert.modeling_bert.BertLayer.forward
     def forward(
         self,
         hidden_states: torch.Tensor,
@@ -351,7 +351,7 @@ class RemBertLayer(GradientCheckpointingLayer):
 
         return outputs
 
-    # Copied from transformers.models.bert.modeling_bert.BertLayer.feed_forward_chunk
+    # Copied from transformers_4573.models.bert.modeling_bert.BertLayer.feed_forward_chunk
     def feed_forward_chunk(self, attention_output):
         intermediate_output = self.intermediate(attention_output)
         layer_output = self.output(intermediate_output, attention_output)
@@ -438,7 +438,7 @@ class RemBertEncoder(nn.Module):
         )
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPredictionHeadTransform with Bert->RemBert
+# Copied from transformers_4573.models.bert.modeling_bert.BertPredictionHeadTransform with Bert->RemBert
 class RemBertPredictionHeadTransform(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -472,7 +472,7 @@ class RemBertLMPredictionHead(nn.Module):
         return hidden_states
 
 
-# Copied from transformers.models.bert.modeling_bert.BertOnlyMLMHead with Bert->RemBert
+# Copied from transformers_4573.models.bert.modeling_bert.BertOnlyMLMHead with Bert->RemBert
 class RemBertOnlyMLMHead(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -783,7 +783,7 @@ class RemBertForCausalLM(RemBertPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, RemBertForCausalLM, RemBertConfig
+        >>> from transformers_4573 import AutoTokenizer, RemBertForCausalLM, RemBertConfig
         >>> import torch
 
         >>> tokenizer = AutoTokenizer.from_pretrained("google/rembert")

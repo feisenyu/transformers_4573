@@ -20,8 +20,8 @@ import numpy as np
 from datasets import Audio, load_dataset
 from parameterized import parameterized
 
-from transformers import AutoProcessor, DacConfig, DacModel
-from transformers.testing_utils import (
+from transformers_4573 import AutoProcessor, DacConfig, DacModel
+from transformers_4573.testing_utils import (
     is_torch_available,
     require_deterministic_for_xpu,
     require_torch,
@@ -39,7 +39,7 @@ if is_torch_available():
 
 
 @require_torch
-# Copied from transformers.tests.encodec.test_modeling_encodec.EncodecModelTester with Encodec->Dac
+# Copied from transformers_4573.tests.encodec.test_modeling_encodec.EncodecModelTester with Encodec->Dac
 class DacModelTester:
     # Ignore copy
     def __init__(
@@ -118,7 +118,7 @@ class DacModelTester:
 
 
 @require_torch
-# Copied from transformers.tests.encodec.test_modeling_encodec.EncodecModelTest with Encodec->Dac
+# Copied from transformers_4573.tests.encodec.test_modeling_encodec.EncodecModelTest with Encodec->Dac
 class DacModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase):
     all_model_classes = (DacModel,) if is_torch_available() else ()
     is_encoder_decoder = True
@@ -282,14 +282,14 @@ class DacModelTest(ModelTesterMixin, PipelineTesterMixin, unittest.TestCase):
         self.assertEqual(quantized_latents.shape[1], latents.shape[1])
 
 
-# Copied from transformers.tests.encodec.test_modeling_encodec.normalize
+# Copied from transformers_4573.tests.encodec.test_modeling_encodec.normalize
 def normalize(arr):
     norm = np.linalg.norm(arr)
     normalized_arr = arr / norm
     return normalized_arr
 
 
-# Copied from transformers.tests.encodec.test_modeling_encodec.compute_rmse
+# Copied from transformers_4573.tests.encodec.test_modeling_encodec.compute_rmse
 def compute_rmse(arr1, arr2):
     arr1_np = arr1.cpu().numpy().squeeze()
     arr2_np = arr2.cpu().numpy().squeeze()

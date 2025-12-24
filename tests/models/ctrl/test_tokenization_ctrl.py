@@ -16,7 +16,7 @@ import json
 import os
 import unittest
 
-from transformers.models.ctrl.tokenization_ctrl import VOCAB_FILES_NAMES, CTRLTokenizer
+from transformers_4573.models.ctrl.tokenization_ctrl import VOCAB_FILES_NAMES, CTRLTokenizer
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

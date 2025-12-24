@@ -114,7 +114,7 @@ Since the dataset has two modalities (image and text), the pre-processing pipeli
 To do so, load the processor class associated with the model you are about to fine-tune.
 
 ```python
-from transformers import AutoProcessor
+from transformers_4573 import AutoProcessor
 
 checkpoint = "microsoft/git-base"
 processor = AutoProcessor.from_pretrained(checkpoint)
@@ -142,7 +142,7 @@ With the dataset ready, you can now set up the model for fine-tuning.
 Load the ["microsoft/git-base"](https://huggingface.co/microsoft/git-base) into a [`AutoModelForCausalLM`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoModelForCausalLM) object.
 
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(checkpoint)
 ```
@@ -176,7 +176,7 @@ Now, you are ready to start fine-tuning the model. You will use the 🤗 [`Train
 First, define the training arguments using [`TrainingArguments`].
 
 ```python
-from transformers import TrainingArguments, Trainer
+from transformers_4573 import TrainingArguments, Trainer
 
 model_name = checkpoint.split("/")[1]
 

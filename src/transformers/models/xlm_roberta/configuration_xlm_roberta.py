@@ -72,7 +72,7 @@ class XLMRobertaConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import XLMRobertaConfig, XLMRobertaModel
+    >>> from transformers_4573 import XLMRobertaConfig, XLMRobertaModel
 
     >>> # Initializing a XLM-RoBERTa FacebookAI/xlm-roberta-base style configuration
     >>> configuration = XLMRobertaConfig()

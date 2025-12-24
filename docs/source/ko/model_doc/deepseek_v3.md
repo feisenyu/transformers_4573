@@ -39,7 +39,7 @@ DeepSeek-V3 모델은 [DeepSeek-V3 기술 보고서](https://huggingface.co/pape
 
 ```python
 # `run_deepseek_v1.py`
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 import torch
 torch.manual_seed(30)
 

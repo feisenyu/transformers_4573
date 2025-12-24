@@ -125,7 +125,7 @@ Inizia subito a utilizzare Transformers con l'API [Pipeline](https://huggingface
 Istanziare una pipeline e specificare il modello da utilizzare per la generazione di testo. Il modello viene scaricato e memorizzato nella cache in modo da poterlo riutilizzare facilmente. Infine, passare del testo per attivare il modello.
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
 pipeline("il segreto per preparare una torta davvero buona è ")
@@ -142,7 +142,7 @@ Per chattare con un modello, lo schema di utilizzo è lo stesso. L'unica differe
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 chat = [
     {"role": "system", "content": "Sei un robot sfacciato e spiritoso, proprio come lo immaginava Hollywood nel 1986."},
@@ -160,7 +160,7 @@ Espandi gli esempi riportati di seguito per vedere come funziona `Pipeline` per 
 <summary>Riconoscimento vocale automatico</summary>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
 pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
@@ -177,7 +177,7 @@ pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac
 </h3>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="image-classification", model="facebook/dinov2-small-imagenet1k-1-layer")
 pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
@@ -200,7 +200,7 @@ pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.pn
 </h3>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="visual-question-answering", model="Salesforce/blip-vqa-base")
 pipeline(

@@ -44,7 +44,7 @@ CodeGen は、[The Pile](https://pile.eleuther.ai/)、BigQuery、BigPython で�
 ## Usage example
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> checkpoint = "Salesforce/codegen-350M-mono"
 >>> model = AutoModelForCausalLM.from_pretrained(checkpoint)

@@ -27,8 +27,8 @@ The [`~ContinuousMixin.generate_batch`] method works with all autoregressive tex
 ```py
 import datasets
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.generation import GenerationConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573.generation import GenerationConfig
 
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen3-4B-Instruct-2507",
@@ -69,7 +69,7 @@ The [`ContinuousBatchingManager`] orchestrates the background thread by pulling 
 Call [`~ContinuousMixin.init_continuous_batching`] to initialize the manager with a [`GenerationConfig`] and [`~ContinuousBatchingManager.start`] the background thread.
 
 ```py
-from transformers.generation.continuous_batching import RequestStatus
+from transformers_4573.generation.continuous_batching import RequestStatus
 
 manager = model.init_continuous_batching(generation_config=generation_config)
 manager.start()
@@ -126,7 +126,7 @@ You could explicitly enable PagedAttention when instantiating a model rather tha
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen3-4B-Instruct-2507",
@@ -143,7 +143,7 @@ Sliding window attention limits the backward context of a token to save compute.
 Transformers models like Mistral and Gemma 2 natively support sliding window attention. Manually enable it in the model config if the architecture supports it. This helps with fine-tuning or running custom experiments.
 
 ```py
-from transformers import AutoConfig
+from transformers_4573 import AutoConfig
 
 config = AutoConfig.from_pretrained("google/gemma-2-2b")
 config.sliding_window = 4096

@@ -198,7 +198,7 @@ def normalize_annotation(annotation: dict, image_size: tuple[int, int]) -> dict:
     return norm_annotation
 
 
-# Copied from transformers.models.vilt.image_processing_vilt.max_across_indices
+# Copied from transformers_4573.models.vilt.image_processing_vilt.max_across_indices
 def max_across_indices(values: Iterable[Any]) -> list[Any]:
     """
     Return the maximum value across all indices of an iterable of values.
@@ -206,7 +206,7 @@ def max_across_indices(values: Iterable[Any]) -> list[Any]:
     return [max(values_i) for values_i in zip(*values)]
 
 
-# Copied from transformers.models.vilt.image_processing_vilt.get_max_height_width
+# Copied from transformers_4573.models.vilt.image_processing_vilt.get_max_height_width
 def get_max_height_width(
     images: list[np.ndarray], input_data_format: Optional[Union[str, ChannelDimension]] = None
 ) -> list[int]:
@@ -225,7 +225,7 @@ def get_max_height_width(
     return (max_height, max_width)
 
 
-# Copied from transformers.models.vilt.image_processing_vilt.make_pixel_mask
+# Copied from transformers_4573.models.vilt.image_processing_vilt.make_pixel_mask
 def make_pixel_mask(
     image: np.ndarray, output_size: tuple[int, int], input_data_format: Optional[Union[str, ChannelDimension]] = None
 ) -> np.ndarray:

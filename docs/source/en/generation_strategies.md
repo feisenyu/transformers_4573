@@ -32,7 +32,7 @@ Greedy search works well for tasks with relatively short outputs where creativit
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -55,7 +55,7 @@ Enable multinomial sampling with `do_sample=True` and `num_beams=1`.
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -81,7 +81,7 @@ Enable beam search with the `num_beams` parameter (should be greater than 1 othe
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -110,7 +110,7 @@ We enable custom generation methods through model repositories, assuming a speci
 If a model repository holds a custom generation method, the easiest way to try it out is to load the model and generate with it:
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 # `transformers-community/custom_generate_example` holds a copy of `Qwen/Qwen2.5-0.5B-Instruct`, but
 # with custom generation code -> calling `generate` uses the custom generation method!
@@ -130,7 +130,7 @@ print(tokenizer.batch_decode(gen_out, skip_special_tokens=True))
 Model repositories with custom generation methods have a special property: their generation method can be loaded from **any** model through [`~GenerationMixin.generate`]'s `custom_generate` argument. This means anyone can create and share their custom generation method to potentially work with any Transformers model, without requiring users to install additional Python packages.
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
 model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct", device_map="auto")
@@ -197,7 +197,7 @@ The starting point for your custom generation method is a model repository just 
 If you simply want to copy an existing model, you can do
 
 ```py
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("source/model_repo")
 model = AutoModelForCausalLM.from_pretrained("source/model_repo")
@@ -311,7 +311,7 @@ output = model.generate(
 ```
 
 > [!TIP]
-> If you publish a `custom_generate` repository, your `generate` implementation can itself define a callable and pass it to `model.generate()`. This lets you customize the decoding loop while still benefiting from Transformers' built-in input preparation logic.
+> If you publish a `custom_generate` repository, your `generate` implementation can itself define a callable and pass it to `model.generate()`. This lets you customize the decoding loop while still benefiting from transformers_4573' built-in input preparation logic.
 
 ### Finding custom generation methods
 

@@ -478,7 +478,7 @@ class SeedOssForCausalLM(SeedOssPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, SeedOssForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, SeedOssForCausalLM
 
         >>> model = SeedOssForCausalLM.from_pretrained("ByteDance-Seed/SeedOss-36B")
         >>> tokenizer = AutoTokenizer.from_pretrained("ByteDance-Seed/SeedOss-36B")

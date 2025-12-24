@@ -18,8 +18,8 @@ import shutil
 import tempfile
 import unittest
 
-from transformers import AutoTokenizer
-from transformers.models.bert_japanese.tokenization_bert_japanese import (
+from transformers_4573 import AutoTokenizer
+from transformers_4573.models.bert_japanese.tokenization_bert_japanese import (
     VOCAB_FILES_NAMES,
     BertJapaneseTokenizer,
     CharacterTokenizer,
@@ -28,7 +28,7 @@ from transformers.models.bert_japanese.tokenization_bert_japanese import (
     SudachiTokenizer,
     WordpieceTokenizer,
 )
-from transformers.testing_utils import custom_tokenizers, require_jumanpp, require_sudachi_projection
+from transformers_4573.testing_utils import custom_tokenizers, require_jumanpp, require_sudachi_projection
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

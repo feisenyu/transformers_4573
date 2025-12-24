@@ -79,7 +79,7 @@ class AnyToAnyPipeline(Pipeline):
     Example:
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> pipe = pipeline(task="any-to-any", model="google/gemma-3n-E4B-it")
     >>> pipe("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png", text="A photo of")
@@ -87,7 +87,7 @@ class AnyToAnyPipeline(Pipeline):
     ```
 
     ```python
-    >>> from transformers import pipeline
+    >>> from transformers_4573 import pipeline
 
     >>> pipe = pipeline("any-to-any", model="google/gemma-3n-E4B-it")
     >>> messages = [

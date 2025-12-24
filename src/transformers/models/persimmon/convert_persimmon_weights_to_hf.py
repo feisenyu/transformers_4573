@@ -18,11 +18,11 @@ import warnings
 import flatdict
 import torch
 
-from transformers import LlamaTokenizer, PersimmonConfig, PersimmonForCausalLM
+from transformers_4573 import LlamaTokenizer, PersimmonConfig, PersimmonForCausalLM
 
 
 try:
-    from transformers import LlamaTokenizerFast
+    from transformers_4573 import LlamaTokenizerFast
 
     tokenizer_class = LlamaTokenizerFast
 except ImportError as e:
@@ -45,7 +45,7 @@ python src/transformers/models/persimmon/convert_persimmon_weights_to_hf.py  --i
 Thereafter, models can be loaded via:
 
 ```py
-from transformers import PersimmonForCausalLM, PersimmonTokenizer
+from transformers_4573 import PersimmonForCausalLM, PersimmonTokenizer
 
 model = PersimmonForCausalLM.from_pretrained("/output/path")
 tokenizer = PersimmonTokenizer.from_pretrained("/output/path")

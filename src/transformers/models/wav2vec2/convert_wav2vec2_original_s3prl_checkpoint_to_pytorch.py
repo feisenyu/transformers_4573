@@ -18,7 +18,7 @@ import argparse
 
 import torch
 
-from transformers import (
+from transformers_4573 import (
     Wav2Vec2Config,
     Wav2Vec2FeatureExtractor,
     Wav2Vec2ForAudioFrameClassification,

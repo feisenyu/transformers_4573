@@ -16,8 +16,8 @@ import json
 import os
 import unittest
 
-from transformers.models.wav2vec2.tokenization_wav2vec2 import VOCAB_FILES_NAMES
-from transformers.models.wav2vec2_bert import Wav2Vec2BertProcessor
+from transformers_4573.models.wav2vec2.tokenization_wav2vec2 import VOCAB_FILES_NAMES
+from transformers_4573.models.wav2vec2_bert import Wav2Vec2BertProcessor
 
 from ...test_processing_common import ProcessorTesterMixin
 from ..wav2vec2.test_feature_extraction_wav2vec2 import floats_list

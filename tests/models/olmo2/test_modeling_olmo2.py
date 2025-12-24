@@ -18,10 +18,10 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import Olmo2Config, is_torch_available
-from transformers.generation.configuration_utils import GenerationConfig
-from transformers.models.auto.tokenization_auto import AutoTokenizer
-from transformers.testing_utils import (
+from transformers_4573 import Olmo2Config, is_torch_available
+from transformers_4573.generation.configuration_utils import GenerationConfig
+from transformers_4573.models.auto.tokenization_auto import AutoTokenizer
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_tokenizers,
@@ -39,7 +39,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Olmo2ForCausalLM,
         Olmo2Model,
     )
@@ -287,7 +287,7 @@ class Olmo2IntegrationTest(unittest.TestCase):
         if version.parse(torch.__version__) < version.parse("2.4.0"):
             self.skipTest(reason="This test requires torch >= 2.4 to run.")
 
-        from transformers.integrations.executorch import (
+        from transformers_4573.integrations.executorch import (
             TorchExportableModuleWithStaticCache,
             convert_and_export_with_cache,
         )

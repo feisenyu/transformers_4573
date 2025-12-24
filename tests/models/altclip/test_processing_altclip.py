@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import AltCLIPProcessor
-from transformers.testing_utils import require_vision
+from transformers_4573 import AltCLIPProcessor
+from transformers_4573.testing_utils import require_vision
 
 from ...test_processing_common import ProcessorTesterMixin
 

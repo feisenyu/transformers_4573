@@ -38,7 +38,7 @@ The example below demonstrates how to chat with the model with [`Pipeline`] or t
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 generator = pipeline(
     "image-text-to-text",
@@ -61,7 +61,7 @@ generator(
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, AutoModelForSeq2SeqLM
+from transformers_4573 import AutoProcessor, AutoModelForSeq2SeqLM
 
 processor = AutoProcessor.from_pretrained("google/t5gemma-2-270m-270m")
 model = AutoModelForSeq2SeqLM.from_pretrained(

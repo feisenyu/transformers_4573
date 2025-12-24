@@ -39,7 +39,7 @@ The example below demonstrates how to classify an image with [`Pipeline`] or the
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="image-classification",
@@ -57,7 +57,7 @@ pipeline("https://huggingface.co/datasets/huggingface/documentation-images/resol
 import torch
 import requests
 from PIL import Image
-from transformers import AutoModelForImageClassification, AutoImageProcessor
+from transformers_4573 import AutoModelForImageClassification, AutoImageProcessor
 
 image_processor = AutoImageProcessor.from_pretrained("microsoft/cvt-13")
 model = AutoModelForImageClassification.from_pretrained(

@@ -52,7 +52,7 @@ Let's load the model and the tokenizer.
 
 ```python
 import torch
-from transformers import ColPaliForRetrieval, ColPaliProcessor
+from transformers_4573 import ColPaliForRetrieval, ColPaliProcessor
 from accelerate import Accelerator
 
 device = Accelerator().device

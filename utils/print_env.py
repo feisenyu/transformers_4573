@@ -21,7 +21,7 @@ import os
 import sys
 
 import transformers
-from transformers import is_torch_hpu_available, is_torch_xpu_available
+from transformers_4573 import is_torch_hpu_available, is_torch_xpu_available
 
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"

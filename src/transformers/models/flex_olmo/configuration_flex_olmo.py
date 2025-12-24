@@ -95,7 +95,7 @@ class FlexOlmoConfig(PreTrainedConfig):
             Whether to normalize the topk probabilities.
 
     ```python
-    >>> from transformers import FlexOlmoModel, FlexOlmoConfig
+    >>> from transformers_4573 import FlexOlmoModel, FlexOlmoConfig
 
     >>> # Initializing a FlexOlmo style configuration
     >>> configuration = FlexOlmoConfig()

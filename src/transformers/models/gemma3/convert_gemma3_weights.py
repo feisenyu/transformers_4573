@@ -34,7 +34,7 @@ import tree
 from absl import app, flags, logging
 from orbax import checkpoint as obc
 
-from transformers import (
+from transformers_4573 import (
     Gemma3Config,
     Gemma3ForCausalLM,
     Gemma3ForConditionalGeneration,
@@ -46,7 +46,7 @@ from transformers import (
     GenerationConfig,
     SiglipVisionConfig,
 )
-from transformers.image_utils import PILImageResampling
+from transformers_4573.image_utils import PILImageResampling
 
 
 # ==== Internal Constants and Classes ====

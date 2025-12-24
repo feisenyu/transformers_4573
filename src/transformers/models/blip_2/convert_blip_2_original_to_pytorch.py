@@ -29,7 +29,7 @@ import torch
 from lavis.models import load_model_and_preprocess
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     BertTokenizer,
     Blip2Config,
@@ -43,7 +43,7 @@ from transformers import (
     T5Config,
     set_seed,
 )
-from transformers.utils.constants import OPENAI_CLIP_MEAN, OPENAI_CLIP_STD
+from transformers_4573.utils.constants import OPENAI_CLIP_MEAN, OPENAI_CLIP_STD
 
 
 def load_demo_image():

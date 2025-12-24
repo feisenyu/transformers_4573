@@ -36,7 +36,7 @@ The example below demonstrates how to generate text with [`Pipeline`], [`AutoMod
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text2text-generation",
@@ -52,7 +52,7 @@ pipeline("translate English to French: The weather is nice today")
 
 ```python
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import AutoModelForSeq2SeqLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained(
     "google/byt5-small"
@@ -88,7 +88,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 ```python
 # pip install torchao
 import torch
-from transformers import TorchAoConfig, AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForSeq2SeqLM, AutoTokenizer
 
 quantization_config = TorchAoConfig("int4_weight_only", group_size=128)
 
@@ -113,7 +113,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
     ```python
     import torch
-    from transformers import AutoModelForSeq2SeqLM
+    from transformers_4573 import AutoModelForSeq2SeqLM
 
     model = AutoModelForSeq2SeqLM.from_pretrained("google/byt5-small")
 

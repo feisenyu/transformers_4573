@@ -23,7 +23,7 @@ from fairseq2.data.audio import WaveformToFbankConverter
 from fairseq2.nn.padding import get_seqs_and_padding_mask
 from seamless_communication.models.conformer_shaw import load_conformer_shaw_model
 
-from transformers import (
+from transformers_4573 import (
     SeamlessM4TFeatureExtractor,
     Wav2Vec2BertConfig,
     Wav2Vec2BertModel,

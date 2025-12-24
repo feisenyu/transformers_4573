@@ -172,7 +172,7 @@ def get_feature_extractor_config(
     feature_extractor_config = get_feature_extractor_config("FacebookAI/xlm-roberta-base")
 
     # Save a pretrained feature extractor locally and you can reload its config
-    from transformers import AutoFeatureExtractor
+    from transformers_4573 import AutoFeatureExtractor
 
     feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base-960h")
     feature_extractor.save_pretrained("feature-extractor-test")
@@ -299,7 +299,7 @@ class AutoFeatureExtractor:
         Examples:
 
         ```python
-        >>> from transformers import AutoFeatureExtractor
+        >>> from transformers_4573 import AutoFeatureExtractor
 
         >>> # Download feature extractor from huggingface.co and cache.
         >>> feature_extractor = AutoFeatureExtractor.from_pretrained("facebook/wav2vec2-base-960h")

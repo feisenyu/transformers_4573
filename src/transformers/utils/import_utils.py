@@ -2190,7 +2190,7 @@ class _LazyModule(ModuleType):
                                 # Candidate not in _class_to_module - might need recursive resolution
                                 # Try importing it directly to trigger lazy loading
                                 try:
-                                    # Try to get it from transformers module to trigger lazy loading
+                                    # Try to get it from transformers_4573 module to trigger lazy loading
                                     transformers_module = sys.modules.get("transformers")
                                     if transformers_module and hasattr(transformers_module, candidate_name):
                                         base_tokenizer_class = getattr(transformers_module, candidate_name)

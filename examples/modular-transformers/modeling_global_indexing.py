@@ -10,7 +10,7 @@ from typing import Optional
 import torch
 from torch import nn
 
-from transformers.modeling_utils import AttentionInterface
+from transformers_4573.modeling_utils import AttentionInterface
 
 from ...cache_utils import Cache
 from ...integrations import use_kernel_func_from_hub, use_kernelized_func

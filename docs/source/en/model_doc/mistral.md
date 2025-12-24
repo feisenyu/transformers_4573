@@ -41,7 +41,7 @@ The example below demonstrates how to chat with [`Pipeline`] or the [`AutoModel`
 
 ```python
 >>> import torch
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> messages = [
 ...     {"role": "user", "content": "What is your favourite condiment?"},
@@ -58,7 +58,7 @@ The example below demonstrates how to chat with [`Pipeline`] or the [`AutoModel`
 
 ```python
 >>> import torch
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.3", dtype=torch.bfloat16, attn_implementation="sdpa", device_map="auto")
 >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.3")
@@ -92,7 +92,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```python
 >>> import torch
->>> from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 >>> # specify how to quantize the model
 >>> quantization_config = BitsAndBytesConfig(
@@ -122,7 +122,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 Use the [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139) to better understand what tokens the model can and cannot attend to.
 
 ```py
->>> from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+>>> from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 >>> visualizer = AttentionMaskVisualizer("mistralai/Mistral-7B-Instruct-v0.3")
 >>> visualizer("Do you have mayonnaise recipes?")

@@ -113,12 +113,12 @@ pip install huggingface_hub
 ينشئ هذا مستودعًا تحت اسم المستخدم الخاص بك باسم نموذج `my-awesome-model`. يمكن للمستخدمين الآن تحميل نموذجك باستخدام دالة `from_pretrained`:
 
 ```py
->>> from transformers import AutoModel
+>>> from transformers_4573 import AutoModel
 
 >>> model = AutoModel.from_pretrained("your_username/my-awesome-model")
 ```
 ```py
->>> from transformers import AutoModel
+>>> from transformers_4573 import AutoModel
 
 >>> model = AutoModel.from_pretrained("your_username/my-awesome-model")
 ```

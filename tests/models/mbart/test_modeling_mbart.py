@@ -18,8 +18,8 @@ import tempfile
 import unittest
 from functools import cached_property
 
-from transformers import MBartConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import MBartConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_sentencepiece,
     require_tokenizers,
     require_torch,
@@ -37,7 +37,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         AutoTokenizer,
         BatchEncoding,
         MBartForCausalLM,
@@ -46,7 +46,7 @@ if is_torch_available():
         MBartForSequenceClassification,
         MBartModel,
     )
-    from transformers.models.mbart.modeling_mbart import MBartDecoder, MBartEncoder
+    from transformers_4573.models.mbart.modeling_mbart import MBartDecoder, MBartEncoder
 
 
 def prepare_mbart_inputs_dict(

@@ -237,8 +237,8 @@ class SmolVLMProcessor(ProcessorMixin):
 
         ```python
         >>> import requests
-        >>> from transformers import SmolVLMProcessor
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import SmolVLMProcessor
+        >>> from transformers_4573.image_utils import load_image
 
         >>> processor = SmolVLMProcessor.from_pretrained("HuggingFaceM4/SmolVLM2-256M-Video-Instruct")
         >>> processor.image_processor.do_image_splitting = False  # Force as False to simplify the example

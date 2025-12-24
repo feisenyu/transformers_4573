@@ -19,8 +19,8 @@ import os
 
 import torch
 
-from transformers import T5Config, T5ForConditionalGeneration
-from transformers.utils import logging
+from transformers_4573 import T5Config, T5ForConditionalGeneration
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)

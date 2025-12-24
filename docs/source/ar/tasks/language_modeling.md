@@ -96,7 +96,7 @@ pip install transformers datasets evaluate
 الخطوة التالية هي تحميل مجزء النص DistilGPT2 لمعالجة حقل `text` الفرعي:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("distilbert/distilgpt2")
 ```
@@ -185,7 +185,7 @@ pip install transformers datasets evaluate
 استخدم رمز نهاية التسلسل كرمز للحشو، وحدد `mlm_probability` لحجب الرموز بشكل عشوائي عند كل تكرار للبيانات:
 
 ```py
->>> from transformers import DataCollatorForLanguageModeling
+>>> from transformers_4573 import DataCollatorForLanguageModeling
 
 >>> tokenizer.pad_token = tokenizer.eos_token
 >>> data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -204,7 +204,7 @@ pip install transformers datasets evaluate
 أنت جاهز الآن لبدء تدريب نموذجك! قم بتحميل DistilGPT2 باستخدام [`AutoModelForCausalLM`]:
 
 ```py
->>> from transformers import AutoModelForCausalLM, TrainingArguments, Trainer
+>>> from transformers_4573 import AutoModelForCausalLM, TrainingArguments, Trainer
 
 >>> model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
 ```
@@ -273,7 +273,7 @@ Perplexity: 49.61
 أبسط طريقة لتجربة نموذجك المدرب للاستدلال هي استخدامه في [`pipeline`]. قم بتنفيذ `pipeline` لتوليد النص مع نموذجك، ومرر نصك إليه:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 
 >>> generator = pipeline("text-generation", model="username/my_awesome_eli5_clm-model")
 >>> generator(prompt)
@@ -283,7 +283,7 @@ Perplexity: 49.61
 قسم النص وإرجع `input_ids` كتنسورات PyTorch:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("username/my_awesome_eli5_clm-model")
 >>> inputs = tokenizer(prompt, return_tensors="pt").input_ids
@@ -293,7 +293,7 @@ Perplexity: 49.61
 للمزيد من التفاصيل حول استراتيجيات توليد النص المختلفة والبارامترات للتحكم في التوليد، راجع صفحة [استراتيجيات توليد النص](../generation_strategies).
 
 ```py
->>> from transformers import AutoModelForCausalLM
+>>> from transformers_4573 import AutoModelForCausalLM
 
 >>> model = AutoModelForCausalLM.from_pretrained("username/my_awesome_eli5_clm-model")
 >>> outputs = model.generate(inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)

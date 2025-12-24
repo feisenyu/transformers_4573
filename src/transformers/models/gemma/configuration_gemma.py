@@ -87,7 +87,7 @@ class GemmaConfig(PreTrainedConfig):
             If True, the model will attend to all text tokens instead of using a causal mask.
 
     ```python
-    >>> from transformers import GemmaModel, GemmaConfig
+    >>> from transformers_4573 import GemmaModel, GemmaConfig
     >>> # Initializing a Gemma gemma-7b style configuration
     >>> configuration = GemmaConfig()
     >>> # Initializing a model from the gemma-7b style configuration

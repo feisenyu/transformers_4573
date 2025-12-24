@@ -15,7 +15,7 @@
 على سبيل المثال، تأمّل هذين التسلسُلين :
 
 ```python
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -176,7 +176,7 @@
 يعمل كل محلل لغوي بشكل مختلف ولكن الآلية الأساسية تبقى كما هي. إليك مثال باستخدام محلل BERT اللغوي، والذي يعد محلل لغوي [WordPiece](https://huggingface.co/papers/1609.08144):
 
 ```python
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -393,7 +393,7 @@
 يمكننا استخدام برنامجنا للتمييز لإنشاء مثل هذه الجملة تلقائيًا عن طريق تمرير التسلسلين إلى `tokenizer` كمعامليين (وليس قائمة، كما كان من قبل) مثل هذا:
 
 ```python
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-cased")
 >>> sequence_a = "HuggingFace is based in NYC"

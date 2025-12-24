@@ -59,7 +59,7 @@ class EfficientLoFTRImageProcessorKwargs(ImagesKwargs, total=False):
     do_grayscale: bool
 
 
-# Copied from transformers.models.superpoint.image_processing_superpoint.is_grayscale
+# Copied from transformers_4573.models.superpoint.image_processing_superpoint.is_grayscale
 def is_grayscale(
     image: np.ndarray,
     input_data_format: Optional[Union[str, ChannelDimension]] = None,
@@ -74,7 +74,7 @@ def is_grayscale(
         return np.all(image[..., 0] == image[..., 1]) and np.all(image[..., 1] == image[..., 2])
 
 
-# Copied from transformers.models.superpoint.image_processing_superpoint.convert_to_grayscale
+# Copied from transformers_4573.models.superpoint.image_processing_superpoint.convert_to_grayscale
 def convert_to_grayscale(
     image: ImageInput,
     input_data_format: Optional[Union[str, ChannelDimension]] = None,
@@ -112,7 +112,7 @@ def convert_to_grayscale(
     return image
 
 
-# Copied from transformers.models.superglue.image_processing_superglue.validate_and_format_image_pairs
+# Copied from transformers_4573.models.superglue.image_processing_superglue.validate_and_format_image_pairs
 def validate_and_format_image_pairs(images: ImageInput):
     error_message = (
         "Input images must be a one of the following :",
@@ -188,7 +188,7 @@ class EfficientLoFTRImageProcessor(BaseImageProcessor):
         self.rescale_factor = rescale_factor
         self.do_grayscale = do_grayscale
 
-    # Copied from transformers.models.superpoint.image_processing_superpoint.SuperPointImageProcessor.resize
+    # Copied from transformers_4573.models.superpoint.image_processing_superpoint.SuperPointImageProcessor.resize
     def resize(
         self,
         image: np.ndarray,
@@ -228,7 +228,7 @@ class EfficientLoFTRImageProcessor(BaseImageProcessor):
             **kwargs,
         )
 
-    # Copied from transformers.models.superglue.image_processing_superglue.SuperGlueImageProcessor.preprocess
+    # Copied from transformers_4573.models.superglue.image_processing_superglue.SuperGlueImageProcessor.preprocess
     def preprocess(
         self,
         images,

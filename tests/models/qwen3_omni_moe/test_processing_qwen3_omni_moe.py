@@ -20,10 +20,10 @@ import numpy as np
 from huggingface_hub import hf_hub_download
 from parameterized import parameterized
 
-from transformers import (
+from transformers_4573 import (
     Qwen3OmniMoeProcessor,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_av,
     require_librosa,
     require_torch,
@@ -31,7 +31,7 @@ from transformers.testing_utils import (
     require_torchvision,
     require_vision,
 )
-from transformers.utils import is_torch_available
+from transformers_4573.utils import is_torch_available
 
 from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 

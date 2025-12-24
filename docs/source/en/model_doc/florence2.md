@@ -43,7 +43,7 @@ The example below demonstrates how to perform object detection with [`Pipeline`]
 import torch
 import requests
 from PIL import Image
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     "image-text-to-text",
@@ -65,7 +65,7 @@ pipeline(
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, Florence2ForConditionalGeneration
+from transformers_4573 import AutoProcessor, Florence2ForConditionalGeneration
 
 url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/car.jpg?download=true"
 image = Image.open(requests.get(url, stream=True).raw).convert("RGB")
@@ -100,7 +100,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to quantize 
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, Florence2ForConditionalGeneration, BitsAndBytesConfig
+from transformers_4573 import AutoProcessor, Florence2ForConditionalGeneration, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_4bit=True)
 

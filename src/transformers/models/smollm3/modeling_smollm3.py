@@ -490,7 +490,7 @@ class SmolLM3ForCausalLM(SmolLM3PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, SmolLM3ForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, SmolLM3ForCausalLM
 
         >>> model = SmolLM3ForCausalLM.from_pretrained("meta-smollm3/SmolLM3-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-smollm3/SmolLM3-2-7b-hf")

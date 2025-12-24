@@ -38,7 +38,7 @@ The example below demonstrates how to perform object detection with the [`Pipeli
 <hfoption id="Pipeline">
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 import torch
 
 pipeline = pipeline(
@@ -55,7 +55,7 @@ pipeline("http://images.cocodataset.org/val2017/000000039769.jpg")
 <hfoption id="AutoModel">
 
 ```python
-from transformers import AutoImageProcessor, AutoModelForObjectDetection
+from transformers_4573 import AutoImageProcessor, AutoModelForObjectDetection
 from PIL import Image
 import requests
 import torch
@@ -115,7 +115,7 @@ There are three other ways to instantiate a DETR model (depending on what you pr
 - Option 1: Instantiate DETR with pre-trained weights for entire model
 
 ```python
-from transformers import DetrForObjectDetection
+from transformers_4573 import DetrForObjectDetection
 
 model = DetrForObjectDetection.from_pretrained("facebook/detr-resnet-50")
 ```
@@ -123,7 +123,7 @@ model = DetrForObjectDetection.from_pretrained("facebook/detr-resnet-50")
 - Option 2: Instantiate DETR with randomly initialized weights for Transformer, but pre-trained weights for backbone
 
 ```python
-from transformers import DetrConfig, DetrForObjectDetection
+from transformers_4573 import DetrConfig, DetrForObjectDetection
 
 config = DetrConfig()
 model = DetrForObjectDetection(config)

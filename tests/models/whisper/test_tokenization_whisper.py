@@ -16,9 +16,9 @@ import unittest
 
 import numpy as np
 
-from transformers.models.whisper import WhisperTokenizer
-from transformers.models.whisper.tokenization_whisper import _combine_tokens_into_words, _find_longest_common_sequence
-from transformers.testing_utils import require_torch, slow
+from transformers_4573.models.whisper import WhisperTokenizer
+from transformers_4573.models.whisper.tokenization_whisper import _combine_tokens_into_words, _find_longest_common_sequence
+from transformers_4573.testing_utils import require_torch, slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

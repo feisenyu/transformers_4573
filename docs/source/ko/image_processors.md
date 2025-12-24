@@ -24,7 +24,7 @@ rendered properly in your Markdown viewer.
 Hugging Face [Hub](https://hf.co)나 로컬 디렉토리에 있는 비전 모델에서 이미지 프로세서의 설정(이미지 크기, 정규화 및 리사이즈 여부 등)을 불러오려면 [`~ImageProcessingMixin.from_pretrained`]를 사용하세요. 각 사전 학습된 모델의 설정은 [preprocessor_config.json](https://huggingface.co/google/vit-base-patch16-224/blob/main/preprocessor_config.json) 파일에 저장되어 있습니다.
 
 ```py
-from transformers import AutoImageProcessor
+from transformers_4573 import AutoImageProcessor
 
 image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224")
 ```
@@ -61,7 +61,7 @@ inputs = image_processor(image, return_tensors="pt")
 [`~AutoImageProcessor.from_pretrained`]를 사용해 이미지 프로세서를 불러옵니다. 만약 빠른 프로세서를 사용하고 싶다면 `use_fast=True`를 추가하세요.
 
 ```py
-from transformers import AutoImageProcessor
+from transformers_4573 import AutoImageProcessor
 
 image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224", use_fast=True)
 ```
@@ -74,7 +74,7 @@ image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-22
 이러한 이미지 프로세서는 모델별 클래스에서 직접 불러올 수 있으며, 더 빠른 버전의 지원 여부는 해당 모델의 API 문서에서 확인 가능합니다.
 
 ```py
-from transformers import ViTImageProcessor
+from transformers_4573 import ViTImageProcessor
 
 image_processor = ViTImageProcessor.from_pretrained("google/vit-base-patch16-224")
 ```
@@ -82,7 +82,7 @@ image_processor = ViTImageProcessor.from_pretrained("google/vit-base-patch16-224
 빠른 이미지 프로세서를 불러오기 위해 fast 구현 클래스를 사용해보세요.
 
 ```py
-from transformers import ViTImageProcessorFast
+from transformers_4573 import ViTImageProcessorFast
 
 image_processor = ViTImageProcessorFast.from_pretrained("google/vit-base-patch16-224")
 ```
@@ -96,7 +96,7 @@ image_processor = ViTImageProcessorFast.from_pretrained("google/vit-base-patch16
 
 
 ```py
-from transformers import AutoImageProcessor
+from transformers_4573 import AutoImageProcessor
 
 processor = AutoImageProcessor.from_pretrained("facebook/detr-resnet-50", use_fast=True)
 ```
@@ -105,7 +105,7 @@ processor = AutoImageProcessor.from_pretrained("facebook/detr-resnet-50", use_fa
 
 ```py
 from torchvision.io import read_image
-from transformers import DetrImageProcessorFast
+from transformers_4573 import DetrImageProcessorFast
 
 images = read_image("image.jpg")
 processor = DetrImageProcessorFast.from_pretrained("facebook/detr-resnet-50")

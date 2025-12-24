@@ -459,7 +459,7 @@ class MinistralForCausalLM(MinistralPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, MinistralForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, MinistralForCausalLM
 
         >>> model = MinistralForCausalLM.from_pretrained("meta-ministral/Ministral-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-ministral/Ministral-2-7b-hf")

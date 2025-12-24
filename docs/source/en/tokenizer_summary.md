@@ -107,7 +107,7 @@ seen before, by decomposing them into known subwords. For instance, the [`~trans
 `"I have a new GPU!"` as follows:
 
 ```py
->>> from transformers import BertTokenizer
+>>> from transformers_4573 import BertTokenizer
 
 >>> tokenizer = BertTokenizer.from_pretrained("google-bert/bert-base-uncased")
 >>> tokenizer.tokenize("I have a new GPU!")
@@ -121,7 +121,7 @@ be attached to the previous one, without space (for decoding or reversal of the 
 As another example, [`~transformers.XLNetTokenizer`] tokenizes our previously exemplary text as follows:
 
 ```py
->>> from transformers import XLNetTokenizer
+>>> from transformers_4573 import XLNetTokenizer
 
 >>> tokenizer = XLNetTokenizer.from_pretrained("xlnet/xlnet-base-cased")
 >>> tokenizer.tokenize("Don't you love 🤗 Transformers? We sure do.")

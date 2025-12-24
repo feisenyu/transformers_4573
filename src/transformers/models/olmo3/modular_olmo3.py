@@ -19,7 +19,7 @@ from typing import Optional
 import torch
 import torch.nn as nn
 
-from transformers.utils.generic import TransformersKwargs
+from transformers_4573.utils.generic import TransformersKwargs
 
 from ...cache_utils import Cache, DynamicCache
 from ...configuration_utils import PreTrainedConfig, layer_type_validation
@@ -105,7 +105,7 @@ class Olmo3Config(PreTrainedConfig):
             for 3 out of 4 layers, and full attention for every 4th layer.
 
     ```python
-    >>> from transformers import Olmo3Model, Olmo3Config
+    >>> from transformers_4573 import Olmo3Model, Olmo3Config
 
     >>> # Initializing a Olmo3 7B style configuration
     >>> configuration = Olmo3Config()

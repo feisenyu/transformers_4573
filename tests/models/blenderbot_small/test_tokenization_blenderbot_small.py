@@ -20,7 +20,7 @@ import shutil
 import tempfile
 import unittest
 
-from transformers.models.blenderbot_small.tokenization_blenderbot_small import (
+from transformers_4573.models.blenderbot_small.tokenization_blenderbot_small import (
     VOCAB_FILES_NAMES,
     BlenderbotSmallTokenizer,
 )

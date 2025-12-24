@@ -38,7 +38,7 @@ custom class of model `NewModel`, make sure you have a `NewModelConfig` then you
 classes like this:
 
 ```python
-from transformers import AutoConfig, AutoModel
+from transformers_4573 import AutoConfig, AutoModel
 
 AutoConfig.register("new-model", NewModelConfig)
 AutoModel.register(NewModelConfig, NewModel)

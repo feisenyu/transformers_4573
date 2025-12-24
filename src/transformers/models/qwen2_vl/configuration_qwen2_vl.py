@@ -124,7 +124,7 @@ class Qwen2VLTextConfig(PreTrainedConfig):
             The id of the _padding_ token.
 
     ```python
-    >>> from transformers import Qwen2VLTextModel, Qwen2VLConfig
+    >>> from transformers_4573 import Qwen2VLTextModel, Qwen2VLConfig
 
     >>> # Initializing a Qwen2VL style configuration
     >>> configuration = Qwen2VLConfig()
@@ -262,7 +262,7 @@ class Qwen2VLConfig(PreTrainedConfig):
             The token index to denote end of vision input.
 
     ```python
-    >>> from transformers import Qwen2VLForConditionalGeneration, Qwen2VLConfig
+    >>> from transformers_4573 import Qwen2VLForConditionalGeneration, Qwen2VLConfig
 
     >>> # Initializing a Qwen2VL style configuration
     >>> configuration = Qwen2VLConfig()

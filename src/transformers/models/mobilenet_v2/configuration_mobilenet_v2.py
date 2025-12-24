@@ -71,7 +71,7 @@ class MobileNetV2Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import MobileNetV2Config, MobileNetV2Model
+    >>> from transformers_4573 import MobileNetV2Config, MobileNetV2Model
 
     >>> # Initializing a "mobilenet_v2_1.0_224" style configuration
     >>> configuration = MobileNetV2Config()

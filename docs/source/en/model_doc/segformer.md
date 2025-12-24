@@ -42,7 +42,7 @@ The example below demonstrates semantic segmentation with [`Pipeline`] or the [`
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="image-segmentation", model="nvidia/segformer-b0-finetuned-ade-512-512", torch_dtype=torch.float16)
 pipeline("https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg")
@@ -54,7 +54,7 @@ pipeline("https://huggingface.co/datasets/huggingface/documentation-images/resol
 ```python
 import requests
 from PIL import Image
-from transformers import AutoProcessor, AutoModelForSemanticSegmentation
+from transformers_4573 import AutoProcessor, AutoModelForSemanticSegmentation
 
 url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 image = Image.open(requests.get(url, stream=True).raw)
@@ -80,7 +80,7 @@ logits = outputs.logits # shape [batch, num_labels, height, width]
    Other datasets may include a background class and label though, in which case, `do_reduce_labels` should be `False`.
 
 ```python
-from transformers import SegformerImageProcessor
+from transformers_4573 import SegformerImageProcessor
 processor = SegformerImageProcessor(do_reduce_labels=True)
 ```
 

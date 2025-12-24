@@ -30,7 +30,7 @@ from typing import Optional
 import torch
 from huggingface_hub import snapshot_download
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     JanusConfig,
     JanusForConditionalGeneration,
@@ -38,8 +38,8 @@ from transformers import (
     JanusVQVAEConfig,
     LlamaConfig,
 )
-from transformers.models.janus.image_processing_janus import JanusImageProcessor
-from transformers.models.janus.processing_janus import JanusProcessor
+from transformers_4573.models.janus.image_processing_janus import JanusImageProcessor
+from transformers_4573.models.janus.processing_janus import JanusProcessor
 
 
 # Mappings

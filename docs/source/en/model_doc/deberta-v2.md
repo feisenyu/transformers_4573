@@ -39,7 +39,7 @@ The example below demonstrates how to classify text with [`Pipeline`] or the [`A
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="text-classification",
@@ -56,7 +56,7 @@ print(result)
 
 ```py
 import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers_4573 import AutoTokenizer, AutoModelForSequenceClassification
 
 tokenizer = AutoTokenizer.from_pretrained(
     "microsoft/deberta-v2-xlarge-mnli"
@@ -93,7 +93,7 @@ Quantization reduces the memory burden of large models by representing the weigh
 The example below uses [bitsandbytes quantization](../quantization/bitsandbytes) to only quantize the weights to 4-bit.
 
 ```py
-from transformers import AutoModelForSequenceClassification, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForSequenceClassification, AutoTokenizer, BitsAndBytesConfig
 
 model_id = "microsoft/deberta-v2-xlarge-mnli"
 quantization_config = BitsAndBytesConfig(

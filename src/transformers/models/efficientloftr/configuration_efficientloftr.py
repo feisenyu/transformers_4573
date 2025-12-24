@@ -80,7 +80,7 @@ class EfficientLoFTRConfig(PreTrainedConfig):
 
     Examples:
         ```python
-        >>> from transformers import EfficientLoFTRConfig, EfficientLoFTRForKeypointMatching
+        >>> from transformers_4573 import EfficientLoFTRConfig, EfficientLoFTRForKeypointMatching
 
         >>> # Initializing a EfficientLoFTR configuration
         >>> configuration = EfficientLoFTRConfig()

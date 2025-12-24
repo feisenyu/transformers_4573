@@ -17,9 +17,9 @@ import unittest
 
 import numpy as np
 
-from transformers.image_utils import OPENAI_CLIP_MEAN, OPENAI_CLIP_STD
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.image_utils import OPENAI_CLIP_MEAN, OPENAI_CLIP_STD
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_video_processing_common import VideoProcessingTestMixin, prepare_video_inputs
 
@@ -30,11 +30,11 @@ if is_torch_available():
 if is_vision_available():
     from PIL import Image
 
-    from transformers.image_utils import get_image_size
-    from transformers.models.qwen2_vl.video_processing_qwen2_vl import smart_resize
+    from transformers_4573.image_utils import get_image_size
+    from transformers_4573.models.qwen2_vl.video_processing_qwen2_vl import smart_resize
 
     if is_torchvision_available():
-        from transformers import Qwen2VLVideoProcessor
+        from transformers_4573 import Qwen2VLVideoProcessor
 
 
 class Qwen2VLVideoProcessingTester:

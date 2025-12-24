@@ -15,7 +15,7 @@
 
 import unittest
 
-from transformers import DebertaTokenizer
+from transformers_4573 import DebertaTokenizer
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

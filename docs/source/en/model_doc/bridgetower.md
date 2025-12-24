@@ -56,7 +56,7 @@ encode the text and prepare the images respectively.
 The following example shows how to run contrastive learning using [`BridgeTowerProcessor`] and [`BridgeTowerForContrastiveLearning`].
 
 ```python
->>> from transformers import BridgeTowerProcessor, BridgeTowerForContrastiveLearning
+>>> from transformers_4573 import BridgeTowerProcessor, BridgeTowerForContrastiveLearning
 >>> import requests
 >>> from PIL import Image
 
@@ -79,7 +79,7 @@ The following example shows how to run contrastive learning using [`BridgeTowerP
 The following example shows how to run image-text retrieval using [`BridgeTowerProcessor`] and [`BridgeTowerForImageAndTextRetrieval`].
 
 ```python
->>> from transformers import BridgeTowerProcessor, BridgeTowerForImageAndTextRetrieval
+>>> from transformers_4573 import BridgeTowerProcessor, BridgeTowerForImageAndTextRetrieval
 >>> import requests
 >>> from PIL import Image
 
@@ -102,7 +102,7 @@ The following example shows how to run image-text retrieval using [`BridgeTowerP
 The following example shows how to run masked language modeling using [`BridgeTowerProcessor`] and [`BridgeTowerForMaskedLM`].
 
 ```python
->>> from transformers import BridgeTowerProcessor, BridgeTowerForMaskedLM
+>>> from transformers_4573 import BridgeTowerProcessor, BridgeTowerForMaskedLM
 >>> from PIL import Image
 >>> import requests
 

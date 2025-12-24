@@ -104,7 +104,7 @@ class GPT2Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import GPT2Config, GPT2Model
+    >>> from transformers_4573 import GPT2Config, GPT2Model
 
     >>> # Initializing a GPT2 configuration
     >>> configuration = GPT2Config()

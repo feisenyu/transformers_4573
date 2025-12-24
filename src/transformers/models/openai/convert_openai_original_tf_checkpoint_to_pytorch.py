@@ -20,8 +20,8 @@ import os
 
 import torch
 
-from transformers import OpenAIGPTConfig, OpenAIGPTModel
-from transformers.utils import CONFIG_NAME, WEIGHTS_NAME, logging
+from transformers_4573 import OpenAIGPTConfig, OpenAIGPTModel
+from transformers_4573.utils import CONFIG_NAME, WEIGHTS_NAME, logging
 
 
 logging.set_verbosity_info()

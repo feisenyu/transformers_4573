@@ -116,7 +116,7 @@ class MyNewModelConfig(PreTrainedConfig):
             The attention head dimension. If None, it will default to hidden_size // num_attention_heads
 
     ```python
-    >>> from transformers import MyNewModelModel, MyNewModelConfig
+    >>> from transformers_4573 import MyNewModelModel, MyNewModelConfig
 
     >>> # Initializing a MyNewModel my_new_model-7b style configuration
     >>> configuration = MyNewModelConfig()

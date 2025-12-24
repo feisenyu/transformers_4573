@@ -18,7 +18,7 @@ import unittest
 
 import numpy as np
 
-from transformers import JanusProcessor
+from transformers_4573 import JanusProcessor
 
 from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 

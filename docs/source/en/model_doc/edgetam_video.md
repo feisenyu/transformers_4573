@@ -49,7 +49,7 @@ EdgeTAM Video's key strength is its ability to track objects across video frames
 #### Basic Video Tracking
 
 ```python
->>> from transformers import EdgeTamVideoModel, Sam2VideoProcessor
+>>> from transformers_4573 import EdgeTamVideoModel, Sam2VideoProcessor
 from accelerate import Accelerator
 >>> import torch
 
@@ -61,7 +61,7 @@ from accelerate import Accelerator
 >>> # video_frames = [Image.open(f"frame_{i:05d}.jpg") for i in range(num_frames)]
 
 >>> # For this example, we'll use the video loading utility
->>> from transformers.video_utils import load_video
+>>> from transformers_4573.video_utils import load_video
 >>> video_url = "https://huggingface.co/datasets/hf-internal-testing/sam2-fixtures/resolve/main/bedroom.mp4"
 >>> video_frames, _ = load_video(video_url)
 

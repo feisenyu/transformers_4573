@@ -1,7 +1,7 @@
-# Awesome projects built with Transformers
+# Awesome projects built with transformers_4573
 
-This page lists awesome projects built on top of Transformers. Transformers is more than a toolkit to use pretrained
-models: it's a community of projects built around it and the Hugging Face Hub. We want Transformers to enable
+This page lists awesome projects built on top of transformers_4573. transformers_4573 is more than a toolkit to use pretrained
+models: it's a community of projects built around it and the Hugging Face Hub. We want transformers_4573 to enable
 developers, researchers, students, professors, engineers, and anyone else to build their dream projects.
 
 In this list, we showcase incredibly impactful and novel projects that have pushed the field forward. We celebrate
@@ -63,7 +63,7 @@ Keywords: LLMs, Large Language Models, Data Retrieval, Indices, Knowledge Augmen
 
 Keywords: Dialogue, Chatbots, VQA, Datasets, Agents
 
-## [sentence-transformers](https://github.com/UKPLab/sentence-transformers)
+## [sentence-transformers_4573](https://github.com/UKPLab/sentence-transformers_4573)
 
 This framework provides an easy method to compute dense vector representations for sentences, paragraphs, and images. The models are based on transformer networks like BERT / RoBERTa / XLM-RoBERTa etc. and achieve state-of-the-art performance in various task. Text is embedding in vector space such that similar text is close and can efficiently be found using cosine similarity.
 
@@ -113,7 +113,7 @@ Keywords: Imagen, Text-to-image
 
 ## [adapters](https://github.com/adapter-hub/adapters)
 
-[adapters](https://github.com/adapter-hub/adapters) is an extension of HuggingFace's Transformers library, integrating adapters into state-of-the-art language models by incorporating AdapterHub, a central repository for pre-trained adapter modules. It is a drop-in replacement for transformers, which is regularly updated to stay up-to-date with the developments of transformers.
+[adapters](https://github.com/adapter-hub/adapters) is an extension of HuggingFace's transformers_4573 library, integrating adapters into state-of-the-art language models by incorporating AdapterHub, a central repository for pre-trained adapter modules. It is a drop-in replacement for transformers_4573, which is regularly updated to stay up-to-date with the developments of transformers_4573.
 
 Keywords: Adapters, LoRA, Parameter-efficient fine-tuning, Hub
 
@@ -140,9 +140,9 @@ Keywords: MLOps, Infrastructure, Data storage, Modeling
 
 Keywords: Healthcare imaging, Training, Evaluation
 
-## [simpletransformers](https://github.com/ThilinaRajapakse/simpletransformers)
+## [simpletransformers_4573](https://github.com/ThilinaRajapakse/simpletransformers_4573)
 
-Simple Transformers lets you quickly train and evaluate Transformer models. Only 3 lines of code are needed to initialize, train, and evaluate a model. It supports a wide variety of NLP tasks.
+Simple transformers_4573 lets you quickly train and evaluate Transformer models. Only 3 lines of code are needed to initialize, train, and evaluate a model. It supports a wide variety of NLP tasks.
 
 Keywords: Framework, simplicity, NLP
 
@@ -152,11 +152,11 @@ Keywords: Framework, simplicity, NLP
 
 Keywords: LLM, Agents, HF Hub
 
-## [transformers.js](https://github.com/huggingface/transformers.js/)
+## [transformers_4573.js](https://github.com/huggingface/transformers_4573.js/)
 
-[transformers.js](https://github.com/huggingface/transformers.js/) is a JavaScript library targeted at running models from transformers directly within the browser.
+[transformers_4573.js](https://github.com/huggingface/transformers_4573.js/) is a JavaScript library targeted at running models from transformers_4573 directly within the browser.
 
-Keywords: Transformers, JavaScript, browser
+Keywords: transformers_4573, JavaScript, browser
 
 ## [bumblebee](https://github.com/elixir-nx/bumblebee)
 
@@ -178,7 +178,7 @@ Keywords: NLP, Framework, LLM
 
 ## [spaCy](https://github.com/explosion/spaCy)
 
-[spaCy](https://github.com/explosion/spaCy) is a library for advanced Natural Language Processing in Python and Cython. It's built on the very latest research, and was designed from day one to be used in real products. It offers support for transformers models through its third party package, spacy-transformers.
+[spaCy](https://github.com/explosion/spaCy) is a library for advanced Natural Language Processing in Python and Cython. It's built on the very latest research, and was designed from day one to be used in real products. It offers support for transformers_4573 models through its third party package, spacy-transformers_4573.
 
 Keywords: NLP, Framework
 
@@ -191,7 +191,7 @@ Keywords: Conversational, Speech
 
 ## [skorch](https://github.com/skorch-dev/skorch)
 
-Skorch is a scikit-learn compatible neural network library that wraps PyTorch. It has support for models within transformers, and tokenizers from tokenizers.
+Skorch is a scikit-learn compatible neural network library that wraps PyTorch. It has support for models within transformers_4573, and tokenizers from tokenizers.
 
 Keywords: Scikit-Learn, PyTorch
 
@@ -199,11 +199,11 @@ Keywords: Scikit-Learn, PyTorch
 
 BertViz is an interactive tool for visualizing attention in Transformer language models such as BERT, GPT2, or T5. It can be run inside a Jupyter or Colab notebook through a simple Python API that supports most Huggingface models.
 
-Keywords: Visualization, Transformers
+Keywords: Visualization, transformers_4573
 
 ## [mesh-transformer-jax](https://github.com/kingoflolz/mesh-transformer-jax)
 
-[mesh-transformer-jax](https://github.com/kingoflolz/mesh-transformer-jax) is a haiku library using the xmap/pjit operators in JAX for model parallelism of transformers. This library is designed for scalability up to approximately 40B parameters on TPUv3s. It was the library used to train the GPT-J model.
+[mesh-transformer-jax](https://github.com/kingoflolz/mesh-transformer-jax) is a haiku library using the xmap/pjit operators in JAX for model parallelism of transformers_4573. This library is designed for scalability up to approximately 40B parameters on TPUv3s. It was the library used to train the GPT-J model.
 
 Keywords: Haiku, Model parallelism, LLM, TPU
 
@@ -276,7 +276,7 @@ Keywords: Java, Framework
 
 ## [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/)
 
-This project provides a unified framework to test generative language models on a large number of different evaluation tasks. It has support for more than 200 tasks, and supports different ecosystems: HF Transformers, GPT-NeoX, DeepSpeed, as well as the OpenAI API.
+This project provides a unified framework to test generative language models on a large number of different evaluation tasks. It has support for more than 200 tasks, and supports different ecosystems: HF transformers_4573, GPT-NeoX, DeepSpeed, as well as the OpenAI API.
 
 Keywords: LLM, Evaluation, Few-shot
 
@@ -350,7 +350,7 @@ Keywords: Adversarial attacks, Data augmentation, NLP
 
 ## [OpenPrompt](https://github.com/thunlp/OpenPrompt)
 
-Prompt-learning is a paradigm to adapt pre-trained language models (PLMs) to downstream NLP tasks, which modify the input text with a textual template and directly uses PLMs to conduct pre-trained tasks. This library provides a standard, flexible and extensible framework to deploy the prompt-learning pipeline. [OpenPrompt](https://github.com/thunlp/OpenPrompt) supports loading PLMs directly from https://github.com/huggingface/transformers.
+Prompt-learning is a paradigm to adapt pre-trained language models (PLMs) to downstream NLP tasks, which modify the input text with a textual template and directly uses PLMs to conduct pre-trained tasks. This library provides a standard, flexible and extensible framework to deploy the prompt-learning pipeline. [OpenPrompt](https://github.com/thunlp/OpenPrompt) supports loading PLMs directly from https://github.com/huggingface/transformers_4573.
 
 ## [text-generation-webui](https://github.com/oobabooga/text-generation-webui/)
 
@@ -402,14 +402,14 @@ Keywords: Adversarial, Outlier, Drift detection
 
 ## [FARM](https://github.com/deepset-ai/FARM)
 
-[FARM](https://github.com/deepset-ai/FARM) makes Transfer Learning with BERT & Co simple, fast and enterprise-ready. It's built upon transformers and provides additional features to simplify the life of developers: Parallelized preprocessing, highly modular design, multi-task learning, experiment tracking, easy debugging and close integration with AWS SageMaker.
+[FARM](https://github.com/deepset-ai/FARM) makes Transfer Learning with BERT & Co simple, fast and enterprise-ready. It's built upon transformers_4573 and provides additional features to simplify the life of developers: Parallelized preprocessing, highly modular design, multi-task learning, experiment tracking, easy debugging and close integration with AWS SageMaker.
 
 Keywords: Transfer Learning, Modular design, Multi-task learning, Experiment tracking
 
 ## [aitextgen](https://github.com/minimaxir/aitextgen)
 
 A robust Python tool for text-based AI training and generation using OpenAI's GPT-2 and EleutherAI's GPT Neo/GPT-3 architecture.
-[aitextgen](https://github.com/minimaxir/aitextgen) is a Python package that leverages PyTorch, Hugging Face Transformers and pytorch-lightning with specific optimizations for text generation using GPT-2, plus many added features.
+[aitextgen](https://github.com/minimaxir/aitextgen) is a Python package that leverages PyTorch, Hugging Face transformers_4573 and pytorch-lightning with specific optimizations for text generation using GPT-2, plus many added features.
 
 Keywords: Training, Generation
 
@@ -481,7 +481,7 @@ Keywords: Audio transcription, Translation
 
 ## [rust-bert](https://github.com/guillaume-be/rust-bert)
 
-Rust-native state-of-the-art Natural Language Processing models and pipelines. Port of Hugging Face's Transformers library, using the tch-rs crate and pre-processing from rust-tokenizers. Supports multi-threaded tokenization and GPU inference. This repository exposes the model base architecture, task-specific heads and ready-to-use pipelines.
+Rust-native state-of-the-art Natural Language Processing models and pipelines. Port of Hugging Face's transformers_4573 library, using the tch-rs crate and pre-processing from rust-tokenizers. Supports multi-threaded tokenization and GPU inference. This repository exposes the model base architecture, task-specific heads and ready-to-use pipelines.
 
 Keywords: Rust, BERT, Inference
 
@@ -491,7 +491,7 @@ Keywords: Rust, BERT, Inference
 
 Keywords: NLP, Knowledge distillation, Few-shot learning, Multi-modality, Training, Inference, Deployment
 
-## [TurboTransformers](https://github.com/Tencent/TurboTransformers)
+## [Turbotransformers_4573](https://github.com/Tencent/Turbotransformers_4573)
 
 A fast and user-friendly runtime for transformer inference (Bert, Albert, GPT2, Decoders, etc) on CPU and GPU.
 
@@ -550,11 +550,11 @@ Donut does not require off-the-shelf OCR engines/APIs, yet it shows state-of-the
 
 Keywords: Document Understanding
 
-## [transformers-interpret](https://github.com/cdpierse/transformers-interpret)
+## [transformers_4573-interpret](https://github.com/cdpierse/transformers_4573-interpret)
 
-Transformers Interpret is a model explainability tool designed to work exclusively with the transformers package.
+transformers_4573 Interpret is a model explainability tool designed to work exclusively with the transformers_4573 package.
 
-In line with the philosophy of the Transformers package Transformers Interpret allows any transformers model to be explained in just two lines. Explainers are available for both text and computer vision models. Visualizations are also available in notebooks and as savable png and html files
+In line with the philosophy of the transformers_4573 package transformers_4573 Interpret allows any transformers_4573 model to be explained in just two lines. Explainers are available for both text and computer vision models. Visualizations are also available in notebooks and as savable png and html files
 
 Keywords: Model interpretation, Visualization
 

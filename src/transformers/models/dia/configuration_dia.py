@@ -232,7 +232,7 @@ class DiaConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import DiaConfig, DiaModel
+    >>> from transformers_4573 import DiaConfig, DiaModel
 
     >>> # Initializing a DiaConfig with default values
     >>> configuration = DiaConfig()

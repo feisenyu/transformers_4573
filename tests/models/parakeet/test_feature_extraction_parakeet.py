@@ -19,9 +19,9 @@ import unittest
 
 import numpy as np
 
-from transformers import ParakeetFeatureExtractor
-from transformers.testing_utils import require_torch
-from transformers.utils import is_datasets_available, is_torch_available
+from transformers_4573 import ParakeetFeatureExtractor
+from transformers_4573.testing_utils import require_torch
+from transformers_4573.utils import is_datasets_available, is_torch_available
 
 from ...test_sequence_feature_extraction_common import SequenceFeatureExtractionTestMixin
 

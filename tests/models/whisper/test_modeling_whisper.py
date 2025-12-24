@@ -27,8 +27,8 @@ import pytest
 from huggingface_hub import hf_hub_download
 from parameterized import parameterized
 
-from transformers import WhisperConfig
-from transformers.testing_utils import (
+from transformers_4573 import WhisperConfig
+from transformers_4573.testing_utils import (
     Expectations,
     is_flaky,
     require_read_token,
@@ -40,8 +40,8 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_torch_xpu_available, is_torchaudio_available
-from transformers.utils.import_utils import is_datasets_available
+from transformers_4573.utils import is_torch_available, is_torch_xpu_available, is_torchaudio_available
+from transformers_4573.utils.import_utils import is_datasets_available
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -56,7 +56,7 @@ if is_datasets_available():
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         WhisperFeatureExtractor,
         WhisperForAudioClassification,
         WhisperForCausalLM,
@@ -65,11 +65,11 @@ if is_torch_available():
         WhisperProcessor,
         set_seed,
     )
-    from transformers.generation import (
+    from transformers_4573.generation import (
         GenerateEncoderDecoderOutput,
     )
-    from transformers.generation.logits_process import LogitsProcessor
-    from transformers.models.whisper.modeling_whisper import WhisperDecoder, WhisperEncoder, sinusoids
+    from transformers_4573.generation.logits_process import LogitsProcessor
+    from transformers_4573.models.whisper.modeling_whisper import WhisperDecoder, WhisperEncoder, sinusoids
 
     class DummyTimestampLogitProcessor(LogitsProcessor):
         """This processor fakes the correct timestamps tokens pattern [TOK_1] [TOK_2] ... [TOK_N] [TIME_STAMP_TOK_1] [TIME_STAMP_TOK_2] [TOK_N+1] ..."""

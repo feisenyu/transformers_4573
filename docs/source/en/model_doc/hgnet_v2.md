@@ -38,7 +38,7 @@ The example below demonstrates how to classify an image with [`Pipeline`] or the
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(
     task="image-classification",
@@ -55,7 +55,7 @@ pipeline("http://images.cocodataset.org/val2017/000000039769.jpg")
 ```py
 import torch
 import requests
-from transformers import HGNetV2ForImageClassification, AutoImageProcessor
+from transformers_4573 import HGNetV2ForImageClassification, AutoImageProcessor
 from PIL import Image
 
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"

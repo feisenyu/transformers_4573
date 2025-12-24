@@ -24,7 +24,7 @@ import torch
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-from transformers import VitDetConfig, VitMatteConfig, VitMatteForImageMatting, VitMatteImageProcessor
+from transformers_4573 import VitDetConfig, VitMatteConfig, VitMatteForImageMatting, VitMatteImageProcessor
 
 
 def get_config(model_name):

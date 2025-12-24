@@ -16,8 +16,8 @@
 import unittest
 
 from tests.test_tokenization_common import TokenizerTesterMixin
-from transformers.models.gemma.tokenization_gemma import GemmaTokenizer
-from transformers.testing_utils import (
+from transformers_4573.models.gemma.tokenization_gemma import GemmaTokenizer
+from transformers_4573.testing_utils import (
     require_read_token,
     require_tokenizers,
 )

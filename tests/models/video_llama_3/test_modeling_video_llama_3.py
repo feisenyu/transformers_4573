@@ -26,7 +26,7 @@ import torch.nn as nn
 from parameterized import parameterized
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     AutoProcessor,
     VideoLlama3Config,
     VideoLlama3ForConditionalGeneration,
@@ -35,7 +35,7 @@ from transformers import (
     VideoLlama3VisionModel,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     backend_empty_cache,
     require_flash_attn,
@@ -46,7 +46,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_torch_bf16_available_on_device,
     is_torch_fp16_available_on_device,
 )

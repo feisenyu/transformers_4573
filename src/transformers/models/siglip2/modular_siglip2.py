@@ -18,8 +18,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from transformers.models.siglip.configuration_siglip import SiglipConfig, SiglipTextConfig, SiglipVisionConfig
-from transformers.models.siglip.modeling_siglip import (
+from transformers_4573.models.siglip.configuration_siglip import SiglipConfig, SiglipTextConfig, SiglipVisionConfig
+from transformers_4573.models.siglip.modeling_siglip import (
     BaseModelOutput,
     BaseModelOutputWithPooling,
     ImageClassifierOutput,
@@ -83,7 +83,7 @@ class Siglip2VisionConfig(SiglipVisionConfig):
     Example:
 
     ```python
-    >>> from transformers import Siglip2VisionConfig, Siglip2VisionModel
+    >>> from transformers_4573 import Siglip2VisionConfig, Siglip2VisionModel
 
     >>> # Initializing a Siglip2VisionConfig with google/siglip2-base-patch16-naflex style configuration
     >>> configuration = Siglip2VisionConfig()
@@ -338,7 +338,7 @@ class Siglip2VisionModel(SiglipVisionModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Siglip2VisionModel
+        >>> from transformers_4573 import AutoProcessor, Siglip2VisionModel
 
         >>> model = Siglip2VisionModel.from_pretrained("google/siglip2-base-patch16-224")
         >>> processor = AutoProcessor.from_pretrained("google/siglip2-base-patch16-224")
@@ -385,8 +385,8 @@ class Siglip2Model(SiglipModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, AutoModel
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import AutoProcessor, AutoModel
+        >>> from transformers_4573.image_utils import load_image
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = load_image(url)
@@ -436,7 +436,7 @@ class Siglip2Model(SiglipModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, AutoModel
+        >>> from transformers_4573 import AutoProcessor, AutoModel
         >>> import torch
 
         >>> model = AutoModel.from_pretrained("google/siglip2-base-patch16-224")
@@ -540,7 +540,7 @@ class Siglip2ForImageClassification(SiglipForImageClassification):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, Siglip2ForImageClassification
+        >>> from transformers_4573 import AutoImageProcessor, Siglip2ForImageClassification
         >>> import torch
         >>> from PIL import Image
         >>> import requests

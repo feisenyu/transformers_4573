@@ -25,10 +25,10 @@ jobs:
       - run: pip uninstall -y transformers
       - run: pip install dist/*.whl
 
-      - run: python -c "from transformers import *"
+      - run: python -c "from transformers_4573 import *"
 
       - run: pip install -e .[torch]
-      - run: python -c "from transformers import pipeline; classifier = pipeline('text-classification'); assert classifier('What a nice release')[0]['score'] > 0"
+      - run: python -c "from transformers_4573 import pipeline; classifier = pipeline('text-classification'); assert classifier('What a nice release')[0]['score'] > 0"
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4

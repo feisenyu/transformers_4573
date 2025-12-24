@@ -254,7 +254,7 @@ class EsmEmbeddings(nn.Module):
         return position_ids.unsqueeze(0).expand(input_shape)
 
 
-# Copied from transformers.models.bert.modeling_bert.eager_attention_forward
+# Copied from transformers_4573.models.bert.modeling_bert.eager_attention_forward
 def eager_attention_forward(
     module: nn.Module,
     query: torch.Tensor,
@@ -516,7 +516,7 @@ class EsmEncoder(nn.Module):
         return BaseModelOutputWithCrossAttentions(last_hidden_state=hidden_states)
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPooler
+# Copied from transformers_4573.models.bert.modeling_bert.BertPooler
 class EsmPooler(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -675,7 +675,7 @@ class EsmModel(EsmPreTrainedModel):
             pooler_output=pooled_output,
         )
 
-    # Copied from transformers.models.bert.modeling_bert.BertModel._create_attention_masks
+    # Copied from transformers_4573.models.bert.modeling_bert.BertModel._create_attention_masks
     def _create_attention_masks(
         self,
         attention_mask,

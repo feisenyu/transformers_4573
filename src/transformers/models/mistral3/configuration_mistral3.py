@@ -49,7 +49,7 @@ class Mistral3Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Mistral3ForConditionalGeneration, Mistral3Config, PixtralVisionConfig, MistralConfig
+    >>> from transformers_4573 import Mistral3ForConditionalGeneration, Mistral3Config, PixtralVisionConfig, MistralConfig
 
     >>> # Initializing a Pixtral-vision config
     >>> vision_config = PixtralVisionConfig()

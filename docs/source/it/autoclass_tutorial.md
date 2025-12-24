@@ -38,7 +38,7 @@ Quasi tutti i compiti di NLP iniziano con un tokenizer. Un tokenizer converte il
 Carica un tokenizer con [`AutoTokenizer.from_pretrained`]:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("FacebookAI/xlm-roberta-base")
 ```
@@ -59,7 +59,7 @@ Per compiti inerenti a audio e video, un feature extractor processa il segnale a
 Carica un feature extractor con [`AutoFeatureExtractor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoFeatureExtractor
+>>> from transformers_4573 import AutoFeatureExtractor
 
 >>> feature_extractor = AutoFeatureExtractor.from_pretrained(
 ...     "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition"
@@ -73,7 +73,7 @@ Compiti multimodali richiedono un processore che combini i due tipi di strumenti
 Carica un processore con [`AutoProcessor.from_pretrained`]:
 
 ```py
->>> from transformers import AutoProcessor
+>>> from transformers_4573 import AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained("microsoft/layoutlmv2-base-uncased")
 ```
@@ -83,7 +83,7 @@ Carica un processore con [`AutoProcessor.from_pretrained`]:
 Infine, le classi `AutoModelFor` ti permettono di caricare un modello pre-allenato per un determinato compito (guarda [qui](model_doc/auto) per una lista completa di compiti presenti). Per esempio, carica un modello per la classificazione di sequenze con [`AutoModelForSequenceClassification.from_pretrained`]:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```
@@ -91,7 +91,7 @@ Infine, le classi `AutoModelFor` ti permettono di caricare un modello pre-allena
 Semplicemente utilizza lo stesso checkpoint per caricare un'architettura per un task differente:
 
 ```py
->>> from transformers import AutoModelForTokenClassification
+>>> from transformers_4573 import AutoModelForTokenClassification
 
 >>> model = AutoModelForTokenClassification.from_pretrained("distilbert/distilbert-base-uncased")
 ```

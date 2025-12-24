@@ -19,8 +19,8 @@ from collections.abc import Mapping
 
 from parameterized import parameterized
 
-from transformers import ShieldGemma2Processor
-from transformers.testing_utils import get_tests_dir, require_vision
+from transformers_4573 import ShieldGemma2Processor
+from transformers_4573.testing_utils import get_tests_dir, require_vision
 
 from ...test_processing_common import ProcessorTesterMixin
 

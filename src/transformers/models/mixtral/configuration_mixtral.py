@@ -100,7 +100,7 @@ class MixtralConfig(PreTrainedConfig):
             with longer `max_position_embeddings`.
 
     ```python
-    >>> from transformers import MixtralModel, MixtralConfig
+    >>> from transformers_4573 import MixtralModel, MixtralConfig
 
     >>> # Initializing a Mixtral 7B style configuration
     >>> configuration = MixtralConfig()

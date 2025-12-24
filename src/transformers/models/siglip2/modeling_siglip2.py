@@ -689,7 +689,7 @@ class Siglip2TextModel(Siglip2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, Siglip2TextModel
+        >>> from transformers_4573 import AutoTokenizer, Siglip2TextModel
 
         >>> model = Siglip2TextModel.from_pretrained("google/siglip2-base-patch16-224")
         >>> tokenizer = AutoTokenizer.from_pretrained("google/siglip2-base-patch16-224")
@@ -784,7 +784,7 @@ class Siglip2VisionModel(Siglip2PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, Siglip2VisionModel
+        >>> from transformers_4573 import AutoProcessor, Siglip2VisionModel
 
         >>> model = Siglip2VisionModel.from_pretrained("google/siglip2-base-patch16-224")
         >>> processor = AutoProcessor.from_pretrained("google/siglip2-base-patch16-224")
@@ -865,7 +865,7 @@ class Siglip2Model(Siglip2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoTokenizer, AutoModel
+        >>> from transformers_4573 import AutoTokenizer, AutoModel
         >>> import torch
 
         >>> model = AutoModel.from_pretrained("google/siglip2-base-patch16-224")
@@ -907,8 +907,8 @@ class Siglip2Model(Siglip2PreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import AutoProcessor, AutoModel
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import AutoProcessor, AutoModel
+        >>> from transformers_4573.image_utils import load_image
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = load_image(url)
@@ -960,7 +960,7 @@ class Siglip2Model(Siglip2PreTrainedModel):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, AutoModel
+        >>> from transformers_4573 import AutoProcessor, AutoModel
         >>> import torch
 
         >>> model = AutoModel.from_pretrained("google/siglip2-base-patch16-224")
@@ -1098,7 +1098,7 @@ class Siglip2ForImageClassification(Siglip2PreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, Siglip2ForImageClassification
+        >>> from transformers_4573 import AutoImageProcessor, Siglip2ForImageClassification
         >>> import torch
         >>> from PIL import Image
         >>> import requests

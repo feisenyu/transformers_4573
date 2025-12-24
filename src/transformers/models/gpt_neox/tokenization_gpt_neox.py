@@ -37,7 +37,7 @@ class GPTNeoXTokenizer(TokenizersBackend):
     be encoded differently whether it is at the beginning of the sentence (without space) or not:
 
     ```python
-    >>> from transformers import GPTNeoXTokenizer
+    >>> from transformers_4573 import GPTNeoXTokenizer
 
     >>> tokenizer = GPTNeoXTokenizer.from_pretrained("EleutherAI/gpt-neox-20b")
     >>> tokenizer("Hello world")["input_ids"]

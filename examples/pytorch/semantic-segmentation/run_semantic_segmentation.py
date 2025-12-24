@@ -43,7 +43,7 @@ from huggingface_hub import hf_hub_download
 from torch import nn
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoConfig,
     AutoImageProcessor,
     AutoModelForSemanticSegmentation,
@@ -52,8 +52,8 @@ from transformers import (
     TrainingArguments,
     default_data_collator,
 )
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 """ Finetuning any 🤗 Transformers model supported by AutoModelForSemanticSegmentation for semantic segmentation leveraging the Trainer API."""

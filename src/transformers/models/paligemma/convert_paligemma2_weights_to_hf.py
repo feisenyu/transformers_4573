@@ -22,7 +22,7 @@ import ml_dtypes
 import numpy as np
 import torch
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     Gemma2Config,
     PaliGemmaConfig,
@@ -30,8 +30,8 @@ from transformers import (
     PaliGemmaProcessor,
     SiglipImageProcessor,
 )
-from transformers.tokenization_utils_base import AddedToken
-from transformers.utils import logging
+from transformers_4573.tokenization_utils_base import AddedToken
+from transformers_4573.utils import logging
 
 
 device = "cpu"

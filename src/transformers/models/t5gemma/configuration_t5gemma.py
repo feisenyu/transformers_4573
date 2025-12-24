@@ -96,7 +96,7 @@ class T5GemmaModuleConfig(PreTrainedConfig):
             scaling factor when applying tanh softcapping on the attention scores.
 
     ```python
-    >>> from transformers import T5GemmaModuleModel, T5GemmaModuleConfig
+    >>> from transformers_4573 import T5GemmaModuleModel, T5GemmaModuleConfig
     >>> # Initializing a T5GemmaModule t5_gemma_module-7b style configuration
     >>> configuration = T5GemmaModuleConfig()
     >>> # Initializing a model from the t5_gemma_module-7b style configuration
@@ -194,7 +194,7 @@ class T5GemmaConfig(PreTrainedConfig):
     defaults will yield a similar configuration to a hypothetical balanced Gemma2 encoder-decoder model.
     e.g. [google/t5gemma-2b-2b-prefixlm-it](https://huggingface.co/google/t5gemma-2b-2b-prefixlm-it)
     ```python
-    >>> from transformers import T5GemmaConfig, T5GemmaModel
+    >>> from transformers_4573 import T5GemmaConfig, T5GemmaModel
     >>> t5gemma_config = T5GemmaConfig.from_pretrained("google/t5gemma-2b-2b-prefixlm-it")
     >>> model = T5GemmaModel(t5gemma_config)
     ```

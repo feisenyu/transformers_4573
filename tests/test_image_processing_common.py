@@ -29,10 +29,10 @@ import numpy as np
 import pytest
 from packaging import version
 
-from transformers import AutoImageProcessor, BatchFeature
-from transformers.image_utils import AnnotationFormat, AnnotionFormat
-from transformers.models.auto.image_processing_auto import IMAGE_PROCESSOR_MAPPING_NAMES
-from transformers.testing_utils import (
+from transformers_4573 import AutoImageProcessor, BatchFeature
+from transformers_4573.image_utils import AnnotationFormat, AnnotionFormat
+from transformers_4573.models.auto.image_processing_auto import IMAGE_PROCESSOR_MAPPING_NAMES
+from transformers_4573.testing_utils import (
     check_json_file_has_correct_format,
     require_torch,
     require_torch_accelerator,
@@ -40,11 +40,11 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 
 if is_torchvision_available():
-    from transformers.image_processing_utils_fast import BaseImageProcessorFast
+    from transformers_4573.image_processing_utils_fast import BaseImageProcessorFast
 
 
 if is_torch_available():

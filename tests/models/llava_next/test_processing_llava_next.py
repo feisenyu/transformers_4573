@@ -17,8 +17,8 @@ import unittest
 
 import torch
 
-from transformers import LlavaNextProcessor
-from transformers.testing_utils import (
+from transformers_4573 import LlavaNextProcessor
+from transformers_4573.testing_utils import (
     require_vision,
 )
 

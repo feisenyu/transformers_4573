@@ -18,9 +18,9 @@ from inspect import signature
 import pytest
 from parameterized import parameterized
 
-from transformers import AutoModelForCausalLM, PreTrainedConfig, set_seed
-from transformers.models.auto.auto_factory import getattribute_from_module
-from transformers.testing_utils import (
+from transformers_4573 import AutoModelForCausalLM, PreTrainedConfig, set_seed
+from transformers_4573.models.auto.auto_factory import getattribute_from_module
+from transformers_4573.testing_utils import (
     _COMMON_MODEL_NAMES_MAP,
     is_flaky,
     require_flash_attn,

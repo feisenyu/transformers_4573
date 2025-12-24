@@ -50,7 +50,7 @@ Granite Speech is a multimodal speech-to-text model that can transcribe audio an
 ### Basic Speech Transcription
 
 ```python
-from transformers import GraniteSpeechForConditionalGeneration, GraniteSpeechProcessor
+from transformers_4573 import GraniteSpeechForConditionalGeneration, GraniteSpeechProcessor
 from datasets import load_dataset, Audio
 import torch
 
@@ -81,7 +81,7 @@ print(transcription)
 For instruction-following with audio, use the chat template with audio directly in the conversation format:
 
 ```python
-from transformers import GraniteSpeechForConditionalGeneration, GraniteSpeechProcessor
+from transformers_4573 import GraniteSpeechForConditionalGeneration, GraniteSpeechProcessor
 from datasets import load_dataset, Audio
 import torch
 
@@ -122,7 +122,7 @@ print(output_text)
 Process multiple audio files efficiently:
 
 ```python
-from transformers import GraniteSpeechForConditionalGeneration, GraniteSpeechProcessor
+from transformers_4573 import GraniteSpeechForConditionalGeneration, GraniteSpeechProcessor
 from datasets import load_dataset, Audio
 import torch
 

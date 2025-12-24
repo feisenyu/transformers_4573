@@ -95,7 +95,7 @@ class ConditionalDetrModelOutput(Seq2SeqModelOutput):
     Output type of [`ConditionalDetrForObjectDetection`].
     """
 )
-# Copied from transformers.models.detr.modeling_detr.DetrObjectDetectionOutput with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrObjectDetectionOutput with Detr->ConditionalDetr
 class ConditionalDetrObjectDetectionOutput(ModelOutput):
     r"""
     loss (`torch.FloatTensor` of shape `(1,)`, *optional*, returned when `labels` are provided)):
@@ -139,7 +139,7 @@ class ConditionalDetrObjectDetectionOutput(ModelOutput):
     Output type of [`ConditionalDetrForSegmentation`].
     """
 )
-# Copied from transformers.models.detr.modeling_detr.DetrSegmentationOutput with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrSegmentationOutput with Detr->ConditionalDetr
 class ConditionalDetrSegmentationOutput(ModelOutput):
     r"""
     loss (`torch.FloatTensor` of shape `(1,)`, *optional*, returned when `labels` are provided)):
@@ -184,7 +184,7 @@ class ConditionalDetrSegmentationOutput(ModelOutput):
     encoder_attentions: Optional[tuple[torch.FloatTensor]] = None
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->ConditionalDetr
 class ConditionalDetrFrozenBatchNorm2d(nn.Module):
     """
     BatchNorm2d where the batch statistics and the affine parameters are fixed.
@@ -224,7 +224,7 @@ class ConditionalDetrFrozenBatchNorm2d(nn.Module):
         return x * scale + bias
 
 
-# Copied from transformers.models.detr.modeling_detr.replace_batch_norm with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.replace_batch_norm with Detr->ConditionalDetr
 def replace_batch_norm(model):
     r"""
     Recursively replace all `torch.nn.BatchNorm2d` with `ConditionalDetrFrozenBatchNorm2d`.
@@ -249,7 +249,7 @@ def replace_batch_norm(model):
             replace_batch_norm(module)
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrConvEncoder with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrConvEncoder with Detr->ConditionalDetr
 class ConditionalDetrConvEncoder(nn.Module):
     """
     Convolutional backbone, using either the AutoBackbone API or one from the timm library.
@@ -322,7 +322,7 @@ class ConditionalDetrConvEncoder(nn.Module):
         return out
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrConvModel with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrConvModel with Detr->ConditionalDetr
 class ConditionalDetrConvModel(nn.Module):
     """
     This module adds 2D position embeddings to all intermediate feature maps of the convolutional encoder.
@@ -381,7 +381,7 @@ class ConditionalDetrSinePositionEmbedding(nn.Module):
         return pos
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrLearnedPositionEmbedding with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrLearnedPositionEmbedding with Detr->ConditionalDetr
 class ConditionalDetrLearnedPositionEmbedding(nn.Module):
     """
     This module learns positional embeddings up to a fixed maximum size.
@@ -405,7 +405,7 @@ class ConditionalDetrLearnedPositionEmbedding(nn.Module):
         return pos
 
 
-# Copied from transformers.models.detr.modeling_detr.build_position_encoding with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.build_position_encoding with Detr->ConditionalDetr
 def build_position_encoding(config):
     n_steps = config.d_model // 2
     if config.position_embedding_type == "sine":
@@ -442,7 +442,7 @@ def inverse_sigmoid(x, eps=1e-5):
     return torch.log(x1 / x2)
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrAttention
+# Copied from transformers_4573.models.detr.modeling_detr.DetrAttention
 class DetrAttention(nn.Module):
     """
     Multi-headed attention from 'Attention Is All You Need' paper.
@@ -697,7 +697,7 @@ class ConditionalDetrAttention(nn.Module):
         return attn_output, attn_weights_reshaped
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrEncoderLayer with DetrEncoderLayer->ConditionalDetrEncoderLayer,DetrConfig->ConditionalDetrConfig
+# Copied from transformers_4573.models.detr.modeling_detr.DetrEncoderLayer with DetrEncoderLayer->ConditionalDetrEncoderLayer,DetrConfig->ConditionalDetrConfig
 class ConditionalDetrEncoderLayer(nn.Module):
     def __init__(self, config: ConditionalDetrConfig):
         super().__init__()
@@ -940,7 +940,7 @@ class ConditionalDetrDecoderLayer(GradientCheckpointingLayer):
         return outputs
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrMLPPredictionHead with DetrMLPPredictionHead->MLP
+# Copied from transformers_4573.models.detr.modeling_detr.DetrMLPPredictionHead with DetrMLPPredictionHead->MLP
 class MLP(nn.Module):
     """
     Very simple multi-layer perceptron (MLP, also called FFN), used to predict the normalized center coordinates,
@@ -963,7 +963,7 @@ class MLP(nn.Module):
 
 
 @auto_docstring
-# Copied from transformers.models.detr.modeling_detr.DetrPreTrainedModel with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrPreTrainedModel with Detr->ConditionalDetr
 class ConditionalDetrPreTrainedModel(PreTrainedModel):
     config: ConditionalDetrConfig
     base_model_prefix = "model"
@@ -998,7 +998,7 @@ class ConditionalDetrPreTrainedModel(PreTrainedModel):
             init.zeros_(module.bias)
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrEncoder with Detr->ConditionalDetr,DETR->ConditionalDETR
+# Copied from transformers_4573.models.detr.modeling_detr.DetrEncoder with Detr->ConditionalDetr,DETR->ConditionalDETR
 class ConditionalDetrEncoder(ConditionalDetrPreTrainedModel):
     """
     Transformer encoder consisting of *config.encoder_layers* self attention layers. Each layer is a
@@ -1364,7 +1364,7 @@ class ConditionalDetrModel(ConditionalDetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModel
+        >>> from transformers_4573 import AutoImageProcessor, AutoModel
         >>> from PIL import Image
         >>> import requests
 
@@ -1472,7 +1472,7 @@ class ConditionalDetrModel(ConditionalDetrPreTrainedModel):
         )
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrMLPPredictionHead with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrMLPPredictionHead with Detr->ConditionalDetr
 class ConditionalDetrMLPPredictionHead(nn.Module):
     """
     Very simple multi-layer perceptron (MLP, also called FFN), used to predict the normalized center coordinates,
@@ -1555,7 +1555,7 @@ class ConditionalDetrForObjectDetection(ConditionalDetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, AutoModelForObjectDetection
+        >>> from transformers_4573 import AutoImageProcessor, AutoModelForObjectDetection
         >>> from PIL import Image
         >>> import requests
 
@@ -1728,12 +1728,12 @@ class ConditionalDetrForSegmentation(ConditionalDetrPreTrainedModel):
         >>> import torch
         >>> import numpy
 
-        >>> from transformers import (
+        >>> from transformers_4573 import (
         ...     AutoImageProcessor,
         ...     ConditionalDetrConfig,
         ...     ConditionalDetrForSegmentation,
         ... )
-        >>> from transformers.image_transforms import rgb_to_id
+        >>> from transformers_4573.image_transforms import rgb_to_id
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = Image.open(requests.get(url, stream=True).raw)
@@ -1880,7 +1880,7 @@ def _expand(tensor, length: int):
     return tensor.unsqueeze(1).repeat(1, int(length), 1, 1, 1).flatten(0, 1)
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrMaskHeadSmallConv with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrMaskHeadSmallConv with Detr->ConditionalDetr
 class ConditionalDetrMaskHeadSmallConv(nn.Module):
     """
     Simple convolutional head, using group norm. Upsampling is done using a FPN approach
@@ -1961,7 +1961,7 @@ class ConditionalDetrMaskHeadSmallConv(nn.Module):
         return x
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrMHAttentionMap with Detr->ConditionalDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrMHAttentionMap with Detr->ConditionalDetr
 class ConditionalDetrMHAttentionMap(nn.Module):
     """This is a 2D attention module, which only returns the attention softmax (no multiplication by value)"""
 

@@ -13,8 +13,8 @@
 # limitations under the License.
 import unittest
 
-from transformers import AutoProcessor, AutoTokenizer, Qwen2AudioProcessor
-from transformers.testing_utils import require_torch, require_torchaudio
+from transformers_4573 import AutoProcessor, AutoTokenizer, Qwen2AudioProcessor
+from transformers_4573.testing_utils import require_torch, require_torchaudio
 
 from ...test_processing_common import ProcessorTesterMixin, url_to_local_path
 

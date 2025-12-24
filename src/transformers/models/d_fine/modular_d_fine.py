@@ -930,8 +930,8 @@ class DFineForObjectDetection(RTDetrForObjectDetection):
 
         ```python
         >>> import torch
-        >>> from transformers.image_utils import load_image
-        >>> from transformers import AutoImageProcessor, DFineForObjectDetection
+        >>> from transformers_4573.image_utils import load_image
+        >>> from transformers_4573 import AutoImageProcessor, DFineForObjectDetection
 
         >>> url = "http://images.cocodataset.org/val2017/000000039769.jpg"
         >>> image = load_image(url)

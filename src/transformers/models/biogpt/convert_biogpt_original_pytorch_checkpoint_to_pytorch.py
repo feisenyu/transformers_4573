@@ -22,10 +22,10 @@ import shutil
 
 import torch
 
-from transformers import BioGptConfig, BioGptForCausalLM
-from transformers.models.biogpt.tokenization_biogpt import VOCAB_FILES_NAMES
-from transformers.tokenization_utils_base import TOKENIZER_CONFIG_FILE
-from transformers.utils import WEIGHTS_NAME, logging
+from transformers_4573 import BioGptConfig, BioGptForCausalLM
+from transformers_4573.models.biogpt.tokenization_biogpt import VOCAB_FILES_NAMES
+from transformers_4573.tokenization_utils_base import TOKENIZER_CONFIG_FILE
+from transformers_4573.utils import WEIGHTS_NAME, logging
 
 
 logging.set_verbosity_warning()

@@ -260,7 +260,7 @@ class GraniteMoeForCausalLM(MixtralForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, GraniteMoeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, GraniteMoeForCausalLM
 
         >>> model = GraniteMoeForCausalLM.from_pretrained("ibm/PowerMoE-3b")
         >>> tokenizer = AutoTokenizer.from_pretrained("ibm/PowerMoE-3b")

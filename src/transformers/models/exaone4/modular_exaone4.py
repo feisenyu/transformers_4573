@@ -21,7 +21,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.utils.generic import check_model_inputs
+from transformers_4573.utils.generic import check_model_inputs
 
 from ...cache_utils import Cache, DynamicCache
 from ...configuration_utils import PreTrainedConfig, layer_type_validation
@@ -130,7 +130,7 @@ class Exaone4Config(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Exaone4Model, Exaone4Config
+    >>> from transformers_4573 import Exaone4Model, Exaone4Config
 
     >>> # Initializing a EXAONE configuration
     >>> configuration = Exaone4Config()
@@ -424,7 +424,7 @@ class Exaone4ForCausalLM(LlamaForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoModelForCausalLM, AutoTokenizer
+        >>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
         >>> model = AutoModelForCausalLM.from_pretrained("LGAI-EXAONE/EXAONE-4.0-32B")
         >>> tokenizer = AutoTokenizer.from_pretrained("LGAI-EXAONE/EXAONE-4.0-32B")
 

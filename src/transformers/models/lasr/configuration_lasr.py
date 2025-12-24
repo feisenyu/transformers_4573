@@ -86,7 +86,7 @@ class LasrEncoderConfig(PreTrainedConfig):
 
     Example:
         ```python
-        >>> from transformers import LasrEncoderModel, LasrEncoderConfig
+        >>> from transformers_4573 import LasrEncoderModel, LasrEncoderConfig
 
         >>> # Initializing a `LasrEncoder` configuration
         >>> configuration = LasrEncoderConfig()
@@ -188,7 +188,7 @@ class LasrCTCConfig(PreTrainedConfig):
                 Padding token id. Also used as blank token id.
     Example:
         ```python
-        >>> from transformers import LasrForCTC, LasrCTCConfig
+        >>> from transformers_4573 import LasrForCTC, LasrCTCConfig
         >>> # Initializing a Lasr configuration
         >>> configuration = LasrCTCConfig()
         >>> # Initializing a model from the configuration

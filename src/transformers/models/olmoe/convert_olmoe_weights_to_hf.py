@@ -21,7 +21,7 @@ python OLMo/scripts/unshard.py /data/niklas/llm/checkpoints/olmoe-8x1b-newhp-new
 rm -rf olmoe; mkdir olmoe; python /data/niklas/transformers/src/transformers/models/olmoe/convert_olmoe_weights_to_hf.py --input_dir /data/niklas/llm/checkpoints/olmoe-8x1b-newhp-newds-final-annealFrom1200000_step23842-unsharded --tokenizer_json_path /data/niklas/llm/checkpoints/olmoe-step1200000-unsharded/tokenizer.json --output_dir olmoe
 3. Load model via:
 ```
-from transformers import OlmoeForCausalLM, AutoTokenizer
+from transformers_4573 import OlmoeForCausalLM, AutoTokenizer
 import torch
 model = OlmoeForCausalLM.from_pretrained("../transformers/olmoe", dtype=torch.bfloat16).cuda()
 model = OlmoeForCausalLM.from_pretrained("../transformers/olmoe").cuda()
@@ -47,7 +47,7 @@ import torch
 model = OLMo.from_checkpoint("/data/niklas/llm/checkpoints/olmoe-step1200000-unsharded-pt")
 model = model.cuda()
 model = model.to(torch.bfloat16)
-from transformers import AutoTokenizer
+from transformers_4573 import AutoTokenizer
 tokenizer = AutoTokenizer.from_pretrained("../transformers/olmoe")
 inputs = tokenizer("Bitcoin is", return_tensors="pt")
 inputs = {k: v.cuda() for k, v in inputs.items()}
@@ -70,8 +70,8 @@ import torch
 import yaml
 from tokenizers import Tokenizer
 
-from transformers import OlmoeConfig, OlmoeForCausalLM
-from transformers.models.gpt_neox.tokenization_gpt_neox_fast import GPTNeoXTokenizerFast
+from transformers_4573 import OlmoeConfig, OlmoeForCausalLM
+from transformers_4573.models.gpt_neox.tokenization_gpt_neox_fast import GPTNeoXTokenizerFast
 
 
 def compute_intermediate_size(n, ffn_dim_multiplier=1, multiple_of=256):

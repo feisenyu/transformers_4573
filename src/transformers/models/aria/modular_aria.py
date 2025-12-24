@@ -1413,8 +1413,8 @@ class AriaForConditionalGeneration(LlavaForConditionalGeneration):
         >>> from PIL import Image
         >>> from io import BytesIO
 
-        >>> from transformers import AutoProcessor, AutoModel
-        >>> from transformers.image_utils import load_image
+        >>> from transformers_4573 import AutoProcessor, AutoModel
+        >>> from transformers_4573.image_utils import load_image
 
         >>> # Note that passing the image urls (instead of the actual pil images) to the processor is also possible
         >>> image1 = load_image("https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg")

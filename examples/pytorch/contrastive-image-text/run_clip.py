@@ -46,7 +46,7 @@ from torchvision.transforms import CenterCrop, ConvertImageDtype, Normalize, Res
 from torchvision.transforms.functional import InterpolationMode
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoImageProcessor,
     AutoModel,
     AutoTokenizer,
@@ -55,8 +55,8 @@ from transformers import (
     TrainingArguments,
     set_seed,
 )
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 logger = logging.getLogger(__name__)

@@ -19,14 +19,14 @@ import pytest
 from packaging import version
 from parameterized import parameterized
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     require_torch,
     require_torch_accelerator,
     require_vision,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin, prepare_image_inputs
 
@@ -35,13 +35,13 @@ if is_torch_available():
     import numpy as np
     import torch
 
-    from transformers.models.superglue.modeling_superglue import SuperGlueKeypointMatchingOutput
+    from transformers_4573.models.superglue.modeling_superglue import SuperGlueKeypointMatchingOutput
 
 if is_vision_available():
-    from transformers import SuperGlueImageProcessor
+    from transformers_4573 import SuperGlueImageProcessor
 
     if is_torchvision_available():
-        from transformers import SuperGlueImageProcessorFast
+        from transformers_4573 import SuperGlueImageProcessorFast
 
 
 def random_array(size):

@@ -46,7 +46,7 @@ class ColQwen2Config(PreTrainedConfig):
     Example:
 
     ```python
-    from transformers.models.colqwen2 import ColQwen2Config, ColQwen2ForRetrieval
+    from transformers_4573.models.colqwen2 import ColQwen2Config, ColQwen2ForRetrieval
 
     config = ColQwen2Config()
     model = ColQwen2ForRetrieval(config)

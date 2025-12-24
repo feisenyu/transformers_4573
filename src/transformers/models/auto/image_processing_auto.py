@@ -316,7 +316,7 @@ def get_image_processor_config(
     image_processor_config = get_image_processor_config("FacebookAI/xlm-roberta-base")
 
     # Save a pretrained image processor locally and you can reload its config
-    from transformers import AutoImageProcessor
+    from transformers_4573 import AutoImageProcessor
 
     image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224-in21k")
     image_processor.save_pretrained("image-processor-test")
@@ -458,7 +458,7 @@ class AutoImageProcessor:
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor
+        >>> from transformers_4573 import AutoImageProcessor
 
         >>> # Download image processor from huggingface.co and cache.
         >>> image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224-in21k")

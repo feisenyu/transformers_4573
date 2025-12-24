@@ -128,7 +128,7 @@ class Gemma3nTextConfig(PreTrainedConfig):
             sparse with a sparsity factor of 0.95 and the rest are dense.
 
     ```python
-    >>> from transformers import Gemma3nTextModel, Gemma3nTextConfig
+    >>> from transformers_4573 import Gemma3nTextModel, Gemma3nTextConfig
 
     >>> # Initializing a Gemma3nText gemma3n_text-E4B style configuration
     >>> configuration = Gemma3nTextConfig()
@@ -355,7 +355,7 @@ class Gemma3nAudioConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Gemma3nAudioConfig, Gemma3nAudioEncoder
+    >>> from transformers_4573 import Gemma3nAudioConfig, Gemma3nAudioEncoder
 
     >>> # Initializing a Gemma3nAudioEncoder gemma3n_audio-E4B-style configuration
     >>> configuration = Gemma3nAudioConfig()
@@ -453,7 +453,7 @@ class Gemma3nVisionConfig(PreTrainedConfig):
 
     Example:
     ```python
-    >>> from transformers import Gemma3nVisionConfig, TimmWrapper
+    >>> from transformers_4573 import Gemma3nVisionConfig, TimmWrapper
 
     >>> # Initializing a TimmWrapper gemma3n_vision-E4B-style configuration
     >>> configuration = Gemma3nVisionConfig()
@@ -587,7 +587,7 @@ class Gemma3nConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Gemma3nForConditionalGeneration, Gemma3nConfig, Gemma3nTextConfig
+    >>> from transformers_4573 import Gemma3nForConditionalGeneration, Gemma3nConfig, Gemma3nTextConfig
 
     >>> # Initializing a MobileNet vision config, which is loaded from TIMM
     >>> vision_config = Gemma3nVisionConfig()

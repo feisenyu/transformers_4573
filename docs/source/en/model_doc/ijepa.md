@@ -42,7 +42,7 @@ The example below demonstrates how to extract image features with [`Pipeline`] o
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 feature_extractor = pipeline(
     task="image-feature-extraction",
     model="facebook/ijepa_vith14_1k",
@@ -63,7 +63,7 @@ import requests
 import torch
 from PIL import Image
 from torch.nn.functional import cosine_similarity
-from transformers import AutoModel, AutoProcessor  
+from transformers_4573 import AutoModel, AutoProcessor  
 
 url_1 = "http://images.cocodataset.org/val2017/000000039769.jpg"  
 url_2 = "http://images.cocodataset.org/val2017/000000219578.jpg"
@@ -95,7 +95,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 
 ```py
 import torch
-from transformers import BitsAndBytesConfig, AutoModel, AutoProcessor
+from transformers_4573 import BitsAndBytesConfig, AutoModel, AutoProcessor
 from datasets import load_dataset
 
 quantization_config = BitsAndBytesConfig(

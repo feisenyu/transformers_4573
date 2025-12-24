@@ -19,7 +19,7 @@ import argparse
 import safetensors
 import torch
 
-from transformers import (
+from transformers_4573 import (
     EncodecFeatureExtractor,
     MimiConfig,
     MimiModel,

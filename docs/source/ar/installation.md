@@ -69,7 +69,7 @@ pip install 'transformers[flax]'
 أخيرًا، تحقق مما إذا كان 🤗 Transformers قد تم تثبيته بشكل صحيح عن طريق تشغيل الأمر التالي. سيقوم بتنزيل نموذج مدرب مسبقًا:
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
 ```
 
 ثم قم بطباعة التسمية والنتيجة:
@@ -91,13 +91,13 @@ pip install git+https://github.com/huggingface/transformers
 تحقق مما إذا كان 🤗 Transformers قد تم تثبيته بشكل صحيح عن طريق تشغيل الأمر التالي:
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
 ```
 
 تحقق مما إذا كان 🤗 Transformers قد تم تثبيته بشكل صحيح عن طريق تشغيل الأمر التالي:
 
 ```bash
-python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
+python -c "from transformers_4573 import pipeline; print(pipeline('sentiment-analysis')('I love you'))"
 ```
 
 ## التثبيت القابل للتعديل
@@ -169,7 +169,7 @@ python examples/pytorch/translation/run_translation.py --model_name_or_path goog
 يمكنك أيضًا تجاوز تحميل نموذج من Hub من كل استدعاء [`~PreTrainedModel.from_pretrained`] باستخدام معلمة [`local_files_only`]. عندما يتم تعيينها على `True`، يتم تحميل الملفات المحلية فقط:
 
 ```py
-from transformers import T5Model
+from transformers_4573 import T5Model
 
 model = T5Model.from_pretrained("./path/to/local/directory", local_files_only=True)
 ```
@@ -190,7 +190,7 @@ model = T5Model.from_pretrained("./path/to/local/directory", local_files_only=Tr
     1. قم بتنزيل ملفاتك مسبقًا باستخدام [`PreTrainedModel.from_pretrained`]:
 
     ```py
-    >>> from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+    >>> from transformers_4573 import AutoTokenizer, AutoModelForSeq2SeqLM
 
     >>> tokenizer = AutoTokenizer.from_pretrained("bigscience/T0_3B")
     >>> model = AutoModelForSeq2SeqLM.from_pretrained("bigscience/T0_3B")
@@ -229,7 +229,7 @@ model = T5Model.from_pretrained("./path/to/local/directory", local_files_only=Tr
 بمجرد تنزيل ملفك وتخزينه مؤقتًا محليًا، حدد مساره المحلي الخاص به لتحميله واستخدامه:
 
 ```py
->>> from transformers import AutoConfig
+>>> from transformers_4573 import AutoConfig
 
 >>> config = AutoConfig.from_pretrained("./your/path/bigscience_t0/config.json")
 ```

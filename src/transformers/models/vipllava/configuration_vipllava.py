@@ -51,7 +51,7 @@ class VipLlavaConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import VipLlavaForConditionalGeneration, VipLlavaConfig, CLIPVisionConfig, LlamaConfig
+    >>> from transformers_4573 import VipLlavaForConditionalGeneration, VipLlavaConfig, CLIPVisionConfig, LlamaConfig
 
     >>> # Initializing a CLIP-vision config
     >>> vision_config = CLIPVisionConfig()

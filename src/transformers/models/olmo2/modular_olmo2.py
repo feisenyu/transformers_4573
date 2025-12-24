@@ -24,7 +24,7 @@ from typing import Optional
 import torch
 import torch.nn as nn
 
-from transformers.utils.generic import TransformersKwargs
+from transformers_4573.utils.generic import TransformersKwargs
 
 from ...cache_utils import Cache
 from ...modeling_rope_utils import RopeParameters
@@ -105,7 +105,7 @@ class Olmo2Config(OlmoConfig):
             The epsilon used by the rms normalization layers.
 
     ```python
-    >>> from transformers import Olmo2Model, Olmo2Config
+    >>> from transformers_4573 import Olmo2Model, Olmo2Config
 
     >>> # Initializing a Olmo2 7B style configuration
     >>> configuration = Olmo2Config()

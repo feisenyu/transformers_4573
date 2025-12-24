@@ -18,9 +18,9 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import AutoTokenizer, BitsAndBytesConfig, is_torch_available, set_seed
-from transformers.generation.configuration_utils import GenerationConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, BitsAndBytesConfig, is_torch_available, set_seed
+from transformers_4573.generation.configuration_utils import GenerationConfig
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_bitsandbytes,
@@ -34,7 +34,7 @@ from transformers.testing_utils import (
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Qwen3ForCausalLM,
         Qwen3Model,
     )
@@ -196,7 +196,7 @@ class Qwen3IntegrationTest(unittest.TestCase):
         if version.parse(torch.__version__) < version.parse("2.4.0"):
             self.skipTest(reason="This test requires torch >= 2.4 to run.")
 
-        from transformers.integrations.executorch import (
+        from transformers_4573.integrations.executorch import (
             TorchExportableModuleWithStaticCache,
         )
 
@@ -252,7 +252,7 @@ class Qwen3IntegrationTest(unittest.TestCase):
         max_new_tokens = max_generation_length - prompt_token_ids.shape[-1]
 
         # Static Cache + export
-        from transformers.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
+        from transformers_4573.integrations.executorch import TorchExportableModuleForDecoderOnlyLM
 
         exportable_module = TorchExportableModuleForDecoderOnlyLM(model)
         exported_program = exportable_module.export(

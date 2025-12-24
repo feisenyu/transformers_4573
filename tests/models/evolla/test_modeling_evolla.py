@@ -19,8 +19,8 @@ from functools import cached_property
 
 from parameterized import parameterized
 
-from transformers import BitsAndBytesConfig, EvollaConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import BitsAndBytesConfig, EvollaConfig, is_torch_available
+from transformers_4573.testing_utils import (
     TestCasePlus,
     require_bitsandbytes,
     require_torch,
@@ -41,7 +41,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import EvollaForProteinText2Text, EvollaModel, EvollaProcessor
+    from transformers_4573 import EvollaForProteinText2Text, EvollaModel, EvollaProcessor
 
 
 class EvollaModelTester:

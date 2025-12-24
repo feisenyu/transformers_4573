@@ -132,7 +132,7 @@ class Ovis2Config(PreTrainedConfig):
             Dimensionality of the encoder layers and the pooler layer.
 
     ```python
-    >>> from transformers import Ovis2ForConditionalGeneration, Ovis2Config
+    >>> from transformers_4573 import Ovis2ForConditionalGeneration, Ovis2Config
 
     >>> # Initializing a Ovis2 style configuration
     >>> configuration = Ovis2Config()

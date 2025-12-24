@@ -40,17 +40,17 @@ from datasets import load_dataset
 from torchmetrics.detection.mean_ap import MeanAveragePrecision
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     AutoImageProcessor,
     AutoModelForUniversalSegmentation,
     HfArgumentParser,
     Trainer,
     TrainingArguments,
 )
-from transformers.image_processing_utils import BatchFeature
-from transformers.trainer import EvalPrediction
-from transformers.utils import check_min_version
-from transformers.utils.versions import require_version
+from transformers_4573.image_processing_utils import BatchFeature
+from transformers_4573.trainer import EvalPrediction
+from transformers_4573.utils import check_min_version
+from transformers_4573.utils.versions import require_version
 
 
 logger = logging.getLogger(__name__)

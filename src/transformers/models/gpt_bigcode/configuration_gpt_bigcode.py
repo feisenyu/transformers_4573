@@ -73,7 +73,7 @@ class GPTBigCodeConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import GPTBigCodeConfig, GPTBigCodeModel
+    >>> from transformers_4573 import GPTBigCodeConfig, GPTBigCodeModel
 
     >>> # Initializing a GPTBigCode configuration
     >>> configuration = GPTBigCodeConfig()

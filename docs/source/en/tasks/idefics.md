@@ -73,7 +73,7 @@ preparing text and image inputs for the model.
 ```py
 >>> import torch
 
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor
 
 >>> processor = AutoProcessor.from_pretrained(checkpoint)
 
@@ -91,7 +91,7 @@ on the fly while loading.
 
 ```py
 >>> import torch
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor, BitsAndBytesConfig
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor, BitsAndBytesConfig
 
 >>> quantization_config = BitsAndBytesConfig(
 ...     load_in_4bit=True,
@@ -387,7 +387,7 @@ The use and prompting for the conversational use is very similar to using the ba
 
 ```py
 >>> import torch
->>> from transformers import IdeficsForVisionText2Text, AutoProcessor
+>>> from transformers_4573 import IdeficsForVisionText2Text, AutoProcessor
 
 >>> checkpoint = "HuggingFaceM4/idefics-9b-instruct"
 >>> model = IdeficsForVisionText2Text.from_pretrained(checkpoint, dtype=torch.bfloat16, device_map="auto")

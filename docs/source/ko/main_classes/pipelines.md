@@ -58,8 +58,8 @@ rendered properly in your Markdown viewer.
 
 ```python
 import datasets
-from transformers import pipeline
-from transformers.pipelines.pt_utils import KeyDataset
+from transformers_4573 import pipeline
+from transformers_4573.pipelines.pt_utils import KeyDataset
 from tqdm.auto import tqdm
 
 pipe = pipeline("automatic-speech-recognition", model="facebook/wav2vec2-base-960h", device=0)
@@ -77,7 +77,7 @@ for out in tqdm(pipe(KeyDataset(dataset, "file"))):
 더 편리하게 사용하려면 제너레이터도 가능합니다.
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("text-classification")
 
@@ -104,8 +104,8 @@ for out in pipe(data()):
 모든 파이프라인은 배치 처리를 지원합니다. 리스트, `Dataset`, `Generator` 전달 시 스트리밍 기능을 사용할 때 작동합니다.
 
 ```python
-from transformers import pipeline
-from transformers.pipelines.pt_utils import KeyDataset
+from transformers_4573 import pipeline
+from transformers_4573.pipelines.pt_utils import KeyDataset
 import datasets
 
 dataset = datasets.load_dataset("imdb", name="plain_text", split="unsupervised")
@@ -125,7 +125,7 @@ for out in pipe(KeyDataset(dataset, "text"), batch_size=8, truncation="only_firs
 </Tip>
 
 ```python
-from transformers import pipeline
+from transformers_4573 import pipeline
 from torch.utils.data import Dataset
 from tqdm.auto import tqdm
 

@@ -18,8 +18,8 @@ from unittest import skip
 
 import accelerate
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, HqqConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, HqqConfig
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_accelerate,
     require_deterministic_for_xpu,
@@ -29,7 +29,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import is_hqq_available, is_torch_available
+from transformers_4573.utils import is_hqq_available, is_torch_available
 
 
 if is_torch_available():

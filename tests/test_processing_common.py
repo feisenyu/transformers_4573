@@ -26,18 +26,18 @@ import numpy as np
 from huggingface_hub import hf_hub_download
 from parameterized import parameterized
 
-from transformers.processing_utils import (
+from transformers_4573.processing_utils import (
     MODALITY_TO_AUTOPROCESSOR_MAPPING,
     Unpack,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     check_json_file_has_correct_format,
     require_av,
     require_librosa,
     require_torch,
     require_vision,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -212,7 +212,7 @@ class ProcessorTesterMixin:
                 f"    @classmethod\n"
                 f"    def _setup_{attribute}(cls):\n"
                 f"        # Create your custom {component_type}\n"
-                f"        from transformers import {component_class}\n"
+                f"        from transformers_4573 import {component_class}\n"
                 f"        component = {component_class}(...)\n"
                 f"        return component\n"
             ) from e
@@ -230,7 +230,7 @@ class ProcessorTesterMixin:
         import inspect
         import re
 
-        from transformers.models.auto.configuration_auto import (
+        from transformers_4573.models.auto.configuration_auto import (
             CONFIG_MAPPING,
             CONFIG_MAPPING_NAMES,
             SPECIAL_MODEL_TYPE_TO_MODULE_NAME,
@@ -276,19 +276,19 @@ class ProcessorTesterMixin:
 
         # Get the appropriate Auto mapping for this component type
         if mapping_name == "tokenizer":
-            from transformers.models.auto.tokenization_auto import TOKENIZER_MAPPING
+            from transformers_4573.models.auto.tokenization_auto import TOKENIZER_MAPPING
 
             component_class = TOKENIZER_MAPPING.get(config_class, None)
         elif mapping_name == "image_processor":
-            from transformers.models.auto.image_processing_auto import IMAGE_PROCESSOR_MAPPING
+            from transformers_4573.models.auto.image_processing_auto import IMAGE_PROCESSOR_MAPPING
 
             component_class = IMAGE_PROCESSOR_MAPPING.get(config_class, None)
         elif mapping_name == "feature_extractor":
-            from transformers.models.auto.feature_extraction_auto import FEATURE_EXTRACTOR_MAPPING
+            from transformers_4573.models.auto.feature_extraction_auto import FEATURE_EXTRACTOR_MAPPING
 
             component_class = FEATURE_EXTRACTOR_MAPPING.get(config_class, None)
         elif mapping_name == "video_processor":
-            from transformers.models.auto.video_processing_auto import VIDEO_PROCESSOR_MAPPING
+            from transformers_4573.models.auto.video_processing_auto import VIDEO_PROCESSOR_MAPPING
 
             component_class = VIDEO_PROCESSOR_MAPPING.get(config_class, None)
         else:

@@ -17,16 +17,16 @@ import os
 import unittest
 from functools import cached_property
 
-from transformers.models.layoutlmv3 import LayoutLMv3Processor, LayoutLMv3Tokenizer, LayoutLMv3TokenizerFast
-from transformers.models.layoutlmv3.tokenization_layoutlmv3 import VOCAB_FILES_NAMES
-from transformers.testing_utils import require_pytesseract, require_tokenizers, require_torch, slow
-from transformers.utils import is_pytesseract_available
+from transformers_4573.models.layoutlmv3 import LayoutLMv3Processor, LayoutLMv3Tokenizer, LayoutLMv3TokenizerFast
+from transformers_4573.models.layoutlmv3.tokenization_layoutlmv3 import VOCAB_FILES_NAMES
+from transformers_4573.testing_utils import require_pytesseract, require_tokenizers, require_torch, slow
+from transformers_4573.utils import is_pytesseract_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
 
 if is_pytesseract_available():
-    from transformers import LayoutLMv3ImageProcessor
+    from transformers_4573 import LayoutLMv3ImageProcessor
 
 
 @require_pytesseract

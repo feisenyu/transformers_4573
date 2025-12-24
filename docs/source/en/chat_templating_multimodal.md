@@ -49,7 +49,7 @@ Create an [`ImageTextToTextPipeline`] and pass the chat to it. For large models,
 
 ```python
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline("image-text-to-text", model="Qwen/Qwen2.5-VL-3B-Instruct", device_map="auto", dtype="auto")
 out = pipe(text=messages, max_new_tokens=128)
@@ -68,7 +68,7 @@ Like [text-only models](./chat_templating), use the [`~ProcessorMixin.apply_chat
 This method handles the tokenization and formatting of the chat messages, including images and other media types. The resulting inputs are passed to the model for generation.
 
 ```python
-from transformers import AutoProcessor, AutoModelForImageTextToText
+from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
 
 model = AutoModelForImageTextToText.from_pretrained("Qwen/Qwen2.5-VL-3B-Instruct", device_map="auto", torch_dtype="auto")
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-3B-Instruct")
@@ -121,7 +121,7 @@ Some vision models also support video inputs. The message format is very similar
 > Loading a video from `"url"` is only supported by the PyAV or Decord backends.
 
 ```python
-from transformers import AutoProcessor, LlavaOnevisionForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaOnevisionForConditionalGeneration
 
 model_id = "llava-hf/llava-onevision-qwen2-0.5b-ov-hf"
 model = LlavaOnevisionForConditionalGeneration.from_pretrained(model_id)
@@ -169,7 +169,7 @@ You can also use existing (`"load_video()"`) function to load a video, edit the 
 ```python
 
 # Make sure a video backend library (pyav, decord, or torchvision) is available.
-from transformers.video_utils import load_video
+from transformers_4573.video_utils import load_video
 
 # load a video file in memory for testing
 video_object2, _ = load_video(

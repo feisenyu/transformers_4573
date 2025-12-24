@@ -144,7 +144,7 @@ uv pip install '.[torch]'
 实例化一个用于文本生成的 pipeline，指定使用的模型。模型会被下载并缓存，方便复用。最后传入文本作为提示：
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
 pipeline("the secret to baking a really good cake is ")
@@ -161,7 +161,7 @@ pipeline("the secret to baking a really good cake is ")
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 chat = [
     {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
@@ -179,7 +179,7 @@ print(response[0]["generated_text"][-1]["content"])
 <summary>自动语音识别</summary>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
 pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
@@ -196,7 +196,7 @@ pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac
 </h3>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="image-classification", model="facebook/dinov2-small-imagenet1k-1-layer")
 pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
@@ -219,7 +219,7 @@ pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.pn
 </h3>
 
 ```py
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipeline = pipeline(task="visual-question-answering", model="Salesforce/blip-vqa-base")
 pipeline(

@@ -21,8 +21,8 @@ from typing import Optional
 import torch
 from packaging import version
 
-from transformers.utils import logging
-from transformers.utils.import_utils import is_torch_available, is_torchao_available
+from transformers_4573.utils import logging
+from transformers_4573.utils.import_utils import is_torch_available, is_torchao_available
 
 
 if is_torch_available():

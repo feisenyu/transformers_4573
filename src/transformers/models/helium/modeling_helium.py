@@ -468,7 +468,7 @@ class HeliumForCausalLM(HeliumPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, HeliumForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, HeliumForCausalLM
 
         >>> model = HeliumForCausalLM.from_pretrained("google/helium-7b")
         >>> tokenizer = AutoTokenizer.from_pretrained("google/helium-7b")

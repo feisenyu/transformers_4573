@@ -376,7 +376,7 @@ class MixtralForCausalLM(MistralForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, MixtralForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, MixtralForCausalLM
 
         >>> model = MixtralForCausalLM.from_pretrained("mistralai/Mixtral-8x7B-v0.1")
         >>> tokenizer = AutoTokenizer.from_pretrained("mistralai/Mixtral-8x7B-v0.1")

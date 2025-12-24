@@ -208,7 +208,7 @@ class LlavaNextImageProcessor(BaseImageProcessor):
         self.do_pad = do_pad
         self.do_convert_rgb = do_convert_rgb
 
-    # Copied from transformers.models.clip.image_processing_clip.CLIPImageProcessor.resize with CLIP->LLaVa
+    # Copied from transformers_4573.models.clip.image_processing_clip.CLIPImageProcessor.resize with CLIP->LLaVa
     def resize(
         self,
         image: np.ndarray,

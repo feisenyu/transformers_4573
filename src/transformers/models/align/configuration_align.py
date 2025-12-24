@@ -69,7 +69,7 @@ class AlignTextConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import AlignTextConfig, AlignTextModel
+    >>> from transformers_4573 import AlignTextConfig, AlignTextModel
 
     >>> # Initializing a AlignTextConfig with kakaobrain/align-base style configuration
     >>> configuration = AlignTextConfig()
@@ -178,7 +178,7 @@ class AlignVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import AlignVisionConfig, AlignVisionModel
+    >>> from transformers_4573 import AlignVisionConfig, AlignVisionModel
 
     >>> # Initializing a AlignVisionConfig with kakaobrain/align-base style configuration
     >>> configuration = AlignVisionConfig()
@@ -269,7 +269,7 @@ class AlignConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import AlignConfig, AlignModel
+    >>> from transformers_4573 import AlignConfig, AlignModel
 
     >>> # Initializing a AlignConfig with kakaobrain/align-base style configuration
     >>> configuration = AlignConfig()
@@ -281,7 +281,7 @@ class AlignConfig(PreTrainedConfig):
     >>> configuration = model.config
 
     >>> # We can also initialize a AlignConfig from a AlignTextConfig and a AlignVisionConfig
-    >>> from transformers import AlignTextConfig, AlignVisionConfig
+    >>> from transformers_4573 import AlignTextConfig, AlignVisionConfig
 
     >>> # Initializing ALIGN Text and Vision configurations
     >>> config_text = AlignTextConfig()

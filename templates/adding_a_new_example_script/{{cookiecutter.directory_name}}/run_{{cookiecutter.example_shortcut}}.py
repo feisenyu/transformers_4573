@@ -32,7 +32,7 @@ import torch
 from datasets import load_dataset
 
 import transformers
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     MODEL_MAPPING,
     AutoConfig,
@@ -45,7 +45,7 @@ from transformers import (
     default_data_collator,
     set_seed,
 )
-from transformers.trainer_utils import get_last_checkpoint
+from transformers_4573.trainer_utils import get_last_checkpoint
 
 
 logger = logging.getLogger(__name__)
@@ -508,7 +508,7 @@ from tqdm.auto import tqdm
 
 import transformers
 from accelerate import Accelerator
-from transformers import (
+from transformers_4573 import (
     CONFIG_MAPPING,
     MODEL_MAPPING,
     AutoConfig,

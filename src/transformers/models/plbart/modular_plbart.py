@@ -281,7 +281,7 @@ class PLBartForConditionalGeneration(PLBartPreTrainedModel, GenerationMixin):
         Example Mask-filling:
 
         ```python
-        >>> from transformers import AutoTokenizer, PLBartForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, PLBartForConditionalGeneration
 
         >>> model = PLBartForConditionalGeneration.from_pretrained("uclanlp/plbart-base")
         >>> tokenizer = AutoTokenizer.from_pretrained("uclanlp/plbart-base")
@@ -394,7 +394,7 @@ class PLBartForCausalLM(BartForCausalLM):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, PLBartForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, PLBartForCausalLM
 
         >>> tokenizer = AutoTokenizer.from_pretrained("uclanlp/plbart-base")
         >>> model = PLBartForCausalLM.from_pretrained("uclanlp/plbart-base", add_cross_attention=False)

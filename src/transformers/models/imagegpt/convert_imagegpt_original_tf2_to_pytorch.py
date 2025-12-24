@@ -19,8 +19,8 @@ import os
 
 import torch
 
-from transformers import ImageGPTConfig, ImageGPTForCausalLM
-from transformers.utils import CONFIG_NAME, WEIGHTS_NAME, logging
+from transformers_4573 import ImageGPTConfig, ImageGPTForCausalLM
+from transformers_4573.utils import CONFIG_NAME, WEIGHTS_NAME, logging
 
 
 logging.set_verbosity_info()

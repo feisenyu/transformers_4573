@@ -187,7 +187,7 @@ Returns:
 Example:
     ```python
     >>> import torch
-    >>> from transformers import WhisperModel, WhisperFeatureExtractor
+    >>> from transformers_4573 import WhisperModel, WhisperFeatureExtractor
     >>> from datasets import load_dataset
 
     >>> model = WhisperModel.from_pretrained("openai/whisper-base")
@@ -471,7 +471,7 @@ def test_integration_foo():
 - 利用可能な GPU の数:
 
 ```python
-from transformers.testing_utils import get_gpu_count
+from transformers_4573.testing_utils import get_gpu_count
 
 n_gpu = get_gpu_count()  # works with torch and tf
 ```
@@ -691,7 +691,7 @@ pytest test_this2.py::test_floor[negative--1.5--2.0] test_this2.py::test_floor[i
 これらを使用し始めるには、テストが `transformers.test_utils.TestCasePlus` のサブクラスに存在することを確認するだけです。例：
 
 ```python
-from transformers.testing_utils import TestCasePlus
+from transformers_4573.testing_utils import TestCasePlus
 
 
 class PathExampleTest(TestCasePlus):
@@ -702,7 +702,7 @@ class PathExampleTest(TestCasePlus):
 もし、`pathlib` を介してパスを操作する必要がない場合、または単に文字列としてパスが必要な場合は、`pathlib` オブジェクトに `str()` を呼び出すか、`_str` で終わるアクセサを使用できます。例：
 
 ```python
-from transformers.testing_utils import TestCasePlus
+from transformers_4573.testing_utils import TestCasePlus
 
 
 class PathExampleTest(TestCasePlus):
@@ -722,7 +722,7 @@ class PathExampleTest(TestCasePlus):
 
 
 ```python
-from transformers.testing_utils import TestCasePlus
+from transformers_4573.testing_utils import TestCasePlus
 
 
 class ExamplesTests(TestCasePlus):
@@ -777,7 +777,7 @@ def test_whatever(self):
 
 ```python
 import os
-from transformers.testing_utils import ExtendSysPath
+from transformers_4573.testing_utils import ExtendSysPath
 
 bindir = os.path.abspath(os.path.dirname(__file__))
 with ExtendSysPath(f"{bindir}/.."):
@@ -881,7 +881,7 @@ class TestClass():
 
 
 ```python no-style
-from transformers.testing_utils import slow
+from transformers_4573.testing_utils import slow
 @slow
 def test_integration_foo():
 ```
@@ -1008,7 +1008,7 @@ stdout をキャプチャする際の重要な潜在的な問題は、通常の 
 
 
 ```python
-from transformers.testing_utils import CaptureStdout
+from transformers_4573.testing_utils import CaptureStdout
 
 with CaptureStdout() as cs:
     function_that_writes_to_stdout()
@@ -1018,7 +1018,7 @@ print(cs.out)
 完全なテスト例は次のとおりです。
 
 ```python
-from transformers.testing_utils import CaptureStdout
+from transformers_4573.testing_utils import CaptureStdout
 
 msg = "Secret message\r"
 final = "Hello World"
@@ -1030,7 +1030,7 @@ assert cs.out == final + "\n", f"captured: {cs.out}, expecting {final}"
 `stderr` をキャプチャしたい場合は、代わりに `CaptureStderr` クラスを使用してください。
 
 ```python
-from transformers.testing_utils import CaptureStderr
+from transformers_4573.testing_utils import CaptureStderr
 
 with CaptureStderr() as cs:
     function_that_writes_to_stderr()
@@ -1040,7 +1040,7 @@ print(cs.err)
 両方のストリームを一度にキャプチャする必要がある場合は、親の `CaptureStd` クラスを使用します。
 
 ```python
-from transformers.testing_utils import CaptureStd
+from transformers_4573.testing_utils import CaptureStd
 
 with CaptureStd() as cs:
     function_that_writes_to_stdout_and_stderr()
@@ -1056,8 +1056,8 @@ print(cs.err, cs.out)
 ロガーの出力を検証する必要がある場合は、`CaptureLogger`を使用できます。
 
 ```python
-from transformers import logging
-from transformers.testing_utils import CaptureLogger
+from transformers_4573 import logging
+from transformers_4573.testing_utils import CaptureLogger
 
 msg = "Testing 1, 2, 3"
 logging.set_verbosity_info()
@@ -1073,7 +1073,7 @@ assert cl.out, msg + "\n"
 `transformers.testing_utils.mockenv`
 
 ```python
-from transformers.testing_utils import mockenv
+from transformers_4573.testing_utils import mockenv
 
 
 class HfArgumentParserTest(unittest.TestCase):
@@ -1086,7 +1086,7 @@ class HfArgumentParserTest(unittest.TestCase):
 複数のローカル パス。ヘルパー クラス `transformers.test_utils.TestCasePlus` が役に立ちます。
 
 ```python
-from transformers.testing_utils import TestCasePlus
+from transformers_4573.testing_utils import TestCasePlus
 
 
 class EnvExampleTest(TestCasePlus):

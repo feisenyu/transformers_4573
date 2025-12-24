@@ -20,8 +20,8 @@ from functools import cached_property
 
 import timeout_decorator  # noqa
 
-from transformers import MvpConfig, is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import MvpConfig, is_torch_available
+from transformers_4573.testing_utils import (
     require_sentencepiece,
     require_tokenizers,
     require_torch,
@@ -39,7 +39,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         MvpForCausalLM,
         MvpForConditionalGeneration,
         MvpForQuestionAnswering,
@@ -47,7 +47,7 @@ if is_torch_available():
         MvpModel,
         MvpTokenizer,
     )
-    from transformers.models.mvp.modeling_mvp import MvpDecoder, MvpEncoder, shift_tokens_right
+    from transformers_4573.models.mvp.modeling_mvp import MvpDecoder, MvpEncoder, shift_tokens_right
 
 
 def prepare_mvp_inputs_dict(

@@ -47,7 +47,7 @@ from .configuration_mvp import MvpConfig
 logger = logging.get_logger(__name__)
 
 
-# Copied from transformers.models.bart.modeling_bart.shift_tokens_right
+# Copied from transformers_4573.models.bart.modeling_bart.shift_tokens_right
 def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start_token_id: int):
     """
     Shift input ids one token to the right.
@@ -64,7 +64,7 @@ def shift_tokens_right(input_ids: torch.Tensor, pad_token_id: int, decoder_start
     return shifted_input_ids
 
 
-# Copied from transformers.models.bart.modeling_bart.BartLearnedPositionalEmbedding with Bart->Mvp
+# Copied from transformers_4573.models.bart.modeling_bart.BartLearnedPositionalEmbedding with Bart->Mvp
 class MvpLearnedPositionalEmbedding(nn.Embedding):
     """
     This module learns positional embeddings up to a fixed maximum size.
@@ -414,7 +414,7 @@ class MvpDecoderLayer(GradientCheckpointingLayer):
         return outputs
 
 
-# Copied from transformers.models.bart.modeling_bart.BartClassificationHead with Bart->MVP
+# Copied from transformers_4573.models.bart.modeling_bart.BartClassificationHead with Bart->MVP
 class MvpClassificationHead(nn.Module):
     """Head for sentence-level classification tasks."""
 
@@ -1108,7 +1108,7 @@ class MvpForConditionalGeneration(MvpPreTrainedModel, GenerationMixin):
         Fine-tuning a model
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, MvpForConditionalGeneration
+        >>> from transformers_4573 import AutoTokenizer, MvpForConditionalGeneration
 
         >>> tokenizer = AutoTokenizer.from_pretrained("RUCAIBox/mvp")
         >>> model = MvpForConditionalGeneration.from_pretrained("RUCAIBox/mvp")
@@ -1256,7 +1256,7 @@ class MvpForSequenceClassification(MvpPreTrainedModel):
         Fine-tuning a model on `num_labels` classes
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, MvpForSequenceClassification
+        >>> from transformers_4573 import AutoTokenizer, MvpForSequenceClassification
 
         >>> num_labels = 2  # for example, this is a binary classification task
         >>> tokenizer = AutoTokenizer.from_pretrained("RUCAIBox/mvp")
@@ -1414,7 +1414,7 @@ class MvpForQuestionAnswering(MvpPreTrainedModel):
         using `BartForConditionalGeneration`
         ```python
         >>> import torch
-        >>> from transformers import AutoTokenizer, MvpForQuestionAnswering
+        >>> from transformers_4573 import AutoTokenizer, MvpForQuestionAnswering
 
         >>> tokenizer = AutoTokenizer.from_pretrained("RUCAIBox/mvp")
         >>> model = MvpForQuestionAnswering.from_pretrained("RUCAIBox/mvp")
@@ -1505,7 +1505,7 @@ class MvpForQuestionAnswering(MvpPreTrainedModel):
         )
 
 
-# Copied from transformers.models.bart.modeling_bart.BartDecoderWrapper with Bart->Mvp
+# Copied from transformers_4573.models.bart.modeling_bart.BartDecoderWrapper with Bart->Mvp
 class MvpDecoderWrapper(MvpPreTrainedModel):
     """
     This wrapper class is a helper class to correctly load pretrained checkpoints when the causal language model is
@@ -1572,7 +1572,7 @@ class MvpForCausalLM(MvpPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, MvpForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, MvpForCausalLM
 
         >>> tokenizer = AutoTokenizer.from_pretrained("RUCAIBox/mvp")
         >>> model = MvpForCausalLM.from_pretrained("RUCAIBox/mvp", add_cross_attention=False)

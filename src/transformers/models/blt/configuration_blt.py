@@ -289,7 +289,7 @@ class BltConfig(PreTrainedConfig):
             with longer `max_position_embeddings`.
 
     ```python
-    >>> from transformers import BltModel, BltConfig
+    >>> from transformers_4573 import BltModel, BltConfig
 
     >>> # Initializing a Blt configuration
     >>> configuration = BltConfig()

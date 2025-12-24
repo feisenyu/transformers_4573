@@ -226,7 +226,7 @@ class XcodecEuclideanCodebook(nn.Module):
         self.register_buffer("embed", embed)
         self.register_buffer("embed_avg", embed.clone())
 
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecEuclideanCodebook.quantize
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecEuclideanCodebook.quantize
     def quantize(self, hidden_states):
         embed = self.embed.t()
         scaled_states = hidden_states.pow(2).sum(1, keepdim=True)
@@ -255,13 +255,13 @@ class XcodecVectorQuantization(nn.Module):
         super().__init__()
         self.codebook = XcodecEuclideanCodebook(config)
 
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecVectorQuantization.encode
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecVectorQuantization.encode
     def encode(self, hidden_states):
         hidden_states = hidden_states.permute(0, 2, 1)
         embed_in = self.codebook.encode(hidden_states)
         return embed_in
 
-    # Copied from transformers.models.encodec.modeling_encodec.EncodecVectorQuantization.decode
+    # Copied from transformers_4573.models.encodec.modeling_encodec.EncodecVectorQuantization.decode
     def decode(self, embed_ind):
         quantize = self.codebook.decode(embed_ind)
         quantize = quantize.permute(0, 2, 1)
@@ -592,7 +592,7 @@ class XcodecModel(XcodecPreTrainedModel):
 
         ```python
         >>> from datasets import load_dataset
-        >>> from transformers import AutoFeatureExtractor, XcodecModel
+        >>> from transformers_4573 import AutoFeatureExtractor, XcodecModel
 
         >>> model_id = "hf-audio/xcodec-hubert-librispeech"
         >>> model = XcodecModel.from_pretrained(model_id)

@@ -43,7 +43,7 @@ import re
 import subprocess
 from collections import OrderedDict
 
-from transformers.utils import direct_transformers_import, logging
+from transformers_4573.utils import direct_transformers_import, logging
 
 
 logger = logging.get_logger(__name__)

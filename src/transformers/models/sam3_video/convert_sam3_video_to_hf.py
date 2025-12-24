@@ -25,16 +25,16 @@ from typing import Optional
 import regex as re
 import torch
 
-from transformers import CLIPTokenizerFast
-from transformers.models.sam2_video.video_processing_sam2_video import Sam2VideoVideoProcessor
-from transformers.models.sam3.image_processing_sam3_fast import Sam3ImageProcessorFast
-from transformers.models.sam3.modeling_sam3 import Sam3Model
-from transformers.models.sam3_tracker.modeling_sam3_tracker import Sam3TrackerModel
-from transformers.models.sam3_tracker_video.modeling_sam3_tracker_video import Sam3TrackerVideoModel
-from transformers.models.sam3_video.configuration_sam3_video import Sam3VideoConfig
-from transformers.models.sam3_video.modeling_sam3_video import Sam3VideoModel
-from transformers.models.sam3_video.processing_sam3_video import Sam3VideoProcessor
-from transformers.utils import logging
+from transformers_4573 import CLIPTokenizerFast
+from transformers_4573.models.sam2_video.video_processing_sam2_video import Sam2VideoVideoProcessor
+from transformers_4573.models.sam3.image_processing_sam3_fast import Sam3ImageProcessorFast
+from transformers_4573.models.sam3.modeling_sam3 import Sam3Model
+from transformers_4573.models.sam3_tracker.modeling_sam3_tracker import Sam3TrackerModel
+from transformers_4573.models.sam3_tracker_video.modeling_sam3_tracker_video import Sam3TrackerVideoModel
+from transformers_4573.models.sam3_video.configuration_sam3_video import Sam3VideoConfig
+from transformers_4573.models.sam3_video.modeling_sam3_video import Sam3VideoModel
+from transformers_4573.models.sam3_video.processing_sam3_video import Sam3VideoProcessor
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()
@@ -737,7 +737,7 @@ def convert_sam3_checkpoint(
     print("=" * 80)
     print(f"Output directory: {output_path}")
     print("\nTo test the model, you can run:")
-    print(">>> from transformers import Sam3Model")
+    print(">>> from transformers_4573 import Sam3Model")
     print(f">>> model = Sam3Model.from_pretrained('{output_path}')")
     print("=" * 80)
 

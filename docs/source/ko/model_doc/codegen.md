@@ -47,7 +47,7 @@ CodeGen 모델은 프로그램 합성(program synthesis)을 위한 자기회귀(
 ## 사용 예시[[Usage example]]
 
 ```python
->>> from transformers import AutoModelForCausalLM, AutoTokenizer
+>>> from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 >>> checkpoint = "Salesforce/codegen-350M-mono"
 >>> model = AutoModelForCausalLM.from_pretrained(checkpoint)

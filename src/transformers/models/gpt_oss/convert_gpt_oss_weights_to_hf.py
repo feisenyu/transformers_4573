@@ -24,13 +24,13 @@ import tiktoken
 import torch
 from safetensors.torch import load_file as safe_load
 
-from transformers import (
+from transformers_4573 import (
     GenerationConfig,
     GptOssConfig,
     GptOssForCausalLM,
     PreTrainedTokenizerFast,
 )
-from transformers.convert_slow_tokenizer import TikTokenConverter
+from transformers_4573.convert_slow_tokenizer import TikTokenConverter
 
 
 # fmt: off

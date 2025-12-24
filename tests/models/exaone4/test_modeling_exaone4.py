@@ -19,12 +19,12 @@ import unittest
 import pytest
 from packaging import version
 
-from transformers import (
+from transformers_4573 import (
     AutoTokenizer,
     GenerationConfig,
     is_torch_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     cleanup,
     require_flash_attn,
     require_torch,
@@ -39,7 +39,7 @@ from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         Exaone4ForCausalLM,
         Exaone4Model,
     )
@@ -156,7 +156,7 @@ class Exaone4IntegrationTest(unittest.TestCase):
         if version.parse(torch.__version__) < version.parse("2.4.0"):
             self.skipTest(reason="This test requires torch >= 2.4 to run.")
 
-        from transformers.integrations.executorch import (
+        from transformers_4573.integrations.executorch import (
             TorchExportableModuleWithStaticCache,
             convert_and_export_with_cache,
         )

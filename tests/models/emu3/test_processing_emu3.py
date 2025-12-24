@@ -17,7 +17,7 @@ import unittest
 
 import numpy as np
 
-from transformers import Emu3Processor
+from transformers_4573 import Emu3Processor
 
 from ...test_processing_common import ProcessorTesterMixin
 

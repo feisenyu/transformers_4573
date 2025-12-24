@@ -24,8 +24,8 @@ import torch
 from huggingface_hub import HfApi
 from PIL import Image
 
-from transformers import VJEPA2Config, VJEPA2Model, VJEPA2VideoProcessor
-from transformers.models.vjepa2.modeling_vjepa2 import apply_masks
+from transformers_4573 import VJEPA2Config, VJEPA2Model, VJEPA2VideoProcessor
+from transformers_4573.models.vjepa2.modeling_vjepa2 import apply_masks
 
 
 HUB_REPO = "https://github.com/facebookresearch/vjepa2"

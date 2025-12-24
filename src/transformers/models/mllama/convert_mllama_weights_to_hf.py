@@ -23,16 +23,16 @@ import regex as re
 import torch
 import torch.nn.functional as F
 
-from transformers import (
+from transformers_4573 import (
     GenerationConfig,
     MllamaConfig,
     MllamaForConditionalGeneration,
     MllamaImageProcessor,
     PreTrainedTokenizerFast,
 )
-from transformers.convert_slow_tokenizer import TikTokenConverter
-from transformers.models.mllama.configuration_mllama import MllamaTextConfig, MllamaVisionConfig
-from transformers.models.mllama.image_processing_mllama import get_all_supported_aspect_ratios
+from transformers_4573.convert_slow_tokenizer import TikTokenConverter
+from transformers_4573.models.mllama.configuration_mllama import MllamaTextConfig, MllamaVisionConfig
+from transformers_4573.models.mllama.image_processing_mllama import get_all_supported_aspect_ratios
 
 
 # fmt: off

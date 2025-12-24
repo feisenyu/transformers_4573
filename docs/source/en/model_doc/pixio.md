@@ -33,7 +33,7 @@ The example below demonstrates how to obtain an image embedding with the [`AutoM
 
 ```py
 import requests
-from transformers import AutoImageProcessor, AutoModel
+from transformers_4573 import AutoImageProcessor, AutoModel
 from PIL import Image
 
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"
@@ -58,7 +58,7 @@ features = outputs.hidden_states[-1] # class tokens + patch tokens before last L
     useful for dense tasks, such as depth estimation and semantic segmentation.
 
   ```py
-  from transformers import AutoImageProcessor, AutoModel
+  from transformers_4573 import AutoImageProcessor, AutoModel
   from PIL import Image
   import requests
 
@@ -89,7 +89,7 @@ features = outputs.hidden_states[-1] # class tokens + patch tokens before last L
 
   ```py
   import torch
-  from transformers import AutoImageProcessor, AutoModel
+  from transformers_4573 import AutoImageProcessor, AutoModel
   from PIL import Image
   import requests
 

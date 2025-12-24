@@ -1,7 +1,7 @@
 import unittest
 
-from transformers.models.clip.tokenization_clip import CLIPTokenizer
-from transformers.testing_utils import require_tokenizers
+from transformers_4573.models.clip.tokenization_clip import CLIPTokenizer
+from transformers_4573.testing_utils import require_tokenizers
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

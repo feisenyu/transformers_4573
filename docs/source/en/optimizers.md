@@ -22,7 +22,7 @@ This guide will show you how to use these optimizers with [`Trainer`] using [`Tr
 
 ```py
 import torch
-from transformers import TrainingArguments, AutoTokenizer, AutoModelForCausalLM, Trainer
+from transformers_4573 import TrainingArguments, AutoTokenizer, AutoModelForCausalLM, Trainer
 
 args = TrainingArguments(
     output_dir="./test-optimizer",
@@ -51,7 +51,7 @@ Use the `optim_target_modules` parameter to specify which layers to train.
 
 ```diff
 import torch
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     output_dir="./test-apollo",
@@ -83,7 +83,7 @@ For additional training options, use `optim_args` to define hyperparameters like
 The example below enables the APOLLO-Mini optimizer.
 
 ```py
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     output_dir="./test-apollo_mini",
@@ -105,7 +105,7 @@ pip install grokadamw
 
 ```diff
 import torch
-from transformers import TrainingArguments
+from transformers_4573 import TrainingArguments
 
 args = TrainingArguments(
     output_dir="./test-grokadamw",

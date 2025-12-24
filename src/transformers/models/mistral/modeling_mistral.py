@@ -10,7 +10,7 @@ from typing import Optional, Union
 import torch
 from torch import nn
 
-from transformers.utils.generic import check_model_inputs
+from transformers_4573.utils.generic import check_model_inputs
 
 from ...activations import ACT2FN
 from ...cache_utils import Cache, DynamicCache
@@ -447,7 +447,7 @@ class MistralForCausalLM(MistralPreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, MistralForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, MistralForCausalLM
 
         >>> model = MistralForCausalLM.from_pretrained("meta-mistral/Mistral-2-7b-hf")
         >>> tokenizer = AutoTokenizer.from_pretrained("meta-mistral/Mistral-2-7b-hf")

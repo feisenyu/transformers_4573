@@ -87,7 +87,7 @@ class MoshiDepthConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     MoshiDepthConfig,
     ...     MoshiDepthDecoder,
     ... )
@@ -218,7 +218,7 @@ class MoshiConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     MoshiConfig,
     ...     MoshiForConditionalGeneration,
     ... )

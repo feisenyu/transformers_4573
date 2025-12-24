@@ -261,7 +261,7 @@ class BrosSelfAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertSelfOutput with Bert->Bros
+# Copied from transformers_4573.models.bert.modeling_bert.BertSelfOutput with Bert->Bros
 class BrosSelfOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -304,7 +304,7 @@ class BrosAttention(nn.Module):
         return outputs
 
 
-# Copied from transformers.models.bert.modeling_bert.BertIntermediate with Bert->Bros
+# Copied from transformers_4573.models.bert.modeling_bert.BertIntermediate with Bert->Bros
 class BrosIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -460,7 +460,7 @@ class BrosEncoder(nn.Module):
         )
 
 
-# Copied from transformers.models.bert.modeling_bert.BertPooler with Bert->Bros
+# Copied from transformers_4573.models.bert.modeling_bert.BertPooler with Bert->Bros
 class BrosPooler(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -583,7 +583,7 @@ class BrosModel(BrosPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import BrosProcessor, BrosModel
+        >>> from transformers_4573 import BrosProcessor, BrosModel
 
         >>> processor = BrosProcessor.from_pretrained("jinho8345/bros-base-uncased")
 
@@ -727,7 +727,7 @@ class BrosForTokenClassification(BrosPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import BrosProcessor, BrosForTokenClassification
+        >>> from transformers_4573 import BrosProcessor, BrosForTokenClassification
 
         >>> processor = BrosProcessor.from_pretrained("jinho8345/bros-base-uncased")
 
@@ -852,7 +852,7 @@ class BrosSpadeEEForTokenClassification(BrosPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import BrosProcessor, BrosSpadeEEForTokenClassification
+        >>> from transformers_4573 import BrosProcessor, BrosSpadeEEForTokenClassification
 
         >>> processor = BrosProcessor.from_pretrained("jinho8345/bros-base-uncased")
 
@@ -985,7 +985,7 @@ class BrosSpadeELForTokenClassification(BrosPreTrainedModel):
 
         ```python
         >>> import torch
-        >>> from transformers import BrosProcessor, BrosSpadeELForTokenClassification
+        >>> from transformers_4573 import BrosProcessor, BrosSpadeELForTokenClassification
 
         >>> processor = BrosProcessor.from_pretrained("jinho8345/bros-base-uncased")
 

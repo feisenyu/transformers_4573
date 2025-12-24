@@ -8,21 +8,21 @@ import torch
 from bark.generation import _load_model as _bark_load_model
 from huggingface_hub import hf_hub_download
 
-from transformers import EncodecConfig, EncodecModel, set_seed
-from transformers.models.bark.configuration_bark import (
+from transformers_4573 import EncodecConfig, EncodecModel, set_seed
+from transformers_4573.models.bark.configuration_bark import (
     BarkCoarseConfig,
     BarkConfig,
     BarkFineConfig,
     BarkSemanticConfig,
 )
-from transformers.models.bark.generation_configuration_bark import (
+from transformers_4573.models.bark.generation_configuration_bark import (
     BarkCoarseGenerationConfig,
     BarkFineGenerationConfig,
     BarkGenerationConfig,
     BarkSemanticGenerationConfig,
 )
-from transformers.models.bark.modeling_bark import BarkCoarseModel, BarkFineModel, BarkModel, BarkSemanticModel
-from transformers.utils import logging
+from transformers_4573.models.bark.modeling_bark import BarkCoarseModel, BarkFineModel, BarkModel, BarkSemanticModel
+from transformers_4573.utils import logging
 
 
 logging.set_verbosity_info()

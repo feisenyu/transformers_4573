@@ -15,8 +15,8 @@
 
 import unittest
 
-from transformers import is_torch_available
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available
+from transformers_4573.testing_utils import (
     cleanup,
     require_torch,
     slow,
@@ -25,7 +25,7 @@ from transformers.testing_utils import (
 
 
 if is_torch_available():
-    from transformers import (
+    from transformers_4573 import (
         HunYuanDenseV1Model,
     )
 from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester

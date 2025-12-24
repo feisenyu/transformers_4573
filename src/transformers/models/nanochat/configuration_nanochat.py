@@ -78,7 +78,7 @@ class NanoChatConfig(PretrainedConfig):
             Whether to tie weight embeddings
 
     ```python
-    >>> from transformers import NanoChatModel, NanoChatConfig
+    >>> from transformers_4573 import NanoChatModel, NanoChatConfig
 
     >>> # Initializing a NanoChat style configuration
     >>> configuration = NanoChatConfig()

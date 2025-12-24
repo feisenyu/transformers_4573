@@ -37,7 +37,7 @@ rendered properly in your Markdown viewer.
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     "text-generation",
@@ -60,7 +60,7 @@ print(infill_result[0]['generated_text'])
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/CodeLlama-7b-hf")
 model = AutoModelForCausalLM.from_pretrained(
@@ -107,7 +107,7 @@ echo -e "# Function to calculate the factorial of a number\ndef factorial(n):" |
 ```py
 # bitsandbytes를 설치합니다.
 import torch
-from transformers import AutoModelForCausalLM, CodeLlamaTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, CodeLlamaTokenizer, BitsAndBytesConfig
 
 bnb_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True)
 tokenizer = CodeLlamaTokenizer.from_pretrained("meta-llama/CodeLlama-34b-hf")
@@ -128,7 +128,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 [AttentionMaskVisualizer](https://github.com/huggingface/transformers/blob/beb9b5b02246b9b7ee81ddf938f93f44cfeaad19/src/transformers/utils/attention_visualizer.py#L139)를 사용하면 모델이 어떤 토큰에 주의를 기울일 수 있고 기울일 수 없는지를 더 잘 이해할 수 있습니다.
 
 ```py
-from transformers.utils.attention_visualizer import AttentionMaskVisualizer
+from transformers_4573.utils.attention_visualizer import AttentionMaskVisualizer
 
 visualizer = AttentionMaskVisualizer("meta-llama/CodeLlama-7b-hf")
 visualizer("""def func(a, b):
@@ -144,7 +144,7 @@ visualizer("""def func(a, b):
 - 인필링 기능은 7B 및 13B 기반 모델에서만 사용할 수 있으며, Python, Instruct, 34B 또는 70B 모델에서는 사용할 수 없습니다.
 - 코드를 채워 넣고 싶은 부분에 `<FILL_ME>` 토큰을 사용하세요. 토크나이저는 이 토큰을 분할하여 [원본 훈련 패턴](https://github.com/facebookresearch/codellama/blob/cb51c14ec761370ba2e2bc351374a79265d0465e/llama/generation.py#L402) 을 따르는 입력 문자열로 변환합니다. 이는 직접 패턴을 준비하는 것보다 더 안정적입니다.
     ```py
-    from transformers import LlamaForCausalLM, CodeLlamaTokenizer
+    from transformers_4573 import LlamaForCausalLM, CodeLlamaTokenizer
 
     tokenizer = CodeLlamaTokenizer.from_pretrained("meta-llama/CodeLlama-7b-hf")
     model = LlamaForCausalLM.from_pretrained("meta-llama/CodeLlama-7b-hf")

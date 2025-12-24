@@ -47,7 +47,7 @@ logger = logging.get_logger(__name__)
 
 
 @use_kernel_forward_from_hub("MultiScaleDeformableAttention")
-# Copied from transformers.models.deformable_detr.modeling_deformable_detr.MultiScaleDeformableAttention
+# Copied from transformers_4573.models.deformable_detr.modeling_deformable_detr.MultiScaleDeformableAttention
 class MultiScaleDeformableAttention(nn.Module):
     def forward(
         self,
@@ -280,7 +280,7 @@ def _get_clones(partial_module, N):
     return nn.ModuleList([partial_module() for i in range(N)])
 
 
-# Copied from transformers.models.conditional_detr.modeling_conditional_detr.inverse_sigmoid
+# Copied from transformers_4573.models.conditional_detr.modeling_conditional_detr.inverse_sigmoid
 def inverse_sigmoid(x, eps=1e-5):
     x = x.clamp(min=0, max=1)
     x1 = x.clamp(min=eps)
@@ -288,7 +288,7 @@ def inverse_sigmoid(x, eps=1e-5):
     return torch.log(x1 / x2)
 
 
-# Copied from transformers.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->RTDetr
+# Copied from transformers_4573.models.detr.modeling_detr.DetrFrozenBatchNorm2d with Detr->RTDetr
 class RTDetrFrozenBatchNorm2d(nn.Module):
     """
     BatchNorm2d where the batch statistics and the affine parameters are fixed.
@@ -328,7 +328,7 @@ class RTDetrFrozenBatchNorm2d(nn.Module):
         return x * scale + bias
 
 
-# Copied from transformers.models.detr.modeling_detr.replace_batch_norm with Detr->RTDetr
+# Copied from transformers_4573.models.detr.modeling_detr.replace_batch_norm with Detr->RTDetr
 def replace_batch_norm(model):
     r"""
     Recursively replace all `torch.nn.BatchNorm2d` with `RTDetrFrozenBatchNorm2d`.
@@ -660,7 +660,7 @@ class RTDetrCSPRepLayer(nn.Module):
         return self.conv3(hidden_state_1 + hidden_state_2)
 
 
-# Copied from transformers.models.deformable_detr.modeling_deformable_detr.DeformableDetrMultiscaleDeformableAttention with DeformableDetr->RTDetr
+# Copied from transformers_4573.models.deformable_detr.modeling_deformable_detr.DeformableDetrMultiscaleDeformableAttention with DeformableDetr->RTDetr
 class RTDetrMultiscaleDeformableAttention(nn.Module):
     """
     Multiscale deformable attention as proposed in Deformable DETR.
@@ -1615,7 +1615,7 @@ class RTDetrModel(RTDetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import AutoImageProcessor, RTDetrModel
+        >>> from transformers_4573 import AutoImageProcessor, RTDetrModel
         >>> from PIL import Image
         >>> import requests
 
@@ -1866,7 +1866,7 @@ class RTDetrForObjectDetection(RTDetrPreTrainedModel):
         Examples:
 
         ```python
-        >>> from transformers import RTDetrImageProcessor, RTDetrForObjectDetection
+        >>> from transformers_4573 import RTDetrImageProcessor, RTDetrForObjectDetection
         >>> from PIL import Image
         >>> import requests
         >>> import torch

@@ -89,7 +89,7 @@ class Data2VecVisionConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Data2VecVisionConfig, Data2VecVisionModel
+    >>> from transformers_4573 import Data2VecVisionConfig, Data2VecVisionModel
 
     >>> # Initializing a Data2VecVision data2vec_vision-base-patch16-224-in22k style configuration
     >>> configuration = Data2VecVisionConfig()

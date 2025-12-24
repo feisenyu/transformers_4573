@@ -22,7 +22,7 @@ import requests
 import torch
 from PIL import Image
 
-from transformers import (
+from transformers_4573 import (
     CLIPTokenizer,
     DetrImageProcessor,
     OmDetTurboConfig,

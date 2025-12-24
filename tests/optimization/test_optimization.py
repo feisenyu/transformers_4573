@@ -17,15 +17,15 @@ import os
 import tempfile
 import unittest
 
-from transformers import is_torch_available
-from transformers.testing_utils import require_torch
+from transformers_4573 import is_torch_available
+from transformers_4573.testing_utils import require_torch
 
 
 if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import (
+    from transformers_4573 import (
         Adafactor,
         get_constant_schedule,
         get_constant_schedule_with_warmup,

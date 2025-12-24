@@ -93,7 +93,7 @@ We'll show examples for recommended quantization methods based on hardwares, e.g
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Float8DynamicActivationFloat8WeightConfig, Float8WeightOnlyConfig
 
 quant_config = Float8DynamicActivationFloat8WeightConfig()
@@ -123,7 +123,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import GemliteUIntXWeightOnlyConfig
 
 # We integrated with gemlite, which optimizes for batch size N on A100 and H100
@@ -155,7 +155,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int4WeightOnlyConfig
 from torchao.dtypes import MarlinSparseLayout
 
@@ -189,7 +189,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int8DynamicActivationInt8WeightConfig, Int8WeightOnlyConfig
 
 quant_config = Int8DynamicActivationInt8WeightConfig()
@@ -220,7 +220,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import GemliteUIntXWeightOnlyConfig, Int4WeightOnlyConfig
 
 # For batch size N, we recommend gemlite, which may require autotuning
@@ -258,7 +258,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int4WeightOnlyConfig
 from torchao.dtypes import MarlinSparseLayout
 
@@ -292,7 +292,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int8DynamicActivationInt8WeightConfig, Int8WeightOnlyConfig
 
 quant_config = Int8DynamicActivationInt8WeightConfig()
@@ -323,7 +323,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int4WeightOnlyConfig
 from torchao.dtypes import Int4XPULayout
 from torchao.quantization.quant_primitives import ZeroPointDomain
@@ -359,7 +359,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int8DynamicActivationInt8WeightConfig, Int8WeightOnlyConfig
 
 quant_config = Int8DynamicActivationInt8WeightConfig()
@@ -391,7 +391,7 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int4WeightOnlyConfig
 from torchao.dtypes import Int4CPULayout
 
@@ -426,7 +426,7 @@ With `FqnToConfig` we can specify a default configuration for all layers while s
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
 
 model_id = "meta-llama/Llama-3.1-8B-Instruct"
 
@@ -455,7 +455,7 @@ print(output_text)
 
 ```py
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
 
 model_id = "facebook/opt-125m"
 
@@ -500,7 +500,7 @@ match all layers like `layers.0.gate_proj`. See [here](https://github.com/pytorc
 import logging
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, TorchAoConfig
 
 # Configure logging to see warnings and debug information
 logging.basicConfig(
@@ -616,7 +616,7 @@ Create a [`TorchAoConfig`] and set to `"autoquant"`. Set the `cache_implementati
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 
 quantization_config = TorchAoConfig("autoquant", min_sqnr=None)
 quantized_model = AutoModelForCausalLM.from_pretrained(
@@ -676,7 +676,7 @@ Loading a quantized model depends on the quantization scheme. For quantization s
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int8WeightOnlyConfig
 
 quant_config = Int8WeightOnlyConfig(group_size=128)
@@ -712,7 +712,7 @@ For int4, the model can only be loaded on the same device it was quantized on be
 
 ```py
 import torch
-from transformers import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import TorchAoConfig, AutoModelForCausalLM, AutoTokenizer
 from torchao.quantization import Int4WeightOnlyConfig
 from torchao.dtypes import Int4CPULayout
 

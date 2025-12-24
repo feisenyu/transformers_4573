@@ -86,7 +86,7 @@ class DiffLlamaConfig(PreTrainedConfig):
             The attention head dimension. If None, it will default to hidden_size // num_heads
 
     ```python
-    >>> from transformers import DiffLlamaModel, DiffLlamaConfig
+    >>> from transformers_4573 import DiffLlamaModel, DiffLlamaConfig
 
     >>> # Initializing a DiffLlama diffllama-7b style configuration
     >>> configuration = DiffLlamaConfig()

@@ -167,7 +167,7 @@ There are 10 unique classes. For each class, there are 30 videos in the training
 Instantiate a video classification model from a pretrained checkpoint and its associated image processor. The model's encoder comes with pre-trained parameters, and the classification head is randomly initialized. The image processor will come in handy when writing the preprocessing pipeline for our dataset.
 
 ```py
->>> from transformers import VideoMAEImageProcessor, VideoMAEForVideoClassification
+>>> from transformers_4573 import VideoMAEImageProcessor, VideoMAEForVideoClassification
 
 >>> model_ckpt = "MCG-NJU/videomae-base"
 >>> image_processor = VideoMAEImageProcessor.from_pretrained(model_ckpt)
@@ -364,7 +364,7 @@ Leverage [`Trainer`](https://huggingface.co/docs/transformers/main_classes/train
 Most of the training arguments are self-explanatory, but one that is quite important here is `remove_unused_columns=False`. This one will drop any features not used by the model's call function. By default it's `True` because usually it's ideal to drop unused feature columns, making it easier to unpack inputs into the model's call function. But, in this case, you need the unused features ('video' in particular) in order to create `pixel_values` (which is a mandatory key our model expects in its inputs).
 
 ```py
->>> from transformers import TrainingArguments, Trainer
+>>> from transformers_4573 import TrainingArguments, Trainer
 
 >>> model_name = model_ckpt.split("/")[-1]
 >>> new_model_name = f"{model_name}-finetuned-ucf101-subset"
@@ -463,7 +463,7 @@ Load a video for inference:
 The simplest way to try out your fine-tuned model for inference is to use it in a [`pipeline`](https://huggingface.co/docs/transformers/main/en/main_classes/pipelines#transformers.VideoClassificationPipeline). Instantiate a `pipeline` for video classification with your model, and pass your video to it:
 
 ```py
->>> from transformers import pipeline
+>>> from transformers_4573 import pipeline
 from accelerate import Accelerator
 
 >>> video_cls = pipeline(model="my_awesome_video_cls_model")

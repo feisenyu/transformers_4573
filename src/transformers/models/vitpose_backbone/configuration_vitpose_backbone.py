@@ -78,7 +78,7 @@ class VitPoseBackboneConfig(BackboneConfigMixin, PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import VitPoseBackboneConfig, VitPoseBackbone
+    >>> from transformers_4573 import VitPoseBackboneConfig, VitPoseBackbone
 
     >>> # Initializing a VitPose configuration
     >>> configuration = VitPoseBackboneConfig()

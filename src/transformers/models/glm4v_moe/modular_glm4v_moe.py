@@ -140,7 +140,7 @@ class Glm4vMoeTextConfig(Glm4MoeConfig, RotaryEmbeddingConfigMixin):
         router_aux_loss_coef (`float`, *optional*, defaults to 0.0001):
             The aux loss factor for the loss.
     ```python
-    >>> from transformers import Glm4vMoeTextModel, Glm4vMoeConfig
+    >>> from transformers_4573 import Glm4vMoeTextModel, Glm4vMoeConfig
 
     >>> # Initializing a GLM-4.5V style configuration
     >>> configuration = Glm4vMoeConfig()
@@ -263,7 +263,7 @@ class Glm4vMoeConfig(Glm4vConfig):
             The video end token index to encode the end of video.
 
     ```python
-    >>> from transformers import Glm4vMoeForConditionalGeneration, Glm4vMoeConfig
+    >>> from transformers_4573 import Glm4vMoeForConditionalGeneration, Glm4vMoeConfig
 
     >>> # Initializing a GLM-4.5V style configuration
     >>> configuration = Glm4vMoeConfig()

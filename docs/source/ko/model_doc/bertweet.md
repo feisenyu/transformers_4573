@@ -33,7 +33,7 @@ BERTweet은 BERT-base(Devlin et al., 2019)와 동일한 아키텍처를 가지�
 
 ```python
 >>> import torch
->>> from transformers import AutoModel, AutoTokenizer
+>>> from transformers_4573 import AutoModel, AutoTokenizer
 
 >>> bertweet = AutoModel.from_pretrained("vinai/bertweet-base")
 
@@ -52,7 +52,7 @@ BERTweet은 BERT-base(Devlin et al., 2019)와 동일한 아키텍처를 가지�
 ...     features = bertweet(input_ids)  # Models outputs are now tuples
 
 >>> # With TensorFlow 2.0+:
->>> # from transformers import TFAutoModel
+>>> # from transformers_4573 import TFAutoModel
 >>> # bertweet = TFAutoModel.from_pretrained("vinai/bertweet-base")
 ```
 

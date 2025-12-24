@@ -63,7 +63,7 @@ class FastVlmConfig(LlavaConfig):
     Example:
 
     ```python
-    >>> from transformers import FastVlmForConditionalGeneration, FastVlmConfig
+    >>> from transformers_4573 import FastVlmForConditionalGeneration, FastVlmConfig
 
     >>> # Initializing a FastVLM-7B style configuration
     >>> configuration = FastVlmConfig()
@@ -238,7 +238,7 @@ class FastVlmForConditionalGeneration(LlavaForConditionalGeneration):
         ```python
         >>> from PIL import Image
         >>> import requests
-        >>> from transformers import AutoProcessor, AutoModelForImageTextToText
+        >>> from transformers_4573 import AutoProcessor, AutoModelForImageTextToText
         >>> import torch
 
         >>> device = "cuda" if torch.cuda.is_available() else "cpu"

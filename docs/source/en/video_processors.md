@@ -27,7 +27,7 @@ Use [`~BaseVideoProcessor.from_pretrained`] to load a video processors configura
 Here's an example of how to load a video processor with [`llava-hf/llava-onevision-qwen2-0.5b-ov-hf`](https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf) model:
 
 ```python
-from transformers import AutoVideoProcessor
+from transformers_4573 import AutoVideoProcessor
 
 processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf")
 ```
@@ -38,8 +38,8 @@ Fast video processors are available for all models and are loaded by default whe
 
 ```python
 import torch
-from transformers.video_utils import load_video
-from transformers import AutoVideoProcessor
+from transformers_4573.video_utils import load_video
+from transformers_4573 import AutoVideoProcessor
 
 video = load_video("video.mp4")
 processor = AutoVideoProcessor.from_pretrained("llava-hf/llava-onevision-qwen2-0.5b-ov-hf", device="cuda")

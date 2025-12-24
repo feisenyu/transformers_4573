@@ -64,7 +64,7 @@ class MPNetConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import MPNetModel, MPNetConfig
+    >>> from transformers_4573 import MPNetModel, MPNetConfig
 
     >>> # Initializing a MPNet mpnet-base style configuration
     >>> configuration = MPNetConfig()

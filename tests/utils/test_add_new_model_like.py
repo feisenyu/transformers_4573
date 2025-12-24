@@ -19,8 +19,8 @@ import unittest
 from datetime import date
 from pathlib import Path
 
-from transformers.cli.add_new_model_like import ModelInfos, _add_new_model_like_internal
-from transformers.testing_utils import require_torch
+from transformers_4573.cli.add_new_model_like import ModelInfos, _add_new_model_like_internal
+from transformers_4573.testing_utils import require_torch
 
 
 REPO_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))

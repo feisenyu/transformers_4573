@@ -20,14 +20,14 @@ import unittest
 
 import requests
 
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     require_deterministic_for_xpu,
     require_torch,
     slow,
     torch_device,
 )
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_configuration_common import ConfigTester
 from ...test_modeling_common import ModelTesterMixin, floats_tensor
@@ -38,7 +38,7 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers.models.sam3.configuration_sam3 import (
+    from transformers_4573.models.sam3.configuration_sam3 import (
         Sam3Config,
         Sam3DETRDecoderConfig,
         Sam3DETREncoderConfig,
@@ -47,8 +47,8 @@ if is_torch_available():
         Sam3VisionConfig,
         Sam3ViTConfig,
     )
-    from transformers.models.sam3.modeling_sam3 import Sam3Model, Sam3VisionModel
-    from transformers.models.sam3.processing_sam3 import Sam3Processor
+    from transformers_4573.models.sam3.modeling_sam3 import Sam3Model, Sam3VisionModel
+    from transformers_4573.models.sam3.processing_sam3 import Sam3Processor
 
 
 if is_vision_available():

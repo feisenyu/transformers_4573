@@ -49,7 +49,7 @@ pip install autoawq
 ```
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_id = "TheBloke/zephyr-7B-alpha-AWQ"
 model = AutoModelForCausalLM.from_pretrained(model_id, device_map="cuda:0")
@@ -58,7 +58,7 @@ model = AutoModelForCausalLM.from_pretrained(model_id, device_map="cuda:0")
 如果您首先将模型加载到CPU上，请确保在使用之前将其移动到GPU设备上。
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_id = "TheBloke/zephyr-7B-alpha-AWQ"
 model = AutoModelForCausalLM.from_pretrained(model_id).to("cuda:0")
@@ -69,7 +69,7 @@ model = AutoModelForCausalLM.from_pretrained(model_id).to("cuda:0")
 您可以将AWQ量化与Flash Attention结合起来，得到一个既被量化又更快速的模型。只需使用`from_pretrained`加载模型，并传递`attn_implementation="flash_attention_2"`参数。
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("TheBloke/zephyr-7B-alpha-AWQ", attn_implementation="flash_attention_2", device_map="cuda:0")
 ```
@@ -171,7 +171,7 @@ quantization = GPTQConfig(bits=4, dataset = dataset, tokenizer=tokenizer)
 您可以通过使用`from_pretrained`并设置`quantization_config`来对模型进行量化。
 
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=gptq_config)
 
 ```
@@ -182,7 +182,7 @@ model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=gptq_
 
 
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", quantization_config=gptq_config)
 ```
 
@@ -223,14 +223,14 @@ quantized_model.save_pretrained("opt-125m-gptq")
 
 
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 model = AutoModelForCausalLM.from_pretrained("{your_username}/opt-125m-gptq")
 ```
 
 如果您想更快地加载模型，并且不需要分配比实际需要内存更多的内存，量化模型也使用`device_map`参数。确保您已安装`accelerate`库。
 
 ```python
-from transformers import AutoModelForCausalLM
+from transformers_4573 import AutoModelForCausalLM
 model = AutoModelForCausalLM.from_pretrained("{your_username}/opt-125m-gptq", device_map="auto")
 ```
 
@@ -289,7 +289,7 @@ model = AutoModelForCausalLM.from_pretrained("{your_username}/opt-125m-gptq", de
 只要您的模型支持使用 🤗 Accelerate 进行加载并包含 `torch.nn.Linear` 层，您可以在调用 [`~PreTrainedModel.from_pretrained`] 方法时使用 `load_in_8bit` 或 `load_in_4bit` 参数来量化模型。这也应该适用于任何模态。
 
 ```python
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 model_8bit = AutoModelForCausalLM.from_pretrained("facebook/opt-350m", quantization_config=BitsAndBytesConfig(load_in_8bit=True))
 model_4bit = AutoModelForCausalLM.from_pretrained("facebook/opt-350m", quantization_config=BitsAndBytesConfig(load_in_4bit=True))
@@ -299,7 +299,7 @@ model_4bit = AutoModelForCausalLM.from_pretrained("facebook/opt-350m", quantizat
 
 ```python
 >>> import torch
->>> from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+>>> from transformers_4573 import AutoModelForCausalLM, BitsAndBytesConfig
 
 >>> model_8bit = AutoModelForCausalLM.from_pretrained("facebook/opt-350m", quantization_config=BitsAndBytesConfig(load_in_8bit=True), dtype=torch.float32)
 >>> model_8bit.model.decoder.layers[-1].final_layer_norm.weight.dtype
@@ -339,7 +339,7 @@ torch.float32
 
 ```python
 # pip install transformers accelerate bitsandbytes
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model_id = "bigscience/bloom-1b7"
 
@@ -360,7 +360,7 @@ model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", quanti
 
 ```python
 # pip install transformers accelerate bitsandbytes
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 model_id = "bigscience/bloom-1b7"
 
@@ -399,7 +399,7 @@ print(model.get_memory_footprint())
 
 ```python
 import torch
-from transformers import BitsAndBytesConfig
+from transformers_4573 import BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
 ```
@@ -409,7 +409,7 @@ quantization_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dty
 您还可以使用 NF4 数据类型，这是一种针对使用正态分布初始化的权重而适应的新型 4 位数据类型。要运行：
 
 ```python
-from transformers import BitsAndBytesConfig
+from transformers_4573 import BitsAndBytesConfig
 
 nf4_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -424,7 +424,7 @@ model_nf4 = AutoModelForCausalLM.from_pretrained(model_id, quantization_config=n
 我们还建议用户使用嵌套量化技术。从我们的经验观察来看，这种方法在不增加额外性能的情况下节省更多内存。这使得 llama-13b 模型能够在具有 1024 个序列长度、1 个批次大小和 4 个梯度累积步骤的 NVIDIA-T4 16GB 上进行 fine-tuning。
 
 ```python
-from transformers import BitsAndBytesConfig
+from transformers_4573 import BitsAndBytesConfig
 
 double_quant_config = BitsAndBytesConfig(
     load_in_4bit=True,
@@ -441,7 +441,7 @@ model_double_quant = AutoModelForCausalLM.from_pretrained(model_id, quantization
 
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 model = AutoModelForCausalLM.from_pretrained("bigscience/bloom-560m", quantization_config=BitsAndBytesConfig(load_in_8bit=True))
 tokenizer = AutoTokenizer.from_pretrained("bigscience/bloom-560m")
@@ -460,7 +460,7 @@ model.push_to_hub("bloom-560m-8bit")
 您可以使用 `from_pretrained` 方法从 Hub 加载量化模型。请确保推送的权重是量化的，检查模型配置对象中是否存在 `quantization_config` 属性。
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("{your_username}/bloom-560m-8bit", device_map="auto")
 ```
@@ -480,7 +480,7 @@ model = AutoModelForCausalLM.from_pretrained("{your_username}/bloom-560m-8bit", 
 
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 quantization_config = BitsAndBytesConfig(llm_int8_enable_fp32_cpu_offload=True)
 ```
@@ -516,7 +516,7 @@ model_8bit = AutoModelForCausalLM.from_pretrained(
 这个参数会影响模型的推理速度。我们建议尝试这个参数，以找到最适合您的用例的参数。
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 model_id = "bigscience/bloom-1b7"
 
@@ -538,7 +538,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers_4573 import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 model_id = "bigscience/bloom-1b7"
 

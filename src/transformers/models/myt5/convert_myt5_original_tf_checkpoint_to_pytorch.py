@@ -19,8 +19,8 @@ import os
 
 import torch
 
-from transformers import T5Config, T5ForConditionalGeneration
-from transformers.utils import logging
+from transformers_4573 import T5Config, T5ForConditionalGeneration
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)
@@ -132,7 +132,7 @@ def load_tf_weights_in_t5(model, config, tf_checkpoint_path):
     return model
 
 
-# Copied from transformers.models.t5.convert_t5_original_tf_checkpoint_to_pytorch.convert_tf_checkpoint_to_pytorch
+# Copied from transformers_4573.models.t5.convert_t5_original_tf_checkpoint_to_pytorch.convert_tf_checkpoint_to_pytorch
 def convert_tf_checkpoint_to_pytorch(tf_checkpoint_path, config_file, pytorch_dump_path):
     # Initialise PyTorch model
     config = T5Config.from_json_file(config_file)

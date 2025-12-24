@@ -15,8 +15,8 @@
 import random
 import unittest
 
-from transformers import XLNetConfig, is_torch_available
-from transformers.testing_utils import require_torch, slow, torch_device
+from transformers_4573 import XLNetConfig, is_torch_available
+from transformers_4573.testing_utils import require_torch, slow, torch_device
 
 from ...generation.test_utils import GenerationTesterMixin
 from ...test_configuration_common import ConfigTester
@@ -27,7 +27,7 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         XLNetForMultipleChoice,
         XLNetForQuestionAnswering,
         XLNetForQuestionAnsweringSimple,

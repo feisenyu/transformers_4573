@@ -22,13 +22,13 @@ from functools import cached_property
 
 from datasets import load_dataset
 
-from transformers import (
+from transformers_4573 import (
     GroundingDinoConfig,
     SwinConfig,
     is_torch_available,
     is_vision_available,
 )
-from transformers.testing_utils import (
+from transformers_4573.testing_utils import (
     Expectations,
     is_flaky,
     require_timm,
@@ -47,14 +47,14 @@ from ...test_pipeline_mixin import PipelineTesterMixin
 if is_torch_available():
     import torch
 
-    from transformers import GroundingDinoConfig, GroundingDinoForObjectDetection, GroundingDinoModel
-    from transformers.pytorch_utils import id_tensor_storage
+    from transformers_4573 import GroundingDinoConfig, GroundingDinoForObjectDetection, GroundingDinoModel
+    from transformers_4573.pytorch_utils import id_tensor_storage
 
 
 if is_vision_available():
     from PIL import Image
 
-    from transformers import AutoProcessor
+    from transformers_4573 import AutoProcessor
 
 
 def generate_fake_bounding_boxes(n_boxes):

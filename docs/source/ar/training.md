@@ -26,7 +26,7 @@
 كما تعلم الآن، تحتاج إلى محول نص إلى رمز (tokenizer) لمعالجة النص وتضمين استراتيجيات للحشو والقص للتعامل مع أي أطوال متسلسلة متغيرة. لمعالجة مجموعة البيانات الخاصة بك في خطوة واحدة، استخدم طريقة 🤗 Datasets [`map`](https://huggingface.co/docs/datasets/process#map) لتطبيق دالة معالجة مسبقة على مجموعة البيانات بأكملها:
 
 ```py
->>> from transformers import AutoTokenizer
+>>> from transformers_4573 import AutoTokenizer
 
 >>> tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-cased")
 
@@ -67,7 +67,7 @@
 ابدأ بتحميل نموذجك وتحديد عدد التصنيفات المتوقعة. من بطاقة مجموعة بيانات Yelp Review [dataset card](https://huggingface.co/datasets/Yelp/yelp_review_full#data-fields)، تعرف أنه يوجد خمسة تصنيفات:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased", num_labels=5)
 ```
@@ -85,7 +85,7 @@
 حدد مكان حفظ النسخ من تدريبك:
 
 ```py
->>> from transformers import TrainingArguments
+>>> from transformers_4573 import TrainingArguments
 
 >>> training_args = TrainingArguments(output_dir="test_trainer")
 ```
@@ -113,7 +113,7 @@
 إذا كنت ترغب في مراقبة مقاييس التقييم الخاصة بك أثناء الضبط الدقيق، فحدد معلمة `eval_strategy` في معاملات التدريب الخاصة بك لإظهار مقياس التقييم في نهاية كل حقبة تدريبه:
 
 ```py
->>> from transformers import TrainingArguments, Trainer
+>>> from transformers_4573 import TrainingArguments, Trainer
 
 >>> training_args = TrainingArguments(output_dir="test_trainer", eval_strategy="epoch")
 ```
@@ -194,7 +194,7 @@ torch.cuda.empty_cache()
 قم بتحميل نموذجك مع عدد التصنيفات المتوقعة:
 
 ```py
->>> from transformers import AutoModelForSequenceClassification
+>>> from transformers_4573 import AutoModelForSequenceClassification
 
 >>> model = AutoModelForSequenceClassification.from_pretrained("google-bert/bert-base-cased"، num_labels=5)
 ```
@@ -212,7 +212,7 @@ torch.cuda.empty_cache()
 قم بإنشاء مخطط معدل التعلم الافتراضي من [`Trainer`]:
 
 ```py
->>> from transformers import get_scheduler
+>>> from transformers_4573 import get_scheduler
 
 >>> num_epochs = 3
 >>> num_training_steps = num_epochs * len(train_dataloader)

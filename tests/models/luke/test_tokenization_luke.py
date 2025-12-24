@@ -14,8 +14,8 @@
 
 import unittest
 
-from transformers import LukeTokenizer
-from transformers.testing_utils import get_tests_dir, require_torch, slow
+from transformers_4573 import LukeTokenizer
+from transformers_4573.testing_utils import get_tests_dir, require_torch, slow
 
 from ...test_tokenization_common import TokenizerTesterMixin
 

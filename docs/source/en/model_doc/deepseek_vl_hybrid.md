@@ -38,7 +38,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 
 ```py
 import torch
-from transformers import pipeline
+from transformers_4573 import pipeline
 
 pipe = pipeline(
     task="image-text-to-text",
@@ -69,7 +69,7 @@ pipe(text=messages, max_new_tokens=20, return_full_text=False)
 
 ```py
 import torch
-from transformers import DeepseekVLHybridForConditionalGeneration, AutoProcessor
+from transformers_4573 import DeepseekVLHybridForConditionalGeneration, AutoProcessor
 
 model = DeepseekVLHybridForConditionalGeneration.from_pretrained(
     "deepseek-community/deepseek-vl-7b-chat",
@@ -125,7 +125,7 @@ The example below uses [torchao](../quantization/torchao) to only quantize the w
 
 ```python
 import torch
-from transformers import TorchAoConfig, DeepseekVLHybridForConditionalGeneration, AutoProcessor
+from transformers_4573 import TorchAoConfig, DeepseekVLHybridForConditionalGeneration, AutoProcessor
 
 quantization_config = TorchAoConfig(
     "int4_weight_only",
@@ -146,7 +146,7 @@ model = DeepseekVLHybridForConditionalGeneration.from_pretrained(
 
     ```py
     import torch
-    from transformers import DeepseekVLHybridForConditionalGeneration, AutoProcessor
+    from transformers_4573 import DeepseekVLHybridForConditionalGeneration, AutoProcessor
 
     model = DeepseekVLHybridForConditionalGeneration.from_pretrained(
         "deepseek-community/deepseek-vl-7b-chat",

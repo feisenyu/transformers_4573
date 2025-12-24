@@ -24,8 +24,8 @@ import numpy as np
 from flax.traverse_util import flatten_dict, unflatten_dict
 from t5x import checkpoints
 
-from transformers import SwitchTransformersConfig, SwitchTransformersForConditionalGeneration
-from transformers.utils import logging
+from transformers_4573 import SwitchTransformersConfig, SwitchTransformersForConditionalGeneration
+from transformers_4573.utils import logging
 
 
 logger = logging.get_logger(__name__)

@@ -237,7 +237,7 @@ class Qwen3OmniMoeTextConfig(PreTrainedConfig):
             If `mlp_only_layers` is empty, `decoder_sparse_step` is used to determine the sparsity.
 
     ```python
-    >>> from transformers import Qwen3OmniMoeTextModel, Qwen3OmniMoeTextConfig
+    >>> from transformers_4573 import Qwen3OmniMoeTextModel, Qwen3OmniMoeTextConfig
 
     >>> # Initializing a Qwen3OmniMoeText style configuration
     >>> configuration = Qwen3OmniMoeTextConfig()
@@ -371,7 +371,7 @@ class Qwen3OmniMoeThinkerConfig(Qwen2_5OmniThinkerConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen3OmniMoeThinkerModel, Qwen3OmniMoeThinkerConfig
+    >>> from transformers_4573 import Qwen3OmniMoeThinkerModel, Qwen3OmniMoeThinkerConfig
 
     >>> # Initializing a default Qwen3OmniMoeThinkerConfig
     >>> configuration = Qwen3OmniMoeThinkerConfig()
@@ -596,7 +596,7 @@ class Qwen3OmniMoeTalkerConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen3OmniMoeTalkerConfig, Qwen3OmniMoeTalker
+    >>> from transformers_4573 import Qwen3OmniMoeTalkerConfig, Qwen3OmniMoeTalker
 
     >>> # Initialize a Qwen3OmniMoeTalkerConfig with default sub-configurations
     >>> config = Qwen3OmniMoeTalkerConfig(
@@ -731,7 +731,7 @@ class Qwen3OmniMoeCode2WavConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import Qwen3OmniMoeCode2WavConfig, Qwen3OmniMoeCode2WavModel
+    >>> from transformers_4573 import Qwen3OmniMoeCode2WavConfig, Qwen3OmniMoeCode2WavModel
 
     >>> # Initializing a default Qwen3OmniMoeCode2WavConfig
     >>> config = Qwen3OmniMoeCode2WavConfig()
@@ -814,7 +814,7 @@ class Qwen3OmniMoeConfig(PreTrainedConfig):
     Example:
 
     ```python
-    >>> from transformers import (
+    >>> from transformers_4573 import (
     ...     Qwen3OmniMoeThinkerConfig,
     ...     Qwen3OmniMoeTalkerConfig,
     ...     Qwen3OmniMoeCode2WavConfig,

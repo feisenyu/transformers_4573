@@ -15,8 +15,8 @@ import unittest
 
 import numpy as np
 
-from transformers.testing_utils import require_torch, require_torchvision, require_vision
-from transformers.utils import is_torch_available, is_vision_available
+from transformers_4573.testing_utils import require_torch, require_torchvision, require_vision
+from transformers_4573.utils import is_torch_available, is_vision_available
 
 from ...test_processing_common import ProcessorTesterMixin
 
@@ -24,12 +24,12 @@ from ...test_processing_common import ProcessorTesterMixin
 if is_vision_available():
     from PIL import Image
 
-    from transformers import SamProcessor
+    from transformers_4573 import SamProcessor
 
 if is_torch_available():
     import torch
 
-    from transformers.models.sam.image_processing_sam import _mask_to_rle_pytorch
+    from transformers_4573.models.sam.image_processing_sam import _mask_to_rle_pytorch
 
 
 @require_vision

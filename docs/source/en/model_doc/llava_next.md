@@ -42,7 +42,7 @@ The example below demonstrates how to generate text based on an image with [`Pip
 
 ```python
 import torch  
-from transformers import pipeline  
+from transformers_4573 import pipeline  
 
 pipeline = pipeline(  
     task="image-text-to-text",  
@@ -73,7 +73,7 @@ pipeline(text=messages, max_new_tokens=20, return_full_text=False)
 import torch
 import requests
 from PIL import Image
-from transformers import AutoProcessor, LlavaNextForConditionalGeneration
+from transformers_4573 import AutoProcessor, LlavaNextForConditionalGeneration
 from accelerate import Accelerator
 
 device = Accelerator().device
@@ -111,7 +111,7 @@ The example below uses [bitsandbytes](../quantization/bitsandbytes) to only quan
 import torch
 import requests
 from PIL import Image
-from transformers import AutoModelForImageTextToText, AutoProcessor, BitsAndBytesConfig
+from transformers_4573 import AutoModelForImageTextToText, AutoProcessor, BitsAndBytesConfig
 
 quant_config = BitsAndBytesConfig(  
     load_in_4bit=True,  
@@ -163,7 +163,7 @@ processor.tokenizer.padding_side = "left"
 * The example below demonstrates inference with multiple input images.
 
 ```python
-from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
+from transformers_4573 import LlavaNextProcessor, LlavaNextForConditionalGeneration
 from PIL import Image
 import requests, torch
 

@@ -20,9 +20,9 @@ import pytest
 from packaging import version
 from parameterized import parameterized
 
-from transformers import AutoTokenizer, BitsAndBytesConfig, SmolLM3Config, is_torch_available
-from transformers.generation.configuration_utils import GenerationConfig
-from transformers.testing_utils import (
+from transformers_4573 import AutoTokenizer, BitsAndBytesConfig, SmolLM3Config, is_torch_available
+from transformers_4573.generation.configuration_utils import GenerationConfig
+from transformers_4573.testing_utils import (
     backend_empty_cache,
     is_flaky,
     require_bitsandbytes,
@@ -31,13 +31,13 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils.import_utils import is_torch_greater_or_equal
+from transformers_4573.utils.import_utils import is_torch_greater_or_equal
 
 
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         SmolLM3ForCausalLM,
         SmolLM3ForQuestionAnswering,
         SmolLM3ForSequenceClassification,
@@ -152,7 +152,7 @@ class SmolLM3IntegrationTest(unittest.TestCase):
         if version.parse(torch.__version__) < version.parse("2.4.0"):
             self.skipTest(reason="This test requires torch >= 2.4 to run.")
 
-        from transformers.integrations.executorch import (
+        from transformers_4573.integrations.executorch import (
             TorchExportableModuleWithStaticCache,
             convert_and_export_with_cache,
         )

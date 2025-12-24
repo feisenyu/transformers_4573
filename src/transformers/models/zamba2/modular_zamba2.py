@@ -172,7 +172,7 @@ class Zamba2Attention(ZambaAttention):
     """
     Multi-headed attention from 'Attention Is All You Need' paper.
 
-    Adapted from transformers.models.mistral.modeling_mistral.MistralAttention:
+    Adapted from transformers_4573.models.mistral.modeling_mistral.MistralAttention:
     The input dimension here is attention_hidden_size = 2 * hidden_size, and head_dim = attention_hidden_size // num_heads.
     The extra factor of 2 comes from the input being the concatenation of original_hidden_states with the output of the previous (mamba) layer
     (see fig. 2 in https://huggingface.co/papers/2405.16712).

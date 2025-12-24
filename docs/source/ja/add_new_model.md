@@ -391,7 +391,7 @@ PR上でのほとんどの質問はGitHub上で行うことをお勧めします
 この時点で動作する必要があるのは、🤗 Transformersの"brand_new_bert"の実装をインスタンス化できることだけです。つまり、以下のコマンドが機能する必要があります：
 
 ```python
-from transformers import BrandNewBertModel, BrandNewBertConfig
+from transformers_4573 import BrandNewBertModel, BrandNewBertConfig
 
 model = BrandNewBertModel(BrandNewBertConfig())
 ```
@@ -660,7 +660,7 @@ input_ids = model.tokenize(input_str)
 以下のように見えるべきです：
 
 ```python
-from transformers import BrandNewBertTokenizer
+from transformers_4573 import BrandNewBertTokenizer
 
 input_str = "This is a long example input string containing special characters .$?-, numbers 2872 234 12 and words."
 

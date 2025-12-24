@@ -489,7 +489,7 @@ class Cohere2ForCausalLM(Cohere2PreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >> from transformers import AutoTokenizer, Cohere2ForCausalLM
+        >> from transformers_4573 import AutoTokenizer, Cohere2ForCausalLM
 
         >> model = Cohere2ForCausalLM.from_pretrained("Cohere2ForAI/c4ai-command-r-v01")
         >> tokenizer = AutoTokenizer.from_pretrained("Cohere2ForAI/c4ai-command-r-v01")

@@ -46,7 +46,7 @@ The model can accept both images and videos as input. Here's an example code for
 
 ```python
 import torch
-from transformers import VideoLlama3ForConditionalGeneration, AutoTokenizer, AutoProcessor
+from transformers_4573 import VideoLlama3ForConditionalGeneration, AutoTokenizer, AutoProcessor
 
 # Load the model in half-precision on the available device(s)
 model = VideoLlama3ForConditionalGeneration.from_pretrained("lkhl/VideoLLaMA3-2B-Image-HF", device_map="auto")
@@ -177,7 +177,7 @@ Also, you should have a hardware that is compatible with Flash-Attention 2. Read
 To load and run a model using Flash Attention-2, simply add `attn_implementation="flash_attention_2"` when loading the model as follows:
 
 ```python
-from transformers import VideoLlama3ForConditionalGeneration
+from transformers_4573 import VideoLlama3ForConditionalGeneration
 
 model = VideoLlama3ForConditionalGeneration.from_pretrained(
     "lkhl/VideoLLaMA3-2B-Image-HF", 

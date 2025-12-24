@@ -83,7 +83,7 @@ class BitNetConfig(PreTrainedConfig):
             with longer `max_position_embeddings`.
 
     ```python
-    >>> from transformers import BitNetModel, BitNetConfig
+    >>> from transformers_4573 import BitNetModel, BitNetConfig
 
     >>> # Initializing a BitNet style configuration
     >>> configuration = BitNetConfig()

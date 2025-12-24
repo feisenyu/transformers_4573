@@ -18,9 +18,9 @@ import unittest
 
 import numpy as np
 
-from transformers.image_utils import PILImageResampling, load_image
-from transformers.testing_utils import require_torch, require_vision
-from transformers.utils import is_torch_available, is_torchvision_available, is_vision_available
+from transformers_4573.image_utils import PILImageResampling, load_image
+from transformers_4573.testing_utils import require_torch, require_vision
+from transformers_4573.utils import is_torch_available, is_torchvision_available, is_vision_available
 
 from ...test_image_processing_common import ImageProcessingTestMixin
 from ...test_processing_common import url_to_local_path
@@ -29,10 +29,10 @@ from ...test_processing_common import url_to_local_path
 if is_vision_available():
     from PIL import Image
 
-    from transformers import Idefics3ImageProcessor
+    from transformers_4573 import Idefics3ImageProcessor
 
     if is_torchvision_available():
-        from transformers import Idefics3ImageProcessorFast
+        from transformers_4573 import Idefics3ImageProcessorFast
 
 
 if is_torch_available():

@@ -61,7 +61,7 @@ class CTRLConfig(PreTrainedConfig):
     Examples:
 
     ```python
-    >>> from transformers import CTRLConfig, CTRLModel
+    >>> from transformers_4573 import CTRLConfig, CTRLModel
 
     >>> # Initializing a CTRL configuration
     >>> configuration = CTRLConfig()

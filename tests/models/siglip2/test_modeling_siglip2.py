@@ -21,8 +21,8 @@ import numpy as np
 from parameterized import parameterized
 from pytest import mark
 
-from transformers import Siglip2Config, Siglip2TextConfig, Siglip2VisionConfig
-from transformers.testing_utils import (
+from transformers_4573 import Siglip2Config, Siglip2TextConfig, Siglip2VisionConfig
+from transformers_4573.testing_utils import (
     Expectations,
     is_flaky,
     require_flash_attn,
@@ -32,7 +32,7 @@ from transformers.testing_utils import (
     slow,
     torch_device,
 )
-from transformers.utils import (
+from transformers_4573.utils import (
     is_torch_available,
     is_vision_available,
 )
@@ -52,12 +52,12 @@ if is_torch_available():
     import torch
     from torch import nn
 
-    from transformers import Siglip2ForImageClassification, Siglip2Model, Siglip2TextModel, Siglip2VisionModel
+    from transformers_4573 import Siglip2ForImageClassification, Siglip2Model, Siglip2TextModel, Siglip2VisionModel
 
 if is_vision_available():
     from PIL import Image, ImageDraw
 
-    from transformers import Siglip2Processor
+    from transformers_4573 import Siglip2Processor
 
 
 class Siglip2ModelTesterMixin(ModelTesterMixin):

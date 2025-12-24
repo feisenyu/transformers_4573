@@ -18,9 +18,9 @@ import unittest
 
 import pytest
 
-from transformers import is_torch_available
-from transformers.models.auto.tokenization_auto import AutoTokenizer
-from transformers.testing_utils import (
+from transformers_4573 import is_torch_available
+from transformers_4573.models.auto.tokenization_auto import AutoTokenizer
+from transformers_4573.testing_utils import (
     Expectations,
     cleanup,
     require_torch,
@@ -34,7 +34,7 @@ from ...causal_lm_tester import CausalLMModelTest, CausalLMModelTester
 if is_torch_available():
     import torch
 
-    from transformers import (
+    from transformers_4573 import (
         FlexOlmoForCausalLM,
         FlexOlmoModel,
     )

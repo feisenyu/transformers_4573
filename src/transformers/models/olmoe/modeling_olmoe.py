@@ -650,7 +650,7 @@ class OlmoeForCausalLM(OlmoePreTrainedModel, GenerationMixin):
         Example:
 
         ```python
-        >>> from transformers import AutoTokenizer, OlmoeForCausalLM
+        >>> from transformers_4573 import AutoTokenizer, OlmoeForCausalLM
 
         >>> model = OlmoeForCausalLM.from_pretrained("allenai/OLMoE-1B-7B-0924")
         >>> tokenizer = AutoTokenizer.from_pretrained("allenai/OLMoE-1B-7B-0924")

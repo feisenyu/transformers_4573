@@ -21,7 +21,7 @@ Crear `server.py`:
 from starlette.applications import Starlette
 from starlette.responses import JSONResponse
 from starlette.routing import Route
-from transformers import pipeline
+from transformers_4573 import pipeline
 import asyncio
 
 

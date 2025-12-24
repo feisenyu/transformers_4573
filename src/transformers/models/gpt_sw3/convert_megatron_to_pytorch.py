@@ -19,7 +19,7 @@ from os.path import isfile
 
 import torch
 
-from transformers import GPT2Config
+from transformers_4573 import GPT2Config
 
 
 def recursive_print(name, val, spaces=0):
