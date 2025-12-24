@@ -6,7 +6,7 @@ from transformers_4573.models.bert.modeling_bert import BertModel
 
 from ...modeling_outputs import BaseModelOutputWithPoolingAndCrossAttentions
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs
+from ...utils import TransformersKwargs
 
 
 class DummyBertModel(BertModel):

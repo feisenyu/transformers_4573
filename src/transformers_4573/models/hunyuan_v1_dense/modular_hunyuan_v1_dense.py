@@ -28,7 +28,7 @@ from transformers_4573.utils import (
 from ...modeling_rope_utils import ROPE_INIT_FUNCTIONS
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs
+from ...utils import TransformersKwargs
 from ..llama.modeling_llama import (
     LlamaAttention,
     LlamaDecoderLayer,

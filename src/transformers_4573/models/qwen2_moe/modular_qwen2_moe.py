@@ -36,7 +36,7 @@ from ...modeling_layers import (
 )
 from ...modeling_outputs import MoeModelOutputWithPast
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, auto_docstring
+from ...utils import TransformersKwargs, auto_docstring
 from ...utils.generic import OutputRecorder, check_model_inputs
 from ..gemma.modeling_gemma import GemmaMLP
 from ..gemma2.modeling_gemma2 import Gemma2RotaryEmbedding

@@ -22,7 +22,7 @@ from ...masking_utils import create_causal_mask
 from ...modeling_outputs import MoeModelOutputWithPast
 from ...modeling_utils import PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, logging
+from ...utils import TransformersKwargs, logging
 from ...utils.import_utils import is_causal_conv1d_available
 from ..lfm2.modeling_lfm2 import (
     Lfm2Attention,

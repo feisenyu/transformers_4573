@@ -22,7 +22,7 @@ from torch import nn
 from ...cache_utils import Cache
 from ...modeling_outputs import MoeCausalLMOutputWithPast, MoeModelOutputWithPast
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, logging
+from ...utils import TransformersKwargs, logging
 from ...utils.generic import OutputRecorder
 from ..llama.modeling_llama import (
     LlamaForQuestionAnswering,

@@ -25,7 +25,7 @@ from typing import Optional, Union
 import torch
 import torch.nn as nn
 
-from transformers_4573.utils.generic import transformersKwargs
+from transformers_4573.utils.generic import TransformersKwargs
 
 from ...activations import ACT2FN
 from ...cache_utils import Cache, DynamicCache

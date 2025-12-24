@@ -33,7 +33,7 @@ from ...modeling_outputs import (
 )
 from ...modeling_utils import PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, auto_docstring, logging
+from ...utils import TransformersKwargs, auto_docstring, logging
 from ...utils.generic import can_return_tuple
 from ..roberta.modeling_roberta import (
     RobertaClassificationHead,

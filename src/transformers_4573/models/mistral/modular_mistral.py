@@ -15,7 +15,7 @@ from ...modeling_layers import (
 from ...modeling_outputs import BaseModelOutputWithPast
 from ...modeling_utils import ALL_ATTENTION_FUNCTIONS
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, auto_docstring, logging
+from ...utils import TransformersKwargs, auto_docstring, logging
 from ..llama.modeling_llama import (
     LlamaAttention,
     LlamaDecoderLayer,

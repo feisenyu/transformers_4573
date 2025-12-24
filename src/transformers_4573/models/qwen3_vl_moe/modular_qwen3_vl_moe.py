@@ -26,7 +26,7 @@ from ...configuration_utils import PreTrainedConfig
 from ...modeling_rope_utils import RopeParameters
 from ...modeling_utils import PreTrainedModel
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, can_return_tuple, logging
+from ...utils import TransformersKwargs, can_return_tuple, logging
 from ..qwen3_moe.modeling_qwen3_moe import (
     Qwen3MoeDecoderLayer,
     Qwen3MoePreTrainedModel,

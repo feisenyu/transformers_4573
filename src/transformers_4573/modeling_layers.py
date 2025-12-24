@@ -26,7 +26,7 @@ from .modeling_outputs import (
 )
 from .models.auto import AutoModel
 from .processing_utils import Unpack
-from .utils import transformersKwargs, auto_docstring, can_return_tuple, logging
+from .utils import TransformersKwargs, auto_docstring, can_return_tuple, logging
 
 
 logger = logging.get_logger(__name__)

@@ -9,7 +9,7 @@ from ...masking_utils import create_causal_mask, create_sliding_window_causal_ma
 from ...modeling_outputs import BaseModelOutputWithPast
 from ...modeling_rope_utils import RopeParameters
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, auto_docstring
+from ...utils import TransformersKwargs, auto_docstring
 from ...utils.generic import check_model_inputs
 from ..mistral.configuration_mistral import MistralConfig
 from ..qwen2.modeling_qwen2 import (

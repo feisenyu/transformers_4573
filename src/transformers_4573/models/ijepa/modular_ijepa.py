@@ -8,7 +8,7 @@ from transformers_4573.models.ijepa.configuration_ijepa import IJepaConfig
 from ... import initialization as init
 from ...modeling_outputs import BaseModelOutputWithPooling, ImageClassifierOutput
 from ...processing_utils import Unpack
-from ...utils import transformersKwargs, auto_docstring, torch_int
+from ...utils import TransformersKwargs, auto_docstring, torch_int
 from ..vit.modeling_vit import ViTEmbeddings, ViTForImageClassification, ViTModel, ViTPreTrainedModel
 
 

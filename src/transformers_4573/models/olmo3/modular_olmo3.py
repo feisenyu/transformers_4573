@@ -19,7 +19,7 @@ from typing import Optional
 import torch
 import torch.nn as nn
 
-from transformers_4573.utils.generic import transformersKwargs
+from transformers_4573.utils.generic import TransformersKwargs
 
 from ...cache_utils import Cache, DynamicCache
 from ...configuration_utils import PreTrainedConfig, layer_type_validation
