@@ -2020,11 +2020,11 @@ class _LazyModule(ModuleType):
             Placeholder.__name__ = name
 
             if name not in self._class_to_module:
-                module_name = f"transformers.{name}"
+                module_name = f"transformers_4573.{name}"
             else:
                 module_name = self._class_to_module[name]
-                if not module_name.startswith("transformers."):
-                    module_name = f"transformers.{module_name}"
+                if not module_name.startswith("transformers_4573."):
+                    module_name = f"transformers_4573.{module_name}"
 
             Placeholder.__module__ = module_name
 
@@ -2080,7 +2080,7 @@ class _LazyModule(ModuleType):
                                         # Remove "Tokenizer" suffix and convert to lowercase
                                         if candidate_name.endswith("Tokenizer"):
                                             model_name = candidate_name[:-10].lower()  # Remove "Tokenizer"
-                                            module_path = f"transformers.models.{model_name}.tokenization_{model_name}"
+                                            module_path = f"transformers_4573.models.{model_name}.tokenization_{model_name}"
                                             try:
                                                 module = importlib.import_module(module_path)
                                                 base_tokenizer_class = getattr(module, candidate_name)
@@ -2191,7 +2191,7 @@ class _LazyModule(ModuleType):
                                 # Try importing it directly to trigger lazy loading
                                 try:
                                     # Try to get it from transformers_4573 module to trigger lazy loading
-                                    transformers_module = sys.modules.get("transformers")
+                                    transformers_module = sys.modules.get("transformers_4573")
                                     if transformers_module and hasattr(transformers_module, candidate_name):
                                         base_tokenizer_class = getattr(transformers_module, candidate_name)
                                         value = base_tokenizer_class
@@ -2760,7 +2760,7 @@ def clear_import_cache() -> None:
     This is useful when actively developing/modifying Transformers code.
     """
     # Get all transformers modules
-    transformers_modules = [mod_name for mod_name in sys.modules if mod_name.startswith("transformers.")]
+    transformers_modules = [mod_name for mod_name in sys.modules if mod_name.startswith("transformers_4573.")]
 
     # Remove them from sys.modules
     for mod_name in transformers_modules:
@@ -2772,7 +2772,7 @@ def clear_import_cache() -> None:
 
     # Force reload main transformers module
     if "transformers" in sys.modules:
-        main_module = sys.modules["transformers"]
+        main_module = sys.modules["transformers_4573"]
         if isinstance(main_module, _LazyModule):
             main_module._objects = {}  # Clear cached objects
         importlib.reload(main_module)
