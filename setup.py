@@ -235,7 +235,7 @@ extras["hf_xet"] = deps_list("hf_xet")
 
 extras["retrieval"] = deps_list("faiss-cpu", "datasets")
 
-extras["tokenizers"] = deps_list("tokenizers")
+# extras["tokenizers"] = deps_list("tokenizers")
 extras["ftfy"] = deps_list("ftfy")
 extras["modelcreation"] = deps_list("cookiecutter")
 
@@ -309,7 +309,7 @@ extras["quality"] = deps_list("datasets", "ruff", "GitPython", "urllib3", "libcs
 extras["all"] = (
     extras["torch"]
     + extras["sentencepiece"]
-    + extras["tokenizers"]
+    # + extras["tokenizers"]
     + extras["torch-speech"]
     + extras["vision"]
     + extras["integrations"]
@@ -328,7 +328,7 @@ extras["dev-torch"] = (
     extras["testing"]
     + extras["torch"]
     + extras["sentencepiece"]
-    + extras["tokenizers"]
+    # + extras["tokenizers"]
     + extras["torch-speech"]
     + extras["vision"]
     + extras["integrations"]
@@ -348,7 +348,7 @@ extras["dev"] = (
 
 extras["torchhub"] = deps_list(
     "filelock",
-    "huggingface-hub",
+    # "huggingface-hub",
     "importlib_metadata",
     "numpy",
     "packaging",
@@ -357,7 +357,7 @@ extras["torchhub"] = deps_list(
     "requests",
     "sentencepiece",
     "torch",
-    "tokenizers",
+    # "tokenizers",
     "tqdm",
 )
 
@@ -370,13 +370,13 @@ extras["open-telemetry"] = deps_list("opentelemetry-api") + ["opentelemetry-expo
 # when modifying the following list, make sure to update src/transformers_4573/dependency_versions_check.py
 install_requires = [
     deps["filelock"],  # filesystem locks, e.g., to prevent parallel downloads
-    deps["huggingface-hub"],
+    # deps["huggingface-hub"],
     deps["numpy"],
     deps["packaging"],  # utilities from PyPA to e.g., compare versions
     deps["pyyaml"],  # used for the model cards metadata
     deps["regex"],  # for OpenAI GPT
     deps["requests"],  # for downloading models over HTTPS
-    deps["tokenizers"],
+    # deps["tokenizers"],
     deps["typer-slim"],  # CLI utilities. In practice, already a dependency of huggingface_hub
     deps["safetensors"],
     deps["tqdm"],  # progress bars in model download and training scripts

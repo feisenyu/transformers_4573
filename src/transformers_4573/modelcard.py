@@ -529,9 +529,9 @@ class TrainingSummary:
 
             model_card += f"- Datasets {datasets.__version__}\n"
         if is_tokenizers_available():
-            import tokenizers
+            import tokenizers_4573
 
-            model_card += f"- Tokenizers {tokenizers.__version__}\n"
+            model_card += f"- Tokenizers {tokenizers_4573.__version__}\n"
 
         return model_card
 
